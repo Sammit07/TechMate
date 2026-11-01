@@ -2,7 +2,7 @@
 
 TechMate is an AI assistant and workspace for an L1 IT service desk. Employees describe a problem in plain language and get step-by-step fixes from the company knowledge base. If self-help isn't enough, TechMate raises a ticket, classifies it and routes it to the right support group. Service-desk staff get a live dashboard, a ticket-volume forecast, and a network graph of how each incident was raised, routed and resolved. The graph also shows what affected each incident, such as maintenance, power work, outages, Windows updates or holidays.
 
-🌐 **Live demo:** _to be added after deployment to Vercel_
+🌐 **Live demo:** [techmate-one.vercel.app](https://techmate-one.vercel.app) (password-protected; ask the owner for access)
 
 ---
 

@@ -1,0 +1,16 @@
+# Never upload secrets or local-only files; production settings live in Vercel env vars.
+.env
+.env.*
+!.env.example
+prompt.md
+
+# Local environments and build output (Vercel installs and builds its own)
+.venv/
+**/node_modules/
+**/.next/
+**/__pycache__/
+
+# Offline data and scripts at the repository root only (not needed at runtime; the KB PDFs live in
+# backend/static/kb). The leading "/" matters: a bare "data/" also matches frontend/src/app/(app)/data.
+/data/
+/scripts/

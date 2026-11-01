@@ -1,0 +1,24 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "regions": ["bom1"],
+  "services": {
+    "web": {
+      "root": "frontend/",
+      "framework": "nextjs"
+    },
+    "api": {
+      "root": "backend/",
+      "framework": "fastapi",
+      "entrypoint": "main:app",
+      "functions": {
+        "main.py": {
+          "maxDuration": 120
+        }
+      }
+    }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": { "service": "api" } },
+    { "source": "/(.*)", "destination": { "service": "web" } }
+  ]
+}
