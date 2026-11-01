@@ -1,0 +1,149 @@
+{
+ "entities": [
+  {
+   "name": "PaperCut web portal",
+   "type": "Product"
+  },
+  {
+   "name": "Acme ID badge",
+   "type": "Component"
+  },
+  {
+   "name": "badge reader",
+   "type": "Component"
+  },
+  {
+   "name": "printer touchscreen",
+   "type": "Component"
+  },
+  {
+   "name": "Print Spooler",
+   "type": "Component"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "job held in queue",
+   "type": "Symptom"
+  },
+  {
+   "name": "badge tap no response",
+   "type": "Symptom"
+  },
+  {
+   "name": "printer offline",
+   "type": "Symptom"
+  },
+  {
+   "name": "low toner",
+   "type": "Symptom"
+  },
+  {
+   "name": "demagnetized badge",
+   "type": "Cause"
+  },
+  {
+   "name": "network connectivity issue",
+   "type": "Cause"
+  },
+  {
+   "name": "restart Print Spooler",
+   "type": "Fix"
+  },
+  {
+   "name": "re-add printer via PaperCut",
+   "type": "Fix"
+  },
+  {
+   "name": "verify badge active in Entra ID",
+   "type": "Fix"
+  },
+  {
+   "name": "purge print queue",
+   "type": "Fix"
+  },
+  {
+   "name": "reinstall printer driver",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "badge tap no response",
+   "relation": "CAUSED_BY",
+   "target": "demagnetized badge"
+  },
+  {
+   "source": "job held in queue",
+   "relation": "CAUSED_BY",
+   "target": "Print Spooler issue"
+  },
+  {
+   "source": "printer offline",
+   "relation": "CAUSED_BY",
+   "target": "network connectivity issue"
+  },
+  {
+   "source": "demagnetized badge",
+   "relation": "INDICATES",
+   "target": "badge tap no response"
+  },
+  {
+   "source": "network connectivity issue",
+   "relation": "INDICATES",
+   "target": "printer offline"
+  },
+  {
+   "source": "Print Spooler issue",
+   "relation": "INDICATES",
+   "target": "job held in queue"
+  },
+  {
+   "source": "demagnetized badge",
+   "relation": "FIXED_BY",
+   "target": "try a different badge"
+  },
+  {
+   "source": "network connectivity issue",
+   "relation": "FIXED_BY",
+   "target": "check network cable or Wi-Fi"
+  },
+  {
+   "source": "Print Spooler issue",
+   "relation": "FIXED_BY",
+   "target": "restart Print Spooler"
+  },
+  {
+   "source": "job held in queue",
+   "relation": "FIXED_BY",
+   "target": "purge print queue"
+  },
+  {
+   "source": "printer offline",
+   "relation": "AFFECTS",
+   "target": "printer touchscreen"
+  },
+  {
+   "source": "low toner",
+   "relation": "AFFECTS",
+   "target": "printer touchscreen"
+  },
+  {
+   "source": "Acme ID badge",
+   "relation": "PART_OF",
+   "target": "badge reader"
+  },
+  {
+   "source": "Print Spooler",
+   "relation": "PART_OF",
+   "target": "user workstation"
+  },
+  {
+   "source": "Entra ID",
+   "relation": "PART_OF",
+   "target": "PaperCut web portal"
+  }
+ ]
+}

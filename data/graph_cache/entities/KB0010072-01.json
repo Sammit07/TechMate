@@ -1,0 +1,158 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Teams cache",
+   "type": "Component"
+  },
+  {
+   "name": "audio/video/screen-share issues",
+   "type": "Symptom"
+  },
+  {
+   "name": "corrupted Teams cache",
+   "type": "Cause"
+  },
+  {
+   "name": "clear Teams cache",
+   "type": "Fix"
+  },
+  {
+   "name": "screen-recording permission",
+   "type": "Component"
+  },
+  {
+   "name": "missing screen-recording permission",
+   "type": "Cause"
+  },
+  {
+   "name": "grant screen-recording permission",
+   "type": "Fix"
+  },
+  {
+   "name": "Teams client version",
+   "type": "Component"
+  },
+  {
+   "name": "outdated Teams client",
+   "type": "Cause"
+  },
+  {
+   "name": "update Teams client",
+   "type": "Fix"
+  },
+  {
+   "name": "incorrect device selection",
+   "type": "Cause"
+  },
+  {
+   "name": "verify device settings",
+   "type": "Fix"
+  },
+  {
+   "name": "network connectivity to Teams endpoints",
+   "type": "Cause"
+  },
+  {
+   "name": "verify network connectivity",
+   "type": "Fix"
+  },
+  {
+   "name": "conditional access/compliance policies",
+   "type": "Cause"
+  },
+  {
+   "name": "escalate to Identity & Access Management",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "audio/video/screen-share issues",
+   "relation": "CAUSED_BY",
+   "target": "corrupted Teams cache"
+  },
+  {
+   "source": "corrupted Teams cache",
+   "relation": "FIXED_BY",
+   "target": "clear Teams cache"
+  },
+  {
+   "source": "audio/video/screen-share issues",
+   "relation": "CAUSED_BY",
+   "target": "missing screen-recording permission"
+  },
+  {
+   "source": "missing screen-recording permission",
+   "relation": "FIXED_BY",
+   "target": "grant screen-recording permission"
+  },
+  {
+   "source": "audio/video/screen-share issues",
+   "relation": "CAUSED_BY",
+   "target": "outdated Teams client"
+  },
+  {
+   "source": "outdated Teams client",
+   "relation": "FIXED_BY",
+   "target": "update Teams client"
+  },
+  {
+   "source": "audio/video/screen-share issues",
+   "relation": "CAUSED_BY",
+   "target": "incorrect device selection"
+  },
+  {
+   "source": "incorrect device selection",
+   "relation": "FIXED_BY",
+   "target": "verify device settings"
+  },
+  {
+   "source": "audio/video/screen-share issues",
+   "relation": "CAUSED_BY",
+   "target": "network connectivity to Teams endpoints"
+  },
+  {
+   "source": "network connectivity to Teams endpoints",
+   "relation": "FIXED_BY",
+   "target": "verify network connectivity"
+  },
+  {
+   "source": "audio/video/screen-share issues",
+   "relation": "CAUSED_BY",
+   "target": "conditional access/compliance policies"
+  },
+  {
+   "source": "conditional access/compliance policies",
+   "relation": "FIXED_BY",
+   "target": "escalate to Identity & Access Management"
+  },
+  {
+   "source": "Teams cache",
+   "relation": "PART_OF",
+   "target": "Microsoft Teams"
+  },
+  {
+   "source": "screen-recording permission",
+   "relation": "AFFECTS",
+   "target": "Microsoft Teams"
+  },
+  {
+   "source": "Teams client version",
+   "relation": "PART_OF",
+   "target": "Microsoft Teams"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "Microsoft Teams"
+  }
+ ]
+}

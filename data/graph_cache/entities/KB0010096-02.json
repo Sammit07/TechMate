@@ -1,0 +1,128 @@
+{
+ "entities": [
+  {
+   "name": "guest Wi-Fi for visitors",
+   "type": "Product"
+  },
+  {
+   "name": "RADIUS server",
+   "type": "Component"
+  },
+  {
+   "name": "AP or controller outage",
+   "type": "Cause"
+  },
+  {
+   "name": "repeated authentication failures for valid credentials",
+   "type": "Symptom"
+  },
+  {
+   "name": "multiple APs report disconnection or high error rates",
+   "type": "Symptom"
+  },
+  {
+   "name": "user cannot connect after verifying sponsorship and device configuration",
+   "type": "Symptom"
+  },
+  {
+   "name": "SSID (ACME-Guest)",
+   "type": "Component"
+  },
+  {
+   "name": "WPA2-Enterprise",
+   "type": "Component"
+  },
+  {
+   "name": "802.1X",
+   "type": "Component"
+  },
+  {
+   "name": "sponsored access",
+   "type": "Component"
+  },
+  {
+   "name": "captive portal",
+   "type": "Component"
+  },
+  {
+   "name": "authentication failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "no internet guest wifi",
+   "type": "Symptom"
+  },
+  {
+   "name": "timestamp of failure",
+   "type": "Component"
+  },
+  {
+   "name": "device MAC address",
+   "type": "Component"
+  },
+  {
+   "name": "exact error message",
+   "type": "Component"
+  },
+  {
+   "name": "sponsorship details (username, expiry)",
+   "type": "Component"
+  },
+  {
+   "name": "RADIUS or AP log excerpts",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "repeated authentication failures for valid credentials",
+   "relation": "CAUSED_BY",
+   "target": "RADIUS server"
+  },
+  {
+   "source": "multiple APs report disconnection or high error rates",
+   "relation": "CAUSED_BY",
+   "target": "AP or controller outage"
+  },
+  {
+   "source": "user cannot connect after verifying sponsorship and device configuration",
+   "relation": "CAUSED_BY",
+   "target": "AP or controller outage"
+  },
+  {
+   "source": "authentication failure",
+   "relation": "INDICATES",
+   "target": "RADIUS server"
+  },
+  {
+   "source": "no internet guest wifi",
+   "relation": "AFFECTS",
+   "target": "guest Wi-Fi for visitors"
+  },
+  {
+   "source": "SSID (ACME-Guest)",
+   "relation": "PART_OF",
+   "target": "guest Wi-Fi for visitors"
+  },
+  {
+   "source": "WPA2-Enterprise",
+   "relation": "PART_OF",
+   "target": "guest Wi-Fi for visitors"
+  },
+  {
+   "source": "802.1X",
+   "relation": "PART_OF",
+   "target": "guest Wi-Fi for visitors"
+  },
+  {
+   "source": "sponsored access",
+   "relation": "PART_OF",
+   "target": "guest Wi-Fi for visitors"
+  },
+  {
+   "source": "captive portal",
+   "relation": "PART_OF",
+   "target": "guest Wi-Fi for visitors"
+  }
+ ]
+}

@@ -1,0 +1,146 @@
+{
+ "entities": [
+  {
+   "name": "Outlook mobile",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive mobile app",
+   "type": "Product"
+  },
+  {
+   "name": "Teams mobile app",
+   "type": "Product"
+  },
+  {
+   "name": "Intune Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "device passcode",
+   "type": "Component"
+  },
+  {
+   "name": "OS update",
+   "type": "Component"
+  },
+  {
+   "name": "storage encryption",
+   "type": "Component"
+  },
+  {
+   "name": "jailbreak/root removal",
+   "type": "Component"
+  },
+  {
+   "name": "compliance check",
+   "type": "Component"
+  },
+  {
+   "name": "email sync verification",
+   "type": "Fix"
+  },
+  {
+   "name": "corporate resource access",
+   "type": "Symptom"
+  },
+  {
+   "name": "non-compliant device",
+   "type": "Symptom"
+  },
+  {
+   "name": "error code 0x80072ee2",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "error code 0x80092004",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "factory state restore",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "non-compliant device",
+   "relation": "CAUSED_BY",
+   "target": "missing 6-character minimum passcode"
+  },
+  {
+   "source": "non-compliant device",
+   "relation": "CAUSED_BY",
+   "target": "outdated OS version"
+  },
+  {
+   "source": "non-compliant device",
+   "relation": "CAUSED_BY",
+   "target": "disabled storage encryption"
+  },
+  {
+   "source": "non-compliant device",
+   "relation": "CAUSED_BY",
+   "target": "presence of jailbreak/root"
+  },
+  {
+   "source": "error code 0x80072ee2",
+   "relation": "INDICATES",
+   "target": "network connectivity issue"
+  },
+  {
+   "source": "error code 0x80092004",
+   "relation": "INDICATES",
+   "target": "certificate validation failure"
+  },
+  {
+   "source": "OS update",
+   "relation": "FIXED_BY",
+   "target": "update OS to latest supported version"
+  },
+  {
+   "source": "storage encryption",
+   "relation": "FIXED_BY",
+   "target": "enable storage encryption"
+  },
+  {
+   "source": "jailbreak/root presence",
+   "relation": "FIXED_BY",
+   "target": "remove jailbreak/root"
+  },
+  {
+   "source": "device passcode",
+   "relation": "FIXED_BY",
+   "target": "set 6-character minimum passcode"
+  },
+  {
+   "source": "compliance check",
+   "relation": "FIXED_BY",
+   "target": "re-run compliance check in Company Portal"
+  },
+  {
+   "source": "email sync verification",
+   "relation": "FIXED_BY",
+   "target": "launch Outlook mobile and verify email sync"
+  },
+  {
+   "source": "corporate resource access",
+   "relation": "AFFECTS",
+   "target": "Outlook mobile"
+  },
+  {
+   "source": "corporate resource access",
+   "relation": "AFFECTS",
+   "target": "OneDrive mobile app"
+  },
+  {
+   "source": "corporate resource access",
+   "relation": "AFFECTS",
+   "target": "Teams mobile app"
+  },
+  {
+   "source": "factory state restore",
+   "relation": "FIXED_BY",
+   "target": "restore device to factory state before re-enrollment"
+  }
+ ]
+}

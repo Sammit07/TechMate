@@ -1,0 +1,118 @@
+{
+ "entities": [
+  {
+   "name": "Bluetooth Peripheral",
+   "type": "Product"
+  },
+  {
+   "name": "Discovery Mode",
+   "type": "Component"
+  },
+  {
+   "name": "Passkey Prompt",
+   "type": "Component"
+  },
+  {
+   "name": "Device Appears in List",
+   "type": "Symptom"
+  },
+  {
+   "name": "Status Connected",
+   "type": "Symptom"
+  },
+  {
+   "name": "Input Not Registering",
+   "type": "Symptom"
+  },
+  {
+   "name": "Audio Not Working",
+   "type": "Symptom"
+  },
+  {
+   "name": "Toggle Bluetooth Off/On",
+   "type": "Fix"
+  },
+  {
+   "name": "Restart Laptop",
+   "type": "Fix"
+  },
+  {
+   "name": "Remove Existing Pairing",
+   "type": "Fix"
+  },
+  {
+   "name": "Check for Interference",
+   "type": "Fix"
+  },
+  {
+   "name": "Update Bluetooth Driver",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify Laptop Model and OS Version",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Device Does Not Appear",
+   "relation": "CAUSED_BY",
+   "target": "Bluetooth Not Enabled"
+  },
+  {
+   "source": "Fails to Connect",
+   "relation": "CAUSED_BY",
+   "target": "Existing Pairing Conflict"
+  },
+  {
+   "source": "Connects But Does Not Work",
+   "relation": "CAUSED_BY",
+   "target": "Driver Issue"
+  },
+  {
+   "source": "Device Does Not Appear",
+   "relation": "FIXED_BY",
+   "target": "Toggle Bluetooth Off/On"
+  },
+  {
+   "source": "Fails to Connect",
+   "relation": "FIXED_BY",
+   "target": "Remove Existing Pairing"
+  },
+  {
+   "source": "Connects But Does Not Work",
+   "relation": "FIXED_BY",
+   "target": "Update Bluetooth Driver"
+  },
+  {
+   "source": "Input Not Registering",
+   "relation": "AFFECTS",
+   "target": "Bluetooth Peripheral"
+  },
+  {
+   "source": "Audio Not Working",
+   "relation": "AFFECTS",
+   "target": "Bluetooth Peripheral"
+  },
+  {
+   "source": "Status Connected",
+   "relation": "INDICATES",
+   "target": "Successful Pairing"
+  },
+  {
+   "source": "Discovery Mode",
+   "relation": "PART_OF",
+   "target": "Bluetooth Peripheral"
+  },
+  {
+   "source": "Passkey Prompt",
+   "relation": "PART_OF",
+   "target": "Bluetooth Peripheral"
+  },
+  {
+   "source": "Verify Laptop Model and OS Version",
+   "relation": "FIXED_BY",
+   "target": "Incompatible OS or Hardware"
+  }
+ ]
+}

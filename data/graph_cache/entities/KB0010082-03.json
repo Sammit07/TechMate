@@ -1,0 +1,131 @@
+{
+ "entities": [
+  {
+   "name": "phishing link click",
+   "type": "Symptom"
+  },
+  {
+   "name": "credential entry",
+   "type": "Symptom"
+  },
+  {
+   "name": "Service Desk ticket creation",
+   "type": "Fix"
+  },
+  {
+   "name": "Outlook Report button usage",
+   "type": "Fix"
+  },
+  {
+   "name": "password reset",
+   "type": "Fix"
+  },
+  {
+   "name": "session revocation",
+   "type": "Fix"
+  },
+  {
+   "name": "Azure AD sign-in log review",
+   "type": "Fix"
+  },
+  {
+   "name": "Security Operations escalation",
+   "type": "Fix"
+  },
+  {
+   "name": "sender blocking",
+   "type": "Fix"
+  },
+  {
+   "name": "phishing email purge",
+   "type": "Fix"
+  },
+  {
+   "name": "sign-back-in verification",
+   "type": "Fix"
+  },
+  {
+   "name": "resource access test",
+   "type": "Fix"
+  },
+  {
+   "name": "malware symptom check",
+   "type": "Symptom"
+  },
+  {
+   "name": "Temporary Access Pass issuance",
+   "type": "Fix"
+  },
+  {
+   "name": "Defender scan result",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "phishing link click",
+   "relation": "CAUSED_BY",
+   "target": "credential entry"
+  },
+  {
+   "source": "phishing link click",
+   "relation": "FIXED_BY",
+   "target": "Service Desk ticket creation"
+  },
+  {
+   "source": "phishing link click",
+   "relation": "FIXED_BY",
+   "target": "Outlook Report button usage"
+  },
+  {
+   "source": "phishing link click",
+   "relation": "FIXED_BY",
+   "target": "password reset"
+  },
+  {
+   "source": "phishing link click",
+   "relation": "FIXED_BY",
+   "target": "session revocation"
+  },
+  {
+   "source": "phishing link click",
+   "relation": "FIXED_BY",
+   "target": "Azure AD sign-in log review"
+  },
+  {
+   "source": "anomalous sign-in detection",
+   "relation": "FIXED_BY",
+   "target": "Security Operations escalation"
+  },
+  {
+   "source": "phishing link click",
+   "relation": "FIXED_BY",
+   "target": "sender blocking"
+  },
+  {
+   "source": "phishing link click",
+   "relation": "FIXED_BY",
+   "target": "phishing email purge"
+  },
+  {
+   "source": "ticket closure",
+   "relation": "FIXED_BY",
+   "target": "sign-back-in verification"
+  },
+  {
+   "source": "ticket closure",
+   "relation": "FIXED_BY",
+   "target": "resource access test"
+  },
+  {
+   "source": "malware symptom check",
+   "relation": "CAUSED_BY",
+   "target": "Defender scan result"
+  },
+  {
+   "source": "phishing link click",
+   "relation": "AFFECTS",
+   "target": "Temporary Access Pass issuance"
+  }
+ ]
+}

@@ -1,0 +1,126 @@
+{
+ "entities": [
+  {
+   "name": "Windows Update",
+   "type": "Product"
+  },
+  {
+   "name": "macOS Software Update",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook Report Button",
+   "type": "Component"
+  },
+  {
+   "name": "Update Stuck",
+   "type": "Symptom"
+  },
+  {
+   "name": "Update Failed",
+   "type": "Symptom"
+  },
+  {
+   "name": "error 0x8007000d",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Insufficient Disk Space",
+   "type": "Cause"
+  },
+  {
+   "name": "Network Connectivity Issue",
+   "type": "Cause"
+  },
+  {
+   "name": "Self-Help Component Reset",
+   "type": "Fix"
+  },
+  {
+   "name": "Windows Update Troubleshooter",
+   "type": "Fix"
+  },
+  {
+   "name": "Escalate to Desktop Support - OS Engineering",
+   "type": "Fix"
+  },
+  {
+   "name": "Escalate to Desktop Support - macOS Specialist",
+   "type": "Fix"
+  },
+  {
+   "name": "Manual Combo Updater Attempt",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Update Stuck",
+   "relation": "CAUSED_BY",
+   "target": "Insufficient Disk Space"
+  },
+  {
+   "source": "Update Failed",
+   "relation": "CAUSED_BY",
+   "target": "Network Connectivity Issue"
+  },
+  {
+   "source": "error 0x8007000d",
+   "relation": "INDICATES",
+   "target": "Update Failed"
+  },
+  {
+   "source": "Update Failed",
+   "relation": "AFFECTS",
+   "target": "Windows Update"
+  },
+  {
+   "source": "Update Failed",
+   "relation": "AFFECTS",
+   "target": "macOS Software Update"
+  },
+  {
+   "source": "Insufficient Disk Space",
+   "relation": "AFFECTS",
+   "target": "Windows Update"
+  },
+  {
+   "source": "Network Connectivity Issue",
+   "relation": "AFFECTS",
+   "target": "Windows Update"
+  },
+  {
+   "source": "Self-Help Component Reset",
+   "relation": "FIXED_BY",
+   "target": "Update Stuck"
+  },
+  {
+   "source": "Windows Update Troubleshooter",
+   "relation": "FIXED_BY",
+   "target": "Update Failed"
+  },
+  {
+   "source": "Escalate to Desktop Support - OS Engineering",
+   "relation": "FIXED_BY",
+   "target": "Update Failed"
+  },
+  {
+   "source": "Escalate to Desktop Support - macOS Specialist",
+   "relation": "FIXED_BY",
+   "target": "Update Failed"
+  },
+  {
+   "source": "Manual Combo Updater Attempt",
+   "relation": "FIXED_BY",
+   "target": "Update Failed"
+  }
+ ]
+}

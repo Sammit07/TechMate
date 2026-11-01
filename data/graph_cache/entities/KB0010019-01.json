@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "vpn.acme.example",
+   "type": "Component"
+  },
+  {
+   "name": "Acme Global Machine Certificate",
+   "type": "Component"
+  },
+  {
+   "name": "Authentication failed",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Certificate expired",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "VPN connection failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "outdated GlobalProtect client version",
+   "type": "Cause"
+  },
+  {
+   "name": "expired or missing machine certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "incorrect split-tunnel configuration",
+   "type": "Cause"
+  },
+  {
+   "name": "reinstall GlobalProtect via Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "renew machine certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "flush DNS resolver cache",
+   "type": "Fix"
+  },
+  {
+   "name": "verify split-tunnel configuration",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "VPN connection failure",
+   "relation": "CAUSED_BY",
+   "target": "outdated GlobalProtect client version"
+  },
+  {
+   "source": "VPN connection failure",
+   "relation": "CAUSED_BY",
+   "target": "expired or missing machine certificate"
+  },
+  {
+   "source": "VPN connection failure",
+   "relation": "CAUSED_BY",
+   "target": "incorrect split-tunnel configuration"
+  },
+  {
+   "source": "Authentication failed",
+   "relation": "INDICATES",
+   "target": "expired or missing machine certificate"
+  },
+  {
+   "source": "Certificate expired",
+   "relation": "INDICATES",
+   "target": "expired or missing machine certificate"
+  },
+  {
+   "source": "outdated GlobalProtect client version",
+   "relation": "FIXED_BY",
+   "target": "reinstall GlobalProtect via Company Portal"
+  },
+  {
+   "source": "expired or missing machine certificate",
+   "relation": "FIXED_BY",
+   "target": "renew machine certificate"
+  },
+  {
+   "source": "VPN connection failure",
+   "relation": "FIXED_BY",
+   "target": "flush DNS resolver cache"
+  },
+  {
+   "source": "VPN connection failure",
+   "relation": "FIXED_BY",
+   "target": "verify split-tunnel configuration"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "split-tunnel configuration"
+  },
+  {
+   "source": "Acme Global Machine Certificate",
+   "relation": "PART_OF",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "vpn.acme.example",
+   "relation": "PART_OF",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  }
+ ]
+}

@@ -1,0 +1,274 @@
+{
+ "entities": [
+  {
+   "name": "leaver process",
+   "type": "Process"
+  },
+  {
+   "name": "equipment return",
+   "type": "Activity"
+  },
+  {
+   "name": "account removal",
+   "type": "Activity"
+  },
+  {
+   "name": "OneDrive backup",
+   "type": "Task"
+  },
+  {
+   "name": "local drive backup",
+   "type": "Task"
+  },
+  {
+   "name": "exit ticket",
+   "type": "Artifact"
+  },
+  {
+   "name": "Service Desk portal",
+   "type": "System"
+  },
+  {
+   "name": "personal file backup",
+   "type": "Task"
+  },
+  {
+   "name": "laptop return",
+   "type": "Action"
+  },
+  {
+   "name": "peripheral disconnection",
+   "type": "Action"
+  },
+  {
+   "name": "mobile device return",
+   "type": "Action"
+  },
+  {
+   "name": "VPN token return",
+   "type": "Action"
+  },
+  {
+   "name": "ID badge return",
+   "type": "Action"
+  },
+  {
+   "name": "self-service password reset",
+   "type": "Task"
+  },
+  {
+   "name": "temporary password",
+   "type": "Data"
+  },
+  {
+   "name": "lockout trigger",
+   "type": "Event"
+  },
+  {
+   "name": "GlobalProtect VPN certificate",
+   "type": "Asset"
+  },
+  {
+   "name": "GlobalProtect client uninstall",
+   "type": "Action"
+  },
+  {
+   "name": "Service Desk confirmation",
+   "type": "Verification"
+  },
+  {
+   "name": "Entra ID account disable",
+   "type": "Action"
+  },
+  {
+   "name": "on-prem AD account disable",
+   "type": "Action"
+  },
+  {
+   "name": "Identity & Access Management group",
+   "type": "Team"
+  },
+  {
+   "name": "exit ticket tagging",
+   "type": "Task"
+  },
+  {
+   "name": "P2 priority",
+   "type": "Classification"
+  },
+  {
+   "name": "asset return log",
+   "type": "Record"
+  },
+  {
+   "name": "manager confirmation",
+   "type": "Verification"
+  },
+  {
+   "name": "Microsoft Entra ID",
+   "type": "System"
+  },
+  {
+   "name": "block sign-in",
+   "type": "Action"
+  },
+  {
+   "name": "license removal",
+   "type": "Action"
+  },
+  {
+   "name": "account deletion scheduling",
+   "type": "Action"
+  },
+  {
+   "name": "30-day deletion",
+   "type": "Policy"
+  },
+  {
+   "name": "immediate deletion",
+   "type": "Policy"
+  }
+ ],
+ "relations": [
+  {
+   "source": "leaver process",
+   "relation": "INCLUDES",
+   "target": "equipment return"
+  },
+  {
+   "source": "leaver process",
+   "relation": "INCLUDES",
+   "target": "account removal"
+  },
+  {
+   "source": "equipment return",
+   "relation": "REQUIRES",
+   "target": "exit ticket"
+  },
+  {
+   "source": "exit ticket",
+   "relation": "OBTAINED_FROM",
+   "target": "Service Desk portal"
+  },
+  {
+   "source": "account removal",
+   "relation": "PRECEDED_BY",
+   "target": "OneDrive backup"
+  },
+  {
+   "source": "account removal",
+   "relation": "PRECEDED_BY",
+   "target": "local drive backup"
+  },
+  {
+   "source": "equipment return",
+   "relation": "INCLUDES",
+   "target": "laptop return"
+  },
+  {
+   "source": "laptop return",
+   "relation": "REQUIRES",
+   "target": "peripheral disconnection"
+  },
+  {
+   "source": "equipment return",
+   "relation": "INCLUDES",
+   "target": "mobile device return"
+  },
+  {
+   "source": "equipment return",
+   "relation": "INCLUDES",
+   "target": "VPN token return"
+  },
+  {
+   "source": "equipment return",
+   "relation": "INCLUDES",
+   "target": "ID badge return"
+  },
+  {
+   "source": "account removal",
+   "relation": "INCLUDES",
+   "target": "self-service password reset"
+  },
+  {
+   "source": "self-service password reset",
+   "relation": "TRIGGERS",
+   "target": "lockout trigger"
+  },
+  {
+   "source": "account removal",
+   "relation": "INCLUDES",
+   "target": "GlobalProtect VPN certificate"
+  },
+  {
+   "source": "GlobalProtect VPN certificate",
+   "relation": "REQUIRES",
+   "target": "GlobalProtect client uninstall"
+  },
+  {
+   "source": "account removal",
+   "relation": "VERIFIED_BY",
+   "target": "Service Desk confirmation"
+  },
+  {
+   "source": "account removal",
+   "relation": "RESULTS_IN",
+   "target": "Entra ID account disable"
+  },
+  {
+   "source": "account removal",
+   "relation": "RESULTS_IN",
+   "target": "on-prem AD account disable"
+  },
+  {
+   "source": "Identity & Access Management group",
+   "relation": "EXECUTES",
+   "target": "exit ticket tagging"
+  },
+  {
+   "source": "exit ticket tagging",
+   "relation": "SETS",
+   "target": "P2 priority"
+  },
+  {
+   "source": "equipment return",
+   "relation": "VERIFIED_BY",
+   "target": "asset return log"
+  },
+  {
+   "source": "equipment return",
+   "relation": "VERIFIED_BY",
+   "target": "manager confirmation"
+  },
+  {
+   "source": "account removal",
+   "relation": "PERFORMED_IN",
+   "target": "Microsoft Entra ID"
+  },
+  {
+   "source": "account removal",
+   "relation": "INCLUDES",
+   "target": "block sign-in"
+  },
+  {
+   "source": "account removal",
+   "relation": "INCLUDES",
+   "target": "license removal"
+  },
+  {
+   "source": "account removal",
+   "relation": "INCLUDES",
+   "target": "account deletion scheduling"
+  },
+  {
+   "source": "account deletion scheduling",
+   "relation": "FOLLOWS",
+   "target": "30-day deletion"
+  },
+  {
+   "source": "account deletion scheduling",
+   "relation": "CAN_BE",
+   "target": "immediate deletion"
+  }
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "entities": [
+  {
+   "name": "IT self-service portal",
+   "type": "Product"
+  },
+  {
+   "name": "Service Desk",
+   "type": "Product"
+  },
+  {
+   "name": "Teams channel \"IT Help\"",
+   "type": "Product"
+  },
+  {
+   "name": "extension 4357 (HELP)",
+   "type": "Component"
+  },
+  {
+   "name": "P1 for critical outages",
+   "type": "Component"
+  },
+  {
+   "name": "P2 for high-impact issues",
+   "type": "Component"
+  },
+  {
+   "name": "P3 for moderate",
+   "type": "Component"
+  },
+  {
+   "name": "P4 for low",
+   "type": "Component"
+  },
+  {
+   "name": "Need to report an IT issue but unsure how to start",
+   "type": "Symptom"
+  },
+  {
+   "name": "Unclear what details to provide when opening a ticket",
+   "type": "Symptom"
+  },
+  {
+   "name": "Tickets rejected or delayed due to missing information",
+   "type": "Symptom"
+  },
+  {
+   "name": "Users unaware of the available submission channels (portal, phone, Teams)",
+   "type": "Cause"
+  },
+  {
+   "name": "Lack of guidance on required ticket fields",
+   "type": "Cause"
+  },
+  {
+   "name": "Varied processes across different teams leading to confusion",
+   "type": "Cause"
+  },
+  {
+   "name": "Select the appropriate service group",
+   "type": "Fix"
+  },
+  {
+   "name": "Choose a priority level based on the impact",
+   "type": "Fix"
+  },
+  {
+   "name": "Enter a concise title that summarises the problem",
+   "type": "Fix"
+  },
+  {
+   "name": "Provide a detailed account of the issue, including any error messages, steps to reproduce, and the device name or asset tag",
+   "type": "Fix"
+  },
+  {
+   "name": "Attach relevant screenshots or logs",
+   "type": "Fix"
+  },
+  {
+   "name": "Dial extension 4357 from any internal phone or dial",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Need to report an IT issue but unsure how to start",
+   "relation": "CAUSED_BY",
+   "target": "Users unaware of the available submission channels (portal, phone, Teams)"
+  },
+  {
+   "source": "Unclear what details to provide when opening a ticket",
+   "relation": "CAUSED_BY",
+   "target": "Lack of guidance on required ticket fields"
+  },
+  {
+   "source": "Tickets rejected or delayed due to missing information",
+   "relation": "CAUSED_BY",
+   "target": "Varied processes across different teams leading to confusion"
+  },
+  {
+   "source": "Need to report an IT issue but unsure how to start",
+   "relation": "FIXED_BY",
+   "target": "Select the appropriate service group"
+  },
+  {
+   "source": "Unclear what details to provide when opening a ticket",
+   "relation": "FIXED_BY",
+   "target": "Provide a detailed account of the issue, including any error messages, steps to reproduce, and the device name or asset tag"
+  },
+  {
+   "source": "Tickets rejected or delayed due to missing information",
+   "relation": "FIXED_BY",
+   "target": "Attach relevant screenshots or logs"
+  },
+  {
+   "source": "IT self-service portal",
+   "relation": "AFFECTS",
+   "target": "All Acme Global employees"
+  },
+  {
+   "source": "Service Desk",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptops"
+  },
+  {
+   "source": "Teams channel \"IT Help\"",
+   "relation": "AFFECTS",
+   "target": "macOS devices"
+  },
+  {
+   "source": "extension 4357 (HELP)",
+   "relation": "PART_OF",
+   "target": "Service Desk"
+  },
+  {
+   "source": "P1 for critical outages",
+   "relation": "PART_OF",
+   "target": "Priority levels"
+  },
+  {
+   "source": "P2 for high-impact issues",
+   "relation": "PART_OF",
+   "target": "Priority levels"
+  },
+  {
+   "source": "P3 for moderate",
+   "relation": "PART_OF",
+   "target": "Priority levels"
+  },
+  {
+   "source": "P4 for low",
+   "relation": "PART_OF",
+   "target": "Priority levels"
+  }
+ ]
+}

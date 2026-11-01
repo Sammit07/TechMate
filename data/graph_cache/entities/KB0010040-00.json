@@ -1,0 +1,177 @@
+{
+ "entities": [
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "Bluetooth and wired headsets",
+   "type": "Component"
+  },
+  {
+   "name": "Incorrect default audio device selected",
+   "type": "Cause"
+  },
+  {
+   "name": "Teams client configured to use wrong microphone/speaker",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated Bluetooth driver",
+   "type": "Cause"
+  },
+  {
+   "name": "Physical damage to headset/cable/connector",
+   "type": "Cause"
+  },
+  {
+   "name": "Hardware mute button enabled",
+   "type": "Cause"
+  },
+  {
+   "name": "Conflicting audio software",
+   "type": "Cause"
+  },
+  {
+   "name": "No audio heard in Teams meetings",
+   "type": "Symptom"
+  },
+  {
+   "name": "Others cannot hear user's voice",
+   "type": "Symptom"
+  },
+  {
+   "name": "Microphone shows as muted/unavailable in Teams",
+   "type": "Symptom"
+  },
+  {
+   "name": "Bluetooth headset fails to pair/disconnects",
+   "type": "Symptom"
+  },
+  {
+   "name": "Wired headset produces static/no sound",
+   "type": "Symptom"
+  },
+  {
+   "name": "Set headset as default audio device",
+   "type": "Fix"
+  },
+  {
+   "name": "Try different USB port",
+   "type": "Fix"
+  },
+  {
+   "name": "Re-pair Bluetooth headset",
+   "type": "Fix"
+  },
+  {
+   "name": "Update Bluetooth driver",
+   "type": "Fix"
+  },
+  {
+   "name": "Check physical connection",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "No audio heard in Teams meetings",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect default audio device selected"
+  },
+  {
+   "source": "Others cannot hear user's voice",
+   "relation": "CAUSED_BY",
+   "target": "Teams client configured to use wrong microphone/speaker"
+  },
+  {
+   "source": "Bluetooth headset fails to pair/disconnects",
+   "relation": "CAUSED_BY",
+   "target": "Outdated Bluetooth driver"
+  },
+  {
+   "source": "Wired headset produces static/no sound",
+   "relation": "CAUSED_BY",
+   "target": "Physical damage to headset/cable/connector"
+  },
+  {
+   "source": "Microphone shows as muted/unavailable in Teams",
+   "relation": "CAUSED_BY",
+   "target": "Hardware mute button enabled"
+  },
+  {
+   "source": "All symptoms",
+   "relation": "CAUSED_BY",
+   "target": "Conflicting audio software"
+  },
+  {
+   "source": "Incorrect default audio device selected",
+   "relation": "FIXED_BY",
+   "target": "Set headset as default audio device"
+  },
+  {
+   "source": "USB headset issues",
+   "relation": "FIXED_BY",
+   "target": "Try different USB port"
+  },
+  {
+   "source": "Bluetooth headset fails to pair/disconnects",
+   "relation": "FIXED_BY",
+   "target": "Re-pair Bluetooth headset"
+  },
+  {
+   "source": "Outdated Bluetooth driver",
+   "relation": "FIXED_BY",
+   "target": "Update Bluetooth driver"
+  },
+  {
+   "source": "Physical damage to headset/cable/connector",
+   "relation": "FIXED_BY",
+   "target": "Check physical connection"
+  },
+  {
+   "source": "Dell Latitude 5440/7440",
+   "relation": "AFFECTS",
+   "target": "Bluetooth and wired headsets"
+  },
+  {
+   "source": "Lenovo ThinkPad T14/X1 Carbon",
+   "relation": "AFFECTS",
+   "target": "Bluetooth and wired headsets"
+  },
+  {
+   "source": "HP EliteBook 840",
+   "relation": "AFFECTS",
+   "target": "Bluetooth and wired headsets"
+  },
+  {
+   "source": "MacBook Pro/Air",
+   "relation": "AFFECTS",
+   "target": "Bluetooth and wired headsets"
+  }
+ ]
+}

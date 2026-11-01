@@ -1,0 +1,145 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15 MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "Desktop workstations running Windows 11",
+   "type": "Product"
+  },
+  {
+   "name": "Remote employees connecting via VPN",
+   "type": "Product"
+  },
+  {
+   "name": "Automatic lock timeout",
+   "type": "Component"
+  },
+  {
+   "name": "Intune or Group Policy settings",
+   "type": "Component"
+  },
+  {
+   "name": "Physical workspace clutter",
+   "type": "Component"
+  },
+  {
+   "name": "Screen stays unlocked when the user walks away from the desk",
+   "type": "Symptom"
+  },
+  {
+   "name": "Confidential data visible on an unattended monitor",
+   "type": "Symptom"
+  },
+  {
+   "name": "Audit logs show no lock or sign-in events for extended periods",
+   "type": "Symptom"
+  },
+  {
+   "name": "Spot-check audits reveal papers, notes, or devices containing sensitive information left on the desk",
+   "type": "Symptom"
+  },
+  {
+   "name": "Automatic lock timeout is disabled or set to a value longer than the allowed 5 minutes",
+   "type": "Cause"
+  },
+  {
+   "name": "Users rely on memory to lock the screen and forget to press the lock shortcut",
+   "type": "Cause"
+  },
+  {
+   "name": "Intune or Group Policy settings that enforce lock timing have not been applied to the device",
+   "type": "Cause"
+  },
+  {
+   "name": "Physical workspace clutter prevents the user from quickly securing the desk before leaving",
+   "type": "Cause"
+  },
+  {
+   "name": "Enable Automatic Screen Lock",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Screen stays unlocked when the user walks away from the desk",
+   "relation": "CAUSED_BY",
+   "target": "Automatic lock timeout is disabled or set to a value longer than the allowed 5 minutes"
+  },
+  {
+   "source": "Screen stays unlocked when the user walks away from the desk",
+   "relation": "CAUSED_BY",
+   "target": "Users rely on memory to lock the screen and forget to press the lock shortcut"
+  },
+  {
+   "source": "Screen stays unlocked when the user walks away from the desk",
+   "relation": "CAUSED_BY",
+   "target": "Intune or Group Policy settings that enforce lock timing have not been applied to the device"
+  },
+  {
+   "source": "Confidential data visible on an unattended monitor",
+   "relation": "CAUSED_BY",
+   "target": "Physical workspace clutter prevents the user from quickly securing the desk before leaving"
+  },
+  {
+   "source": "Audit logs show no lock or sign-in events for extended periods",
+   "relation": "CAUSED_BY",
+   "target": "Automatic lock timeout is disabled or set to a value longer than the allowed 5 minutes"
+  },
+  {
+   "source": "Spot-check audits reveal papers, notes, or devices containing sensitive information left on the desk",
+   "relation": "CAUSED_BY",
+   "target": "Physical workspace clutter prevents the user from quickly securing the desk before leaving"
+  },
+  {
+   "source": "Automatic lock timeout",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptops"
+  },
+  {
+   "source": "Automatic lock timeout",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15 MacBook Pro/Air"
+  },
+  {
+   "source": "Automatic lock timeout",
+   "relation": "AFFECTS",
+   "target": "Desktop workstations running Windows 11"
+  },
+  {
+   "source": "Intune or Group Policy settings",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptops"
+  },
+  {
+   "source": "Intune or Group Policy settings",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15 MacBook Pro/Air"
+  },
+  {
+   "source": "Intune or Group Policy settings",
+   "relation": "AFFECTS",
+   "target": "Desktop workstations running Windows 11"
+  },
+  {
+   "source": "Physical workspace clutter",
+   "relation": "AFFECTS",
+   "target": "Remote employees connecting via VPN"
+  },
+  {
+   "source": "Enable Automatic Screen Lock",
+   "relation": "FIXED_BY",
+   "target": "Automatic lock timeout is disabled or set to a value longer than the allowed 5 minutes"
+  },
+  {
+   "source": "Enable Automatic Screen Lock",
+   "relation": "FIXED_BY",
+   "target": "Intune or Group Policy settings that enforce lock timing have not been applied to the device"
+  }
+ ]
+}

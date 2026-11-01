@@ -1,0 +1,126 @@
+{
+ "entities": [
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "vpn.acme.example",
+   "type": "Product"
+  },
+  {
+   "name": "Palo Alto",
+   "type": "Product"
+  },
+  {
+   "name": "certificate expired",
+   "type": "Cause"
+  },
+  {
+   "name": "authentication failed",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "cannot connect",
+   "type": "Symptom"
+  },
+  {
+   "name": "VPN disconnects",
+   "type": "Symptom"
+  },
+  {
+   "name": "split tunnel",
+   "type": "Component"
+  },
+  {
+   "name": "DNS flush",
+   "type": "Component"
+  },
+  {
+   "name": "home router block",
+   "type": "Cause"
+  },
+  {
+   "name": "hotspot test",
+   "type": "Symptom"
+  },
+  {
+   "name": "Network Support",
+   "type": "Product"
+  },
+  {
+   "name": "certificate renewal",
+   "type": "Fix"
+  },
+  {
+   "name": "self-service portal",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "certificate expired",
+   "relation": "CAUSED_BY",
+   "target": "authentication failed"
+  },
+  {
+   "source": "authentication failed",
+   "relation": "INDICATES",
+   "target": "certificate expired"
+  },
+  {
+   "source": "cannot connect",
+   "relation": "CAUSED_BY",
+   "target": "certificate expired"
+  },
+  {
+   "source": "VPN disconnects",
+   "relation": "CAUSED_BY",
+   "target": "certificate expired"
+  },
+  {
+   "source": "split tunnel",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "DNS flush",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "home router block",
+   "relation": "CAUSED_BY",
+   "target": "VPN disconnects"
+  },
+  {
+   "source": "hotspot test",
+   "relation": "INDICATES",
+   "target": "home router block"
+  },
+  {
+   "source": "certificate renewal",
+   "relation": "FIXED_BY",
+   "target": "certificate expired"
+  },
+  {
+   "source": "self-service portal",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "PART_OF",
+   "target": "Palo Alto"
+  },
+  {
+   "source": "Network Support",
+   "relation": "AFFECTS",
+   "target": "vpn.acme.example"
+  }
+ ]
+}

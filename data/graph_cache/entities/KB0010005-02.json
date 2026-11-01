@@ -1,0 +1,121 @@
+{
+ "entities": [
+  {
+   "name": "Account is locked out",
+   "type": "Symptom"
+  },
+  {
+   "name": "Event ID 4740",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Event ID 4625",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "stale credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "Credential Manager",
+   "type": "Component"
+  },
+  {
+   "name": "mapped drives",
+   "type": "Component"
+  },
+  {
+   "name": "mobile mail",
+   "type": "Component"
+  },
+  {
+   "name": "browser passwords",
+   "type": "Component"
+  },
+  {
+   "name": "scheduled task",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook Android app",
+   "type": "Component"
+  },
+  {
+   "name": "Netwrix/Azure AD sign-in logs",
+   "type": "Component"
+  },
+  {
+   "name": "uncheck \"Account is locked out\"",
+   "type": "Fix"
+  },
+  {
+   "name": "update or remove the credential",
+   "type": "Fix"
+  },
+  {
+   "name": "enable credential-manager alerts",
+   "type": "Fix"
+  },
+  {
+   "name": "schedule a quarterly password-review",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Account is locked out",
+   "relation": "CAUSED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "Event ID 4740",
+   "relation": "INDICATES",
+   "target": "stale credentials"
+  },
+  {
+   "source": "Event ID 4625",
+   "relation": "INDICATES",
+   "target": "stale credentials"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "Credential Manager"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "mapped drives"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "mobile mail"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "browser passwords"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "scheduled task"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "Outlook Android app"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "FIXED_BY",
+   "target": "update or remove the credential"
+  },
+  {
+   "source": "Account is locked out",
+   "relation": "FIXED_BY",
+   "target": "uncheck \"Account is locked out\"}, {"
+  }
+ ]
+}

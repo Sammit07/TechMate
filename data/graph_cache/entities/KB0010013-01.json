@@ -1,0 +1,195 @@
+{
+ "entities": [
+  {
+   "name": "ACME-Corp Wi-Fi (802.1X)",
+   "type": "Component"
+  },
+  {
+   "name": "machine certificate",
+   "type": "Component"
+  },
+  {
+   "name": "<firstname>.<lastname>@acme.example",
+   "type": "Component"
+  },
+  {
+   "name": "temporary password",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Authenticator MFA registration",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Inbox folder",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Teams",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "Files On-Demand",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect client",
+   "type": "Product"
+  },
+  {
+   "name": "PaperCut secure print queue",
+   "type": "Component"
+  },
+  {
+   "name": "ID badge",
+   "type": "Component"
+  },
+  {
+   "name": "AD account",
+   "type": "Component"
+  },
+  {
+   "name": "mailbox",
+   "type": "Component"
+  },
+  {
+   "name": "default Microsoft 365 licences",
+   "type": "Component"
+  },
+  {
+   "name": "Intune enrollment",
+   "type": "Component"
+  },
+  {
+   "name": "device imaging",
+   "type": "Component"
+  },
+  {
+   "name": "HRIS",
+   "type": "Product"
+  },
+  {
+   "name": "Identity & Access Management team",
+   "type": "Product"
+  },
+  {
+   "name": "service desk ticket",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Power on the laptop and connect to the ACME-Corp Wi-Fi (802.1X) or plug in the Ethernet cable.",
+   "relation": "AFFECTS",
+   "target": "ACME-Corp Wi-Fi (802.1X)"
+  },
+  {
+   "source": "The device should automatically authenticate using its machine certificate.",
+   "relation": "AFFECTS",
+   "target": "machine certificate"
+  },
+  {
+   "source": "At the Windows login screen, enter your Acme Global username in the format <firstname>.<lastname>@acme.example",
+   "relation": "AFFECTS",
+   "target": "<firstname>.<lastname>@acme.example"
+  },
+  {
+   "source": "your temporary password provided by your manager or HR",
+   "relation": "AFFECTS",
+   "target": "temporary password"
+  },
+  {
+   "source": "complete the Microsoft Authenticator MFA registration",
+   "relation": "AFFECTS",
+   "target": "Microsoft Authenticator MFA registration"
+  },
+  {
+   "source": "open Outlook and confirm that your mailbox loads",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "see the default Inbox folder",
+   "relation": "AFFECTS",
+   "target": "Inbox folder"
+  },
+  {
+   "source": "Launch Microsoft Teams",
+   "relation": "AFFECTS",
+   "target": "Microsoft Teams"
+  },
+  {
+   "source": "Open OneDrive from the Start menu",
+   "relation": "AFFECTS",
+   "target": "OneDrive"
+  },
+  {
+   "source": "begin syncing your Files On-Demands folder",
+   "relation": "AFFECTS",
+   "target": "Files On-Demand"
+  },
+  {
+   "source": "launch the GlobalProtect client",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect client"
+  },
+  {
+   "source": "choose Print, select the PaperCut secure print queue",
+   "relation": "AFFECTS",
+   "target": "PaperCut secure print queue"
+  },
+  {
+   "source": "release the job at a printer using your ID badge",
+   "relation": "AFFECTS",
+   "target": "ID badge"
+  },
+  {
+   "source": "provisions an AD account, mailbox, and default Microsoft 365 licences",
+   "relation": "AFFECTS",
+   "target": "AD account"
+  },
+  {
+   "source": "provisions an AD account, mailbox, and default Microsoft 365 licences",
+   "relation": "AFFECTS",
+   "target": "mailbox"
+  },
+  {
+   "source": "provisions an AD account, mailbox, and default Microsoft 365 licences",
+   "relation": "AFFECTS",
+   "target": "default Microsoft 365 licences"
+  },
+  {
+   "source": "enroll it in Intune",
+   "relation": "AFFECTS",
+   "target": "Intune enrollment"
+  },
+  {
+   "source": "image the device",
+   "relation": "AFFECTS",
+   "target": "device imaging"
+  },
+  {
+   "source": "Verify the HR-provided start date and employee ID in the ticket or HRIS lookup",
+   "relation": "AFFECTS",
+   "target": "HRIS"
+  },
+  {
+   "source": "the L1 agent (or the Identity & Access Management team)",
+   "relation": "AFFECTS",
+   "target": "Identity & Access Management team"
+  },
+  {
+   "source": "Attach the completed checklist to the ticket",
+   "relation": "AFFECTS",
+   "target": "service desk ticket"
+  }
+ ]
+}

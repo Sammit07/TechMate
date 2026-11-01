@@ -1,0 +1,140 @@
+{
+ "entities": [
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Intune-managed environment",
+   "type": "Product"
+  },
+  {
+   "name": "Software Catalog",
+   "type": "Product"
+  },
+  {
+   "name": "Security and Licensing review",
+   "type": "Component"
+  },
+  {
+   "name": "Application Support",
+   "type": "Product"
+  },
+  {
+   "name": "Desktop Support",
+   "type": "Product"
+  },
+  {
+   "name": "Security Operations team",
+   "type": "Product"
+  },
+  {
+   "name": "ticket closure",
+   "type": "Fix"
+  },
+  {
+   "name": "software availability verification",
+   "type": "Symptom"
+  },
+  {
+   "name": "installation success check",
+   "type": "Fix"
+  },
+  {
+   "name": "version number match",
+   "type": "Symptom"
+  },
+  {
+   "name": "basic task performance",
+   "type": "Symptom"
+  },
+  {
+   "name": "error collection",
+   "type": "Fix"
+  },
+  {
+   "name": "re-escalation",
+   "type": "Fix"
+  },
+  {
+   "name": "outcome documentation",
+   "type": "Fix"
+  },
+  {
+   "name": "catalog accuracy maintenance",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "software availability verification",
+   "relation": "CAUSED_BY",
+   "target": "catalog accuracy maintenance"
+  },
+  {
+   "source": "installation success check",
+   "relation": "FIXED_BY",
+   "target": "software availability verification"
+  },
+  {
+   "source": "version number match",
+   "relation": "INDICATES",
+   "target": "installation success check"
+  },
+  {
+   "source": "basic task performance",
+   "relation": "INDICATES",
+   "target": "installation success check"
+  },
+  {
+   "source": "error collection",
+   "relation": "FIXED_BY",
+   "target": "installation success check"
+  },
+  {
+   "source": "re-escalation",
+   "relation": "FIXED_BY",
+   "target": "error collection"
+  },
+  {
+   "source": "outcome documentation",
+   "relation": "FIXED_BY",
+   "target": "ticket closure"
+  },
+  {
+   "source": "ticket closure",
+   "relation": "FIXED_BY",
+   "target": "software availability verification"
+  },
+  {
+   "source": "Application Support",
+   "relation": "AFFECTS",
+   "target": "re-escalation"
+  },
+  {
+   "source": "Desktop Support",
+   "relation": "AFFECTS",
+   "target": "error collection"
+  },
+  {
+   "source": "Intune-managed environment",
+   "relation": "AFFECTS",
+   "target": "installation success check"
+  },
+  {
+   "source": "Security and Licensing review",
+   "relation": "PART_OF",
+   "target": "Software Catalog"
+  },
+  {
+   "source": "Security Operations team",
+   "relation": "AFFECTS",
+   "target": "re-escalation"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "software availability verification"
+  }
+ ]
+}

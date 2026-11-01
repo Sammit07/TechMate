@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "printer offline or jobs stuck in the queue",
+   "type": "Symptom"
+  },
+  {
+   "name": "restart Print Spooler service",
+   "type": "Fix"
+  },
+  {
+   "name": "clear print queue by cancelling all documents",
+   "type": "Fix"
+  },
+  {
+   "name": "print test page",
+   "type": "Fix"
+  },
+  {
+   "name": "re-add printer via print server",
+   "type": "Fix"
+  },
+  {
+   "name": "contact IT Service Desk",
+   "type": "Fix"
+  },
+  {
+   "name": "verify printer port points to print.acme.example",
+   "type": "Cause"
+  },
+  {
+   "name": "outdated printer driver",
+   "type": "Cause"
+  },
+  {
+   "name": "Print Spooler service not running",
+   "type": "Cause"
+  },
+  {
+   "name": "stuck print jobs in queue",
+   "type": "Symptom"
+  },
+  {
+   "name": "printer showing as Offline",
+   "type": "Symptom"
+  },
+  {
+   "name": "Print Spooler",
+   "type": "Component"
+  },
+  {
+   "name": "print queue",
+   "type": "Component"
+  },
+  {
+   "name": "printer driver",
+   "type": "Component"
+  },
+  {
+   "name": "Intune or Remote Assistance",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "printer offline or jobs stuck in the queue",
+   "relation": "CAUSED_BY",
+   "target": "Print Spooler service not running"
+  },
+  {
+   "source": "printer offline or jobs stuck in the queue",
+   "relation": "CAUSED_BY",
+   "target": "outdated printer driver"
+  },
+  {
+   "source": "printer offline or jobs stuck in the queue",
+   "relation": "CAUSED_BY",
+   "target": "verify printer port points to print.acme.example"
+  },
+  {
+   "source": "stuck print jobs in queue",
+   "relation": "AFFECTS",
+   "target": "print queue"
+  },
+  {
+   "source": "printer showing as Offline",
+   "relation": "AFFECTS",
+   "target": "printer"
+  },
+  {
+   "source": "Print Spooler service not running",
+   "relation": "FIXED_BY",
+   "target": "restart Print Spooler service"
+  },
+  {
+   "source": "stuck print jobs in queue",
+   "relation": "FIXED_BY",
+   "target": "clear print queue by cancelling all documents"
+  },
+  {
+   "source": "printer offline or jobs stuck in the queue",
+   "relation": "FIXED_BY",
+   "target": "print test page"
+  },
+  {
+   "source": "printer offline or jobs stuck in the queue",
+   "relation": "FIXED_BY",
+   "target": "re-add printer via print server"
+  },
+  {
+   "source": "printer offline or jobs stuck in the queue",
+   "relation": "FIXED_BY",
+   "target": "contact IT Service Desk"
+  },
+  {
+   "source": "outdated printer driver",
+   "relation": "FIXED_BY",
+   "target": "printer driver"
+  },
+  {
+   "source": "Print Spooler",
+   "relation": "PART_OF",
+   "target": "Windows operating system"
+  },
+  {
+   "source": "print queue",
+   "relation": "PART_OF",
+   "target": "Print Spooler"
+  },
+  {
+   "source": "printer driver",
+   "relation": "PART_OF",
+   "target": "printer"
+  },
+  {
+   "source": "Intune or Remote Assistance",
+   "relation": "PART_OF",
+   "target": "endpoint management tools"
+  }
+ ]
+}

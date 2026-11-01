@@ -1,0 +1,156 @@
+{
+ "entities": [
+  {
+   "name": "meeting room video conferencing system",
+   "type": "Product"
+  },
+  {
+   "name": "input selection menu",
+   "type": "Component"
+  },
+  {
+   "name": "HDMI/USB-C source labels",
+   "type": "Component"
+  },
+  {
+   "name": "physical cabling",
+   "type": "Component"
+  },
+  {
+   "name": "room compute module",
+   "type": "Product"
+  },
+  {
+   "name": "camera and speakerphone",
+   "type": "Component"
+  },
+  {
+   "name": "touch panel",
+   "type": "Component"
+  },
+  {
+   "name": "no video",
+   "type": "Symptom"
+  },
+  {
+   "name": "no audio",
+   "type": "Symptom"
+  },
+  {
+   "name": "black screen",
+   "type": "Symptom"
+  },
+  {
+   "name": "echo",
+   "type": "Symptom"
+  },
+  {
+   "name": "reseat HDMI/USB-C cables",
+   "type": "Fix"
+  },
+  {
+   "name": "replace with known-good cable",
+   "type": "Fix"
+  },
+  {
+   "name": "verify USB devices in Device Manager/System Information",
+   "type": "Fix"
+  },
+  {
+   "name": "update firmware using vendor utility",
+   "type": "Fix"
+  },
+  {
+   "name": "test display with known-good source",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Desktop Support - Audio-Visual team",
+   "type": "Fix"
+  },
+  {
+   "name": "outdated firmware",
+   "type": "Cause"
+  },
+  {
+   "name": "loose or faulty cabling",
+   "type": "Cause"
+  },
+  {
+   "name": "incorrect source selection",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "no video",
+   "relation": "CAUSED_BY",
+   "target": "loose or faulty cabling"
+  },
+  {
+   "source": "no video",
+   "relation": "CAUSED_BY",
+   "target": "incorrect source selection"
+  },
+  {
+   "source": "no audio",
+   "relation": "CAUSED_BY",
+   "target": "outdated firmware"
+  },
+  {
+   "source": "black screen",
+   "relation": "INDICATES",
+   "target": "no video"
+  },
+  {
+   "source": "echo",
+   "relation": "INDICATES",
+   "target": "no audio"
+  },
+  {
+   "source": "loose or faulty cabling",
+   "relation": "AFFECTS",
+   "target": "meeting room video conferencing system"
+  },
+  {
+   "source": "outdated firmware",
+   "relation": "AFFECTS",
+   "target": "camera and speakerphone"
+  },
+  {
+   "source": "incorrect source selection",
+   "relation": "AFFECTS",
+   "target": "input selection menu"
+  },
+  {
+   "source": "reseat HDMI/USB-C cables",
+   "relation": "FIXED_BY",
+   "target": "loose or faulty cabling"
+  },
+  {
+   "source": "replace with known-good cable",
+   "relation": "FIXED_BY",
+   "target": "loose or faulty cabling"
+  },
+  {
+   "source": "verify USB devices in Device Manager/System Information",
+   "relation": "FIXED_BY",
+   "target": "outdated firmware"
+  },
+  {
+   "source": "update firmware using vendor utility",
+   "relation": "FIXED_BY",
+   "target": "outdated firmware"
+  },
+  {
+   "source": "test display with known-good source",
+   "relation": "FIXED_BY",
+   "target": "incorrect source selection"
+  },
+  {
+   "source": "escalate to Desktop Support - Audio-Visual team",
+   "relation": "FIXED_BY",
+   "target": "no video"
+  }
+ ]
+}

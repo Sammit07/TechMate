@@ -1,0 +1,122 @@
+{
+ "entities": [
+  {
+   "name": "account lockout",
+   "type": "Symptom"
+  },
+  {
+   "name": "stale credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "cached credentials in mobile mail apps",
+   "type": "Cause"
+  },
+  {
+   "name": "Windows Credential Manager",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "wireless profile",
+   "type": "Component"
+  },
+  {
+   "name": "certificate-based authentication",
+   "type": "Component"
+  },
+  {
+   "name": "self-service password reset portal",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "clear Windows Credential Manager",
+   "type": "Fix"
+  },
+  {
+   "name": "recreate GlobalProtect or wireless profile",
+   "type": "Fix"
+  },
+  {
+   "name": "change password via self-service portal",
+   "type": "Fix"
+  },
+  {
+   "name": "verify login after unlock",
+   "type": "Fix"
+  },
+  {
+   "name": "ACME services",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "account lockout",
+   "relation": "CAUSED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "account lockout",
+   "relation": "CAUSED_BY",
+   "target": "cached credentials in mobile mail apps"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "Windows Credential Manager"
+  },
+  {
+   "source": "cached credentials in mobile mail apps",
+   "relation": "AFFECTS",
+   "target": "mobile mail apps"
+  },
+  {
+   "source": "Windows Credential Manager",
+   "relation": "PART_OF",
+   "target": "ACME services"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "PART_OF",
+   "target": "ACME services"
+  },
+  {
+   "source": "wireless profile",
+   "relation": "PART_OF",
+   "target": "ACME services"
+  },
+  {
+   "source": "clear Windows Credential Manager",
+   "relation": "FIXED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "recreate GlobalProtect or wireless profile",
+   "relation": "FIXED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "change password via self-service portal",
+   "relation": "FIXED_BY",
+   "target": "account lockout"
+  },
+  {
+   "source": "verify login after unlock",
+   "relation": "FIXED_BY",
+   "target": "account lockout"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "AFFECTS",
+   "target": "account lockout"
+  }
+ ]
+}

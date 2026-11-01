@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "DNS resolution failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "Proxy misconfiguration",
+   "type": "Symptom"
+  },
+  {
+   "name": "Web filter block",
+   "type": "Symptom"
+  },
+  {
+   "name": "Expired DNS cache",
+   "type": "Cause"
+  },
+  {
+   "name": "Incorrect proxy settings",
+   "type": "Cause"
+  },
+  {
+   "name": "Blocked URL category",
+   "type": "Cause"
+  },
+  {
+   "name": "Flush DNS cache",
+   "type": "Fix"
+  },
+  {
+   "name": "Renew IP address",
+   "type": "Fix"
+  },
+  {
+   "name": "Correct proxy settings",
+   "type": "Fix"
+  },
+  {
+   "name": "Request web filter unblock",
+   "type": "Fix"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Split tunnelling",
+   "type": "Component"
+  },
+  {
+   "name": "ERR_NAME_NOT_RESOLVED",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "DNS_PROBE_FINISHED",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "nslookup",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "DNS resolution failure",
+   "relation": "CAUSED_BY",
+   "target": "Expired DNS cache"
+  },
+  {
+   "source": "Website won't load",
+   "relation": "INDICATES",
+   "target": "DNS resolution failure"
+  },
+  {
+   "source": "ERR_NAME_NOT_RESOLVED",
+   "relation": "INDICATES",
+   "target": "DNS resolution failure"
+  },
+  {
+   "source": "DNS_PROBE_FINISHED",
+   "relation": "INDICATES",
+   "target": "DNS resolution failure"
+  },
+  {
+   "source": "Proxy misconfiguration",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect proxy settings"
+  },
+  {
+   "source": "Website won't load",
+   "relation": "INDICATES",
+   "target": "Proxy misconfiguration"
+  },
+  {
+   "source": "Web filter block",
+   "relation": "CAUSED_BY",
+   "target": "Blocked URL category"
+  },
+  {
+   "source": "Website won't load",
+   "relation": "INDICATES",
+   "target": "Web filter block"
+  },
+  {
+   "source": "Expired DNS cache",
+   "relation": "FIXED_BY",
+   "target": "Flush DNS cache"
+  },
+  {
+   "source": "Incorrect proxy settings",
+   "relation": "FIXED_BY",
+   "target": "Correct proxy settings"
+  },
+  {
+   "source": "Blocked URL category",
+   "relation": "FIXED_BY",
+   "target": "Request web filter unblock"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "PART_OF",
+   "target": "Split tunnelling"
+  },
+  {
+   "source": "DNS resolution failure",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "nslookup",
+   "relation": "AFFECTS",
+   "target": "DNS resolution failure"
+  }
+ ]
+}

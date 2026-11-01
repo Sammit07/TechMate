@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Authenticator app",
+   "type": "Product"
+  },
+  {
+   "name": "Acme Global email address",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook Web",
+   "type": "Product"
+  },
+  {
+   "name": "My Account portal",
+   "type": "Product"
+  },
+  {
+   "name": "push notification",
+   "type": "Component"
+  },
+  {
+   "name": "backup SMS code",
+   "type": "Component"
+  },
+  {
+   "name": "Temporary Access Pass (TAP)",
+   "type": "Component"
+  },
+  {
+   "name": "MFA registration",
+   "type": "Component"
+  },
+  {
+   "name": "old phone entry removal",
+   "type": "Fix"
+  },
+  {
+   "name": "identity verification",
+   "type": "Fix"
+  },
+  {
+   "name": "clear existing Authenticator registration",
+   "type": "Fix"
+  },
+  {
+   "name": "self-service re-registration",
+   "type": "Fix"
+  },
+  {
+   "name": "cannot approve MFA on old phone",
+   "type": "Symptom"
+  },
+  {
+   "name": "no backup SMS access",
+   "type": "Symptom"
+  },
+  {
+   "name": "new device not receiving push notification",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cannot approve MFA on old phone",
+   "relation": "CAUSED_BY",
+   "target": "lost or replaced phone"
+  },
+  {
+   "source": "no backup SMS access",
+   "relation": "CAUSED_BY",
+   "target": "unavailable registered phone number"
+  },
+  {
+   "source": "MFA registration",
+   "relation": "AFFECTS",
+   "target": "Microsoft Authenticator app"
+  },
+  {
+   "source": "push notification",
+   "relation": "AFFECTS",
+   "target": "new phone"
+  },
+  {
+   "source": "backup SMS code",
+   "relation": "AFFECTS",
+   "target": "registered phone number"
+  },
+  {
+   "source": "identity verification",
+   "relation": "FIXED_BY",
+   "target": "cannot approve MFA on old phone"
+  },
+  {
+   "source": "clear existing Authenticator registration",
+   "relation": "FIXED_BY",
+   "target": "MFA registration"
+  },
+  {
+   "source": "self-service re-registration",
+   "relation": "FIXED_BY",
+   "target": "MFA registration"
+  },
+  {
+   "source": "Temporary Access Pass (TAP)",
+   "relation": "FIXED_BY",
+   "target": "cannot approve MFA on old phone"
+  },
+  {
+   "source": "old phone entry removal",
+   "relation": "FIXED_BY",
+   "target": "MFA registration"
+  },
+  {
+   "source": "new device not receiving push notification",
+   "relation": "INDICATES",
+   "target": "failed MFA registration"
+  },
+  {
+   "source": "Microsoft Authenticator app",
+   "relation": "PART_OF",
+   "target": "Microsoft 365"
+  },
+  {
+   "source": "My Account portal",
+   "relation": "PART_OF",
+   "target": "Microsoft 365"
+  },
+  {
+   "source": "Outlook Web",
+   "relation": "PART_OF",
+   "target": "Microsoft 365"
+  }
+ ]
+}

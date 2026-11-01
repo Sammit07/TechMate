@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "sync problem",
+   "type": "Symptom"
+  },
+  {
+   "name": "storage quota exceeded",
+   "type": "Cause"
+  },
+  {
+   "name": "outdated OneDrive client",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN/network loss",
+   "type": "Cause"
+  },
+  {
+   "name": "conflict files",
+   "type": "Component"
+  },
+  {
+   "name": "client reset",
+   "type": "Fix"
+  },
+  {
+   "name": "update OneDrive client",
+   "type": "Fix"
+  },
+  {
+   "name": "delete or move files",
+   "type": "Fix"
+  },
+  {
+   "name": "request quota increase",
+   "type": "Fix"
+  },
+  {
+   "name": "reconnect GlobalProtect",
+   "type": "Fix"
+  },
+  {
+   "name": "keep desired version",
+   "type": "Fix"
+  },
+  {
+   "name": "Files On-Demand",
+   "type": "Component"
+  },
+  {
+   "name": "blocked characters in filenames",
+   "type": "Cause"
+  },
+  {
+   "name": "stable network connection",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "sync problem",
+   "relation": "CAUSED_BY",
+   "target": "storage quota exceeded"
+  },
+  {
+   "source": "sync problem",
+   "relation": "CAUSED_BY",
+   "target": "outdated OneDrive client"
+  },
+  {
+   "source": "sync problem",
+   "relation": "CAUSED_BY",
+   "target": "VPN/network loss"
+  },
+  {
+   "source": "sync problem",
+   "relation": "CAUSED_BY",
+   "target": "conflict files"
+  },
+  {
+   "source": "sync problem",
+   "relation": "CAUSED_BY",
+   "target": "blocked characters in filenames"
+  },
+  {
+   "source": "storage quota exceeded",
+   "relation": "FIXED_BY",
+   "target": "delete or move files"
+  },
+  {
+   "source": "storage quota exceeded",
+   "relation": "FIXED_BY",
+   "target": "request quota increase"
+  },
+  {
+   "source": "outdated OneDrive client",
+   "relation": "FIXED_BY",
+   "target": "update OneDrive client"
+  },
+  {
+   "source": "VPN/network loss",
+   "relation": "FIXED_BY",
+   "target": "reconnect GlobalProtect"
+  },
+  {
+   "source": "conflict files",
+   "relation": "FIXED_BY",
+   "target": "keep desired version"
+  },
+  {
+   "source": "sync problem",
+   "relation": "FIXED_BY",
+   "target": "client reset"
+  },
+  {
+   "source": "OneDrive",
+   "relation": "AFFECTS",
+   "target": "Files On-Demand"
+  },
+  {
+   "source": "blocked characters in filenames",
+   "relation": "AFFECTS",
+   "target": "OneDrive"
+  },
+  {
+   "source": "stable network connection",
+   "relation": "FIXED_BY",
+   "target": "VPN/network loss"
+  }
+ ]
+}

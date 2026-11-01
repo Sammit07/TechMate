@@ -1,0 +1,137 @@
+{
+ "entities": [
+  {
+   "name": "Acme Global account",
+   "type": "Product"
+  },
+  {
+   "name": "temporary password",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Component"
+  },
+  {
+   "name": "Company Portal app",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi",
+   "type": "Component"
+  },
+  {
+   "name": "machine certificate",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "Exchange Online Plan 2",
+   "type": "Product"
+  },
+  {
+   "name": "Intune device compliance",
+   "type": "Component"
+  },
+  {
+   "name": "account Disabled due to future start date",
+   "type": "Cause"
+  },
+  {
+   "name": "password failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "missing Exchange Online license",
+   "type": "Cause"
+  },
+  {
+   "name": "self-service password reset",
+   "type": "Fix"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Fix"
+  },
+  {
+   "name": "assign Exchange Online license",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "password failure",
+   "relation": "CAUSED_BY",
+   "target": "account Disabled due to future start date"
+  },
+  {
+   "source": "password failure",
+   "relation": "FIXED_BY",
+   "target": "self-service password reset"
+  },
+  {
+   "source": "password failure",
+   "relation": "FIXED_BY",
+   "target": "Temporary Access Pass"
+  },
+  {
+   "source": "missing Exchange Online license",
+   "relation": "CAUSED_BY",
+   "target": "lack of expected resources"
+  },
+  {
+   "source": "missing Exchange Online license",
+   "relation": "FIXED_BY",
+   "target": "assign Exchange Online license"
+  },
+  {
+   "source": "ACME-Corp Wi-Fi",
+   "relation": "AFFECTS",
+   "target": "machine certificate"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "machine certificate"
+  },
+  {
+   "source": "Company Portal app",
+   "relation": "PART_OF",
+   "target": "Intune device compliance"
+  },
+  {
+   "source": "Microsoft Outlook",
+   "relation": "PART_OF",
+   "target": "Company Portal app"
+  },
+  {
+   "source": "Teams",
+   "relation": "PART_OF",
+   "target": "Company Portal app"
+  },
+  {
+   "source": "OneDrive",
+   "relation": "PART_OF",
+   "target": "Company Portal app"
+  }
+ ]
+}

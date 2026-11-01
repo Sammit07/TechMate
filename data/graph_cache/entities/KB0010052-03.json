@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Camera blocked by privacy settings",
+   "type": "Symptom"
+  },
+  {
+   "name": "Microphone blocked by privacy settings",
+   "type": "Symptom"
+  },
+  {
+   "name": "Bluetooth not functional",
+   "type": "Symptom"
+  },
+  {
+   "name": "Windows Privacy Settings",
+   "type": "Component"
+  },
+  {
+   "name": "Device Manager shows disabled devices",
+   "type": "Symptom"
+  },
+  {
+   "name": "Intune device sync logs",
+   "type": "Component"
+  },
+  {
+   "name": "dxdiag output",
+   "type": "Component"
+  },
+  {
+   "name": "Group Policy results",
+   "type": "Component"
+  },
+  {
+   "name": "gpresult command",
+   "type": "Component"
+  },
+  {
+   "name": "Reinstall drivers",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify privacy settings",
+   "type": "Fix"
+  },
+  {
+   "name": "Enable device in Device Manager",
+   "type": "Fix"
+  },
+  {
+   "name": "Escalate to Desktop Support",
+   "type": "Fix"
+  },
+  {
+   "name": "Privacy settings blocking camera/microphone",
+   "type": "Cause"
+  },
+  {
+   "name": "Teams meeting",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Camera blocked by privacy settings",
+   "relation": "CAUSED_BY",
+   "target": "Privacy settings blocking camera/microphone"
+  },
+  {
+   "source": "Microphone blocked by privacy settings",
+   "relation": "CAUSED_BY",
+   "target": "Privacy settings blocking camera/microphone"
+  },
+  {
+   "source": "Bluetooth not functional",
+   "relation": "CAUSED_BY",
+   "target": "Privacy settings blocking camera/microphone"
+  },
+  {
+   "source": "Privacy settings blocking camera/microphone",
+   "relation": "AFFECTS",
+   "target": "Windows Privacy Settings"
+  },
+  {
+   "source": "Device Manager shows disabled devices",
+   "relation": "INDICATES",
+   "target": "Privacy settings blocking camera/microphone"
+  },
+  {
+   "source": "Verify privacy settings",
+   "relation": "FIXED_BY",
+   "target": "Privacy settings blocking camera/microphone"
+  },
+  {
+   "source": "Enable device in Device Manager",
+   "relation": "FIXED_BY",
+   "target": "Privacy settings blocking camera/microphone"
+  },
+  {
+   "source": "Reinstall drivers",
+   "relation": "FIXED_BY",
+   "target": "Privacy settings blocking camera/microphone"
+  },
+  {
+   "source": "Intune device sync logs",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "dxdiag output",
+   "relation": "PART_OF",
+   "target": "Windows Diagnostic Tool"
+  },
+  {
+   "source": "Group Policy results",
+   "relation": "PART_OF",
+   "target": "Group Policy"
+  },
+  {
+   "source": "gpresult command",
+   "relation": "PART_OF",
+   "target": "Group Policy"
+  },
+  {
+   "source": "Escalate to Desktop Support",
+   "relation": "FIXED_BY",
+   "target": "Privacy settings blocking camera/microphone"
+  },
+  {
+   "source": "Teams meeting",
+   "relation": "AFFECTS",
+   "target": "Camera blocked by privacy settings"
+  },
+  {
+   "source": "Teams meeting",
+   "relation": "AFFECTS",
+   "target": "Microphone blocked by privacy settings"
+  }
+ ]
+}

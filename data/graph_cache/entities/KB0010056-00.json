@@ -1,0 +1,121 @@
+{
+ "entities": [
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Software Center",
+   "type": "Product"
+  },
+  {
+   "name": "Acme Global Company Portal catalog",
+   "type": "Component"
+  },
+  {
+   "name": "error 0x80070005",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "software not listed in catalog",
+   "type": "Symptom"
+  },
+  {
+   "name": "install fails with access denied",
+   "type": "Symptom"
+  },
+  {
+   "name": "no Install button available",
+   "type": "Symptom"
+  },
+  {
+   "name": "requested software not in approved catalog",
+   "type": "Cause"
+  },
+  {
+   "name": "licensing or security review pending",
+   "type": "Cause"
+  },
+  {
+   "name": "specific version not packaged for Intune",
+   "type": "Cause"
+  },
+  {
+   "name": "software requires elevated privileges",
+   "type": "Cause"
+  },
+  {
+   "name": "verify software availability",
+   "type": "Fix"
+  },
+  {
+   "name": "submit formal request via Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "software not listed in catalog",
+   "relation": "CAUSED_BY",
+   "target": "requested software not in approved catalog"
+  },
+  {
+   "source": "software not listed in catalog",
+   "relation": "CAUSED_BY",
+   "target": "licensing or security review pending"
+  },
+  {
+   "source": "software not listed in catalog",
+   "relation": "CAUSED_BY",
+   "target": "specific version not packaged for Intune"
+  },
+  {
+   "source": "install fails with access denied",
+   "relation": "INDICATES",
+   "target": "software requires elevated privileges"
+  },
+  {
+   "source": "no Install button available",
+   "relation": "INDICATES",
+   "target": "software not listed in catalog"
+  },
+  {
+   "source": "requested software not in approved catalog",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  },
+  {
+   "source": "requested software not in approved catalog",
+   "relation": "AFFECTS",
+   "target": "Software Center"
+  },
+  {
+   "source": "verify software availability",
+   "relation": "FIXED_BY",
+   "target": "software not listed in catalog"
+  },
+  {
+   "source": "submit formal request via Company Portal",
+   "relation": "FIXED_BY",
+   "target": "requested software not in approved catalog"
+  },
+  {
+   "source": "Windows 11 23H2/24H2",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  },
+  {
+   "source": "Dell Latitude 5440/7440",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  }
+ ]
+}

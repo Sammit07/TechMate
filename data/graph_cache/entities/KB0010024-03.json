@@ -1,0 +1,219 @@
+{
+ "entities": [
+  {
+   "name": "docking station Ethernet",
+   "type": "Symptom"
+  },
+  {
+   "name": "Ethernet adapter reports Connected",
+   "type": "Fix"
+  },
+  {
+   "name": "DHCP lease within corporate range",
+   "type": "Fix"
+  },
+  {
+   "name": "ping test to default gateway",
+   "type": "Fix"
+  },
+  {
+   "name": "ping test to external host",
+   "type": "Fix"
+  },
+  {
+   "name": "round-trip time <20ms to gateway",
+   "type": "Fix"
+  },
+  {
+   "name": "round-trip time <100ms externally",
+   "type": "Fix"
+  },
+  {
+   "name": "navigate to IT self-service portal",
+   "type": "Fix"
+  },
+  {
+   "name": "connect to GlobalProtect",
+   "type": "Fix"
+  },
+  {
+   "name": "traffic passes through tunnel",
+   "type": "Fix"
+  },
+  {
+   "name": "document final state in ticket",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Identity & Access Management team",
+   "type": "Fix"
+  },
+  {
+   "name": "suspected 802.1X authentication failure",
+   "type": "Cause"
+  },
+  {
+   "name": "escalate to Desktop Support group",
+   "type": "Fix"
+  },
+  {
+   "name": "motherboard or USB-C port hardware fault",
+   "type": "Cause"
+  },
+  {
+   "name": "dock replacement",
+   "type": "Fix"
+  },
+  {
+   "name": "switch port verification",
+   "type": "Fix"
+  },
+  {
+   "name": "cable test results",
+   "type": "Component"
+  },
+  {
+   "name": "firmware/driver versions",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "IT self-service portal",
+   "type": "Product"
+  },
+  {
+   "name": "docking station",
+   "type": "Product"
+  },
+  {
+   "name": "USB-C port",
+   "type": "Component"
+  },
+  {
+   "name": "Ethernet adapter",
+   "type": "Component"
+  },
+  {
+   "name": "no link on dock",
+   "type": "Symptom"
+  },
+  {
+   "name": "wired connection limited",
+   "type": "Symptom"
+  },
+  {
+   "name": "desk port dead",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "docking station Ethernet",
+   "relation": "CAUSED_BY",
+   "target": "motherboard or USB-C port hardware fault"
+  },
+  {
+   "source": "docking station Ethernet",
+   "relation": "CAUSED_BY",
+   "target": "suspected 802.1X authentication failure"
+  },
+  {
+   "source": "no link on dock",
+   "relation": "INDICATES",
+   "target": "docking station Ethernet"
+  },
+  {
+   "source": "wired connection limited",
+   "relation": "INDICATES",
+   "target": "docking station Ethernet"
+  },
+  {
+   "source": "desk port dead",
+   "relation": "INDICATES",
+   "target": "docking station Ethernet"
+  },
+  {
+   "source": "Ethernet adapter reports Connected",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet"
+  },
+  {
+   "source": "DHCP lease within corporate range",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet"
+  },
+  {
+   "source": "ping test to default gateway",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet"
+  },
+  {
+   "source": "ping test to external host",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet"
+  },
+  {
+   "source": "round-trip time <20ms to gateway",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet"
+  },
+  {
+   "source": "round-trip time <100ms externally",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet"
+  },
+  {
+   "source": "navigate to IT self-service portal",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet"
+  },
+  {
+   "source": "connect to GlobalProtect",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet"
+  },
+  {
+   "source": "traffic passes through tunnel",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet"
+  },
+  {
+   "source": "document final state in ticket",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet"
+  },
+  {
+   "source": "dock replacement",
+   "relation": "PART_OF",
+   "target": "docking station"
+  },
+  {
+   "source": "switch port verification",
+   "relation": "PART_OF",
+   "target": "docking station"
+  },
+  {
+   "source": "cable test results",
+   "relation": "AFFECTS",
+   "target": "docking station Ethernet"
+  },
+  {
+   "source": "firmware/driver versions",
+   "relation": "AFFECTS",
+   "target": "docking station Ethernet"
+  },
+  {
+   "source": "USB-C port",
+   "relation": "PART_OF",
+   "target": "docking station"
+  },
+  {
+   "source": "Ethernet adapter",
+   "relation": "PART_OF",
+   "target": "docking station"
+  }
+ ]
+}

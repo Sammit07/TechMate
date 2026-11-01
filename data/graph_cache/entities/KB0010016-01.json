@@ -1,0 +1,144 @@
+{
+ "entities": [
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "VPN certificate",
+   "type": "Component"
+  },
+  {
+   "name": "split tunnel",
+   "type": "Component"
+  },
+  {
+   "name": "Acme internal subnets",
+   "type": "Component"
+  },
+  {
+   "name": "mobile hotspot",
+   "type": "Component"
+  },
+  {
+   "name": "UDP 500, UDP 4500, TCP 443",
+   "type": "Component"
+  },
+  {
+   "name": "certificate expired",
+   "type": "Cause"
+  },
+  {
+   "name": "outdated GlobalProtect client",
+   "type": "Cause"
+  },
+  {
+   "name": "home router blocking ports",
+   "type": "Cause"
+  },
+  {
+   "name": "split tunnel misconfiguration",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN disconnects or fails to connect",
+   "type": "Symptom"
+  },
+  {
+   "name": "cannot reach internal sites",
+   "type": "Symptom"
+  },
+  {
+   "name": "renew or re-issue VPN certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "update GlobalProtect client",
+   "type": "Fix"
+  },
+  {
+   "name": "flush DNS and reset split-tunnel",
+   "type": "Fix"
+  },
+  {
+   "name": "test via mobile hotspot",
+   "type": "Fix"
+  },
+  {
+   "name": "open required router ports",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "VPN disconnects or fails to connect",
+   "relation": "CAUSED_BY",
+   "target": "certificate expired"
+  },
+  {
+   "source": "VPN disconnects or fails to connect",
+   "relation": "CAUSED_BY",
+   "target": "outdated GlobalProtect client"
+  },
+  {
+   "source": "VPN disconnects or fails to connect",
+   "relation": "CAUSED_BY",
+   "target": "home router blocking ports"
+  },
+  {
+   "source": "cannot reach internal sites",
+   "relation": "CAUSED_BY",
+   "target": "split tunnel misconfiguration"
+  },
+  {
+   "source": "certificate expired",
+   "relation": "FIXED_BY",
+   "target": "renew or re-issue VPN certificate"
+  },
+  {
+   "source": "outdated GlobalProtect client",
+   "relation": "FIXED_BY",
+   "target": "update GlobalProtect client"
+  },
+  {
+   "source": "VPN disconnects or fails to connect",
+   "relation": "FIXED_BY",
+   "target": "flush DNS and reset split-tunnel"
+  },
+  {
+   "source": "home router blocking ports",
+   "relation": "FIXED_BY",
+   "target": "test via mobile hotspot"
+  },
+  {
+   "source": "home router blocking ports",
+   "relation": "FIXED_BY",
+   "target": "open required router ports"
+  },
+  {
+   "source": "split tunnel misconfiguration",
+   "relation": "FIXED_BY",
+   "target": "flush DNS and reset split-tunnel"
+  },
+  {
+   "source": "split tunnel",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "VPN disconnects or fails to connect",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "cannot reach internal sites",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "Acme internal subnets",
+   "relation": "PART_OF",
+   "target": "split tunnel"
+  }
+ ]
+}

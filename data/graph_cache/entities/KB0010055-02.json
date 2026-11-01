@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Software Center",
+   "type": "Product"
+  },
+  {
+   "name": "approved software catalog",
+   "type": "Component"
+  },
+  {
+   "name": "device inventory",
+   "type": "Component"
+  },
+  {
+   "name": "error 0x80070005",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "error 0x87D00324",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "installation failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "non-compliant device",
+   "type": "Symptom"
+  },
+  {
+   "name": "security review required",
+   "type": "Cause"
+  },
+  {
+   "name": "trigger reinstall via Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "schedule admin session",
+   "type": "Fix"
+  },
+  {
+   "name": "verify software launch",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Application Support",
+   "type": "Fix"
+  },
+  {
+   "name": "Intune compliance status",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "installation failure",
+   "relation": "CAUSED_BY",
+   "target": "error 0x80070005"
+  },
+  {
+   "source": "installation failure",
+   "relation": "CAUSED_BY",
+   "target": "error 0x87D00324"
+  },
+  {
+   "source": "non-compliant device",
+   "relation": "CAUSED_BY",
+   "target": "cannot be brought into compliance remotely"
+  },
+  {
+   "source": "requested software absent from approved catalog",
+   "relation": "INDICATES",
+   "target": "security review required"
+  },
+  {
+   "source": "security review required",
+   "relation": "FIXED_BY",
+   "target": "escalate to Application Support"
+  },
+  {
+   "source": "installation failure",
+   "relation": "FIXED_BY",
+   "target": "trigger reinstall via Intune"
+  },
+  {
+   "source": "application not approved",
+   "relation": "FIXED_BY",
+   "target": "schedule admin session"
+  },
+  {
+   "source": "installed software",
+   "relation": "FIXED_BY",
+   "target": "verify software launch"
+  },
+  {
+   "source": "approved software catalog",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "device inventory",
+   "relation": "PART_OF",
+   "target": "Intune portal"
+  },
+  {
+   "source": "Intune compliance status",
+   "relation": "AFFECTS",
+   "target": "non-compliant device"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "installation failure"
+  },
+  {
+   "source": "Software Center",
+   "relation": "AFFECTS",
+   "target": "installation failure"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "device inventory"
+  }
+ ]
+}

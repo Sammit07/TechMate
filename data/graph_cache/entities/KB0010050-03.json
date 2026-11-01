@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "BSOD",
+   "type": "Symptom"
+  },
+  {
+   "name": "blue screen",
+   "type": "Symptom"
+  },
+  {
+   "name": "crash dump",
+   "type": "Component"
+  },
+  {
+   "name": "minidump",
+   "type": "Component"
+  },
+  {
+   "name": "kernel memory dump",
+   "type": "Component"
+  },
+  {
+   "name": "STOP error",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Driver rollback",
+   "type": "Fix"
+  },
+  {
+   "name": "Windows Update removal",
+   "type": "Fix"
+  },
+  {
+   "name": "MemTest86+",
+   "type": "Component"
+  },
+  {
+   "name": "BIOS/UEFI version",
+   "type": "Component"
+  },
+  {
+   "name": "Event Viewer logs",
+   "type": "Component"
+  },
+  {
+   "name": "hardware diagnostics",
+   "type": "Component"
+  },
+  {
+   "name": "warranty status",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BSOD",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "blue screen",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "crash dump",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "minidump",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "kernel memory dump",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "STOP error",
+   "relation": "INDICATES",
+   "target": "BSOD"
+  },
+  {
+   "source": "Driver rollback",
+   "relation": "FIXED_BY",
+   "target": "BSOD"
+  },
+  {
+   "source": "Windows Update removal",
+   "relation": "FIXED_BY",
+   "target": "BSOD"
+  },
+  {
+   "source": "MemTest86+",
+   "relation": "AFFECTS",
+   "target": "hardware diagnostics"
+  },
+  {
+   "source": "BIOS/UEFI version",
+   "relation": "AFFECTS",
+   "target": "hardware diagnostics"
+  },
+  {
+   "source": "Event Viewer logs",
+   "relation": "AFFECTS",
+   "target": "hardware diagnostics"
+  },
+  {
+   "source": "warranty status",
+   "relation": "AFFECTS",
+   "target": "hardware diagnostics"
+  },
+  {
+   "source": "hardware diagnostics",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  }
+ ]
+}

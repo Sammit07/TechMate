@@ -1,0 +1,164 @@
+{
+ "entities": [
+  {
+   "name": "Windows Credential Manager",
+   "type": "Component"
+  },
+  {
+   "name": "macOS Keychain",
+   "type": "Component"
+  },
+  {
+   "name": "mobile mail apps",
+   "type": "Component"
+  },
+  {
+   "name": "mapped network drives",
+   "type": "Component"
+  },
+  {
+   "name": "service accounts or scheduled tasks",
+   "type": "Component"
+  },
+  {
+   "name": "Office activation or OneDrive sync tokens",
+   "type": "Component"
+  },
+  {
+   "name": "account locked out",
+   "type": "Symptom"
+  },
+  {
+   "name": "Error 0x8007052e",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "repeated lockout notifications",
+   "type": "Symptom"
+  },
+  {
+   "name": "SSO portal shows account disabled or locked",
+   "type": "Symptom"
+  },
+  {
+   "name": "prompt for credentials that immediately fails",
+   "type": "Symptom"
+  },
+  {
+   "name": "cached username/password pairs",
+   "type": "Cause"
+  },
+  {
+   "name": "saved passwords in mobile mail apps",
+   "type": "Cause"
+  },
+  {
+   "name": "stale credentials on mapped drives or printers",
+   "type": "Cause"
+  },
+  {
+   "name": "service accounts or tasks with old password",
+   "type": "Cause"
+  },
+  {
+   "name": "unrefreshed Office/OneDrive tokens",
+   "type": "Cause"
+  },
+  {
+   "name": "clear Windows Credential Manager",
+   "type": "Fix"
+  },
+  {
+   "name": "delete items in macOS Keychain",
+   "type": "Fix"
+  },
+  {
+   "name": "remove saved passwords in mobile mail apps",
+   "type": "Fix"
+  },
+  {
+   "name": "reconnect mapped drives with new credentials",
+   "type": "Fix"
+  },
+  {
+   "name": "update service accounts or scheduled tasks",
+   "type": "Fix"
+  },
+  {
+   "name": "refresh Office activation or OneDrive sync",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "account locked out",
+   "relation": "CAUSED_BY",
+   "target": "cached username/password pairs"
+  },
+  {
+   "source": "Error 0x8007052e",
+   "relation": "INDICATES",
+   "target": "cached username/password pairs"
+  },
+  {
+   "source": "repeated lockout notifications",
+   "relation": "CAUSED_BY",
+   "target": "cached username/password pairs"
+  },
+  {
+   "source": "SSO portal shows account disabled or locked",
+   "relation": "INDICATES",
+   "target": "cached username/password pairs"
+  },
+  {
+   "source": "prompt for credentials that immediately fails",
+   "relation": "INDICATES",
+   "target": "cached username/password pairs"
+  },
+  {
+   "source": "cached username/password pairs",
+   "relation": "AFFECTS",
+   "target": "Windows Credential Manager"
+  },
+  {
+   "source": "cached username/password pairs",
+   "relation": "AFFECTS",
+   "target": "macOS Keychain"
+  },
+  {
+   "source": "cached username/password pairs",
+   "relation": "AFFECTS",
+   "target": "mobile mail apps"
+  },
+  {
+   "source": "cached username/password pairs",
+   "relation": "AFFECTS",
+   "target": "mapped network drives"
+  },
+  {
+   "source": "cached username/password pairs",
+   "relation": "AFFECTS",
+   "target": "service accounts or scheduled tasks"
+  },
+  {
+   "source": "cached username/password pairs",
+   "relation": "AFFECTS",
+   "target": "Office activation or OneDrive sync tokens"
+  },
+  {
+   "source": "clear Windows Credential Manager",
+   "relation": "FIXED_BY",
+   "target": "cached username/password pairs"
+  },
+  {
+   "source": "delete items in macOS Keychain",
+   "relation": "FIXED_BY",
+   "target": "cached username/password pairs"
+  },
+  {
+   "source": "remove saved passwords in mobile mail apps",
+   "relation": "FIXED_BY",
+   "target": "cached username/password pairs"
+  }
+ ]
+}

@@ -1,0 +1,149 @@
+{
+ "entities": [
+  {
+   "name": "STOP: 0x000000EF (CRITICAL_PROCESS_DIED)",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Kernel-Power error (Event ID 41)",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Small memory dump (256KB)",
+   "type": "Component"
+  },
+  {
+   "name": "%SystemRoot%\\Minidump",
+   "type": "Component"
+  },
+  {
+   "name": "Faulty or incompatible graphics, network, or storage driver",
+   "type": "Cause"
+  },
+  {
+   "name": "Recent Windows quality or feature update that introduced a bug",
+   "type": "Cause"
+  },
+  {
+   "name": "Defective RAM or other hardware causing memory corruption",
+   "type": "Cause"
+  },
+  {
+   "name": "Third-party software that hooks into kernel (e.g., antivirus, virtualization)",
+   "type": "Cause"
+  },
+  {
+   "name": "Overheating or power-supply instability leading to spontaneous resets",
+   "type": "Cause"
+  },
+  {
+   "name": "Blue screen / crash",
+   "type": "Symptom"
+  },
+  {
+   "name": "System restarts automatically and shows a brief \"Windows recovered from a serious error\" message",
+   "type": "Symptom"
+  },
+  {
+   "name": "No obvious application error; crash occurs after Windows Update, driver install, or during heavy GPU usage",
+   "type": "Symptom"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Intune",
+   "type": "Product"
+  },
+  {
+   "name": "collect crash dump",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "STOP: 0x000000EF (CRITICAL_PROCESS_DIED)",
+   "relation": "INDICATES",
+   "target": "Faulty or incompatible graphics, network, or storage driver"
+  },
+  {
+   "source": "STOP: 0x000000EF (CRITICAL_PROCESS_DIED)",
+   "relation": "INDICATES",
+   "target": "Recent Windows quality or feature update that introduced a bug"
+  },
+  {
+   "source": "Kernel-Power error (Event ID 41)",
+   "relation": "INDICATES",
+   "target": "System restarts automatically and shows a brief \"Windows recovered from a serious error\" message"
+  },
+  {
+   "source": "Blue screen / crash",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "Blue screen / crash",
+   "relation": "AFFECTS",
+   "target": "Lenovo ThinkPad T14/X1 Carbon"
+  },
+  {
+   "source": "Blue screen / crash",
+   "relation": "AFFECTS",
+   "target": "HP EliteBook 840"
+  },
+  {
+   "source": "Faulty or incompatible graphics, network, or storage driver",
+   "relation": "CAUSED_BY",
+   "target": "Blue screen / crash"
+  },
+  {
+   "source": "Recent Windows quality or feature update that introduced a bug",
+   "relation": "CAUSED_BY",
+   "target": "Blue screen / crash"
+  },
+  {
+   "source": "Defective RAM or other hardware causing memory corruption",
+   "relation": "CAUSED_BY",
+   "target": "Blue screen / crash"
+  },
+  {
+   "source": "Third-party software that hooks into kernel (e.g., antivirus, virtualization)",
+   "relation": "CAUSED_BY",
+   "target": "Blue screen / crash"
+  },
+  {
+   "source": "Overheating or power-supply instability leading to spontaneous resets",
+   "relation": "CAUSED_BY",
+   "target": "Blue screen / crash"
+  },
+  {
+   "source": "Small memory dump (256KB)",
+   "relation": "PART_OF",
+   "target": "%SystemRoot%\\Minidump"
+  },
+  {
+   "source": "collect crash dump",
+   "relation": "FIXED_BY",
+   "target": "Blue screen / crash"
+  },
+  {
+   "source": "No obvious application error; crash occurs after Windows Update, driver install, or during heavy GPU usage",
+   "relation": "INDICATES",
+   "target": "Faulty or incompatible graphics, network, or storage driver"
+  },
+  {
+   "source": "System restarts automatically and shows a brief \"Windows recovered from a serious error\" message",
+   "relation": "INDICATES",
+   "target": "Kernel-Power error (Event ID 41)"
+  }
+ ]
+}

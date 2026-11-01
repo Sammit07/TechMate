@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Defender for Endpoint",
+   "type": "Product"
+  },
+  {
+   "name": "Trojan:Win32/Emotet",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Defender toast notification",
+   "type": "Symptom"
+  },
+  {
+   "name": "Windows Security pop-up",
+   "type": "Symptom"
+  },
+  {
+   "name": "Browser pop-up scare-ware",
+   "type": "Symptom"
+  },
+  {
+   "name": "Company Portal alert",
+   "type": "Symptom"
+  },
+  {
+   "name": "Legitimate malware detection",
+   "type": "Cause"
+  },
+  {
+   "name": "False positive",
+   "type": "Cause"
+  },
+  {
+   "name": "Scare-ware pop-up",
+   "type": "Cause"
+  },
+  {
+   "name": "Adware or bundled PUPs",
+   "type": "Cause"
+  },
+  {
+   "name": "Behavior-based detection",
+   "type": "Cause"
+  },
+  {
+   "name": "Quarantine the item",
+   "type": "Fix"
+  },
+  {
+   "name": "Close pop-up using Alt+F4",
+   "type": "Fix"
+  },
+  {
+   "name": "Open Windows Security",
+   "type": "Fix"
+  },
+  {
+   "name": "Check Protection history",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Defender toast notification",
+   "relation": "INDICATES",
+   "target": "Trojan:Win32/Emotet"
+  },
+  {
+   "source": "Windows Security pop-up",
+   "relation": "INDICATES",
+   "target": "Legitimate malware detection"
+  },
+  {
+   "source": "Browser pop-up scare-ware",
+   "relation": "INDICATES",
+   "target": "Scare-ware pop-up"
+  },
+  {
+   "source": "Company Portal alert",
+   "relation": "INDICATES",
+   "target": "False positive"
+  },
+  {
+   "source": "Legitimate malware detection",
+   "relation": "CAUSED_BY",
+   "target": "Trojan:Win32/Emotet"
+  },
+  {
+   "source": "False positive",
+   "relation": "CAUSED_BY",
+   "target": "Legitimate software or unsigned installers"
+  },
+  {
+   "source": "Scare-ware pop-up",
+   "relation": "CAUSED_BY",
+   "target": "Malicious websites"
+  },
+  {
+   "source": "Adware or bundled PUPs",
+   "relation": "CAUSED_BY",
+   "target": "Suspicious behavior"
+  },
+  {
+   "source": "Behavior-based detection",
+   "relation": "CAUSED_BY",
+   "target": "PowerShell download cradles or credential-dumping tools"
+  },
+  {
+   "source": "Trojan:Win32/Emotet",
+   "relation": "AFFECTS",
+   "target": "Microsoft Defender for Endpoint"
+  },
+  {
+   "source": "Legitimate malware detection",
+   "relation": "FIXED_BY",
+   "target": "Quarantine the item"
+  },
+  {
+   "source": "False positive",
+   "relation": "FIXED_BY",
+   "target": "Check Protection history"
+  },
+  {
+   "source": "Scare-ware pop-up",
+   "relation": "FIXED_BY",
+   "target": "Close pop-up using Alt+F4"
+  },
+  {
+   "source": "Browser pop-up scare-ware",
+   "relation": "AFFECTS",
+   "target": "Microsoft Defender for Endpoint"
+  },
+  {
+   "source": "Company Portal alert",
+   "relation": "AFFECTS",
+   "target": "Microsoft Defender for Endpoint"
+  }
+ ]
+}

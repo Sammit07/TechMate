@@ -1,0 +1,131 @@
+{
+ "entities": [
+  {
+   "name": "Expired VPN certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "Renew Certificate button unavailable",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outdated GlobalProtect client",
+   "type": "Cause"
+  },
+  {
+   "name": "Connect to internet",
+   "type": "Fix"
+  },
+  {
+   "name": "Open GlobalProtect client",
+   "type": "Fix"
+  },
+  {
+   "name": "Navigate to Certificates settings",
+   "type": "Fix"
+  },
+  {
+   "name": "Click Renew Certificate button",
+   "type": "Fix"
+  },
+  {
+   "name": "Update GlobalProtect via Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Intune certificate re-enrollment",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify VPN connectivity",
+   "type": "Fix"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "vpn.acme.example",
+   "type": "Component"
+  },
+  {
+   "name": "intranet.acme.example",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Expired VPN certificate",
+   "relation": "CAUSED_BY",
+   "target": "Renew Certificate button unavailable"
+  },
+  {
+   "source": "Outdated GlobalProtect client",
+   "relation": "CAUSED_BY",
+   "target": "Renew Certificate button unavailable"
+  },
+  {
+   "source": "Connect to internet",
+   "relation": "FIXED_BY",
+   "target": "Renew Certificate button unavailable"
+  },
+  {
+   "source": "Open GlobalProtect client",
+   "relation": "FIXED_BY",
+   "target": "Renew Certificate button unavailable"
+  },
+  {
+   "source": "Navigate to Certificates settings",
+   "relation": "FIXED_BY",
+   "target": "Renew Certificate button unavailable"
+  },
+  {
+   "source": "Click Renew Certificate button",
+   "relation": "FIXED_BY",
+   "target": "Renew Certificate button unavailable"
+  },
+  {
+   "source": "Update GlobalProtect via Company Portal",
+   "relation": "FIXED_BY",
+   "target": "Outdated GlobalProtect client"
+  },
+  {
+   "source": "Intune certificate re-enrollment",
+   "relation": "FIXED_BY",
+   "target": "Expired VPN certificate"
+  },
+  {
+   "source": "Verify VPN connectivity",
+   "relation": "FIXED_BY",
+   "target": "Expired VPN certificate"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "Renew Certificate button unavailable"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "vpn.acme.example",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "intranet.acme.example",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  }
+ ]
+}

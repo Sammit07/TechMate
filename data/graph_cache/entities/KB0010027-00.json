@@ -1,0 +1,169 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 laptop",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15 laptop",
+   "type": "Product"
+  },
+  {
+   "name": "Mobile device",
+   "type": "Product"
+  },
+  {
+   "name": "Desktop workstation",
+   "type": "Product"
+  },
+  {
+   "name": "Video freeze or pixelation",
+   "type": "Symptom"
+  },
+  {
+   "name": "Choppy or echoey audio",
+   "type": "Symptom"
+  },
+  {
+   "name": "Call drop or frequent reconnect",
+   "type": "Symptom"
+  },
+  {
+   "name": "High latency (>150ms)",
+   "type": "Symptom"
+  },
+  {
+   "name": "High jitter (>30ms)",
+   "type": "Symptom"
+  },
+  {
+   "name": "Low download/upload speed",
+   "type": "Symptom"
+  },
+  {
+   "name": "Wi-Fi congestion on 2.4GHz band",
+   "type": "Cause"
+  },
+  {
+   "name": "Weak Wi-Fi signal",
+   "type": "Cause"
+  },
+  {
+   "name": "Disabled QoS/prioritization",
+   "type": "Cause"
+  },
+  {
+   "name": "Background bandwidth consumption",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN split-tunneling",
+   "type": "Component"
+  },
+  {
+   "name": "ISP throttling or outage",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated network adapter driver",
+   "type": "Cause"
+  },
+  {
+   "name": "Run speed test",
+   "type": "Fix"
+  },
+  {
+   "name": "Check Wi-Fi signal strength",
+   "type": "Fix"
+  },
+  {
+   "name": "Switch to 5GHz Wi-Fi band",
+   "type": "Fix"
+  },
+  {
+   "name": "Pause bandwidth-heavy apps",
+   "type": "Fix"
+  },
+  {
+   "name": "Enable QoS on router",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Video freeze or pixelation",
+   "relation": "CAUSED_BY",
+   "target": "Wi-Fi congestion on 2.4GHz band"
+  },
+  {
+   "source": "Choppy or echoey audio",
+   "relation": "CAUSED_BY",
+   "target": "Weak Wi-Fi signal"
+  },
+  {
+   "source": "Call drop or frequent reconnect",
+   "relation": "CAUSED_BY",
+   "target": "Disabled QoS/prioritization"
+  },
+  {
+   "source": "High latency (>150ms)",
+   "relation": "CAUSED_BY",
+   "target": "Background bandwidth consumption"
+  },
+  {
+   "source": "High jitter (>30ms)",
+   "relation": "CAUSED_BY",
+   "target": "VPN split-tunneling"
+  },
+  {
+   "source": "Low download/upload speed",
+   "relation": "CAUSED_BY",
+   "target": "ISP throttling or outage"
+  },
+  {
+   "source": "Video freeze or pixelation",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptop"
+  },
+  {
+   "source": "Choppy or echoey audio",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15 laptop"
+  },
+  {
+   "source": "Call drop or frequent reconnect",
+   "relation": "AFFECTS",
+   "target": "Mobile device"
+  },
+  {
+   "source": "High latency (>150ms)",
+   "relation": "AFFECTS",
+   "target": "Desktop workstation"
+  },
+  {
+   "source": "Wi-Fi congestion on 2.4GHz band",
+   "relation": "FIXED_BY",
+   "target": "Switch to 5GHz Wi-Fi band"
+  },
+  {
+   "source": "Weak Wi-Fi signal",
+   "relation": "FIXED_BY",
+   "target": "Check Wi-Fi signal strength"
+  },
+  {
+   "source": "Disabled QoS/prioritization",
+   "relation": "FIXED_BY",
+   "target": "Enable QoS on router"
+  },
+  {
+   "source": "Background bandwidth consumption",
+   "relation": "FIXED_BY",
+   "target": "Pause bandwidth-heavy apps"
+  },
+  {
+   "source": "ISP throttling or outage",
+   "relation": "FIXED_BY",
+   "target": "Run speed test"
+  }
+ ]
+}

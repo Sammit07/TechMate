@@ -1,0 +1,245 @@
+{
+ "entities": [
+  {
+   "name": "Self-Service Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Teams \"IT Help\" Channel",
+   "type": "Product"
+  },
+  {
+   "name": "Entra ID Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Active Directory Users and Computers",
+   "type": "Product"
+  },
+  {
+   "name": "Azure AD Connect Sync Rule",
+   "type": "Component"
+  },
+  {
+   "name": "PowerShell Get-AzureADGroupMember",
+   "type": "Component"
+  },
+  {
+   "name": "Ticket Number",
+   "type": "Component"
+  },
+  {
+   "name": "Requester Name",
+   "type": "Component"
+  },
+  {
+   "name": "Employee ID",
+   "type": "Component"
+  },
+  {
+   "name": "Requested Resource",
+   "type": "Component"
+  },
+  {
+   "name": "Exact Resource Identifier",
+   "type": "Component"
+  },
+  {
+   "name": "Business Justification",
+   "type": "Component"
+  },
+  {
+   "name": "Correct Manager",
+   "type": "Component"
+  },
+  {
+   "name": "Workday Organizational Chart",
+   "type": "Product"
+  },
+  {
+   "name": "Missing Information",
+   "type": "Symptom"
+  },
+  {
+   "name": "Already Member of Target Group",
+   "type": "Symptom"
+  },
+  {
+   "name": "Approval Entry Missing",
+   "type": "Symptom"
+  },
+  {
+   "name": "Pending User Input",
+   "type": "Cause"
+  },
+  {
+   "name": "Access Already Granted",
+   "type": "Fix"
+  },
+  {
+   "name": "Send Reminder to Manager",
+   "type": "Fix"
+  },
+  {
+   "name": "Follow-Up Set for 2 Hours",
+   "type": "Fix"
+  },
+  {
+   "name": "Add User to On-Prem Security Group",
+   "type": "Fix"
+  },
+  {
+   "name": "Add User to Cloud Group via Entra ID",
+   "type": "Fix"
+  },
+  {
+   "name": "Document Group Name Object ID Timestamp",
+   "type": "Fix"
+  },
+  {
+   "name": "Inform User of Propagation Timeline",
+   "type": "Fix"
+  },
+  {
+   "name": "Advise Sign Out/In or Refresh",
+   "type": "Fix"
+  },
+  {
+   "name": "Request User Confirm Access",
+   "type": "Fix"
+  },
+  {
+   "name": "Set Ticket Status to Resolved",
+   "type": "Fix"
+  },
+  {
+   "name": "Escalate Pending Manager Approval Beyond 4 Business Hours",
+   "type": "Fix"
+  },
+  {
+   "name": "Escalate Provisioning Not Occurred Within 1 Hour of Approval",
+   "type": "Fix"
+  },
+  {
+   "name": "On-Premises Security Groups",
+   "type": "Product"
+  },
+  {
+   "name": "Cloud Groups SharePoint HR Distribution Lists",
+   "type": "Product"
+  },
+  {
+   "name": "Propagation Window 30 Minutes On-Prem",
+   "type": "Component"
+  },
+  {
+   "name": "Propagation Window Up to 1 Hour Cloud",
+   "type": "Component"
+  },
+  {
+   "name": "P2 Priority 8 Hour SLA",
+   "type": "Component"
+  },
+  {
+   "name": "P3 Priority 24 Hour SLA",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Missing Information",
+   "relation": "CAUSED_BY",
+   "target": "Pending User Input"
+  },
+  {
+   "source": "Already Member of Target Group",
+   "relation": "FIXED_BY",
+   "target": "Access Already Granted"
+  },
+  {
+   "source": "Approval Entry Missing",
+   "relation": "CAUSED_BY",
+   "target": "Send Reminder to Manager"
+  },
+  {
+   "source": "Send Reminder to Manager",
+   "relation": "FIXED_BY",
+   "target": "Follow-Up Set for 2 Hours"
+  },
+  {
+   "source": "Approval Confirmed",
+   "relation": "FIXED_BY",
+   "target": "Add User to On-Prem Security Group"
+  },
+  {
+   "source": "Approval Confirmed",
+   "relation": "FIXED_BY",
+   "target": "Add User to Cloud Group via Entra ID"
+  },
+  {
+   "source": "Add User to Group",
+   "relation": "FIXED_BY",
+   "target": "Document Group Name Object ID Timestamp"
+  },
+  {
+   "source": "Provision Completed",
+   "relation": "FIXED_BY",
+   "target": "Inform User of Propagation Timeline"
+  },
+  {
+   "source": "User Notified",
+   "relation": "FIXED_BY",
+   "target": "Advise Sign Out/In or Refresh"
+  },
+  {
+   "source": "After Propagation Window",
+   "relation": "FIXED_BY",
+   "target": "Request User Confirm Access"
+  },
+  {
+   "source": "User Confirms Access",
+   "relation": "FIXED_BY",
+   "target": "Set Ticket Status to Resolved"
+  },
+  {
+   "source": "Pending Manager Approval Beyond 4 Business Hours",
+   "relation": "FIXED_BY",
+   "target": "Escalate Pending Manager Approval Beyond 4 Business Hours"
+  },
+  {
+   "source": "Provisioning Not Occurred Within 1 Hour of Approval",
+   "relation": "FIXED_BY",
+   "target": "Escalate Provisioning Not Occurred Within 1 Hour of Approval"
+  },
+  {
+   "source": "On-Premises Security Groups",
+   "relation": "AFFECTS",
+   "target": "Add User to On-Prem Security Group"
+  },
+  {
+   "source": "Cloud Groups SharePoint HR Distribution Lists",
+   "relation": "AFFECTS",
+   "target": "Add User to Cloud Group via Entra ID"
+  },
+  {
+   "source": "Propagation Window 30 Minutes On-Prem",
+   "relation": "PART_OF",
+   "target": "Inform User of Propagation Timeline"
+  },
+  {
+   "source": "Propagation Window Up to 1 Hour Cloud",
+   "relation": "PART_OF",
+   "target": "Inform User of Propagation Timeline"
+  },
+  {
+   "source": "P2 Priority 8 Hour SLA",
+   "relation": "AFFECTS",
+   "target": "Set Ticket Status to Resolved"
+  },
+  {
+   "source": "P3 Priority 24 Hour SLA",
+   "relation": "AFFECTS",
+   "target": "Set Ticket Status to Resolved"
+  }
+ ]
+}

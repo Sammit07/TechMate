@@ -1,0 +1,184 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft 365 Admin Center",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "Licence Assignment",
+   "type": "Component"
+  },
+  {
+   "name": "Policy Sync",
+   "type": "Component"
+  },
+  {
+   "name": "Sign Out and Sign In",
+   "type": "Component"
+  },
+  {
+   "name": "Feature Verification",
+   "type": "Component"
+  },
+  {
+   "name": "Expired Licence",
+   "type": "Symptom"
+  },
+  {
+   "name": "Not Assigned Licence",
+   "type": "Symptom"
+  },
+  {
+   "name": "Licence Prompt Message",
+   "type": "Symptom"
+  },
+  {
+   "name": "Missing Entra ID Object",
+   "type": "Cause"
+  },
+  {
+   "name": "Disabled Entra ID Object",
+   "type": "Cause"
+  },
+  {
+   "name": "Conditional Access Block",
+   "type": "Cause"
+  },
+  {
+   "name": "Assign Licence",
+   "type": "Fix"
+  },
+  {
+   "name": "Renew Licence",
+   "type": "Fix"
+  },
+  {
+   "name": "Force Policy Sync",
+   "type": "Fix"
+  },
+  {
+   "name": "Notify User",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify Licence Activation",
+   "type": "Fix"
+  },
+  {
+   "name": "Escalate to IAM Team",
+   "type": "Fix"
+  },
+  {
+   "name": "Escalate to Security Operations",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Expired Licence",
+   "relation": "CAUSED_BY",
+   "target": "Missing Entra ID Object"
+  },
+  {
+   "source": "Expired Licence",
+   "relation": "CAUSED_BY",
+   "target": "Disabled Entra ID Object"
+  },
+  {
+   "source": "Not Assigned Licence",
+   "relation": "CAUSED_BY",
+   "target": "Missing Entra ID Object"
+  },
+  {
+   "source": "Not Assigned Licence",
+   "relation": "CAUSED_BY",
+   "target": "Disabled Entra ID Object"
+  },
+  {
+   "source": "Licence Prompt Message",
+   "relation": "INDICATES",
+   "target": "Expired Licence"
+  },
+  {
+   "source": "Licence Prompt Message",
+   "relation": "INDICATES",
+   "target": "Not Assigned Licence"
+  },
+  {
+   "source": "Assign Licence",
+   "relation": "FIXED_BY",
+   "target": "Expired Licence"
+  },
+  {
+   "source": "Assign Licence",
+   "relation": "FIXED_BY",
+   "target": "Not Assigned Licence"
+  },
+  {
+   "source": "Renew Licence",
+   "relation": "FIXED_BY",
+   "target": "Expired Licence"
+  },
+  {
+   "source": "Force Policy Sync",
+   "relation": "FIXED_BY",
+   "target": "Policy Sync"
+  },
+  {
+   "source": "Notify User",
+   "relation": "FIXED_BY",
+   "target": "Sign Out and Sign In"
+  },
+  {
+   "source": "Verify Licence Activation",
+   "relation": "FIXED_BY",
+   "target": "Feature Verification"
+  },
+  {
+   "source": "Sign Out and Sign In",
+   "relation": "AFFECTS",
+   "target": "Teams"
+  },
+  {
+   "source": "Feature Verification",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 Apps"
+  },
+  {
+   "source": "Missing Entra ID Object",
+   "relation": "AFFECTS",
+   "target": "Entra ID"
+  },
+  {
+   "source": "Conditional Access Block",
+   "relation": "AFFECTS",
+   "target": "Entra ID"
+  },
+  {
+   "source": "Escalate to IAM Team",
+   "relation": "FIXED_BY",
+   "target": "Missing Entra ID Object"
+  },
+  {
+   "source": "Escalate to Security Operations",
+   "relation": "FIXED_BY",
+   "target": "Suspicious Activity Alert"
+  }
+ ]
+}

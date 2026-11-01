@@ -1,0 +1,234 @@
+{
+ "entities": [
+  {
+   "name": "Bluetooth radio disabled or in airplane mode",
+   "type": "Cause"
+  },
+  {
+   "name": "Device out of range (>10m) or obstructed",
+   "type": "Cause"
+  },
+  {
+   "name": "Peripheral battery low or not in pairing mode",
+   "type": "Cause"
+  },
+  {
+   "name": "Previous pairing profile corrupted or stale",
+   "type": "Cause"
+  },
+  {
+   "name": "Interference from other wireless devices (Wi-Fi, cordless phones)",
+   "type": "Cause"
+  },
+  {
+   "name": "Mouse cursor does not move or clicks are not registered",
+   "type": "Symptom"
+  },
+  {
+   "name": "Keyboard keys produce no input or repeat erratically",
+   "type": "Symptom"
+  },
+  {
+   "name": "Bluetooth headset shows as \"Not connected\" in Settings; microphone is silent in Teams or other apps",
+   "type": "Symptom"
+  },
+  {
+   "name": "Could not connect to the device. Make sure the device is turned on and discoverable.",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Ensure the laptop's Bluetooth radio is enabled",
+   "type": "Fix"
+  },
+  {
+   "name": "Make sure the peripheral is charged (or has fresh batteries) and is set to pairing mode",
+   "type": "Fix"
+  },
+  {
+   "name": "Open Bluetooth settings: Windows - Settings -> Bluetooth & devices; macOS - System Settings -> Bluetooth",
+   "type": "Fix"
+  },
+  {
+   "name": "Click \"Add device\" (Windows) or the \"+\" button (macOS) to start discovery",
+   "type": "Fix"
+  },
+  {
+   "name": "Put the peripheral into pairing mode",
+   "type": "Fix"
+  },
+  {
+   "name": "When the device appears in the list, select it and click \"Connect\" (Windows) or \"Pair\" (macOS)",
+   "type": "Fix"
+  },
+  {
+   "name": "If prompted, confirm the passkey on both the laptop and the peripheral",
+   "type": "Fix"
+  },
+  {
+   "name": "Wait",
+   "type": "Fix"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "Acme-managed devices joined to Entra ID/AD and enrolled in Intune",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Mouse cursor does not move or clicks are not registered",
+   "relation": "CAUSED_BY",
+   "target": "Bluetooth radio disabled or in airplane mode"
+  },
+  {
+   "source": "Keyboard keys produce no input or repeat erratically",
+   "relation": "CAUSED_BY",
+   "target": "Bluetooth radio disabled or in airplane mode"
+  },
+  {
+   "source": "Bluetooth headset shows as \"Not connected\" in Settings; microphone is silent in Teams or other apps",
+   "relation": "CAUSED_BY",
+   "target": "Bluetooth radio disabled or in airplane mode"
+  },
+  {
+   "source": "Could not connect to the device. Make sure the device is turned on and discoverable.",
+   "relation": "INDICATES",
+   "target": "Bluetooth radio disabled or in airplane mode"
+  },
+  {
+   "source": "Mouse cursor does not move or clicks are not registered",
+   "relation": "CAUSED_BY",
+   "target": "Device out of range (>10m) or obstructed"
+  },
+  {
+   "source": "Keyboard keys produce no input or repeat erratically",
+   "relation": "CAUSED_BY",
+   "target": "Device out of range (>10m) or obstructed"
+  },
+  {
+   "source": "Bluetooth headset shows as \"Not connected\" in Settings; microphone is silent in Teams or other apps",
+   "relation": "CAUSED_BY",
+   "target": "Device out of range (>10m) or obstructed"
+  },
+  {
+   "source": "Could not connect to the device. Make sure the device is turned on and discoverable.",
+   "relation": "INDICATES",
+   "target": "Device out of range (>10m) or obstructed"
+  },
+  {
+   "source": "Mouse cursor does not move or clicks are not registered",
+   "relation": "CAUSED_BY",
+   "target": "Peripheral battery low or not in pairing mode"
+  },
+  {
+   "source": "Keyboard keys produce no input or repeat erratically",
+   "relation": "CAUSED_BY",
+   "target": "Peripheral battery low or not in pairing mode"
+  },
+  {
+   "source": "Bluetooth headset shows as \"Not connected\" in Settings; microphone is silent in Teams or other apps",
+   "relation": "CAUSED_BY",
+   "target": "Peripheral battery low or not in pairing mode"
+  },
+  {
+   "source": "Could not connect to the device. Make sure the device is turned on and discoverable.",
+   "relation": "INDICATES",
+   "target": "Peripheral battery low or not in pairing mode"
+  },
+  {
+   "source": "Mouse cursor does not move or clicks are not registered",
+   "relation": "CAUSED_BY",
+   "target": "Previous pairing profile corrupted or stale"
+  },
+  {
+   "source": "Keyboard keys produce no input or repeat erratically",
+   "relation": "CAUSED_BY",
+   "target": "Previous pairing profile corrupted or stale"
+  },
+  {
+   "source": "Bluetooth headset shows as \"Not connected\" in Settings; microphone is silent in Teams or other apps",
+   "relation": "CAUSED_BY",
+   "target": "Previous pairing profile corrupted or stale"
+  },
+  {
+   "source": "Could not connect to the device. Make sure the device is turned on and discoverable.",
+   "relation": "INDICATES",
+   "target": "Previous pairing profile corrupted or stale"
+  },
+  {
+   "source": "Mouse cursor does not move or clicks are not registered",
+   "relation": "CAUSED_BY",
+   "target": "Interference from other wireless devices (Wi-Fi, cordless phones)"
+  },
+  {
+   "source": "Keyboard keys produce no input or repeat erratically",
+   "relation": "CAUSED_BY",
+   "target": "Interference from other wireless devices (Wi-Fi, cordless phones)"
+  },
+  {
+   "source": "Bluetooth headset shows as \"Not connected\" in Settings; microphone is silent in Teams or other apps",
+   "relation": "CAUSED_BY",
+   "target": "Interference from other wireless devices (Wi-Fi, cordless phones)"
+  },
+  {
+   "source": "Could not connect to the device. Make sure the device is turned on and discoverable.",
+   "relation": "INDICATES",
+   "target": "Interference from other wireless devices (Wi-Fi, cordless phones)"
+  },
+  {
+   "source": "Ensure the laptop's Bluetooth radio is enabled",
+   "relation": "FIXED_BY",
+   "target": "Bluetooth radio disabled or in airplane mode"
+  },
+  {
+   "source": "Make sure the peripheral is charged (or has fresh batteries) and is set to pairing mode",
+   "relation": "FIXED_BY",
+   "target": "Peripheral battery low or not in pairing mode"
+  },
+  {
+   "source": "Open Bluetooth settings: Windows - Settings -> Bluetooth & devices; macOS - System Settings -> Bluetooth",
+   "relation": "FIXED_BY",
+   "target": "Bluetooth radio disabled or in airplane mode"
+  },
+  {
+   "source": "Click \"Add device\" (Windows) or the \"+\" button (macOS) to start discovery",
+   "relation": "FIXED_BY",
+   "target": "Previous pairing profile corrupted or stale"
+  },
+  {
+   "source": "Put the peripheral into pairing mode",
+   "relation": "FIXED_BY",
+   "target": "Peripheral battery low or not in pairing mode"
+  },
+  {
+   "source": "When the device appears in the list, select it and click \"Connect\" (Windows) or \"Pair\" (macOS)",
+   "relation": "FIXED_BY",
+   "target": "Device out of range (>10m) or obstructed"
+  },
+  {
+   "source": "If prompted, confirm the passkey on both the laptop and the peripheral",
+   "relation": "FIXED_BY",
+   "target": "Previous pairing profile corrupted or stale"
+  },
+  {
+   "source": "Wait",
+   "relation": "FIXED_BY",
+   "target": "Interference from other wireless devices (Wi-Fi, cordless phones)"
+  }
+ ]
+}

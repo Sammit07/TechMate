@@ -1,0 +1,197 @@
+{
+ "entities": [
+  {
+   "name": "Intune device action Renew certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "re-enroll via the Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "wireless adapter power-saving option disabled",
+   "type": "Fix"
+  },
+  {
+   "name": "push compliance policy",
+   "type": "Fix"
+  },
+  {
+   "name": "driver version against approved baseline",
+   "type": "Component"
+  },
+  {
+   "name": "Intel Wi-Fi 6 AX201 22.XX.XX",
+   "type": "Component"
+  },
+  {
+   "name": "push latest driver via Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "test with known-good access point",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Wireless-LAN team",
+   "type": "Fix"
+  },
+  {
+   "name": "AP health, channel utilization, or controller firmware review",
+   "type": "Cause"
+  },
+  {
+   "name": "connection stability verification",
+   "type": "Symptom"
+  },
+  {
+   "name": "continuous ping to 8.8.8.8 and internal server",
+   "type": "Symptom"
+  },
+  {
+   "name": "Wi-Fi icon shows full bars and no warning symbols",
+   "type": "Symptom"
+  },
+  {
+   "name": "access internet and intranet resources without credential prompts",
+   "type": "Symptom"
+  },
+  {
+   "name": "Intune compliance policies enforce wireless adapter power-saving disabled and up-to-date drivers",
+   "type": "Fix"
+  },
+  {
+   "name": "schedule quarterly checks of machine certificate expiry",
+   "type": "Fix"
+  },
+  {
+   "name": "educate users to use Forget network only when experiencing connectivity issues",
+   "type": "Fix"
+  },
+  {
+   "name": "work with Wireless-LAN team to ensure sufficient AP capacity and proper channel planning",
+   "type": "Fix"
+  },
+  {
+   "name": "disconnect from GlobalProtect VPN when not needed",
+   "type": "Fix"
+  },
+  {
+   "name": "stale VPN routes interfere with local Wi-Fi traffic",
+   "type": "Cause"
+  },
+  {
+   "name": "Wi-Fi disconnects and no internet",
+   "type": "Symptom"
+  },
+  {
+   "name": "expired machine certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "outdated wireless driver",
+   "type": "Cause"
+  },
+  {
+   "name": "power-saving enabled on wireless adapter",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Wi-Fi disconnects and no internet",
+   "relation": "CAUSED_BY",
+   "target": "expired machine certificate"
+  },
+  {
+   "source": "Wi-Fi disconnects and no internet",
+   "relation": "CAUSED_BY",
+   "target": "outdated wireless driver"
+  },
+  {
+   "source": "Wi-Fi disconnects and no internet",
+   "relation": "CAUSED_BY",
+   "target": "power-saving enabled on wireless adapter"
+  },
+  {
+   "source": "Wi-Fi disconnects and no internet",
+   "relation": "CAUSED_BY",
+   "target": "stale VPN routes interfere with local Wi-Fi traffic"
+  },
+  {
+   "source": "expired machine certificate",
+   "relation": "FIXED_BY",
+   "target": "Intune device action Renew certificate"
+  },
+  {
+   "source": "expired machine certificate",
+   "relation": "FIXED_BY",
+   "target": "re-enroll via the Company Portal"
+  },
+  {
+   "source": "outdated wireless driver",
+   "relation": "FIXED_BY",
+   "target": "push latest driver via Intune"
+  },
+  {
+   "source": "power-saving enabled on wireless adapter",
+   "relation": "FIXED_BY",
+   "target": "wireless adapter power-saving option disabled"
+  },
+  {
+   "source": "power-saving enabled on wireless adapter",
+   "relation": "FIXED_BY",
+   "target": "push compliance policy"
+  },
+  {
+   "source": "AP health, channel utilization, or controller firmware review",
+   "relation": "FIXED_BY",
+   "target": "escalate to Wireless-LAN team"
+  },
+  {
+   "source": "Intune compliance policies enforce wireless adapter power-saving disabled and up-to-date drivers",
+   "relation": "FIXED_BY",
+   "target": "schedule quarterly checks of machine certificate expiry"
+  },
+  {
+   "source": "Intune compliance policies enforce wireless adapter power-saving disabled and up-to-date drivers",
+   "relation": "FIXED_BY",
+   "target": "educate users to use Forget network only when experiencing connectivity issues"
+  },
+  {
+   "source": "Intune compliance policies enforce wireless adapter power-saving disabled and up-to-date drivers",
+   "relation": "FIXED_BY",
+   "target": "work with Wireless-LAN team to ensure sufficient AP capacity and proper channel planning"
+  },
+  {
+   "source": "Intune compliance policies enforce wireless adapter power-saving disabled and up-to-date drivers",
+   "relation": "FIXED_BY",
+   "target": "disconnect from GlobalProtect VPN when not needed"
+  },
+  {
+   "source": "driver version against approved baseline",
+   "relation": "PART_OF",
+   "target": "Intel Wi-Fi 6 AX201 22.XX.XX"
+  },
+  {
+   "source": "connection stability verification",
+   "relation": "AFFECTS",
+   "target": "Wi-Fi disconnects and no internet"
+  },
+  {
+   "source": "continuous ping to 8.8.8.8 and internal server",
+   "relation": "AFFECTS",
+   "target": "Wi-Fi disconnects and no internet"
+  },
+  {
+   "source": "Wi-Fi icon shows full bars and no warning symbols",
+   "relation": "AFFECTS",
+   "target": "Wi-Fi disconnects and no internet"
+  },
+  {
+   "source": "access internet and intranet resources without credential prompts",
+   "relation": "AFFECTS",
+   "target": "Wi-Fi disconnects and no internet"
+  }
+ ]
+}

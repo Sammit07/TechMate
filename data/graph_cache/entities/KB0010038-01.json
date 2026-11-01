@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "docking station",
+   "type": "Product"
+  },
+  {
+   "name": "graphics driver",
+   "type": "Component"
+  },
+  {
+   "name": "DisplayPort/HDMI cable",
+   "type": "Component"
+  },
+  {
+   "name": "display settings",
+   "type": "Component"
+  },
+  {
+   "name": "USB-C/Thunderbolt connection",
+   "type": "Component"
+  },
+  {
+   "name": "laptop",
+   "type": "Product"
+  },
+  {
+   "name": "monitor",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "firmware update",
+   "type": "Fix"
+  },
+  {
+   "name": "driver update",
+   "type": "Fix"
+  },
+  {
+   "name": "cable inspection/reseat",
+   "type": "Fix"
+  },
+  {
+   "name": "display adjustment",
+   "type": "Fix"
+  },
+  {
+   "name": "connection reset",
+   "type": "Fix"
+  },
+  {
+   "name": "alternative monitor test",
+   "type": "Fix"
+  },
+  {
+   "name": "no display output",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "no display output",
+   "relation": "CAUSED_BY",
+   "target": "outdated docking station firmware"
+  },
+  {
+   "source": "no display output",
+   "relation": "CAUSED_BY",
+   "target": "outdated graphics driver"
+  },
+  {
+   "source": "no display output",
+   "relation": "CAUSED_BY",
+   "target": "damaged or loose video cable"
+  },
+  {
+   "source": "no display output",
+   "relation": "CAUSED_BY",
+   "target": "incorrect display settings"
+  },
+  {
+   "source": "no display output",
+   "relation": "CAUSED_BY",
+   "target": "unstable USB-C/Thunderbolt connection"
+  },
+  {
+   "source": "outdated docking station firmware",
+   "relation": "FIXED_BY",
+   "target": "firmware update"
+  },
+  {
+   "source": "outdated graphics driver",
+   "relation": "FIXED_BY",
+   "target": "driver update"
+  },
+  {
+   "source": "damaged or loose video cable",
+   "relation": "FIXED_BY",
+   "target": "cable inspection/reseat"
+  },
+  {
+   "source": "incorrect display settings",
+   "relation": "FIXED_BY",
+   "target": "display adjustment"
+  },
+  {
+   "source": "unstable USB-C/Thunderbolt connection",
+   "relation": "FIXED_BY",
+   "target": "connection reset"
+  },
+  {
+   "source": "firmware update",
+   "relation": "AFFECTS",
+   "target": "docking station"
+  },
+  {
+   "source": "driver update",
+   "relation": "AFFECTS",
+   "target": "graphics driver"
+  },
+  {
+   "source": "cable inspection/reseat",
+   "relation": "AFFECTS",
+   "target": "DisplayPort/HDMI cable"
+  },
+  {
+   "source": "display adjustment",
+   "relation": "AFFECTS",
+   "target": "display settings"
+  },
+  {
+   "source": "connection reset",
+   "relation": "AFFECTS",
+   "target": "USB-C/Thunderbolt connection"
+  }
+ ]
+}

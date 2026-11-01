@@ -1,0 +1,135 @@
+{
+ "entities": [
+  {
+   "name": "Service Desk",
+   "type": "Product"
+  },
+  {
+   "name": "extension 4357",
+   "type": "Component"
+  },
+  {
+   "name": "Teams channel \"IT Help\"",
+   "type": "Component"
+  },
+  {
+   "name": "ticket title",
+   "type": "Component"
+  },
+  {
+   "name": "ticket description",
+   "type": "Component"
+  },
+  {
+   "name": "device details",
+   "type": "Component"
+  },
+  {
+   "name": "steps to reproduce",
+   "type": "Component"
+  },
+  {
+   "name": "impact statement",
+   "type": "Component"
+  },
+  {
+   "name": "attachments",
+   "type": "Component"
+  },
+  {
+   "name": "employee ID verification",
+   "type": "Component"
+  },
+  {
+   "name": "P1 issue",
+   "type": "Symptom"
+  },
+  {
+   "name": "non-urgent query",
+   "type": "Symptom"
+  },
+  {
+   "name": "missing information request",
+   "type": "Symptom"
+  },
+  {
+   "name": "ticket creation by agent",
+   "type": "Fix"
+  },
+  {
+   "name": "ticket number provision",
+   "type": "Fix"
+  },
+  {
+   "name": "L1 agent triage",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "P1 issue",
+   "relation": "FIXED_BY",
+   "target": "call Service Desk on extension 4357"
+  },
+  {
+   "source": "non-urgent query",
+   "relation": "FIXED_BY",
+   "target": "post message in Teams channel \"IT Help\""
+  },
+  {
+   "source": "ticket title",
+   "relation": "AFFECTS",
+   "target": "Service Desk"
+  },
+  {
+   "source": "ticket description",
+   "relation": "AFFECTS",
+   "target": "Service Desk"
+  },
+  {
+   "source": "device details",
+   "relation": "AFFECTS",
+   "target": "Service Desk"
+  },
+  {
+   "source": "steps to reproduce",
+   "relation": "AFFECTS",
+   "target": "Service Desk"
+  },
+  {
+   "source": "impact statement",
+   "relation": "AFFECTS",
+   "target": "Service Desk"
+  },
+  {
+   "source": "attachments",
+   "relation": "AFFECTS",
+   "target": "Service Desk"
+  },
+  {
+   "source": "missing information request",
+   "relation": "CAUSED_BY",
+   "target": "incomplete ticket submission"
+  },
+  {
+   "source": "ticket creation by agent",
+   "relation": "FIXED_BY",
+   "target": "missing information request"
+  },
+  {
+   "source": "ticket number provision",
+   "relation": "FIXED_BY",
+   "target": "ticket creation by agent"
+  },
+  {
+   "source": "employee ID verification",
+   "relation": "PART_OF",
+   "target": "L1 agent triage"
+  },
+  {
+   "source": "L1 agent triage",
+   "relation": "AFFECTS",
+   "target": "Service Desk"
+  }
+ ]
+}

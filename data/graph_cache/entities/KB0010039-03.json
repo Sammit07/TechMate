@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "external monitor not detected or flickering",
+   "type": "Symptom"
+  },
+  {
+   "name": "docking station",
+   "type": "Component"
+  },
+  {
+   "name": "DisplayPort cable",
+   "type": "Component"
+  },
+  {
+   "name": "HDMI cable",
+   "type": "Component"
+  },
+  {
+   "name": "graphics driver",
+   "type": "Component"
+  },
+  {
+   "name": "dock firmware",
+   "type": "Component"
+  },
+  {
+   "name": "laptop model",
+   "type": "Component"
+  },
+  {
+   "name": "monitor model",
+   "type": "Component"
+  },
+  {
+   "name": "replace defective hardware",
+   "type": "Fix"
+  },
+  {
+   "name": "update asset record",
+   "type": "Fix"
+  },
+  {
+   "name": "close ticket with resolution note",
+   "type": "Fix"
+  },
+  {
+   "name": "verify external monitor detection",
+   "type": "Fix"
+  },
+  {
+   "name": "reproduce typical workflow",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Desktop Support L2",
+   "type": "Fix"
+  },
+  {
+   "name": "faulty cable, dock, or monitor",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "CAUSED_BY",
+   "target": "faulty cable, dock, or monitor"
+  },
+  {
+   "source": "faulty cable, dock, or monitor",
+   "relation": "FIXED_BY",
+   "target": "replace defective hardware"
+  },
+  {
+   "source": "replace defective hardware",
+   "relation": "FIXED_BY",
+   "target": "update asset record"
+  },
+  {
+   "source": "update asset record",
+   "relation": "FIXED_BY",
+   "target": "close ticket with resolution note"
+  },
+  {
+   "source": "close ticket with resolution note",
+   "relation": "FIXED_BY",
+   "target": "remind user of self-help steps"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "AFFECTS",
+   "target": "docking station"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "AFFECTS",
+   "target": "DisplayPort cable"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "AFFECTS",
+   "target": "HDMI cable"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "AFFECTS",
+   "target": "graphics driver"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "AFFECTS",
+   "target": "dock firmware"
+  },
+  {
+   "source": "verify external monitor detection",
+   "relation": "FIXED_BY",
+   "target": "reproduce typical workflow"
+  },
+  {
+   "source": "reproduce typical workflow",
+   "relation": "FIXED_BY",
+   "target": "mark ticket as resolved"
+  },
+  {
+   "source": "mark ticket as resolved",
+   "relation": "FIXED_BY",
+   "target": "provide KB article link"
+  },
+  {
+   "source": "persist after self-help and verified dock firmware, graphics drivers, and cables",
+   "relation": "CAUSED_BY",
+   "target": "escalate to Desktop Support L2"
+  }
+ ]
+}

@@ -1,0 +1,132 @@
+{
+ "entities": [
+  {
+   "name": "password policy",
+   "type": "Component"
+  },
+  {
+   "name": "lockout",
+   "type": "Symptom"
+  },
+  {
+   "name": "self-service password reset portal",
+   "type": "Product"
+  },
+  {
+   "name": "IAM Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "14-character, complexity, and history rules",
+   "type": "Component"
+  },
+  {
+   "name": "cached credentials persist",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN (GlobalProtect)",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal app",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook on the web",
+   "type": "Product"
+  },
+  {
+   "name": "Credential Manager",
+   "type": "Component"
+  },
+  {
+   "name": "Keychain Access",
+   "type": "Component"
+  },
+  {
+   "name": "ACME-Corp SSID",
+   "type": "Component"
+  },
+  {
+   "name": "stale credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "calendar reminder 10 days before password expires",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "lockout",
+   "relation": "CAUSED_BY",
+   "target": "cached credentials persist"
+  },
+  {
+   "source": "lockout",
+   "relation": "FIXED_BY",
+   "target": "self-service password reset portal"
+  },
+  {
+   "source": "self-service password reset portal",
+   "relation": "PART_OF",
+   "target": "IAM Temporary Access Pass"
+  },
+  {
+   "source": "14-character, complexity, and history rules",
+   "relation": "AFFECTS",
+   "target": "password policy"
+  },
+  {
+   "source": "VPN (GlobalProtect)",
+   "relation": "AFFECTS",
+   "target": "stale credentials"
+  },
+  {
+   "source": "Company Portal app",
+   "relation": "AFFECTS",
+   "target": "stale credentials"
+  },
+  {
+   "source": "Outlook on the web",
+   "relation": "AFFECTS",
+   "target": "stale credentials"
+  },
+  {
+   "source": "Credential Manager",
+   "relation": "AFFECTS",
+   "target": "Windows"
+  },
+  {
+   "source": "Keychain Access",
+   "relation": "AFFECTS",
+   "target": "macOS"
+  },
+  {
+   "source": "ACME-Corp SSID",
+   "relation": "AFFECTS",
+   "target": "Wi-Fi"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "CAUSED_BY",
+   "target": "lockout"
+  },
+  {
+   "source": "calendar reminder 10 days before password expires",
+   "relation": "FIXED_BY",
+   "target": "lockout"
+  },
+  {
+   "source": "lockout",
+   "relation": "INDICATES",
+   "target": "cached credentials persist"
+  },
+  {
+   "source": "self-service password reset portal",
+   "relation": "FIXED_BY",
+   "target": "lockout"
+  }
+ ]
+}

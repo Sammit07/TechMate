@@ -1,0 +1,140 @@
+{
+ "entities": [
+  {
+   "name": "headset and microphone not working in calls",
+   "type": "Symptom"
+  },
+  {
+   "name": "Microsoft Teams",
+   "type": "Product"
+  },
+  {
+   "name": "audio/combo jack",
+   "type": "Component"
+  },
+  {
+   "name": "USB port",
+   "type": "Component"
+  },
+  {
+   "name": "Bluetooth headset",
+   "type": "Component"
+  },
+  {
+   "name": "default audio devices",
+   "type": "Component"
+  },
+  {
+   "name": "Teams device settings",
+   "type": "Component"
+  },
+  {
+   "name": "physical connection issue",
+   "type": "Cause"
+  },
+  {
+   "name": "incorrect default audio device",
+   "type": "Cause"
+  },
+  {
+   "name": "misconfigured Teams audio device",
+   "type": "Cause"
+  },
+  {
+   "name": "Bluetooth pairing issue",
+   "type": "Cause"
+  },
+  {
+   "name": "try different USB port",
+   "type": "Fix"
+  },
+  {
+   "name": "set headset as default playback and recording device",
+   "type": "Fix"
+  },
+  {
+   "name": "select correct speaker and microphone in Teams",
+   "type": "Fix"
+  },
+  {
+   "name": "re-pair Bluetooth headset",
+   "type": "Fix"
+  },
+  {
+   "name": "test headset on another computer",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "headset and microphone not working in calls",
+   "relation": "CAUSED_BY",
+   "target": "physical connection issue"
+  },
+  {
+   "source": "headset and microphone not working in calls",
+   "relation": "CAUSED_BY",
+   "target": "incorrect default audio device"
+  },
+  {
+   "source": "headset and microphone not working in calls",
+   "relation": "CAUSED_BY",
+   "target": "misconfigured Teams audio device"
+  },
+  {
+   "source": "headset and microphone not working in calls",
+   "relation": "CAUSED_BY",
+   "target": "Bluetooth pairing issue"
+  },
+  {
+   "source": "physical connection issue",
+   "relation": "AFFECTS",
+   "target": "audio/combo jack"
+  },
+  {
+   "source": "physical connection issue",
+   "relation": "AFFECTS",
+   "target": "USB port"
+  },
+  {
+   "source": "incorrect default audio device",
+   "relation": "AFFECTS",
+   "target": "default audio devices"
+  },
+  {
+   "source": "misconfigured Teams audio device",
+   "relation": "AFFECTS",
+   "target": "Teams device settings"
+  },
+  {
+   "source": "Bluetooth pairing issue",
+   "relation": "AFFECTS",
+   "target": "Bluetooth headset"
+  },
+  {
+   "source": "physical connection issue",
+   "relation": "FIXED_BY",
+   "target": "try different USB port"
+  },
+  {
+   "source": "incorrect default audio device",
+   "relation": "FIXED_BY",
+   "target": "set headset as default playback and recording device"
+  },
+  {
+   "source": "misconfigured Teams audio device",
+   "relation": "FIXED_BY",
+   "target": "select correct speaker and microphone in Teams"
+  },
+  {
+   "source": "Bluetooth pairing issue",
+   "relation": "FIXED_BY",
+   "target": "re-pair Bluetooth headset"
+  },
+  {
+   "source": "headset and microphone not working in calls",
+   "relation": "FIXED_BY",
+   "target": "test headset on another computer"
+  }
+ ]
+}

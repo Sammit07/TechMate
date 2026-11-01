@@ -1,0 +1,204 @@
+{
+ "entities": [
+  {
+   "name": "IAM",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "PaperCut",
+   "type": "Product"
+  },
+  {
+   "name": "AD account",
+   "type": "Component"
+  },
+  {
+   "name": "mailbox",
+   "type": "Component"
+  },
+  {
+   "name": "MFA",
+   "type": "Component"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "self service password reset",
+   "type": "Component"
+  },
+  {
+   "name": "device compliance",
+   "type": "Component"
+  },
+  {
+   "name": "OneDrive sync app",
+   "type": "Component"
+  },
+  {
+   "name": "VPN connection",
+   "type": "Component"
+  },
+  {
+   "name": "certificate error",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Printing held in PaperCut",
+   "type": "Symptom"
+  },
+  {
+   "name": "OneDrive stuck on Setting up",
+   "type": "Symptom"
+  },
+  {
+   "name": "laptop fails to enroll in Intune",
+   "type": "Symptom"
+  },
+  {
+   "name": "BitLocker/FileVault encryption missing",
+   "type": "Symptom"
+  },
+  {
+   "name": "hardware defects",
+   "type": "Cause"
+  },
+  {
+   "name": "renew certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "re-enroll device for machine certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "reset OneDrive sync app",
+   "type": "Fix"
+  },
+  {
+   "name": "verify device compliance in Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "add user to PaperCut",
+   "type": "Fix"
+  },
+  {
+   "name": "link PaperCut record to AD username",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to IAM",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Desktop Support",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "OneDrive stuck on Setting up",
+   "relation": "CAUSED_BY",
+   "target": "device non-compliant in Intune"
+  },
+  {
+   "source": "OneDrive stuck on Setting up",
+   "relation": "FIXED_BY",
+   "target": "verify device compliance in Intune"
+  },
+  {
+   "source": "OneDrive stuck on Setting up",
+   "relation": "FIXED_BY",
+   "target": "reset OneDrive sync app"
+  },
+  {
+   "source": "VPN connection fails with certificate error",
+   "relation": "CAUSED_BY",
+   "target": "expired or missing user certificate"
+  },
+  {
+   "source": "VPN connection fails with certificate error",
+   "relation": "FIXED_BY",
+   "target": "renew certificate"
+  },
+  {
+   "source": "VPN connection fails with certificate error",
+   "relation": "FIXED_BY",
+   "target": "re-enroll device for machine certificate"
+  },
+  {
+   "source": "Printing held in PaperCut",
+   "relation": "CAUSED_BY",
+   "target": "PaperCut record not linked to AD username"
+  },
+  {
+   "source": "Printing held in PaperCut",
+   "relation": "FIXED_BY",
+   "target": "link PaperCut record to AD username"
+  },
+  {
+   "source": "Printing held in PaperCut",
+   "relation": "FIXED_BY",
+   "target": "add user to PaperCut"
+  },
+  {
+   "source": "laptop fails to enroll in Intune",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "BitLocker/FileVault encryption missing",
+   "relation": "AFFECTS",
+   "target": "device encryption"
+  },
+  {
+   "source": "hardware defects",
+   "relation": "CAUSED_BY",
+   "target": "laptop fails to enroll in Intune"
+  },
+  {
+   "source": "hardware defects",
+   "relation": "CAUSED_BY",
+   "target": "BitLocker/FileVault encryption missing"
+  },
+  {
+   "source": "AD account cannot be found or created",
+   "relation": "INDICATES",
+   "target": "HR system sync failure"
+  },
+  {
+   "source": "mailbox provisioning fails after licence assignment",
+   "relation": "INDICATES",
+   "target": "Entra ID licensing issue"
+  },
+  {
+   "source": "MFA/Temporary Access Pass issuance required beyond L1 scope",
+   "relation": "INDICATES",
+   "target": "IAM escalation needed"
+  },
+  {
+   "source": "escalate to IAM",
+   "relation": "FIXED_BY",
+   "target": "IAM"
+  },
+  {
+   "source": "escalate to Desktop Support",
+   "relation": "FIXED_BY",
+   "target": "Desktop Support"
+  }
+ ]
+}

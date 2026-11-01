@@ -1,0 +1,149 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "Company Portal app",
+   "type": "Component"
+  },
+  {
+   "name": "Intune enrollment",
+   "type": "Component"
+  },
+  {
+   "name": "My Account portal",
+   "type": "Product"
+  },
+  {
+   "name": "QR code scan",
+   "type": "Component"
+  },
+  {
+   "name": "six-digit code verification",
+   "type": "Component"
+  },
+  {
+   "name": "push notification approval",
+   "type": "Component"
+  },
+  {
+   "name": "SMS backup method",
+   "type": "Component"
+  },
+  {
+   "name": "cannot use any MFA method",
+   "type": "Symptom"
+  },
+  {
+   "name": "request Temporary Access Pass",
+   "type": "Fix"
+  },
+  {
+   "name": "delete old Authenticator registration",
+   "type": "Fix"
+  },
+  {
+   "name": "add Authenticator app method",
+   "type": "Fix"
+  },
+  {
+   "name": "scan QR code with Authenticator",
+   "type": "Fix"
+  },
+  {
+   "name": "enter six-digit code",
+   "type": "Fix"
+  },
+  {
+   "name": "enable SMS backup method",
+   "type": "Fix"
+  },
+  {
+   "name": "test sign-in after setup",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cannot use any MFA method",
+   "relation": "CAUSED_BY",
+   "target": "lost access to MFA methods"
+  },
+  {
+   "source": "cannot use any MFA method",
+   "relation": "FIXED_BY",
+   "target": "request Temporary Access Pass"
+  },
+  {
+   "source": "delete old Authenticator registration",
+   "relation": "FIXED_BY",
+   "target": "conflicting Authenticator registration"
+  },
+  {
+   "source": "add Authenticator app method",
+   "relation": "FIXED_BY",
+   "target": "need to register Microsoft Authenticator"
+  },
+  {
+   "source": "scan QR code with Authenticator",
+   "relation": "FIXED_BY",
+   "target": "link account to Authenticator app"
+  },
+  {
+   "source": "enter six-digit code",
+   "relation": "FIXED_BY",
+   "target": "verify Authenticator app setup"
+  },
+  {
+   "source": "enable SMS backup method",
+   "relation": "FIXED_BY",
+   "target": "lack of backup MFA method"
+  },
+  {
+   "source": "test sign-in after setup",
+   "relation": "FIXED_BY",
+   "target": "unverified Authenticator registration"
+  },
+  {
+   "source": "Intune enrollment",
+   "relation": "AFFECTS",
+   "target": "Windows laptop"
+  },
+  {
+   "source": "Company Portal app",
+   "relation": "AFFECTS",
+   "target": "Intune enrollment"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "AFFECTS",
+   "target": "My Account portal"
+  },
+  {
+   "source": "Temporary Access Pass",
+   "relation": "INDICATES",
+   "target": "cannot use any MFA method"
+  },
+  {
+   "source": "QR code scan",
+   "relation": "PART_OF",
+   "target": "Microsoft Authenticator"
+  },
+  {
+   "source": "six-digit code verification",
+   "relation": "PART_OF",
+   "target": "Microsoft Authenticator"
+  },
+  {
+   "source": "push notification approval",
+   "relation": "PART_OF",
+   "target": "Microsoft Authenticator"
+  }
+ ]
+}

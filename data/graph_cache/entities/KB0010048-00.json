@@ -1,0 +1,177 @@
+{
+ "entities": [
+  {
+   "name": "Windows Update",
+   "type": "Product"
+  },
+  {
+   "name": "Insufficient free disk space",
+   "type": "Cause"
+  },
+  {
+   "name": "Corrupted Windows Update components",
+   "type": "Cause"
+  },
+  {
+   "name": "Network connectivity issues",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN not connected or blocked ports",
+   "type": "Cause"
+  },
+  {
+   "name": "Pending prerequisite updates",
+   "type": "Cause"
+  },
+  {
+   "name": "Third-party antivirus interference",
+   "type": "Cause"
+  },
+  {
+   "name": "Missing or corrupted system files",
+   "type": "Cause"
+  },
+  {
+   "name": "Proxy, firewall, or BITS issues",
+   "type": "Cause"
+  },
+  {
+   "name": "WSUS server unreachable",
+   "type": "Cause"
+  },
+  {
+   "name": "Access denied due to permissions or security software",
+   "type": "Cause"
+  },
+  {
+   "name": "Driver causing update failure",
+   "type": "Cause"
+  },
+  {
+   "name": "Update not applicable",
+   "type": "Cause"
+  },
+  {
+   "name": "Failed to install",
+   "type": "Symptom"
+  },
+  {
+   "name": "Update progress stuck at 0% or 95%",
+   "type": "Symptom"
+  },
+  {
+   "name": "System rolls back changes after restart",
+   "type": "Symptom"
+  },
+  {
+   "name": "0x8007000D",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "0x800F0922",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "0x80240034",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "0x80073712",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "0x800F0906",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "0x80070005",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "0xC1900101",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "0x800F0923",
+   "type": "ErrorCode"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Failed to install",
+   "relation": "CAUSED_BY",
+   "target": "Insufficient free disk space"
+  },
+  {
+   "source": "Failed to install",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted Windows Update components"
+  },
+  {
+   "source": "Update progress stuck at 0% or 95%",
+   "relation": "CAUSED_BY",
+   "target": "Network connectivity issues"
+  },
+  {
+   "source": "System rolls back changes after restart",
+   "relation": "CAUSED_BY",
+   "target": "Pending prerequisite updates"
+  },
+  {
+   "source": "0x8007000D",
+   "relation": "INDICATES",
+   "target": "Insufficient free disk space"
+  },
+  {
+   "source": "0x8007000D",
+   "relation": "INDICATES",
+   "target": "Missing or corrupted system files"
+  },
+  {
+   "source": "0x800F0922",
+   "relation": "INDICATES",
+   "target": "VPN not connected or blocked ports"
+  },
+  {
+   "source": "0x800F0922",
+   "relation": "INDICATES",
+   "target": "WSUS server unreachable"
+  },
+  {
+   "source": "0x80240034",
+   "relation": "INDICATES",
+   "target": "Proxy, firewall, or BITS issues"
+  },
+  {
+   "source": "0x80073712",
+   "relation": "INDICATES",
+   "target": "Corrupted Windows Update components"
+  },
+  {
+   "source": "0x800F0906",
+   "relation": "INDICATES",
+   "target": "WSUS server unreachable"
+  },
+  {
+   "source": "0x80070005",
+   "relation": "INDICATES",
+   "target": "Access denied due to permissions or security software"
+  },
+  {
+   "source": "0xC1900101",
+   "relation": "INDICATES",
+   "target": "Driver causing update failure"
+  },
+  {
+   "source": "0x800F0923",
+   "relation": "INDICATES",
+   "target": "Update not applicable"
+  },
+  {
+   "source": "Windows Update",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  }
+ ]
+}

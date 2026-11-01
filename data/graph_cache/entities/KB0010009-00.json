@@ -1,0 +1,153 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "Acme VPN (GlobalProtect)",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15 MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "iOS and Android smartphones",
+   "type": "Product"
+  },
+  {
+   "name": "Push notification not arriving",
+   "type": "Symptom"
+  },
+  {
+   "name": "Verification code rejected",
+   "type": "Symptom"
+  },
+  {
+   "name": "Authenticator shows wrong account",
+   "type": "Symptom"
+  },
+  {
+   "name": "Old Authenticator still active",
+   "type": "Symptom"
+  },
+  {
+   "name": "Phone time incorrect",
+   "type": "Symptom"
+  },
+  {
+   "name": "Device replaced without credential transfer",
+   "type": "Cause"
+  },
+  {
+   "name": "Backup SMS not enabled or number changed",
+   "type": "Cause"
+  },
+  {
+   "name": "Phone clock drift",
+   "type": "Cause"
+  },
+  {
+   "name": "Authenticator app data corrupted",
+   "type": "Cause"
+  },
+  {
+   "name": "User locked out after 5 failed attempts",
+   "type": "Cause"
+  },
+  {
+   "name": "Re-enroll Microsoft Authenticator",
+   "type": "Fix"
+  },
+  {
+   "name": "Reset MFA registration via self-service portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Issue temporary access pass",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Push notification not arriving",
+   "relation": "CAUSED_BY",
+   "target": "Device replaced without credential transfer"
+  },
+  {
+   "source": "Verification code rejected",
+   "relation": "CAUSED_BY",
+   "target": "Phone clock drift"
+  },
+  {
+   "source": "Authenticator shows wrong account",
+   "relation": "CAUSED_BY",
+   "target": "Authenticator app data corrupted"
+  },
+  {
+   "source": "Old Authenticator still active",
+   "relation": "CAUSED_BY",
+   "target": "Device replaced without credential transfer"
+  },
+  {
+   "source": "Phone time incorrect",
+   "relation": "CAUSED_BY",
+   "target": "Phone clock drift"
+  },
+  {
+   "source": "Push notification not arriving",
+   "relation": "FIXED_BY",
+   "target": "Re-enroll Microsoft Authenticator"
+  },
+  {
+   "source": "Verification code rejected",
+   "relation": "FIXED_BY",
+   "target": "Re-enroll Microsoft Authenticator"
+  },
+  {
+   "source": "Authenticator shows wrong account",
+   "relation": "FIXED_BY",
+   "target": "Re-enroll Microsoft Authenticator"
+  },
+  {
+   "source": "Old Authenticator still active",
+   "relation": "FIXED_BY",
+   "target": "Re-enroll Microsoft Authenticator"
+  },
+  {
+   "source": "Phone time incorrect",
+   "relation": "FIXED_BY",
+   "target": "Re-enroll Microsoft Authenticator"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptops"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15 MacBook Pro/Air"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "AFFECTS",
+   "target": "iOS and Android smartphones"
+  },
+  {
+   "source": "Acme VPN (GlobalProtect)",
+   "relation": "AFFECTS",
+   "target": "Microsoft Authenticator"
+  },
+  {
+   "source": "Re-enroll Microsoft Authenticator",
+   "relation": "PART_OF",
+   "target": "Reset MFA registration via self-service portal"
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Outlook mobile",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "device PIN",
+   "type": "Component"
+  },
+  {
+   "name": "OS upgrade",
+   "type": "Component"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "Conditional Access policy",
+   "type": "Component"
+  },
+  {
+   "name": "missing work email",
+   "type": "Symptom"
+  },
+  {
+   "name": "Intune enrollment failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "non-compliant device",
+   "type": "Symptom"
+  },
+  {
+   "name": "rooted/jailbroken device",
+   "type": "Cause"
+  },
+  {
+   "name": "0x8018000a",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "0x80070005",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "set device PIN or upgrade OS",
+   "type": "Fix"
+  },
+  {
+   "name": "verify Outlook sync and test email",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "missing work email",
+   "relation": "CAUSED_BY",
+   "target": "Intune enrollment failure"
+  },
+  {
+   "source": "Intune enrollment failure",
+   "relation": "CAUSED_BY",
+   "target": "rooted/jailbroken device"
+  },
+  {
+   "source": "Intune enrollment failure",
+   "relation": "INDICATES",
+   "target": "0x8018000a"
+  },
+  {
+   "source": "Intune enrollment failure",
+   "relation": "INDICATES",
+   "target": "0x80070005"
+  },
+  {
+   "source": "non-compliant device",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "rooted/jailbroken device",
+   "relation": "AFFECTS",
+   "target": "device"
+  },
+  {
+   "source": "set device PIN or upgrade OS",
+   "relation": "FIXED_BY",
+   "target": "non-compliant device"
+  },
+  {
+   "source": "Intune enrollment failure",
+   "relation": "FIXED_BY",
+   "target": "verify Outlook sync and test email"
+  },
+  {
+   "source": "Conditional Access policy",
+   "relation": "CAUSED_BY",
+   "target": "Intune enrollment failure"
+  },
+  {
+   "source": "Temporary Access Pass",
+   "relation": "FIXED_BY",
+   "target": "Intune enrollment failure"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "Outlook mobile",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "device PIN",
+   "relation": "PART_OF",
+   "target": "device"
+  },
+  {
+   "source": "OS upgrade",
+   "relation": "PART_OF",
+   "target": "device"
+  }
+ ]
+}

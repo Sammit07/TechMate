@@ -1,0 +1,161 @@
+{
+ "entities": [
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Intune admin center",
+   "type": "Product"
+  },
+  {
+   "name": "Licensing Management database",
+   "type": "Product"
+  },
+  {
+   "name": "Security Operations team",
+   "type": "Product"
+  },
+  {
+   "name": "Application Catalog",
+   "type": "Product"
+  },
+  {
+   "name": "Software request form",
+   "type": "Component"
+  },
+  {
+   "name": "Win32 app",
+   "type": "Component"
+  },
+  {
+   "name": "macOS pkg",
+   "type": "Component"
+  },
+  {
+   "name": "Security Review Request form",
+   "type": "Component"
+  },
+  {
+   "name": "Software not in catalog",
+   "type": "Symptom"
+  },
+  {
+   "name": "User requests software",
+   "type": "Symptom"
+  },
+  {
+   "name": "Missing license",
+   "type": "Cause"
+  },
+  {
+   "name": "Security review required",
+   "type": "Cause"
+  },
+  {
+   "name": "Submit software request",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify request details",
+   "type": "Fix"
+  },
+  {
+   "name": "Check Application Catalog",
+   "type": "Fix"
+  },
+  {
+   "name": "Consult Licensing Management",
+   "type": "Fix"
+  },
+  {
+   "name": "Submit to Security Operations",
+   "type": "Fix"
+  },
+  {
+   "name": "Package application",
+   "type": "Fix"
+  },
+  {
+   "name": "Notify user of availability",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Software not in catalog",
+   "relation": "CAUSED_BY",
+   "target": "User requests software"
+  },
+  {
+   "source": "User requests software",
+   "relation": "FIXED_BY",
+   "target": "Submit software request"
+  },
+  {
+   "source": "Submit software request",
+   "relation": "FIXED_BY",
+   "target": "Verify request details"
+  },
+  {
+   "source": "Verify request details",
+   "relation": "FIXED_BY",
+   "target": "Check Application Catalog"
+  },
+  {
+   "source": "Check Application Catalog",
+   "relation": "FIXED_BY",
+   "target": "Consult Licensing Management"
+  },
+  {
+   "source": "Consult Licensing Management",
+   "relation": "INDICATES",
+   "target": "Missing license"
+  },
+  {
+   "source": "Missing license",
+   "relation": "FIXED_BY",
+   "target": "Submit to Security Operations"
+  },
+  {
+   "source": "Security review required",
+   "relation": "INDICATES",
+   "target": "Submit to Security Operations"
+  },
+  {
+   "source": "Submit to Security Operations",
+   "relation": "FIXED_BY",
+   "target": "Package application"
+  },
+  {
+   "source": "Package application",
+   "relation": "FIXED_BY",
+   "target": "Notify user of availability"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "Software not in catalog"
+  },
+  {
+   "source": "Application Catalog",
+   "relation": "PART_OF",
+   "target": "Intune admin center"
+  },
+  {
+   "source": "Win32 app",
+   "relation": "PART_OF",
+   "target": "Intune admin center"
+  },
+  {
+   "source": "macOS pkg",
+   "relation": "PART_OF",
+   "target": "Intune admin center"
+  },
+  {
+   "source": "Software request form",
+   "relation": "PART_OF",
+   "target": "Company Portal"
+  }
+ ]
+}

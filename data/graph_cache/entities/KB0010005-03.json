@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Outlook/Exchange ActiveSync",
+   "type": "Product"
+  },
+  {
+   "name": "Credential Manager",
+   "type": "Component"
+  },
+  {
+   "name": "network drives",
+   "type": "Component"
+  },
+  {
+   "name": "browser saved passwords",
+   "type": "Component"
+  },
+  {
+   "name": "service account or scheduled task",
+   "type": "Component"
+  },
+  {
+   "name": "account lockout",
+   "type": "Symptom"
+  },
+  {
+   "name": "stale credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "update password in Outlook/Exchange ActiveSync",
+   "type": "Fix"
+  },
+  {
+   "name": "delete entries in Credential Manager",
+   "type": "Fix"
+  },
+  {
+   "name": "disconnect and re-map network drives",
+   "type": "Fix"
+  },
+  {
+   "name": "review and remove browser saved passwords",
+   "type": "Fix"
+  },
+  {
+   "name": "maintain password-change calendar for service accounts",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to IAM team",
+   "type": "Fix"
+  },
+  {
+   "name": "Event ID 4740",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "unfamiliar IP addresses or devices",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "account lockout",
+   "relation": "CAUSED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "Outlook/Exchange ActiveSync"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "Credential Manager"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "network drives"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "browser saved passwords"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "service account or scheduled task"
+  },
+  {
+   "source": "Event ID 4740",
+   "relation": "INDICATES",
+   "target": "account lockout"
+  },
+  {
+   "source": "update password in Outlook/Exchange ActiveSync",
+   "relation": "FIXED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "delete entries in Credential Manager",
+   "relation": "FIXED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "disconnect and re-map network drives",
+   "relation": "FIXED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "review and remove browser saved passwords",
+   "relation": "FIXED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "maintain password-change calendar for service accounts",
+   "relation": "FIXED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "unfamiliar IP addresses or devices",
+   "relation": "CAUSED_BY",
+   "target": "account lockout"
+  },
+  {
+   "source": "escalate to IAM team",
+   "relation": "FIXED_BY",
+   "target": "account lockout"
+  }
+ ]
+}

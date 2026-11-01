@@ -1,0 +1,128 @@
+{
+ "entities": [
+  {
+   "name": "Wi-Fi driver",
+   "type": "Component"
+  },
+  {
+   "name": "Adapter power saving",
+   "type": "Component"
+  },
+  {
+   "name": "Machine certificate",
+   "type": "Component"
+  },
+  {
+   "name": "ACME-Corp network",
+   "type": "Product"
+  },
+  {
+   "name": "Expired or near-expiry certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "Enabled adapter power saving",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated Wi-Fi driver",
+   "type": "Cause"
+  },
+  {
+   "name": "Wi-Fi disconnection",
+   "type": "Symptom"
+  },
+  {
+   "name": "Update Wi-Fi driver",
+   "type": "Fix"
+  },
+  {
+   "name": "Disable adapter power saving",
+   "type": "Fix"
+  },
+  {
+   "name": "Renew machine certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify stable connection",
+   "type": "Fix"
+  },
+  {
+   "name": "Escalate to Wireless/RF specialist",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Wi-Fi disconnection",
+   "relation": "CAUSED_BY",
+   "target": "Outdated Wi-Fi driver"
+  },
+  {
+   "source": "Wi-Fi disconnection",
+   "relation": "CAUSED_BY",
+   "target": "Enabled adapter power saving"
+  },
+  {
+   "source": "Wi-Fi disconnection",
+   "relation": "CAUSED_BY",
+   "target": "Expired or near-expiry certificate"
+  },
+  {
+   "source": "Outdated Wi-Fi driver",
+   "relation": "AFFECTS",
+   "target": "Wi-Fi driver"
+  },
+  {
+   "source": "Enabled adapter power saving",
+   "relation": "AFFECTS",
+   "target": "Adapter power saving"
+  },
+  {
+   "source": "Expired or near-expiry certificate",
+   "relation": "AFFECTS",
+   "target": "Machine certificate"
+  },
+  {
+   "source": "Update Wi-Fi driver",
+   "relation": "FIXED_BY",
+   "target": "Outdated Wi-Fi driver"
+  },
+  {
+   "source": "Disable adapter power saving",
+   "relation": "FIXED_BY",
+   "target": "Enabled adapter power saving"
+  },
+  {
+   "source": "Renew machine certificate",
+   "relation": "FIXED_BY",
+   "target": "Expired or near-expiry certificate"
+  },
+  {
+   "source": "Verify stable connection",
+   "relation": "FIXED_BY",
+   "target": "Wi-Fi disconnection"
+  },
+  {
+   "source": "Escalate to Wireless/RF specialist",
+   "relation": "FIXED_BY",
+   "target": "Wi-Fi disconnection"
+  },
+  {
+   "source": "Wi-Fi driver",
+   "relation": "PART_OF",
+   "target": "ACME-Corp network"
+  },
+  {
+   "source": "Adapter power saving",
+   "relation": "PART_OF",
+   "target": "ACME-Corp network"
+  },
+  {
+   "source": "Machine certificate",
+   "relation": "PART_OF",
+   "target": "ACME-Corp network"
+  }
+ ]
+}

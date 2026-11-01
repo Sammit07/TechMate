@@ -1,0 +1,131 @@
+{
+ "entities": [
+  {
+   "name": "laptop slow",
+   "type": "Symptom"
+  },
+  {
+   "name": "freezing",
+   "type": "Symptom"
+  },
+  {
+   "name": "high CPU",
+   "type": "Symptom"
+  },
+  {
+   "name": "startup apps",
+   "type": "Component"
+  },
+  {
+   "name": "temporary files",
+   "type": "Component"
+  },
+  {
+   "name": "disk cleanup",
+   "type": "Fix"
+  },
+  {
+   "name": "RAM upgrade",
+   "type": "Fix"
+  },
+  {
+   "name": "Windows update",
+   "type": "Fix"
+  },
+  {
+   "name": "macOS update",
+   "type": "Fix"
+  },
+  {
+   "name": "Task Manager",
+   "type": "Component"
+  },
+  {
+   "name": "Activity Monitor",
+   "type": "Component"
+  },
+  {
+   "name": "BIOS",
+   "type": "Component"
+  },
+  {
+   "name": "disk health",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "laptop slow",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "laptop slow",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  },
+  {
+   "source": "startup apps",
+   "relation": "CAUSED_BY",
+   "target": "laptop slow"
+  },
+  {
+   "source": "temporary files",
+   "relation": "CAUSED_BY",
+   "target": "laptop slow"
+  },
+  {
+   "source": "high CPU",
+   "relation": "CAUSED_BY",
+   "target": "laptop slow"
+  },
+  {
+   "source": "disk cleanup",
+   "relation": "FIXED_BY",
+   "target": "temporary files"
+  },
+  {
+   "source": "RAM upgrade",
+   "relation": "FIXED_BY",
+   "target": "laptop slow"
+  },
+  {
+   "source": "Windows update",
+   "relation": "FIXED_BY",
+   "target": "laptop slow"
+  },
+  {
+   "source": "macOS update",
+   "relation": "FIXED_BY",
+   "target": "laptop slow"
+  },
+  {
+   "source": "Task Manager",
+   "relation": "AFFECTS",
+   "target": "laptop slow"
+  },
+  {
+   "source": "Activity Monitor",
+   "relation": "AFFECTS",
+   "target": "laptop slow"
+  },
+  {
+   "source": "BIOS",
+   "relation": "AFFECTS",
+   "target": "laptop slow"
+  },
+  {
+   "source": "disk health",
+   "relation": "AFFECTS",
+   "target": "laptop slow"
+  }
+ ]
+}

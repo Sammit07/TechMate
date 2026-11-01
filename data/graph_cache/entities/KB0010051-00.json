@@ -1,0 +1,185 @@
+{
+ "entities": [
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "Camera not detected in Teams or the Camera app",
+   "type": "Symptom"
+  },
+  {
+   "name": "error 0xA00F4244",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "No camera found",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "No sound from speakers or headphones",
+   "type": "Symptom"
+  },
+  {
+   "name": "audio icon shows mute",
+   "type": "Symptom"
+  },
+  {
+   "name": "No audio output device installed",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Bluetooth toggle missing in Settings",
+   "type": "Symptom"
+  },
+  {
+   "name": "device shows Bluetooth not available",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "External webcam works but built-in camera does not",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outdated or corrupted device drivers after a Windows update",
+   "type": "Cause"
+  },
+  {
+   "name": "Device disabled in Device Manager",
+   "type": "Cause"
+  },
+  {
+   "name": "Third-party software disabling hardware",
+   "type": "Cause"
+  },
+  {
+   "name": "Power-management settings turning off USB/audio controllers",
+   "type": "Cause"
+  },
+  {
+   "name": "Rare hardware failure requiring replacement",
+   "type": "Cause"
+  },
+  {
+   "name": "Uninstall device",
+   "type": "Fix"
+  },
+  {
+   "name": "Scan for hardware changes",
+   "type": "Fix"
+  },
+  {
+   "name": "Update driver",
+   "type": "Fix"
+  },
+  {
+   "name": "Browse my computer for drivers",
+   "type": "Fix"
+  },
+  {
+   "name": "Let me pick from a list of available drivers",
+   "type": "Fix"
+  },
+  {
+   "name": "Choose the manufacturer-provided version",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Camera not detected in Teams or the Camera app",
+   "relation": "CAUSED_BY",
+   "target": "Outdated or corrupted device drivers after a Windows update"
+  },
+  {
+   "source": "error 0xA00F4244",
+   "relation": "INDICATES",
+   "target": "Outdated or corrupted device drivers after a Windows update"
+  },
+  {
+   "source": "No camera found",
+   "relation": "INDICATES",
+   "target": "Outdated or corrupted device drivers after a Windows update"
+  },
+  {
+   "source": "No sound from speakers or headphones",
+   "relation": "CAUSED_BY",
+   "target": "Outdated or corrupted device drivers after a Windows update"
+  },
+  {
+   "source": "audio icon shows mute",
+   "relation": "CAUSED_BY",
+   "target": "Outdated or corrupted device drivers after a Windows update"
+  },
+  {
+   "source": "No audio output device installed",
+   "relation": "INDICATES",
+   "target": "Outdated or corrupted device drivers after a Windows update"
+  },
+  {
+   "source": "Bluetooth toggle missing in Settings",
+   "relation": "CAUSED_BY",
+   "target": "Outdated or corrupted device drivers after a Windows update"
+  },
+  {
+   "source": "device shows Bluetooth not available",
+   "relation": "INDICATES",
+   "target": "Outdated or corrupted device drivers after a Windows update"
+  },
+  {
+   "source": "External webcam works but built-in camera does not",
+   "relation": "CAUSED_BY",
+   "target": "Outdated or corrupted device drivers after a Windows update"
+  },
+  {
+   "source": "Outdated or corrupted device drivers after a Windows update",
+   "relation": "FIXED_BY",
+   "target": "Uninstall device"
+  },
+  {
+   "source": "Outdated or corrupted device drivers after a Windows update",
+   "relation": "FIXED_BY",
+   "target": "Scan for hardware changes"
+  },
+  {
+   "source": "Outdated or corrupted device drivers after a Windows update",
+   "relation": "FIXED_BY",
+   "target": "Update driver"
+  },
+  {
+   "source": "Outdated or corrupted device drivers after a Windows update",
+   "relation": "FIXED_BY",
+   "target": "Browse my computer for drivers"
+  },
+  {
+   "source": "Outdated or corrupted device drivers after a Windows update",
+   "relation": "FIXED_BY",
+   "target": "Let me pick from a list of available drivers"
+  },
+  {
+   "source": "Outdated or corrupted device drivers after a Windows update",
+   "relation": "FIXED_BY",
+   "target": "Choose the manufacturer-provided version"
+  }
+ ]
+}

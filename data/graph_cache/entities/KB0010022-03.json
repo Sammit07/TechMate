@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Wi-Fi disconnect",
+   "type": "Symptom"
+  },
+  {
+   "name": "ACME-Corp keeps asking for password",
+   "type": "Symptom"
+  },
+  {
+   "name": "wireless driver update",
+   "type": "Fix"
+  },
+  {
+   "name": "disable Wi-Fi power saving",
+   "type": "Fix"
+  },
+  {
+   "name": "802.1X certificate renewal",
+   "type": "Fix"
+  },
+  {
+   "name": "corporate wireless drops",
+   "type": "Symptom"
+  },
+  {
+   "name": "Wi-Fi no internet",
+   "type": "Symptom"
+  },
+  {
+   "name": "adapter model and driver version",
+   "type": "Component"
+  },
+  {
+   "name": "certificate expiry date",
+   "type": "Component"
+  },
+  {
+   "name": "netsh wlan show all output",
+   "type": "Component"
+  },
+  {
+   "name": "event-viewer logs System -> Wireless-LAN",
+   "type": "Component"
+  },
+  {
+   "name": "frequent de-authentication frames",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "RADIUS timeout errors",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "machine certificate cannot be renewed",
+   "type": "Cause"
+  },
+  {
+   "name": "repeated validation failures",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Wi-Fi disconnect",
+   "relation": "CAUSED_BY",
+   "target": "machine certificate cannot be renewed"
+  },
+  {
+   "source": "Wi-Fi disconnect",
+   "relation": "CAUSED_BY",
+   "target": "repeated validation failures"
+  },
+  {
+   "source": "ACME-Corp keeps asking for password",
+   "relation": "CAUSED_BY",
+   "target": "machine certificate cannot be renewed"
+  },
+  {
+   "source": "ACME-Corp keeps asking for password",
+   "relation": "CAUSED_BY",
+   "target": "repeated validation failures"
+  },
+  {
+   "source": "corporate wireless drops",
+   "relation": "CAUSED_BY",
+   "target": "machine certificate cannot be renewed"
+  },
+  {
+   "source": "corporate wireless drops",
+   "relation": "CAUSED_BY",
+   "target": "repeated validation failures"
+  },
+  {
+   "source": "Wi-Fi no internet",
+   "relation": "CAUSED_BY",
+   "target": "machine certificate cannot be renewed"
+  },
+  {
+   "source": "Wi-Fi no internet",
+   "relation": "CAUSED_BY",
+   "target": "repeated validation failures"
+  },
+  {
+   "source": "frequent de-authentication frames",
+   "relation": "INDICATES",
+   "target": "machine certificate cannot be renewed"
+  },
+  {
+   "source": "RADIUS timeout errors",
+   "relation": "INDICATES",
+   "target": "machine certificate cannot be renewed"
+  },
+  {
+   "source": "machine certificate cannot be renewed",
+   "relation": "FIXED_BY",
+   "target": "802.1X certificate renewal"
+  },
+  {
+   "source": "repeated validation failures",
+   "relation": "FIXED_BY",
+   "target": "802.1X certificate renewal"
+  },
+  {
+   "source": "Wi-Fi disconnect",
+   "relation": "AFFECTS",
+   "target": "adapter model and driver version"
+  },
+  {
+   "source": "Wi-Fi disconnect",
+   "relation": "AFFECTS",
+   "target": "disable Wi-Fi power saving"
+  }
+ ]
+}

@@ -1,0 +1,145 @@
+{
+ "entities": [
+  {
+   "name": "Major Outage",
+   "type": "Symptom"
+  },
+  {
+   "name": "Service Restoration",
+   "type": "Fix"
+  },
+  {
+   "name": "Post-Incident Summary Message",
+   "type": "Fix"
+  },
+  {
+   "name": "IT Knowledge Base Post-Mortem",
+   "type": "Fix"
+  },
+  {
+   "name": "Incident Ticket Closure",
+   "type": "Fix"
+  },
+  {
+   "name": "P1 4-Hour Resolution Target Exceeded",
+   "type": "Cause"
+  },
+  {
+   "name": "No User Update Sent for >30 Minutes",
+   "type": "Cause"
+  },
+  {
+   "name": "Escalation to Incident Manager or Service Desk L2 Lead",
+   "type": "Fix"
+  },
+  {
+   "name": "Outage Communication Plan",
+   "type": "Component"
+  },
+  {
+   "name": "Status Page Updates",
+   "type": "Component"
+  },
+  {
+   "name": "Quick Feedback Poll",
+   "type": "Component"
+  },
+  {
+   "name": "Affected Services List",
+   "type": "Component"
+  },
+  {
+   "name": "Business Impact Estimate",
+   "type": "Component"
+  },
+  {
+   "name": "Last User Communication Timestamp",
+   "type": "Component"
+  },
+  {
+   "name": "Engaged Support Groups",
+   "type": "Component"
+  },
+  {
+   "name": "IT Status Update Procedure",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Major Outage",
+   "relation": "CAUSED_BY",
+   "target": "P1 4-Hour Resolution Target Exceeded"
+  },
+  {
+   "source": "Major Outage",
+   "relation": "CAUSED_BY",
+   "target": "No User Update Sent for >30 Minutes"
+  },
+  {
+   "source": "Service Restoration",
+   "relation": "FIXED_BY",
+   "target": "Post-Incident Summary Message"
+  },
+  {
+   "source": "Service Restoration",
+   "relation": "FIXED_BY",
+   "target": "IT Knowledge Base Post-Mortem"
+  },
+  {
+   "source": "Service Restoration",
+   "relation": "FIXED_BY",
+   "target": "Incident Ticket Closure"
+  },
+  {
+   "source": "Service Restoration",
+   "relation": "FIXED_BY",
+   "target": "Quick Feedback Poll"
+  },
+  {
+   "source": "Outage Communication Plan",
+   "relation": "AFFECTS",
+   "target": "IT Status Update Procedure"
+  },
+  {
+   "source": "Status Page Updates",
+   "relation": "PART_OF",
+   "target": "Outage Communication Plan"
+  },
+  {
+   "source": "Quick Feedback Poll",
+   "relation": "PART_OF",
+   "target": "Outage Communication Plan"
+  },
+  {
+   "source": "Escalation to Incident Manager or Service Desk L2 Lead",
+   "relation": "FIXED_BY",
+   "target": "Affected Services List"
+  },
+  {
+   "source": "Escalation to Incident Manager or Service Desk L2 Lead",
+   "relation": "FIXED_BY",
+   "target": "Business Impact Estimate"
+  },
+  {
+   "source": "Escalation to Incident Manager or Service Desk L2 Lead",
+   "relation": "FIXED_BY",
+   "target": "Last User Communication Timestamp"
+  },
+  {
+   "source": "Escalation to Incident Manager or Service Desk L2 Lead",
+   "relation": "FIXED_BY",
+   "target": "Engaged Support Groups"
+  },
+  {
+   "source": "Major Outage",
+   "relation": "INDICATES",
+   "target": "No User Update Sent for >30 Minutes"
+  },
+  {
+   "source": "Major Outage",
+   "relation": "AFFECTS",
+   "target": "IT Status Update Procedure"
+  }
+ ]
+}

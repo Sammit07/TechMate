@@ -1,0 +1,139 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Authenticator app",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 laptop",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15 laptop",
+   "type": "Product"
+  },
+  {
+   "name": "iOS smartphone",
+   "type": "Product"
+  },
+  {
+   "name": "Android smartphone",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Entra ID (Azure AD)",
+   "type": "Product"
+  },
+  {
+   "name": "on-prem Active Directory",
+   "type": "Product"
+  },
+  {
+   "name": "backup SMS method",
+   "type": "Component"
+  },
+  {
+   "name": "MFA registration",
+   "type": "Component"
+  },
+  {
+   "name": "push notification not received",
+   "type": "Symptom"
+  },
+  {
+   "name": "verification code incorrect",
+   "type": "Symptom"
+  },
+  {
+   "name": "authentication failed",
+   "type": "Symptom"
+  },
+  {
+   "name": "phone replaced, lost, or stolen",
+   "type": "Cause"
+  },
+  {
+   "name": "Authenticator app time not synchronized",
+   "type": "Cause"
+  },
+  {
+   "name": "Temporary Access Pass expired",
+   "type": "Cause"
+  },
+  {
+   "name": "re-register Authenticator app on new phone",
+   "type": "Fix"
+  },
+  {
+   "name": "reset MFA registration",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "push notification not received",
+   "relation": "CAUSED_BY",
+   "target": "phone replaced, lost, or stolen"
+  },
+  {
+   "source": "verification code incorrect",
+   "relation": "CAUSED_BY",
+   "target": "Authenticator app time not synchronized"
+  },
+  {
+   "source": "authentication failed",
+   "relation": "CAUSED_BY",
+   "target": "Temporary Access Pass expired"
+  },
+  {
+   "source": "push notification not received",
+   "relation": "AFFECTS",
+   "target": "Microsoft Authenticator app"
+  },
+  {
+   "source": "verification code incorrect",
+   "relation": "AFFECTS",
+   "target": "Microsoft Authenticator app"
+  },
+  {
+   "source": "authentication failed",
+   "relation": "AFFECTS",
+   "target": "Microsoft Authenticator app"
+  },
+  {
+   "source": "MFA registration",
+   "relation": "AFFECTS",
+   "target": "Microsoft Entra ID (Azure AD)"
+  },
+  {
+   "source": "MFA registration",
+   "relation": "AFFECTS",
+   "target": "on-prem Active Directory"
+  },
+  {
+   "source": "re-register Authenticator app on new phone",
+   "relation": "FIXED_BY",
+   "target": "push notification not received"
+  },
+  {
+   "source": "re-register Authenticator app on new phone",
+   "relation": "FIXED_BY",
+   "target": "verification code incorrect"
+  },
+  {
+   "source": "re-register Authenticator app on new phone",
+   "relation": "FIXED_BY",
+   "target": "authentication failed"
+  },
+  {
+   "source": "reset MFA registration",
+   "relation": "FIXED_BY",
+   "target": "phone replaced, lost, or stolen"
+  },
+  {
+   "source": "Microsoft Authenticator app",
+   "relation": "PART_OF",
+   "target": "Microsoft Entra ID (Azure AD)"
+  }
+ ]
+}

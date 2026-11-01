@@ -1,0 +1,153 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft 365 Apps for enterprise",
+   "type": "Product"
+  },
+  {
+   "name": "AutoRecover",
+   "type": "Component"
+  },
+  {
+   "name": "Safe Mode",
+   "type": "Component"
+  },
+  {
+   "name": "Open and Repair",
+   "type": "Component"
+  },
+  {
+   "name": "COM add-in",
+   "type": "Component"
+  },
+  {
+   "name": "Unexpected shutdown or power loss",
+   "type": "Cause"
+  },
+  {
+   "name": "Corrupted file due to network interruption while saving to OneDrive/SharePoint",
+   "type": "Cause"
+  },
+  {
+   "name": "Faulty COM add-in or macro",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated Office build or pending Windows updates",
+   "type": "Cause"
+  },
+  {
+   "name": "License token expiration or synchronization issue with Microsoft Entra ID",
+   "type": "Cause"
+  },
+  {
+   "name": "Excel crashes when opening a specific workbook",
+   "type": "Symptom"
+  },
+  {
+   "name": "Word encounters a problem and needs to close",
+   "type": "Symptom"
+  },
+  {
+   "name": "PowerPoint prompts \"Office needs to be activated\" despite valid license",
+   "type": "Symptom"
+  },
+  {
+   "name": "File opens but shows garbled content or missing formulas",
+   "type": "Symptom"
+  },
+  {
+   "name": "Office applications run unusually slow or freeze intermittently",
+   "type": "Symptom"
+  },
+  {
+   "name": "Check for AutoRecover versions",
+   "type": "Fix"
+  },
+  {
+   "name": "Open the file in Safe Mode",
+   "type": "Fix"
+  },
+  {
+   "name": "Use the Open and Repair feature",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Excel crashes when opening a specific workbook",
+   "relation": "CAUSED_BY",
+   "target": "Unexpected shutdown or power loss"
+  },
+  {
+   "source": "Word encounters a problem and needs to close",
+   "relation": "CAUSED_BY",
+   "target": "Faulty COM add-in or macro"
+  },
+  {
+   "source": "PowerPoint prompts \"Office needs to be activated\" despite valid license",
+   "relation": "CAUSED_BY",
+   "target": "License token expiration or synchronization issue with Microsoft Entra ID"
+  },
+  {
+   "source": "File opens but shows garbled content or missing formulas",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted file due to network interruption while saving to OneDrive/SharePoint"
+  },
+  {
+   "source": "Office applications run unusually slow or freeze intermittently",
+   "relation": "CAUSED_BY",
+   "target": "Outdated Office build or pending Windows updates"
+  },
+  {
+   "source": "Check for AutoRecover versions",
+   "relation": "FIXED_BY",
+   "target": "Unexpected shutdown or power loss"
+  },
+  {
+   "source": "Open the file in Safe Mode",
+   "relation": "FIXED_BY",
+   "target": "Faulty COM add-in or macro"
+  },
+  {
+   "source": "Use the Open and Repair feature",
+   "relation": "FIXED_BY",
+   "target": "Corrupted file due to network interruption while saving to OneDrive/SharePoint"
+  },
+  {
+   "source": "Excel crashes when opening a specific workbook",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 Apps for enterprise"
+  },
+  {
+   "source": "Word encounters a problem and needs to close",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 Apps for enterprise"
+  },
+  {
+   "source": "PowerPoint prompts \"Office needs to be activated\" despite valid license",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 Apps for enterprise"
+  },
+  {
+   "source": "File opens but shows garbled content or missing formulas",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 Apps for enterprise"
+  },
+  {
+   "source": "Office applications run unusually slow or freeze intermittently",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 Apps for enterprise"
+  },
+  {
+   "source": "AutoRecover",
+   "relation": "PART_OF",
+   "target": "Microsoft 365 Apps for enterprise"
+  },
+  {
+   "source": "Safe Mode",
+   "relation": "PART_OF",
+   "target": "Microsoft 365 Apps for enterprise"
+  }
+ ]
+}

@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Windows Update",
+   "type": "Product"
+  },
+  {
+   "name": "error 0x80070002",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "error 0x800F0922",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "update stuck at 0%",
+   "type": "Symptom"
+  },
+  {
+   "name": "rolling back",
+   "type": "Symptom"
+  },
+  {
+   "name": "component store corruption",
+   "type": "Cause"
+  },
+  {
+   "name": "disk errors",
+   "type": "Cause"
+  },
+  {
+   "name": "suspected malware",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN connection failures",
+   "type": "Symptom"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Intune compliance state",
+   "type": "Component"
+  },
+  {
+   "name": "SoftwareDistribution",
+   "type": "Component"
+  },
+  {
+   "name": "catroot2",
+   "type": "Component"
+  },
+  {
+   "name": "CBS.log",
+   "type": "Component"
+  },
+  {
+   "name": "WindowsUpdate.log",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "update stuck at 0%",
+   "relation": "CAUSED_BY",
+   "target": "component store corruption"
+  },
+  {
+   "source": "update stuck at 0%",
+   "relation": "CAUSED_BY",
+   "target": "disk errors"
+  },
+  {
+   "source": "update stuck at 0%",
+   "relation": "CAUSED_BY",
+   "target": "suspected malware"
+  },
+  {
+   "source": "error 0x80070002",
+   "relation": "INDICATES",
+   "target": "component store corruption"
+  },
+  {
+   "source": "error 0x800F0922",
+   "relation": "INDICATES",
+   "target": "VPN connection failures"
+  },
+  {
+   "source": "VPN connection failures",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "Windows Update",
+   "relation": "AFFECTS",
+   "target": "SoftwareDistribution"
+  },
+  {
+   "source": "Windows Update",
+   "relation": "AFFECTS",
+   "target": "catroot2"
+  },
+  {
+   "source": "component store corruption",
+   "relation": "FIXED_BY",
+   "target": "disk cleanup"
+  },
+  {
+   "source": "disk errors",
+   "relation": "FIXED_BY",
+   "target": "run chkdsk"
+  },
+  {
+   "source": "suspected malware",
+   "relation": "FIXED_BY",
+   "target": "run antivirus scan"
+  },
+  {
+   "source": "VPN connection failures",
+   "relation": "FIXED_BY",
+   "target": "verify GlobalProtect client logs"
+  },
+  {
+   "source": "Intune compliance state",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "CBS.log",
+   "relation": "PART_OF",
+   "target": "Windows Update"
+  },
+  {
+   "source": "WindowsUpdate.log",
+   "relation": "PART_OF",
+   "target": "Windows Update"
+  }
+ ]
+}

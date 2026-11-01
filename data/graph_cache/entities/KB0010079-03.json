@@ -1,0 +1,131 @@
+{
+ "entities": [
+  {
+   "name": "Intune enrollment failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "rooted or jailbroken device",
+   "type": "Cause"
+  },
+  {
+   "name": "Conditional Access blocking access",
+   "type": "Cause"
+  },
+  {
+   "name": "device non-compliance due to root/jailbreak",
+   "type": "Cause"
+  },
+  {
+   "name": "Company Portal error codes",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Intune device ID",
+   "type": "Component"
+  },
+  {
+   "name": "user UPN",
+   "type": "Component"
+  },
+  {
+   "name": "Temporary Access Pass issuance",
+   "type": "Fix"
+  },
+  {
+   "name": "Conditional Access policy adjustment",
+   "type": "Fix"
+  },
+  {
+   "name": "Outlook mobile app",
+   "type": "Product"
+  },
+  {
+   "name": "work email not syncing",
+   "type": "Symptom"
+  },
+  {
+   "name": "secure device prompt",
+   "type": "Symptom"
+  },
+  {
+   "name": "PIN requirement enforcement",
+   "type": "Component"
+  },
+  {
+   "name": "mobile device management (MDM)",
+   "type": "Product"
+  },
+  {
+   "name": "email missing on smartphone",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Intune enrollment failure",
+   "relation": "CAUSED_BY",
+   "target": "rooted or jailbroken device"
+  },
+  {
+   "source": "Intune enrollment failure",
+   "relation": "CAUSED_BY",
+   "target": "Conditional Access blocking access"
+  },
+  {
+   "source": "work email not syncing",
+   "relation": "CAUSED_BY",
+   "target": "Intune enrollment failure"
+  },
+  {
+   "source": "email missing on smartphone",
+   "relation": "CAUSED_BY",
+   "target": "Intune enrollment failure"
+  },
+  {
+   "source": "secure device prompt",
+   "relation": "INDICATES",
+   "target": "device non-compliance due to root/jailbreak"
+  },
+  {
+   "source": "Company Portal error codes",
+   "relation": "INDICATES",
+   "target": "Intune enrollment failure"
+  },
+  {
+   "source": "Intune device ID",
+   "relation": "PART_OF",
+   "target": "mobile device management (MDM)"
+  },
+  {
+   "source": "user UPN",
+   "relation": "PART_OF",
+   "target": "mobile device management (MDM)"
+  },
+  {
+   "source": "rooted or jailbroken device",
+   "relation": "AFFECTS",
+   "target": "Outlook mobile app"
+  },
+  {
+   "source": "Conditional Access blocking access",
+   "relation": "AFFECTS",
+   "target": "Outlook mobile app"
+  },
+  {
+   "source": "Temporary Access Pass issuance",
+   "relation": "FIXED_BY",
+   "target": "Intune enrollment failure"
+  },
+  {
+   "source": "Conditional Access policy adjustment",
+   "relation": "FIXED_BY",
+   "target": "Intune enrollment failure"
+  },
+  {
+   "source": "PIN requirement enforcement",
+   "relation": "AFFECTS",
+   "target": "device compliance"
+  }
+ ]
+}

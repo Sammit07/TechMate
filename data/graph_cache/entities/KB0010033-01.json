@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "laptop running slow",
+   "type": "Symptom"
+  },
+  {
+   "name": "admin credentials prompt",
+   "type": "Symptom"
+  },
+  {
+   "name": "high startup impact items",
+   "type": "Component"
+  },
+  {
+   "name": "memory near total capacity",
+   "type": "Symptom"
+  },
+  {
+   "name": "temporary files accumulation",
+   "type": "Cause"
+  },
+  {
+   "name": "browser cache and cookies buildup",
+   "type": "Cause"
+  },
+  {
+   "name": "Disk Cleanup tool",
+   "type": "Fix"
+  },
+  {
+   "name": "restart laptop",
+   "type": "Fix"
+  },
+  {
+   "name": "CPU and memory usage above 50% idle",
+   "type": "Symptom"
+  },
+  {
+   "name": "outdated BIOS/UEFI version",
+   "type": "Cause"
+  },
+  {
+   "name": "disk drive errors",
+   "type": "Cause"
+  },
+  {
+   "name": "non-standard consumer-grade applications",
+   "type": "Cause"
+  },
+  {
+   "name": "unnecessary third-party services",
+   "type": "Cause"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Asset Management console",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "laptop running slow",
+   "relation": "CAUSED_BY",
+   "target": "high startup impact items"
+  },
+  {
+   "source": "laptop running slow",
+   "relation": "CAUSED_BY",
+   "target": "memory near total capacity"
+  },
+  {
+   "source": "memory near total capacity",
+   "relation": "CAUSED_BY",
+   "target": "temporary files accumulation"
+  },
+  {
+   "source": "laptop running slow",
+   "relation": "CAUSED_BY",
+   "target": "browser cache and cookies buildup"
+  },
+  {
+   "source": "temporary files accumulation",
+   "relation": "FIXED_BY",
+   "target": "Disk Cleanup tool"
+  },
+  {
+   "source": "browser cache and cookies buildup",
+   "relation": "FIXED_BY",
+   "target": "Disk Cleanup tool"
+  },
+  {
+   "source": "high startup impact items",
+   "relation": "FIXED_BY",
+   "target": "restart laptop"
+  },
+  {
+   "source": "laptop running slow",
+   "relation": "FIXED_BY",
+   "target": "restart laptop"
+  },
+  {
+   "source": "CPU and memory usage above 50% idle",
+   "relation": "INDICATES",
+   "target": "laptop running slow"
+  },
+  {
+   "source": "outdated BIOS/UEFI version",
+   "relation": "CAUSED_BY",
+   "target": "laptop running slow"
+  },
+  {
+   "source": "disk drive errors",
+   "relation": "CAUSED_BY",
+   "target": "laptop running slow"
+  },
+  {
+   "source": "non-standard consumer-grade applications",
+   "relation": "CAUSED_BY",
+   "target": "laptop running slow"
+  },
+  {
+   "source": "unnecessary third-party services",
+   "relation": "CAUSED_BY",
+   "target": "laptop running slow"
+  },
+  {
+   "source": "laptop running slow",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "laptop running slow",
+   "relation": "AFFECTS",
+   "target": "Asset Management console"
+  }
+ ]
+}

@@ -1,0 +1,160 @@
+{
+ "entities": [
+  {
+   "name": "OneDrive sync client",
+   "type": "Product"
+  },
+  {
+   "name": "red X icon",
+   "type": "Symptom"
+  },
+  {
+   "name": "sync paused notification",
+   "type": "Symptom"
+  },
+  {
+   "name": "yellow warning triangle",
+   "type": "Symptom"
+  },
+  {
+   "name": "SharePoint library offline",
+   "type": "Symptom"
+  },
+  {
+   "name": "_ConflictCopy_ files",
+   "type": "Symptom"
+  },
+  {
+   "name": "storage full report",
+   "type": "Symptom"
+  },
+  {
+   "name": "invalid characters in file names",
+   "type": "Cause"
+  },
+  {
+   "name": "exceeds 50 GB storage limit",
+   "type": "Cause"
+  },
+  {
+   "name": "low device disk space",
+   "type": "Cause"
+  },
+  {
+   "name": "outdated OneDrive client",
+   "type": "Cause"
+  },
+  {
+   "name": "intermittent network loss",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN disconnect causing token expiration",
+   "type": "Cause"
+  },
+  {
+   "name": "conflicting edits on same file",
+   "type": "Cause"
+  },
+  {
+   "name": "Conditional Access blocking sync",
+   "type": "Cause"
+  },
+  {
+   "name": "corrupted local OneDrive cache",
+   "type": "Cause"
+  },
+  {
+   "name": "verify OneDrive icon status",
+   "type": "Fix"
+  },
+  {
+   "name": "view sync problems",
+   "type": "Fix"
+  },
+  {
+   "name": "check for conflict files",
+   "type": "Fix"
+  },
+  {
+   "name": "confirm internet access",
+   "type": "Fix"
+  },
+  {
+   "name": "reset OneDrive client",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "red X icon",
+   "relation": "CAUSED_BY",
+   "target": "invalid characters in file names"
+  },
+  {
+   "source": "sync paused notification",
+   "relation": "CAUSED_BY",
+   "target": "outdated OneDrive client"
+  },
+  {
+   "source": "yellow warning triangle",
+   "relation": "CAUSED_BY",
+   "target": "conflicting edits on same file"
+  },
+  {
+   "source": "SharePoint library offline",
+   "relation": "CAUSED_BY",
+   "target": "VPN disconnect causing token expiration"
+  },
+  {
+   "source": "_ConflictCopy_ files",
+   "relation": "CAUSED_BY",
+   "target": "conflicting edits on same file"
+  },
+  {
+   "source": "storage full report",
+   "relation": "CAUSED_BY",
+   "target": "exceeds 50 GB storage limit"
+  },
+  {
+   "source": "invalid characters in file names",
+   "relation": "AFFECTS",
+   "target": "OneDrive sync client"
+  },
+  {
+   "source": "outdated OneDrive client",
+   "relation": "AFFECTS",
+   "target": "OneDrive sync client"
+  },
+  {
+   "source": "VPN disconnect causing token expiration",
+   "relation": "AFFECTS",
+   "target": "OneDrive sync client"
+  },
+  {
+   "source": "verify OneDrive icon status",
+   "relation": "FIXED_BY",
+   "target": "red X icon"
+  },
+  {
+   "source": "view sync problems",
+   "relation": "FIXED_BY",
+   "target": "sync paused notification"
+  },
+  {
+   "source": "check for conflict files",
+   "relation": "FIXED_BY",
+   "target": "_ConflictCopy_ files"
+  },
+  {
+   "source": "confirm internet access",
+   "relation": "FIXED_BY",
+   "target": "VPN disconnect causing token expiration"
+  },
+  {
+   "source": "reset OneDrive client",
+   "relation": "FIXED_BY",
+   "target": "corrupted local OneDrive cache"
+  }
+ ]
+}

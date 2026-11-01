@@ -1,0 +1,177 @@
+{
+ "entities": [
+  {
+   "name": "macOS Sonoma/Ventura",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Intune",
+   "type": "Product"
+  },
+  {
+   "name": "FileVault",
+   "type": "Component"
+  },
+  {
+   "name": "System Settings",
+   "type": "Component"
+  },
+  {
+   "name": "Apple Menu",
+   "type": "Component"
+  },
+  {
+   "name": "Dock",
+   "type": "Component"
+  },
+  {
+   "name": "Spotlight Search",
+   "type": "Component"
+  },
+  {
+   "name": "User Unfamiliar with macOS Layout",
+   "type": "Symptom"
+  },
+  {
+   "name": "Cannot Locate System Settings/Apple Menu",
+   "type": "Symptom"
+  },
+  {
+   "name": "Needs to Install Approved Software via Company Portal",
+   "type": "Symptom"
+  },
+  {
+   "name": "Prompt for FileVault Recovery Key/MFA Verification",
+   "type": "Symptom"
+  },
+  {
+   "name": "New Hardware/OS Upgrade without Prior Experience",
+   "type": "Cause"
+  },
+  {
+   "name": "Lack of Orientation to Managed Policies",
+   "type": "Cause"
+  },
+  {
+   "name": "Sign in with Corporate Azure AD Account",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify FileVault Encryption Enabled",
+   "type": "Fix"
+  },
+  {
+   "name": "Enable Microsoft Authenticator Push Notifications",
+   "type": "Fix"
+  },
+  {
+   "name": "Install Apps via Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Run Software Update for Latest Patches",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "User Unfamiliar with macOS Layout",
+   "relation": "CAUSED_BY",
+   "target": "New Hardware/OS Upgrade without Prior Experience"
+  },
+  {
+   "source": "User Unfamiliar with macOS Layout",
+   "relation": "CAUSED_BY",
+   "target": "Lack of Orientation to Managed Policies"
+  },
+  {
+   "source": "Cannot Locate System Settings/Apple Menu",
+   "relation": "CAUSED_BY",
+   "target": "New Hardware/OS Upgrade without Prior Experience"
+  },
+  {
+   "source": "Cannot Locate System Settings/Apple Menu",
+   "relation": "CAUSED_BY",
+   "target": "Lack of Orientation to Managed Policies"
+  },
+  {
+   "source": "Needs to Install Approved Software via Company Portal",
+   "relation": "CAUSED_BY",
+   "target": "Lack of Orientation to Managed Policies"
+  },
+  {
+   "source": "Prompt for FileVault Recovery Key/MFA Verification",
+   "relation": "CAUSED_BY",
+   "target": "Lack of Orientation to Managed Policies"
+  },
+  {
+   "source": "User Unfamiliar with macOS Layout",
+   "relation": "FIXED_BY",
+   "target": "Sign in with Corporate Azure AD Account"
+  },
+  {
+   "source": "Cannot Locate System Settings/Apple Menu",
+   "relation": "FIXED_BY",
+   "target": "Sign in with Corporate Azure AD Account"
+  },
+  {
+   "source": "Needs to Install Approved Software via Company Portal",
+   "relation": "FIXED_BY",
+   "target": "Install Apps via Company Portal"
+  },
+  {
+   "source": "Prompt for FileVault Recovery Key/MFA Verification",
+   "relation": "FIXED_BY",
+   "target": "Verify FileVault Encryption Enabled"
+  },
+  {
+   "source": "Prompt for FileVault Recovery Key/MFA Verification",
+   "relation": "FIXED_BY",
+   "target": "Enable Microsoft Authenticator Push Notifications"
+  },
+  {
+   "source": "macOS Sonoma/Ventura",
+   "relation": "AFFECTS",
+   "target": "User Unfamiliar with macOS Layout"
+  },
+  {
+   "source": "macOS Sonoma/Ventura",
+   "relation": "AFFECTS",
+   "target": "Cannot Locate System Settings/Apple Menu"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "Needs to Install Approved Software via Company Portal"
+  },
+  {
+   "source": "FileVault",
+   "relation": "AFFECTS",
+   "target": "Prompt for FileVault Recovery Key/MFA Verification"
+  },
+  {
+   "source": "System Settings",
+   "relation": "PART_OF",
+   "target": "macOS Sonoma/Ventura"
+  },
+  {
+   "source": "Apple Menu",
+   "relation": "PART_OF",
+   "target": "macOS Sonoma/Ventura"
+  },
+  {
+   "source": "Dock",
+   "relation": "PART_OF",
+   "target": "macOS Sonoma/Ventura"
+  },
+  {
+   "source": "Spotlight Search",
+   "relation": "PART_OF",
+   "target": "macOS Sonoma/Ventura"
+  }
+ ]
+}

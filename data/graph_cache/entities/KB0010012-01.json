@@ -1,0 +1,121 @@
+{
+ "entities": [
+  {
+   "name": "IT self-service portal",
+   "type": "Product"
+  },
+  {
+   "name": "Shared Drive",
+   "type": "Component"
+  },
+  {
+   "name": "SharePoint Site",
+   "type": "Component"
+  },
+  {
+   "name": "HR System",
+   "type": "Component"
+  },
+  {
+   "name": "Distribution List",
+   "type": "Component"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "on-prem AD",
+   "type": "Product"
+  },
+  {
+   "name": "Propagation delay",
+   "type": "Symptom"
+  },
+  {
+   "name": "Manager approval timeout",
+   "type": "Cause"
+  },
+  {
+   "name": "Auto-escalation to delegate",
+   "type": "Fix"
+  },
+  {
+   "name": "IAM Provisioning delay",
+   "type": "Symptom"
+  },
+  {
+   "name": "Sign out and back in",
+   "type": "Fix"
+  },
+  {
+   "name": "Refresh browser/Teams client",
+   "type": "Fix"
+  },
+  {
+   "name": "Access Request workflow",
+   "type": "Product"
+  },
+  {
+   "name": "Ticket number notification",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Propagation delay",
+   "relation": "AFFECTS",
+   "target": "Shared Drive"
+  },
+  {
+   "source": "Propagation delay",
+   "relation": "AFFECTS",
+   "target": "SharePoint Site"
+  },
+  {
+   "source": "Propagation delay",
+   "relation": "AFFECTS",
+   "target": "HR System"
+  },
+  {
+   "source": "Propagation delay",
+   "relation": "AFFECTS",
+   "target": "Distribution List"
+  },
+  {
+   "source": "Manager approval timeout",
+   "relation": "CAUSED_BY",
+   "target": "Auto-escalation to delegate"
+  },
+  {
+   "source": "IAM Provisioning delay",
+   "relation": "AFFECTS",
+   "target": "Entra ID"
+  },
+  {
+   "source": "IAM Provisioning delay",
+   "relation": "AFFECTS",
+   "target": "on-prem AD"
+  },
+  {
+   "source": "Access Request workflow",
+   "relation": "INDICATES",
+   "target": "Ticket number notification"
+  },
+  {
+   "source": "Access Request workflow",
+   "relation": "FIXED_BY",
+   "target": "Sign out and back in"
+  },
+  {
+   "source": "Access Request workflow",
+   "relation": "FIXED_BY",
+   "target": "Refresh browser/Teams client"
+  },
+  {
+   "source": "IT self-service portal",
+   "relation": "PART_OF",
+   "target": "Access Request workflow"
+  }
+ ]
+}

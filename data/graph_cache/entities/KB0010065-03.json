@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Outlook profile rebuild",
+   "type": "Fix"
+  },
+  {
+   "name": "disable third-party COM add-ins",
+   "type": "Fix"
+  },
+  {
+   "name": "self-service password reset portal",
+   "type": "Component"
+  },
+  {
+   "name": "password expires every 90 days",
+   "type": "Cause"
+  },
+  {
+   "name": "Outlook crashes",
+   "type": "Symptom"
+  },
+  {
+   "name": "disconnection",
+   "type": "Symptom"
+  },
+  {
+   "name": "repeated password prompts",
+   "type": "Symptom"
+  },
+  {
+   "name": "cannot send/receive email",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Cached Exchange Mode",
+   "type": "Component"
+  },
+  {
+   "name": "COM add-in",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook on the web",
+   "type": "Component"
+  },
+  {
+   "name": "OWA",
+   "type": "Component"
+  },
+  {
+   "name": "MFA",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Outlook crashes",
+   "relation": "CAUSED_BY",
+   "target": "third-party COM add-ins"
+  },
+  {
+   "source": "Outlock crashes",
+   "relation": "FIXED_BY",
+   "target": "disable third-party COM add-ins"
+  },
+  {
+   "source": "repeated password prompts",
+   "relation": "CAUSED_BY",
+   "target": "password expires every 90 days"
+  },
+  {
+   "source": "repeated password prompts",
+   "relation": "FIXED_BY",
+   "target": "self-service password reset portal"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "Cached Exchange Mode"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "COM add-in"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "Microsoft Authenticator"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "Outlook on the web"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "OWA"
+  },
+  {
+   "source": "cannot send/receive email",
+   "relation": "INDICATES",
+   "target": "Outlook crashes"
+  },
+  {
+   "source": "disconnection",
+   "relation": "INDICATES",
+   "target": "Outlook crashes"
+  },
+  {
+   "source": "Outlook profile rebuild",
+   "relation": "FIXED_BY",
+   "target": "Outlook crashes"
+  },
+  {
+   "source": "Outlook profile rebuild",
+   "relation": "FIXED_BY",
+   "target": "disconnection"
+  },
+  {
+   "source": "Outlook profile rebuild",
+   "relation": "FIXED_BY",
+   "target": "repeated password prompts"
+  }
+ ]
+}

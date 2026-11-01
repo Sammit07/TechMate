@@ -1,0 +1,184 @@
+{
+ "entities": [
+  {
+   "name": "Scanner",
+   "type": "Product"
+  },
+  {
+   "name": "Embedded Web Interface",
+   "type": "Component"
+  },
+  {
+   "name": "SMTP Server",
+   "type": "Component"
+  },
+  {
+   "name": "Port Configuration",
+   "type": "Component"
+  },
+  {
+   "name": "Security Type Setting",
+   "type": "Component"
+  },
+  {
+   "name": "Sender Address Field",
+   "type": "Component"
+  },
+  {
+   "name": "Authentication Prompt",
+   "type": "Component"
+  },
+  {
+   "name": "Test Document Feed",
+   "type": "Component"
+  },
+  {
+   "name": "Failed Scan-to-Email Delivery",
+   "type": "Symptom"
+  },
+  {
+   "name": "Incorrect SMTP Server Value",
+   "type": "Cause"
+  },
+  {
+   "name": "Wrong Port Number Configured",
+   "type": "Cause"
+  },
+  {
+   "name": "Misconfigured Security Type",
+   "type": "Cause"
+  },
+  {
+   "name": "Invalid Sender Address Format",
+   "type": "Cause"
+  },
+  {
+   "name": "Missing or Invalid Credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "Verify SMTP Server is smtp.acme.example",
+   "type": "Fix"
+  },
+  {
+   "name": "Set Port to 587 (TLS) or 465 (SSL)",
+   "type": "Fix"
+  },
+  {
+   "name": "Configure Security Type as STARTTLS or SSL/TLS",
+   "type": "Fix"
+  },
+  {
+   "name": "Update Sender Address to Valid Acme Mailbox",
+   "type": "Fix"
+  },
+  {
+   "name": "Enter Correct Username and Password",
+   "type": "Fix"
+  },
+  {
+   "name": "Access Embedded Web Interface via IP Address",
+   "type": "Fix"
+  },
+  {
+   "name": "Record Current SMTP Settings for Comparison",
+   "type": "Fix"
+  },
+  {
+   "name": "Compare Against Approved Baseline from Run-Book",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Failed Scan-to-Email Delivery",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect SMTP Server Value"
+  },
+  {
+   "source": "Failed Scan-to-Email Delivery",
+   "relation": "CAUSED_BY",
+   "target": "Wrong Port Number Configured"
+  },
+  {
+   "source": "Failed Scan-to-Email Delivery",
+   "relation": "CAUSED_BY",
+   "target": "Misconfigured Security Type"
+  },
+  {
+   "source": "Failed Scan-to-Email Delivery",
+   "relation": "CAUSED_BY",
+   "target": "Invalid Sender Address Format"
+  },
+  {
+   "source": "Failed Scan-to-Email Delivery",
+   "relation": "CAUSED_BY",
+   "target": "Missing or Invalid Credentials"
+  },
+  {
+   "source": "Incorrect SMTP Server Value",
+   "relation": "FIXED_BY",
+   "target": "Verify SMTP Server is smtp.acme.example"
+  },
+  {
+   "source": "Wrong Port Number Configured",
+   "relation": "FIXED_BY",
+   "target": "Set Port to 587 (TLS) or 465 (SSL)"
+  },
+  {
+   "source": "Misconfigured Security Type",
+   "relation": "FIXED_BY",
+   "target": "Configure Security Type as STARTTLS or SSL/TLS"
+  },
+  {
+   "source": "Invalid Sender Address Format",
+   "relation": "FIXED_BY",
+   "target": "Update Sender Address to Valid Acme Mailbox"
+  },
+  {
+   "source": "Missing or Invalid Credentials",
+   "relation": "FIXED_BY",
+   "target": "Enter Correct Username and Password"
+  },
+  {
+   "source": "Scanner",
+   "relation": "AFFECTS",
+   "target": "Embedded Web Interface"
+  },
+  {
+   "source": "Embedded Web Interface",
+   "relation": "PART_OF",
+   "target": "Scanner"
+  },
+  {
+   "source": "SMTP Server",
+   "relation": "PART_OF",
+   "target": "Scanner"
+  },
+  {
+   "source": "Port Configuration",
+   "relation": "PART_OF",
+   "target": "Scanner"
+  },
+  {
+   "source": "Security Type Setting",
+   "relation": "PART_OF",
+   "target": "Scanner"
+  },
+  {
+   "source": "Sender Address Field",
+   "relation": "PART_OF",
+   "target": "Scanner"
+  },
+  {
+   "source": "Authentication Prompt",
+   "relation": "PART_OF",
+   "target": "Scanner"
+  },
+  {
+   "source": "Test Document Feed",
+   "relation": "PART_OF",
+   "target": "Scanner"
+  }
+ ]
+}

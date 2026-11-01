@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "Multi-Factor Authentication",
+   "type": "Component"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "My Account portal",
+   "type": "Product"
+  },
+  {
+   "name": "Identity Verification",
+   "type": "Component"
+  },
+  {
+   "name": "Self-Help Procedure",
+   "type": "Component"
+  },
+  {
+   "name": "Service Desk Procedure",
+   "type": "Component"
+  },
+  {
+   "name": "Lost Phone",
+   "type": "Symptom"
+  },
+  {
+   "name": "No Push Notification",
+   "type": "Symptom"
+  },
+  {
+   "name": "Code Not Accepted",
+   "type": "Symptom"
+  },
+  {
+   "name": "User Cannot Complete MFA",
+   "type": "Symptom"
+  },
+  {
+   "name": "Contact IT Service Desk",
+   "type": "Fix"
+  },
+  {
+   "name": "Request Temporary Access Pass",
+   "type": "Fix"
+  },
+  {
+   "name": "Re-register Authenticator on New Device",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify User Identity",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Lost Phone",
+   "relation": "CAUSED_BY",
+   "target": "Cannot Complete MFA"
+  },
+  {
+   "source": "No Push Notification",
+   "relation": "CAUSED_BY",
+   "target": "Cannot Complete MFA"
+  },
+  {
+   "source": "Code Not Accepted",
+   "relation": "CAUSED_BY",
+   "target": "Cannot Complete MFA"
+  },
+  {
+   "source": "User Cannot Complete MFA",
+   "relation": "FIXED_BY",
+   "target": "Contact IT Service Desk"
+  },
+  {
+   "source": "User Cannot Complete MFA",
+   "relation": "FIXED_BY",
+   "target": "Request Temporary Access Pass"
+  },
+  {
+   "source": "User Cannot Complete MFA",
+   "relation": "FIXED_BY",
+   "target": "Re-register Authenticator on New Device"
+  },
+  {
+   "source": "User Cannot Complete MFA",
+   "relation": "FIXED_BY",
+   "target": "Verify User Identity"
+  },
+  {
+   "source": "Temporary Access Pass",
+   "relation": "INDICATES",
+   "target": "Enable Re-registration of Authenticator"
+  },
+  {
+   "source": "My Account portal",
+   "relation": "AFFECTS",
+   "target": "Microsoft Authenticator"
+  },
+  {
+   "source": "Self-Help Procedure",
+   "relation": "AFFECTS",
+   "target": "Microsoft Authenticator"
+  },
+  {
+   "source": "Service Desk Procedure",
+   "relation": "AFFECTS",
+   "target": "Identity Verification"
+  },
+  {
+   "source": "Identity Verification",
+   "relation": "PART_OF",
+   "target": "Service Desk Procedure"
+  },
+  {
+   "source": "Request Temporary Access Pass",
+   "relation": "PART_OF",
+   "target": "Service Desk Procedure"
+  },
+  {
+   "source": "Re-register Authenticator on New Device",
+   "relation": "PART_OF",
+   "target": "Self-Help Procedure"
+  }
+ ]
+}

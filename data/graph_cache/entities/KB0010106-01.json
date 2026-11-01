@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Authenticator app",
+   "type": "Component"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Component"
+  },
+  {
+   "name": "Software Update",
+   "type": "Component"
+  },
+  {
+   "name": "Finder",
+   "type": "Component"
+  },
+  {
+   "name": "Dock",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "Safari",
+   "type": "Product"
+  },
+  {
+   "name": "Mac App Store",
+   "type": "Component"
+  },
+  {
+   "name": "PaperCut printer",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Defender for Endpoint",
+   "type": "Product"
+  },
+  {
+   "name": "FileVault",
+   "type": "Component"
+  },
+  {
+   "name": "Console",
+   "type": "Component"
+  },
+  {
+   "name": "Remote Help via Teams",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Authenticator app",
+   "relation": "AFFECTS",
+   "target": "MFA"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "line-of-business apps"
+  },
+  {
+   "source": "Software Update",
+   "relation": "AFFECTS",
+   "target": "macOS security patches"
+  },
+  {
+   "source": "Finder",
+   "relation": "AFFECTS",
+   "target": "file browsing"
+  },
+  {
+   "source": "Dock",
+   "relation": "AFFECTS",
+   "target": "app launching"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "email"
+  },
+  {
+   "source": "Teams",
+   "relation": "AFFECTS",
+   "target": "communication"
+  },
+  {
+   "source": "OneDrive",
+   "relation": "AFFECTS",
+   "target": "cloud storage"
+  },
+  {
+   "source": "Safari",
+   "relation": "AFFECTS",
+   "target": "web browsing"
+  },
+  {
+   "source": "Mac App Store",
+   "relation": "AFFECTS",
+   "target": "app installation"
+  },
+  {
+   "source": "PaperCut printer",
+   "relation": "AFFECTS",
+   "target": "printing"
+  },
+  {
+   "source": "Microsoft Defender for Endpoint",
+   "relation": "AFFECTS",
+   "target": "endpoint protection"
+  },
+  {
+   "source": "FileVault",
+   "relation": "AFFECTS",
+   "target": "disk encryption"
+  },
+  {
+   "source": "Console",
+   "relation": "AFFECTS",
+   "target": "error logging"
+  },
+  {
+   "source": "Remote Help via Teams",
+   "relation": "AFFECTS",
+   "target": "IT support"
+  }
+ ]
+}

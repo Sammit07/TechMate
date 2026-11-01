@@ -1,0 +1,219 @@
+{
+ "entities": [
+  {
+   "name": "loaner laptop request process",
+   "type": "Process"
+  },
+  {
+   "name": "laptop won't start",
+   "type": "Symptom"
+  },
+  {
+   "name": "boot failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "black screen",
+   "type": "Symptom"
+  },
+  {
+   "name": "automatic repair loop",
+   "type": "Symptom"
+  },
+  {
+   "name": "hard reset",
+   "type": "Fix"
+  },
+  {
+   "name": "power drain",
+   "type": "Fix"
+  },
+  {
+   "name": "startup repair",
+   "type": "Fix"
+  },
+  {
+   "name": "motherboard fault",
+   "type": "Cause"
+  },
+  {
+   "name": "warranty repair",
+   "type": "Fix"
+  },
+  {
+   "name": "Desktop Support team",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "BitLocker recovery key",
+   "type": "Component"
+  },
+  {
+   "name": "MFA",
+   "type": "Component"
+  },
+  {
+   "name": "self-service portal",
+   "type": "Product"
+  },
+  {
+   "name": "phone extension 4357",
+   "type": "Component"
+  },
+  {
+   "name": "Teams IT Help",
+   "type": "Product"
+  },
+  {
+   "name": "P2 High priority",
+   "type": "Symptom"
+  },
+  {
+   "name": "8-hour SLA",
+   "type": "Cause"
+  },
+  {
+   "name": "asset register update",
+   "type": "Fix"
+  },
+  {
+   "name": "ticket closure with loaner retention",
+   "type": "Fix"
+  },
+  {
+   "name": "final communication email",
+   "type": "Fix"
+  },
+  {
+   "name": "escalation to Desktop Support Team Lead",
+   "type": "Fix"
+  },
+  {
+   "name": "emergency purchase authorization",
+   "type": "Fix"
+  },
+  {
+   "name": "device re-allocation from another site",
+   "type": "Fix"
+  },
+  {
+   "name": "temporary remote-work arrangement",
+   "type": "Fix"
+  },
+  {
+   "name": "personal device with Intune enrollment",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "laptop won't start",
+   "relation": "CAUSED_BY",
+   "target": "motherboard fault"
+  },
+  {
+   "source": "boot failure",
+   "relation": "CAUSED_BY",
+   "target": "motherboard fault"
+  },
+  {
+   "source": "black screen",
+   "relation": "CAUSED_BY",
+   "target": "motherboard fault"
+  },
+  {
+   "source": "automatic repair loop",
+   "relation": "CAUSED_BY",
+   "target": "motherboard fault"
+  },
+  {
+   "source": "motherboard fault",
+   "relation": "FIXED_BY",
+   "target": "warranty repair"
+  },
+  {
+   "source": "no loaner laptop available",
+   "relation": "CAUSED_BY",
+   "target": "spare pool depletion"
+  },
+  {
+   "source": "repair estimate exceeds 8-hour P2 target",
+   "relation": "CAUSED_BY",
+   "target": "8-hour SLA breach"
+  },
+  {
+   "source": "spare pool depletion",
+   "relation": "INDICATES",
+   "target": "escalation to Desktop Support Team Lead"
+  },
+  {
+   "source": "8-hour SLA breach",
+   "relation": "INDICATES",
+   "target": "escalation to Desktop Support Team Lead"
+  },
+  {
+   "source": "escalation to Desktop Support Team Lead",
+   "relation": "FIXED_BY",
+   "target": "emergency purchase authorization"
+  },
+  {
+   "source": "escalation to Desktop Support Team Lead",
+   "relation": "FIXED_BY",
+   "target": "device re-allocation from another site"
+  },
+  {
+   "source": "escalation to Desktop Support Team Lead",
+   "relation": "FIXED_BY",
+   "target": "temporary remote-work arrangement"
+  },
+  {
+   "source": "loaner laptop request process",
+   "relation": "AFFECTS",
+   "target": "asset register update"
+  },
+  {
+   "source": "loaner laptop request process",
+   "relation": "AFFECTS",
+   "target": "ticket closure with loaner retention"
+  },
+  {
+   "source": "loaner laptop request process",
+   "relation": "AFFECTS",
+   "target": "final communication email"
+  },
+  {
+   "source": "BitLocker recovery key",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "MFA",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "self-service portal",
+   "relation": "AFFECTS",
+   "target": "loaner laptop request process"
+  },
+  {
+   "source": "phone extension 4357",
+   "relation": "AFFECTS",
+   "target": "loaner laptop request process"
+  },
+  {
+   "source": "Teams IT Help",
+   "relation": "AFFECTS",
+   "target": "loaner laptop request process"
+  },
+  {
+   "source": "personal device with Intune enrollment",
+   "relation": "FIXED_BY",
+   "target": "temporary remote-work arrangement"
+  }
+ ]
+}

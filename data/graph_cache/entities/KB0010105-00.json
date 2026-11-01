@@ -1,0 +1,128 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 5440",
+   "type": "Product"
+  },
+  {
+   "name": "Virtual Desktops",
+   "type": "Component"
+  },
+  {
+   "name": "Snap Layouts",
+   "type": "Component"
+  },
+  {
+   "name": "Focus Assist",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft 365 integration",
+   "type": "Component"
+  },
+  {
+   "name": "Users feel uncertain about where to find Windows 11 productivity features",
+   "type": "Symptom"
+  },
+  {
+   "name": "New hires report difficulty managing multiple applications and windows efficiently",
+   "type": "Symptom"
+  },
+  {
+   "name": "Some users are unaware of built-in focus assist and virtual desktop capabilities",
+   "type": "Symptom"
+  },
+  {
+   "name": "Limited exposure to Windows 11 UI changes compared with Windows 10",
+   "type": "Cause"
+  },
+  {
+   "name": "Default out-of-the-box settings are not tuned for multitasking or distraction reduction",
+   "type": "Cause"
+  },
+  {
+   "name": "Lack of quick-reference guidance on integrated Microsoft 365 tools",
+   "type": "Cause"
+  },
+  {
+   "name": "Set Up Virtual Desktops, Snap Layouts, and Focus Assist",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Users feel uncertain about where to find Windows 11 productivity features",
+   "relation": "CAUSED_BY",
+   "target": "Limited exposure to Windows 11 UI changes compared with Windows 10"
+  },
+  {
+   "source": "New hires report difficulty managing multiple applications and windows efficiently",
+   "relation": "CAUSED_BY",
+   "target": "Default out-of-the-box settings are not tuned for multitasking or distraction reduction"
+  },
+  {
+   "source": "Some users are unaware of built-in focus assist and virtual desktop capabilities",
+   "relation": "CAUSED_BY",
+   "target": "Lack of quick-reference guidance on integrated Microsoft 365 tools"
+  },
+  {
+   "source": "Virtual Desktops",
+   "relation": "AFFECTS",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Snap Layouts",
+   "relation": "AFFECTS",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Focus Assist",
+   "relation": "AFFECTS",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Microsoft 365 integration",
+   "relation": "AFFECTS",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Set Up Virtual Desktops, Snap Layouts, and Focus Assist",
+   "relation": "FIXED_BY",
+   "target": "Users feel uncertain about where to find Windows 11 productivity features"
+  },
+  {
+   "source": "Set Up Virtual Desktops, Snap Layouts, and Focus Assist",
+   "relation": "FIXED_BY",
+   "target": "New hires report difficulty managing multiple applications and windows efficiently"
+  },
+  {
+   "source": "Set Up Virtual Desktops, Snap Layouts, and Focus Assist",
+   "relation": "FIXED_BY",
+   "target": "Some users are unaware of built-in focus assist and virtual desktop capabilities"
+  },
+  {
+   "source": "Virtual Desktops",
+   "relation": "PART_OF",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Snap Layouts",
+   "relation": "PART_OF",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Focus Assist",
+   "relation": "PART_OF",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Microsoft 365 integration",
+   "relation": "PART_OF",
+   "target": "Windows 11"
+  }
+ ]
+}

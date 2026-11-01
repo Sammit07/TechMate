@@ -1,0 +1,161 @@
+{
+ "entities": [
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "PaperCut",
+   "type": "Product"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "split tunneling",
+   "type": "Component"
+  },
+  {
+   "name": "Conditional Access policies",
+   "type": "Component"
+  },
+  {
+   "name": "self-service password reset",
+   "type": "Fix"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Fix"
+  },
+  {
+   "name": "device compliance check",
+   "type": "Fix"
+  },
+  {
+   "name": "internal name resolution test",
+   "type": "Fix"
+  },
+  {
+   "name": "DNS flush",
+   "type": "Fix"
+  },
+  {
+   "name": "VPN connection failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "internal resource inaccessibility",
+   "type": "Symptom"
+  },
+  {
+   "name": "Teams collaboration failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "print job failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "non-compliant device",
+   "type": "Cause"
+  },
+  {
+   "name": "failed MFA or location check",
+   "type": "Cause"
+  },
+  {
+   "name": "DNS or split-tunneling misconfiguration",
+   "type": "Cause"
+  },
+  {
+   "name": "expired or locked password",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "VPN connection failure",
+   "relation": "CAUSED_BY",
+   "target": "non-compliant device"
+  },
+  {
+   "source": "VPN connection failure",
+   "relation": "CAUSED_BY",
+   "target": "failed MFA or location check"
+  },
+  {
+   "source": "internal resource inaccessibility",
+   "relation": "CAUSED_BY",
+   "target": "DNS or split-tunneling misconfiguration"
+  },
+  {
+   "source": "Teams collaboration failure",
+   "relation": "CAUSED_BY",
+   "target": "DNS or split-tunneling misconfiguration"
+  },
+  {
+   "source": "print job failure",
+   "relation": "CAUSED_BY",
+   "target": "DNS or split-tunneling misconfiguration"
+  },
+  {
+   "source": "VPN connection failure",
+   "relation": "INDICATES",
+   "target": "expired or locked password"
+  },
+  {
+   "source": "device compliance check",
+   "relation": "FIXED_BY",
+   "target": "non-compliant device"
+  },
+  {
+   "source": "self-service password reset",
+   "relation": "FIXED_BY",
+   "target": "expired or locked password"
+  },
+  {
+   "source": "Temporary Access Pass",
+   "relation": "FIXED_BY",
+   "target": "expired or locked password"
+  },
+  {
+   "source": "internal name resolution test",
+   "relation": "FIXED_BY",
+   "target": "DNS or split-tunneling misconfiguration"
+  },
+  {
+   "source": "DNS flush",
+   "relation": "FIXED_BY",
+   "target": "DNS or split-tunneling misconfiguration"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "VPN connection failure"
+  },
+  {
+   "source": "split tunneling",
+   "relation": "PART_OF",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "Conditional Access policies",
+   "relation": "PART_OF",
+   "target": "Entra ID"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "device compliance check"
+  }
+ ]
+}

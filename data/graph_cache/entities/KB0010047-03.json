@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "macOS update failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "update rolls back",
+   "type": "Symptom"
+  },
+  {
+   "name": "not enough disk space",
+   "type": "Cause"
+  },
+  {
+   "name": "SU-4294",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "SU-4295",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "reset update cache",
+   "type": "Fix"
+  },
+  {
+   "name": "NVRAM reset",
+   "type": "Fix"
+  },
+  {
+   "name": "SMC reset",
+   "type": "Fix"
+  },
+  {
+   "name": "Apple Silicon Mac",
+   "type": "Product"
+  },
+  {
+   "name": "Intel Mac",
+   "type": "Product"
+  },
+  {
+   "name": "macOS Ventura",
+   "type": "Product"
+  },
+  {
+   "name": "macOS Sonoma",
+   "type": "Product"
+  },
+  {
+   "name": "Desktop Support",
+   "type": "Product"
+  },
+  {
+   "name": "hardware-related errors",
+   "type": "Cause"
+  },
+  {
+   "name": "cannot enter Recovery mode",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "macOS update failure",
+   "relation": "CAUSED_BY",
+   "target": "not enough disk space"
+  },
+  {
+   "source": "update rolls back",
+   "relation": "CAUSED_BY",
+   "target": "not enough disk space"
+  },
+  {
+   "source": "SU-4294",
+   "relation": "INDICATES",
+   "target": "macOS update failure"
+  },
+  {
+   "source": "SU-4295",
+   "relation": "INDICATES",
+   "target": "macOS update failure"
+  },
+  {
+   "source": "not enough disk space",
+   "relation": "FIXED_BY",
+   "target": "reset update cache"
+  },
+  {
+   "source": "macOS update failure",
+   "relation": "FIXED_BY",
+   "target": "NVRAM reset"
+  },
+  {
+   "source": "macOS update failure",
+   "relation": "FIXED_BY",
+   "target": "SMC reset"
+  },
+  {
+   "source": "Apple Silicon Mac",
+   "relation": "AFFECTS",
+   "target": "macOS Ventura"
+  },
+  {
+   "source": "Apple Silicon Mac",
+   "relation": "AFFECTS",
+   "target": "macOS Sonoma"
+  },
+  {
+   "source": "Intel Mac",
+   "relation": "AFFECTS",
+   "target": "macOS Ventura"
+  },
+  {
+   "source": "Intel Mac",
+   "relation": "AFFECTS",
+   "target": "macOS Sonoma"
+  },
+  {
+   "source": "hardware-related errors",
+   "relation": "CAUSED_BY",
+   "target": "cannot enter Recovery mode"
+  },
+  {
+   "source": "macOS update failure",
+   "relation": "AFFECTS",
+   "target": "Desktop Support"
+  },
+  {
+   "source": "cannot enter Recovery mode",
+   "relation": "INDICATES",
+   "target": "hardware-related errors"
+  }
+ ]
+}

@@ -1,0 +1,206 @@
+{
+ "entities": [
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "Palo Alto GlobalProtect VPN",
+   "type": "Product"
+  },
+  {
+   "name": "Ethernet cable",
+   "type": "Component"
+  },
+  {
+   "name": "desk-side Ethernet port",
+   "type": "Component"
+  },
+  {
+   "name": "docking station firmware",
+   "type": "Component"
+  },
+  {
+   "name": "USB-C/Ethernet driver",
+   "type": "Component"
+  },
+  {
+   "name": "VLAN configuration",
+   "type": "Component"
+  },
+  {
+   "name": "port-security setting",
+   "type": "Component"
+  },
+  {
+   "name": "Network cable unplugged",
+   "type": "Symptom"
+  },
+  {
+   "name": "Limited or no connectivity",
+   "type": "Symptom"
+  },
+  {
+   "name": "APIPA address 169.254.x.x",
+   "type": "Symptom"
+  },
+  {
+   "name": "No link lights on docking station Ethernet port",
+   "type": "Symptom"
+  },
+  {
+   "name": "Faulty or loose RJ45 patch cable",
+   "type": "Cause"
+  },
+  {
+   "name": "Defective desk-side Ethernet port",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated docking station firmware",
+   "type": "Cause"
+  },
+  {
+   "name": "Insufficient power over USB-C",
+   "type": "Cause"
+  },
+  {
+   "name": "Misconfigured VLAN",
+   "type": "Cause"
+  },
+  {
+   "name": "Port-security blocking MAC address",
+   "type": "Cause"
+  },
+  {
+   "name": "Reseat Ethernet cable",
+   "type": "Fix"
+  },
+  {
+   "name": "Swap Ethernet cable",
+   "type": "Fix"
+  },
+  {
+   "name": "Check link LEDs",
+   "type": "Fix"
+  },
+  {
+   "name": "Update docking station firmware",
+   "type": "Fix"
+  },
+  {
+   "name": "Update USB-C/Ethernet driver",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify power delivery",
+   "type": "Fix"
+  },
+  {
+   "name": "Reconfigure VLAN",
+   "type": "Fix"
+  },
+  {
+   "name": "Adjust port-security settings",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Network cable unplugged",
+   "relation": "CAUSED_BY",
+   "target": "Faulty or loose RJ45 patch cable"
+  },
+  {
+   "source": "Limited or no connectivity",
+   "relation": "CAUSED_BY",
+   "target": "Defective desk-side Ethernet port"
+  },
+  {
+   "source": "APIPA address 169.254.x.x",
+   "relation": "CAUSED_BY",
+   "target": "Outdated docking station firmware"
+  },
+  {
+   "source": "No link lights on docking station Ethernet port",
+   "relation": "CAUSED_BY",
+   "target": "Insufficient power over USB-C"
+  },
+  {
+   "source": "Faulty or loose RJ45 patch cable",
+   "relation": "AFFECTS",
+   "target": "Ethernet cable"
+  },
+  {
+   "source": "Defective desk-side Ethernet port",
+   "relation": "AFFECTS",
+   "target": "desk-side Ethernet port"
+  },
+  {
+   "source": "Outdated docking station firmware",
+   "relation": "AFFECTS",
+   "target": "docking station firmware"
+  },
+  {
+   "source": "Insufficient power over USB-C",
+   "relation": "AFFECTS",
+   "target": "USB-C/Ethernet driver"
+  },
+  {
+   "source": "Misconfigured VLAN",
+   "relation": "AFFECTS",
+   "target": "VLAN configuration"
+  },
+  {
+   "source": "Port-security blocking MAC address",
+   "relation": "AFFECTS",
+   "target": "port-security setting"
+  },
+  {
+   "source": "Faulty or loose RJ45 patch cable",
+   "relation": "FIXED_BY",
+   "target": "Reseat Ethernet cable"
+  },
+  {
+   "source": "Defective desk-side Ethernet port",
+   "relation": "FIXED_BY",
+   "target": "Swap Ethernet cable"
+  },
+  {
+   "source": "Outdated docking station firmware",
+   "relation": "FIXED_BY",
+   "target": "Update docking station firmware"
+  },
+  {
+   "source": "Insufficient power over USB-C",
+   "relation": "FIXED_BY",
+   "target": "Verify power delivery"
+  },
+  {
+   "source": "Misconfigured VLAN",
+   "relation": "FIXED_BY",
+   "target": "Reconfigure VLAN"
+  },
+  {
+   "source": "Port-security blocking MAC address",
+   "relation": "FIXED_BY",
+   "target": "Adjust port-security settings"
+  }
+ ]
+}

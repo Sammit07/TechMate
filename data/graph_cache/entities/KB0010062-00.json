@@ -1,0 +1,107 @@
+{
+ "entities": [
+  {
+   "name": "Google Chrome",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Edge",
+   "type": "Product"
+  },
+  {
+   "name": "unwanted browser extensions",
+   "type": "Component"
+  },
+  {
+   "name": "malicious browser extensions",
+   "type": "Component"
+  },
+  {
+   "name": "corrupted browser profile",
+   "type": "Component"
+  },
+  {
+   "name": "incorrect system date/time",
+   "type": "Cause"
+  },
+  {
+   "name": "out-of-date browser version",
+   "type": "Cause"
+  },
+  {
+   "name": "NET::ERR_CERT_DATE_INVALID",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Chrome fails to launch",
+   "type": "Symptom"
+  },
+  {
+   "name": "Edge page loading extremely slow",
+   "type": "Symptom"
+  },
+  {
+   "name": "certificate error warnings",
+   "type": "Symptom"
+  },
+  {
+   "name": "pop-up windows and redirects",
+   "type": "Symptom"
+  },
+  {
+   "name": "remove unwanted extensions",
+   "type": "Fix"
+  },
+  {
+   "name": "clear browser cache",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Chrome fails to launch",
+   "relation": "CAUSED_BY",
+   "target": "unwanted browser extensions"
+  },
+  {
+   "source": "Edge page loading extremely slow",
+   "relation": "CAUSED_BY",
+   "target": "unwanted browser extensions"
+  },
+  {
+   "source": "certificate error warnings",
+   "relation": "CAUSED_BY",
+   "target": "incorrect system date/time"
+  },
+  {
+   "source": "pop-up windows and redirects",
+   "relation": "CAUSED_BY",
+   "target": "malicious browser extensions"
+  },
+  {
+   "source": "unwanted browser extensions",
+   "relation": "AFFECTS",
+   "target": "Google Chrome"
+  },
+  {
+   "source": "unwanted browser extensions",
+   "relation": "AFFECTS",
+   "target": "Microsoft Edge"
+  },
+  {
+   "source": "incorrect system date/time",
+   "relation": "INDICATES",
+   "target": "NET::ERR_CERT_DATE_INVALID"
+  },
+  {
+   "source": "remove unwanted extensions",
+   "relation": "FIXED_BY",
+   "target": "unwanted browser extensions"
+  },
+  {
+   "source": "clear browser cache",
+   "relation": "FIXED_BY",
+   "target": "corrupted browser profile"
+  }
+ ]
+}

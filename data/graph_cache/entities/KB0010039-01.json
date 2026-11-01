@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "external monitor not detected or flickering",
+   "type": "Symptom"
+  },
+  {
+   "name": "bent pins or visible damage",
+   "type": "Cause"
+  },
+  {
+   "name": "re-seat cable firmly",
+   "type": "Fix"
+  },
+  {
+   "name": "replace with known-good cable",
+   "type": "Fix"
+  },
+  {
+   "name": "detect monitor manually",
+   "type": "Fix"
+  },
+  {
+   "name": "set recommended resolution and refresh rate",
+   "type": "Fix"
+  },
+  {
+   "name": "update graphics driver",
+   "type": "Fix"
+  },
+  {
+   "name": "check docking-station firmware",
+   "type": "Fix"
+  },
+  {
+   "name": "test with alternative port or monitor",
+   "type": "Fix"
+  },
+  {
+   "name": "capture EDID information",
+   "type": "Fix"
+  },
+  {
+   "name": "verify dock power delivery",
+   "type": "Fix"
+  },
+  {
+   "name": "examine event logs for GPU errors",
+   "type": "Fix"
+  },
+  {
+   "name": "docking station",
+   "type": "Component"
+  },
+  {
+   "name": "graphics driver",
+   "type": "Component"
+  },
+  {
+   "name": "EDID information",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "CAUSED_BY",
+   "target": "bent pins or visible damage"
+  },
+  {
+   "source": "bent pins or visible damage",
+   "relation": "FIXED_BY",
+   "target": "re-seat cable firmly"
+  },
+  {
+   "source": "bent pins or visible damage",
+   "relation": "FIXED_BY",
+   "target": "replace with known-good cable"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "FIXED_BY",
+   "target": "detect monitor manually"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "FIXED_BY",
+   "target": "set recommended resolution and refresh rate"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "FIXED_BY",
+   "target": "update graphics driver"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "FIXED_BY",
+   "target": "check docking-station firmware"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "FIXED_BY",
+   "target": "test with alternative port or monitor"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "FIXED_BY",
+   "target": "capture EDID information"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "FIXED_BY",
+   "target": "verify dock power delivery"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "FIXED_BY",
+   "target": "examine event logs for GPU errors"
+  },
+  {
+   "source": "docking station",
+   "relation": "AFFECTS",
+   "target": "external monitor not detected or flickering"
+  },
+  {
+   "source": "graphics driver",
+   "relation": "AFFECTS",
+   "target": "external monitor not detected or flickering"
+  },
+  {
+   "source": "EDID information",
+   "relation": "PART_OF",
+   "target": "docking station"
+  }
+ ]
+}

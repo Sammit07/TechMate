@@ -1,0 +1,146 @@
+{
+ "entities": [
+  {
+   "name": "slow network performance",
+   "type": "Symptom"
+  },
+  {
+   "name": "video call lag",
+   "type": "Symptom"
+  },
+  {
+   "name": "slow file transfers",
+   "type": "Symptom"
+  },
+  {
+   "name": "internal status page",
+   "type": "Component"
+  },
+  {
+   "name": "Teams channel \"IT Help\"",
+   "type": "Component"
+  },
+  {
+   "name": "external site unreachable",
+   "type": "Symptom"
+  },
+  {
+   "name": "device not connected to correct SSID",
+   "type": "Symptom"
+  },
+  {
+   "name": "low signal strength (RSSI)",
+   "type": "Symptom"
+  },
+  {
+   "name": "high AP client count",
+   "type": "Symptom"
+  },
+  {
+   "name": "high channel utilization",
+   "type": "Symptom"
+  },
+  {
+   "name": "wired vs wireless performance difference",
+   "type": "Symptom"
+  },
+  {
+   "name": "floor-wide network congestion",
+   "type": "Symptom"
+  },
+  {
+   "name": "high latency or packet loss beyond corporate edge",
+   "type": "Symptom"
+  },
+  {
+   "name": "ISP-related issue",
+   "type": "Cause"
+  },
+  {
+   "name": "congested uplink or core switch",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "slow network performance",
+   "relation": "CAUSED_BY",
+   "target": "ISP-related issue"
+  },
+  {
+   "source": "external site unreachable",
+   "relation": "INDICATES",
+   "target": "ISP-related issue"
+  },
+  {
+   "source": "device not connected to correct SSID",
+   "relation": "CAUSED_BY",
+   "target": "misconfigured wireless settings"
+  },
+  {
+   "source": "low signal strength (RSSI)",
+   "relation": "CAUSED_BY",
+   "target": "poor AP placement or interference"
+  },
+  {
+   "source": "high AP client count",
+   "relation": "CAUSED_BY",
+   "target": "overloaded access point"
+  },
+  {
+   "source": "high channel utilization",
+   "relation": "CAUSED_BY",
+   "target": "RF congestion"
+  },
+  {
+   "source": "wired vs wireless performance difference",
+   "relation": "INDICATES",
+   "target": "wireless-specific issue"
+  },
+  {
+   "source": "floor-wide network congestion",
+   "relation": "CAUSED_BY",
+   "target": "congested uplink or core switch"
+  },
+  {
+   "source": "high latency or packet loss beyond corporate edge",
+   "relation": "INDICATES",
+   "target": "ISP-related issue"
+  },
+  {
+   "source": "internal status page",
+   "relation": "AFFECTS",
+   "target": "network monitoring"
+  },
+  {
+   "source": "Teams channel \"IT Help\"",
+   "relation": "AFFECTS",
+   "target": "network monitoring"
+  },
+  {
+   "source": "misconfigured wireless settings",
+   "relation": "FIXED_BY",
+   "target": "reconnect to correct SSID"
+  },
+  {
+   "source": "poor AP placement or interference",
+   "relation": "FIXED_BY",
+   "target": "adjust RF power or enable band-steering"
+  },
+  {
+   "source": "overloaded access point",
+   "relation": "FIXED_BY",
+   "target": "steer clients to less-used APs"
+  },
+  {
+   "source": "RF congestion",
+   "relation": "FIXED_BY",
+   "target": "adjust channel width or enable band-steering"
+  },
+  {
+   "source": "congested uplink or core switch",
+   "relation": "FIXED_BY",
+   "target": "coordinate with network team for uplink upgrade"
+  }
+ ]
+}

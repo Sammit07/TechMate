@@ -1,0 +1,263 @@
+{
+ "entities": [
+  {
+   "name": "Acme Global account",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 laptop",
+   "type": "Product"
+  },
+  {
+   "name": "macOS laptop",
+   "type": "Product"
+  },
+  {
+   "name": "mobile device",
+   "type": "Product"
+  },
+  {
+   "name": "cached credentials",
+   "type": "Component"
+  },
+  {
+   "name": "mapped network drive",
+   "type": "Component"
+  },
+  {
+   "name": "saved password in browser",
+   "type": "Component"
+  },
+  {
+   "name": "scheduled task",
+   "type": "Component"
+  },
+  {
+   "name": "service account password",
+   "type": "Component"
+  },
+  {
+   "name": "lost or stolen device",
+   "type": "Component"
+  },
+  {
+   "name": "expired temporary access pass",
+   "type": "Component"
+  },
+  {
+   "name": "mis-configured MFA method",
+   "type": "Component"
+  },
+  {
+   "name": "account locked out",
+   "type": "Symptom"
+  },
+  {
+   "name": "login prompt shows account locked",
+   "type": "Symptom"
+  },
+  {
+   "name": "SSO portal displays account disabled",
+   "type": "Symptom"
+  },
+  {
+   "name": "repeated lockout notifications",
+   "type": "Symptom"
+  },
+  {
+   "name": "Error 0xC000006A",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Outlook continually prompts for credentials",
+   "type": "Symptom"
+  },
+  {
+   "name": "cached credentials in mobile email app",
+   "type": "Cause"
+  },
+  {
+   "name": "saved passwords in web browsers or credential manager",
+   "type": "Cause"
+  },
+  {
+   "name": "mapped network drives with stale credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "scheduled tasks or services with outdated passwords",
+   "type": "Cause"
+  },
+  {
+   "name": "authentication from lost or stolen device",
+   "type": "Cause"
+  },
+  {
+   "name": "expired temporary access pass",
+   "type": "Cause"
+  },
+  {
+   "name": "mis-configured MFA method",
+   "type": "Cause"
+  },
+  {
+   "name": "clear cached credentials",
+   "type": "Fix"
+  },
+  {
+   "name": "remove saved passwords",
+   "type": "Fix"
+  },
+  {
+   "name": "disconnect mapped network drives",
+   "type": "Fix"
+  },
+  {
+   "name": "update scheduled task passwords",
+   "type": "Fix"
+  },
+  {
+   "name": "update service account passwords",
+   "type": "Fix"
+  },
+  {
+   "name": "remove lost/stolen device access",
+   "type": "Fix"
+  },
+  {
+   "name": "renew temporary access pass",
+   "type": "Fix"
+  },
+  {
+   "name": "reconfigure MFA method",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "account locked out",
+   "relation": "CAUSED_BY",
+   "target": "cached credentials in mobile email app"
+  },
+  {
+   "source": "account locked out",
+   "relation": "CAUSED_BY",
+   "target": "saved passwords in web browsers or credential manager"
+  },
+  {
+   "source": "account locked out",
+   "relation": "CAUSED_BY",
+   "target": "mapped network drives with stale credentials"
+  },
+  {
+   "source": "account locked out",
+   "relation": "CAUSED_BY",
+   "target": "scheduled tasks or services with outdated passwords"
+  },
+  {
+   "source": "account locked out",
+   "relation": "CAUSED_BY",
+   "target": "authentication from lost or stolen device"
+  },
+  {
+   "source": "account locked out",
+   "relation": "CAUSED_BY",
+   "target": "expired temporary access pass"
+  },
+  {
+   "source": "account locked out",
+   "relation": "CAUSED_BY",
+   "target": "mis-configured MFA method"
+  },
+  {
+   "source": "Error 0xC000006A",
+   "relation": "INDICATES",
+   "target": "account locked out"
+  },
+  {
+   "source": "Outlook continually prompts for credentials",
+   "relation": "INDICATES",
+   "target": "cached credentials in mobile email app"
+  },
+  {
+   "source": "cached credentials in mobile email app",
+   "relation": "FIXED_BY",
+   "target": "clear cached credentials"
+  },
+  {
+   "source": "saved passwords in web browsers or credential manager",
+   "relation": "FIXED_BY",
+   "target": "remove saved passwords"
+  },
+  {
+   "source": "mapped network drives with stale credentials",
+   "relation": "FIXED_BY",
+   "target": "disconnect mapped network drives"
+  },
+  {
+   "source": "scheduled tasks or services with outdated passwords",
+   "relation": "FIXED_BY",
+   "target": "update scheduled task passwords"
+  },
+  {
+   "source": "service account password",
+   "relation": "FIXED_BY",
+   "target": "update service account passwords"
+  },
+  {
+   "source": "authentication from lost or stolen device",
+   "relation": "FIXED_BY",
+   "target": "remove lost/stolen device access"
+  },
+  {
+   "source": "expired temporary access pass",
+   "relation": "FIXED_BY",
+   "target": "renew temporary access pass"
+  },
+  {
+   "source": "mis-configured MFA method",
+   "relation": "FIXED_BY",
+   "target": "reconfigure MFA method"
+  },
+  {
+   "source": "cached credentials",
+   "relation": "AFFECTS",
+   "target": "mobile device"
+  },
+  {
+   "source": "saved password in browser",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptop"
+  },
+  {
+   "source": "mapped network drive",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptop"
+  },
+  {
+   "source": "scheduled task",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptop"
+  },
+  {
+   "source": "service account password",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptop"
+  },
+  {
+   "source": "lost or stolen device",
+   "relation": "AFFECTS",
+   "target": "mobile device"
+  },
+  {
+   "source": "expired temporary access pass",
+   "relation": "AFFECTS",
+   "target": "mobile device"
+  },
+  {
+   "source": "mis-configured MFA method",
+   "relation": "AFFECTS",
+   "target": "mobile device"
+  }
+ ]
+}

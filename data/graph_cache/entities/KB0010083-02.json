@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Outlook Report Button",
+   "type": "Component"
+  },
+  {
+   "name": "Phishing Email",
+   "type": "Symptom"
+  },
+  {
+   "name": "Credential Entry",
+   "type": "Cause"
+  },
+  {
+   "name": "Malware Execution",
+   "type": "Cause"
+  },
+  {
+   "name": "Signs of Compromise",
+   "type": "Cause"
+  },
+  {
+   "name": "Escalate to SOC Lead",
+   "type": "Fix"
+  },
+  {
+   "name": "Security Operations Team",
+   "type": "Product"
+  },
+  {
+   "name": "Full Email Headers",
+   "type": "Component"
+  },
+  {
+   "name": "Captured Payload or URL",
+   "type": "Component"
+  },
+  {
+   "name": "Timestamp of User Interaction",
+   "type": "Component"
+  },
+  {
+   "name": "Password Reset",
+   "type": "Fix"
+  },
+  {
+   "name": "Session Revocation",
+   "type": "Fix"
+  },
+  {
+   "name": "Sign-in Review",
+   "type": "Fix"
+  },
+  {
+   "name": "P1 Priority",
+   "type": "Component"
+  },
+  {
+   "name": "Incident Response Manager",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Phishing Email",
+   "relation": "CAUSED_BY",
+   "target": "Credential Entry"
+  },
+  {
+   "source": "Phishing Email",
+   "relation": "CAUSED_BY",
+   "target": "Malware Execution"
+  },
+  {
+   "source": "Phishing Email",
+   "relation": "CAUSED_BY",
+   "target": "Signs of Compromise"
+  },
+  {
+   "source": "Credential Entry",
+   "relation": "FIXED_BY",
+   "target": "Password Reset"
+  },
+  {
+   "source": "Malware Execution",
+   "relation": "FIXED_BY",
+   "target": "Session Revocation"
+  },
+  {
+   "source": "Signs of Compromise",
+   "relation": "FIXED_BY",
+   "target": "Sign-in Review"
+  },
+  {
+   "source": "Phishing Email",
+   "relation": "INDICATES",
+   "target": "Credential Entry"
+  },
+  {
+   "source": "Phishing Email",
+   "relation": "INDICATES",
+   "target": "Malware Execution"
+  },
+  {
+   "source": "Phishing Email",
+   "relation": "INDICATES",
+   "target": "Signs of Compromise"
+  },
+  {
+   "source": "Phishing Email",
+   "relation": "AFFECTS",
+   "target": "Outlook Report Button"
+  },
+  {
+   "source": "Escalate to SOC Lead",
+   "relation": "FIXED_BY",
+   "target": "Security Operations Team"
+  },
+  {
+   "source": "P1 Priority",
+   "relation": "AFFECTS",
+   "target": "Escalate to SOC Lead"
+  },
+  {
+   "source": "Full Email Headers",
+   "relation": "PART_OF",
+   "target": "Escalate to SOC Lead"
+  },
+  {
+   "source": "Captured Payload or URL",
+   "relation": "PART_OF",
+   "target": "Escalate to SOC Lead"
+  },
+  {
+   "source": "Timestamp of User Interaction",
+   "relation": "PART_OF",
+   "target": "Escalate to SOC Lead"
+  }
+ ]
+}

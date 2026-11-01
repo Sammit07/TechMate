@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "GlobalProtect VPN client",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "VPN client shows \"Connection failed\" or \"Unable to connect to vpn.acme.example\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "Frequent disconnections after a few minutes of use",
+   "type": "Symptom"
+  },
+  {
+   "name": "Authentication failed prompts despite correct credentials",
+   "type": "Symptom"
+  },
+  {
+   "name": "Certificate expired warning in the client UI",
+   "type": "Symptom"
+  },
+  {
+   "name": "Connected to VPN but cannot ping or browse internal sites (intranet, file shares)",
+   "type": "Symptom"
+  },
+  {
+   "name": "Expired or corrupted machine certificate used for GlobalProtect authentication",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated VPN client version lacking recent security patches",
+   "type": "Cause"
+  },
+  {
+   "name": "Misconfigured split-tunnel or DNS settings causing traffic to bypass the tunnel",
+   "type": "Cause"
+  },
+  {
+   "name": "Local network restrictions (home router firewall, ISP blocking UDP 4500/500 or TCP 443)",
+   "type": "Cause"
+  },
+  {
+   "name": "Corrupted client profile or cached credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "Verify certificates",
+   "type": "Fix"
+  },
+  {
+   "name": "Reinstall the client",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "VPN client shows \"Connection failed\" or \"Unable to connect to vpn.acme.example\"",
+   "relation": "CAUSED_BY",
+   "target": "Expired or corrupted machine certificate used for GlobalProtect authentication"
+  },
+  {
+   "source": "Frequent disconnections after a few minutes of use",
+   "relation": "CAUSED_BY",
+   "target": "Misconfigured split-tunnel or DNS settings causing traffic to bypass the tunnel"
+  },
+  {
+   "source": "Authentication failed prompts despite correct credentials",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted client profile or cached credentials"
+  },
+  {
+   "source": "Certificate expired warning in the client UI",
+   "relation": "CAUSED_BY",
+   "target": "Expired or corrupted machine certificate used for GlobalProtect authentication"
+  },
+  {
+   "source": "Connected to VPN but cannot ping or browse internal sites (intranet, file shares)",
+   "relation": "CAUSED_BY",
+   "target": "Misconfigured split-tunnel or DNS settings causing traffic to bypass the tunnel"
+  },
+  {
+   "source": "Expired or corrupted machine certificate used for GlobalProtect authentication",
+   "relation": "FIXED_BY",
+   "target": "Verify certificates"
+  },
+  {
+   "source": "Outdated VPN client version lacking recent security patches",
+   "relation": "FIXED_BY",
+   "target": "Reinstall the client"
+  },
+  {
+   "source": "Misconfigured split-tunnel or DNS settings causing traffic to bypass the tunnel",
+   "relation": "FIXED_BY",
+   "target": "Reinstall the client"
+  },
+  {
+   "source": "Corrupted client profile or cached credentials",
+   "relation": "FIXED_BY",
+   "target": "Reinstall the client"
+  },
+  {
+   "source": "GlobalProtect VPN client",
+   "relation": "AFFECTS",
+   "target": "VPN client shows \"Connection failed\" or \"Unable to connect to vpn.acme.example\""
+  },
+  {
+   "source": "GlobalProtect VPN client",
+   "relation": "AFFECTS",
+   "target": "Frequent disconnections after a few minutes of use"
+  },
+  {
+   "source": "GlobalProtect VPN client",
+   "relation": "AFFECTS",
+   "target": "Authentication failed prompts despite correct credentials"
+  },
+  {
+   "source": "GlobalProtect VPN client",
+   "relation": "AFFECTS",
+   "target": "Certificate expired warning in the client UI"
+  },
+  {
+   "source": "GlobalProtect VPN client",
+   "relation": "AFFECTS",
+   "target": "Connected to VPN but cannot ping or browse internal sites (intranet, file shares)"
+  }
+ ]
+}

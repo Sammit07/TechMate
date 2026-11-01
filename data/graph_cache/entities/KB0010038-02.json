@@ -1,0 +1,207 @@
+{
+ "entities": [
+  {
+   "name": "docking station",
+   "type": "Product"
+  },
+  {
+   "name": "external monitor",
+   "type": "Product"
+  },
+  {
+   "name": "DisplayPort/HDMI cable",
+   "type": "Component"
+  },
+  {
+   "name": "dock firmware",
+   "type": "Component"
+  },
+  {
+   "name": "display settings",
+   "type": "Component"
+  },
+  {
+   "name": "NVRAM",
+   "type": "Component"
+  },
+  {
+   "name": "no signal",
+   "type": "Symptom"
+  },
+  {
+   "name": "flickering screen",
+   "type": "Symptom"
+  },
+  {
+   "name": "incorrect resolution",
+   "type": "Symptom"
+  },
+  {
+   "name": "USB peripheral not recognized",
+   "type": "Symptom"
+  },
+  {
+   "name": "dock charging issue",
+   "type": "Symptom"
+  },
+  {
+   "name": "outdated dock firmware",
+   "type": "Cause"
+  },
+  {
+   "name": "faulty DisplayPort/HDMI cable",
+   "type": "Cause"
+  },
+  {
+   "name": "misconfigured display settings",
+   "type": "Cause"
+  },
+  {
+   "name": "macOS NVRAM issue",
+   "type": "Cause"
+  },
+  {
+   "name": "remote dock firmware update",
+   "type": "Fix"
+  },
+  {
+   "name": "cable replacement",
+   "type": "Fix"
+  },
+  {
+   "name": "display settings adjustment",
+   "type": "Fix"
+  },
+  {
+   "name": "NVRAM reset",
+   "type": "Fix"
+  },
+  {
+   "name": "on-site dock swap",
+   "type": "Fix"
+  },
+  {
+   "name": "Intune firmware push",
+   "type": "Fix"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi network",
+   "type": "Component"
+  },
+  {
+   "name": "graphics driver",
+   "type": "Component"
+  },
+  {
+   "name": "monitor EDID",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "no signal",
+   "relation": "CAUSED_BY",
+   "target": "faulty DisplayPort/HDMI cable"
+  },
+  {
+   "source": "no signal",
+   "relation": "CAUSED_BY",
+   "target": "outdated dock firmware"
+  },
+  {
+   "source": "flickering screen",
+   "relation": "CAUSED_BY",
+   "target": "misconfigured display settings"
+  },
+  {
+   "source": "USB peripheral not recognized",
+   "relation": "CAUSED_BY",
+   "target": "outdated dock firmware"
+  },
+  {
+   "source": "dock charging issue",
+   "relation": "CAUSED_BY",
+   "target": "outdated dock firmware"
+  },
+  {
+   "source": "outdated dock firmware",
+   "relation": "FIXED_BY",
+   "target": "remote dock firmware update"
+  },
+  {
+   "source": "outdated dock firmware",
+   "relation": "FIXED_BY",
+   "target": "Intune firmware push"
+  },
+  {
+   "source": "faulty DisplayPort/HDMI cable",
+   "relation": "FIXED_BY",
+   "target": "cable replacement"
+  },
+  {
+   "source": "misconfigured display settings",
+   "relation": "FIXED_BY",
+   "target": "display settings adjustment"
+  },
+  {
+   "source": "macOS NVRAM issue",
+   "relation": "FIXED_BY",
+   "target": "NVRAM reset"
+  },
+  {
+   "source": "persistent dock issue",
+   "relation": "FIXED_BY",
+   "target": "on-site dock swap"
+  },
+  {
+   "source": "no signal",
+   "relation": "INDICATES",
+   "target": "faulty DisplayPort/HDMI cable"
+  },
+  {
+   "source": "flickering screen",
+   "relation": "INDICATES",
+   "target": "misconfigured display settings"
+  },
+  {
+   "source": "docking station",
+   "relation": "AFFECTS",
+   "target": "external monitor"
+  },
+  {
+   "source": "docking station",
+   "relation": "AFFECTS",
+   "target": "USB peripheral not recognized"
+  },
+  {
+   "source": "docking station",
+   "relation": "AFFECTS",
+   "target": "dock charging issue"
+  },
+  {
+   "source": "dock firmware",
+   "relation": "PART_OF",
+   "target": "docking station"
+  },
+  {
+   "source": "DisplayPort/HDMI cable",
+   "relation": "PART_OF",
+   "target": "docking station"
+  },
+  {
+   "source": "ACME-Corp Wi-Fi network",
+   "relation": "AFFECTS",
+   "target": "docking station"
+  },
+  {
+   "source": "graphics driver",
+   "relation": "AFFECTS",
+   "target": "external monitor"
+  },
+  {
+   "source": "monitor EDID",
+   "relation": "AFFECTS",
+   "target": "external monitor"
+  }
+ ]
+}

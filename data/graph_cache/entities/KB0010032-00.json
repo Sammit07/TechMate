@@ -1,0 +1,138 @@
+{
+ "entities": [
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "laptop will not power on",
+   "type": "Symptom"
+  },
+  {
+   "name": "stuck on manufacturer/logo screen",
+   "type": "Symptom"
+  },
+  {
+   "name": "black screen with cursor or no display",
+   "type": "Symptom"
+  },
+  {
+   "name": "Automatic Repair loop",
+   "type": "Symptom"
+  },
+  {
+   "name": "BitLocker recovery key required",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "hardware failure",
+   "type": "Cause"
+  },
+  {
+   "name": "corrupted BIOS/UEFI firmware",
+   "type": "Cause"
+  },
+  {
+   "name": "broken Windows update",
+   "type": "Cause"
+  },
+  {
+   "name": "drained battery",
+   "type": "Cause"
+  },
+  {
+   "name": "TPM or PIN change",
+   "type": "Cause"
+  },
+  {
+   "name": "perform hard reset",
+   "type": "Fix"
+  },
+  {
+   "name": "check power source and connections",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "laptop will not power on",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "stuck on manufacturer/logo screen",
+   "relation": "AFFECTS",
+   "target": "Lenovo ThinkPad T14/X1 Carbon"
+  },
+  {
+   "source": "black screen with cursor or no display",
+   "relation": "AFFECTS",
+   "target": "HP EliteBook 840"
+  },
+  {
+   "source": "Automatic Repair loop",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "BitLocker recovery key required",
+   "relation": "INDICATES",
+   "target": "TPM or PIN change"
+  },
+  {
+   "source": "BitLocker recovery key required",
+   "relation": "CAUSED_BY",
+   "target": "TPM or PIN change"
+  },
+  {
+   "source": "hardware failure",
+   "relation": "CAUSED_BY",
+   "target": "laptop will not power on"
+  },
+  {
+   "source": "corrupted BIOS/UEFI firmware",
+   "relation": "CAUSED_BY",
+   "target": "stuck on manufacturer/logo screen"
+  },
+  {
+   "source": "broken Windows update",
+   "relation": "CAUSED_BY",
+   "target": "Automatic Repair loop"
+  },
+  {
+   "source": "drained battery",
+   "relation": "CAUSED_BY",
+   "target": "laptop will not power on"
+  },
+  {
+   "source": "perform hard reset",
+   "relation": "FIXED_BY",
+   "target": "laptop will not power on"
+  },
+  {
+   "source": "check power source and connections",
+   "relation": "FIXED_BY",
+   "target": "drained battery"
+  }
+ ]
+}

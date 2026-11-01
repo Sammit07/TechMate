@@ -1,0 +1,173 @@
+{
+ "entities": [
+  {
+   "name": "STOP error 0x0000007E",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "SYSTEM_THREAD_EXCEPTION_NOT_HANDLED",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "STOP error 0x0000001A",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "MEMORY_MANAGEMENT",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "STOP error 0x000000D1",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "DRIVER_IRQL_NOT_LESS_OR_EQUAL",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "STOP error 0x00000050",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "PAGE_FAULT_IN_NONPAGED_AREA",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Blue screen with message: \"Your PC ran into a problem and needs to restart.\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "System restarts unexpectedly after Windows Update or driver install",
+   "type": "Symptom"
+  },
+  {
+   "name": "Frequent crashes during graphics-intensive tasks",
+   "type": "Symptom"
+  },
+  {
+   "name": "Faulty or outdated graphics driver",
+   "type": "Cause"
+  },
+  {
+   "name": "Recent Windows quality or feature update that introduced a bug",
+   "type": "Cause"
+  },
+  {
+   "name": "Corrupted system files or registry",
+   "type": "Cause"
+  },
+  {
+   "name": "Defective RAM or memory module",
+   "type": "Cause"
+  },
+  {
+   "name": "Overheating due to blocked vents or failing fan",
+   "type": "Cause"
+  },
+  {
+   "name": "Incompatible third-party software or antivirus",
+   "type": "Cause"
+  },
+  {
+   "name": "BitLocker recovery key mismatch after BIOS/firmware change",
+   "type": "Cause"
+  },
+  {
+   "name": "Rollback problematic graphics driver",
+   "type": "Fix"
+  },
+  {
+   "name": "Replace bad RAM",
+   "type": "Fix"
+  },
+  {
+   "name": "Uninstall recent Windows update",
+   "type": "Fix"
+  },
+  {
+   "name": "Dell Latitude 5440",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "STOP error 0x0000007E",
+   "relation": "INDICATES",
+   "target": "Faulty or outdated graphics driver"
+  },
+  {
+   "source": "STOP error 0x0000001A",
+   "relation": "INDICATES",
+   "target": "Defective RAM or memory module"
+  },
+  {
+   "source": "STOP error 0x000000D1",
+   "relation": "INDICATES",
+   "target": "Faulty or outdated graphics driver"
+  },
+  {
+   "source": "STOP error 0x00000050",
+   "relation": "INDICATES",
+   "target": "Defective RAM or memory module"
+  },
+  {
+   "source": "Blue screen with message: \"Your PC ran into a problem and needs to restart.\"",
+   "relation": "CAUSED_BY",
+   "target": "Faulty or outdated graphics driver"
+  },
+  {
+   "source": "System restarts unexpectedly after Windows Update or driver install",
+   "relation": "CAUSED_BY",
+   "target": "Recent Windows quality or feature update that introduced a bug"
+  },
+  {
+   "source": "Frequent crashes during graphics-intensive tasks",
+   "relation": "CAUSED_BY",
+   "target": "Faulty or outdated graphics driver"
+  },
+  {
+   "source": "Faulty or outdated graphics driver",
+   "relation": "FIXED_BY",
+   "target": "Rollback problematic graphics driver"
+  },
+  {
+   "source": "Defective RAM or memory module",
+   "relation": "FIXED_BY",
+   "target": "Replace bad RAM"
+  },
+  {
+   "source": "Recent Windows quality or feature update that introduced a bug",
+   "relation": "FIXED_BY",
+   "target": "Uninstall recent Windows update"
+  },
+  {
+   "source": "Faulty or outdated graphics driver",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440"
+  },
+  {
+   "source": "Defective RAM or memory module",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440"
+  },
+  {
+   "source": "Recent Windows quality or feature update that introduced a bug",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "Corrupted system files or registry",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "Overheating due to blocked vents or failing fan",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440"
+  }
+ ]
+}

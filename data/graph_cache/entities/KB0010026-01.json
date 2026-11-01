@@ -1,0 +1,162 @@
+{
+ "entities": [
+  {
+   "name": "slow network",
+   "type": "Symptom"
+  },
+  {
+   "name": "high ping latency",
+   "type": "Symptom"
+  },
+  {
+   "name": "packet loss",
+   "type": "Symptom"
+  },
+  {
+   "name": "low download/upload speed",
+   "type": "Symptom"
+  },
+  {
+   "name": "connected to ACME-Corp Wi-Fi",
+   "type": "Component"
+  },
+  {
+   "name": "Wi-Fi signal strength",
+   "type": "Component"
+  },
+  {
+   "name": "2.4 GHz band",
+   "type": "Component"
+  },
+  {
+   "name": "5 GHz band",
+   "type": "Component"
+  },
+  {
+   "name": "wired Ethernet connection",
+   "type": "Component"
+  },
+  {
+   "name": "site-wide network issue",
+   "type": "Cause"
+  },
+  {
+   "name": "ISP problem",
+   "type": "Cause"
+  },
+  {
+   "name": "band-related congestion",
+   "type": "Cause"
+  },
+  {
+   "name": "run ping 8.8.8.8",
+   "type": "Fix"
+  },
+  {
+   "name": "run speed test",
+   "type": "Fix"
+  },
+  {
+   "name": "switch to 5 GHz band",
+   "type": "Fix"
+  },
+  {
+   "name": "use wired Ethernet",
+   "type": "Fix"
+  },
+  {
+   "name": "check with colleagues",
+   "type": "Fix"
+  },
+  {
+   "name": "check internal status page",
+   "type": "Fix"
+  },
+  {
+   "name": "test external site reachability",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "slow network",
+   "relation": "CAUSED_BY",
+   "target": "band-related congestion"
+  },
+  {
+   "source": "slow network",
+   "relation": "CAUSED_BY",
+   "target": "site-wide network issue"
+  },
+  {
+   "source": "slow network",
+   "relation": "CAUSED_BY",
+   "target": "ISP problem"
+  },
+  {
+   "source": "high ping latency",
+   "relation": "INDICATES",
+   "target": "slow network"
+  },
+  {
+   "source": "packet loss",
+   "relation": "INDICATES",
+   "target": "slow network"
+  },
+  {
+   "source": "low download/upload speed",
+   "relation": "INDICATES",
+   "target": "slow network"
+  },
+  {
+   "source": "Wi-Fi signal strength",
+   "relation": "AFFECTS",
+   "target": "2.4 GHz band"
+  },
+  {
+   "source": "Wi-Fi signal strength",
+   "relation": "AFFECTS",
+   "target": "5 GHz band"
+  },
+  {
+   "source": "connected to ACME-Corp Wi-Fi",
+   "relation": "PART_OF",
+   "target": "Wi-Fi signal strength"
+  },
+  {
+   "source": "band-related congestion",
+   "relation": "FIXED_BY",
+   "target": "switch to 5 GHz band"
+  },
+  {
+   "source": "band-related congestion",
+   "relation": "FIXED_BY",
+   "target": "use wired Ethernet"
+  },
+  {
+   "source": "site-wide network issue",
+   "relation": "FIXED_BY",
+   "target": "check with colleagues"
+  },
+  {
+   "source": "site-wide network issue",
+   "relation": "FIXED_BY",
+   "target": "check internal status page"
+  },
+  {
+   "source": "ISP problem",
+   "relation": "FIXED_BY",
+   "target": "test external site reachability"
+  },
+  {
+   "source": "slow network",
+   "relation": "FIXED_BY",
+   "target": "run ping 8.8.8.8"
+  },
+  {
+   "source": "slow network",
+   "relation": "FIXED_BY",
+   "target": "run speed test"
+  }
+ ]
+}

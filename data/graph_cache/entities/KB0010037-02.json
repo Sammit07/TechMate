@@ -1,0 +1,145 @@
+{
+ "entities": [
+  {
+   "name": "swollen battery",
+   "type": "Symptom"
+  },
+  {
+   "name": "laptop not charging",
+   "type": "Symptom"
+  },
+  {
+   "name": "battery drains fast",
+   "type": "Symptom"
+  },
+  {
+   "name": "charger not working",
+   "type": "Symptom"
+  },
+  {
+   "name": "battery health >80%",
+   "type": "Component"
+  },
+  {
+   "name": "quarantine laptop",
+   "type": "Fix"
+  },
+  {
+   "name": "replace battery",
+   "type": "Fix"
+  },
+  {
+   "name": "Dell BIOS battery test",
+   "type": "Component"
+  },
+  {
+   "name": "Lenovo Vantage",
+   "type": "Component"
+  },
+  {
+   "name": "HP Support Assistant",
+   "type": "Component"
+  },
+  {
+   "name": "Apple System Report",
+   "type": "Component"
+  },
+  {
+   "name": "smoke, sparks, fire, or strong chemical odor",
+   "type": "Symptom"
+  },
+  {
+   "name": "P1 Critical issue",
+   "type": "Cause"
+  },
+  {
+   "name": "evacuate area and disconnect power",
+   "type": "Fix"
+  },
+  {
+   "name": "call IT Service Desk ext. 4357",
+   "type": "Fix"
+  },
+  {
+   "name": "repeated failures on same model line",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "swollen battery",
+   "relation": "CAUSED_BY",
+   "target": "defective battery"
+  },
+  {
+   "source": "laptop not charging",
+   "relation": "CAUSED_BY",
+   "target": "swollen battery"
+  },
+  {
+   "source": "battery drains fast",
+   "relation": "CAUSED_BY",
+   "target": "swollen battery"
+  },
+  {
+   "source": "charger not working",
+   "relation": "CAUSED_BY",
+   "target": "swollen battery"
+  },
+  {
+   "source": "quarantine laptop",
+   "relation": "FIXED_BY",
+   "target": "swollen battery"
+  },
+  {
+   "source": "replace battery",
+   "relation": "FIXED_BY",
+   "target": "swollen battery"
+  },
+  {
+   "source": "battery health >80%",
+   "relation": "AFFECTS",
+   "target": "laptop"
+  },
+  {
+   "source": "Dell BIOS battery test",
+   "relation": "PART_OF",
+   "target": "Dell laptop"
+  },
+  {
+   "source": "Lenovo Vantage",
+   "relation": "PART_OF",
+   "target": "Lenovo laptop"
+  },
+  {
+   "source": "HP Support Assistant",
+   "relation": "PART_OF",
+   "target": "HP laptop"
+  },
+  {
+   "source": "Apple System Report",
+   "relation": "PART_OF",
+   "target": "Apple laptop"
+  },
+  {
+   "source": "smoke, sparks, fire, or strong chemical odor",
+   "relation": "INDICATES",
+   "target": "P1 Critical issue"
+  },
+  {
+   "source": "evacuate area and disconnect power",
+   "relation": "FIXED_BY",
+   "target": "P1 Critical issue"
+  },
+  {
+   "source": "call IT Service Desk ext. 4357",
+   "relation": "FIXED_BY",
+   "target": "P1 Critical issue"
+  },
+  {
+   "source": "repeated failures on same model line",
+   "relation": "CAUSED_BY",
+   "target": "escalation to Hardware Engineering team"
+  }
+ ]
+}

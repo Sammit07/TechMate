@@ -1,0 +1,149 @@
+{
+ "entities": [
+  {
+   "name": "Intune console",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft 365 admin center",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Adobe Reader",
+   "type": "Product"
+  },
+  {
+   "name": "Visual Studio Code",
+   "type": "Product"
+  },
+  {
+   "name": "Python",
+   "type": "Product"
+  },
+  {
+   "name": "approved software list",
+   "type": "Component"
+  },
+  {
+   "name": "license assignment",
+   "type": "Component"
+  },
+  {
+   "name": "software request",
+   "type": "Component"
+  },
+  {
+   "name": "app absent from approved software list",
+   "type": "Cause"
+  },
+  {
+   "name": "no license available or app requires security review",
+   "type": "Cause"
+  },
+  {
+   "name": "assign license if available and re-attempt installation",
+   "type": "Fix"
+  },
+  {
+   "name": "create ticket in Application Support queue",
+   "type": "Fix"
+  },
+  {
+   "name": "verify application launches without activation prompt",
+   "type": "Fix"
+  },
+  {
+   "name": "check Help -> About menu for version match",
+   "type": "Fix"
+  },
+  {
+   "name": "confirm license status shows as activated",
+   "type": "Fix"
+  },
+  {
+   "name": "application appears in Intune Apps list with Installed status",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Installation failure",
+   "relation": "CAUSED_BY",
+   "target": "app absent from approved software list"
+  },
+  {
+   "source": "Installation failure",
+   "relation": "CAUSED_BY",
+   "target": "no license available or app requires security review"
+  },
+  {
+   "source": "app absent from approved software list",
+   "relation": "INDICATES",
+   "target": "no license available or app requires security review"
+  },
+  {
+   "source": "no license available or app requires security review",
+   "relation": "FIXED_BY",
+   "target": "assign license if available and re-attempt installation"
+  },
+  {
+   "source": "no license available or app requires security review",
+   "relation": "FIXED_BY",
+   "target": "create ticket in Application Support queue"
+  },
+  {
+   "source": "Installation failure",
+   "relation": "FIXED_BY",
+   "target": "verify application launches without activation prompt"
+  },
+  {
+   "source": "Installation failure",
+   "relation": "FIXED_BY",
+   "target": "check Help -> About menu for version match"
+  },
+  {
+   "source": "Installation failure",
+   "relation": "FIXED_BY",
+   "target": "confirm license status shows as activated"
+  },
+  {
+   "source": "Installation failure",
+   "relation": "FIXED_BY",
+   "target": "application appears in Intune Apps list with Installed status"
+  },
+  {
+   "source": "approved software list",
+   "relation": "AFFECTS",
+   "target": "Intune console"
+  },
+  {
+   "source": "license assignment",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 admin center"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "PART_OF",
+   "target": "Intune console"
+  },
+  {
+   "source": "Adobe Reader",
+   "relation": "AFFECTS",
+   "target": "license assignment"
+  },
+  {
+   "source": "Visual Studio Code",
+   "relation": "AFFECTS",
+   "target": "license assignment"
+  },
+  {
+   "source": "Python",
+   "relation": "AFFECTS",
+   "target": "license assignment"
+  }
+ ]
+}

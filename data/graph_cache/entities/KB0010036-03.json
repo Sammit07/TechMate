@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Laptop Not Charging Or Battery Draining Fast",
+   "type": "Symptom"
+  },
+  {
+   "name": "Battery Health Low",
+   "type": "Cause"
+  },
+  {
+   "name": "Charger Not Working",
+   "type": "Cause"
+  },
+  {
+   "name": "Power Adapter Faulty",
+   "type": "Cause"
+  },
+  {
+   "name": "Charging Port Issue",
+   "type": "Cause"
+  },
+  {
+   "name": "Swollen Battery Safety Incident",
+   "type": "Cause"
+  },
+  {
+   "name": "Motherboard Or Charging-Circuit Fault",
+   "type": "Cause"
+  },
+  {
+   "name": "Run Powercfg Batteryreport Command",
+   "type": "Fix"
+  },
+  {
+   "name": "Check System Information Power Macos",
+   "type": "Fix"
+  },
+  {
+   "name": "Replace Charger Twice And Battery Once",
+   "type": "Fix"
+  },
+  {
+   "name": "Quarantine Device Notify Leads Follow Hazmat Procedure",
+   "type": "Fix"
+  },
+  {
+   "name": "Escalate To Desktop Support Senior Engineer",
+   "type": "Fix"
+  },
+  {
+   "name": "Windows Laptop",
+   "type": "Product"
+  },
+  {
+   "name": "Macos Laptop",
+   "type": "Product"
+  },
+  {
+   "name": "BIOS UEFI Vendor Utility",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Laptop Not Charging Or Battery Draining Fast",
+   "relation": "CAUSED_BY",
+   "target": "Battery Health Low"
+  },
+  {
+   "source": "Laptop Not Charging Or Battery Draining Fast",
+   "relation": "CAUSED_BY",
+   "target": "Charger Not Working"
+  },
+  {
+   "source": "Laptop Not Charging Or Battery Draining Fast",
+   "relation": "CAUSED_BY",
+   "target": "Power Adapter Faulty"
+  },
+  {
+   "source": "Laptop Not Charging Or Battery Draining Fast",
+   "relation": "CAUSED_BY",
+   "target": "Charging Port Issue"
+  },
+  {
+   "source": "Laptop Not Charging Or Battery Draining Fast",
+   "relation": "CAUSED_BY",
+   "target": "Swollen Battery Safety Incident"
+  },
+  {
+   "source": "Laptop Not Charging Or Battery Draining Fast",
+   "relation": "CAUSED_BY",
+   "target": "Motherboard Or Charging-Circuit Fault"
+  },
+  {
+   "source": "Battery Health Low",
+   "relation": "AFFECTS",
+   "target": "Windows Laptop"
+  },
+  {
+   "source": "Battery Health Low",
+   "relation": "AFFECTS",
+   "target": "Macos Laptop"
+  },
+  {
+   "source": "Run Powercfg Batteryreport Command",
+   "relation": "FIXED_BY",
+   "target": "Battery Health Low"
+  },
+  {
+   "source": "Check System Information Power Macos",
+   "relation": "FIXED_BY",
+   "target": "Battery Health Low"
+  },
+  {
+   "source": "Replace Charger Twice And Battery Once",
+   "relation": "FIXED_BY",
+   "target": "Charger Not Working"
+  },
+  {
+   "source": "Quarantine Device Notify Leads Follow Hazmat Procedure",
+   "relation": "FIXED_BY",
+   "target": "Swollen Battery Safety Incident"
+  },
+  {
+   "source": "Escalate To Desktop Support Senior Engineer",
+   "relation": "FIXED_BY",
+   "target": "Motherboard Or Charging-Circuit Fault"
+  },
+  {
+   "source": "BIOS UEFI Vendor Utility",
+   "relation": "PART_OF",
+   "target": "Windows Laptop"
+  },
+  {
+   "source": "BIOS UEFI Vendor Utility",
+   "relation": "PART_OF",
+   "target": "Macos Laptop"
+  }
+ ]
+}

@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Windows logon failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "repeated prompts for credentials",
+   "type": "Symptom"
+  },
+  {
+   "name": "MFA failures",
+   "type": "Symptom"
+  },
+  {
+   "name": "account lockout",
+   "type": "Symptom"
+  },
+  {
+   "name": "cached credentials",
+   "type": "Component"
+  },
+  {
+   "name": "Credential Manager",
+   "type": "Component"
+  },
+  {
+   "name": "password reset",
+   "type": "Fix"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Fix"
+  },
+  {
+   "name": "Azure AD",
+   "type": "Product"
+  },
+  {
+   "name": "on-prem AD",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi",
+   "type": "Product"
+  },
+  {
+   "name": "SSPR",
+   "type": "Product"
+  },
+  {
+   "name": "0x8009030D",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "0xC000006A",
+   "type": "ErrorCode"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Windows logon failure",
+   "relation": "CAUSED_BY",
+   "target": "stale password hash synchronization"
+  },
+  {
+   "source": "repeated prompts for credentials",
+   "relation": "CAUSED_BY",
+   "target": "lingering cached credentials"
+  },
+  {
+   "source": "MFA failures",
+   "relation": "CAUSED_BY",
+   "target": "VPN connection using outdated credentials"
+  },
+  {
+   "source": "account lockout",
+   "relation": "CAUSED_BY",
+   "target": "failed logon attempts with correct credentials"
+  },
+  {
+   "source": "cached credentials",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "Credential Manager",
+   "relation": "PART_OF",
+   "target": "Windows"
+  },
+  {
+   "source": "password reset",
+   "relation": "FIXED_BY",
+   "target": "stale password hash synchronization"
+  },
+  {
+   "source": "Temporary Access Pass",
+   "relation": "FIXED_BY",
+   "target": "account lockout due to sync delay"
+  },
+  {
+   "source": "0x8009030D",
+   "relation": "INDICATES",
+   "target": "Windows logon failure"
+  },
+  {
+   "source": "0xC000006A",
+   "relation": "INDICATES",
+   "target": "invalid username or password"
+  },
+  {
+   "source": "Azure AD",
+   "relation": "AFFECTS",
+   "target": "password reset"
+  },
+  {
+   "source": "on-prem AD",
+   "relation": "AFFECTS",
+   "target": "domain password sync"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "VPN login"
+  },
+  {
+   "source": "SSPR",
+   "relation": "AFFECTS",
+   "target": "password reset"
+  },
+  {
+   "source": "cached credentials",
+   "relation": "FIXED_BY",
+   "target": "remove Credential Manager entries"
+  }
+ ]
+}

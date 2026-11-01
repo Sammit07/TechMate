@@ -1,0 +1,131 @@
+{
+ "entities": [
+  {
+   "name": "Access request approval workflow",
+   "type": "Component"
+  },
+  {
+   "name": "Auto-escalation to manager's delegate",
+   "type": "Fix"
+  },
+  {
+   "name": "IAM Provisioning stage",
+   "type": "Component"
+  },
+  {
+   "name": "Propagation Confirmation stage",
+   "type": "Component"
+  },
+  {
+   "name": "Access granted notification",
+   "type": "Symptom"
+  },
+  {
+   "name": "Service-Desk Agent Procedure",
+   "type": "Component"
+  },
+  {
+   "name": "Ticket Intake step",
+   "type": "Component"
+  },
+  {
+   "name": "Validate Information step",
+   "type": "Component"
+  },
+  {
+   "name": "Exact resource identifier requirement",
+   "type": "Component"
+  },
+  {
+   "name": "Business justification requirement",
+   "type": "Component"
+  },
+  {
+   "name": "Correct manager verification",
+   "type": "Component"
+  },
+  {
+   "name": "File share access verification",
+   "type": "Fix"
+  },
+  {
+   "name": "SharePoint site access verification",
+   "type": "Fix"
+  },
+  {
+   "name": "HR system access verification",
+   "type": "Fix"
+  },
+  {
+   "name": "Distribution list access verification",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Access request approval workflow",
+   "relation": "AFFECTS",
+   "target": "Auto-escalation to manager's delegate"
+  },
+  {
+   "source": "IAM Provisioning stage",
+   "relation": "PART_OF",
+   "target": "Access request approval workflow"
+  },
+  {
+   "source": "Propagation Confirmation stage",
+   "relation": "PART_OF",
+   "target": "Access request approval workflow"
+  },
+  {
+   "source": "Access granted notification",
+   "relation": "INDICATES",
+   "target": "Successful access provisioning"
+  },
+  {
+   "source": "Service-Desk Agent Procedure",
+   "relation": "AFFECTS",
+   "target": "Ticket Intake step"
+  },
+  {
+   "source": "Service-Desk Agent Procedure",
+   "relation": "AFFECTS",
+   "target": "Validate Information step"
+  },
+  {
+   "source": "Validate Information step",
+   "relation": "AFFECTS",
+   "target": "Exact resource identifier requirement"
+  },
+  {
+   "source": "Validate Information step",
+   "relation": "AFFECTS",
+   "target": "Business justification requirement"
+  },
+  {
+   "source": "Validate Information step",
+   "relation": "AFFECTS",
+   "target": "Correct manager verification"
+  },
+  {
+   "source": "Access granted notification",
+   "relation": "FIXED_BY",
+   "target": "File share access verification"
+  },
+  {
+   "source": "Access granted notification",
+   "relation": "FIXED_BY",
+   "target": "SharePoint site access verification"
+  },
+  {
+   "source": "Access granted notification",
+   "relation": "FIXED_BY",
+   "target": "HR system access verification"
+  },
+  {
+   "source": "Access granted notification",
+   "relation": "FIXED_BY",
+   "target": "Distribution list access verification"
+  }
+ ]
+}

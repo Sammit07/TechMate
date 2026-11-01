@@ -1,0 +1,148 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15 MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "on-prem Active Directory",
+   "type": "Product"
+  },
+  {
+   "name": "SharePoint Online",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "file shares accessed via PaperCut",
+   "type": "Product"
+  },
+  {
+   "name": "HR systems",
+   "type": "Product"
+  },
+  {
+   "name": "distribution lists managed in Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "access request approval workflow",
+   "type": "Component"
+  },
+  {
+   "name": "manager approval step",
+   "type": "Component"
+  },
+  {
+   "name": "provisioning timeline",
+   "type": "Component"
+  },
+  {
+   "name": "self-service portal",
+   "type": "Component"
+  },
+  {
+   "name": "\"You don't have permission to access this folder\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "\"Access denied\" error in SharePoint or Teams",
+   "type": "Symptom"
+  },
+  {
+   "name": "Unable to open HR application",
+   "type": "Symptom"
+  },
+  {
+   "name": "Distribution list email bounces",
+   "type": "Symptom"
+  },
+  {
+   "name": "Request submitted without required manager approval",
+   "type": "Cause"
+  },
+  {
+   "name": "Manager approval recorded but security group not yet provisioned",
+   "type": "Cause"
+  },
+  {
+   "name": "Incorrect target group or distribution list selected",
+   "type": "Cause"
+  },
+  {
+   "name": "Request stuck in pending state due to missing temporary access pass or MFA requirement",
+   "type": "Cause"
+  },
+  {
+   "name": "User's account not yet synchronized between on-prem AD and Entra ID",
+   "type": "Cause"
+  },
+  {
+   "name": "Submit an Access Request",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "\"You don't have permission to access this folder\"",
+   "relation": "AFFECTS",
+   "target": "file shares accessed via PaperCut"
+  },
+  {
+   "source": "\"Access denied\" error in SharePoint or Teams",
+   "relation": "AFFECTS",
+   "target": "SharePoint Online"
+  },
+  {
+   "source": "Unable to open HR application",
+   "relation": "AFFECTS",
+   "target": "HR systems"
+  },
+  {
+   "source": "Distribution list email bounces",
+   "relation": "AFFECTS",
+   "target": "distribution lists managed in Entra ID"
+  },
+  {
+   "source": "Request submitted without required manager approval",
+   "relation": "CAUSED_BY",
+   "target": "manager approval step"
+  },
+  {
+   "source": "Manager approval recorded but security group not yet provisioned",
+   "relation": "CAUSED_BY",
+   "target": "provisioning timeline"
+  },
+  {
+   "source": "Incorrect target group or distribution list selected",
+   "relation": "CAUSED_BY",
+   "target": "access request approval workflow"
+  },
+  {
+   "source": "Request stuck in pending state due to missing temporary access pass or MFA requirement",
+   "relation": "CAUSED_BY",
+   "target": "access request approval workflow"
+  },
+  {
+   "source": "User's account not yet synchronized between on-prem AD and Entra ID",
+   "relation": "CAUSED_BY",
+   "target": "on-prem Active Directory"
+  },
+  {
+   "source": "Submit an Access Request",
+   "relation": "FIXED_BY",
+   "target": "self-service portal"
+  }
+ ]
+}

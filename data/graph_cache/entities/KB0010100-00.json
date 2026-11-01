@@ -1,0 +1,182 @@
+{
+ "entities": [
+  {
+   "name": "OneDrive for Business",
+   "type": "Product"
+  },
+  {
+   "name": "SharePoint Online",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15 MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "external sharing",
+   "type": "Component"
+  },
+  {
+   "name": "secure link",
+   "type": "Component"
+  },
+  {
+   "name": "time-limited link",
+   "type": "Component"
+  },
+  {
+   "name": "view-only link",
+   "type": "Component"
+  },
+  {
+   "name": "edit link",
+   "type": "Component"
+  },
+  {
+   "name": "authentication requirement",
+   "type": "Component"
+  },
+  {
+   "name": "Your organization does not allow external sharing",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Access denied",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "sign-in prompt that external recipient cannot bypass",
+   "type": "Symptom"
+  },
+  {
+   "name": "recipient cannot view or edit the file",
+   "type": "Symptom"
+  },
+  {
+   "name": "external sharing disabled at tenant, site, or library level",
+   "type": "Cause"
+  },
+  {
+   "name": "Conditional Access policies block unauthenticated access from external users",
+   "type": "Cause"
+  },
+  {
+   "name": "link expiration date has passed",
+   "type": "Cause"
+  },
+  {
+   "name": "file protected by sensitivity labels that prohibit external distribution",
+   "type": "Cause"
+  },
+  {
+   "name": "enable external sharing at tenant, site, or library level",
+   "type": "Fix"
+  },
+  {
+   "name": "adjust Conditional Access policies to allow authenticated external access",
+   "type": "Fix"
+  },
+  {
+   "name": "regenerate link with future expiration date",
+   "type": "Fix"
+  },
+  {
+   "name": "remove or adjust sensitivity label blocking external distribution",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Your organization does not allow external sharing",
+   "relation": "INDICATES",
+   "target": "external sharing disabled at tenant, site, or library level"
+  },
+  {
+   "source": "Access denied",
+   "relation": "INDICATES",
+   "target": "Conditional Access policies block unauthenticated access from external users"
+  },
+  {
+   "source": "sign-in prompt that external recipient cannot bypass",
+   "relation": "INDICATES",
+   "target": "Conditional Access policies block unauthenticated access from external users"
+  },
+  {
+   "source": "recipient cannot view or edit the file",
+   "relation": "INDICATES",
+   "target": "link expiration date has passed"
+  },
+  {
+   "source": "recipient cannot view or edit the file",
+   "relation": "INDICATES",
+   "target": "file protected by sensitivity labels that prohibit external distribution"
+  },
+  {
+   "source": "external sharing disabled at tenant, site, or library level",
+   "relation": "AFFECTS",
+   "target": "OneDrive for Business"
+  },
+  {
+   "source": "external sharing disabled at tenant, site, or library level",
+   "relation": "AFFECTS",
+   "target": "SharePoint Online"
+  },
+  {
+   "source": "Conditional Access policies block unauthenticated access from external users",
+   "relation": "AFFECTS",
+   "target": "OneDrive for Business"
+  },
+  {
+   "source": "Conditional Access policies block unauthenticated access from external users",
+   "relation": "AFFECTS",
+   "target": "SharePoint Online"
+  },
+  {
+   "source": "link expiration date has passed",
+   "relation": "AFFECTS",
+   "target": "secure link"
+  },
+  {
+   "source": "file protected by sensitivity labels that prohibit external distribution",
+   "relation": "AFFECTS",
+   "target": "OneDrive for Business"
+  },
+  {
+   "source": "file protected by sensitivity labels that prohibit external distribution",
+   "relation": "AFFECTS",
+   "target": "SharePoint Online"
+  },
+  {
+   "source": "external sharing disabled at tenant, site, or library level",
+   "relation": "FIXED_BY",
+   "target": "enable external sharing at tenant, site, or library level"
+  },
+  {
+   "source": "Conditional Access policies block unauthenticated access from external users",
+   "relation": "FIXED_BY",
+   "target": "adjust Conditional Access policies to allow authenticated external access"
+  },
+  {
+   "source": "link expiration date has passed",
+   "relation": "FIXED_BY",
+   "target": "regenerate link with future expiration date"
+  },
+  {
+   "source": "file protected by sensitivity labels that prohibit external distribution",
+   "relation": "FIXED_BY",
+   "target": "remove or adjust sensitivity label blocking external distribution"
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "OneDrive Files On-Demand",
+   "type": "Component"
+  },
+  {
+   "name": "low disk space warning",
+   "type": "Symptom"
+  },
+  {
+   "name": "C: drive showing <5 GB free",
+   "type": "Symptom"
+  },
+  {
+   "name": "Files On-Demand enabled",
+   "type": "Fix"
+  },
+  {
+   "name": "empty Recycle Bin",
+   "type": "Fix"
+  },
+  {
+   "name": "Storage Sense",
+   "type": "Component"
+  },
+  {
+   "name": "OneDrive activity center",
+   "type": "Component"
+  },
+  {
+   "name": "blue cloud icon",
+   "type": "Component"
+  },
+  {
+   "name": "persistent sync errors",
+   "type": "Symptom"
+  },
+  {
+   "name": "large files in OneDrive",
+   "type": "Cause"
+  },
+  {
+   "name": "set OneDrive to start with Windows",
+   "type": "Fix"
+  },
+  {
+   "name": "quarterly Storage Sense run",
+   "type": "Fix"
+  },
+  {
+   "name": "avoid saving large personal media to OneDrive",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Desktop Support L2",
+   "type": "Fix"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "low disk space warning",
+   "relation": "CAUSED_BY",
+   "target": "large files in OneDrive"
+  },
+  {
+   "source": "C: drive showing <5 GB free",
+   "relation": "CAUSED_BY",
+   "target": "large files in OneDrive"
+  },
+  {
+   "source": "Files On-Demand enabled",
+   "relation": "FIXED_BY",
+   "target": "low disk space warning"
+  },
+  {
+   "source": "Files On-Demand enabled",
+   "relation": "FIXED_BY",
+   "target": "C: drive showing <5 GB free"
+  },
+  {
+   "source": "empty Recycle Bin",
+   "relation": "FIXED_BY",
+   "target": "low disk space warning"
+  },
+  {
+   "source": "Storage Sense",
+   "relation": "PART_OF",
+   "target": "OneDrive"
+  },
+  {
+   "source": "OneDrive activity center",
+   "relation": "PART_OF",
+   "target": "OneDrive"
+  },
+  {
+   "source": "blue cloud icon",
+   "relation": "INDICATES",
+   "target": "Files On-Demand enabled"
+  },
+  {
+   "source": "persistent sync errors",
+   "relation": "INDICATES",
+   "target": "OneDrive sync issues"
+  },
+  {
+   "source": "set OneDrive to start with Windows",
+   "relation": "FIXED_BY",
+   "target": "Files On-Demand disabled"
+  },
+  {
+   "source": "quarterly Storage Sense run",
+   "relation": "PREVENTS",
+   "target": "low disk space warning"
+  },
+  {
+   "source": "avoid saving large personal media to OneDrive",
+   "relation": "PREVENTS",
+   "target": "large files in OneDrive"
+  },
+  {
+   "source": "escalate to Desktop Support L2",
+   "relation": "FIXED_BY",
+   "target": "persistent sync errors"
+  },
+  {
+   "source": "OneDrive",
+   "relation": "AFFECTS",
+   "target": "C: drive showing <5 GB free"
+  }
+ ]
+}

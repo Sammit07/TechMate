@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "hardware upgrade",
+   "type": "Component"
+  },
+  {
+   "name": "laptop slow",
+   "type": "Symptom"
+  },
+  {
+   "name": "freezing",
+   "type": "Symptom"
+  },
+  {
+   "name": "high CPU",
+   "type": "Symptom"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "BitLocker",
+   "type": "Component"
+  },
+  {
+   "name": "FileVault",
+   "type": "Component"
+  },
+  {
+   "name": "warranty claim",
+   "type": "Component"
+  },
+  {
+   "name": "IT service portal",
+   "type": "Product"
+  },
+  {
+   "name": "proprietary DDR5 modules",
+   "type": "Component"
+  },
+  {
+   "name": "Desktop Support",
+   "type": "Product"
+  },
+  {
+   "name": "asset tag",
+   "type": "Component"
+  },
+  {
+   "name": "usage logs",
+   "type": "Component"
+  },
+  {
+   "name": "CMDB",
+   "type": "Product"
+  },
+  {
+   "name": "ticket status set to Resolved",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "laptop slow",
+   "relation": "AFFECTS",
+   "target": "hardware upgrade"
+  },
+  {
+   "source": "freezing",
+   "relation": "AFFECTS",
+   "target": "hardware upgrade"
+  },
+  {
+   "source": "high CPU",
+   "relation": "AFFECTS",
+   "target": "hardware upgrade"
+  },
+  {
+   "source": "update asset's hardware profile",
+   "relation": "FIXED_BY",
+   "target": "Intune"
+  },
+  {
+   "source": "add KB link",
+   "relation": "FIXED_BY",
+   "target": "knowledge base"
+  },
+  {
+   "source": "set ticket status to Resolved",
+   "relation": "FIXED_BY",
+   "target": "ticket resolution process"
+  },
+  {
+   "source": "escalate to Desktop Support",
+   "relation": "FIXED_BY",
+   "target": "warranty claim"
+  },
+  {
+   "source": "submit formal hardware upgrade request",
+   "relation": "FIXED_BY",
+   "target": "IT service portal"
+  },
+  {
+   "source": "proprietary DDR5 modules",
+   "relation": "PART_OF",
+   "target": "hardware upgrade"
+  },
+  {
+   "source": "Desktop Support",
+   "relation": "AFFECTS",
+   "target": "warranty claim"
+  },
+  {
+   "source": "asset tag",
+   "relation": "PART_OF",
+   "target": "warranty claim"
+  },
+  {
+   "source": "usage logs",
+   "relation": "PART_OF",
+   "target": "warranty claim"
+  },
+  {
+   "source": "BitLocker",
+   "relation": "AFFECTS",
+   "target": "laptop slow"
+  },
+  {
+   "source": "FileVault",
+   "relation": "AFFECTS",
+   "target": "laptop slow"
+  }
+ ]
+}

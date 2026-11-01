@@ -1,0 +1,11 @@
+# Runtime dependencies for the FastAPI backend (deployed to Vercel). Keep this list
+# minimal: everything here is bundled into the serverless function.
+fastapi==0.143.0
+falkordb==1.7.1
+openai==3.28.0
+pydantic==2.14.0
+python-dotenv==1.2.4
+email-validator==2.3.0
+tzdata==2026.5   # time-zone database (Windows and slim containers lack one)
+pypdf==6.20.0          # text from uploaded PDF documents and notices
+python-multipart==0.0.32  # file uploads (multipart/form-data)

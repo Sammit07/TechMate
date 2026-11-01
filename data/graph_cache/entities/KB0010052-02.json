@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Camera/Microphone Privacy Settings Blocked",
+   "type": "Symptom"
+  },
+  {
+   "name": "Policy Restriction Disabling Peripherals",
+   "type": "Cause"
+  },
+  {
+   "name": "Intune Remote Assistance",
+   "type": "Fix"
+  },
+  {
+   "name": "Device Manager Hardware Status Check",
+   "type": "Fix"
+  },
+  {
+   "name": "Driver Reinstall Procedure",
+   "type": "Fix"
+  },
+  {
+   "name": "Group Policy Peripheral Disable Check",
+   "type": "Fix"
+  },
+  {
+   "name": "Intune Device Configuration Profile Review",
+   "type": "Fix"
+  },
+  {
+   "name": "Camera App Video Preview Test",
+   "type": "Fix"
+  },
+  {
+   "name": "Teams Test Call Validation",
+   "type": "Fix"
+  },
+  {
+   "name": "Bluetooth Peripheral Pairing Test",
+   "type": "Fix"
+  },
+  {
+   "name": "Windows Privacy & Security Settings",
+   "type": "Component"
+  },
+  {
+   "name": "Device Manager",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Group Policy",
+   "type": "Component"
+  },
+  {
+   "name": "Camera Application",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Camera/Microphone Privacy Settings Blocked",
+   "relation": "CAUSED_BY",
+   "target": "Policy Restriction Disabling Peripherals"
+  },
+  {
+   "source": "Policy Restriction Disabling Peripherals",
+   "relation": "FIXED_BY",
+   "target": "Intune Remote Assistance"
+  },
+  {
+   "source": "Policy Restriction Disabling Peripherals",
+   "relation": "FIXED_BY",
+   "target": "Device Manager Hardware Status Check"
+  },
+  {
+   "source": "Policy Restriction Disabling Peripherals",
+   "relation": "FIXED_BY",
+   "target": "Driver Reinstall Procedure"
+  },
+  {
+   "source": "Policy Restriction Disabling Peripherals",
+   "relation": "FIXED_BY",
+   "target": "Group Policy Peripheral Disable Check"
+  },
+  {
+   "source": "Policy Restriction Disabling Peripherals",
+   "relation": "FIXED_BY",
+   "target": "Intune Device Configuration Profile Review"
+  },
+  {
+   "source": "Policy Restriction Disabling Peripherals",
+   "relation": "FIXED_BY",
+   "target": "Camera App Video Preview Test"
+  },
+  {
+   "source": "Policy Restriction Disabling Peripherals",
+   "relation": "FIXED_BY",
+   "target": "Teams Test Call Validation"
+  },
+  {
+   "source": "Policy Restriction Disabling Peripherals",
+   "relation": "FIXED_BY",
+   "target": "Bluetooth Peripheral Pairing Test"
+  },
+  {
+   "source": "Windows Privacy & Security Settings",
+   "relation": "AFFECTS",
+   "target": "Camera/Microphone Privacy Settings Blocked"
+  },
+  {
+   "source": "Device Manager",
+   "relation": "AFFECTS",
+   "target": "Camera/Microphone Privacy Settings Blocked"
+  },
+  {
+   "source": "Intune",
+   "relation": "PART_OF",
+   "target": "Intune Remote Assistance"
+  },
+  {
+   "source": "Group Policy",
+   "relation": "PART_OF",
+   "target": "Group Policy Peripheral Disable Check"
+  },
+  {
+   "source": "Camera Application",
+   "relation": "AFFECTS",
+   "target": "Camera/Microphone Privacy Settings Blocked"
+  }
+ ]
+}

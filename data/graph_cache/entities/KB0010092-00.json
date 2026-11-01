@@ -1,0 +1,230 @@
+{
+ "entities": [
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "BitLocker",
+   "type": "Component"
+  },
+  {
+   "name": "FileVault",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal app",
+   "type": "Component"
+  },
+  {
+   "name": "laptop fails to boot or shows a BitLocker recovery screen after travel",
+   "type": "Symptom"
+  },
+  {
+   "name": "unable to connect to ACME-Corp Wi-Fi or VPN GlobalProtect",
+   "type": "Symptom"
+  },
+  {
+   "name": "physical damage signs such as cracked screen, loose hinges, or liquid spillage",
+   "type": "Symptom"
+  },
+  {
+   "name": "missing or expired device certificate causing VPN authentication failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "improper shutdown or power loss leading to BitLocker recovery mode",
+   "type": "Cause"
+  },
+  {
+   "name": "exposure to extreme temperatures, humidity, or physical shocks during transit",
+   "type": "Cause"
+  },
+  {
+   "name": "using unsecured public networks without VPN, risking credential exposure",
+   "type": "Cause"
+  },
+  {
+   "name": "failing to renew or backup the machine certificate before travel",
+   "type": "Cause"
+  },
+  {
+   "name": "verify that your laptop is fully updated and encrypted",
+   "type": "Fix"
+  },
+  {
+   "name": "check that BitLocker (Windows) or FileVault (macOS) is active and that the recovery key is backed up in Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "ensure the latest Windows security patches (released on Patch Tuesday) are installed, or that macOS is up to date via Software Update",
+   "type": "Fix"
+  },
+  {
+   "name": "confirm that your GlobalProtect machine certificate is valid (certificates renew yearly) and that you have a copy of the certificate or know how to re-enroll if needed",
+   "type": "Fix"
+  },
+  {
+   "name": "pack the laptop in a padded sleeve, keep the charger and any adapters in a separate compartment, and label the bag with your name and employee ID",
+   "type": "Fix"
+  },
+  {
+   "name": "open the Company Portal app and verify that the device shows \"Compliant\"",
+   "type": "Fix"
+  },
+  {
+   "name": "for Windows: run `manage-bde -status` in an elevated PowerShell prompt to confirm BitLocker protection and note the recovery key ID",
+   "type": "Fix"
+  },
+  {
+   "name": "for macOS: open System Settings -> Privacy & Security -> FileVault and ensure it is turned on; note the recovery key stored in Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "connect to VPN (vpn.acme.example) and confirm the connection succeeds; if prompted, renew the certificate via the Self-Service Portal",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "laptop fails to boot or shows a BitLocker recovery screen after travel",
+   "relation": "CAUSED_BY",
+   "target": "improper shutdown or power loss leading to BitLocker recovery mode"
+  },
+  {
+   "source": "laptop fails to boot or shows a BitLocker recovery screen after travel",
+   "relation": "AFFECTS",
+   "target": "BitLocker"
+  },
+  {
+   "source": "unable to connect to ACME-Corp Wi-Fi or VPN GlobalProtect",
+   "relation": "CAUSED_BY",
+   "target": "missing or expired device certificate causing VPN authentication failure"
+  },
+  {
+   "source": "unable to connect to ACME-Corp Wi-Fi or VPN GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "physical damage signs such as cracked screen, loose hinges, or liquid spillage",
+   "relation": "CAUSED_BY",
+   "target": "exposure to extreme temperatures, humidity, or physical shocks during transit"
+  },
+  {
+   "source": "physical damage signs such as cracked screen, loose hinges, or liquid spillage",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "physical damage signs such as cracked screen, loose hinges, or liquid spillage",
+   "relation": "AFFECTS",
+   "target": "Lenovo ThinkPad T14/X1 Carbon"
+  },
+  {
+   "source": "physical damage signs such as cracked screen, loose hinges, or liquid spillage",
+   "relation": "AFFECTS",
+   "target": "HP EliteBook 840"
+  },
+  {
+   "source": "physical damage signs such as cracked screen, loose hinges, or liquid spillage",
+   "relation": "AFFECTS",
+   "target": "MacBook Pro/Air"
+  },
+  {
+   "source": "missing or expired device certificate causing VPN authentication failure",
+   "relation": "CAUSED_BY",
+   "target": "failing to renew or backup the machine certificate before travel"
+  },
+  {
+   "source": "missing or expired device certificate causing VPN authentication failure",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "verify that your laptop is fully updated and encrypted",
+   "relation": "FIXED_BY",
+   "target": "improper shutdown or power loss leading to BitLocker recovery mode"
+  },
+  {
+   "source": "check that BitLocker (Windows) or FileVault (macOS) is active and that the recovery key is backed up in Intune",
+   "relation": "FIXED_BY",
+   "target": "improper shutdown or power loss leading to BitLocker recovery mode"
+  },
+  {
+   "source": "confirm that your GlobalProtect machine certificate is valid (certificates renew yearly) and that you have a copy of the certificate or know how to re-enroll if needed",
+   "relation": "FIXED_BY",
+   "target": "failing to renew or backup the machine certificate before travel"
+  },
+  {
+   "source": "connect to VPN (vpn.acme.example) and confirm the connection succeeds; if prompted, renew the certificate via the Self-Service Portal",
+   "relation": "FIXED_BY",
+   "target": "missing or expired device certificate causing VPN authentication failure"
+  },
+  {
+   "source": "BitLocker",
+   "relation": "PART_OF",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "BitLocker",
+   "relation": "PART_OF",
+   "target": "Lenovo ThinkPad T14/X1 Carbon"
+  },
+  {
+   "source": "BitLocker",
+   "relation": "PART_OF",
+   "target": "HP EliteBook 840"
+  },
+  {
+   "source": "FileVault",
+   "relation": "PART_OF",
+   "target": "MacBook Pro/Air"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "PART_OF",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "PART_OF",
+   "target": "Lenovo ThinkPad T14/X1 Carbon"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "PART_OF",
+   "target": "HP EliteBook 840"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "PART_OF",
+   "target": "MacBook Pro/Air"
+  },
+  {
+   "source": "Company Portal app",
+   "relation": "PART_OF",
+   "target": "Intune"
+  }
+ ]
+}

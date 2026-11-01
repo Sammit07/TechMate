@@ -1,0 +1,173 @@
+{
+ "entities": [
+  {
+   "name": "company laptop",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi (802.1X)",
+   "type": "Product"
+  },
+  {
+   "name": "machine certificate",
+   "type": "Component"
+  },
+  {
+   "name": "BitLocker",
+   "type": "Component"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "system clock accuracy",
+   "type": "Component"
+  },
+  {
+   "name": "docking station change",
+   "type": "Component"
+  },
+  {
+   "name": "TPM status",
+   "type": "Component"
+  },
+  {
+   "name": "certificate error",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "no MFA push received",
+   "type": "Symptom"
+  },
+  {
+   "name": "BitLocker recovery screen appears",
+   "type": "Symptom"
+  },
+  {
+   "name": "OneDrive/SharePoint shows offline",
+   "type": "Symptom"
+  },
+  {
+   "name": "local Wi-Fi blocks 802.1X",
+   "type": "Symptom"
+  },
+  {
+   "name": "incorrect clock causing certificate validation failure",
+   "type": "Cause"
+  },
+  {
+   "name": "renew machine certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "use SMS backup method",
+   "type": "Fix"
+  },
+  {
+   "name": "request Temporary Access Pass from IAM team",
+   "type": "Fix"
+  },
+  {
+   "name": "retrieve BitLocker recovery key from Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "check TPM status in tpm.msc",
+   "type": "Fix"
+  },
+  {
+   "name": "restart OneDrive client",
+   "type": "Fix"
+  },
+  {
+   "name": "connect to ACME-Guest SSID",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "certificate error",
+   "relation": "INDICATES",
+   "target": "incorrect clock causing certificate validation failure"
+  },
+  {
+   "source": "certificate error",
+   "relation": "FIXED_BY",
+   "target": "renew machine certificate"
+  },
+  {
+   "source": "no MFA push received",
+   "relation": "FIXED_BY",
+   "target": "use SMS backup method"
+  },
+  {
+   "source": "no MFA push received",
+   "relation": "FIXED_BY",
+   "target": "request Temporary Access Pass from IAM team"
+  },
+  {
+   "source": "BitLocker recovery screen appears",
+   "relation": "FIXED_BY",
+   "target": "retrieve BitLocker recovery key from Intune"
+  },
+  {
+   "source": "BitLocker recovery screen appears",
+   "relation": "FIXED_BY",
+   "target": "check TPM status in tpm.sc"
+  },
+  {
+   "source": "OneDrive/SharePoint shows offline",
+   "relation": "FIXED_BY",
+   "target": "restart OneDrive client"
+  },
+  {
+   "source": "local Wi-Fi blocks 802.1X",
+   "relation": "FIXED_BY",
+   "target": "connect to ACME-Guest SSID"
+  },
+  {
+   "source": "machine certificate",
+   "relation": "PART_OF",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "BitLocker",
+   "relation": "PART_OF",
+   "target": "company laptop"
+  },
+  {
+   "source": "TPM status",
+   "relation": "PART_OF",
+   "target": "company laptop"
+  },
+  {
+   "source": "system clock accuracy",
+   "relation": "AFFECTS",
+   "target": "machine certificate"
+  },
+  {
+   "source": "docking station change",
+   "relation": "CAUSED_BY",
+   "target": "BitLocker recovery screen appears"
+  },
+  {
+   "source": "ACME-Corp Wi-Fi (802.1X)",
+   "relation": "AFFECTS",
+   "target": "company laptop"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "company laptop"
+  }
+ ]
+}

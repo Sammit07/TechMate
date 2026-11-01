@@ -1,0 +1,162 @@
+{
+ "entities": [
+  {
+   "name": "Excel",
+   "type": "Product"
+  },
+  {
+   "name": "Word",
+   "type": "Product"
+  },
+  {
+   "name": "Office",
+   "type": "Product"
+  },
+  {
+   "name": "AutoRecover",
+   "type": "Component"
+  },
+  {
+   "name": "Safe Mode",
+   "type": "Component"
+  },
+  {
+   "name": "Open and Repair",
+   "type": "Component"
+  },
+  {
+   "name": "Quick Repair",
+   "type": "Component"
+  },
+  {
+   "name": "Online Repair",
+   "type": "Component"
+  },
+  {
+   "name": "corrupted file",
+   "type": "Symptom"
+  },
+  {
+   "name": "unsaved document",
+   "type": "Symptom"
+  },
+  {
+   "name": "file cannot be opened",
+   "type": "Symptom"
+  },
+  {
+   "name": "multiple users report same corruption pattern",
+   "type": "Cause"
+  },
+  {
+   "name": "faulty add-in",
+   "type": "Cause"
+  },
+  {
+   "name": "problematic Office update",
+   "type": "Cause"
+  },
+  {
+   "name": "licensing token problem",
+   "type": "Cause"
+  },
+  {
+   "name": "renew license or sign out/in",
+   "type": "Fix"
+  },
+  {
+   "name": "disable add-ins",
+   "type": "Fix"
+  },
+  {
+   "name": "use version history",
+   "type": "Fix"
+  },
+  {
+   "name": "extract data via manual methods",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "corrupted file",
+   "relation": "CAUSED_BY",
+   "target": "faulty add-in"
+  },
+  {
+   "source": "corrupted file",
+   "relation": "CAUSED_BY",
+   "target": "problematic Office update"
+  },
+  {
+   "source": "corrupted file",
+   "relation": "CAUSED_BY",
+   "target": "licensing token problem"
+  },
+  {
+   "source": "file cannot be opened",
+   "relation": "INDICATES",
+   "target": "corrupted file"
+  },
+  {
+   "source": "unsaved document",
+   "relation": "INDICATES",
+   "target": "corrupted file"
+  },
+  {
+   "source": "multiple users report same corruption pattern",
+   "relation": "FIXED_BY",
+   "target": "escalate to Application Support team"
+  },
+  {
+   "source": "corrupted file",
+   "relation": "AFFECTS",
+   "target": "Excel"
+  },
+  {
+   "source": "corrupted file",
+   "relation": "AFFECTS",
+   "target": "Word"
+  },
+  {
+   "source": "AutoRecover",
+   "relation": "PART_OF",
+   "target": "Office"
+  },
+  {
+   "source": "Safe Mode",
+   "relation": "PART_OF",
+   "target": "Office"
+  },
+  {
+   "source": "Open and Repair",
+   "relation": "PART_OF",
+   "target": "Office"
+  },
+  {
+   "source": "Quick Repair",
+   "relation": "PART_OF",
+   "target": "Office"
+  },
+  {
+   "source": "Online Repair",
+   "relation": "PART_OF",
+   "target": "Office"
+  },
+  {
+   "source": "corrupted file",
+   "relation": "FIXED_BY",
+   "target": "Open and Repair"
+  },
+  {
+   "source": "corrupted file",
+   "relation": "FIXED_BY",
+   "target": "Quick Repair"
+  },
+  {
+   "source": "corrupted file",
+   "relation": "FIXED_BY",
+   "target": "Online Repair"
+  }
+ ]
+}

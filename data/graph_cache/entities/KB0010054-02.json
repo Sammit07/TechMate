@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "BitLocker recovery key prompt",
+   "type": "Symptom"
+  },
+  {
+   "name": "BIOS/UEFI update",
+   "type": "Cause"
+  },
+  {
+   "name": "TPM change",
+   "type": "Cause"
+  },
+  {
+   "name": "Windows Update BitLocker",
+   "type": "Cause"
+  },
+  {
+   "name": "Intune recovery key",
+   "type": "Component"
+  },
+  {
+   "name": "manage-bde",
+   "type": "Component"
+  },
+  {
+   "name": "suspend BitLocker",
+   "type": "Fix"
+  },
+  {
+   "name": "resume BitLocker",
+   "type": "Fix"
+  },
+  {
+   "name": "BitLocker",
+   "type": "Product"
+  },
+  {
+   "name": "TPM",
+   "type": "Component"
+  },
+  {
+   "name": "PCR values",
+   "type": "Component"
+  },
+  {
+   "name": "hardware TPM failure",
+   "type": "Cause"
+  },
+  {
+   "name": "corrupted PCR values",
+   "type": "Cause"
+  },
+  {
+   "name": "encryption status",
+   "type": "Component"
+  },
+  {
+   "name": "Acme Global's encryption policy",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BitLocker recovery key prompt",
+   "relation": "CAUSED_BY",
+   "target": "BIOS/UEFI update"
+  },
+  {
+   "source": "BitLocker recovery key prompt",
+   "relation": "CAUSED_BY",
+   "target": "TPM change"
+  },
+  {
+   "source": "BitLocker recovery key prompt",
+   "relation": "CAUSED_BY",
+   "target": "Windows Update BitLocker"
+  },
+  {
+   "source": "BIOS/UEFI update",
+   "relation": "FIXED_BY",
+   "target": "suspend BitLocker"
+  },
+  {
+   "source": "BIOS/UEFI update",
+   "relation": "FIXED_BY",
+   "target": "resume BitLocker"
+  },
+  {
+   "source": "BitLocker",
+   "relation": "AFFECTS",
+   "target": "TPM"
+  },
+  {
+   "source": "BitLocker",
+   "relation": "AFFECTS",
+   "target": "PCR values"
+  },
+  {
+   "source": "BitLocker recovery key prompt",
+   "relation": "INDICATES",
+   "target": "TPM change"
+  },
+  {
+   "source": "manage-bde",
+   "relation": "PART_OF",
+   "target": "BitLocker"
+  },
+  {
+   "source": "Intune recovery key",
+   "relation": "PART_OF",
+   "target": "BitLocker"
+  },
+  {
+   "source": "encryption status",
+   "relation": "PART_OF",
+   "target": "BitLocker"
+  },
+  {
+   "source": "hardware TPM failure",
+   "relation": "CAUSED_BY",
+   "target": "BitLocker recovery key prompt"
+  },
+  {
+   "source": "corrupted PCR values",
+   "relation": "CAUSED_BY",
+   "target": "BitLocker recovery key prompt"
+  },
+  {
+   "source": "BitLocker",
+   "relation": "AFFECTS",
+   "target": "Acme Global's encryption policy"
+  }
+ ]
+}

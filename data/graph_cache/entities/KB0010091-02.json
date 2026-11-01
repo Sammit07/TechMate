@@ -1,0 +1,161 @@
+{
+ "entities": [
+  {
+   "name": "leaver process",
+   "type": "Process"
+  },
+  {
+   "name": "asset return log",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "Azure AD Connect",
+   "type": "Product"
+  },
+  {
+   "name": "Active Directory",
+   "type": "Product"
+  },
+  {
+   "name": "Exchange Online",
+   "type": "Product"
+  },
+  {
+   "name": "SharePoint",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect VPN certificate",
+   "type": "Component"
+  },
+  {
+   "name": "Palo Alto firewall",
+   "type": "Product"
+  },
+  {
+   "name": "PaperCut printing rights",
+   "type": "Component"
+  },
+  {
+   "name": "BitLocker recovery key",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "account-disabled message",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Azure AD sign-in logs",
+   "type": "Component"
+  },
+  {
+   "name": "Exchange admin center",
+   "type": "Component"
+  },
+  {
+   "name": "Identity & Access Management team lead",
+   "type": "Product"
+  },
+  {
+   "name": "Security Operations SOC",
+   "type": "Product"
+  },
+  {
+   "name": "IAM-Escalations",
+   "type": "Component"
+  },
+  {
+   "name": "Service Desk ticket",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "leaver process",
+   "relation": "AFFECTS",
+   "target": "Microsoft Entra ID"
+  },
+  {
+   "source": "leaver process",
+   "relation": "AFFECTS",
+   "target": "Active Directory"
+  },
+  {
+   "source": "leaver process",
+   "relation": "AFFECTS",
+   "target": "Exchange Online"
+  },
+  {
+   "source": "leaver process",
+   "relation": "AFFECTS",
+   "target": "SharePoint"
+  },
+  {
+   "source": "leaver process",
+   "relation": "AFFECTS",
+   "target": "OneDrive"
+  },
+  {
+   "source": "leaver process",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect VPN certificate"
+  },
+  {
+   "source": "leaver process",
+   "relation": "AFFECTS",
+   "target": "PaperCut printing rights"
+  },
+  {
+   "source": "leaver process",
+   "relation": "AFFECTS",
+   "target": "BitLocker recovery key"
+  },
+  {
+   "source": "Microsoft Entra ID",
+   "relation": "PART_OF",
+   "target": "Azure AD Connect"
+  },
+  {
+   "source": "Azure AD sign-in logs",
+   "relation": "INDICATES",
+   "target": "account-disabled message"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "BitLocker recovery key"
+  },
+  {
+   "source": "Exchange admin center",
+   "relation": "AFFECTS",
+   "target": "Exchange Online"
+  },
+  {
+   "source": "Identity & Access Management team lead",
+   "relation": "AFFECTS",
+   "target": "Security Operations SOC"
+  },
+  {
+   "source": "IAM-Escalations",
+   "relation": "PART_OF",
+   "target": "Identity & Access Management team lead"
+  },
+  {
+   "source": "Service Desk ticket",
+   "relation": "FIXED_BY",
+   "target": "leaver process"
+  }
+ ]
+}

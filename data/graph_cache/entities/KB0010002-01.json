@@ -1,0 +1,284 @@
+{
+ "entities": [
+  {
+   "name": "Windows login",
+   "type": "Product"
+  },
+  {
+   "name": "macOS login via Enterprise Connect",
+   "type": "Product"
+  },
+  {
+   "name": "VPN",
+   "type": "Product"
+  },
+  {
+   "name": "Wi-Fi (802.1X)",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft 365 services",
+   "type": "Product"
+  },
+  {
+   "name": "Self-service password reset portal",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Authenticator app",
+   "type": "Component"
+  },
+  {
+   "name": "backup SMS",
+   "type": "Component"
+  },
+  {
+   "name": "Service Desk",
+   "type": "Product"
+  },
+  {
+   "name": "IAM Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "forgotten password",
+   "type": "Symptom"
+  },
+  {
+   "name": "expiry notice",
+   "type": "Symptom"
+  },
+  {
+   "name": "locked out",
+   "type": "Symptom"
+  },
+  {
+   "name": "complexity failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "lockout",
+   "type": "Symptom"
+  },
+  {
+   "name": "expired password",
+   "type": "Symptom"
+  },
+  {
+   "name": "length requirement",
+   "type": "Component"
+  },
+  {
+   "name": "complexity requirement",
+   "type": "Component"
+  },
+  {
+   "name": "expiry rule",
+   "type": "Component"
+  },
+  {
+   "name": "password history rule",
+   "type": "Component"
+  },
+  {
+   "name": "common word avoidance",
+   "type": "Component"
+  },
+  {
+   "name": "push notification approval",
+   "type": "Fix"
+  },
+  {
+   "name": "SMS code entry",
+   "type": "Fix"
+  },
+  {
+   "name": "new password creation",
+   "type": "Fix"
+  },
+  {
+   "name": "screen lock and sign-in",
+   "type": "Fix"
+  },
+  {
+   "name": "log out and log back in",
+   "type": "Fix"
+  },
+  {
+   "name": "dscl command execution",
+   "type": "Fix"
+  },
+  {
+   "name": "identity verification",
+   "type": "Fix"
+  },
+  {
+   "name": "wait 15 minutes",
+   "type": "Fix"
+  },
+  {
+   "name": "proceed with reset",
+   "type": "Fix"
+  },
+  {
+   "name": "send reset link",
+   "type": "Fix"
+  },
+  {
+   "name": "Temporary Access Pass usage",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "forgotten password",
+   "relation": "CAUSED_BY",
+   "target": "user forgot password"
+  },
+  {
+   "source": "expiry notice",
+   "relation": "CAUSED_BY",
+   "target": "password expiry"
+  },
+  {
+   "source": "locked out",
+   "relation": "CAUSED_BY",
+   "target": "too many failed attempts"
+  },
+  {
+   "source": "complexity failure",
+   "relation": "CAUSED_BY",
+   "target": "password does not meet complexity rules"
+  },
+  {
+   "source": "lockout",
+   "relation": "CAUSED_BY",
+   "target": "account lockout policy"
+  },
+  {
+   "source": "expired password",
+   "relation": "CAUSED_BY",
+   "target": "password reached maximum age"
+  },
+  {
+   "source": "length requirement",
+   "relation": "PART_OF",
+   "target": "password policy"
+  },
+  {
+   "source": "complexity requirement",
+   "relation": "PART_OF",
+   "target": "password policy"
+  },
+  {
+   "source": "expiry rule",
+   "relation": "PART_OF",
+   "target": "password policy"
+  },
+  {
+   "source": "password history rule",
+   "relation": "PART_OF",
+   "target": "password policy"
+  },
+  {
+   "source": "common word avoidance",
+   "relation": "PART_OF",
+   "target": "password policy"
+  },
+  {
+   "source": "Windows login",
+   "relation": "AFFECTS",
+   "target": "password policy"
+  },
+  {
+   "source": "macOS login via Enterprise Connect",
+   "relation": "AFFECTS",
+   "target": "password policy"
+  },
+  {
+   "source": "VPN",
+   "relation": "AFFECTS",
+   "target": "password policy"
+  },
+  {
+   "source": "Wi-Fi (802.1X)",
+   "relation": "AFFECTS",
+   "target": "password policy"
+  },
+  {
+   "source": "Microsoft 365 services",
+   "relation": "AFFECTS",
+   "target": "password policy"
+  },
+  {
+   "source": "Self-service password reset portal",
+   "relation": "FIXED_BY",
+   "target": "forgotten password"
+  },
+  {
+   "source": "Self-service password reset portal",
+   "relation": "FIXED_BY",
+   "target": "expiry notice"
+  },
+  {
+   "source": "Self-service password reset portal",
+   "relation": "FIXED_BY",
+   "target": "locked out"
+  },
+  {
+   "source": "Microsoft Authenticator app",
+   "relation": "FIXED_BY",
+   "target": "forgotten password"
+  },
+  {
+   "source": "backup SMS",
+   "relation": "FIXED_BY",
+   "target": "forgotten password"
+  },
+  {
+   "source": "new password creation",
+   "relation": "FIXED_BY",
+   "target": "forgotten password"
+  },
+  {
+   "source": "screen lock and sign-in",
+   "relation": "FIXED_BY",
+   "target": "cached credentials not updated"
+  },
+  {
+   "source": "log out and log back in",
+   "relation": "FIXED_BY",
+   "target": "cached credentials not updated"
+  },
+  {
+   "source": "dscl command execution",
+   "relation": "FIXED_BY",
+   "target": "cached credentials not updated"
+  },
+  {
+   "source": "identity verification",
+   "relation": "FIXED_BY",
+   "target": "unverified user identity"
+  },
+  {
+   "source": "wait 15 minutes",
+   "relation": "FIXED_BY",
+   "target": "lockout"
+  },
+  {
+   "source": "proceed with reset",
+   "relation": "FIXED_BY",
+   "target": "lockout"
+  },
+  {
+   "source": "send reset link",
+   "relation": "FIXED_BY",
+   "target": "forgotten password"
+  },
+  {
+   "source": "Temporary Access Pass usage",
+   "relation": "FIXED_BY",
+   "target": "user cannot authenticate"
+  }
+ ]
+}

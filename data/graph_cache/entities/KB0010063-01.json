@@ -1,0 +1,102 @@
+{
+ "entities": [
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "Adobe Admin Console",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft 365 admin center",
+   "type": "Product"
+  },
+  {
+   "name": "Adobe Acrobat Pro DC",
+   "type": "Product"
+  },
+  {
+   "name": "sign-in failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "application expiry or key-prompt error",
+   "type": "Symptom"
+  },
+  {
+   "name": "incorrect login credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "account lockout after 5 failed attempts",
+   "type": "Cause"
+  },
+  {
+   "name": "re-authentication",
+   "type": "Fix"
+  },
+  {
+   "name": "device restart",
+   "type": "Fix"
+  },
+  {
+   "name": "licence assignment via Intune",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "sign-in failure",
+   "relation": "CAUSED_BY",
+   "target": "incorrect login credentials"
+  },
+  {
+   "source": "application expiry or key-prompt error",
+   "relation": "CAUSED_BY",
+   "target": "incorrect login credentials"
+  },
+  {
+   "source": "incorrect login credentials",
+   "relation": "FIXED_BY",
+   "target": "re-authentication"
+  },
+  {
+   "source": "application expiry or key-prompt error",
+   "relation": "FIXED_BY",
+   "target": "device restart"
+  },
+  {
+   "source": "account lockout after 5 failed attempts",
+   "relation": "INDICATES",
+   "target": "incorrect login credentials"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "Adobe Acrobat Pro DC",
+   "relation": "AFFECTS",
+   "target": "Adobe Admin Console"
+  },
+  {
+   "source": "Microsoft 365 apps",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 admin center"
+  }
+ ]
+}

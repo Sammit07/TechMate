@@ -1,0 +1,169 @@
+{
+ "entities": [
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "SharePoint",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Conditional Access",
+   "type": "Product"
+  },
+  {
+   "name": "Identity & Access Management",
+   "type": "Product"
+  },
+  {
+   "name": "Network Support",
+   "type": "Product"
+  },
+  {
+   "name": "Messaging & Collaboration team lead",
+   "type": "Product"
+  },
+  {
+   "name": "sync problem",
+   "type": "Symptom"
+  },
+  {
+   "name": "red X",
+   "type": "Symptom"
+  },
+  {
+   "name": "sync conflict files",
+   "type": "Symptom"
+  },
+  {
+   "name": "storage quota exceeded",
+   "type": "Symptom"
+  },
+  {
+   "name": "invalid file name characters",
+   "type": "Symptom"
+  },
+  {
+   "name": "error 0x80070005",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "device compliance failure",
+   "type": "Cause"
+  },
+  {
+   "name": "backend SharePoint service outage",
+   "type": "Cause"
+  },
+  {
+   "name": "Conditional Access policy block",
+   "type": "Cause"
+  },
+  {
+   "name": "reset OneDrive client",
+   "type": "Fix"
+  },
+  {
+   "name": "update OneDrive client",
+   "type": "Fix"
+  },
+  {
+   "name": "correct file or folder name",
+   "type": "Fix"
+  },
+  {
+   "name": "free up storage quota",
+   "type": "Fix"
+  },
+  {
+   "name": "review sync warnings",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Messaging & Collaboration team lead",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "sync problem",
+   "relation": "AFFECTS",
+   "target": "OneDrive"
+  },
+  {
+   "source": "red X",
+   "relation": "AFFECTS",
+   "target": "OneDrive"
+  },
+  {
+   "source": "sync conflict files",
+   "relation": "AFFECTS",
+   "target": "OneDrive"
+  },
+  {
+   "source": "storage quota exceeded",
+   "relation": "AFFECTS",
+   "target": "OneDrive"
+  },
+  {
+   "source": "invalid file name characters",
+   "relation": "AFFECTS",
+   "target": "OneDrive"
+  },
+  {
+   "source": "error 0x80070005",
+   "relation": "INDICATES",
+   "target": "invalid file name characters"
+  },
+  {
+   "source": "device compliance failure",
+   "relation": "CAUSED_BY",
+   "target": "sync problem"
+  },
+  {
+   "source": "backend SharePoint service outage",
+   "relation": "CAUSED_BY",
+   "target": "sync problem"
+  },
+  {
+   "source": "Conditional Access policy block",
+   "relation": "CAUSED_BY",
+   "target": "sync problem"
+  },
+  {
+   "source": "sync problem",
+   "relation": "FIXED_BY",
+   "target": "reset OneDrive client"
+  },
+  {
+   "source": "sync problem",
+   "relation": "FIXED_BY",
+   "target": "update OneDrive client"
+  },
+  {
+   "source": "invalid file name characters",
+   "relation": "FIXED_BY",
+   "target": "correct file or folder name"
+  },
+  {
+   "source": "storage quota exceeded",
+   "relation": "FIXED_BY",
+   "target": "free up storage quota"
+  },
+  {
+   "source": "sync problem",
+   "relation": "FIXED_BY",
+   "target": "review sync warnings"
+  },
+  {
+   "source": "persistent sync problem",
+   "relation": "FIXED_BY",
+   "target": "escalate to Messaging & Collaboration team lead"
+  }
+ ]
+}

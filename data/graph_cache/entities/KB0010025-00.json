@@ -1,0 +1,178 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15 MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "USB-C/Ethernet docking stations",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "Acme Global office sites",
+   "type": "Product"
+  },
+  {
+   "name": "Ethernet cable unplugged notification",
+   "type": "Symptom"
+  },
+  {
+   "name": "Limited or no connectivity warning",
+   "type": "Symptom"
+  },
+  {
+   "name": "Yellow exclamation mark on network adapter",
+   "type": "Symptom"
+  },
+  {
+   "name": "Unable to obtain IP address",
+   "type": "Symptom"
+  },
+  {
+   "name": "APIPA address 169.254.x.x",
+   "type": "Symptom"
+  },
+  {
+   "name": "Ping to default gateway fails",
+   "type": "Symptom"
+  },
+  {
+   "name": "No link LED activity",
+   "type": "Symptom"
+  },
+  {
+   "name": "Faulty or damaged Ethernet patch cable",
+   "type": "Cause"
+  },
+  {
+   "name": "Loose or improperly seated cable",
+   "type": "Cause"
+  },
+  {
+   "name": "Defective wall-port jack or patch-panel termination",
+   "type": "Cause"
+  },
+  {
+   "name": "Switch port administratively shut down",
+   "type": "Cause"
+  },
+  {
+   "name": "Out-of-date docking-station firmware",
+   "type": "Cause"
+  },
+  {
+   "name": "Missing USB-C/Ethernet driver",
+   "type": "Cause"
+  },
+  {
+   "name": "Power-over-Ethernet (PoE) issues",
+   "type": "Cause"
+  },
+  {
+   "name": "Verify physical connections",
+   "type": "Fix"
+  },
+  {
+   "name": "Check docking station USB-C/Ethernet adapter",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Ethernet cable unplugged notification",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptops"
+  },
+  {
+   "source": "Limited or no connectivity warning",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15 MacBook Pro/Air"
+  },
+  {
+   "source": "Yellow exclamation mark on network adapter",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptops"
+  },
+  {
+   "source": "Unable to obtain IP address",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptops"
+  },
+  {
+   "source": "APIPA address 169.254.x.x",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptops"
+  },
+  {
+   "source": "Ping to default gateway fails",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptops"
+  },
+  {
+   "source": "No link LED activity",
+   "relation": "AFFECTS",
+   "target": "USB-C/Ethernet docking stations"
+  },
+  {
+   "source": "Faulty or damaged Ethernet patch cable",
+   "relation": "CAUSED_BY",
+   "target": "Unable to obtain IP address"
+  },
+  {
+   "source": "Loose or improperly seated cable",
+   "relation": "CAUSED_BY",
+   "target": "No link LED activity"
+  },
+  {
+   "source": "Defective wall-port jack or patch-panel termination",
+   "relation": "CAUSED_BY",
+   "target": "Ethernet cable unplugged notification"
+  },
+  {
+   "source": "Switch port administratively shut down",
+   "relation": "CAUSED_BY",
+   "target": "Ping to default gateway fails"
+  },
+  {
+   "source": "Out-of-date docking-station firmware",
+   "relation": "CAUSED_BY",
+   "target": "No link LED activity"
+  },
+  {
+   "source": "Missing USB-C/Ethernet driver",
+   "relation": "CAUSED_BY",
+   "target": "Unable to obtain IP address"
+  },
+  {
+   "source": "Power-over-Ethernet (PoE) issues",
+   "relation": "CAUSED_BY",
+   "target": "No link LED activity"
+  },
+  {
+   "source": "Verify physical connections",
+   "relation": "FIXED_BY",
+   "target": "Loose or improperly seated cable"
+  },
+  {
+   "source": "Check docking station USB-C/Ethernet adapter",
+   "relation": "FIXED_BY",
+   "target": "Out-of-date docking-station firmware"
+  }
+ ]
+}

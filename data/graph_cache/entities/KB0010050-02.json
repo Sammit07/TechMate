@@ -1,0 +1,181 @@
+{
+ "entities": [
+  {
+   "name": "WinDbg Preview",
+   "type": "Product"
+  },
+  {
+   "name": ".dmp file",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Symbol Server",
+   "type": "Component"
+  },
+  {
+   "name": "Intune configuration",
+   "type": "Component"
+  },
+  {
+   "name": "!analyze -v",
+   "type": "Component"
+  },
+  {
+   "name": "BugCheckCode",
+   "type": "Component"
+  },
+  {
+   "name": "MODULE_NAME",
+   "type": "Component"
+  },
+  {
+   "name": "nvlddmkm.exe",
+   "type": "Component"
+  },
+  {
+   "name": "igdkmd64.sys",
+   "type": "Component"
+  },
+  {
+   "name": "Driver Approval Matrix",
+   "type": "Component"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Windows Memory Diagnostic",
+   "type": "Product"
+  },
+  {
+   "name": "MemTest86+",
+   "type": "Product"
+  },
+  {
+   "name": "KB numbers",
+   "type": "Component"
+  },
+  {
+   "name": "KBs-Known-Issues wiki",
+   "type": "Product"
+  },
+  {
+   "name": "Settings -> Windows Update -> Update history -> Uninstall updates",
+   "type": "Component"
+  },
+  {
+   "name": "Desktop Support L2",
+   "type": "Product"
+  },
+  {
+   "name": "Hardware Engineering group",
+   "type": "Product"
+  },
+  {
+   "name": "BIOS/UEFI version",
+   "type": "Component"
+  },
+  {
+   "name": "Event Viewer logs (System)",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "crash dump analysis",
+   "relation": "CAUSED_BY",
+   "target": "faulty driver"
+  },
+  {
+   "source": "crash dump analysis",
+   "relation": "CAUSED_BY",
+   "target": "memory corruption"
+  },
+  {
+   "source": "crash dump analysis",
+   "relation": "CAUSED_BY",
+   "target": "problematic Windows Update"
+  },
+  {
+   "source": "WinDbg Preview",
+   "relation": "AFFECTS",
+   "target": ".dmp file"
+  },
+  {
+   "source": "Intune configuration",
+   "relation": "AFFECTS",
+   "target": "Microsoft Symbol Server"
+  },
+  {
+   "source": "!analyze -v",
+   "relation": "INDICATES",
+   "target": "BugCheckCode"
+  },
+  {
+   "source": "!analyze -v",
+   "relation": "INDICATES",
+   "target": "MODULE_NAME"
+  },
+  {
+   "source": "MODULE_NAME",
+   "relation": "AFFECTS",
+   "target": "nvlddmkm.exe"
+  },
+  {
+   "source": "MODULE_NAME",
+   "relation": "AFFECTS",
+   "target": "igdkmd64.sys"
+  },
+  {
+   "source": "Driver Approval Matrix",
+   "relation": "FIXED_BY",
+   "target": "driver rollback"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "FIXED_BY",
+   "target": "approved driver update"
+  },
+  {
+   "source": "Windows Memory Diagnostic",
+   "relation": "FIXED_BY",
+   "target": "memory issue"
+  },
+  {
+   "source": "MemTest86+",
+   "relation": "FIXED_BY",
+   "target": "memory issue"
+  },
+  {
+   "source": "KB numbers",
+   "relation": "INDICATES",
+   "target": "KBs-Known-Issues wiki"
+  },
+  {
+   "source": "Settings -> Windows Update -> Update history -> Uninstall updates",
+   "relation": "FIXED_BY",
+   "target": "problematic Windows Update"
+  },
+  {
+   "source": "Desktop Support L2",
+   "relation": "FIXED_BY",
+   "target": "escalation"
+  },
+  {
+   "source": "Hardware Engineering group",
+   "relation": "FIXED_BY",
+   "target": "escalation"
+  },
+  {
+   "source": "BIOS/UEFI version",
+   "relation": "INDICATES",
+   "target": "hardware issue"
+  },
+  {
+   "source": "Event Viewer logs (System)",
+   "relation": "INDICATES",
+   "target": "system error"
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "OneDrive Files On-Demand",
+   "type": "Component"
+  },
+  {
+   "name": "Save space and download files as you use them",
+   "type": "Component"
+  },
+  {
+   "name": "Free up space",
+   "type": "Fix"
+  },
+  {
+   "name": "Storage Sense",
+   "type": "Component"
+  },
+  {
+   "name": "low disk space",
+   "type": "Symptom"
+  },
+  {
+   "name": "OneDrive sync client",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive.exe",
+   "type": "Component"
+  },
+  {
+   "name": "@acme.example account",
+   "type": "Component"
+  },
+  {
+   "name": "C: drive",
+   "type": "Component"
+  },
+  {
+   "name": "online-only placeholders",
+   "type": "Component"
+  },
+  {
+   "name": "white cloud icon",
+   "type": "Component"
+  },
+  {
+   "name": "Storage usage breakdown",
+   "type": "Component"
+  },
+  {
+   "name": "Recycle Bin",
+   "type": "Component"
+  },
+  {
+   "name": "large personal files",
+   "type": "Component"
+  },
+  {
+   "name": "Run Storage Sense remotely via Intune",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "low disk space",
+   "relation": "CAUSED_BY",
+   "target": "OneDrive consuming >10GB of C: drive"
+  },
+  {
+   "source": "OneDrive consuming >10GB of C: drive",
+   "relation": "AFFECTS",
+   "target": "C: drive"
+  },
+  {
+   "source": "OneDrive Files On-Demand",
+   "relation": "PART_OF",
+   "target": "OneDrive sync client"
+  },
+  {
+   "source": "Save space and download files as you use them",
+   "relation": "PART_OF",
+   "target": "OneDrive Files On-Demand"
+  },
+  {
+   "source": "Free up space",
+   "relation": "FIXED_BY",
+   "target": "online-only placeholders"
+  },
+  {
+   "source": "Storage Sense",
+   "relation": "AFFECTS",
+   "target": "C: drive"
+  },
+  {
+   "source": "Run Storage Sense remotely via Intune",
+   "relation": "FIXED_BY",
+   "target": "low disk space"
+  },
+  {
+   "source": "white cloud icon",
+   "relation": "INDICATES",
+   "target": "online-only placeholders"
+  },
+  {
+   "source": "OneDrive.exe",
+   "relation": "AFFECTS",
+   "target": "OneDrive sync client"
+  },
+  {
+   "source": "@acme.example account",
+   "relation": "AFFECTS",
+   "target": "OneDrive sync client"
+  },
+  {
+   "source": "Storage usage breakdown",
+   "relation": "INDICATES",
+   "target": "OneDrive consuming >10GB of C: drive"
+  },
+  {
+   "source": "Recycle Bin",
+   "relation": "PART_OF",
+   "target": "C: drive"
+  },
+  {
+   "source": "large personal files",
+   "relation": "AFFECTS",
+   "target": "C: drive"
+  },
+  {
+   "source": "online-only placeholders",
+   "relation": "AFFECTS",
+   "target": "OneDrive Files On-Demand"
+  }
+ ]
+}

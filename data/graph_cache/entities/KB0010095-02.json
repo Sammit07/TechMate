@@ -1,0 +1,146 @@
+{
+ "entities": [
+  {
+   "name": "VPN not working through home router",
+   "type": "Symptom"
+  },
+  {
+   "name": "VPN works when connected directly to modem",
+   "type": "Symptom"
+  },
+  {
+   "name": "router firmware out-of-date",
+   "type": "Cause"
+  },
+  {
+   "name": "double NAT present",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN passthrough disabled",
+   "type": "Cause"
+  },
+  {
+   "name": "request router make/model and firmware version",
+   "type": "Fix"
+  },
+  {
+   "name": "run remote traceroute to vpn.acme.example",
+   "type": "Fix"
+  },
+  {
+   "name": "review GlobalProtect logs for error codes",
+   "type": "Fix"
+  },
+  {
+   "name": "-120",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "-122",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "contact ISP or replace faulty hardware",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Network Support",
+   "type": "Fix"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "home router",
+   "type": "Component"
+  },
+  {
+   "name": "WAN and LAN settings pages",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "VPN not working through home router",
+   "relation": "CAUSED_BY",
+   "target": "router firmware out-of-date"
+  },
+  {
+   "source": "VPN not working through home router",
+   "relation": "CAUSED_BY",
+   "target": "double NAT present"
+  },
+  {
+   "source": "VPN not working through home router",
+   "relation": "CAUSED_BY",
+   "target": "VPN passthrough disabled"
+  },
+  {
+   "source": "VPN works when connected directly to modem",
+   "relation": "INDICATES",
+   "target": "router firmware out-of-date"
+  },
+  {
+   "source": "VPN works when connected directly to modem",
+   "relation": "INDICATES",
+   "target": "double NAT present"
+  },
+  {
+   "source": "VPN works when connected directly to modem",
+   "relation": "INDICATES",
+   "target": "VPN passthrough disabled"
+  },
+  {
+   "source": "-120",
+   "relation": "INDICATES",
+   "target": "GlobalProtect connection failure"
+  },
+  {
+   "source": "-122",
+   "relation": "INDICATES",
+   "target": "GlobalProtect connection failure"
+  },
+  {
+   "source": "review GlobalProtect logs for error codes",
+   "relation": "FIXED_BY",
+   "target": "-120"
+  },
+  {
+   "source": "review GlobalProtect logs for error codes",
+   "relation": "FIXED_BY",
+   "target": "-122"
+  },
+  {
+   "source": "request router make/model and firmware version",
+   "relation": "FIXED_BY",
+   "target": "router firmware out-of-date"
+  },
+  {
+   "source": "run remote traceroute to vpn.acme.example",
+   "relation": "FIXED_BY",
+   "target": "high latency or packet loss"
+  },
+  {
+   "source": "contact ISP or replace faulty hardware",
+   "relation": "FIXED_BY",
+   "target": "ISP or home equipment issue"
+  },
+  {
+   "source": "escalate to Network Support",
+   "relation": "FIXED_BY",
+   "target": "VPN not working through home router"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "VPN not working through home router"
+  },
+  {
+   "source": "home router",
+   "relation": "PART_OF",
+   "target": "home network setup"
+  }
+ ]
+}

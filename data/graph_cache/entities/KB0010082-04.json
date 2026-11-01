@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "phishing link clicked",
+   "type": "Symptom"
+  },
+  {
+   "name": "password reset",
+   "type": "Fix"
+  },
+  {
+   "name": "session revocation",
+   "type": "Fix"
+  },
+  {
+   "name": "sender blocked",
+   "type": "Fix"
+  },
+  {
+   "name": "no Indicators of Compromise found",
+   "type": "Symptom"
+  },
+  {
+   "name": "malware detected by Defender for Endpoint",
+   "type": "Symptom"
+  },
+  {
+   "name": "successful sign-in from unfamiliar location or device",
+   "type": "Symptom"
+  },
+  {
+   "name": "credentials entered on phishing site",
+   "type": "Symptom"
+  },
+  {
+   "name": "Security Operations investigation",
+   "type": "Fix"
+  },
+  {
+   "name": "message purged",
+   "type": "Fix"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "self-service password reset",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Defender for Endpoint",
+   "type": "Product"
+  },
+  {
+   "name": "Azure AD sign-in logs",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook report button",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "phishing link clicked",
+   "relation": "CAUSED_BY",
+   "target": "credentials entered on phishing site"
+  },
+  {
+   "source": "phishing link clicked",
+   "relation": "INDICATES",
+   "target": "malware detected by Defender for Endpoint"
+  },
+  {
+   "source": "phishing link clicked",
+   "relation": "INDICATES",
+   "target": "successful sign-in from unfamiliar location or device"
+  },
+  {
+   "source": "credentials entered on phishing site",
+   "relation": "FIXED_BY",
+   "target": "password reset"
+  },
+  {
+   "source": "phishing link clicked",
+   "relation": "FIXED_BY",
+   "target": "session revocation"
+  },
+  {
+   "source": "phishing link clicked",
+   "relation": "FIXED_BY",
+   "target": "sender blocked"
+  },
+  {
+   "source": "malware detected by Defender for Endpoint",
+   "relation": "FIXED_BY",
+   "target": "Security Operations investigation"
+  },
+  {
+   "source": "successful sign-in from unfamiliar location or device",
+   "relation": "FIXED_BY",
+   "target": "Security Operations investigation"
+  },
+  {
+   "source": "phishing email",
+   "relation": "AFFECTS",
+   "target": "Microsoft Defender for Endpoint"
+  },
+  {
+   "source": "phishing email",
+   "relation": "PART_OF",
+   "target": "Outlook report button"
+  },
+  {
+   "source": "Temporary Access Pass",
+   "relation": "AFFECTS",
+   "target": "self-service password reset"
+  },
+  {
+   "source": "Azure AD sign-in logs",
+   "relation": "AFFECTS",
+   "target": "Microsoft Defender for Endpoint"
+  },
+  {
+   "source": "no Indicators of Compromise found",
+   "relation": "FIXED_BY",
+   "target": "message purged"
+  },
+  {
+   "source": "phishing link clicked",
+   "relation": "AFFECTS",
+   "target": "Microsoft Defender for Endpoint"
+  },
+  {
+   "source": "Security Operations investigation",
+   "relation": "FIXED_BY",
+   "target": "message purged"
+  }
+ ]
+}

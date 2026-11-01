@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "Invalid Authenticator Code",
+   "type": "Symptom"
+  },
+  {
+   "name": "Time Sync Issue",
+   "type": "Cause"
+  },
+  {
+   "name": "Reinstall Authenticator App",
+   "type": "Fix"
+  },
+  {
+   "name": "Identity Verification Failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "Escalate to IAM Team",
+   "type": "Fix"
+  },
+  {
+   "name": "Compromised Account Suspicion",
+   "type": "Cause"
+  },
+  {
+   "name": "Directory-Level MFA Reset",
+   "type": "Fix"
+  },
+  {
+   "name": "Authenticator App Crash",
+   "type": "Symptom"
+  },
+  {
+   "name": "Self-Help Procedure for MFA Setup",
+   "type": "Fix"
+  },
+  {
+   "name": "Multi-Factor Authentication",
+   "type": "Product"
+  },
+  {
+   "name": "Employee ID and Name",
+   "type": "Component"
+  },
+  {
+   "name": "Device Make/Model and OS Version",
+   "type": "Component"
+  },
+  {
+   "name": "Authenticator App Version",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Invalid Authenticator Code",
+   "relation": "CAUSED_BY",
+   "target": "Time Sync Issue"
+  },
+  {
+   "source": "Authenticator App Crash",
+   "relation": "CAUSED_BY",
+   "target": "Time Sync Issue"
+  },
+  {
+   "source": "Identity Verification Failure",
+   "relation": "CAUSED_BY",
+   "target": "Compromised Account Suspicion"
+  },
+  {
+   "source": "Time Sync Issue",
+   "relation": "FIXED_BY",
+   "target": "Reinstall Authenticator App"
+  },
+  {
+   "source": "Invalid Authenticator Code",
+   "relation": "FIXED_BY",
+   "target": "Reinstall Authenticator App"
+  },
+  {
+   "source": "Identity Verification Failure",
+   "relation": "FIXED_BY",
+   "target": "Self-Help Procedure for MFA Setup"
+  },
+  {
+   "source": "Compromised Account Suspicion",
+   "relation": "FIXED_BY",
+   "target": "Directory-Level MFA Reset"
+  },
+  {
+   "source": "Identity Verification Failure",
+   "relation": "INDICATES",
+   "target": "Compromised Account Suspicion"
+  },
+  {
+   "source": "Invalid Authenticator Code",
+   "relation": "INDICATES",
+   "target": "Time Sync Issue"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "AFFECTS",
+   "target": "Multi-Factor Authentication"
+  },
+  {
+   "source": "Temporary Access Pass",
+   "relation": "PART_OF",
+   "target": "Multi-Factor Authentication"
+  },
+  {
+   "source": "Employee ID and Name",
+   "relation": "AFFECTS",
+   "target": "Escalate to IAM Team"
+  },
+  {
+   "source": "Device Make/Model and OS Version",
+   "relation": "AFFECTS",
+   "target": "Escalate to IAM Team"
+  },
+  {
+   "source": "Authenticator App Version",
+   "relation": "AFFECTS",
+   "target": "Escalate to IAM Team"
+  }
+ ]
+}

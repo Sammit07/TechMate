@@ -1,0 +1,154 @@
+{
+ "entities": [
+  {
+   "name": "Self-Service Password Reset (SSPR)",
+   "type": "Product"
+  },
+  {
+   "name": "Azure Active Directory",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Credential Manager",
+   "type": "Component"
+  },
+  {
+   "name": "Windows machine",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "Temporary Access Pass (TAP)",
+   "type": "Component"
+  },
+  {
+   "name": "cached credentials",
+   "type": "Component"
+  },
+  {
+   "name": "verification code",
+   "type": "Component"
+  },
+  {
+   "name": "password reset",
+   "type": "Fix"
+  },
+  {
+   "name": "clear stale credentials",
+   "type": "Fix"
+  },
+  {
+   "name": "reconnect to VPN",
+   "type": "Fix"
+  },
+  {
+   "name": "cannot receive verification code",
+   "type": "Symptom"
+  },
+  {
+   "name": "password rejected",
+   "type": "Symptom"
+  },
+  {
+   "name": "unable to log in",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cannot receive verification code",
+   "relation": "CAUSED_BY",
+   "target": "no access to registered phone/email"
+  },
+  {
+   "source": "password rejected",
+   "relation": "CAUSED_BY",
+   "target": "new password does not meet complexity requirements"
+  },
+  {
+   "source": "unable to log in",
+   "relation": "CAUSED_BY",
+   "target": "stale cached credentials"
+  },
+  {
+   "source": "cannot receive verification code",
+   "relation": "FIXED_BY",
+   "target": "issue Temporary Access Pass (TAP)"
+  },
+  {
+   "source": "password rejected",
+   "relation": "FIXED_BY",
+   "target": "ensure password meets complexity and history requirements"
+  },
+  {
+   "source": "unable to log in",
+   "relation": "FIXED_BY",
+   "target": "clear stale credentials"
+  },
+  {
+   "source": "password reset",
+   "relation": "FIXED_BY",
+   "target": "reconnect to VPN"
+  },
+  {
+   "source": "clear stale credentials",
+   "relation": "FIXED_BY",
+   "target": "run cmdkey /list and cmdkey /delete:<target>"
+  },
+  {
+   "source": "Self-Service Password Reset (SSPR)",
+   "relation": "AFFECTS",
+   "target": "Azure Active Directory"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "cached credentials"
+  },
+  {
+   "source": "Credential Manager",
+   "relation": "PART_OF",
+   "target": "Windows machine"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "password reset"
+  },
+  {
+   "source": "Teams",
+   "relation": "AFFECTS",
+   "target": "password reset"
+  },
+  {
+   "source": "OneDrive",
+   "relation": "AFFECTS",
+   "target": "password reset"
+  },
+  {
+   "source": "Temporary Access Pass (TAP)",
+   "relation": "AFFECTS",
+   "target": "Azure Active Directory"
+  },
+  {
+   "source": "verification code",
+   "relation": "INDICATES",
+   "target": "cannot receive verification code"
+  }
+ ]
+}

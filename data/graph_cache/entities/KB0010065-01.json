@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook on the web",
+   "type": "Product"
+  },
+  {
+   "name": "COM add-ins",
+   "type": "Component"
+  },
+  {
+   "name": "Mail Setup",
+   "type": "Component"
+  },
+  {
+   "name": "Add Account window",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "network connectivity",
+   "type": "Component"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi",
+   "type": "Product"
+  },
+  {
+   "name": "VPN",
+   "type": "Product"
+  },
+  {
+   "name": "cannot log into Outlook on the web",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outlook profile corruption",
+   "type": "Cause"
+  },
+  {
+   "name": "recently installed COM add-in",
+   "type": "Cause"
+  },
+  {
+   "name": "rebuild Outlook profile",
+   "type": "Fix"
+  },
+  {
+   "name": "disable COM add-ins",
+   "type": "Fix"
+  },
+  {
+   "name": "create new Outlook profile",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cannot log into Outlook on the web",
+   "relation": "CAUSED_BY",
+   "target": "network connectivity"
+  },
+  {
+   "source": "cannot log into Outlook on the web",
+   "relation": "CAUSED_BY",
+   "target": "account related issue"
+  },
+  {
+   "source": "Outlook profile corruption",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "recently installed COM add-in",
+   "relation": "CAUSED_BY",
+   "target": "Outlook issues"
+  },
+  {
+   "source": "rebuild Outlook profile",
+   "relation": "FIXED_BY",
+   "target": "Outlook profile corruption"
+  },
+  {
+   "source": "disable COM add-ins",
+   "relation": "FIXED_BY",
+   "target": "recently installed COM add-in"
+  },
+  {
+   "source": "create new Outlook profile",
+   "relation": "PART_OF",
+   "target": "rebuild Outlook profile"
+  },
+  {
+   "source": "Mail Setup",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  },
+  {
+   "source": "Add Account window",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  },
+  {
+   "source": "network connectivity",
+   "relation": "AFFECTS",
+   "target": "Outlook on the web"
+  },
+  {
+   "source": "ACME-Corp Wi-Fi",
+   "relation": "PART_OF",
+   "target": "network connectivity"
+  },
+  {
+   "source": "VPN",
+   "relation": "PART_OF",
+   "target": "network connectivity"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "Outlook on the web",
+   "relation": "INDICATES",
+   "target": "account status"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "COM add-ins"
+  }
+ ]
+}

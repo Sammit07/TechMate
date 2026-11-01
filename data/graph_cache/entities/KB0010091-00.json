@@ -1,0 +1,169 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 laptops (Dell Latitude 5440/7440, Lenovo ThinkPad T14/X1 Carbon, HP EliteBook 840)",
+   "type": "Product"
+  },
+  {
+   "name": "macOS laptops (MacBook Pro/Air on macOS 14/15)",
+   "type": "Product"
+  },
+  {
+   "name": "Mobile devices enrolled in Intune (iOS/Android)",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Entra ID (Azure AD) user accounts",
+   "type": "Product"
+  },
+  {
+   "name": "On-premises Active Directory accounts",
+   "type": "Product"
+  },
+  {
+   "name": "Exchange Online mailboxes (50?GB + online archive)",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive for Business and SharePoint sites",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Palo Alto GlobalProtect VPN certificates",
+   "type": "Component"
+  },
+  {
+   "name": "PaperCut secure print release",
+   "type": "Component"
+  },
+  {
+   "name": "User still able to log into corporate systems after the exit date",
+   "type": "Symptom"
+  },
+  {
+   "name": "Company-issued laptop, phone, badge, or other equipment not yet returned to IT",
+   "type": "Symptom"
+  },
+  {
+   "name": "Employee resignation or voluntary termination",
+   "type": "Cause"
+  },
+  {
+   "name": "Involuntary termination or dismissal",
+   "type": "Cause"
+  },
+  {
+   "name": "End of fixed-term contract, internship, or temporary assignment",
+   "type": "Cause"
+  },
+  {
+   "name": "Internal transfer requiring de-provisioning of the old account and creation of a new one",
+   "type": "Cause"
+  },
+  {
+   "name": "Retrieve all physical assets and disable or delete all associated digital identities",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "User still able to log into corporate systems after the exit date",
+   "relation": "CAUSED_BY",
+   "target": "Employee resignation or voluntary termination"
+  },
+  {
+   "source": "User still able to log into corporate systems after the exit date",
+   "relation": "CAUSED_BY",
+   "target": "Involuntary termination or dismissal"
+  },
+  {
+   "source": "User still able to log into corporate systems after the exit date",
+   "relation": "CAUSED_BY",
+   "target": "End of fixed-term contract, internship, or temporary assignment"
+  },
+  {
+   "source": "User still able to log into corporate systems after the exit date",
+   "relation": "CAUSED_BY",
+   "target": "Internal transfer requiring de-provisioning of the old account and creation of a new one"
+  },
+  {
+   "source": "Company-issued laptop, phone, badge, or other equipment not yet returned to IT",
+   "relation": "CAUSED_BY",
+   "target": "Employee resignation or voluntary termination"
+  },
+  {
+   "source": "Company-issued laptop, phone, badge, or other equipment not yet returned to IT",
+   "relation": "CAUSED_BY",
+   "target": "Involuntary termination or dismissal"
+  },
+  {
+   "source": "Company-issued laptop, phone, badge, or other equipment not yet returned to IT",
+   "relation": "CAUSED_BY",
+   "target": "End of fixed-term contract, internship, or temporary assignment"
+  },
+  {
+   "source": "Company-issued laptop, phone, badge, or other equipment not yet returned to IT",
+   "relation": "CAUSED_BY",
+   "target": "Internal transfer requiring de-provisioning of the old account and creation of a new one"
+  },
+  {
+   "source": "User still able to log into corporate systems after the exit date",
+   "relation": "FIXED_BY",
+   "target": "Retrieve all physical assets and disable or delete all associated digital identities"
+  },
+  {
+   "source": "Company-issued laptop, phone, badge, or other equipment not yet returned to IT",
+   "relation": "FIXED_BY",
+   "target": "Retrieve all physical assets and disable or delete all associated digital identities"
+  },
+  {
+   "source": "Microsoft Entra ID (Azure AD) user accounts",
+   "relation": "AFFECTS",
+   "target": "User still able to log into corporate systems after the exit date"
+  },
+  {
+   "source": "On-premises Active Directory accounts",
+   "relation": "AFFECTS",
+   "target": "User still able to log into corporate systems after the exit date"
+  },
+  {
+   "source": "Exchange Online mailboxes (50?GB + online archive)",
+   "relation": "AFFECTS",
+   "target": "User still able to log into corporate systems after the exit date"
+  },
+  {
+   "source": "OneDrive for Business and SharePoint sites",
+   "relation": "AFFECTS",
+   "target": "User still able to log into corporate systems after the exit date"
+  },
+  {
+   "source": "Microsoft Teams",
+   "relation": "AFFECTS",
+   "target": "User still able to log into corporate systems after the exit date"
+  },
+  {
+   "source": "Palo Alto GlobalProtect VPN certificates",
+   "relation": "AFFECTS",
+   "target": "User still able to log into corporate systems after the exit date"
+  },
+  {
+   "source": "Windows 11 laptops (Dell Latitude 5440/7440, Lenovo ThinkPad T14/X1 Carbon, HP EliteBook 840)",
+   "relation": "AFFECTS",
+   "target": "Company-issued laptop, phone, badge, or other equipment not yet returned to IT"
+  },
+  {
+   "source": "macOS laptops (MacBook Pro/Air on macOS 14/15)",
+   "relation": "AFFECTS",
+   "target": "Company-issued laptop, phone, badge, or other equipment not yet returned to IT"
+  },
+  {
+   "source": "Mobile devices enrolled in Intune (iOS/Android)",
+   "relation": "AFFECTS",
+   "target": "Company-issued laptop, phone, badge, or other equipment not yet returned to IT"
+  }
+ ]
+}

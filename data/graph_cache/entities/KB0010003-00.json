@@ -1,0 +1,108 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "Credential Manager",
+   "type": "Component"
+  },
+  {
+   "name": "cached credentials",
+   "type": "Component"
+  },
+  {
+   "name": "stale credential",
+   "type": "Component"
+  },
+  {
+   "name": "Logon screen displays 'The username or password is incorrect.'",
+   "type": "Symptom"
+  },
+  {
+   "name": "After entering the new password, the prompt reappears immediately.",
+   "type": "Symptom"
+  },
+  {
+   "name": "Repeated failed attempts trigger account lockout after five tries.",
+   "type": "Symptom"
+  },
+  {
+   "name": "Cached domain credentials on the laptop have not been updated after a password reset.",
+   "type": "Cause"
+  },
+  {
+   "name": "Device is not connected to the corporate network (VPN or ACME-Corp Wi-Fi)",
+   "type": "Cause"
+  },
+  {
+   "name": "Intermittent connectivity prevents the device from reaching a domain controller",
+   "type": "Cause"
+  },
+  {
+   "name": "Connect to the corporate network (VPN or ACME-Corp Wi-Fi)",
+   "type": "Fix"
+  },
+  {
+   "name": "Force a credential update",
+   "type": "Fix"
+  },
+  {
+   "name": "Clear stale entries in Credential Manager",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Logon screen displays 'The username or password is incorrect.'",
+   "relation": "CAUSED_BY",
+   "target": "Cached domain credentials on the laptop have not been updated after a password reset."
+  },
+  {
+   "source": "After entering the new password, the prompt reappears immediately.",
+   "relation": "CAUSED_BY",
+   "target": "Device is not connected to the corporate network (VPN or ACME-Corp Wi-Fi)"
+  },
+  {
+   "source": "Credential Manager shows an entry for 'ACME-Corp' with an outdated password.",
+   "relation": "INDICATES",
+   "target": "Stale credential stored in Windows Credential Manager interferes with the authentication attempt."
+  },
+  {
+   "source": "Repeated failed attempts trigger account lockout after five tries.",
+   "relation": "CAUSED_BY",
+   "target": "Intermittent connectivity prevents the device from reaching a domain controller"
+  },
+  {
+   "source": "Cached domain credentials on the laptop have not been updated after a password reset.",
+   "relation": "FIXED_BY",
+   "target": "Connect to the corporate network (VPN or ACME-Corp Wi-Fi)"
+  },
+  {
+   "source": "Device is not connected to the corporate network (VPN or ACME-Corp Wi-Fi)",
+   "relation": "FIXED_BY",
+   "target": "Connect to the corporate network (VPN or ACME-Corp Wi-Fi)"
+  },
+  {
+   "source": "Stale credential stored in Windows Credential Manager interferes with the authentication attempt.",
+   "relation": "FIXED_BY",
+   "target": "Clear stale entries in Credential Manager"
+  },
+  {
+   "source": "Windows 11 laptops",
+   "relation": "AFFECTS",
+   "target": "Cached domain credentials on the laptop have not been updated after a password reset."
+  },
+  {
+   "source": "Credential Manager",
+   "relation": "PART_OF",
+   "target": "Windows 11 laptops"
+  },
+  {
+   "source": "cached credentials",
+   "relation": "PART_OF",
+   "target": "Windows 11 laptops"
+  }
+ ]
+}

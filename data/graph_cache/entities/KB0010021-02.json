@@ -1,0 +1,145 @@
+{
+ "entities": [
+  {
+   "name": "corporate Wi-Fi (802.1X)",
+   "type": "Product"
+  },
+  {
+   "name": "guest Wi-Fi",
+   "type": "Product"
+  },
+  {
+   "name": "wireless adapter driver",
+   "type": "Component"
+  },
+  {
+   "name": "machine certificate",
+   "type": "Component"
+  },
+  {
+   "name": "Intune device compliance",
+   "type": "Component"
+  },
+  {
+   "name": "RADIUS server (NPS)",
+   "type": "Component"
+  },
+  {
+   "name": "guest portal radius server",
+   "type": "Component"
+  },
+  {
+   "name": "certificate not found",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "certificate expired",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Wi-Fi drops",
+   "type": "Symptom"
+  },
+  {
+   "name": "no Internet",
+   "type": "Symptom"
+  },
+  {
+   "name": "repeated credential prompts",
+   "type": "Symptom"
+  },
+  {
+   "name": "expired machine certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "outdated wireless driver",
+   "type": "Cause"
+  },
+  {
+   "name": "renew machine certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "update wireless adapter driver",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Wi-Fi drops",
+   "relation": "CAUSED_BY",
+   "target": "expired machine certificate"
+  },
+  {
+   "source": "no Internet",
+   "relation": "CAUSED_BY",
+   "target": "expired machine certificate"
+  },
+  {
+   "source": "repeated credential prompts",
+   "relation": "CAUSED_BY",
+   "target": "expired machine certificate"
+  },
+  {
+   "source": "Wi-Fi drops",
+   "relation": "CAUSED_BY",
+   "target": "outdated wireless driver"
+  },
+  {
+   "source": "no Internet",
+   "relation": "CAUSED_BY",
+   "target": "outdated wireless driver"
+  },
+  {
+   "source": "repeated credential prompts",
+   "relation": "CAUSED_BY",
+   "target": "outdated wireless driver"
+  },
+  {
+   "source": "certificate not found",
+   "relation": "INDICATES",
+   "target": "expired machine certificate"
+  },
+  {
+   "source": "certificate expired",
+   "relation": "INDICATES",
+   "target": "expired machine certificate"
+  },
+  {
+   "source": "expired machine certificate",
+   "relation": "FIXED_BY",
+   "target": "renew machine certificate"
+  },
+  {
+   "source": "outdated wireless driver",
+   "relation": "FIXED_BY",
+   "target": "update wireless adapter driver"
+  },
+  {
+   "source": "machine certificate",
+   "relation": "AFFECTS",
+   "target": "corporate Wi-Fi (802.1X)"
+  },
+  {
+   "source": "wireless adapter driver",
+   "relation": "AFFECTS",
+   "target": "corporate Wi-Fi (802.1X)"
+  },
+  {
+   "source": "RADIUS server (NPS)",
+   "relation": "AFFECTS",
+   "target": "corporate Wi-Fi (802.1X)"
+  },
+  {
+   "source": "guest portal radius server",
+   "relation": "AFFECTS",
+   "target": "guest Wi-Fi"
+  },
+  {
+   "source": "Intune device compliance",
+   "relation": "PART_OF",
+   "target": "corporate Wi-Fi (802.1X)"
+  }
+ ]
+}

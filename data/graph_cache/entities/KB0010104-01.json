@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "IT Help Teams channel",
+   "type": "Component"
+  },
+  {
+   "name": "Service Desk",
+   "type": "Product"
+  },
+  {
+   "name": "self-service portal https://it.acme.example",
+   "type": "Product"
+  },
+  {
+   "name": "P1/P2 outage alert",
+   "type": "Component"
+  },
+  {
+   "name": "status page",
+   "type": "Component"
+  },
+  {
+   "name": "escalation chat",
+   "type": "Component"
+  },
+  {
+   "name": "Incident Manager",
+   "type": "Product"
+  },
+  {
+   "name": "service-desk call volume",
+   "type": "Component"
+  },
+  {
+   "name": "post-incident summary message",
+   "type": "Component"
+  },
+  {
+   "name": "reboot or reconnect VPN",
+   "type": "Fix"
+  },
+  {
+   "name": "acknowledgment of outage",
+   "type": "Symptom"
+  },
+  {
+   "name": "regular status updates",
+   "type": "Symptom"
+  },
+  {
+   "name": "unverified information sharing",
+   "type": "Cause"
+  },
+  {
+   "name": "communication verification",
+   "type": "Fix"
+  },
+  {
+   "name": "incident ticket logging",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "acknowledgment of outage",
+   "relation": "FIXED_BY",
+   "target": "Service Desk L1 Agent Procedure"
+  },
+  {
+   "source": "regular status updates",
+   "relation": "FIXED_BY",
+   "target": "Service Desk L1 Agent Procedure"
+  },
+  {
+   "source": "unverified information sharing",
+   "relation": "CAUSED_BY",
+   "target": "Do not share unverified information; refer only to official sources when discussing the outage with colleagues"
+  },
+  {
+   "source": "communication verification",
+   "relation": "FIXED_BY",
+   "target": "Verification and Follow-Up"
+  },
+  {
+   "source": "incident ticket logging",
+   "relation": "FIXED_BY",
+   "target": "Log all communications in the incident ticket with timestamps to maintain an audit trail"
+  },
+  {
+   "source": "reboot or reconnect VPN",
+   "relation": "FIXED_BY",
+   "target": "Post-Incident Communication"
+  },
+  {
+   "source": "IT Help Teams channel",
+   "relation": "AFFECTS",
+   "target": "Self-Help Procedure"
+  },
+  {
+   "source": "Service Desk",
+   "relation": "AFFECTS",
+   "target": "Self-Help Procedure"
+  },
+  {
+   "source": "self-service portal https://it.acme.example",
+   "relation": "AFFECTS",
+   "target": "Self-Help Procedure"
+  },
+  {
+   "source": "P1/P2 outage alert",
+   "relation": "AFFECTS",
+   "target": "Service Desk L1 Agent Procedure"
+  },
+  {
+   "source": "status page",
+   "relation": "AFFECTS",
+   "target": "Service Desk L1 Agent Procedure"
+  },
+  {
+   "source": "escalation chat",
+   "relation": "AFFECTS",
+   "target": "Service Desk L1 Agent Procedure"
+  },
+  {
+   "source": "Incident Manager",
+   "relation": "AFFECTS",
+   "target": "Service Desk L1 Agent Procedure"
+  },
+  {
+   "source": "service-desk call volume",
+   "relation": "AFFECTS",
+   "target": "Verification and Follow-Up"
+  },
+  {
+   "source": "post-incident summary message",
+   "relation": "AFFECTS",
+   "target": "Post-Incident Communication"
+  }
+ ]
+}

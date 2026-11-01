@@ -1,0 +1,109 @@
+{
+ "entities": [
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "split tunnelling",
+   "type": "Component"
+  },
+  {
+   "name": "corporate DNS forwarding rules",
+   "type": "Component"
+  },
+  {
+   "name": "DNS_PROBE_FINISHED_NXDOMAIN",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "internal sites don't load",
+   "type": "Symptom"
+  },
+  {
+   "name": "cannot reach internal shares",
+   "type": "Symptom"
+  },
+  {
+   "name": "VPN certificate expired",
+   "type": "Cause"
+  },
+  {
+   "name": "flush DNS",
+   "type": "Fix"
+  },
+  {
+   "name": "push corrected configuration profile via Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "verify corporate DNS forwarding rules",
+   "type": "Fix"
+  },
+  {
+   "name": "examine split-tunnel policies on the GlobalProtect gateway",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "internal sites don't load",
+   "relation": "CAUSED_BY",
+   "target": "split tunnelling not working"
+  },
+  {
+   "source": "cannot reach internal shares",
+   "relation": "CAUSED_BY",
+   "target": "split tunnelling not working"
+  },
+  {
+   "source": "DNS_PROBE_FINISHED_NXDOMAIN",
+   "relation": "INDICATES",
+   "target": "corporate DNS forwarding rules misconfigured"
+  },
+  {
+   "source": "split tunnelling not working",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "VPN certificate expired",
+   "relation": "CAUSED_BY",
+   "target": "VPN connected but internal sites don't load"
+  },
+  {
+   "source": "flush DNS",
+   "relation": "FIXED_BY",
+   "target": "internal sites don't load"
+  },
+  {
+   "source": "push corrected configuration profile via Intune",
+   "relation": "FIXED_BY",
+   "target": "split tunnelling not working"
+  },
+  {
+   "source": "verify corporate DNS forwarding rules",
+   "relation": "FIXED_BY",
+   "target": "DNS_PROBE_FINISHED_NXDOMAIN"
+  },
+  {
+   "source": "examine split-tunnel policies on the GlobalProtect gateway",
+   "relation": "FIXED_BY",
+   "target": "split tunnelling not working"
+  },
+  {
+   "source": "corporate DNS forwarding rules",
+   "relation": "PART_OF",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "split tunnelling",
+   "relation": "PART_OF",
+   "target": "GlobalProtect"
+  }
+ ]
+}

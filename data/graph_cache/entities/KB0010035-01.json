@@ -1,0 +1,140 @@
+{
+ "entities": [
+  {
+   "name": "Windows",
+   "type": "Product"
+  },
+  {
+   "name": "Task Manager",
+   "type": "Component"
+  },
+  {
+   "name": "Memory usage",
+   "type": "Symptom"
+  },
+  {
+   "name": "CPU usage",
+   "type": "Symptom"
+  },
+  {
+   "name": "High memory usage",
+   "type": "Symptom"
+  },
+  {
+   "name": "High CPU usage",
+   "type": "Symptom"
+  },
+  {
+   "name": "Insufficient RAM",
+   "type": "Cause"
+  },
+  {
+   "name": "HDD storage",
+   "type": "Component"
+  },
+  {
+   "name": "SSD migration",
+   "type": "Fix"
+  },
+  {
+   "name": "RAM upgrade to 16GB",
+   "type": "Fix"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Defender for Endpoint",
+   "type": "Product"
+  },
+  {
+   "name": "Disk free space",
+   "type": "Component"
+  },
+  {
+   "name": "Startup items",
+   "type": "Component"
+  },
+  {
+   "name": "Malware alerts",
+   "type": "Symptom"
+  },
+  {
+   "name": "Hardware upgrade recommendation",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "High memory usage",
+   "relation": "CAUSED_BY",
+   "target": "Insufficient RAM"
+  },
+  {
+   "source": "High CPU usage",
+   "relation": "CAUSED_BY",
+   "target": "Insufficient RAM"
+  },
+  {
+   "source": "Insufficient RAM",
+   "relation": "FIXED_BY",
+   "target": "RAM upgrade to 16GB"
+  },
+  {
+   "source": "HDD storage",
+   "relation": "AFFECTS",
+   "target": "Windows"
+  },
+  {
+   "source": "Elevated disk latency",
+   "relation": "INDICATES",
+   "target": "HDD storage"
+  },
+  {
+   "source": "HDD storage",
+   "relation": "FIXED_BY",
+   "target": "SSD migration"
+  },
+  {
+   "source": "Task Manager",
+   "relation": "AFFECTS",
+   "target": "Memory usage"
+  },
+  {
+   "source": "Task Manager",
+   "relation": "AFFECTS",
+   "target": "CPU usage"
+  },
+  {
+   "source": "Disk free space",
+   "relation": "AFFECTS",
+   "target": "Windows"
+  },
+  {
+   "source": "Startup items",
+   "relation": "AFFECTS",
+   "target": "Windows"
+  },
+  {
+   "source": "Malware alerts",
+   "relation": "INDICATES",
+   "target": "Defender for Endpoint"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "RAM upgrade to 16GB"
+  },
+  {
+   "source": "Defender for Endpoint",
+   "relation": "AFFECTS",
+   "target": "HDD storage"
+  },
+  {
+   "source": "High memory usage",
+   "relation": "AFFECTS",
+   "target": "Hardware upgrade recommendation"
+  }
+ ]
+}

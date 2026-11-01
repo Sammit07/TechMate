@@ -1,0 +1,144 @@
+{
+ "entities": [
+  {
+   "name": "external sharing",
+   "type": "Component"
+  },
+  {
+   "name": "OneDrive for Business",
+   "type": "Product"
+  },
+  {
+   "name": "SharePoint Online",
+   "type": "Product"
+  },
+  {
+   "name": "Conditional Access policies",
+   "type": "Component"
+  },
+  {
+   "name": "sensitivity label",
+   "type": "Component"
+  },
+  {
+   "name": "tenant-wide external sharing settings",
+   "type": "Component"
+  },
+  {
+   "name": "site collection sharing settings",
+   "type": "Component"
+  },
+  {
+   "name": "library/folder sharing settings",
+   "type": "Component"
+  },
+  {
+   "name": "expired external link",
+   "type": "Symptom"
+  },
+  {
+   "name": "blocked external sharing due to sensitivity label",
+   "type": "Cause"
+  },
+  {
+   "name": "restricted external sharing by Conditional Access",
+   "type": "Cause"
+  },
+  {
+   "name": "verify user license for OneDrive/SharePoint",
+   "type": "Fix"
+  },
+  {
+   "name": "check sharing settings at tenant/site/library level",
+   "type": "Fix"
+  },
+  {
+   "name": "temporarily disable Conditional Access policy for testing",
+   "type": "Fix"
+  },
+  {
+   "name": "change or move file from restricted sensitivity label",
+   "type": "Fix"
+  },
+  {
+   "name": "create new external link and delete old ones",
+   "type": "Fix"
+  },
+  {
+   "name": "collect user UID, file URL, error screenshot, timestamp for escalation",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "expired external link",
+   "relation": "FIXED_BY",
+   "target": "create new external link and delete old ones"
+  },
+  {
+   "source": "blocked external sharing due to sensitivity label",
+   "relation": "CAUSED_BY",
+   "target": "sensitivity label"
+  },
+  {
+   "source": "blocked external sharing due to sensitivity label",
+   "relation": "FIXED_BY",
+   "target": "change or move file from restricted sensitivity label"
+  },
+  {
+   "source": "restricted external sharing by Conditional Access",
+   "relation": "CAUSED_BY",
+   "target": "Conditional Access policies"
+  },
+  {
+   "source": "restricted external sharing by Conditional Access",
+   "relation": "FIXED_BY",
+   "target": "temporarily disable Conditional Access policy for testing"
+  },
+  {
+   "source": "verify user license for OneDrive/SharePoint",
+   "relation": "FIXED_BY",
+   "target": "OneDrive for Business"
+  },
+  {
+   "source": "verify user license for OneDrive/SharePoint",
+   "relation": "FIXED_BY",
+   "target": "SharePoint Online"
+  },
+  {
+   "source": "check sharing settings at tenant/site/library level",
+   "relation": "FIXED_BY",
+   "target": "tenant-wide external sharing settings"
+  },
+  {
+   "source": "check sharing settings at tenant/site/library level",
+   "relation": "FIXED_BY",
+   "target": "site collection sharing settings"
+  },
+  {
+   "source": "check sharing settings at tenant/site/library level",
+   "relation": "FIXED_BY",
+   "target": "library/folder sharing settings"
+  },
+  {
+   "source": "external sharing",
+   "relation": "AFFECTS",
+   "target": "OneDrive for Business"
+  },
+  {
+   "source": "external sharing",
+   "relation": "AFFECTS",
+   "target": "SharePoint Online"
+  },
+  {
+   "source": "sensitivity label",
+   "relation": "PART_OF",
+   "target": "SharePoint Online"
+  },
+  {
+   "source": "Conditional Access policies",
+   "relation": "PART_OF",
+   "target": "SharePoint Online"
+  }
+ ]
+}

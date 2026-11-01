@@ -1,0 +1,189 @@
+{
+ "entities": [
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "Acme-Corp Wi-Fi (802.1X)",
+   "type": "Product"
+  },
+  {
+   "name": "Palo Alto GlobalProtect VPN",
+   "type": "Product"
+  },
+  {
+   "name": "Expired or corrupted machine certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "Power-saving settings turning off wireless adapter",
+   "type": "Cause"
+  },
+  {
+   "name": "Out-of-date or incompatible Wi-Fi driver",
+   "type": "Cause"
+  },
+  {
+   "name": "Interference or AP overload in dense areas",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN client holding old routing tables",
+   "type": "Cause"
+  },
+  {
+   "name": "Misconfigured DNS or stale DHCP lease",
+   "type": "Cause"
+  },
+  {
+   "name": "Wi-Fi drops or disconnects several times per hour",
+   "type": "Symptom"
+  },
+  {
+   "name": "Shows Connected but no internet access",
+   "type": "Symptom"
+  },
+  {
+   "name": "Repeated prompts for ACME-Corp password",
+   "type": "Symptom"
+  },
+  {
+   "name": "Very low throughput or high latency in meeting rooms",
+   "type": "Symptom"
+  },
+  {
+   "name": "Event Viewer shows NETIO or WLAN AutoConfig errors",
+   "type": "Symptom"
+  },
+  {
+   "name": "0x80070005",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "0xC000000E",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Forget or remove ACME-Corp network",
+   "type": "Fix"
+  },
+  {
+   "name": "Update Wi-Fi driver",
+   "type": "Fix"
+  },
+  {
+   "name": "Disable power-saving for wireless adapter",
+   "type": "Fix"
+  },
+  {
+   "name": "Renew machine certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "Flush DNS and renew DHCP lease",
+   "type": "Fix"
+  },
+  {
+   "name": "Restart or reconnect GlobalProtect VPN",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Wi-Fi drops or disconnects several times per hour",
+   "relation": "CAUSED_BY",
+   "target": "Expired or corrupted machine certificate"
+  },
+  {
+   "source": "Shows Connected but no internet access",
+   "relation": "CAUSED_BY",
+   "target": "Misconfigured DNS or stale DHCP lease"
+  },
+  {
+   "source": "Repeated prompts for ACME-Corp password",
+   "relation": "CAUSED_BY",
+   "target": "Expired or corrupted machine certificate"
+  },
+  {
+   "source": "Very low throughput or high latency in meeting rooms",
+   "relation": "CAUSED_BY",
+   "target": "Interference or AP overload in dense areas"
+  },
+  {
+   "source": "Event Viewer shows NETIO or WLAN AutoConfig errors",
+   "relation": "INDICATES",
+   "target": "0x80070005"
+  },
+  {
+   "source": "Event Viewer shows NETIO or WLAN AutoConfig errors",
+   "relation": "INDICATES",
+   "target": "0xC000000E"
+  },
+  {
+   "source": "0x80070005",
+   "relation": "CAUSED_BY",
+   "target": "Expired or corrupted machine certificate"
+  },
+  {
+   "source": "0xC000000E",
+   "relation": "CAUSED_BY",
+   "target": "Out-of-date or incompatible Wi-Fi driver"
+  },
+  {
+   "source": "Expired or corrupted machine certificate",
+   "relation": "FIXED_BY",
+   "target": "Renew machine certificate"
+  },
+  {
+   "source": "Power-saving settings turning off wireless adapter",
+   "relation": "FIXED_BY",
+   "target": "Disable power-saving for wireless adapter"
+  },
+  {
+   "source": "Out-of-date or incompatible Wi-Fi driver",
+   "relation": "FIXED_BY",
+   "target": "Update Wi-Fi driver"
+  },
+  {
+   "source": "Misconfigured DNS or stale DHCP lease",
+   "relation": "FIXED_BY",
+   "target": "Flush DNS and renew DHCP lease"
+  },
+  {
+   "source": "VPN client holding old routing tables",
+   "relation": "FIXED_BY",
+   "target": "Restart or reconnect GlobalProtect VPN"
+  },
+  {
+   "source": "Wi-Fi drops or disconnects several times per hour",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "Shows Connected but no internet access",
+   "relation": "AFFECTS",
+   "target": "Acme-Corp Wi-Fi (802.1X)"
+  }
+ ]
+}

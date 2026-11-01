@@ -1,0 +1,154 @@
+{
+ "entities": [
+  {
+   "name": "shared drive",
+   "type": "Product"
+  },
+  {
+   "name": "SharePoint site",
+   "type": "Product"
+  },
+  {
+   "name": "security group",
+   "type": "Component"
+  },
+  {
+   "name": "Azure AD",
+   "type": "Product"
+  },
+  {
+   "name": "access denied",
+   "type": "Symptom"
+  },
+  {
+   "name": "manager approval",
+   "type": "Component"
+  },
+  {
+   "name": "IAM team lead",
+   "type": "Product"
+  },
+  {
+   "name": "Data Classification policy",
+   "type": "Component"
+  },
+  {
+   "name": "self-service portal",
+   "type": "Product"
+  },
+  {
+   "name": "UNc path",
+   "type": "Component"
+  },
+  {
+   "name": "folder permission",
+   "type": "Component"
+  },
+  {
+   "name": "SharePoint permission level",
+   "type": "Component"
+  },
+  {
+   "name": "verification step",
+   "type": "Component"
+  },
+  {
+   "name": "group membership check",
+   "type": "Fix"
+  },
+  {
+   "name": "ACL validation",
+   "type": "Fix"
+  },
+  {
+   "name": "retry after delay",
+   "type": "Fix"
+  },
+  {
+   "name": "escalation to IAM lead",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "access denied",
+   "relation": "CAUSED_BY",
+   "target": "incorrect group membership"
+  },
+  {
+   "source": "access denied",
+   "relation": "CAUSED_BY",
+   "target": "conflicting deny rules in Azure AD"
+  },
+  {
+   "source": "access denied",
+   "relation": "CAUSED_BY",
+   "target": "incorrect folder ACL"
+  },
+  {
+   "source": "access denied",
+   "relation": "CAUSED_BY",
+   "target": "incorrect SharePoint permission level"
+  },
+  {
+   "source": "access denied",
+   "relation": "FIXED_BY",
+   "target": "group membership check"
+  },
+  {
+   "source": "access denied",
+   "relation": "FIXED_BY",
+   "target": "ACL validation"
+  },
+  {
+   "source": "access denied",
+   "relation": "FIXED_BY",
+   "target": "retry after delay"
+  },
+  {
+   "source": "persistent access denied",
+   "relation": "FIXED_BY",
+   "target": "escalation to IAM lead"
+  },
+  {
+   "source": "manager approval",
+   "relation": "AFFECTS",
+   "target": "access request process"
+  },
+  {
+   "source": "Data Classification policy",
+   "relation": "AFFECTS",
+   "target": "escalation decision"
+  },
+  {
+   "source": "verification step",
+   "relation": "PART_OF",
+   "target": "self-help guide"
+  },
+  {
+   "source": "security group",
+   "relation": "PART_OF",
+   "target": "Azure AD"
+  },
+  {
+   "source": "folder permission",
+   "relation": "PART_OF",
+   "target": "shared drive"
+  },
+  {
+   "source": "SharePoint permission level",
+   "relation": "PART_OF",
+   "target": "SharePoint site"
+  },
+  {
+   "source": "IAM team lead",
+   "relation": "AFFECTS",
+   "target": "escalation workflow"
+  },
+  {
+   "source": "self-service portal",
+   "relation": "AFFECTS",
+   "target": "access request initiation"
+  }
+ ]
+}

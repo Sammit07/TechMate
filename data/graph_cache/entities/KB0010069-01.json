@@ -1,0 +1,121 @@
+{
+ "entities": [
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "shared mailbox calendar",
+   "type": "Component"
+  },
+  {
+   "name": "Full Access permission",
+   "type": "Component"
+  },
+  {
+   "name": "Send As permission",
+   "type": "Component"
+  },
+  {
+   "name": "calendar folder permission",
+   "type": "Component"
+  },
+  {
+   "name": "missing access to shared mailbox calendar",
+   "type": "Symptom"
+  },
+  {
+   "name": "insufficient permission level",
+   "type": "Cause"
+  },
+  {
+   "name": "request delegate editor rights",
+   "type": "Fix"
+  },
+  {
+   "name": "restart Outlook",
+   "type": "Fix"
+  },
+  {
+   "name": "Grant Full Access and Send As permissions",
+   "type": "Fix"
+  },
+  {
+   "name": "Set-MailboxFolderPermission -Identity \"team-projects@acme.example:\\Calendar\" -User \"jane.doe@acme.example\" -AccessRights Editor",
+   "type": "Fix"
+  },
+  {
+   "name": "team-projects@acme.example",
+   "type": "Product"
+  },
+  {
+   "name": "jane.doe@acme.example",
+   "type": "Product"
+  },
+  {
+   "name": "Exchange Online PowerShell",
+   "type": "Product"
+  },
+  {
+   "name": "Add-MailboxPermission",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "missing access to shared mailbox calendar",
+   "relation": "CAUSED_BY",
+   "target": "insufficient permission level"
+  },
+  {
+   "source": "insufficient permission level",
+   "relation": "FIXED_BY",
+   "target": "request delegate editor rights"
+  },
+  {
+   "source": "insufficient permission level",
+   "relation": "FIXED_BY",
+   "target": "restart Outlook"
+  },
+  {
+   "source": "insufficient permission level",
+   "relation": "FIXED_BY",
+   "target": "Grant Full Access and Send As permissions"
+  },
+  {
+   "source": "insufficient permission level",
+   "relation": "FIXED_BY",
+   "target": "Set-MailboxFolderPermission -Identity \"team-projects@acme.example:\\Calendar\" -User \"jane.doe@acme.example\" -AccessRights Editor"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "shared mailbox calendar"
+  },
+  {
+   "source": "shared mailbox calendar",
+   "relation": "PART_OF",
+   "target": "team-projects@acme.example"
+  },
+  {
+   "source": "Full Access permission",
+   "relation": "PART_OF",
+   "target": "team-projects@acme.example"
+  },
+  {
+   "source": "Send As permission",
+   "relation": "PART_OF",
+   "target": "team-projects@acme.example"
+  },
+  {
+   "source": "calendar folder permission",
+   "relation": "PART_OF",
+   "target": "team-projects@acme.example"
+  },
+  {
+   "source": "Exchange Online PowerShell",
+   "relation": "AFFECTS",
+   "target": "Add-MailboxPermission"
+  }
+ ]
+}

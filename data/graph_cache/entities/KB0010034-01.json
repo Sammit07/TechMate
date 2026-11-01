@@ -1,0 +1,131 @@
+{
+ "entities": [
+  {
+   "name": "Startup Impact List",
+   "type": "Component"
+  },
+  {
+   "name": "Task Manager",
+   "type": "Component"
+  },
+  {
+   "name": "Settings > Apps > Startup",
+   "type": "Component"
+  },
+  {
+   "name": "msconfig Services Tab",
+   "type": "Component"
+  },
+  {
+   "name": "Temporary Files Cleanup",
+   "type": "Fix"
+  },
+  {
+   "name": "Disk Cleanup (cleanmgr.exe)",
+   "type": "Fix"
+  },
+  {
+   "name": "Autoruns Utility",
+   "type": "Component"
+  },
+  {
+   "name": "Windows Update Status",
+   "type": "Component"
+  },
+  {
+   "name": "Intune Device Check",
+   "type": "Fix"
+  },
+  {
+   "name": "Remote Assistance Session",
+   "type": "Fix"
+  },
+  {
+   "name": "Storage Sense Cleanup Script",
+   "type": "Fix"
+  },
+  {
+   "name": "High CPU Usage",
+   "type": "Symptom"
+  },
+  {
+   "name": "RAM Utilization Above 85%",
+   "type": "Symptom"
+  },
+  {
+   "name": "Pending Windows Updates (>3 days)",
+   "type": "Cause"
+  },
+  {
+   "name": "RAM Upgrade to 16GB",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "High CPU Usage",
+   "relation": "CAUSED_BY",
+   "target": "Startup Impact List"
+  },
+  {
+   "source": "High CPU Usage",
+   "relation": "FIXED_BY",
+   "target": "Task Manager"
+  },
+  {
+   "source": "High CPU Usage",
+   "relation": "FIXED_BY",
+   "target": "Settings > Apps > Startup"
+  },
+  {
+   "source": "High CPU Usage",
+   "relation": "FIXED_BY",
+   "target": "msconfig Services Tab"
+  },
+  {
+   "source": "High CPU Usage",
+   "relation": "FIXED_BY",
+   "target": "Temporary Files Cleanup"
+  },
+  {
+   "source": "High CPU Usage",
+   "relation": "FIXED_BY",
+   "target": "Disk Cleanup (cleanmgr.exe)"
+  },
+  {
+   "source": "Pending Windows Updates (>3 days)",
+   "relation": "CAUSED_BY",
+   "target": "High CPU Usage"
+  },
+  {
+   "source": "RAM Utilization Above 85%",
+   "relation": "CAUSED_BY",
+   "target": "High CPU Usage"
+  },
+  {
+   "source": "Intune Device Check",
+   "relation": "FIXED_BY",
+   "target": "Pending Windows Updates (>3 days)"
+  },
+  {
+   "source": "Remote Assistance Session",
+   "relation": "FIXED_BY",
+   "target": "High CPU Usage"
+  },
+  {
+   "source": "Autoruns Utility",
+   "relation": "FIXED_BY",
+   "target": "Startup Impact List"
+  },
+  {
+   "source": "Storage Sense Cleanup Script",
+   "relation": "FIXED_BY",
+   "target": "High CPU Usage"
+  },
+  {
+   "source": "RAM Upgrade to 16GB",
+   "relation": "FIXED_BY",
+   "target": "RAM Utilization Above 85%"
+  }
+ ]
+}

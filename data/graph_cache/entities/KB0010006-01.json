@@ -1,0 +1,126 @@
+{
+ "entities": [
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "Credential Manager",
+   "type": "Component"
+  },
+  {
+   "name": "Keychain Access",
+   "type": "Component"
+  },
+  {
+   "name": "Saved credentials",
+   "type": "Component"
+  },
+  {
+   "name": "Password change",
+   "type": "Cause"
+  },
+  {
+   "name": "Stale credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "Account lockout",
+   "type": "Symptom"
+  },
+  {
+   "name": "Cached credentials",
+   "type": "Component"
+  },
+  {
+   "name": "Mapped network drives",
+   "type": "Component"
+  },
+  {
+   "name": "Office tokens",
+   "type": "Component"
+  },
+  {
+   "name": "Remove cached credentials",
+   "type": "Fix"
+  },
+  {
+   "name": "Re-add account",
+   "type": "Fix"
+  },
+  {
+   "name": "Disconnect mapped drive",
+   "type": "Fix"
+  },
+  {
+   "name": "Sign out of Office apps",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Account lockout",
+   "relation": "CAUSED_BY",
+   "target": "Stale credentials"
+  },
+  {
+   "source": "Stale credentials",
+   "relation": "CAUSED_BY",
+   "target": "Password change"
+  },
+  {
+   "source": "Account lockout",
+   "relation": "FIXED_BY",
+   "target": "Remove cached credentials"
+  },
+  {
+   "source": "Cached credentials",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "Cached credentials",
+   "relation": "AFFECTS",
+   "target": "OneDrive"
+  },
+  {
+   "source": "Cached credentials",
+   "relation": "AFFECTS",
+   "target": "Mapped network drives"
+  },
+  {
+   "source": "Cached credentials",
+   "relation": "AFFECTS",
+   "target": "Office tokens"
+  },
+  {
+   "source": "Remove cached credentials",
+   "relation": "FIXED_BY",
+   "target": "Credential Manager"
+  },
+  {
+   "source": "Remove cached credentials",
+   "relation": "FIXED_BY",
+   "target": "Keychain Access"
+  },
+  {
+   "source": "Re-add account",
+   "relation": "FIXED_BY",
+   "target": "Mobile Mail Apps"
+  },
+  {
+   "source": "Disconnect mapped drive",
+   "relation": "FIXED_BY",
+   "target": "Mapped network drives"
+  },
+  {
+   "source": "Sign out of Office apps",
+   "relation": "FIXED_BY",
+   "target": "Office tokens"
+  }
+ ]
+}

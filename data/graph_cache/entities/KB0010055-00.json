@@ -1,0 +1,165 @@
+{
+ "entities": [
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Software Center",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 (23H2/24H2)",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect VPN",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Device not enrolled in Intune or non-compliant",
+   "type": "Cause"
+  },
+  {
+   "name": "User lacks required license or entitlement",
+   "type": "Cause"
+  },
+  {
+   "name": "Application not in approved software catalog",
+   "type": "Cause"
+  },
+  {
+   "name": "Network connectivity issue blocking Intune service",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated or corrupted Intune client or Company Portal app",
+   "type": "Cause"
+  },
+  {
+   "name": "Pending approval awaiting Application Support or Security action",
+   "type": "Cause"
+  },
+  {
+   "name": "Shows application as 'Not available' or 'Not applicable'",
+   "type": "Symptom"
+  },
+  {
+   "name": "Error code 0x80070005 (Access denied)",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Error code 0x87D00324 (The app is not applicable for this device)",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Installation fails with 'Installation failed - please try again later'",
+   "type": "Symptom"
+  },
+  {
+   "name": "No approval prompt; app remains in 'Pending' state",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Shows application as 'Not available' or 'Not applicable'",
+   "relation": "CAUSED_BY",
+   "target": "Application not in approved software catalog"
+  },
+  {
+   "source": "Error code 0x80070005 (Access denied)",
+   "relation": "CAUSED_BY",
+   "target": "User lacks required license or entitlement"
+  },
+  {
+   "source": "Error code 0x87D00324 (The app is not applicable for this device)",
+   "relation": "CAUSED_BY",
+   "target": "Application not in approved software catalog"
+  },
+  {
+   "source": "Installation fails with 'Installation failed - please try again later'",
+   "relation": "CAUSED_BY",
+   "target": "Outdated or corrupted Intune client or Company Portal app"
+  },
+  {
+   "source": "No approval prompt; app remains in 'Pending' state",
+   "relation": "CAUSED_BY",
+   "target": "Pending approval awaiting Application Support or Security action"
+  },
+  {
+   "source": "Device not enrolled in Intune or non-compliant",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  },
+  {
+   "source": "Network connectivity issue blocking Intune service",
+   "relation": "AFFECTS",
+   "target": "Microsoft Intune"
+  },
+  {
+   "source": "GlobalProtect VPN",
+   "relation": "PART_OF",
+   "target": "network connectivity"
+  },
+  {
+   "source": "Error code 0x80070005 (Access denied)",
+   "relation": "INDICATES",
+   "target": "User lacks required license or entitlement"
+  },
+  {
+   "source": "Error code 0x87D00324 (The app is not applicable for this device)",
+   "relation": "INDICATES",
+   "target": "Application not in approved software catalog"
+  },
+  {
+   "source": "Shows application as 'Not available' or 'Not applicable'",
+   "relation": "INDICATES",
+   "target": "Application not in approved software catalog"
+  },
+  {
+   "source": "Installation fails with 'Installation failed - please try again later'",
+   "relation": "INDICATES",
+   "target": "Outdated or corrupted Intune client or Company Portal app"
+  },
+  {
+   "source": "No approval prompt; app remains in 'Pending' state",
+   "relation": "INDICATES",
+   "target": "Pending approval awaiting Application Support or Security action"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "Windows 11 (23H2/24H2)"
+  },
+  {
+   "source": "Software Center",
+   "relation": "AFFECTS",
+   "target": "Windows 11 (23H2/24H2)"
+  }
+ ]
+}

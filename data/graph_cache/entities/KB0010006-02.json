@@ -1,0 +1,211 @@
+{
+ "entities": [
+  {
+   "name": "Active Directory Users and Computers",
+   "type": "Product"
+  },
+  {
+   "name": "AD self-service tool",
+   "type": "Product"
+  },
+  {
+   "name": "self-service password reset portal",
+   "type": "Product"
+  },
+  {
+   "name": "Windows laptop/desktop",
+   "type": "Product"
+  },
+  {
+   "name": "macOS device",
+   "type": "Product"
+  },
+  {
+   "name": "mobile phone/tablet",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "native mail app",
+   "type": "Product"
+  },
+  {
+   "name": "scheduled tasks",
+   "type": "Component"
+  },
+  {
+   "name": "service accounts",
+   "type": "Component"
+  },
+  {
+   "name": "mapped drives",
+   "type": "Component"
+  },
+  {
+   "name": "printers",
+   "type": "Component"
+  },
+  {
+   "name": "Keychain entries",
+   "type": "Component"
+  },
+  {
+   "name": "Exchange account",
+   "type": "Component"
+  },
+  {
+   "name": "account lockout",
+   "type": "Symptom"
+  },
+  {
+   "name": "stale credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "saved credentials",
+   "type": "Component"
+  },
+  {
+   "name": "password change",
+   "type": "Cause"
+  },
+  {
+   "name": "cmdkey /list",
+   "type": "Fix"
+  },
+  {
+   "name": "cmdkey /delete:<target>",
+   "type": "Fix"
+  },
+  {
+   "name": "security delete-generic-password -s <service>",
+   "type": "Fix"
+  },
+  {
+   "name": "remove and re-add Exchange account",
+   "type": "Fix"
+  },
+  {
+   "name": "lock and unlock workstation",
+   "type": "Fix"
+  },
+  {
+   "name": "reboot the device",
+   "type": "Fix"
+  },
+  {
+   "name": "attempt to access resource",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "account lockout",
+   "relation": "CAUSED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "CAUSED_BY",
+   "target": "password change"
+  },
+  {
+   "source": "account lockout",
+   "relation": "AFFECTS",
+   "target": "Windows laptop/desktop"
+  },
+  {
+   "source": "account lockout",
+   "relation": "AFFECTS",
+   "target": "macOS device"
+  },
+  {
+   "source": "account lockout",
+   "relation": "AFFECTS",
+   "target": "mobile phone/tablet"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "saved credentials"
+  },
+  {
+   "source": "saved credentials",
+   "relation": "PART_OF",
+   "target": "Keychain entries"
+  },
+  {
+   "source": "saved credentials",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  },
+  {
+   "source": "saved credentials",
+   "relation": "PART_OF",
+   "target": "native mail app"
+  },
+  {
+   "source": "saved credentials",
+   "relation": "PART_OF",
+   "target": "mapped drives"
+  },
+  {
+   "source": "saved credentials",
+   "relation": "PART_OF",
+   "target": "printers"
+  },
+  {
+   "source": "saved credentials",
+   "relation": "PART_OF",
+   "target": "Exchange account"
+  },
+  {
+   "source": "saved credentials",
+   "relation": "PART_OF",
+   "target": "scheduled tasks"
+  },
+  {
+   "source": "saved credentials",
+   "relation": "PART_OF",
+   "target": "service accounts"
+  },
+  {
+   "source": "cmdkey /list",
+   "relation": "FIXED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "cmdkey /delete:<target>",
+   "relation": "FIXED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "security delete-generic-password -s <service>",
+   "relation": "FIXED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "remove and re-add Exchange account",
+   "relation": "FIXED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "lock and unlock workstation",
+   "relation": "FIXED_BY",
+   "target": "account lockout"
+  },
+  {
+   "source": "reboot the device",
+   "relation": "FIXED_BY",
+   "target": "account lockout"
+  },
+  {
+   "source": "attempt to access resource",
+   "relation": "FIXED_BY",
+   "target": "account lockout"
+  }
+ ]
+}

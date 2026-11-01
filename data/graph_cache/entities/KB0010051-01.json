@@ -1,0 +1,116 @@
+{
+ "entities": [
+  {
+   "name": "Windows",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Dell BIOS Diagnostics",
+   "type": "Component"
+  },
+  {
+   "name": "Lenovo Vantage Hardware Test",
+   "type": "Component"
+  },
+  {
+   "name": "HP PC Hardware Diagnostics UEFI",
+   "type": "Component"
+  },
+  {
+   "name": "driver reinstall",
+   "type": "Fix"
+  },
+  {
+   "name": "hardware diagnostic",
+   "type": "Component"
+  },
+  {
+   "name": "yellow triangle",
+   "type": "Symptom"
+  },
+  {
+   "name": "0xC0000001",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "0x80070005",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "third-party camera/audio utilities",
+   "type": "Component"
+  },
+  {
+   "name": "OBS",
+   "type": "Component"
+  },
+  {
+   "name": "Zoom virtual cam",
+   "type": "Component"
+  },
+  {
+   "name": "VPN split-tunnel",
+   "type": "Component"
+  },
+  {
+   "name": "Teams call",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "yellow triangle",
+   "relation": "CAUSED_BY",
+   "target": "driver issues"
+  },
+  {
+   "source": "0xC0000001",
+   "relation": "INDICATES",
+   "target": "device failed to start"
+  },
+  {
+   "source": "0x80070005",
+   "relation": "INDICATES",
+   "target": "access denied"
+  },
+  {
+   "source": "third-party camera/audio utilities",
+   "relation": "CAUSED_BY",
+   "target": "conflict with system drivers"
+  },
+  {
+   "source": "driver reinstall",
+   "relation": "FIXED_BY",
+   "target": "yellow triangle"
+  },
+  {
+   "source": "hardware diagnostic",
+   "relation": "AFFECTS",
+   "target": "Dell BIOS Diagnostics"
+  },
+  {
+   "source": "hardware diagnostic",
+   "relation": "AFFECTS",
+   "target": "Lenovo Vantage Hardware Test"
+  },
+  {
+   "source": "hardware diagnostic",
+   "relation": "AFFECTS",
+   "target": "HP PC Hardware Diagnostics UEFI"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "driver deployment"
+  },
+  {
+   "source": "Teams call",
+   "relation": "AFFECTS",
+   "target": "camera audio Bluetooth functionality"
+  }
+ ]
+}

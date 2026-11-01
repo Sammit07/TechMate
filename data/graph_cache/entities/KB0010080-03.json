@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Intune enrollment",
+   "type": "Process"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook mobile secure device",
+   "type": "Component"
+  },
+  {
+   "name": "device compliance policy",
+   "type": "Component"
+  },
+  {
+   "name": "conditional access policy",
+   "type": "Component"
+  },
+  {
+   "name": "certificate-based VPN issue",
+   "type": "Cause"
+  },
+  {
+   "name": "network connectivity issue",
+   "type": "Cause"
+  },
+  {
+   "name": "error code 0x80072ee2",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "error code 0x80092004",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "compliance failure screen",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outlook sync failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "jailbroken or rooted device",
+   "type": "Cause"
+  },
+  {
+   "name": "missing device passcode",
+   "type": "Cause"
+  },
+  {
+   "name": "lack of device encryption",
+   "type": "Cause"
+  },
+  {
+   "name": "Identity & Access Management (IAM) team",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Intune enrollment",
+   "relation": "CAUSED_BY",
+   "target": "network connectivity issue"
+  },
+  {
+   "source": "Intune enrollment",
+   "relation": "CAUSED_BY",
+   "target": "certificate-based VPN issue"
+  },
+  {
+   "source": "error code 0x80072ee2",
+   "relation": "INDICATES",
+   "target": "network connectivity issue"
+  },
+  {
+   "source": "error code 0x80092004",
+   "relation": "INDICATES",
+   "target": "certificate-based VPN issue"
+  },
+  {
+   "source": "compliance failure screen",
+   "relation": "AFFECTS",
+   "target": "device compliance policy"
+  },
+  {
+   "source": "Outlook sync failure",
+   "relation": "AFFECTS",
+   "target": "Outlook mobile secure device"
+  },
+  {
+   "source": "jailbroken or rooted device",
+   "relation": "CAUSED_BY",
+   "target": "device compliance policy violation"
+  },
+  {
+   "source": "missing device passcode",
+   "relation": "CAUSED_BY",
+   "target": "device compliance policy violation"
+  },
+  {
+   "source": "lack of device encryption",
+   "relation": "CAUSED_BY",
+   "target": "device compliance policy violation"
+  },
+  {
+   "source": "device compliance policy",
+   "relation": "PART_OF",
+   "target": "Intune enrollment"
+  },
+  {
+   "source": "conditional access policy",
+   "relation": "PART_OF",
+   "target": "Intune enrollment"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "Intune enrollment"
+  },
+  {
+   "source": "Identity & Access Management (IAM) team",
+   "relation": "FIXED_BY",
+   "target": "certificate-based VPN issue"
+  },
+  {
+   "source": "Identity & Access Management (IAM) team",
+   "relation": "FIXED_BY",
+   "target": "network connectivity issue"
+  }
+ ]
+}

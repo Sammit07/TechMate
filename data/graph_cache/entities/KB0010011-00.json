@@ -1,0 +1,159 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "macOS devices",
+   "type": "Product"
+  },
+  {
+   "name": "Azure AD / Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "SharePoint Online",
+   "type": "Product"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "file servers accessed over SMB",
+   "type": "Product"
+  },
+  {
+   "name": "HR applications",
+   "type": "Product"
+  },
+  {
+   "name": "line-of-business apps",
+   "type": "Product"
+  },
+  {
+   "name": "Access denied",
+   "type": "Symptom"
+  },
+  {
+   "name": "New security group membership not yet evaluated",
+   "type": "Cause"
+  },
+  {
+   "name": "Authentication token not refreshed",
+   "type": "Cause"
+  },
+  {
+   "name": "Conditional Access policies requiring MFA or compliant device not met",
+   "type": "Cause"
+  },
+  {
+   "name": "Replication delay between on-premises AD and Azure AD",
+   "type": "Cause"
+  },
+  {
+   "name": "Approval missing or not recorded",
+   "type": "Cause"
+  },
+  {
+   "name": "signing out and back in",
+   "type": "Fix"
+  },
+  {
+   "name": "waiting for the token refresh interval",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Access denied",
+   "relation": "CAUSED_BY",
+   "target": "New security group membership not yet evaluated"
+  },
+  {
+   "source": "Access denied",
+   "relation": "CAUSED_BY",
+   "target": "Authentication token not refreshed"
+  },
+  {
+   "source": "Access denied",
+   "relation": "CAUSED_BY",
+   "target": "Conditional Access policies requiring MFA or compliant device not met"
+  },
+  {
+   "source": "Access denied",
+   "relation": "CAUSED_BY",
+   "target": "Replication delay between on-premises AD and Azure AD"
+  },
+  {
+   "source": "Access denied",
+   "relation": "CAUSED_BY",
+   "target": "Approval missing or not recorded"
+  },
+  {
+   "source": "New security group membership not yet evaluated",
+   "relation": "FIXED_BY",
+   "target": "signing out and back in"
+  },
+  {
+   "source": "Authentication token not refreshed",
+   "relation": "FIXED_BY",
+   "target": "signing out and back in"
+  },
+  {
+   "source": "Authentication token not refreshed",
+   "relation": "FIXED_BY",
+   "target": "waiting for the token refresh interval"
+  },
+  {
+   "source": "Access denied",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptops"
+  },
+  {
+   "source": "Access denied",
+   "relation": "AFFECTS",
+   "target": "macOS devices"
+  },
+  {
+   "source": "Access denied",
+   "relation": "AFFECTS",
+   "target": "Azure AD / Entra ID"
+  },
+  {
+   "source": "Access denied",
+   "relation": "AFFECTS",
+   "target": "SharePoint Online"
+  },
+  {
+   "source": "Access denied",
+   "relation": "AFFECTS",
+   "target": "Teams"
+  },
+  {
+   "source": "Access denied",
+   "relation": "AFFECTS",
+   "target": "OneDrive"
+  },
+  {
+   "source": "Access denied",
+   "relation": "AFFECTS",
+   "target": "file servers accessed over SMB"
+  },
+  {
+   "source": "Access denied",
+   "relation": "AFFECTS",
+   "target": "HR applications"
+  },
+  {
+   "source": "Access denied",
+   "relation": "AFFECTS",
+   "target": "line-of-business apps"
+  }
+ ]
+}

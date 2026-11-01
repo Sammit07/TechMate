@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "swollen battery",
+   "type": "Symptom"
+  },
+  {
+   "name": "bulging battery",
+   "type": "Symptom"
+  },
+  {
+   "name": "battery leakage",
+   "type": "Symptom"
+  },
+  {
+   "name": "unusual odor from battery",
+   "type": "Symptom"
+  },
+  {
+   "name": "power off device",
+   "type": "Fix"
+  },
+  {
+   "name": "disconnect charger",
+   "type": "Fix"
+  },
+  {
+   "name": "quarantine laptop",
+   "type": "Fix"
+  },
+  {
+   "name": "replace battery",
+   "type": "Fix"
+  },
+  {
+   "name": "run battery diagnostics",
+   "type": "Fix"
+  },
+  {
+   "name": "laptop",
+   "type": "Product"
+  },
+  {
+   "name": "AC adapter",
+   "type": "Component"
+  },
+  {
+   "name": "peripheral cables",
+   "type": "Component"
+  },
+  {
+   "name": "battery latch",
+   "type": "Component"
+  },
+  {
+   "name": "fire-resistant cabinet",
+   "type": "Component"
+  },
+  {
+   "name": "pre-padded return box",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "swollen battery",
+   "relation": "CAUSED_BY",
+   "target": "battery degradation"
+  },
+  {
+   "source": "bulging battery",
+   "relation": "CAUSED_BY",
+   "target": "battery degradation"
+  },
+  {
+   "source": "battery leakage",
+   "relation": "CAUSED_BY",
+   "target": "battery degradation"
+  },
+  {
+   "source": "unusual odor from battery",
+   "relation": "CAUSED_BY",
+   "target": "battery degradation"
+  },
+  {
+   "source": "swollen battery",
+   "relation": "AFFECTS",
+   "target": "laptop"
+  },
+  {
+   "source": "power off device",
+   "relation": "FIXED_BY",
+   "target": "swollen battery"
+  },
+  {
+   "source": "disconnect charger",
+   "relation": "FIXED_BY",
+   "target": "swollen battery"
+  },
+  {
+   "source": "quarantine laptop",
+   "relation": "FIXED_BY",
+   "target": "swollen battery"
+  },
+  {
+   "source": "replace battery",
+   "relation": "FIXED_BY",
+   "target": "swollen battery"
+  },
+  {
+   "source": "run battery diagnostics",
+   "relation": "FIXED_BY",
+   "target": "swollen battery"
+  },
+  {
+   "source": "AC adapter",
+   "relation": "PART_OF",
+   "target": "laptop"
+  },
+  {
+   "source": "peripheral cables",
+   "relation": "PART_OF",
+   "target": "laptop"
+  },
+  {
+   "source": "battery latch",
+   "relation": "PART_OF",
+   "target": "laptop"
+  },
+  {
+   "source": "fire-resistant cabinet",
+   "relation": "AFFECTS",
+   "target": "laptop"
+  },
+  {
+   "source": "pre-padded return box",
+   "relation": "AFFECTS",
+   "target": "laptop"
+  }
+ ]
+}

@@ -1,0 +1,135 @@
+{
+ "entities": [
+  {
+   "name": "secure print release",
+   "type": "Component"
+  },
+  {
+   "name": "badge tap",
+   "type": "Component"
+  },
+  {
+   "name": "PaperCut",
+   "type": "Product"
+  },
+  {
+   "name": "print queue stuck",
+   "type": "Symptom"
+  },
+  {
+   "name": "printer offline",
+   "type": "Symptom"
+  },
+  {
+   "name": "cannot add printer",
+   "type": "Symptom"
+  },
+  {
+   "name": "blank pages",
+   "type": "Symptom"
+  },
+  {
+   "name": "Print Spooler",
+   "type": "Component"
+  },
+  {
+   "name": "Printer driver",
+   "type": "Component"
+  },
+  {
+   "name": "Badge reader",
+   "type": "Component"
+  },
+  {
+   "name": "\\\\print.acme.example\\<printer-name>",
+   "type": "Product"
+  },
+  {
+   "name": "Acme ID badge",
+   "type": "Component"
+  },
+  {
+   "name": "restart Print Spooler service",
+   "type": "Fix"
+  },
+  {
+   "name": "purge print queue",
+   "type": "Fix"
+  },
+  {
+   "name": "reinstall printer driver",
+   "type": "Fix"
+  },
+  {
+   "name": "test badge authentication",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "print queue stuck",
+   "relation": "CAUSED_BY",
+   "target": "Print Spooler"
+  },
+  {
+   "source": "printer offline",
+   "relation": "CAUSED_BY",
+   "target": "Print Spooler"
+  },
+  {
+   "source": "cannot add printer",
+   "relation": "CAUSED_BY",
+   "target": "Printer driver"
+  },
+  {
+   "source": "blank pages",
+   "relation": "CAUSED_BY",
+   "target": "Printer driver"
+  },
+  {
+   "source": "Print Spooler",
+   "relation": "AFFECTS",
+   "target": "secure print release"
+  },
+  {
+   "source": "Printer driver",
+   "relation": "AFFECTS",
+   "target": "secure print release"
+  },
+  {
+   "source": "Badge reader",
+   "relation": "AFFECTS",
+   "target": "secure print release"
+  },
+  {
+   "source": "Print Spooler",
+   "relation": "FIXED_BY",
+   "target": "restart Print Spooler service"
+  },
+  {
+   "source": "print queue stuck",
+   "relation": "FIXED_BY",
+   "target": "purge print queue"
+  },
+  {
+   "source": "Printer driver",
+   "relation": "FIXED_BY",
+   "target": "reinstall printer driver"
+  },
+  {
+   "source": "Badge reader",
+   "relation": "FIXED_BY",
+   "target": "test badge authentication"
+  },
+  {
+   "source": "\\\\print.acme.example\\<printer-name>",
+   "relation": "PART_OF",
+   "target": "PaperCut"
+  },
+  {
+   "source": "Acme ID badge",
+   "relation": "PART_OF",
+   "target": "Badge reader"
+  }
+ ]
+}

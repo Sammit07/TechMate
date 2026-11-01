@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Outlook not syncing",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outlook crashing",
+   "type": "Symptom"
+  },
+  {
+   "name": "Password prompts",
+   "type": "Symptom"
+  },
+  {
+   "name": "COM add-in conflict",
+   "type": "Cause"
+  },
+  {
+   "name": "Corrupted Outlook profile",
+   "type": "Cause"
+  },
+  {
+   "name": "Search index corruption",
+   "type": "Cause"
+  },
+  {
+   "name": "Start Outlook in safe mode",
+   "type": "Fix"
+  },
+  {
+   "name": "Disable all COM add-ins",
+   "type": "Fix"
+  },
+  {
+   "name": "Rebuild Outlook profile",
+   "type": "Fix"
+  },
+  {
+   "name": "Repair search index",
+   "type": "Fix"
+  },
+  {
+   "name": "Microsoft Support and Recovery Assistant (SaRA)",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "OST file",
+   "type": "Component"
+  },
+  {
+   "name": "Credential Manager",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Outlook not syncing",
+   "relation": "CAUSED_BY",
+   "target": "COM add-in conflict"
+  },
+  {
+   "source": "Outlook crashing",
+   "relation": "CAUSED_BY",
+   "target": "COM add-in conflict"
+  },
+  {
+   "source": "Password prompts",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted Outlook profile"
+  },
+  {
+   "source": "Outlook not syncing",
+   "relation": "CAUSED_BY",
+   "target": "Search index corruption"
+  },
+  {
+   "source": "Outlook crashing",
+   "relation": "FIXED_BY",
+   "target": "Start Outlook in safe mode"
+  },
+  {
+   "source": "Outlook not syncing",
+   "relation": "FIXED_BY",
+   "target": "Disable all COM add-ins"
+  },
+  {
+   "source": "Password prompts",
+   "relation": "FIXED_BY",
+   "target": "Rebuild Outlook profile"
+  },
+  {
+   "source": "Outlook not syncing",
+   "relation": "FIXED_BY",
+   "target": "Repair search index"
+  },
+  {
+   "source": "COM add-in conflict",
+   "relation": "INDICATES",
+   "target": "Start Outlook in safe mode"
+  },
+  {
+   "source": "Corrupted Outlook profile",
+   "relation": "INDICATES",
+   "target": "Rebuild Outlook profile"
+  },
+  {
+   "source": "Search index corruption",
+   "relation": "INDICATES",
+   "target": "Repair search index"
+  },
+  {
+   "source": "Outlook not syncing",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "Outlook crashing",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "Password prompts",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "OST file",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  }
+ ]
+}

@@ -1,0 +1,226 @@
+{
+ "entities": [
+  {
+   "name": "laptop won't turn on",
+   "type": "Symptom"
+  },
+  {
+   "name": "black screen boot",
+   "type": "Symptom"
+  },
+  {
+   "name": "automatic repair loop",
+   "type": "Symptom"
+  },
+  {
+   "name": "stuck in a boot loop",
+   "type": "Symptom"
+  },
+  {
+   "name": "motherboard failure",
+   "type": "Cause"
+  },
+  {
+   "name": "power circuitry issue",
+   "type": "Cause"
+  },
+  {
+   "name": "storage hardware fault",
+   "type": "Cause"
+  },
+  {
+   "name": "third-party driver conflict",
+   "type": "Cause"
+  },
+  {
+   "name": "recent Windows update",
+   "type": "Cause"
+  },
+  {
+   "name": "hard reset",
+   "type": "Fix"
+  },
+  {
+   "name": "boot into Safe Mode",
+   "type": "Fix"
+  },
+  {
+   "name": "uninstall recent Windows update",
+   "type": "Fix"
+  },
+  {
+   "name": "run sfc or chkdsk",
+   "type": "Fix"
+  },
+  {
+   "name": "check BIOS settings",
+   "type": "Fix"
+  },
+  {
+   "name": "test with known-good AC adapter",
+   "type": "Fix"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "msinfo32",
+   "type": "Component"
+  },
+  {
+   "name": "Device Health script",
+   "type": "Component"
+  },
+  {
+   "name": "Startup Repair",
+   "type": "Component"
+  },
+  {
+   "name": "BIOS version",
+   "type": "Component"
+  },
+  {
+   "name": "Beep codes",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "error messages",
+   "type": "ErrorCode"
+  }
+ ],
+ "relations": [
+  {
+   "source": "laptop won't turn on",
+   "relation": "CAUSED_BY",
+   "target": "motherboard failure"
+  },
+  {
+   "source": "laptop won't turn on",
+   "relation": "CAUSED_BY",
+   "target": "power circuitry issue"
+  },
+  {
+   "source": "laptop won't turn on",
+   "relation": "CAUSED_BY",
+   "target": "storage hardware fault"
+  },
+  {
+   "source": "black screen boot",
+   "relation": "CAUSED_BY",
+   "target": "third-party driver conflict"
+  },
+  {
+   "source": "automatic repair loop",
+   "relation": "CAUSED_BY",
+   "target": "recent Windows update"
+  },
+  {
+   "source": "stuck in a boot loop",
+   "relation": "CAUSED_BY",
+   "target": "third-party driver conflict"
+  },
+  {
+   "source": "stuck in a boot loop",
+   "relation": "CAUSED_BY",
+   "target": "recent Windows update"
+  },
+  {
+   "source": "motherboard failure",
+   "relation": "FIXED_BY",
+   "target": "escalate to Desktop Support team"
+  },
+  {
+   "source": "power circuitry issue",
+   "relation": "FIXED_BY",
+   "target": "test with known-good AC adapter"
+  },
+  {
+   "source": "storage hardware fault",
+   "relation": "FIXED_BY",
+   "target": "escalate to Desktop Support team"
+  },
+  {
+   "source": "third-party driver conflict",
+   "relation": "FIXED_BY",
+   "target": "boot into Safe Mode"
+  },
+  {
+   "source": "third-party driver conflict",
+   "relation": "FIXED_BY",
+   "target": "uninstall recent Windows update"
+  },
+  {
+   "source": "recent Windows update",
+   "relation": "FIXED_BY",
+   "target": "uninstall recent Windows update"
+  },
+  {
+   "source": "laptop won't turn on",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  },
+  {
+   "source": "laptop won't turn on",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "laptop won't turn on",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "laptop won't turn on",
+   "relation": "AFFECTS",
+   "target": "Teams"
+  },
+  {
+   "source": "boot into Safe Mode",
+   "relation": "PART_OF",
+   "target": "Startup Settings"
+  },
+  {
+   "source": "Device Health script",
+   "relation": "PART_OF",
+   "target": "Company Portal"
+  },
+  {
+   "source": "msinfo32",
+   "relation": "PART_OF",
+   "target": "Windows diagnostics"
+  },
+  {
+   "source": "Startup Repair",
+   "relation": "PART_OF",
+   "target": "Windows recovery environment"
+  },
+  {
+   "source": "BIOS version",
+   "relation": "PART_OF",
+   "target": "BIOS"
+  },
+  {
+   "source": "Beep codes",
+   "relation": "INDICATES",
+   "target": "motherboard failure"
+  },
+  {
+   "source": "error messages",
+   "relation": "INDICATES",
+   "target": "storage hardware fault"
+  }
+ ]
+}

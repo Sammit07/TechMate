@@ -1,0 +1,157 @@
+{
+ "entities": [
+  {
+   "name": "Windows Update",
+   "type": "Product"
+  },
+  {
+   "name": "WSUS server",
+   "type": "Component"
+  },
+  {
+   "name": "Palo Alto GlobalProtect VPN",
+   "type": "Product"
+  },
+  {
+   "name": "0x80070005",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Access is denied",
+   "type": "Symptom"
+  },
+  {
+   "name": "insufficient permissions",
+   "type": "Cause"
+  },
+  {
+   "name": "security software blocking installer",
+   "type": "Cause"
+  },
+  {
+   "name": "0xC1900101",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "driver caused update to fail",
+   "type": "Symptom"
+  },
+  {
+   "name": "BIOS or graphics driver update",
+   "type": "Cause"
+  },
+  {
+   "name": "0x800F0923",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "update not applicable",
+   "type": "Symptom"
+  },
+  {
+   "name": "feature update deferred",
+   "type": "Cause"
+  },
+  {
+   "name": "low disk space",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN connection issue",
+   "type": "Cause"
+  },
+  {
+   "name": "run Windows Update Troubleshooter",
+   "type": "Fix"
+  },
+  {
+   "name": "reset Windows Update components",
+   "type": "Fix"
+  },
+  {
+   "name": "check disk space",
+   "type": "Fix"
+  },
+  {
+   "name": "verify VPN connection",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "0x80070005",
+   "relation": "INDICATES",
+   "target": "Access is denied"
+  },
+  {
+   "source": "Access is denied",
+   "relation": "CAUSED_BY",
+   "target": "insufficient permissions"
+  },
+  {
+   "source": "Access is denied",
+   "relation": "CAUSED_BY",
+   "target": "security software blocking installer"
+  },
+  {
+   "source": "0xC1900101",
+   "relation": "INDICATES",
+   "target": "driver caused update to fail"
+  },
+  {
+   "source": "driver caused update to fail",
+   "relation": "CAUSED_BY",
+   "target": "BIOS or graphics driver update"
+  },
+  {
+   "source": "0x800F0923",
+   "relation": "INDICATES",
+   "target": "update not applicable"
+  },
+  {
+   "source": "update not applicable",
+   "relation": "CAUSED_BY",
+   "target": "feature update deferred"
+  },
+  {
+   "source": "Windows Update",
+   "relation": "AFFECTS",
+   "target": "WSUS server"
+  },
+  {
+   "source": "VPN connection issue",
+   "relation": "CAUSED_BY",
+   "target": "cannot reach internal WSUS servers"
+  },
+  {
+   "source": "low disk space",
+   "relation": "CAUSED_BY",
+   "target": "Windows Update failure"
+  },
+  {
+   "source": "VPN connection issue",
+   "relation": "CAUSED_BY",
+   "target": "Windows Update failure"
+  },
+  {
+   "source": "Windows Update failure",
+   "relation": "FIXED_BY",
+   "target": "run Windows Update Troubleshooter"
+  },
+  {
+   "source": "Windows Update failure",
+   "relation": "FIXED_BY",
+   "target": "reset Windows Update components"
+  },
+  {
+   "source": "Windows Update failure",
+   "relation": "FIXED_BY",
+   "target": "check disk space"
+  },
+  {
+   "source": "Windows Update failure",
+   "relation": "FIXED_BY",
+   "target": "verify VPN connection"
+  }
+ ]
+}

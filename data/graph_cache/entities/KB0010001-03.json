@@ -1,0 +1,177 @@
+{
+ "entities": [
+  {
+   "name": "Self-Service Password Reset (SSPR)",
+   "type": "Product"
+  },
+  {
+   "name": "Azure Active Directory (Azure AD)",
+   "type": "Product"
+  },
+  {
+   "name": "Windows Credential Manager",
+   "type": "Component"
+  },
+  {
+   "name": "VPN connection",
+   "type": "Component"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "Password complexity requirements",
+   "type": "Component"
+  },
+  {
+   "name": "Account lockout policy",
+   "type": "Component"
+  },
+  {
+   "name": "Verification method inaccessible",
+   "type": "Symptom"
+  },
+  {
+   "name": "Password rejected during reset",
+   "type": "Symptom"
+  },
+  {
+   "name": "Still unable to log in after reset",
+   "type": "Symptom"
+  },
+  {
+   "name": "Account shows locked",
+   "type": "Symptom"
+  },
+  {
+   "name": "Portal unavailable",
+   "type": "Symptom"
+  },
+  {
+   "name": "Incorrect or outdated verification info in Azure AD",
+   "type": "Cause"
+  },
+  {
+   "name": "New password does not meet complexity rules",
+   "type": "Cause"
+  },
+  {
+   "name": "Cached or stale credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "Automatic lockout timer active",
+   "type": "Cause"
+  },
+  {
+   "name": "SSPR service or network issue",
+   "type": "Cause"
+  },
+  {
+   "name": "Verify phone/email in Azure AD",
+   "type": "Fix"
+  },
+  {
+   "name": "Use alternative verification method",
+   "type": "Fix"
+  },
+  {
+   "name": "Ensure password meets complexity and history rules",
+   "type": "Fix"
+  },
+  {
+   "name": "Connect to VPN, lock/unlock session, clear Credential Manager, reboot",
+   "type": "Fix"
+  },
+  {
+   "name": "Wait 15 minutes for lockout to expire or request IAM unlock",
+   "type": "Fix"
+  },
+  {
+   "name": "Confirm internet access, try another device/network, contact Service Desk",
+   "type": "Fix"
+  },
+  {
+   "name": "Escalate to IAM team with user ID, failure description, timestamp, error codes, identity verification",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Verification method inaccessible",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect or outdated verification info in Azure AD"
+  },
+  {
+   "source": "Password rejected during reset",
+   "relation": "CAUSED_BY",
+   "target": "New password does not meet complexity rules"
+  },
+  {
+   "source": "Still unable to log in after reset",
+   "relation": "CAUSED_BY",
+   "target": "Cached or stale credentials"
+  },
+  {
+   "source": "Account shows locked",
+   "relation": "CAUSED_BY",
+   "target": "Automatic lockout timer active"
+  },
+  {
+   "source": "Portal unavailable",
+   "relation": "CAUSED_BY",
+   "target": "SSPR service or network issue"
+  },
+  {
+   "source": "Verification method inaccessible",
+   "relation": "FIXED_BY",
+   "target": "Verify phone/email in Azure AD"
+  },
+  {
+   "source": "Verification method inaccessible",
+   "relation": "FIXED_BY",
+   "target": "Use alternative verification method"
+  },
+  {
+   "source": "Password rejected during reset",
+   "relation": "FIXED_BY",
+   "target": "Ensure password meets complexity and history rules"
+  },
+  {
+   "source": "Still unable to log in after reset",
+   "relation": "FIXED_BY",
+   "target": "Connect to VPN, lock/unlock session, clear Credential Manager, reboot"
+  },
+  {
+   "source": "Account shows locked",
+   "relation": "FIXED_BY",
+   "target": "Wait 15 minutes for lockout to expire or request IAM unlock"
+  },
+  {
+   "source": "Portal unavailable",
+   "relation": "FIXED_BY",
+   "target": "Confirm internet access, try another device/network, contact Service Desk"
+  },
+  {
+   "source": "Verification method inaccessible",
+   "relation": "INDICATES",
+   "target": "Incorrect or outdated verification info in Azure AD"
+  },
+  {
+   "source": "Account shows locked",
+   "relation": "AFFECTS",
+   "target": "Account lockout policy"
+  },
+  {
+   "source": "Still unable to log in after reset",
+   "relation": "AFFECTS",
+   "target": "Windows Credential Manager"
+  },
+  {
+   "source": "Still unable to log in after reset",
+   "relation": "AFFECTS",
+   "target": "VPN connection"
+  }
+ ]
+}

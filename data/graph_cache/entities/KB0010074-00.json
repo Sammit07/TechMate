@@ -1,0 +1,169 @@
+{
+ "entities": [
+  {
+   "name": "OneDrive sync client",
+   "type": "Product"
+  },
+  {
+   "name": "SharePoint Online document libraries",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook",
+   "type": "Product"
+  },
+  {
+   "name": "MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "files with '(conflict copy)' suffix",
+   "type": "Symptom"
+  },
+  {
+   "name": "OneDrive icon shows red 'x'",
+   "type": "Symptom"
+  },
+  {
+   "name": "notification: 'We\\'re having trouble syncing'",
+   "type": "Symptom"
+  },
+  {
+   "name": "file name contains invalid characters",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "storage quota exceeded",
+   "type": "Symptom"
+  },
+  {
+   "name": "path too long (>260 characters)",
+   "type": "Symptom"
+  },
+  {
+   "name": "prohibited characters in file/folder names",
+   "type": "Cause"
+  },
+  {
+   "name": "files locked by another application",
+   "type": "Cause"
+  },
+  {
+   "name": "path length exceeding Windows MAX_PATH limit",
+   "type": "Cause"
+  },
+  {
+   "name": "OneDrive storage quota reached",
+   "type": "Cause"
+  },
+  {
+   "name": "outdated OneDrive client",
+   "type": "Cause"
+  },
+  {
+   "name": "simultaneous edits causing conflicting versions",
+   "type": "Cause"
+  },
+  {
+   "name": "case-insensitive filesystem creating duplicate names",
+   "type": "Cause"
+  },
+  {
+   "name": "close open Office applications",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "files with '(conflict copy)' suffix",
+   "relation": "CAUSED_BY",
+   "target": "simultaneous edits causing conflicting versions"
+  },
+  {
+   "source": "OneDrive icon shows red 'x'",
+   "relation": "CAUSED_BY",
+   "target": "path length exceeding Windows MAX_PATH limit"
+  },
+  {
+   "source": "notification: 'We\\'re having trouble syncing'",
+   "relation": "CAUSED_BY",
+   "target": "storage quota exceeded"
+  },
+  {
+   "source": "file name contains invalid characters",
+   "relation": "INDICATES",
+   "target": "prohibited characters in file/folder names"
+  },
+  {
+   "source": "storage quota exceeded",
+   "relation": "CAUSED_BY",
+   "target": "OneDrive storage quota reached"
+  },
+  {
+   "source": "path too long (>260 characters)",
+   "relation": "CAUSED_BY",
+   "target": "path length exceeding Windows MAX_PATH limit"
+  },
+  {
+   "source": "files with '(conflict copy)' suffix",
+   "relation": "AFFECTS",
+   "target": "OneDrive sync client"
+  },
+  {
+   "source": "OneDrive icon shows red 'x'",
+   "relation": "AFFECTS",
+   "target": "OneDrive sync client"
+  },
+  {
+   "source": "notification: 'We\\'re having trouble syncing'",
+   "relation": "AFFECTS",
+   "target": "OneDrive sync client"
+  },
+  {
+   "source": "file name contains invalid characters",
+   "relation": "AFFECTS",
+   "target": "OneDrive sync client"
+  },
+  {
+   "source": "storage quota exceeded",
+   "relation": "AFFECTS",
+   "target": "OneDrive sync client"
+  },
+  {
+   "source": "path too long (>260 characters)",
+   "relation": "AFFECTS",
+   "target": "OneDrive sync client"
+  },
+  {
+   "source": "prohibited characters in file/folder names",
+   "relation": "AFFECTS",
+   "target": "SharePoint Online document libraries"
+  },
+  {
+   "source": "files locked by another application",
+   "relation": "AFFECTS",
+   "target": "OneDrive sync client"
+  },
+  {
+   "source": "close open Office applications",
+   "relation": "FIXED_BY",
+   "target": "files locked by another application"
+  }
+ ]
+}

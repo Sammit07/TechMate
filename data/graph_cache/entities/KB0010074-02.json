@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "OneDrive sync conflict",
+   "type": "Symptom"
+  },
+  {
+   "name": "duplicate files",
+   "type": "Symptom"
+  },
+  {
+   "name": "SharePoint library not syncing",
+   "type": "Symptom"
+  },
+  {
+   "name": "invalid file name",
+   "type": "Cause"
+  },
+  {
+   "name": "path too long",
+   "type": "Cause"
+  },
+  {
+   "name": "conflict copy",
+   "type": "Component"
+  },
+  {
+   "name": "OneDrive client",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "sync paused",
+   "type": "Symptom"
+  },
+  {
+   "name": "processing changes",
+   "type": "Symptom"
+  },
+  {
+   "name": "unlink OneDrive",
+   "type": "Fix"
+  },
+  {
+   "name": "relink OneDrive",
+   "type": "Fix"
+  },
+  {
+   "name": "conflict-file cleanup",
+   "type": "Fix"
+  },
+  {
+   "name": "client version check",
+   "type": "Fix"
+  },
+  {
+   "name": "special characters in file names",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "OneDrive sync conflict",
+   "relation": "CAUSED_BY",
+   "target": "invalid file name"
+  },
+  {
+   "source": "OneDrive sync conflict",
+   "relation": "CAUSED_BY",
+   "target": "path too long"
+  },
+  {
+   "source": "duplicate files",
+   "relation": "INDICATES",
+   "target": "conflict copy"
+  },
+  {
+   "source": "SharePoint library not syncing",
+   "relation": "AFFECTS",
+   "target": "OneDrive client"
+  },
+  {
+   "source": "OneDrive client",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  },
+  {
+   "source": "sync paused",
+   "relation": "CAUSED_BY",
+   "target": "OneDrive sync conflict"
+  },
+  {
+   "source": "processing changes",
+   "relation": "INDICATES",
+   "target": "OneDrive sync conflict"
+  },
+  {
+   "source": "OneDrive sync conflict",
+   "relation": "FIXED_BY",
+   "target": "unlink OneDrive"
+  },
+  {
+   "source": "OneDrive sync conflict",
+   "relation": "FIXED_BY",
+   "target": "relink OneDrive"
+  },
+  {
+   "source": "OneDrive sync conflict",
+   "relation": "FIXED_BY",
+   "target": "conflict-file cleanup"
+  },
+  {
+   "source": "OneDrive sync conflict",
+   "relation": "FIXED_BY",
+   "target": "client version check"
+  },
+  {
+   "source": "invalid file name",
+   "relation": "AFFECTS",
+   "target": "OneDrive client"
+  },
+  {
+   "source": "path too long",
+   "relation": "AFFECTS",
+   "target": "OneDrive client"
+  },
+  {
+   "source": "special characters in file names",
+   "relation": "CAUSED_BY",
+   "target": "invalid file name"
+  }
+ ]
+}

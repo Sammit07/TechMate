@@ -1,0 +1,198 @@
+{
+ "entities": [
+  {
+   "name": "Acme Global VPN",
+   "type": "Product"
+  },
+  {
+   "name": "Palo Alto GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "VPN certificate",
+   "type": "Component"
+  },
+  {
+   "name": "split-tunnel configuration",
+   "type": "Component"
+  },
+  {
+   "name": "DNS cache",
+   "type": "Component"
+  },
+  {
+   "name": "UDP ports 500/4500",
+   "type": "Component"
+  },
+  {
+   "name": "TCP 443",
+   "type": "Component"
+  },
+  {
+   "name": "Unable to connect to VPN",
+   "type": "Symptom"
+  },
+  {
+   "name": "Frequent disconnections",
+   "type": "Symptom"
+  },
+  {
+   "name": "Authentication failed",
+   "type": "Symptom"
+  },
+  {
+   "name": "Internal sites unreachable",
+   "type": "Symptom"
+  },
+  {
+   "name": "VPN certificate has expired",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Certificate validation failed",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Incorrect time/date",
+   "type": "Cause"
+  },
+  {
+   "name": "Expired or corrupted machine certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated GlobalProtect client version",
+   "type": "Cause"
+  },
+  {
+   "name": "Stale DNS cache",
+   "type": "Cause"
+  },
+  {
+   "name": "Home router or ISP blocking ports",
+   "type": "Cause"
+  },
+  {
+   "name": "Renew VPN certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "Update GlobalProtect client",
+   "type": "Fix"
+  },
+  {
+   "name": "Flush DNS",
+   "type": "Fix"
+  },
+  {
+   "name": "Adjust split-tunnel settings",
+   "type": "Fix"
+  },
+  {
+   "name": "Correct system time",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Unable to connect to VPN",
+   "relation": "CAUSED_BY",
+   "target": "Expired or corrupted machine certificate"
+  },
+  {
+   "source": "Frequent disconnections",
+   "relation": "CAUSED_BY",
+   "target": "Outdated GlobalProtect client version"
+  },
+  {
+   "source": "Authentication failed",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect time/date"
+  },
+  {
+   "source": "Internal sites unreachable",
+   "relation": "CAUSED_BY",
+   "target": "Stale DNS cache"
+  },
+  {
+   "source": "VPN certificate has expired",
+   "relation": "INDICATES",
+   "target": "Expired or corrupted machine certificate"
+  },
+  {
+   "source": "Certificate validation failed",
+   "relation": "INDICATES",
+   "target": "Incorrect time/date"
+  },
+  {
+   "source": "Expired or corrupted machine certificate",
+   "relation": "AFFECTS",
+   "target": "Acme Global VPN"
+  },
+  {
+   "source": "Outdated GlobalProtect client version",
+   "relation": "AFFECTS",
+   "target": "Palo Alto GlobalProtect"
+  },
+  {
+   "source": "Stale DNS cache",
+   "relation": "AFFECTS",
+   "target": "split-tunnel configuration"
+  },
+  {
+   "source": "Home router or ISP blocking ports",
+   "relation": "AFFECTS",
+   "target": "UDP ports 500/4500"
+  },
+  {
+   "source": "Home router or ISP blocking ports",
+   "relation": "AFFECTS",
+   "target": "TCP 443"
+  },
+  {
+   "source": "Renew VPN certificate",
+   "relation": "FIXED_BY",
+   "target": "Expired or corrupted machine certificate"
+  },
+  {
+   "source": "Update GlobalProtect client",
+   "relation": "FIXED_BY",
+   "target": "Outdated GlobalProtect client version"
+  },
+  {
+   "source": "Flush DNS",
+   "relation": "FIXED_BY",
+   "target": "Stale DNS cache"
+  },
+  {
+   "source": "Adjust split-tunnel settings",
+   "relation": "FIXED_BY",
+   "target": "split-tunnel configuration"
+  },
+  {
+   "source": "Correct system time",
+   "relation": "FIXED_BY",
+   "target": "Incorrect time/date"
+  }
+ ]
+}

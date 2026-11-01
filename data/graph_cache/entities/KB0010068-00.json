@@ -1,0 +1,166 @@
+{
+ "entities": [
+  {
+   "name": "Acme Global shared mailbox",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook desktop/web",
+   "type": "Product"
+  },
+  {
+   "name": "Full Access permission",
+   "type": "Component"
+  },
+  {
+   "name": "Send As permission",
+   "type": "Component"
+  },
+  {
+   "name": "Delegate Editor permission",
+   "type": "Component"
+  },
+  {
+   "name": "Shared mailbox not appearing",
+   "type": "Symptom"
+  },
+  {
+   "name": "Cannot send on behalf",
+   "type": "Symptom"
+  },
+  {
+   "name": "Calendar read-only or cannot edit",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outlook prompts for credentials",
+   "type": "Symptom"
+  },
+  {
+   "name": "Cannot expand folder error",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Missing Full Access/Send As permissions",
+   "type": "Cause"
+  },
+  {
+   "name": "Outlook profile cache not refreshed",
+   "type": "Cause"
+  },
+  {
+   "name": "Missing Delegate calendar permissions",
+   "type": "Cause"
+  },
+  {
+   "name": "Incorrect SMTP alias used",
+   "type": "Cause"
+  },
+  {
+   "name": "Permission propagation delay",
+   "type": "Cause"
+  },
+  {
+   "name": "Grant Full Access and Send As permissions",
+   "type": "Fix"
+  },
+  {
+   "name": "Refresh Outlook profile cache",
+   "type": "Fix"
+  },
+  {
+   "name": "Set Delegate permission to Editor",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify correct SMTP alias",
+   "type": "Fix"
+  },
+  {
+   "name": "Wait for permission propagation",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Shared mailbox not appearing",
+   "relation": "CAUSED_BY",
+   "target": "Missing Full Access/Send As permissions"
+  },
+  {
+   "source": "Shared mailbox not appearing",
+   "relation": "CAUSED_BY",
+   "target": "Outlook profile cache not refreshed"
+  },
+  {
+   "source": "Cannot send on behalf",
+   "relation": "CAUSED_BY",
+   "target": "Missing Full Access/Send As permissions"
+  },
+  {
+   "source": "Calendar read-only or cannot edit",
+   "relation": "CAUSED_BY",
+   "target": "Missing Delegate calendar permissions"
+  },
+  {
+   "source": "Outlook prompts for credentials",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect SMTP alias used"
+  },
+  {
+   "source": "Cannot expand folder error",
+   "relation": "INDICATES",
+   "target": "Missing Full Access/Send As permissions"
+  },
+  {
+   "source": "Missing Full Access/Send As permissions",
+   "relation": "FIXED_BY",
+   "target": "Grant Full Access and Send As permissions"
+  },
+  {
+   "source": "Outlook profile cache not refreshed",
+   "relation": "FIXED_BY",
+   "target": "Refresh Outlook profile cache"
+  },
+  {
+   "source": "Missing Delegate calendar permissions",
+   "relation": "FIXED_BY",
+   "target": "Set Delegate permission to Editor"
+  },
+  {
+   "source": "Incorrect SMTP alias used",
+   "relation": "FIXED_BY",
+   "target": "Verify correct SMTP alias"
+  },
+  {
+   "source": "Permission propagation delay",
+   "relation": "FIXED_BY",
+   "target": "Wait for permission propagation"
+  },
+  {
+   "source": "Shared mailbox not appearing",
+   "relation": "AFFECTS",
+   "target": "Outlook desktop/web"
+  },
+  {
+   "source": "Cannot send on behalf",
+   "relation": "AFFECTS",
+   "target": "Outlook desktop/web"
+  },
+  {
+   "source": "Calendar read-only or cannot edit",
+   "relation": "AFFECTS",
+   "target": "Outlook desktop/web"
+  },
+  {
+   "source": "Outlook prompts for credentials",
+   "relation": "AFFECTS",
+   "target": "Outlook desktop/web"
+  },
+  {
+   "source": "Acme Global shared mailbox",
+   "relation": "PART_OF",
+   "target": "Exchange Online"
+  }
+ ]
+}

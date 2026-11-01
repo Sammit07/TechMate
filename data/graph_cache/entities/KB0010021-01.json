@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "corporate Wi-Fi (802.1X)",
+   "type": "Product"
+  },
+  {
+   "name": "guest Wi-Fi",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Corp",
+   "type": "Component"
+  },
+  {
+   "name": "machine certificate",
+   "type": "Component"
+  },
+  {
+   "name": "wireless adapter drivers",
+   "type": "Component"
+  },
+  {
+   "name": "expired machine certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "forget corporate network",
+   "type": "Fix"
+  },
+  {
+   "name": "disable wireless power saving",
+   "type": "Fix"
+  },
+  {
+   "name": "renew machine certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "re-join ACME-Corp",
+   "type": "Fix"
+  },
+  {
+   "name": "update wireless driver",
+   "type": "Fix"
+  },
+  {
+   "name": "Wi-Fi connectivity issue",
+   "type": "Symptom"
+  },
+  {
+   "name": "no Internet access",
+   "type": "Symptom"
+  },
+  {
+   "name": "repeated credential prompts",
+   "type": "Symptom"
+  },
+  {
+   "name": "wireless radio disabled",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Wi-Fi connectivity issue",
+   "relation": "CAUSED_BY",
+   "target": "expired machine certificate"
+  },
+  {
+   "source": "Wi-Fi connectivity issue",
+   "relation": "CAUSED_BY",
+   "target": "wireless radio disabled"
+  },
+  {
+   "source": "no Internet access",
+   "relation": "CAUSED_BY",
+   "target": "expired machine certificate"
+  },
+  {
+   "source": "repeated credential prompts",
+   "relation": "CAUSED_BY",
+   "target": "expired machine certificate"
+  },
+  {
+   "source": "expired machine certificate",
+   "relation": "FIXED_BY",
+   "target": "renew machine certificate"
+  },
+  {
+   "source": "Wi-Fi connectivity issue",
+   "relation": "FIXED_BY",
+   "target": "forget corporate network"
+  },
+  {
+   "source": "Wi-Fi connectivity issue",
+   "relation": "FIXED_BY",
+   "target": "disable wireless power saving"
+  },
+  {
+   "source": "Wi-Fi connectivity issue",
+   "relation": "FIXED_BY",
+   "target": "re-join ACME-Corp"
+  },
+  {
+   "source": "Wi-Fi connectivity issue",
+   "relation": "FIXED_BY",
+   "target": "update wireless driver"
+  },
+  {
+   "source": "machine certificate",
+   "relation": "PART_OF",
+   "target": "corporate Wi-Fi (802.1X)"
+  },
+  {
+   "source": "ACME-Corp",
+   "relation": "PART_OF",
+   "target": "corporate Wi-Fi (802.1X)"
+  },
+  {
+   "source": "wireless adapter drivers",
+   "relation": "AFFECTS",
+   "target": "corporate Wi-Fi (802.1X)"
+  },
+  {
+   "source": "expired machine certificate",
+   "relation": "AFFECTS",
+   "target": "corporate Wi-Fi (802.1X)"
+  },
+  {
+   "source": "wireless radio disabled",
+   "relation": "AFFECTS",
+   "target": "corporate Wi-Fi (802.1X)"
+  }
+ ]
+}

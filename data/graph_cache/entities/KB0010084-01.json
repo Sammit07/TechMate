@@ -1,0 +1,140 @@
+{
+ "entities": [
+  {
+   "name": "Windows Security",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Defender Antivirus",
+   "type": "Product"
+  },
+  {
+   "name": "Intune/Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft 365 Defender portal",
+   "type": "Product"
+  },
+  {
+   "name": "Defender alert",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "threat name",
+   "type": "Component"
+  },
+  {
+   "name": "action taken",
+   "type": "Component"
+  },
+  {
+   "name": "quick scan",
+   "type": "Fix"
+  },
+  {
+   "name": "full Defender offline scan",
+   "type": "Fix"
+  },
+  {
+   "name": "scare-ware pop-up",
+   "type": "Symptom"
+  },
+  {
+   "name": "ransomware, trojan, or high-severity threat",
+   "type": "Symptom"
+  },
+  {
+   "name": "close browser using Alt+F4 or Task Manager",
+   "type": "Fix"
+  },
+  {
+   "name": "clear browsing data",
+   "type": "Fix"
+  },
+  {
+   "name": "reset browser to default settings",
+   "type": "Fix"
+  },
+  {
+   "name": "contact IT Service Desk",
+   "type": "Fix"
+  },
+  {
+   "name": "verify device compliance in Intune",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "scare-ware pop-up",
+   "relation": "INDICATES",
+   "target": "ransomware, trojan, or high-severity threat"
+  },
+  {
+   "source": "Defender alert",
+   "relation": "INDICATES",
+   "target": "threat name"
+  },
+  {
+   "source": "Defender alert",
+   "relation": "INDICATES",
+   "target": "action taken"
+  },
+  {
+   "source": "scare-ware pop-up",
+   "relation": "FIXED_BY",
+   "target": "close browser using Alt+F4 or Task Manager"
+  },
+  {
+   "source": "scare-ware pop-up",
+   "relation": "FIXED_BY",
+   "target": "clear browsing data"
+  },
+  {
+   "source": "scare-ware pop-up",
+   "relation": "FIXED_BY",
+   "target": "reset browser to default settings"
+  },
+  {
+   "source": "ransomware, trojan, or high-severity threat",
+   "relation": "FIXED_BY",
+   "target": "contact IT Service Desk"
+  },
+  {
+   "source": "Defender alert",
+   "relation": "FIXED_BY",
+   "target": "quick scan"
+  },
+  {
+   "source": "Defender alert",
+   "relation": "FIXED_BY",
+   "target": "full Defender offline scan"
+  },
+  {
+   "source": "device non-compliant",
+   "relation": "CAUSED_BY",
+   "target": "verify device compliance in Intune"
+  },
+  {
+   "source": "Defender alert",
+   "relation": "AFFECTS",
+   "target": "Windows Security"
+  },
+  {
+   "source": "Defender alert",
+   "relation": "AFFECTS",
+   "target": "Microsoft Defender Antivirus"
+  },
+  {
+   "source": "Defender alert",
+   "relation": "AFFECTS",
+   "target": "Intune/Company Portal"
+  },
+  {
+   "source": "Defender alert",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 Defender portal"
+  }
+ ]
+}

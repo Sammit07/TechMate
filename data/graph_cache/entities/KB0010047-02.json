@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "macOS update failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "failed installer download",
+   "type": "Symptom"
+  },
+  {
+   "name": "corrupted installer",
+   "type": "Cause"
+  },
+  {
+   "name": "manual macOS installer download",
+   "type": "Fix"
+  },
+  {
+   "name": "NVRAM reset",
+   "type": "Fix"
+  },
+  {
+   "name": "SMC reset",
+   "type": "Fix"
+  },
+  {
+   "name": "About This Mac",
+   "type": "Component"
+  },
+  {
+   "name": "System Settings > General > Software Update",
+   "type": "Component"
+  },
+  {
+   "name": "FileVault",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "automatic updates",
+   "type": "Component"
+  },
+  {
+   "name": "storage usage review",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "macOS update failure",
+   "relation": "CAUSED_BY",
+   "target": "corrupted installer"
+  },
+  {
+   "source": "failed installer download",
+   "relation": "INDICATES",
+   "target": "corrupted installer"
+  },
+  {
+   "source": "corrupted installer",
+   "relation": "FIXED_BY",
+   "target": "manual macOS installer download"
+  },
+  {
+   "source": "macOS update failure",
+   "relation": "FIXED_BY",
+   "target": "NVRAM reset"
+  },
+  {
+   "source": "macOS update failure",
+   "relation": "FIXED_BY",
+   "target": "SMC reset"
+  },
+  {
+   "source": "update success verification",
+   "relation": "AFFECTS",
+   "target": "About This Mac"
+  },
+  {
+   "source": "update success verification",
+   "relation": "AFFECTS",
+   "target": "System Settings > General > Software Update"
+  },
+  {
+   "source": "update success verification",
+   "relation": "AFFECTS",
+   "target": "FileVault"
+  },
+  {
+   "source": "update success verification",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "update success verification",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "update success verification",
+   "relation": "AFFECTS",
+   "target": "Teams"
+  },
+  {
+   "source": "update success verification",
+   "relation": "AFFECTS",
+   "target": "OneDrive"
+  },
+  {
+   "source": "macOS update failure",
+   "relation": "PREVENTED_BY",
+   "target": "automatic updates"
+  },
+  {
+   "source": "macOS update failure",
+   "relation": "PREVENTED_BY",
+   "target": "storage usage review"
+  }
+ ]
+}

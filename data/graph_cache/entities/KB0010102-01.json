@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Acme Password Policy",
+   "type": "Component"
+  },
+  {
+   "name": "BitLocker Recovery Key",
+   "type": "Component"
+  },
+  {
+   "name": "Intune Console",
+   "type": "Product"
+  },
+  {
+   "name": "Entra ID MFA",
+   "type": "Product"
+  },
+  {
+   "name": "FIPS-Validated USB Flash Drive",
+   "type": "Product"
+  },
+  {
+   "name": "FileVault Profile",
+   "type": "Component"
+  },
+  {
+   "name": "Lock Icon on Drive",
+   "type": "Symptom"
+  },
+  {
+   "name": "Progress Bar During Encryption",
+   "type": "Symptom"
+  },
+  {
+   "name": "Encryption Password Required on Mount",
+   "type": "Symptom"
+  },
+  {
+   "name": "Recovery Key Retrieval Failure",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "User Identity Verification",
+   "type": "Cause"
+  },
+  {
+   "name": "Inventory Check for Approved Drive",
+   "type": "Cause"
+  },
+  {
+   "name": "Create BitLocker/FileVault Policy in Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "Physically Label and Hand Over Drive",
+   "type": "Fix"
+  },
+  {
+   "name": "Provide Self-Help Encryption Steps",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Lock Icon on Drive",
+   "relation": "INDICATES",
+   "target": "Encryption Completed Successfully"
+  },
+  {
+   "source": "Progress Bar During Encryption",
+   "relation": "INDICATES",
+   "target": "Encryption In Progress"
+  },
+  {
+   "source": "Encryption Password Required on Mount",
+   "relation": "INDICATES",
+   "target": "Drive Is Encrypted"
+  },
+  {
+   "source": "Recovery Key Retrieval Failure",
+   "relation": "CAUSED_BY",
+   "target": "User Cannot Access Drive"
+  },
+  {
+   "source": "User Identity Verification",
+   "relation": "FIXED_BY",
+   "target": "Verify User via Entra ID MFA"
+  },
+  {
+   "source": "Inventory Check for Approved Drive",
+   "relation": "FIXED_BY",
+   "target": "Check Inventory for FIPS-Validated Drive"
+  },
+  {
+   "source": "Create BitLocker/FileVault Policy in Intune",
+   "relation": "FIXED_BY",
+   "target": "Force Encryption and Backup Recovery Key"
+  },
+  {
+   "source": "Physically Label and Hand Over Drive",
+   "relation": "FIXED_BY",
+   "target": "Prepare New Encrypted Drive for User"
+  },
+  {
+   "source": "Provide Self-Help Encryption Steps",
+   "relation": "FIXED_BY",
+   "target": "Assist User with Self-Service Encryption"
+  },
+  {
+   "source": "BitLocker Recovery Key",
+   "relation": "PART_OF",
+   "target": "BitLocker To?Go Policy"
+  },
+  {
+   "source": "FileVault Profile",
+   "relation": "PART_OF",
+   "target": "macOS Encryption via Company Portal"
+  },
+  {
+   "source": "Acme Password Policy",
+   "relation": "AFFECTS",
+   "target": "Encryption Password Required on Mount"
+  },
+  {
+   "source": "Entra ID MFA",
+   "relation": "AFFECTS",
+   "target": "User Identity Verification"
+  },
+  {
+   "source": "FIPS-Validated USB Flash Drive",
+   "relation": "AFFECTS",
+   "target": "Inventory Check for Approved Drive"
+  },
+  {
+   "source": "Intune Console",
+   "relation": "AFFECTS",
+   "target": "Create BitLocker/FileVault Policy in Intune"
+  }
+ ]
+}

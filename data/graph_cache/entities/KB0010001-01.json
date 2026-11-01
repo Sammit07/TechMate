@@ -1,0 +1,131 @@
+{
+ "entities": [
+  {
+   "name": "Self-Service Password Reset (SSPR)",
+   "type": "Product"
+  },
+  {
+   "name": "Azure AD",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Authenticator app",
+   "type": "Component"
+  },
+  {
+   "name": "SMS-capable phone number",
+   "type": "Component"
+  },
+  {
+   "name": "Alternate email address",
+   "type": "Component"
+  },
+  {
+   "name": "Temporary Access Pass (TAP)",
+   "type": "Component"
+  },
+  {
+   "name": "https://passwordreset.acme.example",
+   "type": "Component"
+  },
+  {
+   "name": "User ID (full email address)",
+   "type": "Component"
+  },
+  {
+   "name": "New password requirements",
+   "type": "Component"
+  },
+  {
+   "name": "Windows laptop sign-in",
+   "type": "Symptom"
+  },
+  {
+   "name": "macOS login",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outlook or Teams access",
+   "type": "Symptom"
+  },
+  {
+   "name": "Windows Credential Manager",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "FileVault",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Self-Service Password Reset (SSPR)",
+   "relation": "AFFECTS",
+   "target": "Windows laptop sign-in"
+  },
+  {
+   "source": "Self-Service Password Reset (SSPR)",
+   "relation": "AFFECTS",
+   "target": "macOS login"
+  },
+  {
+   "source": "Self-Service Password Reset (SSPR)",
+   "relation": "AFFECTS",
+   "target": "Outlook or Teams access"
+  },
+  {
+   "source": "User ID (full email address)",
+   "relation": "INDICATES",
+   "target": "Self-Service Password Reset (SSPR)"
+  },
+  {
+   "source": "Microsoft Authenticator app",
+   "relation": "PART_OF",
+   "target": "Azure AD"
+  },
+  {
+   "source": "SMS-capable phone number",
+   "relation": "PART_OF",
+   "target": "Azure AD"
+  },
+  {
+   "source": "Alternate email address",
+   "relation": "PART_OF",
+   "target": "Azure AD"
+  },
+  {
+   "source": "Temporary Access Pass (TAP)",
+   "relation": "FIXED_BY",
+   "target": "Service Desk"
+  },
+  {
+   "source": "https://passwordreset.acme.example",
+   "relation": "PART_OF",
+   "target": "Self-Service Password Reset (SSPR)"
+  },
+  {
+   "source": "New password requirements",
+   "relation": "PART_OF",
+   "target": "Self-Service Password Reset (SSPR)"
+  },
+  {
+   "source": "Windows Credential Manager",
+   "relation": "AFFECTS",
+   "target": "Outlook or Teams access"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "Windows laptop sign-in"
+  },
+  {
+   "source": "FileVault",
+   "relation": "AFFECTS",
+   "target": "macOS login"
+  }
+ ]
+}

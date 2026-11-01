@@ -1,0 +1,145 @@
+{
+ "entities": [
+  {
+   "name": "video call quality improvement",
+   "type": "Symptom"
+  },
+  {
+   "name": "Teams call diagnostic",
+   "type": "Component"
+  },
+  {
+   "name": "jitter under 30ms",
+   "type": "Component"
+  },
+  {
+   "name": "packet loss under 1%",
+   "type": "Component"
+  },
+  {
+   "name": "latency under 150ms",
+   "type": "Component"
+  },
+  {
+   "name": "minimum 3 Mbps bandwidth",
+   "type": "Component"
+  },
+  {
+   "name": "ISP bandwidth below contracted tier",
+   "type": "Cause"
+  },
+  {
+   "name": "AP utilization over 60%",
+   "type": "Cause"
+  },
+  {
+   "name": "AP utilization over 80%",
+   "type": "Cause"
+  },
+  {
+   "name": "channel interference",
+   "type": "Cause"
+  },
+  {
+   "name": "network adapter driver update",
+   "type": "Fix"
+  },
+  {
+   "name": "AP load balancing",
+   "type": "Fix"
+  },
+  {
+   "name": "wired connection test",
+   "type": "Fix"
+  },
+  {
+   "name": "speed test verification",
+   "type": "Fix"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Zoom",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "video call quality improvement",
+   "relation": "CAUSED_BY",
+   "target": "ISP bandwidth below contracted tier"
+  },
+  {
+   "source": "video call quality improvement",
+   "relation": "CAUSED_BY",
+   "target": "AP utilization over 60%"
+  },
+  {
+   "source": "video call quality improvement",
+   "relation": "CAUSED_BY",
+   "target": "channel interference"
+  },
+  {
+   "source": "Teams call diagnostic",
+   "relation": "INDICATES",
+   "target": "jitter under 30ms"
+  },
+  {
+   "source": "Teams call diagnostic",
+   "relation": "INDICATES",
+   "target": "packet loss under 1%"
+  },
+  {
+   "source": "Teams call diagnostic",
+   "relation": "INDICATES",
+   "target": "latency under 150ms"
+  },
+  {
+   "source": "AP utilization over 80%",
+   "relation": "AFFECTS",
+   "target": "Teams"
+  },
+  {
+   "source": "channel interference",
+   "relation": "AFFECTS",
+   "target": "Zoom"
+  },
+  {
+   "source": "network adapter driver update",
+   "relation": "FIXED_BY",
+   "target": "video call quality improvement"
+  },
+  {
+   "source": "AP load balancing",
+   "relation": "FIXED_BY",
+   "target": "video call quality improvement"
+  },
+  {
+   "source": "wired connection test",
+   "relation": "FIXED_BY",
+   "target": "video call quality improvement"
+  },
+  {
+   "source": "speed test verification",
+   "relation": "FIXED_BY",
+   "target": "video call quality improvement"
+  },
+  {
+   "source": "Teams",
+   "relation": "PART_OF",
+   "target": "video call quality improvement"
+  },
+  {
+   "source": "Zoom",
+   "relation": "PART_OF",
+   "target": "video call quality improvement"
+  },
+  {
+   "source": "minimum 3 Mbps bandwidth",
+   "relation": "AFFECTS",
+   "target": "Teams"
+  }
+ ]
+}

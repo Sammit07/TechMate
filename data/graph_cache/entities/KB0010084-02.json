@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Defender Antivirus",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Defender Offline",
+   "type": "Component"
+  },
+  {
+   "name": "Full Scan",
+   "type": "Component"
+  },
+  {
+   "name": "Quarantine",
+   "type": "Component"
+  },
+  {
+   "name": "Alert ID",
+   "type": "Component"
+  },
+  {
+   "name": "Persistent Malware",
+   "type": "Symptom"
+  },
+  {
+   "name": "Scareware Pop-up",
+   "type": "Symptom"
+  },
+  {
+   "name": "Ransomware Alert",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Expired Definition",
+   "type": "Cause"
+  },
+  {
+   "name": "Run Full Scan via Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "Isolate Device via Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "Update Defender Definitions",
+   "type": "Fix"
+  },
+  {
+   "name": "Escalate to Security Operations",
+   "type": "Fix"
+  },
+  {
+   "name": "Protection History",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Persistent Malware",
+   "relation": "CAUSED_BY",
+   "target": "Active Malware Persists"
+  },
+  {
+   "source": "Scareware Pop-up",
+   "relation": "CAUSED_BY",
+   "target": "Tech Support Scam"
+  },
+  {
+   "source": "Ransomware Alert",
+   "relation": "INDICATES",
+   "target": "Ransomware Threat Detected"
+  },
+  {
+   "source": "Microsoft Defender Antivirus",
+   "relation": "AFFECTS",
+   "target": "Full Scan"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "Run Full Scan via Intune"
+  },
+  {
+   "source": "Quarantine",
+   "relation": "PART_OF",
+   "target": "Microsoft Defender Antivirus"
+  },
+  {
+   "source": "Microsoft Defender Offline",
+   "relation": "PART_OF",
+   "target": "Microsoft Defender Antivirus"
+  },
+  {
+   "source": "Alert ID",
+   "relation": "PART_OF",
+   "target": "Microsoft Defender Antivirus"
+  },
+  {
+   "source": "Protection History",
+   "relation": "PART_OF",
+   "target": "Microsoft Defender Antivirus"
+  },
+  {
+   "source": "Expired Definition",
+   "relation": "CAUSED_BY",
+   "target": "Outdated Defender Definitions"
+  },
+  {
+   "source": "Run Full Scan via Intune",
+   "relation": "FIXED_BY",
+   "target": "Persistent Malware"
+  },
+  {
+   "source": "Isolate Device via Intune",
+   "relation": "FIXED_BY",
+   "target": "Active Malware Persists"
+  },
+  {
+   "source": "Update Defender Definitions",
+   "relation": "FIXED_BY",
+   "target": "Expired Definition"
+  },
+  {
+   "source": "Escalate to Security Operations",
+   "relation": "FIXED_BY",
+   "target": "Ransomware Alert"
+  }
+ ]
+}

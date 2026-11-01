@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "slow network",
+   "type": "Symptom"
+  },
+  {
+   "name": "VPN tunnel congestion",
+   "type": "Cause"
+  },
+  {
+   "name": "Wi-Fi band mismatch",
+   "type": "Cause"
+  },
+  {
+   "name": "Access point overload",
+   "type": "Cause"
+  },
+  {
+   "name": "Local RF interference",
+   "type": "Cause"
+  },
+  {
+   "name": "ISP-wide outage or throttling",
+   "type": "Cause"
+  },
+  {
+   "name": "Building-wide network congestion",
+   "type": "Cause"
+  },
+  {
+   "name": "Disconnect from VPN (GlobalProtect)",
+   "type": "Fix"
+  },
+  {
+   "name": "Ping test to 8.8.8.8",
+   "type": "Fix"
+  },
+  {
+   "name": "Speed test via fast.com or speedtest.net",
+   "type": "Fix"
+  },
+  {
+   "name": "Check Wi-Fi connection and signal strength",
+   "type": "Fix"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi",
+   "type": "Component"
+  },
+  {
+   "name": "Windows 11 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "slow network",
+   "relation": "CAUSED_BY",
+   "target": "VPN tunnel congestion"
+  },
+  {
+   "source": "slow network",
+   "relation": "CAUSED_BY",
+   "target": "Wi-Fi band mismatch"
+  },
+  {
+   "source": "slow network",
+   "relation": "CAUSED_BY",
+   "target": "Access point overload"
+  },
+  {
+   "source": "slow network",
+   "relation": "CAUSED_BY",
+   "target": "Local RF interference"
+  },
+  {
+   "source": "slow network",
+   "relation": "CAUSED_BY",
+   "target": "ISP-wide outage or throttling"
+  },
+  {
+   "source": "slow network",
+   "relation": "CAUSED_BY",
+   "target": "Building-wide network congestion"
+  },
+  {
+   "source": "VPN tunnel congestion",
+   "relation": "FIXED_BY",
+   "target": "Disconnect from VPN (GlobalProtect)"
+  },
+  {
+   "source": "slow network",
+   "relation": "FIXED_BY",
+   "target": "Ping test to 8.8.8.8"
+  },
+  {
+   "source": "slow network",
+   "relation": "FIXED_BY",
+   "target": "Speed test via fast.com or speedtest.net"
+  },
+  {
+   "source": "slow network",
+   "relation": "FIXED_BY",
+   "target": "Check Wi-Fi connection and signal strength"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "PART_OF",
+   "target": "VPN tunnel congestion"
+  },
+  {
+   "source": "ACME-Corp Wi-Fi",
+   "relation": "AFFECTS",
+   "target": "Wi-Fi band mismatch"
+  },
+  {
+   "source": "Windows 11 laptops",
+   "relation": "AFFECTS",
+   "target": "slow network"
+  },
+  {
+   "source": "Dell Latitude 5440/7440",
+   "relation": "AFFECTS",
+   "target": "slow network"
+  }
+ ]
+}

@@ -1,0 +1,238 @@
+{
+ "entities": [
+  {
+   "name": "dead network port",
+   "type": "Symptom"
+  },
+  {
+   "name": "no link light",
+   "type": "Symptom"
+  },
+  {
+   "name": "no IP address",
+   "type": "Symptom"
+  },
+  {
+   "name": "\"cable unplugged\" message",
+   "type": "Symptom"
+  },
+  {
+   "name": "inspect cable for damage",
+   "type": "Fix"
+  },
+  {
+   "name": "try spare cable",
+   "type": "Fix"
+  },
+  {
+   "name": "move cable to different jack",
+   "type": "Fix"
+  },
+  {
+   "name": "use different cable",
+   "type": "Fix"
+  },
+  {
+   "name": "output ipconfig/all or ifconfig",
+   "type": "Fix"
+  },
+  {
+   "name": "open ticket",
+   "type": "Fix"
+  },
+  {
+   "name": "exact location",
+   "type": "Component"
+  },
+  {
+   "name": "device details",
+   "type": "Component"
+  },
+  {
+   "name": "cable condition",
+   "type": "Component"
+  },
+  {
+   "name": "test results",
+   "type": "Component"
+  },
+  {
+   "name": "adapter state",
+   "type": "Component"
+  },
+  {
+   "name": "recent changes",
+   "type": "Component"
+  },
+  {
+   "name": "screenshot or photo",
+   "type": "Component"
+  },
+  {
+   "name": "switch management interface",
+   "type": "Component"
+  },
+  {
+   "name": "port status check",
+   "type": "Fix"
+  },
+  {
+   "name": "link down",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "err-disable",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "admin down",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "error counters",
+   "type": "Component"
+  },
+  {
+   "name": "Palo Alto switches",
+   "type": "Product"
+  },
+  {
+   "name": "Cisco switches",
+   "type": "Product"
+  },
+  {
+   "name": "patch-panel documentation",
+   "type": "Component"
+  },
+  {
+   "name": "CDP/LLDP",
+   "type": "Component"
+  },
+  {
+   "name": "ticket triage",
+   "type": "Fix"
+  },
+  {
+   "name": "information gathering",
+   "type": "Fix"
+  },
+  {
+   "name": "impact scope confirmation",
+   "type": "Fix"
+  },
+  {
+   "name": "priority assignment",
+   "type": "Fix"
+  },
+  {
+   "name": "remote verification of link status",
+   "type": "Fix"
+  },
+  {
+   "name": "layer-2/layer-3 validation",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "dead network port",
+   "relation": "CAUSED_BY",
+   "target": "no link light"
+  },
+  {
+   "source": "dead network port",
+   "relation": "CAUSED_BY",
+   "target": "no IP address"
+  },
+  {
+   "source": "dead network port",
+   "relation": "CAUSED_BY",
+   "target": "\"cable unplugged\" message"
+  },
+  {
+   "source": "inspect cable for damage",
+   "relation": "FIXED_BY",
+   "target": "dead network port"
+  },
+  {
+   "source": "try spare cable",
+   "relation": "FIXED_BY",
+   "target": "dead network port"
+  },
+  {
+   "source": "move cable to different jack",
+   "relation": "FIXED_BY",
+   "target": "dead network port"
+  },
+  {
+   "source": "use different cable",
+   "relation": "FIXED_BY",
+   "target": "dead network port"
+  },
+  {
+   "source": "output ipconfig/all or ifconfig",
+   "relation": "FIXED_BY",
+   "target": "dead network port"
+  },
+  {
+   "source": "open ticket",
+   "relation": "FIXED_BY",
+   "target": "dead network port"
+  },
+  {
+   "source": "link down",
+   "relation": "INDICATES",
+   "target": "dead network port"
+  },
+  {
+   "source": "err-disable",
+   "relation": "INDICATES",
+   "target": "dead network port"
+  },
+  {
+   "source": "admin down",
+   "relation": "INDICATES",
+   "target": "dead network port"
+  },
+  {
+   "source": "switch management interface",
+   "relation": "AFFECTS",
+   "target": "Palo Alto switches"
+  },
+  {
+   "source": "switch management interface",
+   "relation": "AFFECTS",
+   "target": "Cisco switches"
+  },
+  {
+   "source": "port status check",
+   "relation": "PART_OF",
+   "target": "switch management interface"
+  },
+  {
+   "source": "error counters",
+   "relation": "PART_OF",
+   "target": "port status check"
+  },
+  {
+   "source": "ticket triage",
+   "relation": "PART_OF",
+   "target": "information gathering"
+  },
+  {
+   "source": "impact scope confirmation",
+   "relation": "PART_OF",
+   "target": "information gathering"
+  },
+  {
+   "source": "priority assignment",
+   "relation": "PART_OF",
+   "target": "information gathering"
+  },
+  {
+   "source": "remote verification of link status",
+   "relation": "PART_OF",
+   "target": "layer-2/layer-3 validation"
+  }
+ ]
+}

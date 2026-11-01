@@ -1,0 +1,240 @@
+{
+ "entities": [
+  {
+   "name": "Outlook desktop client",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook on the web",
+   "type": "Product"
+  },
+  {
+   "name": "Report Message button",
+   "type": "Component"
+  },
+  {
+   "name": "More actions menu",
+   "type": "Component"
+  },
+  {
+   "name": "Report as Phishing option",
+   "type": "Component"
+  },
+  {
+   "name": "confirmation dialog",
+   "type": "Component"
+  },
+  {
+   "name": "Deleted Items folder",
+   "type": "Component"
+  },
+  {
+   "name": "Security Operations",
+   "type": "Product"
+  },
+  {
+   "name": "ITSM system",
+   "type": "Product"
+  },
+  {
+   "name": "ticket creation",
+   "type": "Fix"
+  },
+  {
+   "name": "sender address capture",
+   "type": "Fix"
+  },
+  {
+   "name": "subject line capture",
+   "type": "Fix"
+  },
+  {
+   "name": "time received capture",
+   "type": "Fix"
+  },
+  {
+   "name": "screenshot collection",
+   "type": "Fix"
+  },
+  {
+   "name": "P2 priority assignment",
+   "type": "Fix"
+  },
+  {
+   "name": "P1 priority escalation",
+   "type": "Fix"
+  },
+  {
+   "name": "malicious URL scan",
+   "type": "Fix"
+  },
+  {
+   "name": "attachment scan",
+   "type": "Fix"
+  },
+  {
+   "name": "sender block list update",
+   "type": "Fix"
+  },
+  {
+   "name": "mailbox copy removal",
+   "type": "Fix"
+  },
+  {
+   "name": "automated user notification",
+   "type": "Fix"
+  },
+  {
+   "name": "credential entry",
+   "type": "Symptom"
+  },
+  {
+   "name": "malware execution",
+   "type": "Symptom"
+  },
+  {
+   "name": "signs of compromise",
+   "type": "Symptom"
+  },
+  {
+   "name": "escalation to team lead",
+   "type": "Fix"
+  },
+  {
+   "name": "full email headers inclusion",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Report Message button",
+   "relation": "PART_OF",
+   "target": "Outlook desktop client"
+  },
+  {
+   "source": "Report Message button",
+   "relation": "PART_OF",
+   "target": "Outlook on the web"
+  },
+  {
+   "source": "More actions menu",
+   "relation": "PART_OF",
+   "target": "Outlook desktop client"
+  },
+  {
+   "source": "More actions menu",
+   "relation": "PART_OF",
+   "target": "Outlook on the web"
+  },
+  {
+   "source": "Report as Phishing option",
+   "relation": "PART_OF",
+   "target": "Report Message button"
+  },
+  {
+   "source": "confirmation dialog",
+   "relation": "PART_OF",
+   "target": "Report Message button"
+  },
+  {
+   "source": "Deleted Items folder",
+   "relation": "AFFECTS",
+   "target": "Outlook desktop client"
+  },
+  {
+   "source": "Deleted Items folder",
+   "relation": "AFFECTS",
+   "target": "Outlook on the web"
+  },
+  {
+   "source": "Security Operations",
+   "relation": "AFFECTS",
+   "target": "email analysis"
+  },
+  {
+   "source": "ticket creation",
+   "relation": "FIXED_BY",
+   "target": "user reports phishing via Service Desk"
+  },
+  {
+   "source": "sender address capture",
+   "relation": "FIXED_BY",
+   "target": "ticket creation"
+  },
+  {
+   "source": "subject line capture",
+   "relation": "FIXED_BY",
+   "target": "ticket creation"
+  },
+  {
+   "source": "time received capture",
+   "relation": "FIXED_BY",
+   "target": "ticket creation"
+  },
+  {
+   "source": "screenshot collection",
+   "relation": "FIXED_BY",
+   "target": "ticket creation"
+  },
+  {
+   "source": "P2 priority assignment",
+   "relation": "FIXED_BY",
+   "target": "ticket creation"
+  },
+  {
+   "source": "P1 priority escalation",
+   "relation": "FIXED_BY",
+   "target": "ticket creation"
+  },
+  {
+   "source": "malicious URL scan",
+   "relation": "FIXED_BY",
+   "target": "Security Operations"
+  },
+  {
+   "source": "attachment scan",
+   "relation": "FIXED_BY",
+   "target": "Security Operations"
+  },
+  {
+   "source": "sender block list update",
+   "relation": "FIXED_BY",
+   "target": "Security Operations"
+  },
+  {
+   "source": "mailbox copy removal",
+   "relation": "FIXED_BY",
+   "target": "Security Operations"
+  },
+  {
+   "source": "automated user notification",
+   "relation": "FIXED_BY",
+   "target": "Security Operations"
+  },
+  {
+   "source": "credential entry",
+   "relation": "INDICATES",
+   "target": "signs of compromise"
+  },
+  {
+   "source": "malware execution",
+   "relation": "INDICATES",
+   "target": "signs of compromise"
+  },
+  {
+   "source": "signs of compromise",
+   "relation": "CAUSED_BY",
+   "target": "phishing email interaction"
+  },
+  {
+   "source": "escalation to team lead",
+   "relation": "FIXED_BY",
+   "target": "signs of compromise"
+  },
+  {
+   "source": "full email headers inclusion",
+   "relation": "FIXED_BY",
+   "target": "escalation to team lead"
+  }
+ ]
+}

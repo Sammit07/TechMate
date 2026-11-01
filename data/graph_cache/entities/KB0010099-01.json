@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Automatic Screen Lock",
+   "type": "Component"
+  },
+  {
+   "name": "Windows 11",
+   "type": "Product"
+  },
+  {
+   "name": "macOS Ventura/Sonoma",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Clean Desk Policy",
+   "type": "Component"
+  },
+  {
+   "name": "Screen Timeout Setting",
+   "type": "Component"
+  },
+  {
+   "name": "Manual Screen Lock Shortcut",
+   "type": "Component"
+  },
+  {
+   "name": "Policy Non-Compliance",
+   "type": "Symptom"
+  },
+  {
+   "name": "Remedial Training Escalation",
+   "type": "Cause"
+  },
+  {
+   "name": "Verify Lock Configuration",
+   "type": "Fix"
+  },
+  {
+   "name": "Powercfg Query Command",
+   "type": "Component"
+  },
+  {
+   "name": "Pmset Grep Displaysleep Command",
+   "type": "Component"
+  },
+  {
+   "name": "External Monitor Session Lock",
+   "type": "Component"
+  },
+  {
+   "name": "Login Prompt Verification",
+   "type": "Fix"
+  },
+  {
+   "name": "Screen Lock Timeout Value",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Policy Non-Compliance",
+   "relation": "CAUSED_BY",
+   "target": "Remedial Training Escalation"
+  },
+  {
+   "source": "Automatic Screen Lock",
+   "relation": "AFFECTS",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Automatic Screen Lock",
+   "relation": "AFFECTS",
+   "target": "macOS Ventura/Sonoma"
+  },
+  {
+   "source": "Screen Timeout Setting",
+   "relation": "PART_OF",
+   "target": "Automatic Screen Lock"
+  },
+  {
+   "source": "Manual Screen Lock Shortcut",
+   "relation": "AFFECTS",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Manual Screen Lock Shortcut",
+   "relation": "AFFECTS",
+   "target": "macOS Ventura/Sonoma"
+  },
+  {
+   "source": "Screen Lock Timeout Value",
+   "relation": "INDICATES",
+   "target": "Policy Non-Compliance"
+  },
+  {
+   "source": "Verify Lock Configuration",
+   "relation": "FIXED_BY",
+   "target": "Policy Non-Compliance"
+  },
+  {
+   "source": "Powercfg Query Command",
+   "relation": "PART_OF",
+   "target": "Verify Lock Configuration"
+  },
+  {
+   "source": "Pmset Grep Displaysleep Command",
+   "relation": "PART_OF",
+   "target": "Verify Lock Configuration"
+  },
+  {
+   "source": "Login Prompt Verification",
+   "relation": "PART_OF",
+   "target": "Verify Lock Configuration"
+  },
+  {
+   "source": "External Monitor Session Lock",
+   "relation": "AFFECTS",
+   "target": "Manual Screen Lock Shortcut"
+  },
+  {
+   "source": "Clean Desk Policy",
+   "relation": "AFFECTS",
+   "target": "Automatic Screen Lock"
+  },
+  {
+   "source": "Screen Timeout Setting",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "Manual Screen Lock Shortcut",
+   "relation": "AFFECTS",
+   "target": "Clean Desk Policy"
+  }
+ ]
+}

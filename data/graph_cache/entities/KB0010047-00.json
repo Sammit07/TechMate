@@ -1,0 +1,148 @@
+{
+ "entities": [
+  {
+   "name": "macOS update",
+   "type": "Product"
+  },
+  {
+   "name": "insufficient free storage space",
+   "type": "Cause"
+  },
+  {
+   "name": "intermittent or blocked network connection",
+   "type": "Cause"
+  },
+  {
+   "name": "corrupted software update cache",
+   "type": "Cause"
+  },
+  {
+   "name": "power settings causing sleep",
+   "type": "Cause"
+  },
+  {
+   "name": "third-party security software interference",
+   "type": "Cause"
+  },
+  {
+   "name": "outdated firmware or SMC/NVRAM",
+   "type": "Cause"
+  },
+  {
+   "name": "update progress bar stuck at 0%",
+   "type": "Symptom"
+  },
+  {
+   "name": "installation fails with message \"Software Update couldn't be completed\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "Mac restarts repeatedly and rolls back",
+   "type": "Symptom"
+  },
+  {
+   "name": "error code SU-4294 or SU-4295",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "notification of insufficient disk space",
+   "type": "Symptom"
+  },
+  {
+   "name": "connect to ACME-Corp network",
+   "type": "Fix"
+  },
+  {
+   "name": "plug Mac into power adapter",
+   "type": "Fix"
+  },
+  {
+   "name": "check free space via About This Mac",
+   "type": "Fix"
+  },
+  {
+   "name": "reset SMC/NVRAM",
+   "type": "Fix"
+  },
+  {
+   "name": "clear software update cache",
+   "type": "Fix"
+  },
+  {
+   "name": "disable third-party security software",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "update progress bar stuck at 0%",
+   "relation": "CAUSED_BY",
+   "target": "insufficient free storage space"
+  },
+  {
+   "source": "installation fails with message \"Software Update couldn't be completed\"",
+   "relation": "CAUSED_BY",
+   "target": "intermittent or blocked network connection"
+  },
+  {
+   "source": "Mac restarts repeatedly and rolls back",
+   "relation": "CAUSED_BY",
+   "target": "corrupted software update cache"
+  },
+  {
+   "source": "error code SU-4294 or SU-4295",
+   "relation": "INDICATES",
+   "target": "power settings causing sleep"
+  },
+  {
+   "source": "notification of insufficient disk space",
+   "relation": "INDICATES",
+   "target": "insufficient free storage space"
+  },
+  {
+   "source": "insufficient free storage space",
+   "relation": "AFFECTS",
+   "target": "macOS update"
+  },
+  {
+   "source": "intermittent or blocked network connection",
+   "relation": "AFFECTS",
+   "target": "macOS update"
+  },
+  {
+   "source": "corrupted software update cache",
+   "relation": "AFFECTS",
+   "target": "macOS update"
+  },
+  {
+   "source": "power settings causing sleep",
+   "relation": "AFFECTS",
+   "target": "macOS update"
+  },
+  {
+   "source": "third-party security software interference",
+   "relation": "AFFECTS",
+   "target": "macOS update"
+  },
+  {
+   "source": "outdated firmware or SMC/NVRAM",
+   "relation": "AFFECTS",
+   "target": "macOS update"
+  },
+  {
+   "source": "connect to ACME-Corp network",
+   "relation": "FIXED_BY",
+   "target": "intermittent or blocked network connection"
+  },
+  {
+   "source": "plug Mac into power adapter",
+   "relation": "FIXED_BY",
+   "target": "power settings causing sleep"
+  },
+  {
+   "source": "check free space via About This Mac",
+   "relation": "FIXED_BY",
+   "target": "insufficient free storage space"
+  }
+ ]
+}

@@ -1,0 +1,122 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "Azure portal",
+   "type": "Product"
+  },
+  {
+   "name": "My Sign-ins portal",
+   "type": "Product"
+  },
+  {
+   "name": "identity verification failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "unable to receive MFA",
+   "type": "Symptom"
+  },
+  {
+   "name": "cannot verify user identity",
+   "type": "Cause"
+  },
+  {
+   "name": "verify identity via alternate method",
+   "type": "Fix"
+  },
+  {
+   "name": "delete Authenticator method",
+   "type": "Fix"
+  },
+  {
+   "name": "require MFA re-registration",
+   "type": "Fix"
+  },
+  {
+   "name": "issue Temporary Access Pass",
+   "type": "Fix"
+  },
+  {
+   "name": "guide user to re-register Authenticator",
+   "type": "Fix"
+  },
+  {
+   "name": "confirm push notification approval",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "unable to receive MFA",
+   "relation": "CAUSED_BY",
+   "target": "deleted Authenticator method"
+  },
+  {
+   "source": "identity verification failure",
+   "relation": "CAUSED_BY",
+   "target": "cannot verify user identity"
+  },
+  {
+   "source": "deleted Authenticator method",
+   "relation": "INDICATES",
+   "target": "require MFA re-registration"
+  },
+  {
+   "source": "require MFA re-registration",
+   "relation": "FIXED_BY",
+   "target": "guide user to re-register Authenticator"
+  },
+  {
+   "source": "unable to receive MFA",
+   "relation": "FIXED_BY",
+   "target": "issue Temporary Access Pass"
+  },
+  {
+   "source": "issue Temporary Access Pass",
+   "relation": "FIXED_BY",
+   "target": "guide user to re-register Authenticator"
+  },
+  {
+   "source": "guide user to re-register Authenticator",
+   "relation": "FIXED_BY",
+   "target": "confirm push notification approval"
+  },
+  {
+   "source": "verify identity via alternate method",
+   "relation": "FIXED_BY",
+   "target": "identity verification failure"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "PART_OF",
+   "target": "Microsoft Entra ID"
+  },
+  {
+   "source": "Temporary Access Pass",
+   "relation": "PART_OF",
+   "target": "Microsoft Entra ID"
+  },
+  {
+   "source": "Azure portal",
+   "relation": "AFFECTS",
+   "target": "Microsoft Entra ID"
+  },
+  {
+   "source": "My Sign-ins portal",
+   "relation": "AFFECTS",
+   "target": "Microsoft Entra ID"
+  }
+ ]
+}

@@ -1,0 +1,150 @@
+{
+ "entities": [
+  {
+   "name": "BitLocker",
+   "type": "Component"
+  },
+  {
+   "name": "FileVault",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect VPN",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Defender for Endpoint",
+   "type": "Product"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "Azure AD",
+   "type": "Product"
+  },
+  {
+   "name": "Self-Service Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Service Desk",
+   "type": "Product"
+  },
+  {
+   "name": "verify BitLocker protection",
+   "type": "Fix"
+  },
+  {
+   "name": "renew certificate via Self-Service Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "shut down laptop completely",
+   "type": "Fix"
+  },
+  {
+   "name": "use ACME-Corp Wi-Fi",
+   "type": "Fix"
+  },
+  {
+   "name": "run health check post-travel",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BitLocker",
+   "relation": "PART_OF",
+   "target": "Windows"
+  },
+  {
+   "source": "FileVault",
+   "relation": "PART_OF",
+   "target": "macOS"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "BitLocker recovery key"
+  },
+  {
+   "source": "ACME-Corp Wi-Fi",
+   "relation": "AFFECTS",
+   "target": "machine certificate"
+  },
+  {
+   "source": "GlobalProtect VPN",
+   "relation": "AFFECTS",
+   "target": "traffic encryption"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "device compliance"
+  },
+  {
+   "source": "Microsoft Defender for Endpoint",
+   "relation": "AFFECTS",
+   "target": "antivirus scan"
+  },
+  {
+   "source": "Entra ID",
+   "relation": "AFFECTS",
+   "target": "login authentication"
+  },
+  {
+   "source": "Azure AD",
+   "relation": "AFFECTS",
+   "target": "device join status"
+  },
+  {
+   "source": "Self-Service Portal",
+   "relation": "AFFECTS",
+   "target": "certificate renewal"
+  },
+  {
+   "source": "Service Desk",
+   "relation": "AFFECTS",
+   "target": "hardware issue reporting"
+  },
+  {
+   "source": "verify BitLocker protection",
+   "relation": "FIXED_BY",
+   "target": "BitLocker recovery prompt"
+  },
+  {
+   "source": "renew certificate via Self-Service Portal",
+   "relation": "FIXED_BY",
+   "target": "VPN certificate expiration"
+  },
+  {
+   "source": "shut down laptop completely",
+   "relation": "FIXED_BY",
+   "target": "packing risk"
+  },
+  {
+   "source": "use ACME-Corp Wi-Fi",
+   "relation": "FIXED_BY",
+   "target": "public hotspot risk"
+  },
+  {
+   "source": "run health check post-travel",
+   "relation": "FIXED_BY",
+   "target": "post-travel compliance verification"
+  }
+ ]
+}

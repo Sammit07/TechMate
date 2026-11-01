@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft account",
+   "type": "Product"
+  },
+  {
+   "name": "Sign out everywhere",
+   "type": "Fix"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Defender for Endpoint",
+   "type": "Product"
+  },
+  {
+   "name": "Recent activity",
+   "type": "Component"
+  },
+  {
+   "name": "Service Desk",
+   "type": "Product"
+  },
+  {
+   "name": "Phishing link clicked",
+   "type": "Symptom"
+  },
+  {
+   "name": "Compromised credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "Active sessions or tokens",
+   "type": "Component"
+  },
+  {
+   "name": "Password reset",
+   "type": "Fix"
+  },
+  {
+   "name": "Secure account",
+   "type": "Fix"
+  },
+  {
+   "name": "Quick scan",
+   "type": "Fix"
+  },
+  {
+   "name": "Unauthorized access",
+   "type": "Symptom"
+  },
+  {
+   "name": "Malware download",
+   "type": "Cause"
+  },
+  {
+   "name": "Ticket creation",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Phishing link clicked",
+   "relation": "CAUSED_BY",
+   "target": "Compromised credentials"
+  },
+  {
+   "source": "Compromised credentials",
+   "relation": "AFFECTS",
+   "target": "Microsoft account"
+  },
+  {
+   "source": "Active sessions or tokens",
+   "relation": "INDICATES",
+   "target": "Compromised credentials"
+  },
+  {
+   "source": "Sign out everywhere",
+   "relation": "FIXED_BY",
+   "target": "Active sessions or tokens"
+  },
+  {
+   "source": "Password reset",
+   "relation": "FIXED_BY",
+   "target": "Compromised credentials"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "PART_OF",
+   "target": "Microsoft account"
+  },
+  {
+   "source": "Microsoft Defender for Endpoint",
+   "relation": "PART_OF",
+   "target": "Microsoft account"
+  },
+  {
+   "source": "Quick scan",
+   "relation": "FIXED_BY",
+   "target": "Malware download"
+  },
+  {
+   "source": "Recent activity",
+   "relation": "AFFECTS",
+   "target": "Microsoft account"
+  },
+  {
+   "source": "Unauthorized access",
+   "relation": "INDICATES",
+   "target": "Recent activity"
+  },
+  {
+   "source": "Secure account",
+   "relation": "FIXED_BY",
+   "target": "Unauthorized access"
+  },
+  {
+   "source": "Service Desk",
+   "relation": "AFFECTS",
+   "target": "Ticket creation"
+  },
+  {
+   "source": "Ticket creation",
+   "relation": "FIXED_BY",
+   "target": "Phishing link clicked"
+  },
+  {
+   "source": "Malware download",
+   "relation": "CAUSED_BY",
+   "target": "Phishing link clicked"
+  },
+  {
+   "source": "Compromised credentials",
+   "relation": "INDICATES",
+   "target": "Unauthorized access"
+  }
+ ]
+}

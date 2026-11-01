@@ -1,0 +1,116 @@
+{
+ "entities": [
+  {
+   "name": "MFA",
+   "type": "Component"
+  },
+  {
+   "name": "Authenticator app",
+   "type": "Component"
+  },
+  {
+   "name": "backup SMS",
+   "type": "Component"
+  },
+  {
+   "name": "My Account portal",
+   "type": "Product"
+  },
+  {
+   "name": "Temporary Access Pass (TAP)",
+   "type": "Component"
+  },
+  {
+   "name": "Identity & Access Management (IAM)",
+   "type": "Product"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "Azure AD",
+   "type": "Product"
+  },
+  {
+   "name": "unfamiliar account in Authenticator",
+   "type": "Symptom"
+  },
+  {
+   "name": "multiple failed MFA reset attempts",
+   "type": "Symptom"
+  },
+  {
+   "name": "identity cannot be verified",
+   "type": "Symptom"
+  },
+  {
+   "name": "credential theft suspected",
+   "type": "Symptom"
+  },
+  {
+   "name": "compromised account",
+   "type": "Cause"
+  },
+  {
+   "name": "force password reset",
+   "type": "Fix"
+  },
+  {
+   "name": "review sign-in risk",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "unfamiliar account in Authenticator",
+   "relation": "INDICATES",
+   "target": "credential theft suspected"
+  },
+  {
+   "source": "multiple failed MFA reset attempts",
+   "relation": "INDICATES",
+   "target": "compromised account"
+  },
+  {
+   "source": "identity cannot be verified",
+   "relation": "INDICATES",
+   "target": "potential social engineering"
+  },
+  {
+   "source": "compromised account",
+   "relation": "FIXED_BY",
+   "target": "force password reset"
+  },
+  {
+   "source": "compromised account",
+   "relation": "FIXED_BY",
+   "target": "review sign-in risk"
+  },
+  {
+   "source": "MFA",
+   "relation": "AFFECTS",
+   "target": "Authenticator app"
+  },
+  {
+   "source": "backup SMS",
+   "relation": "PART_OF",
+   "target": "MFA"
+  },
+  {
+   "source": "Temporary Access Pass (TAP)",
+   "relation": "PART_OF",
+   "target": "MFA"
+  },
+  {
+   "source": "Identity & Access Management (IAM)",
+   "relation": "AFFECTS",
+   "target": "Entra ID"
+  },
+  {
+   "source": "Identity & Access Management (IAM)",
+   "relation": "AFFECTS",
+   "target": "Azure AD"
+  }
+ ]
+}

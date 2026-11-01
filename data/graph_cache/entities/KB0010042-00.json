@@ -1,0 +1,126 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "Bluetooth headset",
+   "type": "Component"
+  },
+  {
+   "name": "Mouse cursor does not move or clicks are unresponsive",
+   "type": "Symptom"
+  },
+  {
+   "name": "Keyboard keys produce no input or repeat erratically",
+   "type": "Symptom"
+  },
+  {
+   "name": "Headset microphone is silent in Teams or other apps",
+   "type": "Symptom"
+  },
+  {
+   "name": "Bluetooth headset fails to pair or disconnects repeatedly",
+   "type": "Symptom"
+  },
+  {
+   "name": "Error message: \"Device not found\" or \"No audio input device detected\"",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Battery depleted or low power in wireless peripherals",
+   "type": "Cause"
+  },
+  {
+   "name": "Bluetooth pairing lost due to interference, outdated driver, or device removed from trusted list",
+   "type": "Cause"
+  },
+  {
+   "name": "Incorrect default audio device selected in application settings",
+   "type": "Cause"
+  },
+  {
+   "name": "Physical damage or wear",
+   "type": "Cause"
+  },
+  {
+   "name": "Verify peripheral has sufficient charge or fresh batteries",
+   "type": "Fix"
+  },
+  {
+   "name": "Toggle Bluetooth radio off and on",
+   "type": "Fix"
+  },
+  {
+   "name": "Re-pair Bluetooth Device & Select Correct Audio",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Mouse cursor does not move or clicks are unresponsive",
+   "relation": "CAUSED_BY",
+   "target": "Battery depleted or low power in wireless peripherals"
+  },
+  {
+   "source": "Keyboard keys produce no input or repeat erratically",
+   "relation": "CAUSED_BY",
+   "target": "Battery depleted or low power in wireless peripherals"
+  },
+  {
+   "source": "Headset microphone is silent in Teams or other apps",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect default audio device selected in application settings"
+  },
+  {
+   "source": "Bluetooth headset fails to pair or disconnects repeatedly",
+   "relation": "CAUSED_BY",
+   "target": "Bluetooth pairing lost due to interference, outdated driver, or device removed from trusted list"
+  },
+  {
+   "source": "Error message: \"Device not found\" or \"No audio input device detected\"",
+   "relation": "INDICATES",
+   "target": "Bluetooth headset fails to pair or disconnects repeatedly"
+  },
+  {
+   "source": "Bluetooth headset fails to pair or disconnects repeatedly",
+   "relation": "AFFECTS",
+   "target": "Bluetooth headset"
+  },
+  {
+   "source": "Mouse cursor does not move or clicks are unresponsive",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "Keyboard keys produce no input or repeat erratically",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "Headset microphone is silent in Teams or other apps",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15"
+  },
+  {
+   "source": "Battery depleted or low power in wireless peripherals",
+   "relation": "FIXED_BY",
+   "target": "Verify peripheral has sufficient charge or fresh batteries"
+  },
+  {
+   "source": "Bluetooth pairing lost due to interference, outdated driver, or device removed from trusted list",
+   "relation": "FIXED_BY",
+   "target": "Toggle Bluetooth radio off and on"
+  },
+  {
+   "source": "Incorrect default audio device selected in application settings",
+   "relation": "FIXED_BY",
+   "target": "Re-pair Bluetooth Device & Select Correct Audio"
+  }
+ ]
+}

@@ -1,0 +1,170 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "Company-managed laptops enrolled in Microsoft Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Mobile devices (iOS/Android) with Company Portal app",
+   "type": "Product"
+  },
+  {
+   "name": "Bitwarden Enterprise",
+   "type": "Product"
+  },
+  {
+   "name": "LastPass Business",
+   "type": "Product"
+  },
+  {
+   "name": "1Password Business",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Entra ID / on-prem AD synchronization failure",
+   "type": "Cause"
+  },
+  {
+   "name": "No password manager deployed or used",
+   "type": "Cause"
+  },
+  {
+   "name": "Expired or corrupted password-manager database after device changes",
+   "type": "Cause"
+  },
+  {
+   "name": "Consumer-grade password manager usage",
+   "type": "Cause"
+  },
+  {
+   "name": "Frequent account lockouts after 5 failed login attempts",
+   "type": "Symptom"
+  },
+  {
+   "name": "Users writing passwords on paper or in unsecured notes",
+   "type": "Symptom"
+  },
+  {
+   "name": "Repeated password-reset requests due to forgotten credentials",
+   "type": "Symptom"
+  },
+  {
+   "name": "Error messages: 'Your password has expired' or 'Invalid username or password'",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Difficulty remembering unique passwords for multiple SaaS applications",
+   "type": "Symptom"
+  },
+  {
+   "name": "Installation and configuration of approved password manager",
+   "type": "Fix"
+  },
+  {
+   "name": "User training on approved enterprise password manager",
+   "type": "Fix"
+  },
+  {
+   "name": "Synchronize password manager with Microsoft Entra ID / on-prem AD",
+   "type": "Fix"
+  },
+  {
+   "name": "Replace consumer-grade manager with approved enterprise solution",
+   "type": "Fix"
+  },
+  {
+   "name": "Restore or recreate password-manager database after device change",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Frequent account lockouts after 5 failed login attempts",
+   "relation": "CAUSED_BY",
+   "target": "No password manager deployed or used"
+  },
+  {
+   "source": "Users writing passwords on paper or in unsecured notes",
+   "relation": "CAUSED_BY",
+   "target": "No password manager deployed or used"
+  },
+  {
+   "source": "Repeated password-reset requests due to forgotten credentials",
+   "relation": "CAUSED_BY",
+   "target": "No password manager deployed or used"
+  },
+  {
+   "source": "Error messages: 'Your password has expired' or 'Invalid username or password'",
+   "relation": "INDICATES",
+   "target": "Microsoft Entra ID / on-prem AD synchronization failure"
+  },
+  {
+   "source": "Difficulty remembering unique passwords for multiple SaaS applications",
+   "relation": "CAUSED_BY",
+   "target": "No password manager deployed or used"
+  },
+  {
+   "source": "No password manager deployed or used",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "No password manager deployed or used",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15"
+  },
+  {
+   "source": "No password manager deployed or used",
+   "relation": "AFFECTS",
+   "target": "Company-managed laptops enrolled in Microsoft Intune"
+  },
+  {
+   "source": "No password manager deployed or used",
+   "relation": "AFFECTS",
+   "target": "Mobile devices (iOS/Android) with Company Portal app"
+  },
+  {
+   "source": "Microsoft Entra ID / on-prem AD synchronization failure",
+   "relation": "FIXED_BY",
+   "target": "Synchronize password manager with Microsoft Entra ID / on-prem AD"
+  },
+  {
+   "source": "Expired or corrupted password-manager database after device changes",
+   "relation": "FIXED_BY",
+   "target": "Restore or recreate password-manager database after device change"
+  },
+  {
+   "source": "Consumer-grade password manager usage",
+   "relation": "FIXED_BY",
+   "target": "Replace consumer-grade manager with approved enterprise solution"
+  },
+  {
+   "source": "Lack of awareness of the approved enterprise password-manager solution",
+   "relation": "FIXED_BY",
+   "target": "User training on approved enterprise password manager"
+  },
+  {
+   "source": "Bitwarden Enterprise",
+   "relation": "PART_OF",
+   "target": "Approved password manager solutions"
+  },
+  {
+   "source": "LastPass Business",
+   "relation": "PART_OF",
+   "target": "Approved password manager solutions"
+  },
+  {
+   "source": "1Password Business",
+   "relation": "PART_OF",
+   "target": "Approved password manager solutions"
+  }
+ ]
+}

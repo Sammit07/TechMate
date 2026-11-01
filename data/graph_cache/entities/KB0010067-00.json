@@ -1,0 +1,145 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Outlook (Windows/macOS)",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook on the web (OWA)",
+   "type": "Product"
+  },
+  {
+   "name": "Exchange Online mailboxes",
+   "type": "Product"
+  },
+  {
+   "name": "Online Archive feature",
+   "type": "Product"
+  },
+  {
+   "name": "mailbox full warning",
+   "type": "Symptom"
+  },
+  {
+   "name": "cannot send message due to quota",
+   "type": "Symptom"
+  },
+  {
+   "name": "NDR due to mailbox quota",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "mailbox usage >= 49GB",
+   "type": "Symptom"
+  },
+  {
+   "name": "inability to create or receive mail",
+   "type": "Symptom"
+  },
+  {
+   "name": "accumulation of large attachments",
+   "type": "Cause"
+  },
+  {
+   "name": "retention of old email",
+   "type": "Cause"
+  },
+  {
+   "name": "Deleted Items not emptied",
+   "type": "Cause"
+  },
+  {
+   "name": "Online Archive not enabled",
+   "type": "Cause"
+  },
+  {
+   "name": "check mailbox usage",
+   "type": "Fix"
+  },
+  {
+   "name": "enable online archive",
+   "type": "Fix"
+  },
+  {
+   "name": "clean up large items or old folders",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "mailbox full warning",
+   "relation": "CAUSED_BY",
+   "target": "mailbox usage >= 49GB"
+  },
+  {
+   "source": "cannot send message due to quota",
+   "relation": "CAUSED_BY",
+   "target": "mailbox usage >= 49GB"
+  },
+  {
+   "source": "NDR due to mailbox quota",
+   "relation": "INDICATES",
+   "target": "mailbox usage >= 49GB"
+  },
+  {
+   "source": "inability to create or receive mail",
+   "relation": "CAUSED_BY",
+   "target": "mailbox usage >= 49GB"
+  },
+  {
+   "source": "mailbox usage >= 49GB",
+   "relation": "AFFECTS",
+   "target": "Exchange Online mailboxes"
+  },
+  {
+   "source": "accumulation of large attachments",
+   "relation": "CAUSED_BY",
+   "target": "mailbox usage >= 49GB"
+  },
+  {
+   "source": "retention of old email",
+   "relation": "CAUSED_BY",
+   "target": "mailbox usage >= 49GB"
+  },
+  {
+   "source": "Deleted Items not emptied",
+   "relation": "CAUSED_BY",
+   "target": "mailbox usage >= 49GB"
+  },
+  {
+   "source": "Online Archive not enabled",
+   "relation": "CAUSED_BY",
+   "target": "mailbox usage >= 49GB"
+  },
+  {
+   "source": "mailbox usage >= 49GB",
+   "relation": "FIXED_BY",
+   "target": "check mailbox usage"
+  },
+  {
+   "source": "mailbox usage >= 49GB",
+   "relation": "FIXED_BY",
+   "target": "enable online archive"
+  },
+  {
+   "source": "mailbox usage >= 49GB",
+   "relation": "FIXED_BY",
+   "target": "clean up large items or old folders"
+  },
+  {
+   "source": "Online Archive feature",
+   "relation": "PART_OF",
+   "target": "Exchange Online mailboxes"
+  },
+  {
+   "source": "Microsoft Outlook (Windows/macOS)",
+   "relation": "AFFECTS",
+   "target": "mailbox full warning"
+  },
+  {
+   "source": "Outlook on the web (OWA)",
+   "relation": "AFFECTS",
+   "target": "mailbox full warning"
+  }
+ ]
+}

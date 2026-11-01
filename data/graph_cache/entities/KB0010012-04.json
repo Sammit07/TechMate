@@ -1,0 +1,135 @@
+{
+ "entities": [
+  {
+   "name": "access request approval workflow",
+   "type": "Process"
+  },
+  {
+   "name": "manager approval",
+   "type": "Event"
+  },
+  {
+   "name": "provisioning timeline",
+   "type": "Metric"
+  },
+  {
+   "name": "IAM Operations sub-team",
+   "type": "Team"
+  },
+  {
+   "name": "Security Operations group",
+   "type": "Team"
+  },
+  {
+   "name": "Azure AD Connect",
+   "type": "Tool"
+  },
+  {
+   "name": "Group Management scripts",
+   "type": "Tool"
+  },
+  {
+   "name": "conditional access policies",
+   "type": "Component"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "self-service portal",
+   "type": "Product"
+  },
+  {
+   "name": "IT Help Teams",
+   "type": "Product"
+  },
+  {
+   "name": "SharePoint access",
+   "type": "Component"
+  },
+  {
+   "name": "file share permission",
+   "type": "Component"
+  },
+  {
+   "name": "distribution list",
+   "type": "Component"
+  },
+  {
+   "name": "approval timestamp",
+   "type": "Data"
+  },
+  {
+   "name": "error logs",
+   "type": "Data"
+  }
+ ],
+ "relations": [
+  {
+   "source": "provisioning timeline",
+   "relation": "CAUSED_BY",
+   "target": "manager approval"
+  },
+  {
+   "source": "IAM Operations sub-team",
+   "relation": "FIXED_BY",
+   "target": "provisioning timeline"
+  },
+  {
+   "source": "Security Operations group",
+   "relation": "FIXED_BY",
+   "target": "conditional access policies"
+  },
+  {
+   "source": "Azure AD Connect",
+   "relation": "INDICATES",
+   "target": "error logs"
+  },
+  {
+   "source": "Group Management scripts",
+   "relation": "INDICATES",
+   "target": "error logs"
+  },
+  {
+   "source": "SharePoint access",
+   "relation": "AFFECTS",
+   "target": "self-service portal"
+  },
+  {
+   "source": "file share permission",
+   "relation": "AFFECTS",
+   "target": "self-service portal"
+  },
+  {
+   "source": "distribution list",
+   "relation": "AFFECTS",
+   "target": "self-service portal"
+  },
+  {
+   "source": "Entra ID",
+   "relation": "PART_OF",
+   "target": "Azure AD"
+  },
+  {
+   "source": "approval workflow",
+   "relation": "AFFECTS",
+   "target": "manager approval"
+  },
+  {
+   "source": "access denied",
+   "relation": "SYMPTOM",
+   "target": "SharePoint access"
+  },
+  {
+   "source": "access denied",
+   "relation": "SYMPTOM",
+   "target": "file share permission"
+  },
+  {
+   "source": "access denied",
+   "relation": "SYMPTOM",
+   "target": "distribution list"
+  }
+ ]
+}

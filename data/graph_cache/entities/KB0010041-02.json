@@ -1,0 +1,182 @@
+{
+ "entities": [
+  {
+   "name": "Bluetooth Peripheral Issue",
+   "type": "Symptom"
+  },
+  {
+   "name": "Bluetooth Disabled",
+   "type": "Symptom"
+  },
+  {
+   "name": "Airplane Mode Enabled",
+   "type": "Symptom"
+  },
+  {
+   "name": "Failed Bluetooth Pairing",
+   "type": "Symptom"
+  },
+  {
+   "name": "Intune Compliance Policy Blocking Bluetooth",
+   "type": "Cause"
+  },
+  {
+   "name": "Faulty Laptop Bluetooth Adapter",
+   "type": "Cause"
+  },
+  {
+   "name": "Remove Existing Bluetooth Pairing",
+   "type": "Fix"
+  },
+  {
+   "name": "Re-add Bluetooth Device",
+   "type": "Fix"
+  },
+  {
+   "name": "Test with Known-Good Spare Peripheral",
+   "type": "Fix"
+  },
+  {
+   "name": "Check Intune for Bluetooth Policies",
+   "type": "Fix"
+  },
+  {
+   "name": "Create Hardware Replacement Ticket",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify Laptop Model and OS Version",
+   "type": "Fix"
+  },
+  {
+   "name": "Confirm Bluetooth Not in Airplane Mode",
+   "type": "Fix"
+  },
+  {
+   "name": "Ask User to Describe Symptom and Errors",
+   "type": "Fix"
+  },
+  {
+   "name": "Escalate to Desktop Support",
+   "type": "Fix"
+  },
+  {
+   "name": "Laptop",
+   "type": "Product"
+  },
+  {
+   "name": "Bluetooth Adapter",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Peripheral",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Bluetooth Peripheral Issue",
+   "relation": "CAUSED_BY",
+   "target": "Bluetooth Disabled"
+  },
+  {
+   "source": "Bluetooth Peripheral Issue",
+   "relation": "CAUSED_BY",
+   "target": "Airplane Mode Enabled"
+  },
+  {
+   "source": "Bluetooth Peripheral Issue",
+   "relation": "CAUSED_BY",
+   "target": "Failed Bluetooth Pairing"
+  },
+  {
+   "source": "Failed Bluetooth Pairing",
+   "relation": "CAUSED_BY",
+   "target": "Intune Compliance Policy Blocking Bluetooth"
+  },
+  {
+   "source": "Failed Bluetooth Pairing",
+   "relation": "CAUSED_BY",
+   "target": "Faulty Laptop Bluetooth Adapter"
+  },
+  {
+   "source": "Intune Compliance Policy Blocking Bluetooth",
+   "relation": "INDICATES",
+   "target": "Failed Bluetooth Pairing"
+  },
+  {
+   "source": "Faulty Laptop Bluetooth Adapter",
+   "relation": "INDICATES",
+   "target": "Failed Bluetooth Pairing"
+  },
+  {
+   "source": "Intune Compliance Policy Blocking Bluetooth",
+   "relation": "AFFECTS",
+   "target": "Bluetooth Adapter"
+  },
+  {
+   "source": "Faulty Laptop Bluetooth Adapter",
+   "relation": "AFFECTS",
+   "target": "Bluetooth Adapter"
+  },
+  {
+   "source": "Remove Existing Bluetooth Pairing",
+   "relation": "FIXED_BY",
+   "target": "Failed Bluetooth Pairing"
+  },
+  {
+   "source": "Re-add Bluetooth Device",
+   "relation": "FIXED_BY",
+   "target": "Failed Bluetooth Pairing"
+  },
+  {
+   "source": "Test with Known-Good Spare Peripheral",
+   "relation": "FIXED_BY",
+   "target": "Failed Bluetooth Pairing"
+  },
+  {
+   "source": "Check Intune for Bluetooth Policies",
+   "relation": "FIXED_BY",
+   "target": "Intune Compliance Policy Blocking Bluetooth"
+  },
+  {
+   "source": "Create Hardware Replacement Ticket",
+   "relation": "FIXED_BY",
+   "target": "Faulty Laptop Bluetooth Adapter"
+  },
+  {
+   "source": "Verify Laptop Model and OS Version",
+   "relation": "AFFECTS",
+   "target": "Laptop"
+  },
+  {
+   "source": "Confirm Bluetooth Not in Airplane Mode",
+   "relation": "AFFECTS",
+   "target": "Laptop"
+  },
+  {
+   "source": "Ask User to Describe Symptom and Errors",
+   "relation": "AFFECTS",
+   "target": "User"
+  },
+  {
+   "source": "Escalate to Desktop Support",
+   "relation": "FIXED_BY",
+   "target": "Failed Bluetooth Pairing"
+  },
+  {
+   "source": "Bluetooth Adapter",
+   "relation": "PART_OF",
+   "target": "Laptop"
+  },
+  {
+   "source": "Peripheral",
+   "relation": "PART_OF",
+   "target": "Laptop"
+  }
+ ]
+}

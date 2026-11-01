@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "shared mailbox",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "permissions granted",
+   "type": "Cause"
+  },
+  {
+   "name": "mailbox not appearing in Outlook",
+   "type": "Symptom"
+  },
+  {
+   "name": "restart Outlook",
+   "type": "Fix"
+  },
+  {
+   "name": "auto-mapping delay",
+   "type": "Cause"
+  },
+  {
+   "name": "wait for replication",
+   "type": "Fix"
+  },
+  {
+   "name": "send from shared mailbox",
+   "type": "Symptom"
+  },
+  {
+   "name": "calendar access issue",
+   "type": "Symptom"
+  },
+  {
+   "name": "Escalate to Messaging & Collaboration",
+   "type": "Fix"
+  },
+  {
+   "name": "Autodiscover sync issue",
+   "type": "Cause"
+  },
+  {
+   "name": "offline OST file problem",
+   "type": "Cause"
+  },
+  {
+   "name": "Desktop Support team",
+   "type": "Product"
+  },
+  {
+   "name": "verify via test login",
+   "type": "Fix"
+  },
+  {
+   "name": "confirm user success",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "mailbox not appearing in Outlook",
+   "relation": "CAUSED_BY",
+   "target": "permissions granted"
+  },
+  {
+   "source": "mailbox not appearing in Outlook",
+   "relation": "CAUSED_BY",
+   "target": "auto-mapping delay"
+  },
+  {
+   "source": "mailbox not appearing in Outlook",
+   "relation": "FIXED_BY",
+   "target": "restart Outlook"
+  },
+  {
+   "source": "mailbox not appearing in Outlook",
+   "relation": "FIXED_BY",
+   "target": "wait for replication"
+  },
+  {
+   "source": "send from shared mailbox",
+   "relation": "CAUSED_BY",
+   "target": "permissions granted"
+  },
+  {
+   "source": "calendar access issue",
+   "relation": "CAUSED_BY",
+   "target": "permissions granted"
+  },
+  {
+   "source": "mailbox not appearing in Outlook",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "shared mailbox",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  },
+  {
+   "source": "Autodiscover sync issue",
+   "relation": "CAUSED_BY",
+   "target": "mailbox not appearing in Outlook"
+  },
+  {
+   "source": "offline OST file problem",
+   "relation": "CAUSED_BY",
+   "target": "mailbox not appearing in Outlook"
+  },
+  {
+   "source": "mailbox not appearing in Outlook",
+   "relation": "FIXED_BY",
+   "target": "Escalate to Messaging & Collaboration"
+  },
+  {
+   "source": "mailbox not appearing in Outlook",
+   "relation": "FIXED_BY",
+   "target": "Desktop Support team"
+  },
+  {
+   "source": "verification",
+   "relation": "FIXED_BY",
+   "target": "verify via test login"
+  },
+  {
+   "source": "verification",
+   "relation": "FIXED_BY",
+   "target": "confirm user success"
+  }
+ ]
+}

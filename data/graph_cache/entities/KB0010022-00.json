@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "Intel Wi-Fi adapter",
+   "type": "Component"
+  },
+  {
+   "name": "Realtek Wi-Fi adapter",
+   "type": "Component"
+  },
+  {
+   "name": "Qualcomm Wi-Fi adapter",
+   "type": "Component"
+  },
+  {
+   "name": "Wi-Fi keeps disconnecting or drops intermittently",
+   "type": "Symptom"
+  },
+  {
+   "name": "Cannot connect to office Wi-Fi (ACME-Corp)",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outdated or corrupted wireless network adapter driver",
+   "type": "Cause"
+  },
+  {
+   "name": "Adapter power-saving settings that turn off the radio",
+   "type": "Cause"
+  },
+  {
+   "name": "Expired or corrupted machine certificate used for 802.1X authentication",
+   "type": "Cause"
+  },
+  {
+   "name": "Update Wi-Fi driver",
+   "type": "Fix"
+  },
+  {
+   "name": "Disable power saving on Wi-Fi adapter",
+   "type": "Fix"
+  },
+  {
+   "name": "Windows Update",
+   "type": "Component"
+  },
+  {
+   "name": "ACME-Corp SSID",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Wi-Fi keeps disconnecting or drops intermittently",
+   "relation": "CAUSED_BY",
+   "target": "Outdated or corrupted wireless network adapter driver"
+  },
+  {
+   "source": "Wi-Fi keeps disconnecting or drops intermittently",
+   "relation": "CAUSED_BY",
+   "target": "Adapter power-saving settings that turn off the radio"
+  },
+  {
+   "source": "Cannot connect to office Wi-Fi (ACME-Corp)",
+   "relation": "CAUSED_BY",
+   "target": "Expired or corrupted machine certificate used for 802.1X authentication"
+  },
+  {
+   "source": "Outdated or corrupted wireless network adapter driver",
+   "relation": "AFFECTS",
+   "target": "Intel Wi-Fi adapter"
+  },
+  {
+   "source": "Outdated or corrupted wireless network adapter driver",
+   "relation": "AFFECTS",
+   "target": "Realtek Wi-Fi adapter"
+  },
+  {
+   "source": "Outdated or corrupted wireless network adapter driver",
+   "relation": "AFFECTS",
+   "target": "Qualcomm Wi-Fi adapter"
+  },
+  {
+   "source": "Adapter power-saving settings that turn off the radio",
+   "relation": "AFFECTS",
+   "target": "Intel Wi-Fi adapter"
+  },
+  {
+   "source": "Adapter power-saving settings that turn off the radio",
+   "relation": "AFFECTS",
+   "target": "Realtek Wi-Fi adapter"
+  },
+  {
+   "source": "Adapter power-saving settings that turn off the radio",
+   "relation": "AFFECTS",
+   "target": "Qualcomm Wi-Fi adapter"
+  },
+  {
+   "source": "Update Wi-Fi driver",
+   "relation": "FIXED_BY",
+   "target": "Outdated or corrupted wireless network adapter driver"
+  },
+  {
+   "source": "Disable power saving on Wi-Fi adapter",
+   "relation": "FIXED_BY",
+   "target": "Adapter power-saving settings that turn off the radio"
+  },
+  {
+   "source": "Windows Update",
+   "relation": "PART_OF",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "ACME-Corp SSID",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "ACME-Corp SSID",
+   "relation": "AFFECTS",
+   "target": "Lenovo ThinkPad T14/X1 Carbon"
+  },
+  {
+   "source": "ACME-Corp SSID",
+   "relation": "AFFECTS",
+   "target": "HP EliteBook 840"
+  }
+ ]
+}

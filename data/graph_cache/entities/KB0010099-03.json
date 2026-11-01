@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "screen lock setting",
+   "type": "Component"
+  },
+  {
+   "name": "Intune compliance",
+   "type": "Component"
+  },
+  {
+   "name": "Security Operations",
+   "type": "Product"
+  },
+  {
+   "name": "device serial number",
+   "type": "Component"
+  },
+  {
+   "name": "Intune device ID",
+   "type": "Component"
+  },
+  {
+   "name": "recent compliance logs",
+   "type": "Component"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "security awareness refresher",
+   "type": "Component"
+  },
+  {
+   "name": "disciplinary process",
+   "type": "Component"
+  },
+  {
+   "name": "non-compliant screen lock",
+   "type": "Symptom"
+  },
+  {
+   "name": "intentional bypass",
+   "type": "Cause"
+  },
+  {
+   "name": "forensic review",
+   "type": "Fix"
+  },
+  {
+   "name": "policy exception",
+   "type": "Component"
+  },
+  {
+   "name": "workstation security",
+   "type": "Component"
+  },
+  {
+   "name": "desk audit",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "non-compliant screen lock",
+   "relation": "CAUSED_BY",
+   "target": "intentional bypass"
+  },
+  {
+   "source": "non-compliant screen lock",
+   "relation": "AFFECTS",
+   "target": "workstation security"
+  },
+  {
+   "source": "Intentional bypass",
+   "relation": "INDICATES",
+   "target": "policy violation"
+  },
+  {
+   "source": "Security Operations",
+   "relation": "FIXED_BY",
+   "target": "forensic review"
+  },
+  {
+   "source": "forensic review",
+   "relation": "FIXED_BY",
+   "target": "policy exception"
+  },
+  {
+   "source": "Security Operations",
+   "relation": "FIXED_BY",
+   "target": "Temporary Access Pass"
+  },
+  {
+   "source": "Security Operations",
+   "relation": "FIXED_BY",
+   "target": "security awareness refresher"
+  },
+  {
+   "source": "Security Operations",
+   "relation": "FIXED_BY",
+   "target": "disciplinary process"
+  },
+  {
+   "source": "Intune compliance",
+   "relation": "PART_OF",
+   "target": "Security Operations"
+  },
+  {
+   "source": "device serial number",
+   "relation": "AFFECTS",
+   "target": "Intune compliance"
+  },
+  {
+   "source": "Intune device ID",
+   "relation": "AFFECTS",
+   "target": "Intune compliance"
+  },
+  {
+   "source": "recent compliance logs",
+   "relation": "AFFECTS",
+   "target": "Intune compliance"
+  },
+  {
+   "source": "screen lock setting",
+   "relation": "AFFECTS",
+   "target": "Intune compliance"
+  },
+  {
+   "source": "desk audit",
+   "relation": "AFFECTS",
+   "target": "clean desk policy"
+  }
+ ]
+}

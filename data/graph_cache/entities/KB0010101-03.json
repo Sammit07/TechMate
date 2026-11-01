@@ -1,0 +1,169 @@
+{
+ "entities": [
+  {
+   "name": "password manager",
+   "type": "Product"
+  },
+  {
+   "name": "Bitwarden",
+   "type": "Product"
+  },
+  {
+   "name": "LastPass",
+   "type": "Product"
+  },
+  {
+   "name": "1Password",
+   "type": "Product"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "master password",
+   "type": "Component"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "vault recovery",
+   "type": "Fix"
+  },
+  {
+   "name": "auto-fill",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "MFA",
+   "type": "Component"
+  },
+  {
+   "name": "compromised vault",
+   "type": "Cause"
+  },
+  {
+   "name": "cannot regain access to vault",
+   "type": "Symptom"
+  },
+  {
+   "name": "unknown entries",
+   "type": "Symptom"
+  },
+  {
+   "name": "unauthorized password changes",
+   "type": "Symptom"
+  },
+  {
+   "name": "failed synchronization with Entra ID",
+   "type": "Symptom"
+  },
+  {
+   "name": "new master-password policy exception",
+   "type": "Cause"
+  },
+  {
+   "name": "legacy application integration issue",
+   "type": "Cause"
+  },
+  {
+   "name": "renewed master password",
+   "type": "Fix"
+  },
+  {
+   "name": "confirm login to corporate apps via auto-fill",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cannot regain access to vault",
+   "relation": "CAUSED_BY",
+   "target": "master password reset fails"
+  },
+  {
+   "source": "compromised vault",
+   "relation": "CAUSED_BY",
+   "target": "unknown entries"
+  },
+  {
+   "source": "compromised vault",
+   "relation": "CAUSED_BY",
+   "target": "unauthorized password changes"
+  },
+  {
+   "source": "failed synchronization with Entra ID",
+   "relation": "CAUSED_BY",
+   "target": "network and device compliance issues"
+  },
+  {
+   "source": "cannot regain access to vault",
+   "relation": "FIXED_BY",
+   "target": "vault recovery"
+  },
+  {
+   "source": "compromised vault",
+   "relation": "FIXED_BY",
+   "target": "coordinate password-reset workflow"
+  },
+  {
+   "source": "new master-password policy exception",
+   "relation": "FIXED_BY",
+   "target": "escalate to IAM team"
+  },
+  {
+   "source": "legacy application integration issue",
+   "relation": "FIXED_BY",
+   "target": "escalate to IAM team"
+  },
+  {
+   "source": "Temporary Access Pass",
+   "relation": "PART_OF",
+   "target": "password manager"
+  },
+  {
+   "source": "master password",
+   "relation": "PART_OF",
+   "target": "password manager"
+  },
+  {
+   "source": "auto-fill",
+   "relation": "PART_OF",
+   "target": "password manager"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "AFFECTS",
+   "target": "MFA"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  },
+  {
+   "source": "vault recovery",
+   "relation": "INDICATES",
+   "target": "Intune-backed recovery key"
+  },
+  {
+   "source": "confirm login to corporate apps via auto-fill",
+   "relation": "FIXED_BY",
+   "target": "successful password manager use"
+  }
+ ]
+}

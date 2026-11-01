@@ -1,0 +1,116 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Teams desktop client",
+   "type": "Component"
+  },
+  {
+   "name": "Teams web client",
+   "type": "Component"
+  },
+  {
+   "name": "Intune Company Portal",
+   "type": "Component"
+  },
+  {
+   "name": "Acme Global Microsoft 365 tenant",
+   "type": "Product"
+  },
+  {
+   "name": "blank white screen or \"We're having trouble connecting to Teams\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "audio drop-outs or no audio in meetings",
+   "type": "Symptom"
+  },
+  {
+   "name": "screen-share button greyed out or black screen share",
+   "type": "Symptom"
+  },
+  {
+   "name": "presence status stuck on \"Away\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "corrupted local Teams cache files",
+   "type": "Cause"
+  },
+  {
+   "name": "outdated Teams client version",
+   "type": "Cause"
+  },
+  {
+   "name": "missing macOS screen-recording permission",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN split-tunnel or GlobalProtect certificate issues",
+   "type": "Cause"
+  },
+  {
+   "name": "Exchange Online calendar conflicts or cached status",
+   "type": "Cause"
+  },
+  {
+   "name": "clear Teams cache and update client",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "blank white screen or \"We're having trouble connecting to Teams\"",
+   "relation": "CAUSED_BY",
+   "target": "corrupted local Teams cache files"
+  },
+  {
+   "source": "audio drop-outs or no audio in meetings",
+   "relation": "CAUSED_BY",
+   "target": "corrupted local Teams cache files"
+  },
+  {
+   "source": "screen-share button greyed out or black screen share",
+   "relation": "CAUSED_BY",
+   "target": "corrupted local Teams cache files"
+  },
+  {
+   "source": "presence status stuck on \"Away\"",
+   "relation": "CAUSED_BY",
+   "target": "Exchange Online calendar conflicts or cached status"
+  },
+  {
+   "source": "corrupted local Teams cache files",
+   "relation": "AFFECTS",
+   "target": "Teams desktop client"
+  },
+  {
+   "source": "outdated Teams client version",
+   "relation": "AFFECTS",
+   "target": "Teams desktop client"
+  },
+  {
+   "source": "missing macOS screen-recording permission",
+   "relation": "AFFECTS",
+   "target": "Teams desktop client"
+  },
+  {
+   "source": "VPN split-tunnel or GlobalProtect certificate issues",
+   "relation": "AFFECTS",
+   "target": "Teams desktop client"
+  },
+  {
+   "source": "corrupted local Teams cache files",
+   "relation": "FIXED_BY",
+   "target": "clear Teams cache and update client"
+  },
+  {
+   "source": "outdated Teams client version",
+   "relation": "FIXED_BY",
+   "target": "clear Teams cache and update client"
+  }
+ ]
+}

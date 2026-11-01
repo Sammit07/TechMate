@@ -1,0 +1,132 @@
+{
+ "entities": [
+  {
+   "name": "macOS update process",
+   "type": "Process"
+  },
+  {
+   "name": "network connectivity check",
+   "type": "Procedure"
+  },
+  {
+   "name": "disk space verification",
+   "type": "Procedure"
+  },
+  {
+   "name": "software update cache reset",
+   "type": "Fix"
+  },
+  {
+   "name": "insufficient disk space (<10GB free)",
+   "type": "Cause"
+  },
+  {
+   "name": "corrupted software update cache",
+   "type": "Cause"
+  },
+  {
+   "name": "unable to locate product",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "code signing failure",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "macOS update stall or failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "manual macOS installer download",
+   "type": "Fix"
+  },
+  {
+   "name": "NVRAM reset",
+   "type": "Fix"
+  },
+  {
+   "name": "SMC reset",
+   "type": "Fix"
+  },
+  {
+   "name": "Console log inspection",
+   "type": "Procedure"
+  },
+  {
+   "name": "SUInstall or SoftwareUpdate log filtering",
+   "type": "Procedure"
+  }
+ ],
+ "relations": [
+  {
+   "source": "macOS update stall or failure",
+   "relation": "CAUSED_BY",
+   "target": "insufficient disk space (<10GB free)"
+  },
+  {
+   "source": "macOS update stall or failure",
+   "relation": "CAUSED_BY",
+   "target": "corrupted software update cache"
+  },
+  {
+   "source": "unable to locate product",
+   "relation": "INDICATES",
+   "target": "corrupted software update cache"
+  },
+  {
+   "source": "code signing failure",
+   "relation": "INDICATES",
+   "target": "corrupted software update cache"
+  },
+  {
+   "source": "insufficient disk space (<10GB free)",
+   "relation": "AFFECTS",
+   "target": "macOS update process"
+  },
+  {
+   "source": "corrupted software update cache",
+   "relation": "AFFECTS",
+   "target": "macOS update process"
+  },
+  {
+   "source": "software update cache reset",
+   "relation": "FIXED_BY",
+   "target": "corrupted software update cache"
+  },
+  {
+   "source": "disk space verification",
+   "relation": "PART_OF",
+   "target": "network connectivity check"
+  },
+  {
+   "source": "manual macOS installer download",
+   "relation": "FIXED_BY",
+   "target": "macOS update stall or failure"
+  },
+  {
+   "source": "NVRAM reset",
+   "relation": "FIXED_BY",
+   "target": "macOS update stall or failure"
+  },
+  {
+   "source": "SMC reset",
+   "relation": "FIXED_BY",
+   "target": "macOS update stall or failure"
+  },
+  {
+   "source": "Console log inspection",
+   "relation": "PART_OF",
+   "target": "SUInstall or SoftwareUpdate log filtering"
+  },
+  {
+   "source": "network connectivity check",
+   "relation": "AFFECTS",
+   "target": "macOS update process"
+  },
+  {
+   "source": "software update cache reset",
+   "relation": "FIXED_BY",
+   "target": "macOS update stall or failure"
+  }
+ ]
+}

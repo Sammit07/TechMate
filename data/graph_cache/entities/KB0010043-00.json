@@ -1,0 +1,179 @@
+{
+ "entities": [
+  {
+   "name": "Low disk space warning pop-up",
+   "type": "Symptom"
+  },
+  {
+   "name": "\"Cannot save files - disk full\" error",
+   "type": "Symptom"
+  },
+  {
+   "name": "C: drive at 90%+ usage",
+   "type": "Symptom"
+  },
+  {
+   "name": "Storage Sense notification: \"You're running low on disk space\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "Accumulation of temporary files, browser caches, and Windows Update cleanup leftovers",
+   "type": "Cause"
+  },
+  {
+   "name": "Large personal files (videos, ISO images, project archives) stored locally instead of OneDrive",
+   "type": "Cause"
+  },
+  {
+   "name": "Multiple versions of Windows feature updates retained in the WinSxS folder",
+   "type": "Cause"
+  },
+  {
+   "name": "macOS system caches, old iOS backups, and large download folders",
+   "type": "Cause"
+  },
+  {
+   "name": "Windows 11",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "Storage Sense",
+   "type": "Component"
+  },
+  {
+   "name": "Disk Cleanup",
+   "type": "Component"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Component"
+  },
+  {
+   "name": "Turn on Storage Sense",
+   "type": "Fix"
+  },
+  {
+   "name": "Configure Storage Sense to delete temporary files unused for 1 day and empty Recycle Bin after 14 days",
+   "type": "Fix"
+  },
+  {
+   "name": "Run Storage Sense now",
+   "type": "Fix"
+  },
+  {
+   "name": "Remove temporary files via Settings > System > Storage > Show more categories",
+   "type": "Fix"
+  },
+  {
+   "name": "Run Disk Cleanup with system files cleanup (Previous Windows installations and Windows Update Cleanup)",
+   "type": "Fix"
+  },
+  {
+   "name": "Move large personal files to OneDrive with Files On-Demand enabled",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Low disk space warning pop-up",
+   "relation": "CAUSED_BY",
+   "target": "Accumulation of temporary files, browser caches, and Windows Update cleanup leftovers"
+  },
+  {
+   "source": "\"Cannot save files - disk full\" error",
+   "relation": "CAUSED_BY",
+   "target": "Large personal files (videos, ISO images, project archives) stored locally instead of OneDrive"
+  },
+  {
+   "source": "C: drive at 90%+ usage",
+   "relation": "CAUSED_BY",
+   "target": "Multiple versions of Windows feature updates retained in the WinSxS folder"
+  },
+  {
+   "source": "Storage Sense notification: \"You're running low on disk space\"",
+   "relation": "CAUSED_BY",
+   "target": "macOS system caches, old iOS backups, and large download folders"
+  },
+  {
+   "source": "Accumulation of temporary files, browser caches, and Windows Update cleanup leftovers",
+   "relation": "AFFECTS",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Large personal files (videos, ISO images, project archives) stored locally instead of OneDrive",
+   "relation": "AFFECTS",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Multiple versions of Windows feature updates retained in the WinSxS folder",
+   "relation": "AFFECTS",
+   "target": "Windows 11"
+  },
+  {
+   "source": "macOS system caches, old iOS backups, and large download folders",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15"
+  },
+  {
+   "source": "Turn on Storage Sense",
+   "relation": "FIXED_BY",
+   "target": "Accumulation of temporary files, browser caches, and Windows Update cleanup leftovers"
+  },
+  {
+   "source": "Configure Storage Sense to delete temporary files unused for 1 day and empty Recycle Bin after 14 days",
+   "relation": "FIXED_BY",
+   "target": "Accumulation of temporary files, browser caches, and Windows Update cleanup leftovers"
+  },
+  {
+   "source": "Run Storage Sense now",
+   "relation": "FIXED_BY",
+   "target": "Accumulation of temporary files, browser caches, and Windows Update cleanup leftovers"
+  },
+  {
+   "source": "Remove temporary files via Settings > System > Storage > Show more categories",
+   "relation": "FIXED_BY",
+   "target": "Accumulation of temporary files, browser caches, and Windows Update cleanup leftovers"
+  },
+  {
+   "source": "Run Disk Cleanup with system files cleanup (Previous Windows installations and Windows Update Cleanup)",
+   "relation": "FIXED_BY",
+   "target": "Multiple versions of Windows feature updates retained in the WinSxS folder"
+  },
+  {
+   "source": "Move large personal files to OneDrive with Files On-Demand enabled",
+   "relation": "FIXED_BY",
+   "target": "Large personal files (videos, ISO images, project archives) stored locally instead of OneDrive"
+  },
+  {
+   "source": "Storage Sense",
+   "relation": "PART_OF",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Disk Cleanup",
+   "relation": "PART_OF",
+   "target": "Windows 11"
+  },
+  {
+   "source": "OneDrive",
+   "relation": "PART_OF",
+   "target": "Windows 11"
+  }
+ ]
+}

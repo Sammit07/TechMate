@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Report Message button",
+   "type": "Component"
+  },
+  {
+   "name": "Exchange Online",
+   "type": "Product"
+  },
+  {
+   "name": "Security & Compliance centre",
+   "type": "Product"
+  },
+  {
+   "name": "Azure AD",
+   "type": "Product"
+  },
+  {
+   "name": "Service Desk",
+   "type": "Product"
+  },
+  {
+   "name": "KB0010082",
+   "type": "Component"
+  },
+  {
+   "name": "phishing@acme.example",
+   "type": "Component"
+  },
+  {
+   "name": "clicking a link or opening an attachment",
+   "type": "Symptom"
+  },
+  {
+   "name": "entering credentials",
+   "type": "Symptom"
+  },
+  {
+   "name": "original email headers",
+   "type": "Component"
+  },
+  {
+   "name": "sender's domain or IP address",
+   "type": "Component"
+  },
+  {
+   "name": "offending URL",
+   "type": "Component"
+  },
+  {
+   "name": "self-service password reset",
+   "type": "Fix"
+  },
+  {
+   "name": "revoke all refresh tokens",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "clicking a link or opening an attachment",
+   "relation": "CAUSED_BY",
+   "target": "possible phishing click"
+  },
+  {
+   "source": "entering credentials",
+   "relation": "CAUSED_BY",
+   "target": "possible phishing click"
+  },
+  {
+   "source": "possible phishing click",
+   "relation": "FIXED_BY",
+   "target": "follow guidance in KB0010082"
+  },
+  {
+   "source": "reporting a suspected phishing email",
+   "relation": "FIXED_BY",
+   "target": "use Outlook's built-in reporting function"
+  },
+  {
+   "source": "Report Message button",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  },
+  {
+   "source": "search all mailboxes for the message",
+   "relation": "AFFECTS",
+   "target": "Exchange Online"
+  },
+  {
+   "source": "block the sender's domain or IP address",
+   "relation": "AFFECTS",
+   "target": "Exchange Online anti-phishing policy"
+  },
+  {
+   "source": "trigger a self-service password reset",
+   "relation": "FIXED_BY",
+   "target": "user interacted with content"
+  },
+  {
+   "source": "revoke all refresh tokens via Azure AD",
+   "relation": "FIXED_BY",
+   "target": "user interacted with content"
+  },
+  {
+   "source": "review sign-in logs for risky activity",
+   "relation": "FIXED_BY",
+   "target": "user interacted with content"
+  },
+  {
+   "source": "forward the email as an attachment to phishing@acme.example",
+   "relation": "FIXED_BY",
+   "target": "report suspicious email"
+  },
+  {
+   "source": "gather the necessary evidence",
+   "relation": "AFFECTS",
+   "target": "Service Desk"
+  },
+  {
+   "source": "purge the located copies",
+   "relation": "FIXED_BY",
+   "target": "located threat copies"
+  },
+  {
+   "source": "notify the user of the actions taken",
+   "relation": "FIXED_BY",
+   "target": "Service Desk procedure"
+  }
+ ]
+}

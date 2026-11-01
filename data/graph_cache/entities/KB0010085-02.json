@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "tech support scam pop-up",
+   "type": "Symptom"
+  },
+  {
+   "name": "Windows Defender",
+   "type": "Product"
+  },
+  {
+   "name": "Quick scan",
+   "type": "Component"
+  },
+  {
+   "name": "Full scan",
+   "type": "Component"
+  },
+  {
+   "name": "threats found",
+   "type": "Symptom"
+  },
+  {
+   "name": "quarantined items",
+   "type": "Symptom"
+  },
+  {
+   "name": "Defender scan logs",
+   "type": "Component"
+  },
+  {
+   "name": "protection history",
+   "type": "Component"
+  },
+  {
+   "name": "browser closed",
+   "type": "Fix"
+  },
+  {
+   "name": "cache cleared",
+   "type": "Fix"
+  },
+  {
+   "name": "reboot device",
+   "type": "Fix"
+  },
+  {
+   "name": "malware detected",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "cannot be quarantined",
+   "type": "Cause"
+  },
+  {
+   "name": "persistent pop-up",
+   "type": "Symptom"
+  },
+  {
+   "name": "fake support number",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "tech support scam pop-up",
+   "relation": "CAUSED_BY",
+   "target": "malvertising"
+  },
+  {
+   "source": "tech support scam pop-up",
+   "relation": "CAUSED_BY",
+   "target": "fake support number"
+  },
+  {
+   "source": "Windows Defender",
+   "relation": "AFFECTS",
+   "target": "tech support scam pop-up"
+  },
+  {
+   "source": "Quick scan",
+   "relation": "PART_OF",
+   "target": "Windows Defender"
+  },
+  {
+   "source": "Full scan",
+   "relation": "PART_OF",
+   "target": "Windows Defender"
+  },
+  {
+   "source": "threats found",
+   "relation": "INDICATES",
+   "target": "malware detected"
+  },
+  {
+   "source": "quarantined items",
+   "relation": "FIXED_BY",
+   "target": "malware detected"
+  },
+  {
+   "source": "Defender scan logs",
+   "relation": "PART_OF",
+   "target": "protection history"
+  },
+  {
+   "source": "browser closed",
+   "relation": "FIXED_BY",
+   "target": "tech support scam pop-up"
+  },
+  {
+   "source": "cache cleared",
+   "relation": "FIXED_BY",
+   "target": "tech support scam pop-up"
+  },
+  {
+   "source": "reboot device",
+   "relation": "FIXED_BY",
+   "target": "tech support scam pop-up"
+  },
+  {
+   "source": "malware detected",
+   "relation": "CAUSED_BY",
+   "target": "cannot be quarantined"
+  },
+  {
+   "source": "persistent pop-up",
+   "relation": "CAUSED_BY",
+   "target": "malware detected"
+  },
+  {
+   "source": "cannot be quarantined",
+   "relation": "FIXED_BY",
+   "target": "escalate to Security Operations"
+  },
+  {
+   "source": "fake support number",
+   "relation": "FIXED_BY",
+   "target": "escalate to Security Operations"
+  }
+ ]
+}

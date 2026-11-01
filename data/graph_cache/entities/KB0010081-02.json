@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "phishing email",
+   "type": "Symptom"
+  },
+  {
+   "name": "Report Message button",
+   "type": "Component"
+  },
+  {
+   "name": "Azure AD",
+   "type": "Product"
+  },
+  {
+   "name": "password reset",
+   "type": "Fix"
+  },
+  {
+   "name": "refresh token revocation",
+   "type": "Fix"
+  },
+  {
+   "name": "sign-in logs review",
+   "type": "Fix"
+  },
+  {
+   "name": "sender block",
+   "type": "Component"
+  },
+  {
+   "name": "Safe Links block list",
+   "type": "Component"
+  },
+  {
+   "name": "MFA prompt",
+   "type": "Component"
+  },
+  {
+   "name": "threat-intelligence repository",
+   "type": "Product"
+  },
+  {
+   "name": "Security Operations group",
+   "type": "Product"
+  },
+  {
+   "name": "Service Desk",
+   "type": "Product"
+  },
+  {
+   "name": "compromised account",
+   "type": "Symptom"
+  },
+  {
+   "name": "malicious attachment",
+   "type": "Symptom"
+  },
+  {
+   "name": "spoofed domain",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "phishing email",
+   "relation": "AFFECTS",
+   "target": "compromised account"
+  },
+  {
+   "source": "clicking a link",
+   "relation": "CAUSED_BY",
+   "target": "phishing email"
+  },
+  {
+   "source": "entering credentials",
+   "relation": "CAUSED_BY",
+   "target": "phishing email"
+  },
+  {
+   "source": "phishing email",
+   "relation": "INDICATES",
+   "target": "spoofed domain"
+  },
+  {
+   "source": "phishing email",
+   "relation": "INDICATES",
+   "target": "malicious attachment"
+  },
+  {
+   "source": "phishing email",
+   "relation": "FIXED_BY",
+   "target": "Report Message button"
+  },
+  {
+   "source": "compromised account",
+   "relation": "FIXED_BY",
+   "target": "password reset"
+  },
+  {
+   "source": "compromised account",
+   "relation": "FIXED_BY",
+   "target": "refresh token revocation"
+  },
+  {
+   "source": "risky activity",
+   "relation": "FIXED_BY",
+   "target": "sign-in logs review"
+  },
+  {
+   "source": "phishing email",
+   "relation": "FIXED_BY",
+   "target": "sender block"
+  },
+  {
+   "source": "phishing email",
+   "relation": "FIXED_BY",
+   "target": "Safe Links block list"
+  },
+  {
+   "source": "compromised account",
+   "relation": "FIXED_BY",
+   "target": "MFA prompt"
+  },
+  {
+   "source": "phishing email",
+   "relation": "AFFECTS",
+   "target": "Azure AD"
+  },
+  {
+   "source": "phishing email",
+   "relation": "AFFECTS",
+   "target": "threat-intelligence repository"
+  },
+  {
+   "source": "Service Desk",
+   "relation": "AFFECTS",
+   "target": "Security Operations group"
+  }
+ ]
+}

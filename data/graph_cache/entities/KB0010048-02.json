@@ -1,0 +1,161 @@
+{
+ "entities": [
+  {
+   "name": "Windows Update",
+   "type": "Product"
+  },
+  {
+   "name": "Acme-Corp Wi-Fi (802.1X)",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect VPN",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Endpoint Manager (Intune)",
+   "type": "Product"
+  },
+  {
+   "name": "Windows Update Troubleshooter",
+   "type": "Component"
+  },
+  {
+   "name": "Component Store (SxS)",
+   "type": "Component"
+  },
+  {
+   "name": "DISM.exe",
+   "type": "Component"
+  },
+  {
+   "name": "sfc /scannow",
+   "type": "Component"
+  },
+  {
+   "name": "%windir%\\Logs\\CBS\\CBS.log",
+   "type": "Component"
+  },
+  {
+   "name": "%windir%\\windowsupdate.log",
+   "type": "Component"
+  },
+  {
+   "name": "BITS service",
+   "type": "Component"
+  },
+  {
+   "name": "0x8007000D",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "0x800F0922",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "0x80240034",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "0x80073712",
+   "type": "ErrorCode"
+  }
+ ],
+ "relations": [
+  {
+   "source": "0x8007000D",
+   "relation": "INDICATES",
+   "target": "insufficient disk space"
+  },
+  {
+   "source": "0x800F0922",
+   "relation": "INDICATES",
+   "target": "VPN connectivity issue"
+  },
+  {
+   "source": "0x800F0922",
+   "relation": "INDICATES",
+   "target": "firewall blocking ports 443/80 to WSUS"
+  },
+  {
+   "source": "0x800F0922",
+   "relation": "INDICATES",
+   "target": "invalid GlobalProtect device certificate"
+  },
+  {
+   "source": "0x80240034",
+   "relation": "INDICATES",
+   "target": "BITS service not running"
+  },
+  {
+   "source": "0x80240034",
+   "relation": "INDICATES",
+   "target": "misconfigured proxy settings"
+  },
+  {
+   "source": "0x80073712",
+   "relation": "INDICATES",
+   "target": "corrupted component store"
+  },
+  {
+   "source": "Windows Update",
+   "relation": "AFFECTS",
+   "target": "device"
+  },
+  {
+   "source": "GlobalProtect VPN",
+   "relation": "PART_OF",
+   "target": "Acme-Corp network access"
+  },
+  {
+   "source": "Microsoft Endpoint Manager (Intune)",
+   "relation": "AFFECTS",
+   "target": "Windows Update troubleshooting"
+  },
+  {
+   "source": "Windows Update Troubleshooter",
+   "relation": "AFFECTS",
+   "target": "Windows Update"
+  },
+  {
+   "source": "Component Store (SxS)",
+   "relation": "PART_OF",
+   "target": "Windows Update"
+  },
+  {
+   "source": "DISM.exe",
+   "relation": "AFFECTS",
+   "target": "Component Store (SxS)"
+  },
+  {
+   "source": "sfc /scannow",
+   "relation": "AFFECTS",
+   "target": "system file integrity"
+  },
+  {
+   "source": "BITS service",
+   "relation": "AFFECTS",
+   "target": "Windows Update"
+  },
+  {
+   "source": "0x8007000D",
+   "relation": "FIXED_BY",
+   "target": "free up disk space and run DISM/SFC"
+  },
+  {
+   "source": "0x800F0922",
+   "relation": "FIXED_BY",
+   "target": "verify VPN, firewall rules, and GlobalProtect certificate"
+  },
+  {
+   "source": "0x80240034",
+   "relation": "FIXED_BY",
+   "target": "restart BITS service and check proxy settings"
+  },
+  {
+   "source": "0x80073712",
+   "relation": "FIXED_BY",
+   "target": "run DISM /Restorehealth; if fails, consider in-place upgrade"
+  }
+ ]
+}

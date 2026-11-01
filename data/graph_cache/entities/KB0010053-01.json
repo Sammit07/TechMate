@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "BitLocker recovery key",
+   "type": "Component"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Endpoint Manager admin center",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "locked laptop",
+   "type": "Symptom"
+  },
+  {
+   "name": "BIOS/firmware update",
+   "type": "Component"
+  },
+  {
+   "name": "verify identity",
+   "type": "Cause"
+  },
+  {
+   "name": "provide key",
+   "type": "Fix"
+  },
+  {
+   "name": "confirm boot",
+   "type": "Fix"
+  },
+  {
+   "name": "suspend BitLocker",
+   "type": "Fix"
+  },
+  {
+   "name": "resume BitLocker",
+   "type": "Fix"
+  },
+  {
+   "name": "Self-Service Password Reset portal",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "asset tag or serial number",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "locked laptop",
+   "relation": "CAUSED_BY",
+   "target": "missing BitLocker recovery key"
+  },
+  {
+   "source": "missing BitLocker recovery key",
+   "relation": "INDICATES",
+   "target": "BitLocker recovery key"
+  },
+  {
+   "source": "verify identity",
+   "relation": "FIXED_BY",
+   "target": "provide key"
+  },
+  {
+   "source": "provide key",
+   "relation": "FIXED_BY",
+   "target": "confirm boot"
+  },
+  {
+   "source": "BIOS/firmware update",
+   "relation": "CAUSED_BY",
+   "target": "need to suspend BitLocker"
+  },
+  {
+   "source": "need to suspend BitLocker",
+   "relation": "FIXED_BY",
+   "target": "suspend BitLocker"
+  },
+  {
+   "source": "suspend BitLocker",
+   "relation": "FIXED_BY",
+   "target": "resume BitLocker"
+  },
+  {
+   "source": "BitLocker recovery key",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "Self-Service Password Reset portal",
+   "relation": "AFFECTS",
+   "target": "verify identity"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "AFFECTS",
+   "target": "verify identity"
+  },
+  {
+   "source": "Teams",
+   "relation": "AFFECTS",
+   "target": "provide key"
+  },
+  {
+   "source": "asset tag or serial number",
+   "relation": "PART_OF",
+   "target": "device identification"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "retrieve BitLocker recovery key"
+  },
+  {
+   "source": "Microsoft Endpoint Manager admin center",
+   "relation": "AFFECTS",
+   "target": "retrieve BitLocker recovery key"
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "entities": [
+  {
+   "name": "corporate Wi-Fi (802.1X)",
+   "type": "Product"
+  },
+  {
+   "name": "guest Wi-Fi",
+   "type": "Product"
+  },
+  {
+   "name": "certificate validation failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "RADIUS timeout",
+   "type": "Symptom"
+  },
+  {
+   "name": "authentication error",
+   "type": "Symptom"
+  },
+  {
+   "name": "machine certificate",
+   "type": "Component"
+  },
+  {
+   "name": "wireless driver",
+   "type": "Component"
+  },
+  {
+   "name": "power saving",
+   "type": "Component"
+  },
+  {
+   "name": "forget network",
+   "type": "Fix"
+  },
+  {
+   "name": "rejoin Wi-Fi",
+   "type": "Fix"
+  },
+  {
+   "name": "no Internet",
+   "type": "Symptom"
+  },
+  {
+   "name": "limited connectivity",
+   "type": "Symptom"
+  },
+  {
+   "name": "ACME-Corp",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Guest",
+   "type": "Product"
+  },
+  {
+   "name": "0x80090016",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "RF or hardware problem",
+   "type": "Cause"
+  },
+  {
+   "name": "site survey",
+   "type": "Fix"
+  },
+  {
+   "name": "AP replacement",
+   "type": "Fix"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "NPS",
+   "type": "Product"
+  },
+  {
+   "name": "Network Support",
+   "type": "Product"
+  },
+  {
+   "name": "Service Desk",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "certificate validation failure",
+   "relation": "CAUSED_BY",
+   "target": "machine certificate"
+  },
+  {
+   "source": "RADIUS timeout",
+   "relation": "CAUSED_BY",
+   "target": "NPS"
+  },
+  {
+   "source": "authentication error",
+   "relation": "CAUSED_BY",
+   "target": "machine certificate"
+  },
+  {
+   "source": "authentication error",
+   "relation": "INDICATES",
+   "target": "0x80090016"
+  },
+  {
+   "source": "no Internet",
+   "relation": "AFFECTS",
+   "target": "corporate Wi-Fi (802.1X)"
+  },
+  {
+   "source": "limited connectivity",
+   "relation": "AFFECTS",
+   "target": "guest Wi-Fi"
+  },
+  {
+   "source": "RF or hardware problem",
+   "relation": "CAUSED_BY",
+   "target": "specific AP or area"
+  },
+  {
+   "source": "machine certificate",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "wireless driver",
+   "relation": "PART_OF",
+   "target": "corporate Wi-Fi (802.1X)"
+  },
+  {
+   "source": "power saving",
+   "relation": "AFFECTS",
+   "target": "wireless driver"
+  },
+  {
+   "source": "forget network",
+   "relation": "FIXED_BY",
+   "target": "authentication error"
+  },
+  {
+   "source": "rejoin Wi-Fi",
+   "relation": "FIXED_BY",
+   "target": "no Internet"
+  },
+  {
+   "source": "site survey",
+   "relation": "FIXED_BY",
+   "target": "RF or hardware problem"
+  },
+  {
+   "source": "AP replacement",
+   "relation": "FIXED_BY",
+   "target": "RF or hardware problem"
+  },
+  {
+   "source": "0x80090016",
+   "relation": "INDICATES",
+   "target": "machine certificate"
+  }
+ ]
+}

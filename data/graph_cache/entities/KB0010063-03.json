@@ -1,0 +1,126 @@
+{
+ "entities": [
+  {
+   "name": "licence missing",
+   "type": "Symptom"
+  },
+  {
+   "name": "licence disabled",
+   "type": "Symptom"
+  },
+  {
+   "name": "conditional access block preventing licence sync",
+   "type": "Cause"
+  },
+  {
+   "name": "multiple rapid licence requests from different locations",
+   "type": "Cause"
+  },
+  {
+   "name": "escalate to Security Operations",
+   "type": "Fix"
+  },
+  {
+   "name": "Adobe licence",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft 365 licence",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "license expired",
+   "type": "Symptom"
+  },
+  {
+   "name": "product key prompt",
+   "type": "Symptom"
+  },
+  {
+   "name": "self-service licence",
+   "type": "Component"
+  },
+  {
+   "name": "approval workflow",
+   "type": "Component"
+  },
+  {
+   "name": "Conditional Access policy",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "licence missing",
+   "relation": "CAUSED_BY",
+   "target": "conditional access block preventing licence sync"
+  },
+  {
+   "source": "licence disabled",
+   "relation": "CAUSED_BY",
+   "target": "conditional access block preventing licence sync"
+  },
+  {
+   "source": "license expired",
+   "relation": "CAUSED_BY",
+   "target": "conditional access block preventing licence sync"
+  },
+  {
+   "source": "product key prompt",
+   "relation": "CAUSED_BY",
+   "target": "conditional access block preventing licence sync"
+  },
+  {
+   "source": "multiple rapid licence requests from different locations",
+   "relation": "INDICATES",
+   "target": "escalate to Security Operations"
+  },
+  {
+   "source": "conditional access block preventing licence sync",
+   "relation": "AFFECTS",
+   "target": "Adobe licence"
+  },
+  {
+   "source": "conditional access block preventing licence sync",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 licence"
+  },
+  {
+   "source": "conditional access block preventing licence sync",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  },
+  {
+   "source": "conditional access block preventing licence sync",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "conditional access block preventing licence sync",
+   "relation": "AFFECTS",
+   "target": "Entra ID"
+  },
+  {
+   "source": "self-service licence",
+   "relation": "PART_OF",
+   "target": "approval workflow"
+  },
+  {
+   "source": "approval workflow",
+   "relation": "FIXED_BY",
+   "target": "escalate to Security Operations"
+  }
+ ]
+}

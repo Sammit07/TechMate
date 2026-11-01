@@ -1,0 +1,126 @@
+{
+ "entities": [
+  {
+   "name": "wired network",
+   "type": "Product"
+  },
+  {
+   "name": "internal site access",
+   "type": "Symptom"
+  },
+  {
+   "name": "external site access",
+   "type": "Symptom"
+  },
+  {
+   "name": "ping test failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "link speed negotiation",
+   "type": "Component"
+  },
+  {
+   "name": "1 Gbps full duplex",
+   "type": "Component"
+  },
+  {
+   "name": "faulty Ethernet cable",
+   "type": "Cause"
+  },
+  {
+   "name": "switch port down",
+   "type": "Symptom"
+  },
+  {
+   "name": "port error-disabled",
+   "type": "Symptom"
+  },
+  {
+   "name": "network loop",
+   "type": "Cause"
+  },
+  {
+   "name": "port-security violation",
+   "type": "Cause"
+  },
+  {
+   "name": "multiple users affected",
+   "type": "Symptom"
+  },
+  {
+   "name": "replace Ethernet cable",
+   "type": "Fix"
+  },
+  {
+   "name": "replace docking station",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Network Support",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "internal site access",
+   "relation": "CAUSED_BY",
+   "target": "wired network"
+  },
+  {
+   "source": "external site access",
+   "relation": "CAUSED_BY",
+   "target": "wired network"
+  },
+  {
+   "source": "ping test failure",
+   "relation": "CAUSED_BY",
+   "target": "wired network"
+  },
+  {
+   "source": "link speed negotiation",
+   "relation": "AFFECTS",
+   "target": "wired network"
+  },
+  {
+   "source": "1 Gbps full duplex",
+   "relation": "PART_OF",
+   "target": "link speed negotiation"
+  },
+  {
+   "source": "faulty Ethernet cable",
+   "relation": "CAUSED_BY",
+   "target": "switch port down"
+  },
+  {
+   "source": "switch port down",
+   "relation": "INDICATES",
+   "target": "network loop"
+  },
+  {
+   "source": "switch port down",
+   "relation": "INDICATES",
+   "target": "port-security violation"
+  },
+  {
+   "source": "multiple users affected",
+   "relation": "INDICATES",
+   "target": "wired network"
+  },
+  {
+   "source": "faulty Ethernet cable",
+   "relation": "FIXED_BY",
+   "target": "replace Ethernet cable"
+  },
+  {
+   "source": "switch port down",
+   "relation": "FIXED_BY",
+   "target": "replace docking station"
+  },
+  {
+   "source": "persistent issue",
+   "relation": "FIXED_BY",
+   "target": "escalate to Network Support"
+  }
+ ]
+}

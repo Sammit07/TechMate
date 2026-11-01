@@ -1,0 +1,326 @@
+{
+ "entities": [
+  {
+   "name": "laptop slow",
+   "type": "Symptom"
+  },
+  {
+   "name": "high CPU",
+   "type": "Symptom"
+  },
+  {
+   "name": "freezing",
+   "type": "Symptom"
+  },
+  {
+   "name": "disk health errors",
+   "type": "Symptom"
+  },
+  {
+   "name": "non-standard applications",
+   "type": "Component"
+  },
+  {
+   "name": "startup impact",
+   "type": "Component"
+  },
+  {
+   "name": "RAM utilization",
+   "type": "Component"
+  },
+  {
+   "name": "pending updates",
+   "type": "Component"
+  },
+  {
+   "name": "drive >85% full",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Autoruns (Sysinternals)",
+   "type": "Product"
+  },
+  {
+   "name": "Performance Monitor",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Excel",
+   "type": "Product"
+  },
+  {
+   "name": "uninstall non-standard applications",
+   "type": "Fix"
+  },
+  {
+   "name": "disable unnecessary startup services",
+   "type": "Fix"
+  },
+  {
+   "name": "upgrade RAM to 16GB",
+   "type": "Fix"
+  },
+  {
+   "name": "install pending updates",
+   "type": "Fix"
+  },
+  {
+   "name": "enforce reboot",
+   "type": "Fix"
+  },
+  {
+   "name": "cleanup user profiles",
+   "type": "Fix"
+  },
+  {
+   "name": "move files to OneDrive",
+   "type": "Fix"
+  },
+  {
+   "name": "test typical workload",
+   "type": "Fix"
+  },
+  {
+   "name": "usability test",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Desktop Support senior team",
+   "type": "Fix"
+  },
+  {
+   "name": "contact Desktop Support lead",
+   "type": "Fix"
+  },
+  {
+   "name": "expired VPN certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "insufficient RAM (<16GB)",
+   "type": "Cause"
+  },
+  {
+   "name": "high disk usage (>85%)",
+   "type": "Cause"
+  },
+  {
+   "name": "consumer-grade apps consuming resources",
+   "type": "Cause"
+  },
+  {
+   "name": "unnecessary third-party services",
+   "type": "Cause"
+  },
+  {
+   "name": "pending restart required",
+   "type": "Cause"
+  },
+  {
+   "name": "stale user profiles",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "laptop slow",
+   "relation": "CAUSED_BY",
+   "target": "insufficient RAM (<16GB)"
+  },
+  {
+   "source": "laptop slow",
+   "relation": "CAUSED_BY",
+   "target": "high disk usage (>85%)"
+  },
+  {
+   "source": "laptop slow",
+   "relation": "CAUSED_BY",
+   "target": "consumer-grade apps consuming resources"
+  },
+  {
+   "source": "laptop slow",
+   "relation": "CAUSED_BY",
+   "target": "unnecessary third-party services"
+  },
+  {
+   "source": "laptop slow",
+   "relation": "CAUSED_BY",
+   "target": "pending restart required"
+  },
+  {
+   "source": "laptop slow",
+   "relation": "CAUSED_BY",
+   "target": "stale user profiles"
+  },
+  {
+   "source": "high CPU",
+   "relation": "CAUSED_BY",
+   "target": "consumer-grade apps consuming resources"
+  },
+  {
+   "source": "high CPU",
+   "relation": "CAUSED_BY",
+   "target": "unnecessary third-party services"
+  },
+  {
+   "source": "freezing",
+   "relation": "CAUSED_BY",
+   "target": "insufficient RAM (<16GB)"
+  },
+  {
+   "source": "disk health errors",
+   "relation": "CAUSED_BY",
+   "target": "high disk usage (>85%)"
+  },
+  {
+   "source": "non-standard applications",
+   "relation": "AFFECTS",
+   "target": "laptop slow"
+  },
+  {
+   "source": "startup impact",
+   "relation": "AFFECTS",
+   "target": "laptop slow"
+  },
+  {
+   "source": "RAM utilization",
+   "relation": "AFFECTS",
+   "target": "laptop slow"
+  },
+  {
+   "source": "pending updates",
+   "relation": "AFFECTS",
+   "target": "laptop slow"
+  },
+  {
+   "source": "drive >85% full",
+   "relation": "AFFECTS",
+   "target": "laptop slow"
+  },
+  {
+   "source": "Intune",
+   "relation": "PART_OF",
+   "target": "Endpoint Management"
+  },
+  {
+   "source": "Autoruns (Sysinternals)",
+   "relation": "PART_OF",
+   "target": "Sysinternals Suite"
+  },
+  {
+   "source": "Performance Monitor",
+   "relation": "PART_OF",
+   "target": "Windows Administrative Tools"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "OneDrive",
+   "relation": "PART_OF",
+   "target": "Microsoft 365"
+  },
+  {
+   "source": "Teams",
+   "relation": "PART_OF",
+   "target": "Microsoft 365"
+  },
+  {
+   "source": "Outlook",
+   "relation": "PART_OF",
+   "target": "Microsoft 365"
+  },
+  {
+   "source": "Excel",
+   "relation": "PART_OF",
+   "target": "Microsoft 365"
+  },
+  {
+   "source": "insufficient RAM (<16GB)",
+   "relation": "FIXED_BY",
+   "target": "upgrade RAM to 16GB"
+  },
+  {
+   "source": "high disk usage (>85%)",
+   "relation": "FIXED_BY",
+   "target": "cleanup user profiles"
+  },
+  {
+   "source": "high disk usage (>85%)",
+   "relation": "FIXED_BY",
+   "target": "move files to OneDrive"
+  },
+  {
+   "source": "consumer-grade apps consuming resources",
+   "relation": "FIXED_BY",
+   "target": "uninstall non-standard applications"
+  },
+  {
+   "source": "unnecessary third-party services",
+   "relation": "FIXED_BY",
+   "target": "disable unnecessary startup services"
+  },
+  {
+   "source": "pending restart required",
+   "relation": "FIXED_BY",
+   "target": "enforce reboot"
+  },
+  {
+   "source": "stale user profiles",
+   "relation": "FIXED_BY",
+   "target": "cleanup user profiles"
+  },
+  {
+   "source": "laptop slow",
+   "relation": "FIXED_BY",
+   "target": "test typical workload"
+  },
+  {
+   "source": "laptop slow",
+   "relation": "FIXED_BY",
+   "target": "usability test"
+  },
+  {
+   "source": "laptop slow",
+   "relation": "FIXED_BY",
+   "target": "escalate to Desktop Support senior team"
+  },
+  {
+   "source": "high CPU",
+   "relation": "INDICATES",
+   "target": "consumer-grade apps consuming resources"
+  },
+  {
+   "source": "freezing",
+   "relation": "INDICATES",
+   "target": "insufficient RAM (<16GB)"
+  },
+  {
+   "source": "disk health errors",
+   "relation": "INDICATES",
+   "target": "high disk usage (>85%)"
+  }
+ ]
+}

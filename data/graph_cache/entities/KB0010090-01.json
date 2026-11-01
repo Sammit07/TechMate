@@ -1,0 +1,135 @@
+{
+ "entities": [
+  {
+   "name": "external USB drive",
+   "type": "Component"
+  },
+  {
+   "name": "OneDrive folder",
+   "type": "Component"
+  },
+  {
+   "name": "File History",
+   "type": "Component"
+  },
+  {
+   "name": "Time Machine",
+   "type": "Component"
+  },
+  {
+   "name": "OneDrive recycle bin",
+   "type": "Component"
+  },
+  {
+   "name": "SharePoint Recycle Bin",
+   "type": "Component"
+  },
+  {
+   "name": "backup copy",
+   "type": "Component"
+  },
+  {
+   "name": "cannot locate a file",
+   "type": "Symptom"
+  },
+  {
+   "name": "suspect data loss",
+   "type": "Symptom"
+  },
+  {
+   "name": "file not found in recycle bins",
+   "type": "Symptom"
+  },
+  {
+   "name": "verify backup integrity",
+   "type": "Fix"
+  },
+  {
+   "name": "copy file from backup",
+   "type": "Fix"
+  },
+  {
+   "name": "restore from OneDrive recycle bin",
+   "type": "Fix"
+  },
+  {
+   "name": "restore from SharePoint Recycle Bin",
+   "type": "Fix"
+  },
+  {
+   "name": "connect external backup drive",
+   "type": "Fix"
+  },
+  {
+   "name": "Intune-managed device",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cannot locate a file",
+   "relation": "CAUSED_BY",
+   "target": "suspect data loss"
+  },
+  {
+   "source": "suspect data loss",
+   "relation": "CAUSED_BY",
+   "target": "file not found in recycle bins"
+  },
+  {
+   "source": "file not found in recycle bins",
+   "relation": "FIXED_BY",
+   "target": "connect external backup drive"
+  },
+  {
+   "source": "connect external backup drive",
+   "relation": "FIXED_BY",
+   "target": "verify backup integrity"
+  },
+  {
+   "source": "verify backup integrity",
+   "relation": "FIXED_BY",
+   "target": "copy file from backup"
+  },
+  {
+   "source": "OneDrive recycle bin",
+   "relation": "PART_OF",
+   "target": "OneDrive folder"
+  },
+  {
+   "source": "SharePoint Recycle Bin",
+   "relation": "PART_OF",
+   "target": "OneDrive folder"
+  },
+  {
+   "source": "File History",
+   "relation": "AFFECTS",
+   "target": "Intune-managed device"
+  },
+  {
+   "source": "Time Machine",
+   "relation": "AFFECTS",
+   "target": "Intune-managed device"
+  },
+  {
+   "source": "external USB drive",
+   "relation": "AFFECTS",
+   "target": "Intune-managed device"
+  },
+  {
+   "source": "backup copy",
+   "relation": "AFFECTS",
+   "target": "Intune-managed device"
+  },
+  {
+   "source": "restore from OneDrive recycle bin",
+   "relation": "FIXED_BY",
+   "target": "file not found in recycle bins"
+  },
+  {
+   "source": "restore from SharePoint Recycle Bin",
+   "relation": "FIXED_BY",
+   "target": "file not found in recycle bins"
+  }
+ ]
+}

@@ -1,0 +1,163 @@
+{
+ "entities": [
+  {
+   "name": "BitLocker recovery key",
+   "type": "Component"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2 or 24H2",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Intune",
+   "type": "Product"
+  },
+  {
+   "name": "BitLocker recovery screen appears during boot",
+   "type": "Symptom"
+  },
+  {
+   "name": "Prompt: Enter your recovery key to unlock this drive",
+   "type": "Symptom"
+  },
+  {
+   "name": "48-digit numerical key entry field",
+   "type": "Symptom"
+  },
+  {
+   "name": "No option to continue without the key",
+   "type": "Symptom"
+  },
+  {
+   "name": "Message shows Recovery key needed after BIOS/firmware update or TPM change",
+   "type": "Symptom"
+  },
+  {
+   "name": "Forgotten BitLocker PIN or startup key",
+   "type": "Cause"
+  },
+  {
+   "name": "BIOS/UEFI firmware update that changes PCR values",
+   "type": "Cause"
+  },
+  {
+   "name": "TPM cleared or reset",
+   "type": "Cause"
+  },
+  {
+   "name": "Major Windows update that alters boot measurements",
+   "type": "Cause"
+  },
+  {
+   "name": "Hardware changes such as docking station or SSD replacement",
+   "type": "Cause"
+  },
+  {
+   "name": "User entered incorrect PIN too many times causing lockout",
+   "type": "Cause"
+  },
+  {
+   "name": "Retrieve BitLocker recovery key via Intune Company Portal",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BitLocker recovery screen appears during boot",
+   "relation": "CAUSED_BY",
+   "target": "Forgotten BitLocker PIN or startup key"
+  },
+  {
+   "source": "BitLocker recovery screen appears during boot",
+   "relation": "CAUSED_BY",
+   "target": "BIOS/UEFI firmware update that changes PCR values"
+  },
+  {
+   "source": "BitLocker recovery screen appears during boot",
+   "relation": "CAUSED_BY",
+   "target": "TPM cleared or reset"
+  },
+  {
+   "source": "BitLocker recovery screen appears during boot",
+   "relation": "CAUSED_BY",
+   "target": "Major Windows update that alters boot measurements"
+  },
+  {
+   "source": "BitLocker recovery screen appears during boot",
+   "relation": "CAUSED_BY",
+   "target": "Hardware changes such as docking station or SSD replacement"
+  },
+  {
+   "source": "BitLocker recovery screen appears during boot",
+   "relation": "CAUSED_BY",
+   "target": "User entered incorrect PIN too many times causing lockout"
+  },
+  {
+   "source": "Prompt: Enter your recovery key to unlock this drive",
+   "relation": "INDICATES",
+   "target": "BitLocker recovery screen appears during boot"
+  },
+  {
+   "source": "48-digit numerical key entry field",
+   "relation": "INDICATES",
+   "target": "BitLocker recovery screen appears during boot"
+  },
+  {
+   "source": "No option to continue without the key",
+   "relation": "INDICATES",
+   "target": "BitLocker recovery screen appears during boot"
+  },
+  {
+   "source": "Message shows Recovery key needed after BIOS/firmware update or TPM change",
+   "relation": "INDICATES",
+   "target": "BIOS/UEFI firmware update that changes PCR values"
+  },
+  {
+   "source": "Message shows Recovery key needed after BIOS/firmware update or TPM change",
+   "relation": "INDICATES",
+   "target": "TPM cleared or reset"
+  },
+  {
+   "source": "Dell Latitude 5440/7440",
+   "relation": "AFFECTS",
+   "target": "BitLocker recovery screen appears during boot"
+  },
+  {
+   "source": "Lenovo ThinkPad T14/X1 Carbon",
+   "relation": "AFFECTS",
+   "target": "BitLocker recovery screen appears during boot"
+  },
+  {
+   "source": "HP EliteBook 840",
+   "relation": "AFFECTS",
+   "target": "BitLocker recovery screen appears during boot"
+  },
+  {
+   "source": "Windows 11 23H2 or 24H2",
+   "relation": "AFFECTS",
+   "target": "BitLocker recovery screen appears during boot"
+  },
+  {
+   "source": "Microsoft Intune",
+   "relation": "PART_OF",
+   "target": "Retrieve BitLocker recovery key via Intune Company Portal"
+  },
+  {
+   "source": "BitLocker recovery key",
+   "relation": "PART_OF",
+   "target": "BitLocker recovery screen appears during boot"
+  }
+ ]
+}

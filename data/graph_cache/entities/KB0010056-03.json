@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Company Portal install failed",
+   "type": "Symptom"
+  },
+  {
+   "name": "requested software",
+   "type": "Product"
+  },
+  {
+   "name": "Security Operations team",
+   "type": "Component"
+  },
+  {
+   "name": "risk assessment",
+   "type": "Cause"
+  },
+  {
+   "name": "exception required",
+   "type": "Cause"
+  },
+  {
+   "name": "escalate to Application Support Lead",
+   "type": "Fix"
+  },
+  {
+   "name": "IT Help Teams channel",
+   "type": "Component"
+  },
+  {
+   "name": "@ApplicationSupport-Lead",
+   "type": "Component"
+  },
+  {
+   "name": "Security Review Request form",
+   "type": "Component"
+  },
+  {
+   "name": "license inquiry report",
+   "type": "Component"
+  },
+  {
+   "name": "software approval process",
+   "type": "Component"
+  },
+  {
+   "name": "Intune request",
+   "type": "Component"
+  },
+  {
+   "name": "licensing review",
+   "type": "Cause"
+  },
+  {
+   "name": "security review",
+   "type": "Cause"
+  },
+  {
+   "name": "alternative solutions considered",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Company Portal install failed",
+   "relation": "CAUSED_BY",
+   "target": "missing application"
+  },
+  {
+   "source": "requested software",
+   "relation": "AFFECTS",
+   "target": "software approval process"
+  },
+  {
+   "source": "Security Operations team",
+   "relation": "INDICATES",
+   "target": "risk assessment"
+  },
+  {
+   "source": "risk assessment",
+   "relation": "CAUSED_BY",
+   "target": "exception required"
+  },
+  {
+   "source": "exception required",
+   "relation": "FIXED_BY",
+   "target": "escalate to Application Support Lead"
+  },
+  {
+   "source": "escalate to Application Support Lead",
+   "relation": "AFFECTS",
+   "target": "IT Help Teams channel"
+  },
+  {
+   "source": "IT Help Teams channel",
+   "relation": "PART_OF",
+   "target": "@ApplicationSupport-Lead"
+  },
+  {
+   "source": "escalate to Application Support Lead",
+   "relation": "AFFECTS",
+   "target": "Security Review Request form"
+  },
+  {
+   "source": "escalate to Application Support Lead",
+   "relation": "AFFECTS",
+   "target": "license inquiry report"
+  },
+  {
+   "source": "licensing review",
+   "relation": "CAUSED_BY",
+   "target": "security review"
+  },
+  {
+   "source": "security review",
+   "relation": "INDICATES",
+   "target": "alternative solutions considered"
+  },
+  {
+   "source": "Intune request",
+   "relation": "AFFECTS",
+   "target": "software approval process"
+  },
+  {
+   "source": "requested software",
+   "relation": "INDICATES",
+   "target": "software approval process"
+  },
+  {
+   "source": "missing application",
+   "relation": "CAUSED_BY",
+   "target": "requested software not in catalog"
+  },
+  {
+   "source": "requested software not in catalog",
+   "relation": "FIXED_BY",
+   "target": "software approval process"
+  }
+ ]
+}

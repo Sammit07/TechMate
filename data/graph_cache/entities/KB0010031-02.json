@@ -1,0 +1,131 @@
+{
+ "entities": [
+  {
+   "name": "stuck on boot logo or automatic repair loop",
+   "type": "Symptom"
+  },
+  {
+   "name": "internal drive not detected",
+   "type": "Symptom"
+  },
+  {
+   "name": "Secure Boot misconfiguration",
+   "type": "Cause"
+  },
+  {
+   "name": "incorrect boot order",
+   "type": "Cause"
+  },
+  {
+   "name": "BIOS/UEFI diagnostics",
+   "type": "Component"
+  },
+  {
+   "name": "Windows Recovery Environment (WinRE)",
+   "type": "Component"
+  },
+  {
+   "name": "chkdsk C: /f /r",
+   "type": "Fix"
+  },
+  {
+   "name": "sfc /scannow",
+   "type": "Fix"
+  },
+  {
+   "name": "SSD hardware failure",
+   "type": "Cause"
+  },
+  {
+   "name": "warranty RMA and loaner laptop",
+   "type": "Fix"
+  },
+  {
+   "name": "file-system repair success",
+   "type": "Symptom"
+  },
+  {
+   "name": "BitLocker recovery key retrieval from Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "corporate resource access (Outlook, Teams, OneDrive)",
+   "type": "Symptom"
+  },
+  {
+   "name": "BIOS/UEFI hardware fault",
+   "type": "Cause"
+  },
+  {
+   "name": "repeated startup repair failure",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "CAUSED_BY",
+   "target": "internal drive not detected"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "CAUSED_BY",
+   "target": "Secure Boot misconfiguration"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "CAUSED_BY",
+   "target": "incorrect boot order"
+  },
+  {
+   "source": "internal drive not detected",
+   "relation": "AFFECTS",
+   "target": "BIOS/UEFI diagnostics"
+  },
+  {
+   "source": "BIOS/UEFI diagnostics",
+   "relation": "INDICATES",
+   "target": "SSD hardware failure"
+  },
+  {
+   "source": "SSD hardware failure",
+   "relation": "FIXED_BY",
+   "target": "warranty RMA and loaner laptop"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "chkdsk C: /f /r"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "sfc /scannow"
+  },
+  {
+   "source": "file-system repair success",
+   "relation": "FIXED_BY",
+   "target": "reboot normally and confirm login"
+  },
+  {
+   "source": "BitLocker recovery key retrieval from Intune",
+   "relation": "FIXED_BY",
+   "target": "encryption warnings resolved"
+  },
+  {
+   "source": "corporate resource access (Outlook, Teams, OneDrive)",
+   "relation": "AFFECTS",
+   "target": "Windows Recovery Environment (WinRE)"
+  },
+  {
+   "source": "BIOS/UEFI hardware fault",
+   "relation": "CAUSED_BY",
+   "target": "repeated startup repair failure"
+  },
+  {
+   "source": "repeated startup repair failure",
+   "relation": "INDICATES",
+   "target": "need for escalation to L2/Hardware Warranty"
+  }
+ ]
+}

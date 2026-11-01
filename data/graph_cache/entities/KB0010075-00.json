@@ -1,0 +1,196 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 23H2/24H2 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "PaperCut secure-print system",
+   "type": "Product"
+  },
+  {
+   "name": "print.acme.example",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi (802.1X)",
+   "type": "Component"
+  },
+  {
+   "name": "Print Spooler service",
+   "type": "Component"
+  },
+  {
+   "name": "printer driver",
+   "type": "Component"
+  },
+  {
+   "name": "network connectivity",
+   "type": "Component"
+  },
+  {
+   "name": "toner/paper supply",
+   "type": "Component"
+  },
+  {
+   "name": "hardware fault (jam)",
+   "type": "Component"
+  },
+  {
+   "name": "PaperCut hold/release rules",
+   "type": "Component"
+  },
+  {
+   "name": "Printer listed as Offline",
+   "type": "Symptom"
+  },
+  {
+   "name": "Print jobs stuck in queue",
+   "type": "Symptom"
+  },
+  {
+   "name": "No output when printing",
+   "type": "Symptom"
+  },
+  {
+   "name": "Grayed-out/warning icon in printer properties",
+   "type": "Symptom"
+  },
+  {
+   "name": "Print Spooler service stopped/crashed",
+   "type": "Cause"
+  },
+  {
+   "name": "Corrupted/outdated printer driver",
+   "type": "Cause"
+  },
+  {
+   "name": "Loss of network connectivity",
+   "type": "Cause"
+  },
+  {
+   "name": "Printer out of toner/paper/jam",
+   "type": "Cause"
+  },
+  {
+   "name": "PaperCut hold/release blocking jobs",
+   "type": "Cause"
+  },
+  {
+   "name": "Restart Print Spooler service",
+   "type": "Fix"
+  },
+  {
+   "name": "Clear local print queue",
+   "type": "Fix"
+  },
+  {
+   "name": "Re-add printer",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify printer supplies",
+   "type": "Fix"
+  },
+  {
+   "name": "Check network connection",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Printer listed as Offline",
+   "relation": "CAUSED_BY",
+   "target": "Print Spooler service stopped/crashed"
+  },
+  {
+   "source": "Printer listed as Offline",
+   "relation": "CAUSED_BY",
+   "target": "Loss of network connectivity"
+  },
+  {
+   "source": "Printer listed as Offline",
+   "relation": "CAUSED_BY",
+   "target": "Printer out of toner/paper/jam"
+  },
+  {
+   "source": "Print jobs stuck in queue",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted/outdated printer driver"
+  },
+  {
+   "source": "Print jobs stuck in queue",
+   "relation": "CAUSED_BY",
+   "target": "PaperCut hold/release blocking jobs"
+  },
+  {
+   "source": "No output when printing",
+   "relation": "CAUSED_BY",
+   "target": "Print Spooler service stopped/crashed"
+  },
+  {
+   "source": "Grayed-out/warning icon in printer properties",
+   "relation": "CAUSED_BY",
+   "target": "Print Spooler service stopped/crashed"
+  },
+  {
+   "source": "Print Spooler service stopped/crashed",
+   "relation": "FIXED_BY",
+   "target": "Restart Print Spooler service"
+  },
+  {
+   "source": "Print jobs stuck in queue",
+   "relation": "FIXED_BY",
+   "target": "Clear local print queue"
+  },
+  {
+   "source": "Corrupted/outdated printer driver",
+   "relation": "FIXED_BY",
+   "target": "Re-add printer"
+  },
+  {
+   "source": "Printer out of toner/paper/jam",
+   "relation": "FIXED_BY",
+   "target": "Verify printer supplies"
+  },
+  {
+   "source": "Loss of network connectivity",
+   "relation": "FIXED_BY",
+   "target": "Check network connection"
+  },
+  {
+   "source": "PaperCut hold/release blocking jobs",
+   "relation": "FIXED_BY",
+   "target": "Check network connection"
+  },
+  {
+   "source": "Print Spooler service",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2 laptops"
+  },
+  {
+   "source": "Print Spooler service",
+   "relation": "AFFECTS",
+   "target": "MacBook Pro/Air"
+  },
+  {
+   "source": "printer driver",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2 laptops"
+  },
+  {
+   "source": "network connectivity",
+   "relation": "AFFECTS",
+   "target": "print.acme.example"
+  },
+  {
+   "source": "PaperCut hold/release rules",
+   "relation": "PART_OF",
+   "target": "PaperCut secure-print system"
+  }
+ ]
+}

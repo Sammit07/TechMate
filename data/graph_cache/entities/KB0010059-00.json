@@ -1,0 +1,185 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft 365 Apps for enterprise",
+   "type": "Product"
+  },
+  {
+   "name": "Office 2021",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 5440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Unlicensed Product banner",
+   "type": "Symptom"
+  },
+  {
+   "name": "Office application crash",
+   "type": "Symptom"
+  },
+  {
+   "name": "Slow Office performance",
+   "type": "Symptom"
+  },
+  {
+   "name": "Repeated activation prompt",
+   "type": "Symptom"
+  },
+  {
+   "name": "Error code 0x80070005",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Error code 0x80004005",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Expired Microsoft 365 subscription",
+   "type": "Cause"
+  },
+  {
+   "name": "License assignment removed in Entra ID",
+   "type": "Cause"
+  },
+  {
+   "name": "Network connectivity issues",
+   "type": "Cause"
+  },
+  {
+   "name": "Proxy blocking",
+   "type": "Cause"
+  },
+  {
+   "name": "Incorrect system time",
+   "type": "Cause"
+  },
+  {
+   "name": "Corrupted Office installation",
+   "type": "Cause"
+  },
+  {
+   "name": "Faulty COM add-in",
+   "type": "Cause"
+  },
+  {
+   "name": "Clock skew >5 minutes",
+   "type": "Cause"
+  },
+  {
+   "name": "Expired GlobalProtect VPN certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "Repair and reactivate Office",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Unlicensed Product banner",
+   "relation": "CAUSED_BY",
+   "target": "Expired Microsoft 365 subscription"
+  },
+  {
+   "source": "Unlicensed Product banner",
+   "relation": "CAUSED_BY",
+   "target": "License assignment removed in Entra ID"
+  },
+  {
+   "source": "Office application crash",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted Office installation"
+  },
+  {
+   "source": "Slow Office performance",
+   "relation": "CAUSED_BY",
+   "target": "Faulty COM add-in"
+  },
+  {
+   "source": "Repeated activation prompt",
+   "relation": "CAUSED_BY",
+   "target": "Network connectivity issues"
+  },
+  {
+   "source": "Error code 0x80070005",
+   "relation": "INDICATES",
+   "target": "Proxy blocking"
+  },
+  {
+   "source": "Error code 0x80004005",
+   "relation": "INDICATES",
+   "target": "Incorrect system time"
+  },
+  {
+   "source": "Clock skew >5 minutes",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect system time"
+  },
+  {
+   "source": "Expired GlobalProtect VPN certificate",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect system time"
+  },
+  {
+   "source": "Microsoft 365 Apps for enterprise",
+   "relation": "AFFECTS",
+   "target": "Unlicensed Product banner"
+  },
+  {
+   "source": "Office 2021",
+   "relation": "AFFECTS",
+   "target": "Office application crash"
+  },
+  {
+   "source": "Windows 11",
+   "relation": "AFFECTS",
+   "target": "Slow Office performance"
+  },
+  {
+   "source": "Dell Latitude 5440",
+   "relation": "AFFECTS",
+   "target": "Repeated activation prompt"
+  },
+  {
+   "source": "Repair and reactivate Office",
+   "relation": "FIXED_BY",
+   "target": "Expired Microsoft 365 subscription"
+  },
+  {
+   "source": "Repair and reactivate Office",
+   "relation": "FIXED_BY",
+   "target": "Corrupted Office installation"
+  }
+ ]
+}

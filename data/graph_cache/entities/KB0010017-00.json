@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Palo Alto GlobalProtect VPN certificate",
+   "type": "Component"
+  },
+  {
+   "name": "VPN connection fails with error \"Authentication failed: certificate expired\"",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "GlobalProtect client shows \"Certificate validation failed\"",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "VPN connects but internal sites unreachable",
+   "type": "Symptom"
+  },
+  {
+   "name": "Frequent disconnections after a few minutes of use",
+   "type": "Symptom"
+  },
+  {
+   "name": "Popup notification: \"Your VPN certificate has expired; please contact IT\"",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "The GlobalProtect client certificate reached its 1-year validity and expired",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated GlobalProtect client version that does not automatically renew the certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "Corrupted or missing certificate in the local store",
+   "type": "Cause"
+  },
+  {
+   "name": "Network policies blocking TCP/443 (SSL) traffic to vpn.acme.example",
+   "type": "Cause"
+  },
+  {
+   "name": "User-initiated deletion of the certificate from the client",
+   "type": "Cause"
+  },
+  {
+   "name": "Renewing the certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "Windows 11 laptops (Dell Latitude 5440/7440, Lenovo ThinkPad T14/X1 Carbon, HP EliteBook 840)",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15 MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "Palo Alto GlobalProtect VPN client",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "VPN connection fails with error \"Authentication failed: certificate expired\"",
+   "relation": "INDICATES",
+   "target": "The GlobalProtect client certificate reached its 1-year validity and expired"
+  },
+  {
+   "source": "GlobalProtect client shows \"Certificate validation failed\"",
+   "relation": "INDICATES",
+   "target": "The GlobalProtect client certificate reached its 1-year validity and expired"
+  },
+  {
+   "source": "VPN connects but internal sites unreachable",
+   "relation": "CAUSED_BY",
+   "target": "The GlobalProtect client certificate reached its 1-year validity and expired"
+  },
+  {
+   "source": "Frequent disconnections after a few minutes of use",
+   "relation": "CAUSED_BY",
+   "target": "The GlobalProtect client certificate reached its 1-year validity and expired"
+  },
+  {
+   "source": "Popup notification: \"Your VPN certificate has expired; please contact IT\"",
+   "relation": "INDICATES",
+   "target": "The GlobalProtect client certificate reached its 1-year validity and expired"
+  },
+  {
+   "source": "The GlobalProtect client certificate reached its 1-year validity and expired",
+   "relation": "FIXED_BY",
+   "target": "Renewing the certificate"
+  },
+  {
+   "source": "Outdated GlobalProtect client version that does not automatically renew the certificate",
+   "relation": "FIXED_BY",
+   "target": "Renewing the certificate"
+  },
+  {
+   "source": "Corrupted or missing certificate in the local store",
+   "relation": "FIXED_BY",
+   "target": "Renewing the certificate"
+  },
+  {
+   "source": "Network policies blocking TCP/443 (SSL) traffic to vpn.acme.example",
+   "relation": "FIXED_BY",
+   "target": "Renewing the certificate"
+  },
+  {
+   "source": "User-initiated deletion of the certificate from the client",
+   "relation": "FIXED_BY",
+   "target": "Renewing the certificate"
+  },
+  {
+   "source": "Renewing the certificate",
+   "relation": "AFFECTS",
+   "target": "Palo Alto GlobalProtect VPN certificate"
+  },
+  {
+   "source": "Windows 11 laptops (Dell Latitude 5440/7440, Lenovo ThinkPad T14/X1 Carbon, HP EliteBook 840)",
+   "relation": "AFFECTS",
+   "target": "Palo Alto GlobalProtect VPN certificate"
+  },
+  {
+   "source": "macOS 14/15 MacBook Pro/Air",
+   "relation": "AFFECTS",
+   "target": "Palo Alto GlobalProtect VPN certificate"
+  },
+  {
+   "source": "Palo Alto GlobalProtect VPN client",
+   "relation": "PART_OF",
+   "target": "Palo Alto GlobalProtect VPN certificate"
+  }
+ ]
+}

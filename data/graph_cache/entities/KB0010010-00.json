@@ -1,0 +1,121 @@
+{
+ "entities": [
+  {
+   "name": "IT self-service portal",
+   "type": "Product"
+  },
+  {
+   "name": "\\\\fileserver\\*",
+   "type": "Component"
+  },
+  {
+   "name": "SharePoint Online sites",
+   "type": "Product"
+  },
+  {
+   "name": "You do not have permission to access \\\\fileserver\\finance\\budget.xlsx",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "User is not a member of the appropriate security group",
+   "type": "Cause"
+  },
+  {
+   "name": "Manager approval has not been recorded in the request workflow",
+   "type": "Cause"
+  },
+  {
+   "name": "Request submitted for the wrong resource name or path",
+   "type": "Cause"
+  },
+  {
+   "name": "Group membership change has not yet replicated",
+   "type": "Cause"
+  },
+  {
+   "name": "Submit access request via IT self-service portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify exact UNC path or SharePoint URL",
+   "type": "Fix"
+  },
+  {
+   "name": "Obtain manager approval before submitting",
+   "type": "Fix"
+  },
+  {
+   "name": "Access denied when opening network folder",
+   "type": "Symptom"
+  },
+  {
+   "name": "Shared drives",
+   "type": "Component"
+  },
+  {
+   "name": "SharePoint sites",
+   "type": "Component"
+  },
+  {
+   "name": "Identity & Access Management team",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Access denied when opening network folder",
+   "relation": "CAUSED_BY",
+   "target": "User is not a member of the appropriate security group"
+  },
+  {
+   "source": "Access denied when opening network folder",
+   "relation": "CAUSED_BY",
+   "target": "Manager approval has not been recorded in the request workflow"
+  },
+  {
+   "source": "Access denied when opening network folder",
+   "relation": "CAUSED_BY",
+   "target": "Request submitted for the wrong resource name or path"
+  },
+  {
+   "source": "Access denied when opening network folder",
+   "relation": "CAUSED_BY",
+   "target": "Group membership change has not yet replicated"
+  },
+  {
+   "source": "You do not have permission to access \\\\fileserver\\finance\\budget.xlsx",
+   "relation": "INDICATES",
+   "target": "Access denied when opening network folder"
+  },
+  {
+   "source": "Submit access request via IT self-service portal",
+   "relation": "FIXED_BY",
+   "target": "Access denied when opening network folder"
+  },
+  {
+   "source": "Verify exact UNC path or SharePoint URL",
+   "relation": "FIXED_BY",
+   "target": "Request submitted for the wrong resource name or path"
+  },
+  {
+   "source": "Obtain manager approval before submitting",
+   "relation": "FIXED_BY",
+   "target": "Manager approval has not been recorded in the request workflow"
+  },
+  {
+   "source": "Shared drives",
+   "relation": "AFFECTS",
+   "target": "Access denied when opening network folder"
+  },
+  {
+   "source": "SharePoint sites",
+   "relation": "AFFECTS",
+   "target": "Access denied when opening network folder"
+  },
+  {
+   "source": "IT self-service portal",
+   "relation": "PART_OF",
+   "target": "Identity & Access Management team"
+  }
+ ]
+}

@@ -1,0 +1,242 @@
+{
+ "entities": [
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Windows Search service",
+   "type": "Component"
+  },
+  {
+   "name": "Search indexing",
+   "type": "Component"
+  },
+  {
+   "name": "Indexing Options",
+   "type": "Component"
+  },
+  {
+   "name": "ScanOST.exe",
+   "type": "Component"
+  },
+  {
+   "name": ".ost file",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook profile",
+   "type": "Component"
+  },
+  {
+   "name": "COM add-ins",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook search not returning results",
+   "type": "Symptom"
+  },
+  {
+   "name": "Instant search empty",
+   "type": "Symptom"
+  },
+  {
+   "name": "Search indexing failed",
+   "type": "Symptom"
+  },
+  {
+   "name": "OST corruption",
+   "type": "Cause"
+  },
+  {
+   "name": "Disabled Windows Search service",
+   "type": "Cause"
+  },
+  {
+   "name": "Outlook not indexed",
+   "type": "Cause"
+  },
+  {
+   "name": "Corrupt search index",
+   "type": "Cause"
+  },
+  {
+   "name": "Large .ost file (>50GB)",
+   "type": "Cause"
+  },
+  {
+   "name": "Faulty COM add-in",
+   "type": "Cause"
+  },
+  {
+   "name": "Start Windows Search service",
+   "type": "Fix"
+  },
+  {
+   "name": "Include Outlook in Indexing Options",
+   "type": "Fix"
+  },
+  {
+   "name": "Rebuild search index",
+   "type": "Fix"
+  },
+  {
+   "name": "Run ScanOST.exe",
+   "type": "Fix"
+  },
+  {
+   "name": "Create new Outlook profile",
+   "type": "Fix"
+  },
+  {
+   "name": "Disable COM add-ins",
+   "type": "Fix"
+  },
+  {
+   "name": "Test search after each step",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Outlook search not returning results",
+   "relation": "CAUSED_BY",
+   "target": "Disabled Windows Search service"
+  },
+  {
+   "source": "Outlook search not returning results",
+   "relation": "CAUSED_BY",
+   "target": "Outlook not indexed"
+  },
+  {
+   "source": "Outlook search not returning results",
+   "relation": "CAUSED_BY",
+   "target": "Corrupt search index"
+  },
+  {
+   "source": "Outlook search not returning results",
+   "relation": "CAUSED_BY",
+   "target": "OST corruption"
+  },
+  {
+   "source": "Outlook search not returning results",
+   "relation": "CAUSED_BY",
+   "target": "Large .ost file (>50GB)"
+  },
+  {
+   "source": "Outlook search not returning results",
+   "relation": "CAUSED_BY",
+   "target": "Faulty COM add-in"
+  },
+  {
+   "source": "Instant search empty",
+   "relation": "INDICATES",
+   "target": "Search indexing failed"
+  },
+  {
+   "source": "Search indexing failed",
+   "relation": "INDICATES",
+   "target": "Corrupt search index"
+  },
+  {
+   "source": "Disabled Windows Search service",
+   "relation": "FIXED_BY",
+   "target": "Start Windows Search service"
+  },
+  {
+   "source": "Outlook not indexed",
+   "relation": "FIXED_BY",
+   "target": "Include Outlook in Indexing Options"
+  },
+  {
+   "source": "Corrupt search index",
+   "relation": "FIXED_BY",
+   "target": "Rebuild search index"
+  },
+  {
+   "source": "OST corruption",
+   "relation": "FIXED_BY",
+   "target": "Run ScanOST.exe"
+  },
+  {
+   "source": "Large .ost file (>50GB)",
+   "relation": "FIXED_BY",
+   "target": "Create new Outlook profile"
+  },
+  {
+   "source": "Faulty COM add-in",
+   "relation": "FIXED_BY",
+   "target": "Disable COM add-ins"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "Windows Search service"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "Search indexing"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "Indexing Options"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "ScanOST.exe"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": ".ost file"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "Outlook profile"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "COM add-ins"
+  },
+  {
+   "source": "Windows Search service",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  },
+  {
+   "source": "Search indexing",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  },
+  {
+   "source": "Indexing Options",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  },
+  {
+   "source": "ScanOST.exe",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  },
+  {
+   "source": ".ost file",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  },
+  {
+   "source": "Outlook profile",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  },
+  {
+   "source": "COM add-ins",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  }
+ ]
+}

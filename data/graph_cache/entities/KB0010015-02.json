@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Temporary Access Pass",
+   "type": "Fix"
+  },
+  {
+   "name": "Exchange Online Plan 2 license",
+   "type": "Component"
+  },
+  {
+   "name": "Intune device compliance",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Component"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Account still disabled after start date",
+   "type": "Symptom"
+  },
+  {
+   "name": "HR feed incorrect start date",
+   "type": "Cause"
+  },
+  {
+   "name": "Password reset loop",
+   "type": "Symptom"
+  },
+  {
+   "name": "5-attempt lockout",
+   "type": "Cause"
+  },
+  {
+   "name": "Device non-compliant due to missing BitLocker key",
+   "type": "Symptom"
+  },
+  {
+   "name": "Missing BitLocker/FileVault key in Intune",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN fails with certificate error",
+   "type": "Symptom"
+  },
+  {
+   "name": "Expired or missing machine certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "Wi-Fi prompts for username/password",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Account still disabled after start date",
+   "relation": "CAUSED_BY",
+   "target": "HR feed incorrect start date"
+  },
+  {
+   "source": "Password reset loop",
+   "relation": "CAUSED_BY",
+   "target": "5-attempt lockout"
+  },
+  {
+   "source": "Device non-compliant due to missing BitLocker key",
+   "relation": "CAUSED_BY",
+   "target": "Missing BitLocker/FileVault key in Intune"
+  },
+  {
+   "source": "VPN fails with certificate error",
+   "relation": "CAUSED_BY",
+   "target": "Expired or missing machine certificate"
+  },
+  {
+   "source": "Wi-Fi prompts for username/password",
+   "relation": "CAUSED_BY",
+   "target": "Expired or missing machine certificate"
+  },
+  {
+   "source": "Temporary Access Pass",
+   "relation": "FIXED_BY",
+   "target": "Account still disabled after start date"
+  },
+  {
+   "source": "Temporary Access Pass",
+   "relation": "FIXED_BY",
+   "target": "Password reset loop"
+  },
+  {
+   "source": "Force sync and re-issue recovery key from Intune",
+   "relation": "FIXED_BY",
+   "target": "Device non-compliant due to missing BitLocker key"
+  },
+  {
+   "source": "Re-enroll device via Intune",
+   "relation": "FIXED_BY",
+   "target": "VPN fails with certificate error"
+  },
+  {
+   "source": "Re-push ACME-Corp Wi-Fi profile through Intune",
+   "relation": "FIXED_BY",
+   "target": "Wi-Fi prompts for username/password"
+  },
+  {
+   "source": "Exchange Online Plan 2 license",
+   "relation": "AFFECTS",
+   "target": "Intune device compliance"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "PART_OF",
+   "target": "MFA registration"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "VPN fails with certificate error"
+  },
+  {
+   "source": "ACME-Corp Wi-Fi",
+   "relation": "AFFECTS",
+   "target": "Wi-Fi prompts for username/password"
+  }
+ ]
+}

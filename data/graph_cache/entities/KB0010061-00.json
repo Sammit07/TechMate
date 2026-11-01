@@ -1,0 +1,264 @@
+{
+ "entities": [
+  {
+   "name": "Chrome",
+   "type": "Product"
+  },
+  {
+   "name": "Edge",
+   "type": "Product"
+  },
+  {
+   "name": "Firefox",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "Intune Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "crashes immediately",
+   "type": "Symptom"
+  },
+  {
+   "name": "blank window",
+   "type": "Symptom"
+  },
+  {
+   "name": "responds slowly",
+   "type": "Symptom"
+  },
+  {
+   "name": "page loads exceed 10-15 seconds",
+   "type": "Symptom"
+  },
+  {
+   "name": "NET::ERR_CERT_DATE_INVALID",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "ERR_CERT_AUTHORITY_INVALID",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "SEC_ERROR_EXPIRED_ISSUER_CERTIFICATE",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "unexpected pop-ups",
+   "type": "Symptom"
+  },
+  {
+   "name": "new tabs opening to advertising",
+   "type": "Symptom"
+  },
+  {
+   "name": "Your connection is not private",
+   "type": "Symptom"
+  },
+  {
+   "name": "corrupted browser cache",
+   "type": "Cause"
+  },
+  {
+   "name": "cookies",
+   "type": "Component"
+  },
+  {
+   "name": "user profile",
+   "type": "Component"
+  },
+  {
+   "name": "system date/time set incorrectly",
+   "type": "Cause"
+  },
+  {
+   "name": "out-of-date browser version",
+   "type": "Cause"
+  },
+  {
+   "name": "malicious extensions",
+   "type": "Cause"
+  },
+  {
+   "name": "conflicting security software",
+   "type": "Cause"
+  },
+  {
+   "name": "Group Policy",
+   "type": "Component"
+  },
+  {
+   "name": "Intune configuration",
+   "type": "Component"
+  },
+  {
+   "name": "expired or untrusted root certificates",
+   "type": "Cause"
+  },
+  {
+   "name": "clear browsing data",
+   "type": "Fix"
+  },
+  {
+   "name": "end lingering processes",
+   "type": "Fix"
+  },
+  {
+   "name": "correct system clock",
+   "type": "Fix"
+  },
+  {
+   "name": "update browser",
+   "type": "Fix"
+  },
+  {
+   "name": "remove malicious extensions",
+   "type": "Fix"
+  },
+  {
+   "name": "disable conflicting AV",
+   "type": "Fix"
+  },
+  {
+   "name": "renew root certificates",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "crashes immediately",
+   "relation": "CAUSED_BY",
+   "target": "corrupted browser cache"
+  },
+  {
+   "source": "blank window",
+   "relation": "CAUSED_BY",
+   "target": "corrupted browser cache"
+  },
+  {
+   "source": "responds slowly",
+   "relation": "CAUSED_BY",
+   "target": "out-of-date browser version"
+  },
+  {
+   "source": "page loads exceed 10-15 seconds",
+   "relation": "CAUSED_BY",
+   "target": "out-of-date browser version"
+  },
+  {
+   "source": "NET::ERR_CERT_DATE_INVALID",
+   "relation": "INDICATES",
+   "target": "system date/time set incorrectly"
+  },
+  {
+   "source": "ERR_CERT_AUTHORITY_INVALID",
+   "relation": "INDICATES",
+   "target": "expired or untrusted root certificates"
+  },
+  {
+   "source": "SEC_ERROR_EXPIRED_ISSUER_CERTIFICATE",
+   "relation": "INDICATES",
+   "target": "expired or untrusted root certificates"
+  },
+  {
+   "source": "unexpected pop-ups",
+   "relation": "CAUSED_BY",
+   "target": "malicious extensions"
+  },
+  {
+   "source": "new tabs opening to advertising",
+   "relation": "CAUSED_BY",
+   "target": "malicious extensions"
+  },
+  {
+   "source": "Your connection is not private",
+   "relation": "CAUSED_BY",
+   "target": "expired or untrusted root certificates"
+  },
+  {
+   "source": "corrupted browser cache",
+   "relation": "FIXED_BY",
+   "target": "clear browsing data"
+  },
+  {
+   "source": "lingering processes",
+   "relation": "FIXED_BY",
+   "target": "end lingering processes"
+  },
+  {
+   "source": "system date/time set incorrectly",
+   "relation": "FIXED_BY",
+   "target": "correct system clock"
+  },
+  {
+   "source": "out-of-date browser version",
+   "relation": "FIXED_BY",
+   "target": "update browser"
+  },
+  {
+   "source": "malicious extensions",
+   "relation": "FIXED_BY",
+   "target": "remove malicious extensions"
+  },
+  {
+   "source": "conflicting security software",
+   "relation": "FIXED_BY",
+   "target": "disable conflicting AV"
+  },
+  {
+   "source": "expired or untrusted root certificates",
+   "relation": "FIXED_BY",
+   "target": "renew root certificates"
+  },
+  {
+   "source": "cookies",
+   "relation": "PART_OF",
+   "target": "user profile"
+  },
+  {
+   "source": "Group Policy",
+   "relation": "AFFECTS",
+   "target": "Chrome"
+  },
+  {
+   "source": "Intune configuration",
+   "relation": "AFFECTS",
+   "target": "Firefox"
+  },
+  {
+   "source": "Windows 11 23H2/24H2",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "macOS 14/15",
+   "relation": "AFFECTS",
+   "target": "MacBook Pro/Air"
+  }
+ ]
+}

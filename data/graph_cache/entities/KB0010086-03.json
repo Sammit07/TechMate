@@ -1,0 +1,144 @@
+{
+ "entities": [
+  {
+   "name": "IT Ticket",
+   "type": "Component"
+  },
+  {
+   "name": "Ticket Number",
+   "type": "Component"
+  },
+  {
+   "name": "Steps Already Taken",
+   "type": "Component"
+  },
+  {
+   "name": "Logs or Screenshots",
+   "type": "Component"
+  },
+  {
+   "name": "Error Codes",
+   "type": "Component"
+  },
+  {
+   "name": "Escalation Process",
+   "type": "Component"
+  },
+  {
+   "name": "Transfer Function",
+   "type": "Component"
+  },
+  {
+   "name": "User Notification",
+   "type": "Component"
+  },
+  {
+   "name": "Expected Response Time",
+   "type": "Component"
+  },
+  {
+   "name": "Service Desk",
+   "type": "Product"
+  },
+  {
+   "name": "Self-Service Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Phone Support",
+   "type": "Product"
+  },
+  {
+   "name": "Teams Ticket",
+   "type": "Product"
+  },
+  {
+   "name": "Recurring Issue",
+   "type": "Symptom"
+  },
+  {
+   "name": "Specialised Tools Required",
+   "type": "Cause"
+  },
+  {
+   "name": "Insufficient Permissions",
+   "type": "Cause"
+  },
+  {
+   "name": "SLA Breach by L1",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Recurring Issue",
+   "relation": "CAUSED_BY",
+   "target": "Underlying System Problem"
+  },
+  {
+   "source": "Specialised Tools Required",
+   "relation": "CAUSED_BY",
+   "target": "Need for Advanced Diagnostics"
+  },
+  {
+   "source": "Insufficient Permissions",
+   "relation": "CAUSED_BY",
+   "target": "Restricted Access Policies"
+  },
+  {
+   "source": "SLA Breach by L1",
+   "relation": "CAUSED_BY",
+   "target": "Unresolved Issue After Initial Attempts"
+  },
+  {
+   "source": "IT Ticket",
+   "relation": "AFFECTS",
+   "target": "Service Desk"
+  },
+  {
+   "source": "Ticket Number",
+   "relation": "PART_OF",
+   "target": "IT Ticket"
+  },
+  {
+   "source": "Steps Already Taken",
+   "relation": "PART_OF",
+   "target": "IT Ticket"
+  },
+  {
+   "source": "Logs or Screenshots",
+   "relation": "PART_OF",
+   "target": "IT Ticket"
+  },
+  {
+   "source": "Error Codes",
+   "relation": "PART_OF",
+   "target": "IT Ticket"
+  },
+  {
+   "source": "Escalation Process",
+   "relation": "FIXED_BY",
+   "target": "Transfer Function"
+  },
+  {
+   "source": "User Notification",
+   "relation": "FIXED_BY",
+   "target": "Expected Response Time"
+  },
+  {
+   "source": "Self-Service Portal",
+   "relation": "AFFECTS",
+   "target": "IT Ticket"
+  },
+  {
+   "source": "Phone Support",
+   "relation": "AFFECTS",
+   "target": "IT Ticket"
+  },
+  {
+   "source": "Teams Ticket",
+   "relation": "AFFECTS",
+   "target": "IT Ticket"
+  }
+ ]
+}

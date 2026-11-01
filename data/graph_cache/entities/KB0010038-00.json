@@ -1,0 +1,217 @@
+{
+ "entities": [
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "USB-C/Thunderbolt 3/4 docking stations",
+   "type": "Product"
+  },
+  {
+   "name": "External monitors connected via DisplayPort or HDMI",
+   "type": "Component"
+  },
+  {
+   "name": "No signal detected on external monitor",
+   "type": "Symptom"
+  },
+  {
+   "name": "Monitor shows black screen",
+   "type": "Symptom"
+  },
+  {
+   "name": "Second monitor flickers or flashes intermittently",
+   "type": "Symptom"
+  },
+  {
+   "name": "Display resolution stuck at 800x600 or 1024x768",
+   "type": "Symptom"
+  },
+  {
+   "name": "Refresh rate shows 30 Hz instead of 60 Hz",
+   "type": "Symptom"
+  },
+  {
+   "name": "USB-C dock not charging laptop",
+   "type": "Symptom"
+  },
+  {
+   "name": "Audio not routed through dock",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outdated docking-station firmware",
+   "type": "Cause"
+  },
+  {
+   "name": "Corrupt or missing graphics/display drivers",
+   "type": "Cause"
+  },
+  {
+   "name": "Loose or damaged DisplayPort/HDMI cable",
+   "type": "Cause"
+  },
+  {
+   "name": "Insufficient power delivery from dock to laptop",
+   "type": "Cause"
+  },
+  {
+   "name": "Incorrect display settings (resolution/refresh rate)",
+   "type": "Cause"
+  },
+  {
+   "name": "Mismatched DP alt-mode version between dock and monitor",
+   "type": "Cause"
+  },
+  {
+   "name": "Conflicting Windows power plan or graphics power saving",
+   "type": "Cause"
+  },
+  {
+   "name": "MacOS display detection failure due to NVRAM corruption",
+   "type": "Cause"
+  },
+  {
+   "name": "Update the docking-station firmware",
+   "type": "Fix"
+  },
+  {
+   "name": "Install the latest graphics driver",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "No signal detected on external monitor",
+   "relation": "CAUSED_BY",
+   "target": "Outdated docking-station firmware"
+  },
+  {
+   "source": "No signal detected on external monitor",
+   "relation": "CAUSED_BY",
+   "target": "Corrupt or missing graphics/display drivers"
+  },
+  {
+   "source": "No signal detected on external monitor",
+   "relation": "CAUSED_BY",
+   "target": "Loose or damaged DisplayPort/HDMI cable"
+  },
+  {
+   "source": "Monitor shows black screen",
+   "relation": "CAUSED_BY",
+   "target": "Outdated docking-station firmware"
+  },
+  {
+   "source": "Monitor shows black screen",
+   "relation": "CAUSED_BY",
+   "target": "Corrupt or missing graphics/display drivers"
+  },
+  {
+   "source": "Second monitor flickers or flashes intermittently",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect display settings (resolution/refresh rate)"
+  },
+  {
+   "source": "Display resolution stuck at 800x600 or 1024x768",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect display settings (resolution/refresh rate)"
+  },
+  {
+   "source": "Refresh rate shows 30 Hz instead of 60 Hz",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect display settings (resolution/refresh rate)"
+  },
+  {
+   "source": "USB-C dock not charging laptop",
+   "relation": "CAUSED_BY",
+   "target": "Insufficient power delivery from dock to laptop"
+  },
+  {
+   "source": "Audio not routed through dock",
+   "relation": "CAUSED_BY",
+   "target": "Outdated docking-station firmware"
+  },
+  {
+   "source": "Outdated docking-station firmware",
+   "relation": "FIXED_BY",
+   "target": "Update the docking-station firmware"
+  },
+  {
+   "source": "Corrupt or missing graphics/display drivers",
+   "relation": "FIXED_BY",
+   "target": "Install the latest graphics driver"
+  },
+  {
+   "source": "No signal detected on external monitor",
+   "relation": "AFFECTS",
+   "target": "External monitors connected via DisplayPort or HDMI"
+  },
+  {
+   "source": "Monitor shows black screen",
+   "relation": "AFFECTS",
+   "target": "External monitors connected via DisplayPort or HDMI"
+  },
+  {
+   "source": "Second monitor flickers or flashes intermittently",
+   "relation": "AFFECTS",
+   "target": "External monitors connected via DisplayPort or HDMI"
+  },
+  {
+   "source": "Display resolution stuck at 800x600 or 1024x768",
+   "relation": "AFFECTS",
+   "target": "External monitors connected via DisplayPort or HDMI"
+  },
+  {
+   "source": "Refresh rate shows 30 Hz instead of 60 Hz",
+   "relation": "AFFECTS",
+   "target": "External monitors connected via DisplayPort or HDMI"
+  },
+  {
+   "source": "USB-C dock not charging laptop",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "USB-C dock not charging laptop",
+   "relation": "AFFECTS",
+   "target": "Lenovo ThinkPad T14/X1 Carbon"
+  },
+  {
+   "source": "USB-C dock not charging laptop",
+   "relation": "AFFECTS",
+   "target": "HP EliteBook 840"
+  },
+  {
+   "source": "Audio not routed through dock",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "Audio not routed through dock",
+   "relation": "AFFECTS",
+   "target": "Lenovo ThinkPad T14/X1 Carbon"
+  },
+  {
+   "source": "Audio not routed through dock",
+   "relation": "AFFECTS",
+   "target": "HP EliteBook 840"
+  }
+ ]
+}

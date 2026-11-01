@@ -1,0 +1,137 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "BitLocker",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Windows Update Troubleshooter",
+   "type": "Component"
+  },
+  {
+   "name": "update component reset",
+   "type": "Fix"
+  },
+  {
+   "name": "CBS.log",
+   "type": "Component"
+  },
+  {
+   "name": "WindowsUpdate.log",
+   "type": "Component"
+  },
+  {
+   "name": "0x800F0922",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "quality update",
+   "type": "Component"
+  },
+  {
+   "name": "feature update",
+   "type": "Component"
+  },
+  {
+   "name": "deferral policy",
+   "type": "Component"
+  },
+  {
+   "name": "free space check",
+   "type": "Fix"
+  },
+  {
+   "name": "VPN connection verification",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Windows Update fails or gets stuck",
+   "relation": "CAUSED_BY",
+   "target": "insufficient disk space"
+  },
+  {
+   "source": "Windows Update fails or gets stuck",
+   "relation": "CAUSED_BY",
+   "target": "VPN disconnected"
+  },
+  {
+   "source": "Windows Update fails or gets stuck",
+   "relation": "CAUSED_BY",
+   "target": "corrupted update components"
+  },
+  {
+   "source": "Windows Update fails or gets stuck",
+   "relation": "INDICATES",
+   "target": "0x800F0922"
+  },
+  {
+   "source": "0x800F0922",
+   "relation": "INDICATES",
+   "target": "missing source files"
+  },
+  {
+   "source": "insufficient disk space",
+   "relation": "AFFECTS",
+   "target": "Windows 11"
+  },
+  {
+   "source": "VPN disconnected",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "corrupted update components",
+   "relation": "AFFECTS",
+   "target": "Windows Update Troubleshooter"
+  },
+  {
+   "source": "free space check",
+   "relation": "FIXED_BY",
+   "target": "insufficient disk space"
+  },
+  {
+   "source": "VPN connection verification",
+   "relation": "FIXED_BY",
+   "target": "VPN disconnected"
+  },
+  {
+   "source": "update component reset",
+   "relation": "FIXED_BY",
+   "target": "corrupted update components"
+  },
+  {
+   "source": "quality update",
+   "relation": "FIXED_BY",
+   "target": "Windows Update fails or gets stuck"
+  },
+  {
+   "source": "deferral policy",
+   "relation": "CAUSED_BY",
+   "target": "feature update blocked"
+  },
+  {
+   "source": "BitLocker",
+   "relation": "PART_OF",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "Windows 11"
+  }
+ ]
+}

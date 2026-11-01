@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "unwanted browser extension",
+   "type": "Component"
+  },
+  {
+   "name": "browser crash",
+   "type": "Symptom"
+  },
+  {
+   "name": "certificate error",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "default search engine mismatch",
+   "type": "Symptom"
+  },
+  {
+   "name": "homepage changed",
+   "type": "Symptom"
+  },
+  {
+   "name": "pop-ups or automatic redirects",
+   "type": "Symptom"
+  },
+  {
+   "name": "Chrome slow",
+   "type": "Symptom"
+  },
+  {
+   "name": "Edge pop-up",
+   "type": "Symptom"
+  },
+  {
+   "name": "adware",
+   "type": "Cause"
+  },
+  {
+   "name": "spyware",
+   "type": "Cause"
+  },
+  {
+   "name": "remove extension",
+   "type": "Fix"
+  },
+  {
+   "name": "clear browser cache",
+   "type": "Fix"
+  },
+  {
+   "name": "verify system time",
+   "type": "Fix"
+  },
+  {
+   "name": "Defender scan",
+   "type": "Fix"
+  },
+  {
+   "name": "browser reset",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "browser crash",
+   "relation": "CAUSED_BY",
+   "target": "unwanted browser extension"
+  },
+  {
+   "source": "certificate error",
+   "relation": "CAUSED_BY",
+   "target": "unwanted browser extension"
+  },
+  {
+   "source": "default search engine mismatch",
+   "relation": "CAUSED_BY",
+   "target": "unwanted browser extension"
+  },
+  {
+   "source": "homepage changed",
+   "relation": "CAUSED_BY",
+   "target": "unwanted browser extension"
+  },
+  {
+   "source": "pop-ups or automatic redirects",
+   "relation": "CAUSED_BY",
+   "target": "unwanted browser extension"
+  },
+  {
+   "source": "Chrome slow",
+   "relation": "CAUSED_BY",
+   "target": "unwanted browser extension"
+  },
+  {
+   "source": "Edge pop-up",
+   "relation": "CAUSED_BY",
+   "target": "unwanted browser extension"
+  },
+  {
+   "source": "unwanted browser extension",
+   "relation": "INDICATES",
+   "target": "adware"
+  },
+  {
+   "source": "unwanted browser extension",
+   "relation": "INDICATES",
+   "target": "spyware"
+  },
+  {
+   "source": "adware",
+   "relation": "FIXED_BY",
+   "target": "remove extension"
+  },
+  {
+   "source": "spyware",
+   "relation": "FIXED_BY",
+   "target": "remove extension"
+  },
+  {
+   "source": "unwanted browser extension",
+   "relation": "FIXED_BY",
+   "target": "clear browser cache"
+  },
+  {
+   "source": "unwanted browser extension",
+   "relation": "FIXED_BY",
+   "target": "verify system time"
+  },
+  {
+   "source": "unwanted browser extension",
+   "relation": "FIXED_BY",
+   "target": "Defender scan"
+  },
+  {
+   "source": "unwanted browser extension",
+   "relation": "FIXED_BY",
+   "target": "browser reset"
+  }
+ ]
+}

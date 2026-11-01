@@ -1,0 +1,114 @@
+{
+ "entities": [
+  {
+   "name": "Acme Global",
+   "type": "Product"
+  },
+  {
+   "name": "IT self-service portal",
+   "type": "Product"
+  },
+  {
+   "name": "Priority Level Assignment",
+   "type": "Component"
+  },
+  {
+   "name": "SLA Timer Monitoring",
+   "type": "Component"
+  },
+  {
+   "name": "Unclear Response Wait Time",
+   "type": "Symptom"
+  },
+  {
+   "name": "Tickets Remain Open Longer Than Expected",
+   "type": "Symptom"
+  },
+  {
+   "name": "Lack of Awareness of Priority-Based SLA Matrix",
+   "type": "Cause"
+  },
+  {
+   "name": "Inconsistent Application of Priority Levels",
+   "type": "Cause"
+  },
+  {
+   "name": "View SLA Timer on Ticket",
+   "type": "Fix"
+  },
+  {
+   "name": "Assign Priorities Consistently",
+   "type": "Fix"
+  },
+  {
+   "name": "Monitor SLA for Imminent Breach",
+   "type": "Fix"
+  },
+  {
+   "name": "Escalate When SLA Breach Is Imminent",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Unclear Response Wait Time",
+   "relation": "CAUSED_BY",
+   "target": "Lack of Awareness of Priority-Based SLA Matrix"
+  },
+  {
+   "source": "Tickets Remain Open Longer Than Expected",
+   "relation": "CAUSED_BY",
+   "target": "Inconsistent Application of Priority Levels"
+  },
+  {
+   "source": "Unclear Response Wait Time",
+   "relation": "FIXED_BY",
+   "target": "View SLA Timer on Ticket"
+  },
+  {
+   "source": "Tickets Remain Open Longer Than Expected",
+   "relation": "FIXED_BY",
+   "target": "Assign Priorities Consistently"
+  },
+  {
+   "source": "Inconsistent Application of Priority Levels",
+   "relation": "FIXED_BY",
+   "target": "Monitor SLA for Imminent Breach"
+  },
+  {
+   "source": "Inconsistent Application of Priority Levels",
+   "relation": "FIXED_BY",
+   "target": "Escalate When SLA Breach Is Imminent"
+  },
+  {
+   "source": "Priority Level Assignment",
+   "relation": "AFFECTS",
+   "target": "Acme Global"
+  },
+  {
+   "source": "SLA Timer Monitoring",
+   "relation": "AFFECTS",
+   "target": "IT self-service portal"
+  },
+  {
+   "source": "View SLA Timer on Ticket",
+   "relation": "PART_OF",
+   "target": "SLA Timer Monitoring"
+  },
+  {
+   "source": "Assign Priorities Consistently",
+   "relation": "PART_OF",
+   "target": "Priority Level Assignment"
+  },
+  {
+   "source": "Monitor SLA for Imminent Breach",
+   "relation": "PART_OF",
+   "target": "Priority Level Assignment"
+  },
+  {
+   "source": "Escalate When SLA Breach Is Imminent",
+   "relation": "PART_OF",
+   "target": "Priority Level Assignment"
+  }
+ ]
+}

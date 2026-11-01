@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "company laptop",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive/SharePoint shows offline",
+   "type": "Symptom"
+  },
+  {
+   "name": "*.sharepoint.com unreachable",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "*.office.com unreachable",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "restart OneDrive client",
+   "type": "Fix"
+  },
+  {
+   "name": "validate VPN or DirectAccess connectivity",
+   "type": "Fix"
+  },
+  {
+   "name": "local Wi-Fi blocks 802.1X",
+   "type": "Cause"
+  },
+  {
+   "name": "ACME-Guest SSID",
+   "type": "Component"
+  },
+  {
+   "name": "personal hotspot",
+   "type": "Component"
+  },
+  {
+   "name": "corporate SSID",
+   "type": "Component"
+  },
+  {
+   "name": "VPN connectivity issue",
+   "type": "Symptom"
+  },
+  {
+   "name": "MFA issue",
+   "type": "Symptom"
+  },
+  {
+   "name": "BitLocker issue",
+   "type": "Symptom"
+  },
+  {
+   "name": "non-compliant status in Intune",
+   "type": "Symptom"
+  },
+  {
+   "name": "escalate to Security Operations",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "OneDrive/SharePoint shows offline",
+   "relation": "CAUSED_BY",
+   "target": "*.sharepoint.com unreachable"
+  },
+  {
+   "source": "OneDrive/SharePoint shows offline",
+   "relation": "CAUSED_BY",
+   "target": "*.office.com unreachable"
+  },
+  {
+   "source": "*.sharepoint.com unreachable",
+   "relation": "INDICATES",
+   "target": "VPN connectivity issue"
+  },
+  {
+   "source": "*.office.com unreachable",
+   "relation": "INDICATES",
+   "target": "VPN connectivity issue"
+  },
+  {
+   "source": "VPN connectivity issue",
+   "relation": "FIXED_BY",
+   "target": "restart OneDrive client"
+  },
+  {
+   "source": "VPN connectivity issue",
+   "relation": "FIXED_BY",
+   "target": "validate VPN or DirectAccess connectivity"
+  },
+  {
+   "source": "local Wi-Fi blocks 802.1X",
+   "relation": "CAUSED_BY",
+   "target": "VPN connectivity issue"
+  },
+  {
+   "source": "connect to ACME-Guest SSID",
+   "relation": "FIXED_BY",
+   "target": "local Wi-Fi blocks 802.1X"
+  },
+  {
+   "source": "use personal hotspot",
+   "relation": "FIXED_BY",
+   "target": "local Wi-Fi blocks 802.1X"
+  },
+  {
+   "source": "switch back to corporate SSID",
+   "relation": "FIXED_BY",
+   "target": "local Wi-Fi blocks 802.1X"
+  },
+  {
+   "source": "VPN connectivity issue",
+   "relation": "AFFECTS",
+   "target": "company laptop"
+  },
+  {
+   "source": "MFA issue",
+   "relation": "AFFECTS",
+   "target": "company laptop"
+  },
+  {
+   "source": "BitLocker issue",
+   "relation": "AFFECTS",
+   "target": "company laptop"
+  },
+  {
+   "source": "non-compliant status in Intune",
+   "relation": "AFFECTS",
+   "target": "company laptop"
+  },
+  {
+   "source": "cannot resolve VPN, MFA, or BitLocker issues",
+   "relation": "CAUSED_BY",
+   "target": "escalate to Security Operations"
+  }
+ ]
+}

@@ -1,0 +1,160 @@
+{
+ "entities": [
+  {
+   "name": "Intune Company Portal app",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook mobile",
+   "type": "Product"
+  },
+  {
+   "name": "device passcode",
+   "type": "Component"
+  },
+  {
+   "name": "storage encryption",
+   "type": "Component"
+  },
+  {
+   "name": "jailbreak/root detection",
+   "type": "Component"
+  },
+  {
+   "name": "missing passcode",
+   "type": "Symptom"
+  },
+  {
+   "name": "outdated OS",
+   "type": "Symptom"
+  },
+  {
+   "name": "encryption off",
+   "type": "Symptom"
+  },
+  {
+   "name": "not enrolled",
+   "type": "Symptom"
+  },
+  {
+   "name": "non-compliant device",
+   "type": "Symptom"
+  },
+  {
+   "name": "set a device passcode",
+   "type": "Fix"
+  },
+  {
+   "name": "update OS to latest supported version",
+   "type": "Fix"
+  },
+  {
+   "name": "enable storage encryption",
+   "type": "Fix"
+  },
+  {
+   "name": "remove jailbreak/root",
+   "type": "Fix"
+  },
+  {
+   "name": "restore to factory state",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "missing passcode",
+   "relation": "CAUSED_BY",
+   "target": "device passcode not meeting requirements"
+  },
+  {
+   "source": "outdated OS",
+   "relation": "CAUSED_BY",
+   "target": "OS not updated to latest supported version"
+  },
+  {
+   "source": "encryption off",
+   "relation": "CAUSED_BY",
+   "target": "storage encryption disabled"
+  },
+  {
+   "source": "not enrolled",
+   "relation": "CAUSED_BY",
+   "target": "Intune Company Portal app not installed or sign-in incomplete"
+  },
+  {
+   "source": "non-compliant device",
+   "relation": "CAUSED_BY",
+   "target": "jailbreak/root detection"
+  },
+  {
+   "source": "device passcode not meeting requirements",
+   "relation": "FIXED_BY",
+   "target": "set a device passcode"
+  },
+  {
+   "source": "OS not updated to latest supported version",
+   "relation": "FIXED_BY",
+   "target": "update OS to latest supported version"
+  },
+  {
+   "source": "storage encryption disabled",
+   "relation": "FIXED_BY",
+   "target": "enable storage encryption"
+  },
+  {
+   "source": "jailbreak/root detection",
+   "relation": "FIXED_BY",
+   "target": "remove jailbreak/root"
+  },
+  {
+   "source": "Intune Company Portal app not installed or sign-in incomplete",
+   "relation": "FIXED_BY",
+   "target": "install Intune Company Portal app and complete sign-in"
+  },
+  {
+   "source": "missing passcode",
+   "relation": "INDICATES",
+   "target": "device passcode"
+  },
+  {
+   "source": "outdated OS",
+   "relation": "INDICATES",
+   "target": "OS version"
+  },
+  {
+   "source": "encryption off",
+   "relation": "INDICATES",
+   "target": "storage encryption"
+  },
+  {
+   "source": "not enrolled",
+   "relation": "INDICATES",
+   "target": "Intune Company Portal app"
+  },
+  {
+   "source": "device passcode",
+   "relation": "AFFECTS",
+   "target": "Intune Company Portal app"
+  },
+  {
+   "source": "storage encryption",
+   "relation": "AFFECTS",
+   "target": "Intune Company Portal app"
+  },
+  {
+   "source": "jailbreak/root detection",
+   "relation": "AFFECTS",
+   "target": "Intune Company Portal app"
+  },
+  {
+   "source": "set a device passcode",
+   "relation": "PART_OF",
+   "target": "Intune Company Portal app"
+  }
+ ]
+}

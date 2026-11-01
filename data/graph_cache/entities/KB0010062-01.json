@@ -1,0 +1,98 @@
+{
+ "entities": [
+  {
+   "name": "unwanted browser extensions",
+   "type": "Component"
+  },
+  {
+   "name": "Chrome",
+   "type": "Product"
+  },
+  {
+   "name": "Edge",
+   "type": "Product"
+  },
+  {
+   "name": "browser cache",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Defender for Endpoint",
+   "type": "Product"
+  },
+  {
+   "name": "certificate errors",
+   "type": "Symptom"
+  },
+  {
+   "name": "pop-ups",
+   "type": "Symptom"
+  },
+  {
+   "name": "slow browser performance",
+   "type": "Symptom"
+  },
+  {
+   "name": "incorrect system date and time",
+   "type": "Cause"
+  },
+  {
+   "name": "remove unwanted extensions",
+   "type": "Fix"
+  },
+  {
+   "name": "clear browser cache and cookies",
+   "type": "Fix"
+  },
+  {
+   "name": "run antivirus scan",
+   "type": "Fix"
+  },
+  {
+   "name": "verify browser functionality",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "pop-ups",
+   "relation": "CAUSED_BY",
+   "target": "unwanted browser extensions"
+  },
+  {
+   "source": "slow browser performance",
+   "relation": "CAUSED_BY",
+   "target": "unwanted browser extensions"
+  },
+  {
+   "source": "certificate errors",
+   "relation": "CAUSED_BY",
+   "target": "incorrect system date and time"
+  },
+  {
+   "source": "unwanted browser extensions",
+   "relation": "FIXED_BY",
+   "target": "remove unwanted extensions"
+  },
+  {
+   "source": "unwanted browser extensions",
+   "relation": "AFFECTS",
+   "target": "Chrome"
+  },
+  {
+   "source": "unwanted browser extensions",
+   "relation": "AFFECTS",
+   "target": "Edge"
+  },
+  {
+   "source": "browser cache",
+   "relation": "PART_OF",
+   "target": "Chrome"
+  },
+  {
+   "source": "browser cache",
+   "relation": "PART_OF",
+   "target": "Edge"
+  }
+ ]
+}

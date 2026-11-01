@@ -1,0 +1,112 @@
+{
+ "entities": [
+  {
+   "name": "USB-C to HDMI adapter",
+   "type": "Component"
+  },
+  {
+   "name": "DisplayPort Alt Mode",
+   "type": "Component"
+  },
+  {
+   "name": "Room-In cable",
+   "type": "Component"
+  },
+  {
+   "name": "room touch panel",
+   "type": "Component"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Crestron Speakerphone",
+   "type": "Component"
+  },
+  {
+   "name": "Jabra Speak 710",
+   "type": "Component"
+  },
+  {
+   "name": "Logitech MeetUp",
+   "type": "Component"
+  },
+  {
+   "name": "no video",
+   "type": "Symptom"
+  },
+  {
+   "name": "cable not firmly seated",
+   "type": "Cause"
+  },
+  {
+   "name": "incorrect source selection",
+   "type": "Cause"
+  },
+  {
+   "name": "verify cable connection",
+   "type": "Fix"
+  },
+  {
+   "name": "select correct source on touch panel",
+   "type": "Fix"
+  },
+  {
+   "name": "try different port or spare cable",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "no video",
+   "relation": "CAUSED_BY",
+   "target": "cable not firmly seated"
+  },
+  {
+   "source": "no video",
+   "relation": "CAUSED_BY",
+   "target": "incorrect source selection"
+  },
+  {
+   "source": "cable not firmly seated",
+   "relation": "FIXED_BY",
+   "target": "verify cable connection"
+  },
+  {
+   "source": "incorrect source selection",
+   "relation": "FIXED_BY",
+   "target": "select correct source on touch panel"
+  },
+  {
+   "source": "no video",
+   "relation": "FIXED_BY",
+   "target": "try different port or spare cable"
+  },
+  {
+   "source": "USB-C to HDMI adapter",
+   "relation": "PART_OF",
+   "target": "DisplayPort Alt Mode"
+  },
+  {
+   "source": "room touch panel",
+   "relation": "AFFECTS",
+   "target": "Teams"
+  },
+  {
+   "source": "Crestron Speakerphone",
+   "relation": "PART_OF",
+   "target": "Teams"
+  },
+  {
+   "source": "Jabra Speak 710",
+   "relation": "PART_OF",
+   "target": "Teams"
+  },
+  {
+   "source": "Logitech MeetUp",
+   "relation": "PART_OF",
+   "target": "Teams"
+  }
+ ]
+}

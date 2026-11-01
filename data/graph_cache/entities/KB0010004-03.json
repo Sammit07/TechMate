@@ -1,0 +1,131 @@
+{
+ "entities": [
+  {
+   "name": "account lockout",
+   "type": "Symptom"
+  },
+  {
+   "name": "stale credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "self-service password reset",
+   "type": "Fix"
+  },
+  {
+   "name": "Identity & Access Management (IAM) team",
+   "type": "Product"
+  },
+  {
+   "name": "Unlock-ADAccount",
+   "type": "Fix"
+  },
+  {
+   "name": "Credential Manager",
+   "type": "Component"
+  },
+  {
+   "name": "mapped drive",
+   "type": "Component"
+  },
+  {
+   "name": "mobile mail",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "VPN",
+   "type": "Component"
+  },
+  {
+   "name": "Wi-Fi",
+   "type": "Component"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "Active Directory",
+   "type": "Product"
+  },
+  {
+   "name": "MFA",
+   "type": "Component"
+  },
+  {
+   "name": "paper cut secure print release",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "account lockout",
+   "relation": "CAUSED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "account lockout",
+   "relation": "FIXED_BY",
+   "target": "self-service password reset"
+  },
+  {
+   "source": "account lockout",
+   "relation": "FIXED_BY",
+   "target": "Unlock-ADAccount"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "Credential Manager"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "mapped drive"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "mobile mail"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "VPN"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "Wi-Fi"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "Entra ID"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "Active Directory"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "MFA"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "paper cut secure print release"
+  }
+ ]
+}

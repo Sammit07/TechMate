@@ -1,0 +1,135 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Intune",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect VPN",
+   "type": "Product"
+  },
+  {
+   "name": "Insufficient free disk space (<10GB)",
+   "type": "Cause"
+  },
+  {
+   "name": "Interrupted network connectivity",
+   "type": "Cause"
+  },
+  {
+   "name": "Corrupted Windows Update components",
+   "type": "Cause"
+  },
+  {
+   "name": "Third-party software or antivirus blocking",
+   "type": "Cause"
+  },
+  {
+   "name": "Pending reboot required",
+   "type": "Cause"
+  },
+  {
+   "name": "Update shows \"Failed to install\" or \"Error 0x8007000d\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "Update progress bar stuck at 0% or 99%",
+   "type": "Symptom"
+  },
+  {
+   "name": "System repeatedly rolls back after restart",
+   "type": "Symptom"
+  },
+  {
+   "name": "macOS Software Update reports \"Unable to install update\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "Laptop hangs on black screen or Apple logo",
+   "type": "Symptom"
+  },
+  {
+   "name": "Ensure connection to corporate network",
+   "type": "Fix"
+  },
+  {
+   "name": "Check free space on system drive",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Update shows \"Failed to install\" or \"Error 0x8007000d\"",
+   "relation": "CAUSED_BY",
+   "target": "Insufficient free disk space (<10GB)"
+  },
+  {
+   "source": "Update progress bar stuck at 0% or 99%",
+   "relation": "CAUSED_BY",
+   "target": "Interrupted network connectivity"
+  },
+  {
+   "source": "System repeatedly rolls back after restart",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted Windows Update components"
+  },
+  {
+   "source": "macOS Software Update reports \"Unable to install update\"",
+   "relation": "CAUSED_BY",
+   "target": "Insufficient free disk space (<10GB)"
+  },
+  {
+   "source": "Laptop hangs on black screen or Apple logo",
+   "relation": "CAUSED_BY",
+   "target": "Pending reboot required"
+  },
+  {
+   "source": "Insufficient free disk space (<10GB)",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "Insufficient free disk space (<10GB)",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15"
+  },
+  {
+   "source": "Interrupted network connectivity",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect VPN"
+  },
+  {
+   "source": "Corrupted Windows Update components",
+   "relation": "AFFECTS",
+   "target": "Microsoft Intune"
+  },
+  {
+   "source": "Third-party software or antivirus blocking",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "Pending reboot required",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "Ensure connection to corporate network",
+   "relation": "FIXED_BY",
+   "target": "Interrupted network connectivity"
+  },
+  {
+   "source": "Check free space on system drive",
+   "relation": "FIXED_BY",
+   "target": "Insufficient free disk space (<10GB)"
+  }
+ ]
+}

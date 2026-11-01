@@ -1,0 +1,131 @@
+{
+ "entities": [
+  {
+   "name": "BitLocker recovery key prompt",
+   "type": "Symptom"
+  },
+  {
+   "name": "Windows Update modifying PCR values",
+   "type": "Cause"
+  },
+  {
+   "name": "BIOS/UEFI firmware update changing boot measurements",
+   "type": "Cause"
+  },
+  {
+   "name": "TPM cleared, disabled, or temporarily unavailable",
+   "type": "Cause"
+  },
+  {
+   "name": "BitLocker protector altered",
+   "type": "Cause"
+  },
+  {
+   "name": "Retrieve recovery key via Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Intune",
+   "type": "Product"
+  },
+  {
+   "name": "BitLocker",
+   "type": "Component"
+  },
+  {
+   "name": "TPM",
+   "type": "Component"
+  },
+  {
+   "name": "Platform Configuration Register (PCR)",
+   "type": "Component"
+  },
+  {
+   "name": "Boot environment change detected by BitLocker",
+   "type": "Symptom"
+  },
+  {
+   "name": "Enter recovery key to continue screen",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BitLocker recovery key prompt",
+   "relation": "CAUSED_BY",
+   "target": "Windows Update modifying PCR values"
+  },
+  {
+   "source": "BitLocker recovery key prompt",
+   "relation": "CAUSED_BY",
+   "target": "BIOS/UEFI firmware update changing boot measurements"
+  },
+  {
+   "source": "BitLocker recovery key prompt",
+   "relation": "CAUSED_BY",
+   "target": "TPM cleared, disabled, or temporarily unavailable"
+  },
+  {
+   "source": "BitLocker recovery key prompt",
+   "relation": "CAUSED_BY",
+   "target": "BitLocker protector altered"
+  },
+  {
+   "source": "BitLocker recovery key prompt",
+   "relation": "INDICATES",
+   "target": "Boot environment change detected by BitLocker"
+  },
+  {
+   "source": "Boot environment change detected by BitLocker",
+   "relation": "AFFECTS",
+   "target": "BitLocker"
+  },
+  {
+   "source": "Retrieve recovery key via Company Portal",
+   "relation": "FIXED_BY",
+   "target": "BitLocker recovery key prompt"
+  },
+  {
+   "source": "Dell Latitude 5440/7440",
+   "relation": "AFFECTS",
+   "target": "BitLocker recovery key prompt"
+  },
+  {
+   "source": "Lenovo ThinkPad T14/X1 Carbon",
+   "relation": "AFFECTS",
+   "target": "BitLocker recovery key prompt"
+  },
+  {
+   "source": "HP EliteBook 840",
+   "relation": "AFFECTS",
+   "target": "BitLocker recovery key prompt"
+  },
+  {
+   "source": "Microsoft Intune",
+   "relation": "AFFECTS",
+   "target": "BitLocker recovery key prompt"
+  },
+  {
+   "source": "Platform Configuration Register (PCR)",
+   "relation": "PART_OF",
+   "target": "TPM"
+  },
+  {
+   "source": "TPM",
+   "relation": "PART_OF",
+   "target": "BitLocker"
+  }
+ ]
+}

@@ -1,0 +1,168 @@
+{
+ "entities": [
+  {
+   "name": "Windows laptop",
+   "type": "Product"
+  },
+  {
+   "name": "macOS device",
+   "type": "Product"
+  },
+  {
+   "name": "Storage Sense",
+   "type": "Component"
+  },
+  {
+   "name": "Disk Cleanup",
+   "type": "Component"
+  },
+  {
+   "name": "OneDrive Files On-Demand",
+   "type": "Component"
+  },
+  {
+   "name": "Apple menu -> About This Mac -> Storage -> Manage",
+   "type": "Component"
+  },
+  {
+   "name": "low disk storage",
+   "type": "Symptom"
+  },
+  {
+   "name": "cannot save files",
+   "type": "Symptom"
+  },
+  {
+   "name": "temporary files accumulation",
+   "type": "Cause"
+  },
+  {
+   "name": "previous Windows installations",
+   "type": "Cause"
+  },
+  {
+   "name": "Windows Update Cleanup",
+   "type": "Component"
+  },
+  {
+   "name": "large personal files",
+   "type": "Cause"
+  },
+  {
+   "name": "free up disk space",
+   "type": "Fix"
+  },
+  {
+   "name": "verify free space",
+   "type": "Fix"
+  },
+  {
+   "name": "move files to OneDrive",
+   "type": "Fix"
+  },
+  {
+   "name": "less than 5GB free after cleanup",
+   "type": "Cause"
+  },
+  {
+   "name": "hardware failure signs",
+   "type": "Cause"
+  },
+  {
+   "name": "exceeds OneDrive storage quota",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "low disk storage",
+   "relation": "CAUSED_BY",
+   "target": "temporary files accumulation"
+  },
+  {
+   "source": "low disk storage",
+   "relation": "CAUSED_BY",
+   "target": "previous Windows installations"
+  },
+  {
+   "source": "low disk storage",
+   "relation": "CAUSED_BY",
+   "target": "large personal files"
+  },
+  {
+   "source": "cannot save files",
+   "relation": "INDICATES",
+   "target": "low disk storage"
+  },
+  {
+   "source": "Storage Sense",
+   "relation": "FIXED_BY",
+   "target": "temporary files accumulation"
+  },
+  {
+   "source": "Disk Cleanup",
+   "relation": "FIXED_BY",
+   "target": "previous Windows installations"
+  },
+  {
+   "source": "Windows Update Cleanup",
+   "relation": "FIXED_BY",
+   "target": "previous Windows installations"
+  },
+  {
+   "source": "OneDrive Files On-Demand",
+   "relation": "FIXED_BY",
+   "target": "large personal files"
+  },
+  {
+   "source": "Apple menu -> About This Mac -> Storage -> Manage",
+   "relation": "FIXED_BY",
+   "target": "temporary files accumulation"
+  },
+  {
+   "source": "verify free space",
+   "relation": "FIXED_BY",
+   "target": "low disk storage"
+  },
+  {
+   "source": "move files to OneDrive",
+   "relation": "FIXED_BY",
+   "target": "large personal files"
+  },
+  {
+   "source": "less than 5GB free after cleanup",
+   "relation": "CAUSED_BY",
+   "target": "hardware failure signs"
+  },
+  {
+   "source": "less than 5GB free after cleanup",
+   "relation": "CAUSED_BY",
+   "target": "exceeds OneDrive storage quota"
+  },
+  {
+   "source": "Windows laptop",
+   "relation": "AFFECTS",
+   "target": "Storage Sense"
+  },
+  {
+   "source": "Windows laptop",
+   "relation": "AFFECTS",
+   "target": "Disk Cleanup"
+  },
+  {
+   "source": "Windows laptop",
+   "relation": "AFFECTS",
+   "target": "Windows Update Cleanup"
+  },
+  {
+   "source": "macOS device",
+   "relation": "AFFECTS",
+   "target": "Apple menu -> About This Mac -> Storage -> Manage"
+  },
+  {
+   "source": "OneDrive Files On-Demand",
+   "relation": "PART_OF",
+   "target": "OneDrive"
+  }
+ ]
+}

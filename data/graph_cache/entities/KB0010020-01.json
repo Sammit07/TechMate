@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Acme Corp Laptop",
+   "type": "Product"
+  },
+  {
+   "name": "Wireless Connection Reset",
+   "type": "Fix"
+  },
+  {
+   "name": "DHCP Lease Renewal",
+   "type": "Fix"
+  },
+  {
+   "name": "Connectivity Test Failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "Intune Compliance Status",
+   "type": "Component"
+  },
+  {
+   "name": "Machine Certificate Validity",
+   "type": "Component"
+  },
+  {
+   "name": "Expired Machine Certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "Certificate Renewal Request",
+   "type": "Fix"
+  },
+  {
+   "name": "Power-Saving Setting Enabled",
+   "type": "Cause"
+  },
+  {
+   "name": "Disable Wireless Power Saving",
+   "type": "Fix"
+  },
+  {
+   "name": "Authentication Failure (EAP-TLS)",
+   "type": "Symptom"
+  },
+  {
+   "name": "Deauthentication Reason Codes",
+   "type": "Symptom"
+  },
+  {
+   "name": "Frequent Roaming Events",
+   "type": "Symptom"
+  },
+  {
+   "name": "Wireless Log Collection",
+   "type": "Fix"
+  },
+  {
+   "name": "Netsh WLAN Tracing",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Connectivity Test Failure",
+   "relation": "CAUSED_BY",
+   "target": "Expired Machine Certificate"
+  },
+  {
+   "source": "Connectivity Test Failure",
+   "relation": "CAUSED_BY",
+   "target": "Power-Saving Setting Enabled"
+  },
+  {
+   "source": "Authentication Failure (EAP-TLS)",
+   "relation": "INDICATES",
+   "target": "Expired Machine Certificate"
+  },
+  {
+   "source": "Deauthentication Reason Codes",
+   "relation": "INDICATES",
+   "target": "Expired Machine Certificate"
+  },
+  {
+   "source": "Frequent Roaming Events",
+   "relation": "INDICATES",
+   "target": "Power-Saving Setting Enabled"
+  },
+  {
+   "source": "Expired Machine Certificate",
+   "relation": "FIXED_BY",
+   "target": "Certificate Renewal Request"
+  },
+  {
+   "source": "Power-Saving Setting Enabled",
+   "relation": "FIXED_BY",
+   "target": "Disable Wireless Power Saving"
+  },
+  {
+   "source": "Wireless Connection Reset",
+   "relation": "FIXED_BY",
+   "target": "Connectivity Test Failure"
+  },
+  {
+   "source": "DHCP Lease Renewal",
+   "relation": "FIXED_BY",
+   "target": "Connectivity Test Failure"
+  },
+  {
+   "source": "Wireless Log Collection",
+   "relation": "FIXED_BY",
+   "target": "Authentication Failure (EAP-TLS)"
+  },
+  {
+   "source": "Netsh WLAN Tracing",
+   "relation": "FIXED_BY",
+   "target": "Deauthentication Reason Codes"
+  },
+  {
+   "source": "Intune Compliance Status",
+   "relation": "AFFECTS",
+   "target": "Machine Certificate Validity"
+  },
+  {
+   "source": "Machine Certificate Validity",
+   "relation": "AFFECTS",
+   "target": "Acme Corp Laptop"
+  },
+  {
+   "source": "Power-Saving Setting Enabled",
+   "relation": "AFFECTS",
+   "target": "Acme Corp Laptop"
+  },
+  {
+   "source": "Certificate Renewal Request",
+   "relation": "PART_OF",
+   "target": "Intune Compliance Status"
+  }
+ ]
+}

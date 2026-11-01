@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Office activation",
+   "type": "Symptom"
+  },
+  {
+   "name": "Unlicensed Product",
+   "type": "Symptom"
+  },
+  {
+   "name": "Excel crash",
+   "type": "Symptom"
+  },
+  {
+   "name": "Word not opening",
+   "type": "Symptom"
+  },
+  {
+   "name": "Office slow",
+   "type": "Symptom"
+  },
+  {
+   "name": "license token",
+   "type": "Component"
+  },
+  {
+   "name": "Entra ID license",
+   "type": "Component"
+  },
+  {
+   "name": "Conditional Access",
+   "type": "Component"
+  },
+  {
+   "name": "0x80070005",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "0x80004005",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Expired or invalid license token",
+   "type": "Cause"
+  },
+  {
+   "name": "Incorrect system time",
+   "type": "Cause"
+  },
+  {
+   "name": "Add-in conflict",
+   "type": "Cause"
+  },
+  {
+   "name": "Renew license token via sign-in",
+   "type": "Fix"
+  },
+  {
+   "name": "Repair Office installation",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Unlicensed Product",
+   "relation": "CAUSED_BY",
+   "target": "Expired or invalid license token"
+  },
+  {
+   "source": "Office activation",
+   "relation": "CAUSED_BY",
+   "target": "Expired or invalid license token"
+  },
+  {
+   "source": "Excel crash",
+   "relation": "CAUSED_BY",
+   "target": "Add-in conflict"
+  },
+  {
+   "source": "Word not opening",
+   "relation": "CAUSED_BY",
+   "target": "Add-in conflict"
+  },
+  {
+   "source": "Office slow",
+   "relation": "CAUSED_BY",
+   "target": "Add-in conflict"
+  },
+  {
+   "source": "Expired or invalid license token",
+   "relation": "FIXED_BY",
+   "target": "Renew license token via sign-in"
+  },
+  {
+   "source": "Add-in conflict",
+   "relation": "FIXED_BY",
+   "target": "Disable add-ins"
+  },
+  {
+   "source": "0x80070005",
+   "relation": "INDICATES",
+   "target": "Expired or invalid license token"
+  },
+  {
+   "source": "0x80004005",
+   "relation": "INDICATES",
+   "target": "Expired or invalid license token"
+  },
+  {
+   "source": "Entra ID license",
+   "relation": "AFFECTS",
+   "target": "Office activation"
+  },
+  {
+   "source": "Conditional Access",
+   "relation": "AFFECTS",
+   "target": "Office activation"
+  },
+  {
+   "source": "License token",
+   "relation": "PART_OF",
+   "target": "Office activation"
+  },
+  {
+   "source": "Incorrect system time",
+   "relation": "CAUSED_BY",
+   "target": "Office activation"
+  },
+  {
+   "source": "Renew license token via sign-in",
+   "relation": "FIXED_BY",
+   "target": "Office activation"
+  },
+  {
+   "source": "Repair Office installation",
+   "relation": "FIXED_BY",
+   "target": "Office activation"
+  }
+ ]
+}

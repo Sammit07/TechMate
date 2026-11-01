@@ -1,0 +1,109 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "Acme self-service password reset portal",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Entra ID admin center",
+   "type": "Product"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "MFA codes rejected or push notifications not arriving",
+   "type": "Symptom"
+  },
+  {
+   "name": "QR code scanning failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "lost or inaccessible phone",
+   "type": "Cause"
+  },
+  {
+   "name": "no backup SMS method available",
+   "type": "Cause"
+  },
+  {
+   "name": "clear existing MFA registration",
+   "type": "Fix"
+  },
+  {
+   "name": "re-enroll Authenticator via self-service portal",
+   "type": "Fix"
+  },
+  {
+   "name": "issue Temporary Access Pass",
+   "type": "Fix"
+  },
+  {
+   "name": "guide user to add new Authenticator registration",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "MFA codes rejected or push notifications not arriving",
+   "relation": "CAUSED_BY",
+   "target": "lost or inaccessible phone"
+  },
+  {
+   "source": "MFA codes rejected or push notifications not arriving",
+   "relation": "CAUSED_BY",
+   "target": "no backup SMS method available"
+  },
+  {
+   "source": "QR code scanning failure",
+   "relation": "INDICATES",
+   "target": "lost or inaccessible phone"
+  },
+  {
+   "source": "lost or inaccessible phone",
+   "relation": "AFFECTS",
+   "target": "Microsoft Authenticator"
+  },
+  {
+   "source": "no backup SMS method available",
+   "relation": "AFFECTS",
+   "target": "Microsoft Authenticator"
+  },
+  {
+   "source": "lost or inaccessible phone",
+   "relation": "FIXED_BY",
+   "target": "clear existing MFA registration"
+  },
+  {
+   "source": "no backup SMS method available",
+   "relation": "FIXED_BY",
+   "target": "clear existing MFA registration"
+  },
+  {
+   "source": "lost or inaccessible phone",
+   "relation": "FIXED_BY",
+   "target": "issue Temporary Access Pass"
+  },
+  {
+   "source": "no backup SMS method available",
+   "relation": "FIXED_BY",
+   "target": "issue Temporary Access Pass"
+  },
+  {
+   "source": "clear existing MFA registration",
+   "relation": "FIXED_BY",
+   "target": "re-enroll Authenticator via self-service portal"
+  },
+  {
+   "source": "issue Temporary Access Pass",
+   "relation": "FIXED_BY",
+   "target": "guide user to add new Authenticator registration"
+  }
+ ]
+}

@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Teams cache",
+   "type": "Component"
+  },
+  {
+   "name": "clear Teams cache",
+   "type": "Fix"
+  },
+  {
+   "name": "Teams not loading",
+   "type": "Symptom"
+  },
+  {
+   "name": "Teams audio issue",
+   "type": "Symptom"
+  },
+  {
+   "name": "Teams screen share not working",
+   "type": "Symptom"
+  },
+  {
+   "name": "Teams status stuck away",
+   "type": "Symptom"
+  },
+  {
+   "name": "quit Teams and delete cache folders",
+   "type": "Fix"
+  },
+  {
+   "name": "run Intune script to delete cache folders",
+   "type": "Fix"
+  },
+  {
+   "name": "relaunch Teams",
+   "type": "Fix"
+  },
+  {
+   "name": "collect logs",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Messaging & Collaboration support group",
+   "type": "Fix"
+  },
+  {
+   "name": "macOS permissions",
+   "type": "Component"
+  },
+  {
+   "name": "network bandwidth requirements",
+   "type": "Component"
+  },
+  {
+   "name": "Teams client version",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Teams not loading",
+   "relation": "CAUSED_BY",
+   "target": "Teams cache"
+  },
+  {
+   "source": "Teams audio issue",
+   "relation": "CAUSED_BY",
+   "target": "Teams cache"
+  },
+  {
+   "source": "Teams screen share not working",
+   "relation": "CAUSED_BY",
+   "target": "Teams cache"
+  },
+  {
+   "source": "Teams status stuck away",
+   "relation": "CAUSED_BY",
+   "target": "Teams cache"
+  },
+  {
+   "source": "Teams cache",
+   "relation": "AFFECTS",
+   "target": "Microsoft Teams"
+  },
+  {
+   "source": "clear Teams cache",
+   "relation": "FIXED_BY",
+   "target": "Teams cache"
+  },
+  {
+   "source": "quit Teams and delete cache folders",
+   "relation": "FIXED_BY",
+   "target": "Teams cache"
+  },
+  {
+   "source": "run Intune script to delete cache folders",
+   "relation": "FIXED_BY",
+   "target": "Teams cache"
+  },
+  {
+   "source": "relaunch Teams",
+   "relation": "FIXED_BY",
+   "target": "Teams cache"
+  },
+  {
+   "source": "Teams cache",
+   "relation": "INDICATES",
+   "target": "Teams not loading"
+  },
+  {
+   "source": "Teams cache",
+   "relation": "INDICATES",
+   "target": "Teams audio issue"
+  },
+  {
+   "source": "Teams cache",
+   "relation": "INDICATES",
+   "target": "Teams screen share not working"
+  },
+  {
+   "source": "Teams cache",
+   "relation": "INDICATES",
+   "target": "Teams status stuck away"
+  },
+  {
+   "source": "macOS permissions",
+   "relation": "PART_OF",
+   "target": "Microsoft Teams"
+  },
+  {
+   "source": "network bandwidth requirements",
+   "relation": "AFFECTS",
+   "target": "Microsoft Teams"
+  }
+ ]
+}

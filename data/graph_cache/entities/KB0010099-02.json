@@ -1,0 +1,112 @@
+{
+ "entities": [
+  {
+   "name": "screen lock timeout",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "device lock timeout setting",
+   "type": "Component"
+  },
+  {
+   "name": "non-compliant device lock timeout",
+   "type": "Symptom"
+  },
+  {
+   "name": "clean desk policy violation",
+   "type": "Symptom"
+  },
+  {
+   "name": "Service Desk procedure",
+   "type": "Product"
+  },
+  {
+   "name": "remote remediation via Intune policy push",
+   "type": "Fix"
+  },
+  {
+   "name": "device remains non-compliant after two policy pushes",
+   "type": "Cause"
+  },
+  {
+   "name": "Intentional bypass of lock settings",
+   "type": "Cause"
+  },
+  {
+   "name": "Security Operations team",
+   "type": "Product"
+  },
+  {
+   "name": "forensic review of device",
+   "type": "Fix"
+  },
+  {
+   "name": "policy exception request",
+   "type": "Fix"
+  },
+  {
+   "name": "P3 Moderate SLA breach",
+   "type": "Symptom"
+  },
+  {
+   "name": "user repeatedly disables lock settings",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "non-compliant device lock timeout",
+   "relation": "CAUSED_BY",
+   "target": "device remains non-compliant after two policy pushes"
+  },
+  {
+   "source": "clean desk policy violation",
+   "relation": "INDICATES",
+   "target": "user repeatedly disables lock settings"
+  },
+  {
+   "source": "device remains non-compliant after two policy pushes",
+   "relation": "FIXED_BY",
+   "target": "escalation to Security Operations team"
+  },
+  {
+   "source": "Intentional bypass of lock settings",
+   "relation": "CAUSED_BY",
+   "target": "user repeatedly disables lock settings"
+  },
+  {
+   "source": "Service Desk procedure",
+   "relation": "AFFECTS",
+   "target": "screen lock timeout"
+  },
+  {
+   "source": "remote remediation via Intune policy push",
+   "relation": "FIXED_BY",
+   "target": "non-compliant device lock timeout"
+  },
+  {
+   "source": "Security Operations team",
+   "relation": "AFFECTS",
+   "target": "forensic review of device"
+  },
+  {
+   "source": "forensic review of device",
+   "relation": "FIXED_BY",
+   "target": "policy exception request"
+  },
+  {
+   "source": "P3 Moderate SLA breach",
+   "relation": "CAUSED_BY",
+   "target": "user repeatedly disables lock settings"
+  },
+  {
+   "source": "Intune",
+   "relation": "PART_OF",
+   "target": "Service Desk procedure"
+  }
+ ]
+}

@@ -1,0 +1,223 @@
+{
+ "entities": [
+  {
+   "name": "Low disk space",
+   "type": "Symptom"
+  },
+  {
+   "name": "Storage Sense",
+   "type": "Component"
+  },
+  {
+   "name": "Disk Cleanup",
+   "type": "Component"
+  },
+  {
+   "name": "Previous Windows installations",
+   "type": "Component"
+  },
+  {
+   "name": "Windows Update Cleanup",
+   "type": "Component"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "Files On-Demand",
+   "type": "Component"
+  },
+  {
+   "name": "macOS Storage Management",
+   "type": "Component"
+  },
+  {
+   "name": "iCloud storage",
+   "type": "Component"
+  },
+  {
+   "name": "Optimize Storage",
+   "type": "Component"
+  },
+  {
+   "name": "Empty Trash Automatically",
+   "type": "Component"
+  },
+  {
+   "name": "Reduce Clutter",
+   "type": "Component"
+  },
+  {
+   "name": "~/Library/Caches",
+   "type": "Component"
+  },
+  {
+   "name": "Time Machine local snapshots",
+   "type": "Component"
+  },
+  {
+   "name": "Run Storage Sense now",
+   "type": "Fix"
+  },
+  {
+   "name": "Clean up system files",
+   "type": "Fix"
+  },
+  {
+   "name": "Move files to OneDrive",
+   "type": "Fix"
+  },
+  {
+   "name": "Enable Files On-Demand",
+   "type": "Fix"
+  },
+  {
+   "name": "Apply macOS storage recommendations",
+   "type": "Fix"
+  },
+  {
+   "name": "Delete cache folder contents",
+   "type": "Fix"
+  },
+  {
+   "name": "Remove old installers/media",
+   "type": "Fix"
+  },
+  {
+   "name": "Disable local snapshots",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify free space",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Low disk space",
+   "relation": "CAUSED_BY",
+   "target": "Accumulated temporary files"
+  },
+  {
+   "source": "Low disk space",
+   "relation": "CAUSED_BY",
+   "target": "Old Windows update files"
+  },
+  {
+   "source": "Low disk space",
+   "relation": "CAUSED_BY",
+   "target": "Large personal files stored locally"
+  },
+  {
+   "source": "Storage Sense",
+   "relation": "AFFECTS",
+   "target": "Windows"
+  },
+  {
+   "source": "Disk Cleanup",
+   "relation": "AFFECTS",
+   "target": "Windows"
+  },
+  {
+   "source": "Previous Windows installations",
+   "relation": "PART_OF",
+   "target": "Windows"
+  },
+  {
+   "source": "Windows Update Cleanup",
+   "relation": "PART_OF",
+   "target": "Windows"
+  },
+  {
+   "source": "OneDrive",
+   "relation": "AFFECTS",
+   "target": "Windows"
+  },
+  {
+   "source": "Files On-Demand",
+   "relation": "PART_OF",
+   "target": "OneDrive"
+  },
+  {
+   "source": "macOS Storage Management",
+   "relation": "AFFECTS",
+   "target": "macOS"
+  },
+  {
+   "source": "iCloud storage",
+   "relation": "PART_OF",
+   "target": "macOS"
+  },
+  {
+   "source": "Optimize Storage",
+   "relation": "PART_OF",
+   "target": "macOS"
+  },
+  {
+   "source": "Empty Trash Automatically",
+   "relation": "PART_OF",
+   "target": "macOS"
+  },
+  {
+   "source": "Reduce Clutter",
+   "relation": "PART_OF",
+   "target": "macOS"
+  },
+  {
+   "source": "~/Library/Caches",
+   "relation": "PART_OF",
+   "target": "macOS"
+  },
+  {
+   "source": "Time Machine local snapshots",
+   "relation": "PART_OF",
+   "target": "macOS"
+  },
+  {
+   "source": "Accumulated temporary files",
+   "relation": "FIXED_BY",
+   "target": "Run Storage Sense now"
+  },
+  {
+   "source": "Accumulated temporary files",
+   "relation": "FIXED_BY",
+   "target": "Clean up system files"
+  },
+  {
+   "source": "Old Windows update files",
+   "relation": "FIXED_BY",
+   "target": "Clean up system files"
+  },
+  {
+   "source": "Large personal files stored locally",
+   "relation": "FIXED_BY",
+   "target": "Move files to OneDrive"
+  },
+  {
+   "source": "Large personal files stored locally",
+   "relation": "FIXED_BY",
+   "target": "Enable Files On-Demand"
+  },
+  {
+   "source": "Cache buildup",
+   "relation": "FIXED_BY",
+   "target": "Delete cache folder contents"
+  },
+  {
+   "source": "Old installers/media",
+   "relation": "FIXED_BY",
+   "target": "Remove old installers/media"
+  },
+  {
+   "source": "Local snapshots",
+   "relation": "FIXED_BY",
+   "target": "Disable local snapshots"
+  },
+  {
+   "source": "Low disk space",
+   "relation": "FIXED_BY",
+   "target": "Verify free space"
+  }
+ ]
+}

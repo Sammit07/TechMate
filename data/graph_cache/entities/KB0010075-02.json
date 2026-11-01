@@ -1,0 +1,183 @@
+{
+ "entities": [
+  {
+   "name": "printer offline or jobs stuck in queue",
+   "type": "Symptom"
+  },
+  {
+   "name": "Intune or Remote Assistance",
+   "type": "Component"
+  },
+  {
+   "name": "printer port pointing to print.acme.example",
+   "type": "Component"
+  },
+  {
+   "name": "outdated printer driver",
+   "type": "Cause"
+  },
+  {
+   "name": "latest driver from manufacturer",
+   "type": "Fix"
+  },
+  {
+   "name": "Print Spooler service not Automatic or not running",
+   "type": "Cause"
+  },
+  {
+   "name": "set Print Spooler to Automatic and start",
+   "type": "Fix"
+  },
+  {
+   "name": "print server print.acme.example",
+   "type": "Product"
+  },
+  {
+   "name": "printer status not Ready",
+   "type": "Symptom"
+  },
+  {
+   "name": "incorrect printer port IP/hostname",
+   "type": "Cause"
+  },
+  {
+   "name": "restart spooler service on server",
+   "type": "Fix"
+  },
+  {
+   "name": "stuck jobs in printer queue",
+   "type": "Symptom"
+  },
+  {
+   "name": "purge stuck jobs from queue",
+   "type": "Fix"
+  },
+  {
+   "name": "printer offline physically",
+   "type": "Symptom"
+  },
+  {
+   "name": "low toner/ink",
+   "type": "Cause"
+  },
+  {
+   "name": "create Facilities work order for toner",
+   "type": "Fix"
+  },
+  {
+   "name": "printer hardware error",
+   "type": "Cause"
+  },
+  {
+   "name": "follow manufacturer troubleshooting or log hardware ticket",
+   "type": "Fix"
+  },
+  {
+   "name": "test page print failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "PaperCut web interface shows not Online/Ready",
+   "type": "Symptom"
+  },
+  {
+   "name": "escalate to Printing & Scanning / Printer specialist",
+   "type": "Fix"
+  },
+  {
+   "name": "machine certificate missing for 802.1X",
+   "type": "Cause"
+  },
+  {
+   "name": "involve Network Support team",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "printer offline or jobs stuck in queue",
+   "relation": "CAUSED_BY",
+   "target": "outdated printer driver"
+  },
+  {
+   "source": "printer offline or jobs stuck in queue",
+   "relation": "CAUSED_BY",
+   "target": "Print Spooler service not Automatic or not running"
+  },
+  {
+   "source": "printer offline or jobs stuck in queue",
+   "relation": "CAUSED_BY",
+   "target": "incorrect printer port IP/hostname"
+  },
+  {
+   "source": "printer offline or jobs stuck in queue",
+   "relation": "CAUSED_BY",
+   "target": "low toner/ink"
+  },
+  {
+   "source": "printer offline or jobs stuck in queue",
+   "relation": "CAUSED_BY",
+   "target": "printer hardware error"
+  },
+  {
+   "source": "outdated printer driver",
+   "relation": "FIXED_BY",
+   "target": "latest driver from manufacturer"
+  },
+  {
+   "source": "Print Spooler service not Automatic or not running",
+   "relation": "FIXED_BY",
+   "target": "set Print Spooler to Automatic and start"
+  },
+  {
+   "source": "incorrect printer port IP/hostname",
+   "relation": "FIXED_BY",
+   "target": "printer port pointing to print.acme.example"
+  },
+  {
+   "source": "stuck jobs in printer queue",
+   "relation": "FIXED_BY",
+   "target": "purge stuck jobs from queue"
+  },
+  {
+   "source": "low toner/ink",
+   "relation": "FIXED_BY",
+   "target": "create Facilities work order for toner"
+  },
+  {
+   "source": "printer hardware error",
+   "relation": "FIXED_BY",
+   "target": "follow manufacturer troubleshooting or log hardware ticket"
+  },
+  {
+   "source": "printer status not Ready",
+   "relation": "AFFECTS",
+   "target": "print server print.acme.example"
+  },
+  {
+   "source": "printer offline physically",
+   "relation": "AFFECTS",
+   "target": "printer"
+  },
+  {
+   "source": "test page print failure",
+   "relation": "INDICATES",
+   "target": "printer offline or jobs stuck in queue"
+  },
+  {
+   "source": "PaperCut web interface shows not Online/Ready",
+   "relation": "INDICATES",
+   "target": "printer offline or jobs stuck in queue"
+  },
+  {
+   "source": "machine certificate missing for 802.1X",
+   "relation": "CAUSED_BY",
+   "target": "printer offline or jobs stuck in queue"
+  },
+  {
+   "source": "machine certificate missing for 802.1X",
+   "relation": "FIXED_BY",
+   "target": "involve Network Support team"
+  }
+ ]
+}

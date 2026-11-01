@@ -1,0 +1,95 @@
+{
+ "entities": [
+  {
+   "name": "headset and microphone not working in calls",
+   "type": "Symptom"
+  },
+  {
+   "name": "incorrect speaker and microphone selection in Teams",
+   "type": "Cause"
+  },
+  {
+   "name": "Bluetooth connection issue",
+   "type": "Cause"
+  },
+  {
+   "name": "defective headset hardware",
+   "type": "Cause"
+  },
+  {
+   "name": "select correct audio devices in Teams Settings",
+   "type": "Fix"
+  },
+  {
+   "name": "re-pair Bluetooth headset",
+   "type": "Fix"
+  },
+  {
+   "name": "test headset on another computer",
+   "type": "Fix"
+  },
+  {
+   "name": "replace defective headset",
+   "type": "Fix"
+  },
+  {
+   "name": "Microsoft Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Bluetooth headset",
+   "type": "Component"
+  },
+  {
+   "name": "wired headset",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "headset and microphone not working in calls",
+   "relation": "CAUSED_BY",
+   "target": "incorrect speaker and microphone selection in Teams"
+  },
+  {
+   "source": "headset and microphone not working in calls",
+   "relation": "CAUSED_BY",
+   "target": "Bluetooth connection issue"
+  },
+  {
+   "source": "headset and microphone not working in calls",
+   "relation": "CAUSED_BY",
+   "target": "defective headset hardware"
+  },
+  {
+   "source": "incorrect speaker and microphone selection in Teams",
+   "relation": "FIXED_BY",
+   "target": "select correct audio devices in Teams Settings"
+  },
+  {
+   "source": "Bluetooth connection issue",
+   "relation": "FIXED_BY",
+   "target": "re-pair Bluetooth headset"
+  },
+  {
+   "source": "defective headset hardware",
+   "relation": "FIXED_BY",
+   "target": "replace defective headset"
+  },
+  {
+   "source": "headset and microphone not working in calls",
+   "relation": "AFFECTS",
+   "target": "Microsoft Teams"
+  },
+  {
+   "source": "Bluetooth headset",
+   "relation": "PART_OF",
+   "target": "Bluetooth headset"
+  },
+  {
+   "source": "wired headset",
+   "relation": "PART_OF",
+   "target": "wired headset"
+  }
+ ]
+}

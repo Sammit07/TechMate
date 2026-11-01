@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "first day login",
+   "type": "Symptom"
+  },
+  {
+   "name": "account creation process",
+   "type": "Component"
+  },
+  {
+   "name": "AD user object lookup",
+   "type": "Component"
+  },
+  {
+   "name": "temporary password assignment",
+   "type": "Fix"
+  },
+  {
+   "name": "Exchange Online mailbox creation",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft 365 license assignment",
+   "type": "Component"
+  },
+  {
+   "name": "distribution list membership",
+   "type": "Component"
+  },
+  {
+   "name": "hiring manager notification",
+   "type": "Fix"
+  },
+  {
+   "name": "ticket closure",
+   "type": "Fix"
+  },
+  {
+   "name": "MFA registration failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "mailbox not appearing in Outlook",
+   "type": "Symptom"
+  },
+  {
+   "name": "account remains disabled post-start-date",
+   "type": "Symptom"
+  },
+  {
+   "name": "Identity & Access Management (IAM) team",
+   "type": "Product"
+  },
+  {
+   "name": "Security Operations team",
+   "type": "Product"
+  },
+  {
+   "name": "password-reset portal",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "first day login",
+   "relation": "CAUSED_BY",
+   "target": "account creation process"
+  },
+  {
+   "source": "AD user object lookup",
+   "relation": "PART_OF",
+   "target": "account creation process"
+  },
+  {
+   "source": "temporary password assignment",
+   "relation": "FIXED_BY",
+   "target": "account creation process"
+  },
+  {
+   "source": "Exchange Online mailbox creation",
+   "relation": "AFFECTS",
+   "target": "Outlook access"
+  },
+  {
+   "source": "Microsoft 365 license assignment",
+   "relation": "AFFECTS",
+   "target": "Outlook access"
+  },
+  {
+   "source": "distribution list membership",
+   "relation": "AFFECTS",
+   "target": "Teams access"
+  },
+  {
+   "source": "hiring manager notification",
+   "relation": "FIXED_BY",
+   "target": "first day login"
+  },
+  {
+   "source": "ticket closure",
+   "relation": "FIXED_BY",
+   "target": "first day login"
+  },
+  {
+   "source": "MFA registration failure",
+   "relation": "INDICATES",
+   "target": "Identity & Access Management (IAM) team"
+  },
+  {
+   "source": "mailbox not appearing in Outlook",
+   "relation": "INDICATES",
+   "target": "Identity & Access Management (IAM) team"
+  },
+  {
+   "source": "account remains disabled post-start-date",
+   "relation": "INDICATES",
+   "target": "Identity & Access Management (IAM) team"
+  },
+  {
+   "source": "MFA registration failure",
+   "relation": "FIXED_BY",
+   "target": "Identity & Access Management (IAM) team"
+  },
+  {
+   "source": "mailbox not appearing in Outlook",
+   "relation": "FIXED_BY",
+   "target": "Identity & Access Management (IAM) team"
+  },
+  {
+   "source": "account remains disabled post-start-date",
+   "relation": "FIXED_BY",
+   "target": "Identity & Access Management (IAM) team"
+  }
+ ]
+}

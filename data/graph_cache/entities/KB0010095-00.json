@@ -1,0 +1,147 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 laptops (Dell Latitude 5440/7440, Lenovo ThinkPad T14/X1 Carbon, HP EliteBook 840)",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15 MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "Mobile devices (iOS/Android) using Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "Home routers and modems",
+   "type": "Product"
+  },
+  {
+   "name": "Unable to connect to the GlobalProtect VPN client",
+   "type": "Symptom"
+  },
+  {
+   "name": "error \"Connection timed out\"",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Frequent VPN disconnections every 5-15 minutes",
+   "type": "Symptom"
+  },
+  {
+   "name": "High latency or packet loss when accessing internal sites (ping >100 ms)",
+   "type": "Symptom"
+  },
+  {
+   "name": "Wi-Fi shows limited or no internet access despite router lights on",
+   "type": "Symptom"
+  },
+  {
+   "name": "Speed test results far below subscribed plan (e.g., <10 Mbps download)",
+   "type": "Symptom"
+  },
+  {
+   "name": "ISP service interruption or throttling",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated router firmware",
+   "type": "Cause"
+  },
+  {
+   "name": "Incorrect WAN/LAN settings (double NAT, wrong VLAN)",
+   "type": "Cause"
+  },
+  {
+   "name": "QoS or bandwidth-limiting features interfering with VPN traffic",
+   "type": "Cause"
+  },
+  {
+   "name": "Wi-Fi channel congestion or weak signal",
+   "type": "Cause"
+  },
+  {
+   "name": "Misconfigured DNS causing internal name resolution failures",
+   "type": "Cause"
+  },
+  {
+   "name": "Update router firmware",
+   "type": "Fix"
+  },
+  {
+   "name": "Set the WAN connection to obtain IP address automatically (DHCP)",
+   "type": "Fix"
+  },
+  {
+   "name": "Disable any double NAT",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Unable to connect to the GlobalProtect VPN client",
+   "relation": "CAUSED_BY",
+   "target": "ISP service interruption or throttling"
+  },
+  {
+   "source": "Unable to connect to the GlobalProtect VPN client",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect WAN/LAN settings (double NAT, wrong VLAN)"
+  },
+  {
+   "source": "Frequent VPN disconnections every 5-15 minutes",
+   "relation": "CAUSED_BY",
+   "target": "QoS or bandwidth-limiting features interfering with VPN traffic"
+  },
+  {
+   "source": "High latency or packet loss when accessing internal sites (ping >100 ms)",
+   "relation": "CAUSED_BY",
+   "target": "Wi-Fi channel congestion or weak signal"
+  },
+  {
+   "source": "Wi-Fi shows limited or no internet access despite router lights on",
+   "relation": "CAUSED_BY",
+   "target": "Outdated router firmware"
+  },
+  {
+   "source": "Speed test results far below subscribed plan (e.g., <10 Mbps download)",
+   "relation": "CAUSED_BY",
+   "target": "ISP service interruption or throttling"
+  },
+  {
+   "source": "error \"Connection timed out\"",
+   "relation": "INDICATES",
+   "target": "ISP service interruption or throttling"
+  },
+  {
+   "source": "Unable to connect to the GlobalProtect VPN client",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptops (Dell Latitude 5440/7440, Lenovo ThinkPad T14/X1 Carbon, HP EliteBook 840)"
+  },
+  {
+   "source": "Unable to connect to the GlobalProtect VPN client",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15 MacBook Pro/Air"
+  },
+  {
+   "source": "Unable to connect to the GlobalProtect VPN client",
+   "relation": "AFFECTS",
+   "target": "Mobile devices (iOS/Android) using Microsoft Authenticator"
+  },
+  {
+   "source": "Update router firmware",
+   "relation": "FIXED_BY",
+   "target": "Outdated router firmware"
+  },
+  {
+   "source": "Set the WAN connection to obtain IP address automatically (DHCP)",
+   "relation": "FIXED_BY",
+   "target": "Incorrect WAN/LAN settings (double NAT, wrong VLAN)"
+  },
+  {
+   "source": "Disable any double NAT",
+   "relation": "FIXED_BY",
+   "target": "Incorrect WAN/LAN settings (double NAT, wrong VLAN)"
+  }
+ ]
+}

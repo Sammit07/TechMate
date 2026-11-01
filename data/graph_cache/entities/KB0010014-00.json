@@ -1,0 +1,167 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 (23H2/24H2)",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Entra ID (Azure AD)",
+   "type": "Product"
+  },
+  {
+   "name": "On-premises Active Directory",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft 365 (Outlook, Teams, OneDrive)",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal (Intune)",
+   "type": "Product"
+  },
+  {
+   "name": "Password reset portal https://passwordreset.acme.example",
+   "type": "Product"
+  },
+  {
+   "name": "Sign-in screen shows \"User not found\" or \"Account disabled\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "Password prompt appears but password is unknown or expired",
+   "type": "Symptom"
+  },
+  {
+   "name": "After entering credentials, MFA prompt does not appear or fails",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outlook/Web shows \"Mailbox not found\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "Teams shows \"You don't have access to any teams\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "HR start date not yet processed",
+   "type": "Cause"
+  },
+  {
+   "name": "account remains disabled",
+   "type": "Cause"
+  },
+  {
+   "name": "AD user object or mailbox not created during onboarding",
+   "type": "Cause"
+  },
+  {
+   "name": "Required Microsoft 365 licenses (E5/E3) not assigned",
+   "type": "Cause"
+  },
+  {
+   "name": "Initial password not set or communicated",
+   "type": "Cause"
+  },
+  {
+   "name": "MFA registration method not configured (no Authenticator device)",
+   "type": "Cause"
+  },
+  {
+   "name": "claim your account, set a strong password, and register MFA",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Sign-in screen shows \"User not found\" or \"Account disabled\"",
+   "relation": "CAUSED_BY",
+   "target": "HR start date not yet processed"
+  },
+  {
+   "source": "Sign-in screen shows \"User not found\" or \"Account disabled\"",
+   "relation": "CAUSED_BY",
+   "target": "account remains disabled"
+  },
+  {
+   "source": "Password prompt appears but password is unknown or expired",
+   "relation": "CAUSED_BY",
+   "target": "Initial password not set or communicated"
+  },
+  {
+   "source": "After entering credentials, MFA prompt does not appear or fails",
+   "relation": "CAUSED_BY",
+   "target": "MFA registration method not configured (no Authenticator device)"
+  },
+  {
+   "source": "Outlook/Web shows \"Mailbox not found\"",
+   "relation": "CAUSED_BY",
+   "target": "AD user object or mailbox not created during onboarding"
+  },
+  {
+   "source": "Teams shows \"You don't have access to any teams\"",
+   "relation": "CAUSED_BY",
+   "target": "AD user object or mailbox not created during onboarding"
+  },
+  {
+   "source": "Outlook/Web shows \"Mailbox not found\"",
+   "relation": "CAUSED_BY",
+   "target": "Required Microsoft 365 licenses (E5/E3) not assigned"
+  },
+  {
+   "source": "Teams shows \"You don't have access to any teams\"",
+   "relation": "CAUSED_BY",
+   "target": "Required Microsoft 365 licenses (E5/E3) not assigned"
+  },
+  {
+   "source": "HR start date not yet processed",
+   "relation": "AFFECTS",
+   "target": "Microsoft Entra ID (Azure AD)"
+  },
+  {
+   "source": "account remains disabled",
+   "relation": "AFFECTS",
+   "target": "On-premises Active Directory"
+  },
+  {
+   "source": "AD user object or mailbox not created during onboarding",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 (Outlook, Teams, OneDrive)"
+  },
+  {
+   "source": "Required Microsoft 365 licenses (E5/E3) not assigned",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 (Outlook, Teams, OneDrive)"
+  },
+  {
+   "source": "Initial password not set or communicated",
+   "relation": "AFFECTS",
+   "target": "Password reset portal https://passwordreset.acme.example"
+  },
+  {
+   "source": "MFA registration method not configured (no Authenticator device)",
+   "relation": "AFFECTS",
+   "target": "Company Portal (Intune)"
+  },
+  {
+   "source": "claim your account, set a strong password, and register MFA",
+   "relation": "FIXED_BY",
+   "target": "Sign-in screen shows \"User not found\" or \"Account disabled\""
+  },
+  {
+   "source": "claim your account, set a strong password, and register MFA",
+   "relation": "FIXED_BY",
+   "target": "Password prompt appears but password is unknown or expired"
+  },
+  {
+   "source": "claim your account, set a strong password, and register MFA",
+   "relation": "FIXED_BY",
+   "target": "After entering credentials, MFA prompt does not appear or fails"
+  }
+ ]
+}

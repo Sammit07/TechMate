@@ -1,0 +1,132 @@
+{
+ "entities": [
+  {
+   "name": "corporate network",
+   "type": "Component"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect VPN",
+   "type": "Product"
+  },
+  {
+   "name": "free disk space",
+   "type": "Component"
+  },
+  {
+   "name": "stuck Windows Update",
+   "type": "Symptom"
+  },
+  {
+   "name": "update component reset",
+   "type": "Fix"
+  },
+  {
+   "name": "Windows Update Troubleshooter",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Service-Desk Agent Procedure",
+   "type": "Component"
+  },
+  {
+   "name": "Self-Help Procedure",
+   "type": "Component"
+  },
+  {
+   "name": "patch-related incident",
+   "type": "Symptom"
+  },
+  {
+   "name": "error message",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "network connectivity",
+   "type": "Component"
+  },
+  {
+   "name": "disk space check",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "stuck Windows Update",
+   "relation": "CAUSED_BY",
+   "target": "insufficient disk space"
+  },
+  {
+   "source": "stuck Windows Update",
+   "relation": "CAUSED_BY",
+   "target": "network connectivity issue"
+  },
+  {
+   "source": "patch-related incident",
+   "relation": "INDICATES",
+   "target": "error message"
+  },
+  {
+   "source": "update component reset",
+   "relation": "FIXED_BY",
+   "target": "stuck Windows Update"
+  },
+  {
+   "source": "Windows Update Troubleshooter",
+   "relation": "FIXED_BY",
+   "target": "stuck Windows Update"
+  },
+  {
+   "source": "Service-Desk Agent Procedure",
+   "relation": "AFFECTS",
+   "target": "patch-related incident"
+  },
+  {
+   "source": "Self-Help Procedure",
+   "relation": "AFFECTS",
+   "target": "stuck Windows Update"
+  },
+  {
+   "source": "corporate network",
+   "relation": "PART_OF",
+   "target": "ACME-Corp Wi-Fi"
+  },
+  {
+   "source": "corporate network",
+   "relation": "PART_OF",
+   "target": "GlobalProtect VPN"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "disk space check"
+  },
+  {
+   "source": "free disk space",
+   "relation": "AFFECTS",
+   "target": "Windows Update"
+  },
+  {
+   "source": "network connectivity",
+   "relation": "AFFECTS",
+   "target": "Windows Update"
+  },
+  {
+   "source": "error message",
+   "relation": "INDICATES",
+   "target": "stuck Windows Update"
+  },
+  {
+   "source": "disk space check",
+   "relation": "FIXED_BY",
+   "target": "insufficient disk space"
+  }
+ ]
+}

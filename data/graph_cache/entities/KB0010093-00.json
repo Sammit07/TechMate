@@ -1,0 +1,117 @@
+{
+ "entities": [
+  {
+   "name": "Acme Global IT Support Hours",
+   "type": "Component"
+  },
+  {
+   "name": "Self-Service Portal URL",
+   "type": "Component"
+  },
+  {
+   "name": "Phone Extension HELP",
+   "type": "Component"
+  },
+  {
+   "name": "Teams Channel IT Help",
+   "type": "Component"
+  },
+  {
+   "name": "User Unsure of Support Availability",
+   "type": "Symptom"
+  },
+  {
+   "name": "No Response Outside Published Hours",
+   "type": "Symptom"
+  },
+  {
+   "name": "Need P1 Contact After Hours",
+   "type": "Symptom"
+  },
+  {
+   "name": "Lack of Awareness of Support Schedule",
+   "type": "Cause"
+  },
+  {
+   "name": "Confusion Between Contact Methods",
+   "type": "Cause"
+  },
+  {
+   "name": "Unclear Escalation Path for P1 Incidents",
+   "type": "Cause"
+  },
+  {
+   "name": "Regular Support Hours Mon-Fri 08:00-20:00 IST",
+   "type": "Fix"
+  },
+  {
+   "name": "24x7 Phone Support for P1 Incidents",
+   "type": "Fix"
+  },
+  {
+   "name": "Check Portal Banner for Status",
+   "type": "Fix"
+  },
+  {
+   "name": "Dial Extension 4357 for P1 After Hours",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "User Unsure of Support Availability",
+   "relation": "CAUSED_BY",
+   "target": "Lack of Awareness of Support Schedule"
+  },
+  {
+   "source": "No Response Outside Published Hours",
+   "relation": "CAUSED_BY",
+   "target": "Confusion Between Contact Methods"
+  },
+  {
+   "source": "Need P1 Contact After Hours",
+   "relation": "CAUSED_BY",
+   "target": "Unclear Escalation Path for P1 Incidents"
+  },
+  {
+   "source": "User Unsure of Support Availability",
+   "relation": "FIXED_BY",
+   "target": "Check Portal Banner for Status"
+  },
+  {
+   "source": "No Response Outside Published Hours",
+   "relation": "FIXED_BY",
+   "target": "Check Portal Banner for Status"
+  },
+  {
+   "source": "Need P1 Contact After Hours",
+   "relation": "FIXED_BY",
+   "target": "Dial Extension 4357 for P1 After Hours"
+  },
+  {
+   "source": "Regular Support Hours Mon-Fri 08:00-20:00 IST",
+   "relation": "AFFECTS",
+   "target": "Acme Global IT Support Hours"
+  },
+  {
+   "source": "24x7 Phone Support for P1 Incidents",
+   "relation": "AFFECTS",
+   "target": "Acme Global IT Support Hours"
+  },
+  {
+   "source": "Self-Service Portal URL",
+   "relation": "PART_OF",
+   "target": "Acme Global IT Support Hours"
+  },
+  {
+   "source": "Phone Extension HELP",
+   "relation": "PART_OF",
+   "target": "Acme Global IT Support Hours"
+  },
+  {
+   "source": "Teams Channel IT Help",
+   "relation": "PART_OF",
+   "target": "Acme Global IT Support Hours"
+  }
+ ]
+}

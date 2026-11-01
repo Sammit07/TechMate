@@ -1,0 +1,186 @@
+{
+ "entities": [
+  {
+   "name": "Acme-Global issued laptop",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "macOS laptops",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "BitLocker",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive/SharePoint",
+   "type": "Product"
+  },
+  {
+   "name": "Unable to establish GlobalProtect VPN connection",
+   "type": "Symptom"
+  },
+  {
+   "name": "Certificate not trusted",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Connection timed out",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "MFA push notification not received",
+   "type": "Symptom"
+  },
+  {
+   "name": "BitLocker recovery key prompt appears after boot",
+   "type": "Symptom"
+  },
+  {
+   "name": "OneDrive/SharePoint shows You're offline or sync errors",
+   "type": "Symptom"
+  },
+  {
+   "name": "Local Wi-Fi networks block 802.1X authentication",
+   "type": "Symptom"
+  },
+  {
+   "name": "Expired or missing machine certificate for GlobalProtect VPN",
+   "type": "Cause"
+  },
+  {
+   "name": "Device not connected to a network that allows outbound HTTPS/443 to vpn.acme.example",
+   "type": "Cause"
+  },
+  {
+   "name": "Time-zone drift causing token validation issues for MFA",
+   "type": "Cause"
+  },
+  {
+   "name": "BitLocker/TMPM protection triggered due to unexpected hardware change",
+   "type": "Cause"
+  },
+  {
+   "name": "Local regulations restricting use of strong encryption or corporate VPN",
+   "type": "Cause"
+  },
+  {
+   "name": "Verify GlobalProtect machine certificate validity",
+   "type": "Fix"
+  },
+  {
+   "name": "Confirm device compliance in Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "Enroll secondary MFA method (SMS)",
+   "type": "Fix"
+  },
+  {
+   "name": "Back up BitLocker recovery key from Intune portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Test VPN connection from home or office network",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Unable to establish GlobalProtect VPN connection",
+   "relation": "CAUSED_BY",
+   "target": "Expired or missing machine certificate for GlobalProtect VPN"
+  },
+  {
+   "source": "Certificate not trusted",
+   "relation": "INDICATES",
+   "target": "Expired or missing machine certificate for GlobalProtect VPN"
+  },
+  {
+   "source": "Connection timed out",
+   "relation": "INDICATES",
+   "target": "Device not connected to a network that allows outbound HTTPS/443 to vpn.acme.example"
+  },
+  {
+   "source": "MFA push notification not received",
+   "relation": "CAUSED_BY",
+   "target": "Time-zone drift causing token validation issues for MFA"
+  },
+  {
+   "source": "BitLocker recovery key prompt appears after boot",
+   "relation": "CAUSED_BY",
+   "target": "BitLocker/TMPM protection triggered due to unexpected hardware change"
+  },
+  {
+   "source": "OneDrive/SharePoint shows You're offline or sync errors",
+   "relation": "CAUSED_BY",
+   "target": "Local regulations restricting use of strong encryption or corporate VPN"
+  },
+  {
+   "source": "Local Wi-Fi networks block 802.1X authentication",
+   "relation": "CAUSED_BY",
+   "target": "Local regulations restricting use of strong encryption or corporate VPN"
+  },
+  {
+   "source": "Expired or missing machine certificate for GlobalProtect VPN",
+   "relation": "FIXED_BY",
+   "target": "Verify GlobalProtect machine certificate validity"
+  },
+  {
+   "source": "Device not connected to a network that allows outbound HTTPS/443 to vpn.acme.example",
+   "relation": "FIXED_BY",
+   "target": "Test VPN connection from home or office network"
+  },
+  {
+   "source": "Time-zone drift causing token validation issues for MFA",
+   "relation": "FIXED_BY",
+   "target": "Enroll secondary MFA method (SMS)"
+  },
+  {
+   "source": "BitLocker/TMPM protection triggered due to unexpected hardware change",
+   "relation": "FIXED_BY",
+   "target": "Back up BitLocker recovery key from Intune portal"
+  },
+  {
+   "source": "Unable to establish GlobalProtect VPN connection",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "MFA push notification not received",
+   "relation": "AFFECTS",
+   "target": "Microsoft Authenticator"
+  },
+  {
+   "source": "BitLocker recovery key prompt appears after boot",
+   "relation": "AFFECTS",
+   "target": "BitLocker"
+  },
+  {
+   "source": "OneDrive/SharePoint shows You're offline or sync errors",
+   "relation": "AFFECTS",
+   "target": "OneDrive/SharePoint"
+  },
+  {
+   "source": "Local Wi-Fi networks block 802.1X authentication",
+   "relation": "AFFECTS",
+   "target": "Wi-Fi networks"
+  }
+ ]
+}

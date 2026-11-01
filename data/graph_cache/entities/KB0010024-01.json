@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "docking station Ethernet not working",
+   "type": "Symptom"
+  },
+  {
+   "name": "link LEDs on docking station Ethernet port",
+   "type": "Component"
+  },
+  {
+   "name": "network cable unplugged",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "power cycle the docking station",
+   "type": "Fix"
+  },
+  {
+   "name": "update docking station firmware",
+   "type": "Fix"
+  },
+  {
+   "name": "update USB-C/Ethernet driver",
+   "type": "Fix"
+  },
+  {
+   "name": "reset network adapter",
+   "type": "Fix"
+  },
+  {
+   "name": "check Ethernet adapter status",
+   "type": "Fix"
+  },
+  {
+   "name": "ping 8.8.8.8 or browse to https://it.acme.example",
+   "type": "Fix"
+  },
+  {
+   "name": "docking station or its firmware/driver is suspect",
+   "type": "Cause"
+  },
+  {
+   "name": "laptop connected directly to wall jack",
+   "type": "Fix"
+  },
+  {
+   "name": "swap Ethernet cable",
+   "type": "Fix"
+  },
+  {
+   "name": "Dell Dock",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo Thunderbolt Dock",
+   "type": "Product"
+  },
+  {
+   "name": "HP Dock",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "docking station Ethernet not working",
+   "relation": "CAUSED_BY",
+   "target": "docking station or its firmware/driver is suspect"
+  },
+  {
+   "source": "network cable unplugged",
+   "relation": "INDICATES",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "link LEDs on docking station Ethernet port",
+   "relation": "AFFECTS",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "power cycle the docking station",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "update docking station firmware",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "update USB-C/Ethernet driver",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "reset network adapter",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "check Ethernet adapter status",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "ping 8.8.8.8 or browse to https://it.acme.example",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "laptop connected directly to wall jack",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "swap Ethernet cable",
+   "relation": "FIXED_BY",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "Dell Dock",
+   "relation": "PART_OF",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "Lenovo Thunderbolt Dock",
+   "relation": "PART_OF",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "HP Dock",
+   "relation": "PART_OF",
+   "target": "docking station Ethernet not working"
+  }
+ ]
+}

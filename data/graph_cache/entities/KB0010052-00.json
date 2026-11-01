@@ -1,0 +1,155 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 22H2/23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14 Ventura or macOS 15 Sonoma",
+   "type": "Product"
+  },
+  {
+   "name": "Camera not detected in Microsoft Teams, Zoom, or the Camera app",
+   "type": "Symptom"
+  },
+  {
+   "name": "error 'We can\\'t find your camera'",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "No sound from speakers or headphones",
+   "type": "Symptom"
+  },
+  {
+   "name": "audio icon shows mute or 'No output device found'",
+   "type": "Symptom"
+  },
+  {
+   "name": "Bluetooth toggle missing from Settings -> Devices",
+   "type": "Symptom"
+  },
+  {
+   "name": "Device Manager shows Bluetooth adapter with a down arrow",
+   "type": "Symptom"
+  },
+  {
+   "name": "Microphone input shows zero level in Sound settings",
+   "type": "Symptom"
+  },
+  {
+   "name": "Windows privacy settings have turned off camera, microphone, or Bluetooth access for apps",
+   "type": "Cause"
+  },
+  {
+   "name": "The respective hardware device (camera, audio endpoint, Bluetooth radio) is disabled in Device Manager",
+   "type": "Cause"
+  },
+  {
+   "name": "Incorrect default playback or recording device selected in Sound settings",
+   "type": "Cause"
+  },
+  {
+   "name": "Third-party security software or Group Policy overriding privacy toggles",
+   "type": "Cause"
+  },
+  {
+   "name": "Open Settings -> Privacy & security",
+   "type": "Fix"
+  },
+  {
+   "name": "Ensure the toggle 'Camera access for this device' is ON",
+   "type": "Fix"
+  },
+  {
+   "name": "Under 'Allow apps to access your camera', ensure the toggle is ON",
+   "type": "Fix"
+  },
+  {
+   "name": "Confirm that the physical hardware switch or function-key is not inadvertently disabling the device",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Camera not detected in Microsoft Teams, Zoom, or the Camera app",
+   "relation": "CAUSED_BY",
+   "target": "Windows privacy settings have turned off camera, microphone, or Bluetooth access for apps"
+  },
+  {
+   "source": "error 'We can\\'t find your camera'",
+   "relation": "INDICATES",
+   "target": "Windows privacy settings have turned off camera, microphone, or Bluetooth access for apps"
+  },
+  {
+   "source": "No sound from speakers or headphones",
+   "relation": "CAUSED_BY",
+   "target": "Windows privacy settings have turned off camera, microphone, or Bluetooth access for apps"
+  },
+  {
+   "source": "audio icon shows mute or 'No output device found'",
+   "relation": "CAUSED_BY",
+   "target": "Windows privacy settings have turned off camera, microphone, or Bluetooth access for apps"
+  },
+  {
+   "source": "Bluetooth toggle missing from Settings -> Devices",
+   "relation": "CAUSED_BY",
+   "target": "Windows privacy settings have turned off camera, microphone, or Bluetooth access for apps"
+  },
+  {
+   "source": "Device Manager shows Bluetooth adapter with a down arrow",
+   "relation": "CAUSED_BY",
+   "target": "The respective hardware device (camera, audio endpoint, Bluetooth radio) is disabled in Device Manager"
+  },
+  {
+   "source": "Microphone input shows zero level in Sound settings",
+   "relation": "CAUSED_BY",
+   "target": "Windows privacy settings have turned off camera, microphone, or Bluetooth access for apps"
+  },
+  {
+   "source": "Windows privacy settings have turned off camera, microphone, or Bluetooth access for apps",
+   "relation": "AFFECTS",
+   "target": "Windows 11 22H2/23H2/24H2"
+  },
+  {
+   "source": "The respective hardware device (camera, audio endpoint, Bluetooth radio) is disabled in Device Manager",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "Open Settings -> Privacy & security",
+   "relation": "FIXED_BY",
+   "target": "Windows privacy settings have turned off camera, microphone, or Bluetooth access for apps"
+  },
+  {
+   "source": "Ensure the toggle 'Camera access for this device' is ON",
+   "relation": "FIXED_BY",
+   "target": "Windows privacy settings have turned off camera, microphone, or Bluetooth access for apps"
+  },
+  {
+   "source": "Under 'Allow apps to access your camera', ensure the toggle is ON",
+   "relation": "FIXED_BY",
+   "target": "Windows privacy settings have turned off camera, microphone, or Bluetooth access for apps"
+  },
+  {
+   "source": "Confirm that the physical hardware switch or function-key is not inadvertently disabling the device",
+   "relation": "FIXED_BY",
+   "target": "The respective hardware device (camera, audio endpoint, Bluetooth radio) is disabled in Device Manager"
+  }
+ ]
+}

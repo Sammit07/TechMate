@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "laptop not charging or battery draining fast",
+   "type": "Symptom"
+  },
+  {
+   "name": "AC adapter brick, cable, and connector",
+   "type": "Component"
+  },
+  {
+   "name": "charging LED",
+   "type": "Component"
+  },
+  {
+   "name": "battery icon",
+   "type": "Component"
+  },
+  {
+   "name": "embedded controller (EC) reset",
+   "type": "Fix"
+  },
+  {
+   "name": "BIOS/UEFI battery information page",
+   "type": "Component"
+  },
+  {
+   "name": "design capacity vs. full charge capacity",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft ACPI-Compliant Control Method Battery",
+   "type": "Component"
+  },
+  {
+   "name": "uninstall battery driver",
+   "type": "Fix"
+  },
+  {
+   "name": "System Management Controller (SMC) reset",
+   "type": "Fix"
+  },
+  {
+   "name": "charger LED illuminates",
+   "type": "Symptom"
+  },
+  {
+   "name": "Plugged in, not charging",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "charger and cable",
+   "type": "Component"
+  },
+  {
+   "name": "known-good spare charger",
+   "type": "Component"
+  },
+  {
+   "name": "swollen cells",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "laptop not charging or battery draining fast",
+   "relation": "CAUSED_BY",
+   "target": "swollen cells"
+  },
+  {
+   "source": "Plugged in, not charging",
+   "relation": "INDICATES",
+   "target": "swollen cells"
+  },
+  {
+   "source": "AC adapter brick, cable, and connector",
+   "relation": "AFFECTS",
+   "target": "laptop not charging or battery draining fast"
+  },
+  {
+   "source": "charging LED",
+   "relation": "AFFECTS",
+   "target": "laptop not charging or battery draining fast"
+  },
+  {
+   "source": "battery icon",
+   "relation": "AFFECTS",
+   "target": "laptop not charging or battery draining fast"
+  },
+  {
+   "source": "embedded controller (EC) reset",
+   "relation": "FIXED_BY",
+   "target": "laptop not charging or battery draining fast"
+  },
+  {
+   "source": "BIOS/UEFI battery information page",
+   "relation": "AFFECTS",
+   "target": "target': "
+  },
+  {
+   "source": "design capacity vs. full charge capacity",
+   "relation": "AFFECTS",
+   "target": "laptop not charging or battery draining fast"
+  },
+  {
+   "source": "Microsoft ACPI-Compliant Control Method Battery",
+   "relation": "PART_OF",
+   "target": "laptop not charging or battery draining fast"
+  },
+  {
+   "source": "uninstall battery driver",
+   "relation": "FIXED_BY",
+   "target": "laptop not charging or battery draining fast"
+  },
+  {
+   "source": "System Management Controller (SMC) reset",
+   "relation": "FIXED_BY",
+   "target": "laptop not charging or battery draining fast"
+  },
+  {
+   "source": "charger LED illuminates",
+   "relation": "INDICATES",
+   "target": "charger and cable"
+  },
+  {
+   "source": "charger and cable",
+   "relation": "AFFECTS",
+   "target": "laptop not charging or battery draining fast"
+  },
+  {
+   "source": "known-good spare charger",
+   "relation": "FIXED_BY",
+   "target": "laptop not charging or battery draining fast"
+  }
+ ]
+}

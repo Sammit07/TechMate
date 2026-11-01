@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "regular support hours",
+   "type": "Symptom"
+  },
+  {
+   "name": "after-hours mode",
+   "type": "Symptom"
+  },
+  {
+   "name": "P1 issue",
+   "type": "Symptom"
+  },
+  {
+   "name": "non-urgent request",
+   "type": "Symptom"
+  },
+  {
+   "name": "extension 4357 (HELP)",
+   "type": "Component"
+  },
+  {
+   "name": "self-service portal",
+   "type": "Product"
+  },
+  {
+   "name": "Teams \"IT Help\" channel",
+   "type": "Component"
+  },
+  {
+   "name": "ticket number",
+   "type": "Component"
+  },
+  {
+   "name": "confirmation email",
+   "type": "Component"
+  },
+  {
+   "name": "Priority 1 (Critical) incident",
+   "type": "Symptom"
+  },
+  {
+   "name": "Identity & Access Management",
+   "type": "Product"
+  },
+  {
+   "name": "Network Support",
+   "type": "Product"
+  },
+  {
+   "name": "Messaging & Collaboration",
+   "type": "Product"
+  },
+  {
+   "name": "Security Operations",
+   "type": "Product"
+  },
+  {
+   "name": "dial-in number",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "after-hours mode",
+   "relation": "CAUSED_BY",
+   "target": "outside regular support hours (08:00-20:00 IST)"
+  },
+  {
+   "source": "P1 issue",
+   "relation": "CAUSED_BY",
+   "target": "critical incident occurring outside regular support hours"
+  },
+  {
+   "source": "non-urgent request",
+   "relation": "AFFECTS",
+   "target": "self-service portal"
+  },
+  {
+   "source": "extension 4357 (HELP)",
+   "relation": "AFFECTS",
+   "target": "self-service portal"
+  },
+  {
+   "source": "Teams \"IT Help\" channel",
+   "relation": "AFFECTS",
+   "target": "self-service portal"
+  },
+  {
+   "source": "ticket number",
+   "relation": "PART_OF",
+   "target": "self-service portal"
+  },
+  {
+   "source": "confirmation email",
+   "relation": "PART_OF",
+   "target": "self-service portal"
+  },
+  {
+   "source": "Priority 1 (Critical) incident",
+   "relation": "FIXED_BY",
+   "target": "call extension 4357 (HELP)"
+  },
+  {
+   "source": "Identity & Access Management",
+   "relation": "AFFECTS",
+   "target": "P1 escalation"
+  },
+  {
+   "source": "Network Support",
+   "relation": "AFFECTS",
+   "target": "P1 escalation"
+  },
+  {
+   "source": "Messaging & Collaboration",
+   "relation": "AFFECTS",
+   "target": "P1 escalation"
+  },
+  {
+   "source": "Security Operations",
+   "relation": "AFFECTS",
+   "target": "P1 escalation"
+  },
+  {
+   "source": "dial-in number",
+   "relation": "AFFECTS",
+   "target": "extension 4357 (HELP)"
+  },
+  {
+   "source": "ticket number",
+   "relation": "FIXED_BY",
+   "target": "verify request"
+  },
+  {
+   "source": "confirmation email",
+   "relation": "FIXED_BY",
+   "target": "verify request"
+  }
+ ]
+}

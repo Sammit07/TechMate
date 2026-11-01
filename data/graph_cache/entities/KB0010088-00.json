@@ -1,0 +1,146 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "Palo Alto GlobalProtect VPN",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft 365 services",
+   "type": "Product"
+  },
+  {
+   "name": "Unable to launch GlobalProtect or connection times out",
+   "type": "Symptom"
+  },
+  {
+   "name": "VPN connects but no access to internal resources",
+   "type": "Symptom"
+  },
+  {
+   "name": "Wi-Fi shows \"ACME-Corp\" but authentication fails with 802.1X error",
+   "type": "Symptom"
+  },
+  {
+   "name": "MFA push notification not received or denied",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outlook/Teams shows \"Cannot connect to server\" or \"Your organization's data cannot be accessed\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "Print jobs stall in PaperCut queue when off-site",
+   "type": "Symptom"
+  },
+  {
+   "name": "Misconfigured or expired GlobalProtect client certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "Local ISP blocking UDP 4500/500 or TCP 443 used by GlobalProtect",
+   "type": "Cause"
+  },
+  {
+   "name": "Wi-Fi profile missing machine certificate or using wrong SSID",
+   "type": "Cause"
+  },
+  {
+   "name": "Conditional Access policies requiring MFA or compliant device not met",
+   "type": "Cause"
+  },
+  {
+   "name": "Expired password or lockout after failed attempts",
+   "type": "Cause"
+  },
+  {
+   "name": "Split-tunneling routes preventing traffic to internal DNS servers",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Unable to launch GlobalProtect or connection times out",
+   "relation": "CAUSED_BY",
+   "target": "Misconfigured or expired GlobalProtect client certificate"
+  },
+  {
+   "source": "Unable to launch GlobalProtect or connection times out",
+   "relation": "CAUSED_BY",
+   "target": "Local ISP blocking UDP 4500/500 or TCP 443 used by GlobalProtect"
+  },
+  {
+   "source": "VPN connects but no access to internal resources",
+   "relation": "CAUSED_BY",
+   "target": "Split-tunneling routes preventing traffic to internal DNS servers"
+  },
+  {
+   "source": "Wi-Fi shows \"ACME-Corp\" but authentication fails with 802.1X error",
+   "relation": "CAUSED_BY",
+   "target": "Wi-Fi profile missing machine certificate or using wrong SSID"
+  },
+  {
+   "source": "MFA push notification not received or denied",
+   "relation": "CAUSED_BY",
+   "target": "Conditional Access policies requiring MFA or compliant device not met"
+  },
+  {
+   "source": "Outlook/Teams shows \"Cannot connect to server\" or \"Your organization's data cannot be accessed\"",
+   "relation": "CAUSED_BY",
+   "target": "Expired password or lockout after failed attempts"
+  },
+  {
+   "source": "Print jobs stall in PaperCut queue when off-site",
+   "relation": "CAUSED_BY",
+   "target": "VPN connects but no access to internal resources"
+  },
+  {
+   "source": "Misconfigured or expired GlobalProtect client certificate",
+   "relation": "AFFECTS",
+   "target": "Palo Alto GlobalProtect VPN"
+  },
+  {
+   "source": "Local ISP blocking UDP 4500/500 or TCP 443 used by GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "Palo Alto GlobalProtect VPN"
+  },
+  {
+   "source": "Wi-Fi profile missing machine certificate or using wrong SSID",
+   "relation": "AFFECTS",
+   "target": "ACME-Corp Wi-Fi network"
+  },
+  {
+   "source": "Conditional Access policies requiring MFA or compliant device not met",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 services"
+  },
+  {
+   "source": "Expired password or lockout after failed attempts",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 services"
+  },
+  {
+   "source": "Split-tunneling routes preventing traffic to internal DNS servers",
+   "relation": "AFFECTS",
+   "target": "Internal resources"
+  },
+  {
+   "source": "Unable to launch GlobalProtect or connection times out",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptops"
+  },
+  {
+   "source": "VPN connects but no access to internal resources",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptops"
+  },
+  {
+   "source": "Wi-Fi shows \"ACME-Corp\" but authentication fails with 802.1X error",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptops"
+  }
+ ]
+}

@@ -1,0 +1,170 @@
+{
+ "entities": [
+  {
+   "name": "Self-Service Password Reset Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Windows Login",
+   "type": "Product"
+  },
+  {
+   "name": "macOS Login",
+   "type": "Product"
+  },
+  {
+   "name": "VPN Connection",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft 365 Services",
+   "type": "Product"
+  },
+  {
+   "name": "Cached Credentials Not Updated",
+   "type": "Cause"
+  },
+  {
+   "name": "Password Does Not Meet Complexity Requirements",
+   "type": "Cause"
+  },
+  {
+   "name": "Authentication Method Unavailable",
+   "type": "Cause"
+  },
+  {
+   "name": "Username or Password Incorrect",
+   "type": "Symptom"
+  },
+  {
+   "name": "Password Expired Must Be Changed",
+   "type": "Symptom"
+  },
+  {
+   "name": "Account Locked Due to Failed Sign-In Attempts",
+   "type": "Symptom"
+  },
+  {
+   "name": "Unable to Connect to VPN - Cached Credentials Outdated",
+   "type": "Symptom"
+  },
+  {
+   "name": "Did Not Receive Password Reset Verification Email/SMS",
+   "type": "Symptom"
+  },
+  {
+   "name": "Access Self-Service Password Reset Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Update Cached Credentials After Password Change",
+   "type": "Fix"
+  },
+  {
+   "name": "Contact Service Desk for Temporary Access Pass",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Username or Password Incorrect",
+   "relation": "CAUSED_BY",
+   "target": "Forgotten or Expired Password"
+  },
+  {
+   "source": "Password Expired Must Be Changed",
+   "relation": "CAUSED_BY",
+   "target": "Expired Password"
+  },
+  {
+   "source": "Account Locked Due to Failed Sign-In Attempts",
+   "relation": "CAUSED_BY",
+   "target": "Account Lockout After 5 Failed Attempts"
+  },
+  {
+   "source": "Unable to Connect to VPN - Cached Credentials Outdated",
+   "relation": "CAUSED_BY",
+   "target": "Cached Credentials Not Updated"
+  },
+  {
+   "source": "Did Not Receive Password Reset Verification Email/SMS",
+   "relation": "CAUSED_BY",
+   "target": "Authentication Method Unavailable"
+  },
+  {
+   "source": "New Password Does Not Meet Complexity Requirements",
+   "relation": "CAUSED_BY",
+   "target": "Password Does Not Meet Complexity Requirements"
+  },
+  {
+   "source": "Username or Password Incorrect",
+   "relation": "INDICATES",
+   "target": "Forgotten or Expired Password"
+  },
+  {
+   "source": "Password Expired Must Be Changed",
+   "relation": "INDICATES",
+   "target": "Expired Password"
+  },
+  {
+   "source": "Account Locked Due to Failed Sign-In Attempts",
+   "relation": "INDICATES",
+   "target": "Account Lockout After 5 Failed Attempts"
+  },
+  {
+   "source": "Unable to Connect to VPN - Cached Credentials Outdated",
+   "relation": "INDICATES",
+   "target": "Cached Credentials Not Updated"
+  },
+  {
+   "source": "Did Not Receive Password Reset Verification Email/SMS",
+   "relation": "INDICATES",
+   "target": "Authentication Method Unavailable"
+  },
+  {
+   "source": "New Password Does Not Meet Complexity Requirements",
+   "relation": "INDICATES",
+   "target": "Password Does Not Meet Complexity Requirements"
+  },
+  {
+   "source": "Cached Credentials Not Updated",
+   "relation": "AFFECTS",
+   "target": "VPN Connection"
+  },
+  {
+   "source": "Cached Credentials Not Updated",
+   "relation": "AFFECTS",
+   "target": "Windows Login"
+  },
+  {
+   "source": "Cached Credentials Not Updated",
+   "relation": "AFFECTS",
+   "target": "macOS Login"
+  },
+  {
+   "source": "Access Self-Service Password Reset Portal",
+   "relation": "FIXED_BY",
+   "target": "Username or Password Incorrect"
+  },
+  {
+   "source": "Access Self-Service Password Reset Portal",
+   "relation": "FIXED_BY",
+   "target": "Password Expired Must Be Changed"
+  },
+  {
+   "source": "Access Self-Service Password Reset Portal",
+   "relation": "FIXED_BY",
+   "target": "Account Locked Due to Failed Sign-In Attempts"
+  },
+  {
+   "source": "Update Cached Credentials After Password Change",
+   "relation": "FIXED_BY",
+   "target": "Unable to Connect to VPN - Cached Credentials Outdated"
+  },
+  {
+   "source": "Contact Service Desk for Temporary Access Pass",
+   "relation": "FIXED_BY",
+   "target": "Did Not Receive Password Reset Verification Email/SMS"
+  }
+ ]
+}

@@ -1,0 +1,161 @@
+{
+ "entities": [
+  {
+   "name": "Ethernet cable",
+   "type": "Component"
+  },
+  {
+   "name": "Wall jack",
+   "type": "Component"
+  },
+  {
+   "name": "Docking station",
+   "type": "Component"
+  },
+  {
+   "name": "USB-C/Ethernet adapter",
+   "type": "Component"
+  },
+  {
+   "name": "Network adapter",
+   "type": "Component"
+  },
+  {
+   "name": "Link LED",
+   "type": "Component"
+  },
+  {
+   "name": "IPv4 address",
+   "type": "Component"
+  },
+  {
+   "name": "APIPA address",
+   "type": "Component"
+  },
+  {
+   "name": "DHCP",
+   "type": "Component"
+  },
+  {
+   "name": "No link light",
+   "type": "Symptom"
+  },
+  {
+   "name": "Cable unplugged message",
+   "type": "Symptom"
+  },
+  {
+   "name": "Damaged cable",
+   "type": "Cause"
+  },
+  {
+   "name": "Loose connection",
+   "type": "Cause"
+  },
+  {
+   "name": "Faulty wall jack",
+   "type": "Cause"
+  },
+  {
+   "name": "Replace cable",
+   "type": "Fix"
+  },
+  {
+   "name": "Test with different cable or port",
+   "type": "Fix"
+  },
+  {
+   "name": "Reset network adapter",
+   "type": "Fix"
+  },
+  {
+   "name": "Check IP configuration",
+   "type": "Fix"
+  },
+  {
+   "name": "Restart docking station",
+   "type": "Fix"
+  },
+  {
+   "name": "Open ticket",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "No link light",
+   "relation": "CAUSED_BY",
+   "target": "Damaged cable"
+  },
+  {
+   "source": "No link light",
+   "relation": "CAUSED_BY",
+   "target": "Loose connection"
+  },
+  {
+   "source": "No link light",
+   "relation": "CAUSED_BY",
+   "target": "Faulty wall jack"
+  },
+  {
+   "source": "Cable unplugged message",
+   "relation": "CAUSED_BY",
+   "target": "Loose connection"
+  },
+  {
+   "source": "Damaged cable",
+   "relation": "AFFECTS",
+   "target": "Ethernet cable"
+  },
+  {
+   "source": "Loose connection",
+   "relation": "AFFECTS",
+   "target": "Wall jack"
+  },
+  {
+   "source": "Loose connection",
+   "relation": "AFFECTS",
+   "target": "Docking station"
+  },
+  {
+   "source": "Faulty wall jack",
+   "relation": "AFFECTS",
+   "target": "Wall jack"
+  },
+  {
+   "source": "Replace cable",
+   "relation": "FIXED_BY",
+   "target": "Damaged cable"
+  },
+  {
+   "source": "Test with different cable or port",
+   "relation": "FIXED_BY",
+   "target": "Loose connection"
+  },
+  {
+   "source": "Test with different cable or port",
+   "relation": "FIXED_BY",
+   "target": "Faulty wall jack"
+  },
+  {
+   "source": "Reset network adapter",
+   "relation": "FIXED_BY",
+   "target": "Loose connection"
+  },
+  {
+   "source": "Check IP configuration",
+   "relation": "FIXED_BY",
+   "target": "Loose connection"
+  },
+  {
+   "source": "Restart docking station",
+   "relation": "FIXED_BY",
+   "target": "Loose connection"
+  },
+  {
+   "source": "Open ticket",
+   "relation": "FIXED_BY",
+   "target": "No link light"
+  }
+ ]
+}

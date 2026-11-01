@@ -1,0 +1,200 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 23H2/24H2 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15 MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Entra ID (Azure AD)",
+   "type": "Product"
+  },
+  {
+   "name": "on-premises Active Directory",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft 365",
+   "type": "Product"
+  },
+  {
+   "name": "Intune-managed Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Palo Alto GlobalProtect VPN",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi (802.1X)",
+   "type": "Product"
+  },
+  {
+   "name": "Cannot sign in to Windows/macOS",
+   "type": "Symptom"
+  },
+  {
+   "name": "error \"The user name or password is incorrect\"",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "No mailbox visible in Outlook",
+   "type": "Symptom"
+  },
+  {
+   "name": "message \"Mailbox not found\"",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Teams shows \"You don't have access to any teams\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "Company Portal does not list required apps",
+   "type": "Symptom"
+  },
+  {
+   "name": "shows \"Device not compliant\"",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "VPN connection fails with \"Certificate not trusted\"",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "or \"Authentication failed\"",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Wi-Fi prompts for credentials but rejects ACME-Corp network",
+   "type": "Symptom"
+  },
+  {
+   "name": "HR has not submitted the official start date",
+   "type": "Cause"
+  },
+  {
+   "name": "account remains disabled",
+   "type": "Cause"
+  },
+  {
+   "name": "AD account or mailbox was never created",
+   "type": "Cause"
+  },
+  {
+   "name": "Required Microsoft 365 licenses (E5/E3) were not assigned",
+   "type": "Cause"
+  },
+  {
+   "name": "Intune device enrollment failed",
+   "type": "Cause"
+  },
+  {
+   "name": "device is not marked compliant",
+   "type": "Cause"
+  },
+  {
+   "name": "MFA enrollment was skipped",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN or Wi-Fi machine certificate missing or expired",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Cannot sign in to Windows/macOS",
+   "relation": "CAUSED_BY",
+   "target": "HR has not submitted the official start date"
+  },
+  {
+   "source": "error \"The user name or password is incorrect\"",
+   "relation": "INDICATES",
+   "target": "account remains disabled"
+  },
+  {
+   "source": "No mailbox visible in Outlook",
+   "relation": "CAUSED_BY",
+   "target": "AD account or mailbox was never created"
+  },
+  {
+   "source": "message \"Mailbox not found\"",
+   "relation": "INDICATES",
+   "target": "AD account or mailbox was never created"
+  },
+  {
+   "source": "Teams shows \"You don't have access to any teams\"",
+   "relation": "CAUSED_BY",
+   "target": "Required Microsoft 365 licenses (E5/E3) were not assigned"
+  },
+  {
+   "source": "Company Portal does not list required apps",
+   "relation": "CAUSED_BY",
+   "target": "Intune device enrollment failed"
+  },
+  {
+   "source": "shows \"Device not compliant\"",
+   "relation": "INDICATES",
+   "target": "device is not marked compliant"
+  },
+  {
+   "source": "VPN connection fails with \"Certificate not trusted\"",
+   "relation": "CAUSED_BY",
+   "target": "VPN or Wi-Fi machine certificate missing or expired"
+  },
+  {
+   "source": "or \"Authentication failed\"",
+   "relation": "CAUSED_BY",
+   "target": "VPN or Wi-Fi machine certificate missing or expired"
+  },
+  {
+   "source": "Wi-Fi prompts for credentials but rejects ACME-Corp network",
+   "relation": "CAUSED_BY",
+   "target": "VPN or Wi-Fi machine certificate missing or expired"
+  },
+  {
+   "source": "HR has not submitted the official start date",
+   "relation": "AFFECTS",
+   "target": "Microsoft Entra ID (Azure AD)"
+  },
+  {
+   "source": "AD account or mailbox was never created",
+   "relation": "AFFECTS",
+   "target": "on-premises Active Directory"
+  },
+  {
+   "source": "Required Microsoft 365 licenses (E5/E3) were not assigned",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365"
+  },
+  {
+   "source": "Intune device enrollment failed",
+   "relation": "AFFECTS",
+   "target": "Intune-managed Company Portal"
+  },
+  {
+   "source": "device is not marked compliant",
+   "relation": "AFFECTS",
+   "target": "Intune-managed Company Portal"
+  },
+  {
+   "source": "MFA enrollment was skipped",
+   "relation": "AFFECTS",
+   "target": "Microsoft Entra ID (Azure AD)"
+  },
+  {
+   "source": "VPN or Wi-Fi machine certificate missing or expired",
+   "relation": "AFFECTS",
+   "target": "Palo Alto GlobalProtect VPN"
+  },
+  {
+   "source": "VPN or Wi-Fi machine certificate missing or expired",
+   "relation": "AFFECTS",
+   "target": "ACME-Corp Wi-Fi (802.1X)"
+  }
+ ]
+}

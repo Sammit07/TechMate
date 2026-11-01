@@ -1,0 +1,157 @@
+{
+ "entities": [
+  {
+   "name": "BitLocker recovery key",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "export recovery keys",
+   "type": "Fix"
+  },
+  {
+   "name": "show key",
+   "type": "Fix"
+  },
+  {
+   "name": "read key back slowly",
+   "type": "Fix"
+  },
+  {
+   "name": "provide via secure chat",
+   "type": "Fix"
+  },
+  {
+   "name": "enter key at recovery screen",
+   "type": "Fix"
+  },
+  {
+   "name": "verify desktop access",
+   "type": "Fix"
+  },
+  {
+   "name": "suspend BitLocker",
+   "type": "Fix"
+  },
+  {
+   "name": "resume BitLocker",
+   "type": "Fix"
+  },
+  {
+   "name": "close ticket with verification",
+   "type": "Fix"
+  },
+  {
+   "name": "confirm Windows login",
+   "type": "Fix"
+  },
+  {
+   "name": "run manage-bde -status C:",
+   "type": "Fix"
+  },
+  {
+   "name": "BitLocker protection on",
+   "type": "Symptom"
+  },
+  {
+   "name": "recovery triggered by BIOS/firmware update",
+   "type": "Cause"
+  },
+  {
+   "name": "user cannot complete MFA verification",
+   "type": "Symptom"
+  },
+  {
+   "name": "Intune device record shows no BitLocker key",
+   "type": "Symptom"
+  },
+  {
+   "name": "recovery key fails to unlock drive",
+   "type": "Symptom"
+  },
+  {
+   "name": "BitLocker prompt persists after correct key",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BitLocker recovery key",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "export recovery keys",
+   "relation": "FIXED_BY",
+   "target": "BitLocker recovery key"
+  },
+  {
+   "source": "show key",
+   "relation": "FIXED_BY",
+   "target": "BitLocker recovery key"
+  },
+  {
+   "source": "read key back slowly",
+   "relation": "FIXED_BY",
+   "target": "BitLocker recovery key"
+  },
+  {
+   "source": "provide via secure chat",
+   "relation": "FIXED_BY",
+   "target": "BitLocker recovery key"
+  },
+  {
+   "source": "enter key at recovery screen",
+   "relation": "FIXED_BY",
+   "target": "BitLocker recovery key"
+  },
+  {
+   "source": "verify desktop access",
+   "relation": "FIXED_BY",
+   "target": "BitLocker recovery key"
+  },
+  {
+   "source": "suspend BitLocker",
+   "relation": "FIXED_BY",
+   "target": "recovery triggered by BIOS/firmware update"
+  },
+  {
+   "source": "resume BitLocker",
+   "relation": "FIXED_BY",
+   "target": "recovery triggered by BIOS/firmware update"
+  },
+  {
+   "source": "close ticket with verification",
+   "relation": "FIXED_BY",
+   "target": "BitLocker recovery key"
+  },
+  {
+   "source": "confirm Windows login",
+   "relation": "FIXED_BY",
+   "target": "BitLocker protection on"
+  },
+  {
+   "source": "run manage-bde -status C:",
+   "relation": "FIXED_BY",
+   "target": "BitLocker protection on"
+  },
+  {
+   "source": "user cannot complete MFA verification",
+   "relation": "CAUSED_BY",
+   "target": "Intune device record shows no BitLocker key"
+  },
+  {
+   "source": "recovery key fails to unlock drive",
+   "relation": "INDICATES",
+   "target": "BitLocker protection on"
+  },
+  {
+   "source": "BitLocker prompt persists after correct key",
+   "relation": "INDICATES",
+   "target": "possible corruption or TPM failure"
+  }
+ ]
+}

@@ -1,0 +1,131 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft 365 Apps for enterprise",
+   "type": "Product"
+  },
+  {
+   "name": "Office 2021",
+   "type": "Product"
+  },
+  {
+   "name": "Unlicensed Product banner",
+   "type": "Symptom"
+  },
+  {
+   "name": "Expired or missing license",
+   "type": "Cause"
+  },
+  {
+   "name": "System time discrepancy >5 min",
+   "type": "Cause"
+  },
+  {
+   "name": "Office Quick Repair",
+   "type": "Fix"
+  },
+  {
+   "name": "Sign out and sign back in to Office",
+   "type": "Fix"
+  },
+  {
+   "name": "Disable all Office add-ins",
+   "type": "Fix"
+  },
+  {
+   "name": "Collect Office diagnostic log",
+   "type": "Fix"
+  },
+  {
+   "name": "Entra ID license status",
+   "type": "Component"
+  },
+  {
+   "name": "Azure portal",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Acme Global credentials",
+   "type": "Component"
+  },
+  {
+   "name": "Office safe mode",
+   "type": "Component"
+  },
+  {
+   "name": "COM Add-ins",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Unlicensed Product banner",
+   "relation": "CAUSED_BY",
+   "target": "Expired or missing license"
+  },
+  {
+   "source": "Unlicensed Product banner",
+   "relation": "CAUSED_BY",
+   "target": "System time discrepancy >5 min"
+  },
+  {
+   "source": "Expired or missing license",
+   "relation": "INDICATES",
+   "target": "Entra ID license status"
+  },
+  {
+   "source": "System time discrepancy >5 min",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 Apps for enterprise"
+  },
+  {
+   "source": "Office Quick Repair",
+   "relation": "FIXED_BY",
+   "target": "Unlicensed Product banner"
+  },
+  {
+   "source": "Sign out and sign back in to Office",
+   "relation": "FIXED_BY",
+   "target": "Unlicensed Product banner"
+  },
+  {
+   "source": "Disable all Office add-ins",
+   "relation": "FIXED_BY",
+   "target": "Unlicensed Product banner"
+  },
+  {
+   "source": "Collect Office diagnostic log",
+   "relation": "FIXED_BY",
+   "target": "Unlicensed Product banner"
+  },
+  {
+   "source": "Entra ID license status",
+   "relation": "AFFECTS",
+   "target": "Azure portal"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 Apps for enterprise"
+  },
+  {
+   "source": "Acme Global credentials",
+   "relation": "AFFECTS",
+   "target": "Office sign-in"
+  },
+  {
+   "source": "Office safe mode",
+   "relation": "PART_OF",
+   "target": "Microsoft 365 Apps for enterprise"
+  },
+  {
+   "source": "COM Add-ins",
+   "relation": "PART_OF",
+   "target": "Microsoft 365 Apps for enterprise"
+  }
+ ]
+}

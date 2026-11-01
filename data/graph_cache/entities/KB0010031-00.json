@@ -1,0 +1,137 @@
+{
+ "entities": [
+  {
+   "name": "stuck on boot logo or automatic repair loop",
+   "type": "Symptom"
+  },
+  {
+   "name": "black screen with blinking cursor",
+   "type": "Symptom"
+  },
+  {
+   "name": "repeated Preparing Automatic Repair screens",
+   "type": "Symptom"
+  },
+  {
+   "name": "Startup Repair couldn't repair your PC",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "corrupted or incomplete Windows Update",
+   "type": "Cause"
+  },
+  {
+   "name": "faulty early-boot device driver",
+   "type": "Cause"
+  },
+  {
+   "name": "file system corruption or bad sectors",
+   "type": "Cause"
+  },
+  {
+   "name": "misconfigured BIOS/UEFI settings",
+   "type": "Cause"
+  },
+  {
+   "name": "hardware failure",
+   "type": "Cause"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2 and 24H2",
+   "type": "Product"
+  },
+  {
+   "name": "hard reset and startup repair",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "CAUSED_BY",
+   "target": "corrupted or incomplete Windows Update"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "CAUSED_BY",
+   "target": "faulty early-boot device driver"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "CAUSED_BY",
+   "target": "file system corruption or bad sectors"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "CAUSED_BY",
+   "target": "misconfigured BIOS/UEFI settings"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "CAUSED_BY",
+   "target": "hardware failure"
+  },
+  {
+   "source": "black screen with blinking cursor",
+   "relation": "CAUSED_BY",
+   "target": "corrupted or incomplete Windows Update"
+  },
+  {
+   "source": "repeated Preparing Automatic Repair screens",
+   "relation": "CAUSED_BY",
+   "target": "corrupted or incomplete Windows Update"
+  },
+  {
+   "source": "Startup Repair couldn't repair your PC",
+   "relation": "INDICATES",
+   "target": "file system corruption or bad sectors"
+  },
+  {
+   "source": "Dell Latitude 5440/7440",
+   "relation": "AFFECTS",
+   "target": "stuck on boot logo or automatic repair loop"
+  },
+  {
+   "source": "Lenovo ThinkPad T14/X1 Carbon",
+   "relation": "AFFECTS",
+   "target": "stuck on boot logo or automatic repair loop"
+  },
+  {
+   "source": "HP EliteBook 840",
+   "relation": "AFFECTS",
+   "target": "stuck on boot logo or automatic repair loop"
+  },
+  {
+   "source": "Windows 11 23H2 and 24H2",
+   "relation": "AFFECTS",
+   "target": "stuck on boot logo or automatic repair loop"
+  },
+  {
+   "source": "hard reset and startup repair",
+   "relation": "FIXED_BY",
+   "target": "stuck on boot logo or automatic repair loop"
+  },
+  {
+   "source": "hard reset and startup repair",
+   "relation": "FIXED_BY",
+   "target": "black screen with blinking cursor"
+  },
+  {
+   "source": "hard reset and startup repair",
+   "relation": "FIXED_BY",
+   "target": "repeated Preparing Automatic Repair screens"
+  }
+ ]
+}

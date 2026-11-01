@@ -1,0 +1,148 @@
+{
+ "entities": [
+  {
+   "name": "Dell Latitude 5440",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "No power LEDs or fan noise",
+   "type": "Symptom"
+  },
+  {
+   "name": "Screen remains black or blank",
+   "type": "Symptom"
+  },
+  {
+   "name": "Manufacturer/logo screen appears but Windows does not load",
+   "type": "Symptom"
+  },
+  {
+   "name": "Device enters a continuous Automatic Repair loop",
+   "type": "Symptom"
+  },
+  {
+   "name": "Battery indicator shows 0%",
+   "type": "Symptom"
+  },
+  {
+   "name": "Fully depleted battery or residual charge",
+   "type": "Cause"
+  },
+  {
+   "name": "Faulty AC adapter, power cable, or docking station",
+   "type": "Cause"
+  },
+  {
+   "name": "Corrupted BIOS/UEFI settings or a failed firmware update",
+   "type": "Cause"
+  },
+  {
+   "name": "Loose internal power connector or hardware fault",
+   "type": "Cause"
+  },
+  {
+   "name": "Recent Windows update or driver causing boot failure",
+   "type": "Cause"
+  },
+  {
+   "name": "Perform a Hard Reset (Power Drain)",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "No power LEDs or fan noise",
+   "relation": "CAUSED_BY",
+   "target": "Fully depleted battery or residual charge"
+  },
+  {
+   "source": "Screen remains black or blank",
+   "relation": "CAUSED_BY",
+   "target": "Fully depleted battery or residual charge"
+  },
+  {
+   "source": "Manufacturer/logo screen appears but Windows does not load",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted BIOS/UEFI settings or a failed firmware update"
+  },
+  {
+   "source": "Device enters a continuous Automatic Repair loop",
+   "relation": "CAUSED_BY",
+   "target": "Recent Windows update or driver causing boot failure"
+  },
+  {
+   "source": "Battery indicator shows 0%",
+   "relation": "CAUSED_BY",
+   "target": "Fully depleted battery or residual charge"
+  },
+  {
+   "source": "No power LEDs or fan noise",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440"
+  },
+  {
+   "source": "Screen remains black or blank",
+   "relation": "AFFECTS",
+   "target": "Lenovo ThinkPad T14"
+  },
+  {
+   "source": "Manufacturer/logo screen appears but Windows does not load",
+   "relation": "AFFECTS",
+   "target": "HP EliteBook 840"
+  },
+  {
+   "source": "Device enters a continuous Automatic Repair loop",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "Battery indicator shows 0%",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15"
+  },
+  {
+   "source": "Fully depleted battery or residual charge",
+   "relation": "FIXED_BY",
+   "target": "Perform a Hard Reset (Power Drain)"
+  },
+  {
+   "source": "Faulty AC adapter, power cable, or docking station",
+   "relation": "FIXED_BY",
+   "target": "Perform a Hard Reset (Power Drain)"
+  },
+  {
+   "source": "Corrupted BIOS/UEFI settings or a failed firmware update",
+   "relation": "FIXED_BY",
+   "target": "Perform a Hard Reset (Power Drain)"
+  },
+  {
+   "source": "Loose internal power connector or hardware fault",
+   "relation": "FIXED_BY",
+   "target": "Perform a Hard Reset (Power Drain)"
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "entities": [
+  {
+   "name": "IT self-service portal",
+   "type": "Product"
+  },
+  {
+   "name": "https://it.acme.example",
+   "type": "Component"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "Incorrect or expired Entra ID password",
+   "type": "Cause"
+  },
+  {
+   "name": "Missing or expired device certificate for VPN/Wi-Fi",
+   "type": "Cause"
+  },
+  {
+   "name": "Browser compatibility issues",
+   "type": "Cause"
+  },
+  {
+   "name": "Network connectivity problems",
+   "type": "Cause"
+  },
+  {
+   "name": "Firewall rules blocking it.acme.example",
+   "type": "Cause"
+  },
+  {
+   "name": "Portal login page loads but credentials are rejected with 'Invalid username or password'",
+   "type": "Symptom"
+  },
+  {
+   "name": "Page shows 'Access denied - you do not have permission to view this resource'",
+   "type": "Symptom"
+  },
+  {
+   "name": "After login, the home page displays a blank screen or spinning loader",
+   "type": "Symptom"
+  },
+  {
+   "name": "Error message 'Unable to connect to the service - please try again later' appears when submitting a request",
+   "type": "Symptom"
+  },
+  {
+   "name": "Reset Entra ID password",
+   "type": "Fix"
+  },
+  {
+   "name": "Renew device certificate for VPN/Wi-Fi",
+   "type": "Fix"
+  },
+  {
+   "name": "Update browser or allow pop-ups",
+   "type": "Fix"
+  },
+  {
+   "name": "Check network connectivity and firewall settings",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Portal login page loads but credentials are rejected with 'Invalid username or password'",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect or expired Entra ID password"
+  },
+  {
+   "source": "Page shows 'Access denied - you do not have permission to view this resource'",
+   "relation": "CAUSED_BY",
+   "target": "Missing or expired device certificate for VPN/Wi-Fi"
+  },
+  {
+   "source": "After login, the home page displays a blank screen or spinning loader",
+   "relation": "CAUSED_BY",
+   "target": "Browser compatibility issues"
+  },
+  {
+   "source": "Error message 'Unable to connect to the service - please try again later' appears when submitting a request",
+   "relation": "CAUSED_BY",
+   "target": "Network connectivity problems"
+  },
+  {
+   "source": "Error message 'Unable to connect to the service - please try again later' appears when submitting a request",
+   "relation": "CAUSED_BY",
+   "target": "Firewall rules blocking it.acme.example"
+  },
+  {
+   "source": "Incorrect or expired Entra ID password",
+   "relation": "FIXED_BY",
+   "target": "Reset Entra ID password"
+  },
+  {
+   "source": "Missing or expired device certificate for VPN/Wi-Fi",
+   "relation": "FIXED_BY",
+   "target": "Renew device certificate for VPN/Wi-Fi"
+  },
+  {
+   "source": "Browser compatibility issues",
+   "relation": "FIXED_BY",
+   "target": "Update browser or allow pop-ups"
+  },
+  {
+   "source": "Network connectivity problems",
+   "relation": "FIXED_BY",
+   "target": "Check network connectivity and firewall settings"
+  },
+  {
+   "source": "Firewall rules blocking it.acme.example",
+   "relation": "FIXED_BY",
+   "target": "Check network connectivity and firewall settings"
+  },
+  {
+   "source": "IT self-service portal",
+   "relation": "AFFECTS",
+   "target": "https://it.acme.example"
+  },
+  {
+   "source": "Entra ID",
+   "relation": "AFFECTS",
+   "target": "IT self-service portal"
+  },
+  {
+   "source": "Incorrect or expired Entra ID password",
+   "relation": "AFFECTS",
+   "target": "Entra ID"
+  },
+  {
+   "source": "Missing or expired device certificate for VPN/Wi-Fi",
+   "relation": "AFFECTS",
+   "target": "Entra ID"
+  }
+ ]
+}

@@ -1,0 +1,116 @@
+{
+ "entities": [
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Software Center",
+   "type": "Product"
+  },
+  {
+   "name": "Endpoint Manager",
+   "type": "Product"
+  },
+  {
+   "name": "access denied 0x80070005",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "admin credentials prompt",
+   "type": "Symptom"
+  },
+  {
+   "name": "application not available",
+   "type": "Symptom"
+  },
+  {
+   "name": "license assignment",
+   "type": "Component"
+  },
+  {
+   "name": "Intune policy sync",
+   "type": "Component"
+  },
+  {
+   "name": "BitLocker",
+   "type": "Product"
+  },
+  {
+   "name": "FileVault",
+   "type": "Product"
+  },
+  {
+   "name": "security review",
+   "type": "Cause"
+  },
+  {
+   "name": "approved software list",
+   "type": "Component"
+  },
+  {
+   "name": "software request",
+   "type": "Component"
+  },
+  {
+   "name": "renew approval process",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "access denied 0x80070005",
+   "relation": "INDICATES",
+   "target": "admin credentials prompt"
+  },
+  {
+   "source": "application not available",
+   "relation": "CAUSED_BY",
+   "target": "approved software list"
+  },
+  {
+   "source": "application not available",
+   "relation": "INDICATES",
+   "target": "license assignment"
+  },
+  {
+   "source": "Intune policy sync",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  },
+  {
+   "source": "BitLocker",
+   "relation": "PART_OF",
+   "target": "Endpoint Manager"
+  },
+  {
+   "source": "FileVault",
+   "relation": "PART_OF",
+   "target": "Endpoint Manager"
+  },
+  {
+   "source": "security review",
+   "relation": "CAUSED_BY",
+   "target": "approved software list"
+  },
+  {
+   "source": "approved software list",
+   "relation": "FIXED_BY",
+   "target": "renew approval process"
+  },
+  {
+   "source": "license assignment",
+   "relation": "FIXED_BY",
+   "target": "renew approval process"
+  },
+  {
+   "source": "admin credentials prompt",
+   "relation": "FIXED_BY",
+   "target": "renew approval process"
+  }
+ ]
+}

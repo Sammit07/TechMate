@@ -1,0 +1,107 @@
+kb_id,title,category,subcategory,group,ci_type,file_name
+KB0010001,How to reset your password with self-service password reset (SSPR),Access & Identity,Password reset,Service Desk L1,Active Directory,KB0010001-how-to-reset-your-password-with-self-service-password-reset-.pdf
+KB0010002,"Password policy: length, complexity and expiry rules",Access & Identity,Password reset,Service Desk L1,Active Directory,KB0010002-password-policy-length-complexity-and-expiry-rules.pdf
+KB0010003,New password not accepted on a remote laptop: syncing cached credentials,Access & Identity,Password reset,Service Desk L1,Active Directory,KB0010003-new-password-not-accepted-on-a-remote-laptop-syncing-cached-.pdf
+KB0010004,Account lockouts: causes and how to unlock,Access & Identity,Account locked,Service Desk L1,Active Directory,KB0010004-account-lockouts-causes-and-how-to-unlock.pdf
+KB0010005,Finding the device that keeps locking your account,Access & Identity,Account locked,Service Desk L1,Active Directory,KB0010005-finding-the-device-that-keeps-locking-your-account.pdf
+KB0010006,Removing saved credentials after a password change,Access & Identity,Account locked,Service Desk L1,Active Directory,KB0010006-removing-saved-credentials-after-a-password-change.pdf
+KB0010007,Setting up Microsoft Authenticator for multi-factor authentication,Access & Identity,MFA / authenticator,Identity & Access Management,Azure AD,KB0010007-setting-up-microsoft-authenticator-for-multi-factor-authenti.pdf
+KB0010008,Moving MFA to a new phone,Access & Identity,MFA / authenticator,Identity & Access Management,Azure AD,KB0010008-moving-mfa-to-a-new-phone.pdf
+KB0010009,MFA codes rejected or push notifications not arriving,Access & Identity,MFA / authenticator,Identity & Access Management,Azure AD,KB0010009-mfa-codes-rejected-or-push-notifications-not-arriving.pdf
+KB0010010,How to request access to shared drives and SharePoint sites,Access & Identity,Access request,Identity & Access Management,File Share,KB0010010-how-to-request-access-to-shared-drives-and-sharepoint-sites.pdf
+KB0010011,Access denied after approval: group membership and token refresh,Access & Identity,Access request,Identity & Access Management,File Share,KB0010011-access-denied-after-approval-group-membership-and-token-refr.pdf
+KB0010012,Access request approval workflow and timelines,Access & Identity,Access request,Identity & Access Management,File Share,KB0010012-access-request-approval-workflow-and-timelines.pdf
+KB0010013,New joiner onboarding checklist for IT,Access & Identity,New joiner setup,Identity & Access Management,Active Directory,KB0010013-new-joiner-onboarding-checklist-for-it.pdf
+KB0010014,"First day login: setting up your account, MFA and email",Access & Identity,New joiner setup,Identity & Access Management,Active Directory,KB0010014-first-day-login-setting-up-your-account-mfa-and-email.pdf
+KB0010015,Standard software and access for new employees,Access & Identity,New joiner setup,Identity & Access Management,Active Directory,KB0010015-standard-software-and-access-for-new-employees.pdf
+KB0010016,VPN troubleshooting guide for remote workers,Network & Connectivity,VPN,Network Support,VPN Gateway,KB0010016-vpn-troubleshooting-guide-for-remote-workers.pdf
+KB0010017,Renewing an expired VPN certificate,Network & Connectivity,VPN,Network Support,VPN Gateway,KB0010017-renewing-an-expired-vpn-certificate.pdf
+KB0010018,VPN connected but internal sites don't load: DNS and split tunnelling,Network & Connectivity,VPN,Network Support,VPN Gateway,KB0010018-vpn-connected-but-internal-sites-don-t-load-dns-and-split-tu.pdf
+KB0010019,Installing and updating the VPN client,Network & Connectivity,VPN,Network Support,VPN Gateway,KB0010019-installing-and-updating-the-vpn-client.pdf
+KB0010020,Wi-Fi troubleshooting: disconnects and no internet,Network & Connectivity,Wi-Fi,Network Support,Wireless Network,KB0010020-wi-fi-troubleshooting-disconnects-and-no-internet.pdf
+KB0010021,Connecting to corporate Wi-Fi (802.1X) and guest Wi-Fi,Network & Connectivity,Wi-Fi,Network Support,Wireless Network,KB0010021-connecting-to-corporate-wi-fi-802-1x-and-guest-wi-fi.pdf
+KB0010022,Updating Wi-Fi drivers and disabling power saving,Network & Connectivity,Wi-Fi,Network Support,Wireless Network,KB0010022-updating-wi-fi-drivers-and-disabling-power-saving.pdf
+KB0010023,Wired network (Ethernet) troubleshooting at your desk,Network & Connectivity,Ethernet / LAN,Network Support,LAN,KB0010023-wired-network-ethernet-troubleshooting-at-your-desk.pdf
+KB0010024,Docking station Ethernet not working,Network & Connectivity,Ethernet / LAN,Network Support,LAN,KB0010024-docking-station-ethernet-not-working.pdf
+KB0010025,How to report a dead network port,Network & Connectivity,Ethernet / LAN,Network Support,LAN,KB0010025-how-to-report-a-dead-network-port.pdf
+KB0010026,Slow network: checks you can do before raising a ticket,Network & Connectivity,Slow network,Network Support,LAN,KB0010026-slow-network-checks-you-can-do-before-raising-a-ticket.pdf
+KB0010027,Improving video call quality on home and office networks,Network & Connectivity,Slow network,Network Support,LAN,KB0010027-improving-video-call-quality-on-home-and-office-networks.pdf
+KB0010028,Website won't load: DNS and proxy troubleshooting,Network & Connectivity,Website / DNS / proxy,Network Support,LAN,KB0010028-website-won-t-load-dns-and-proxy-troubleshooting.pdf
+KB0010029,Requesting a website to be unblocked,Network & Connectivity,Website / DNS / proxy,Network Support,LAN,KB0010029-requesting-a-website-to-be-unblocked.pdf
+KB0010030,Laptop won't turn on: power and hard reset steps,Hardware,Laptop won't start,Desktop Support,Laptop,KB0010030-laptop-won-t-turn-on-power-and-hard-reset-steps.pdf
+KB0010031,Stuck on boot logo or automatic repair loop,Hardware,Laptop won't start,Desktop Support,Laptop,KB0010031-stuck-on-boot-logo-or-automatic-repair-loop.pdf
+KB0010032,Requesting a loaner laptop during repair,Hardware,Laptop won't start,Desktop Support,Laptop,KB0010032-requesting-a-loaner-laptop-during-repair.pdf
+KB0010033,Laptop running slow: checks and fixes,Hardware,Laptop slow / freezing,Desktop Support,Laptop,KB0010033-laptop-running-slow-checks-and-fixes.pdf
+KB0010034,Managing startup apps and background processes,Hardware,Laptop slow / freezing,Desktop Support,Laptop,KB0010034-managing-startup-apps-and-background-processes.pdf
+KB0010035,When to request a hardware upgrade,Hardware,Laptop slow / freezing,Desktop Support,Laptop,KB0010035-when-to-request-a-hardware-upgrade.pdf
+KB0010036,Laptop not charging or battery draining fast,Hardware,Battery / charging,Desktop Support,Laptop,KB0010036-laptop-not-charging-or-battery-draining-fast.pdf
+KB0010037,Battery safety: swollen batteries and what to do,Hardware,Battery / charging,Desktop Support,Laptop,KB0010037-battery-safety-swollen-batteries-and-what-to-do.pdf
+KB0010038,Docking station troubleshooting,Hardware,Monitor / docking station,Desktop Support,Docking Station,KB0010038-docking-station-troubleshooting.pdf
+KB0010039,External monitor not detected or flickering,Hardware,Monitor / docking station,Desktop Support,Docking Station,KB0010039-external-monitor-not-detected-or-flickering.pdf
+KB0010040,Headset and microphone not working in calls,Hardware,Keyboard / mouse / headset,Desktop Support,Peripheral,KB0010040-headset-and-microphone-not-working-in-calls.pdf
+KB0010041,Pairing Bluetooth devices,Hardware,Keyboard / mouse / headset,Desktop Support,Peripheral,KB0010041-pairing-bluetooth-devices.pdf
+KB0010042,Requesting replacement peripherals,Hardware,Keyboard / mouse / headset,Desktop Support,Peripheral,KB0010042-requesting-replacement-peripherals.pdf
+KB0010043,Freeing up disk space on your laptop,Hardware,Low disk space,Service Desk L1,Laptop,KB0010043-freeing-up-disk-space-on-your-laptop.pdf
+KB0010044,Using OneDrive Files On-Demand to save space,Hardware,Low disk space,Service Desk L1,Laptop,KB0010044-using-onedrive-files-on-demand-to-save-space.pdf
+KB0010045,Windows Update fails or gets stuck: fixes,Operating System,OS update failure,Desktop Support,Operating System,KB0010045-windows-update-fails-or-gets-stuck-fixes.pdf
+KB0010046,Monthly patching schedule and what to expect,Operating System,OS update failure,Desktop Support,Operating System,KB0010046-monthly-patching-schedule-and-what-to-expect.pdf
+KB0010047,macOS updates: preparing your Mac,Operating System,OS update failure,Desktop Support,Operating System,KB0010047-macos-updates-preparing-your-mac.pdf
+KB0010048,Error codes reference for Windows Update,Operating System,OS update failure,Desktop Support,Operating System,KB0010048-error-codes-reference-for-windows-update.pdf
+KB0010049,Blue screen (BSOD) troubleshooting,Operating System,Blue screen / crash,Desktop Support,Operating System,KB0010049-blue-screen-bsod-troubleshooting.pdf
+KB0010050,Collecting crash dumps for Desktop Support,Operating System,Blue screen / crash,Desktop Support,Operating System,KB0010050-collecting-crash-dumps-for-desktop-support.pdf
+KB0010051,"Camera, audio and Bluetooth driver fixes",Operating System,Drivers (audio/camera/Bluetooth),Desktop Support,Operating System,KB0010051-camera-audio-and-bluetooth-driver-fixes.pdf
+KB0010052,Privacy settings that block your camera and microphone,Operating System,Drivers (audio/camera/Bluetooth),Desktop Support,Operating System,KB0010052-privacy-settings-that-block-your-camera-and-microphone.pdf
+KB0010053,BitLocker recovery key: how to get it safely,Operating System,BitLocker recovery,Service Desk L1,Operating System,KB0010053-bitlocker-recovery-key-how-to-get-it-safely.pdf
+KB0010054,Why BitLocker asks for a recovery key after updates,Operating System,BitLocker recovery,Service Desk L1,Operating System,KB0010054-why-bitlocker-asks-for-a-recovery-key-after-updates.pdf
+KB0010055,Installing software from Company Portal / Software Center,Software & Applications,Software installation,Application Support,Software,KB0010055-installing-software-from-company-portal-software-center.pdf
+KB0010056,Requesting software that isn't in the catalog,Software & Applications,Software installation,Application Support,Software,KB0010056-requesting-software-that-isn-t-in-the-catalog.pdf
+KB0010057,Approved software list and licensing,Software & Applications,Software installation,Application Support,Software,KB0010057-approved-software-list-and-licensing.pdf
+KB0010058,Office apps crashing or freezing,Software & Applications,Microsoft Office,Application Support,Microsoft 365,KB0010058-office-apps-crashing-or-freezing.pdf
+KB0010059,Office activation and 'unlicensed product' errors,Software & Applications,Microsoft Office,Application Support,Microsoft 365,KB0010059-office-activation-and-unlicensed-product-errors.pdf
+KB0010060,Recovering unsaved or corrupted Office files,Software & Applications,Microsoft Office,Application Support,Microsoft 365,KB0010060-recovering-unsaved-or-corrupted-office-files.pdf
+KB0010061,"Browser troubleshooting: crashes, slowness and certificate errors",Software & Applications,Browser issues,Service Desk L1,Software,KB0010061-browser-troubleshooting-crashes-slowness-and-certificate-err.pdf
+KB0010062,Removing unwanted browser extensions,Software & Applications,Browser issues,Service Desk L1,Software,KB0010062-removing-unwanted-browser-extensions.pdf
+KB0010063,Software licences: requesting and activating,Software & Applications,Licence activation,Application Support,Software,KB0010063-software-licences-requesting-and-activating.pdf
+KB0010064,"Outlook troubleshooting: not syncing, crashing, password prompts",Email & Collaboration,Outlook,Messaging & Collaboration,Exchange Online,KB0010064-outlook-troubleshooting-not-syncing-crashing-password-prompt.pdf
+KB0010065,Rebuilding your Outlook profile,Email & Collaboration,Outlook,Messaging & Collaboration,Exchange Online,KB0010065-rebuilding-your-outlook-profile.pdf
+KB0010066,Outlook search not returning results,Email & Collaboration,Outlook,Messaging & Collaboration,Exchange Online,KB0010066-outlook-search-not-returning-results.pdf
+KB0010067,Mailbox full: archiving and cleaning up,Email & Collaboration,Mailbox full,Messaging & Collaboration,Exchange Online,KB0010067-mailbox-full-archiving-and-cleaning-up.pdf
+KB0010068,Shared mailboxes: requesting access and adding to Outlook,Email & Collaboration,Shared mailbox / calendar,Messaging & Collaboration,Exchange Online,KB0010068-shared-mailboxes-requesting-access-and-adding-to-outlook.pdf
+KB0010069,Sharing and delegating calendars,Email & Collaboration,Shared mailbox / calendar,Messaging & Collaboration,Exchange Online,KB0010069-sharing-and-delegating-calendars.pdf
+KB0010070,Microsoft Teams troubleshooting,Email & Collaboration,Microsoft Teams,Messaging & Collaboration,Microsoft 365,KB0010070-microsoft-teams-troubleshooting.pdf
+KB0010071,Clearing the Teams cache,Email & Collaboration,Microsoft Teams,Messaging & Collaboration,Microsoft 365,KB0010071-clearing-the-teams-cache.pdf
+KB0010072,Audio and video settings for Teams meetings,Email & Collaboration,Microsoft Teams,Messaging & Collaboration,Microsoft 365,KB0010072-audio-and-video-settings-for-teams-meetings.pdf
+KB0010073,OneDrive sync problems and fixes,Email & Collaboration,OneDrive / SharePoint sync,Messaging & Collaboration,Microsoft 365,KB0010073-onedrive-sync-problems-and-fixes.pdf
+KB0010074,Sync conflicts and duplicate files,Email & Collaboration,OneDrive / SharePoint sync,Messaging & Collaboration,Microsoft 365,KB0010074-sync-conflicts-and-duplicate-files.pdf
+KB0010075,Printer offline or jobs stuck in the queue,Printing & Scanning,Printer,Desktop Support,Printer,KB0010075-printer-offline-or-jobs-stuck-in-the-queue.pdf
+KB0010076,Adding an office printer,Printing & Scanning,Printer,Desktop Support,Printer,KB0010076-adding-an-office-printer.pdf
+KB0010077,Secure print release with your badge,Printing & Scanning,Printer,Desktop Support,Printer,KB0010077-secure-print-release-with-your-badge.pdf
+KB0010078,Scan to email troubleshooting,Printing & Scanning,Scan to email,Desktop Support,Printer,KB0010078-scan-to-email-troubleshooting.pdf
+KB0010079,Setting up work email on your phone (Intune),Mobile Devices,Mobile email / MDM,Desktop Support,Mobile Device,KB0010079-setting-up-work-email-on-your-phone-intune.pdf
+KB0010080,Mobile device compliance requirements,Mobile Devices,Mobile email / MDM,Desktop Support,Mobile Device,KB0010080-mobile-device-compliance-requirements.pdf
+KB0010081,How to spot and report phishing emails,Security,Phishing report,Security Operations,Email Security,KB0010081-how-to-spot-and-report-phishing-emails.pdf
+KB0010082,I clicked a phishing link: what to do now,Security,Phishing report,Security Operations,Email Security,KB0010082-i-clicked-a-phishing-link-what-to-do-now.pdf
+KB0010083,Reporting suspicious emails with the Report button,Security,Phishing report,Security Operations,Email Security,KB0010083-reporting-suspicious-emails-with-the-report-button.pdf
+KB0010084,Antivirus alerts: what they mean and what to do,Security,Antivirus / malware alert,Security Operations,Endpoint Security,KB0010084-antivirus-alerts-what-they-mean-and-what-to-do.pdf
+KB0010085,Tech support scam pop-ups,Security,Antivirus / malware alert,Security Operations,Endpoint Security,KB0010085-tech-support-scam-pop-ups.pdf
+KB0010086,How to raise an IT ticket and what information to include,General,General,Service Desk L1,,KB0010086-how-to-raise-an-it-ticket-and-what-information-to-include.pdf
+KB0010087,Ticket priority and response-time targets (SLA),General,General,Service Desk L1,,KB0010087-ticket-priority-and-response-time-targets-sla.pdf
+KB0010088,Remote working IT guide,General,General,Network Support,,KB0010088-remote-working-it-guide.pdf
+KB0010089,Acceptable use of IT equipment,General,General,Security Operations,,KB0010089-acceptable-use-of-it-equipment.pdf
+KB0010090,Backing up your work files,General,General,Messaging & Collaboration,,KB0010090-backing-up-your-work-files.pdf
+KB0010091,Leaver process: returning equipment and account removal,General,General,Identity & Access Management,,KB0010091-leaver-process-returning-equipment-and-account-removal.pdf
+KB0010092,Laptop care and travel guidelines,General,General,Desktop Support,,KB0010092-laptop-care-and-travel-guidelines.pdf
+KB0010093,IT support hours and escalation contacts,General,General,Service Desk L1,,KB0010093-it-support-hours-and-escalation-contacts.pdf
+KB0010094,Using the IT self-service portal,General,General,Service Desk L1,,KB0010094-using-the-it-self-service-portal.pdf
+KB0010095,Setting up your home network for work,General,General,Network Support,,KB0010095-setting-up-your-home-network-for-work.pdf
+KB0010096,Guest Wi-Fi for visitors,General,General,Network Support,,KB0010096-guest-wi-fi-for-visitors.pdf
+KB0010097,Laptop refresh policy and requesting new hardware,General,General,Desktop Support,,KB0010097-laptop-refresh-policy-and-requesting-new-hardware.pdf
+KB0010098,Travelling abroad with a company laptop,General,General,Security Operations,,KB0010098-travelling-abroad-with-a-company-laptop.pdf
+KB0010099,Screen lock and clean desk policy,General,General,Security Operations,,KB0010099-screen-lock-and-clean-desk-policy.pdf
+KB0010100,Sharing files with external people safely,General,General,Messaging & Collaboration,,KB0010100-sharing-files-with-external-people-safely.pdf
+KB0010101,Using a password manager,General,General,Identity & Access Management,,KB0010101-using-a-password-manager.pdf
+KB0010102,Encrypted USB drives and removable media,General,General,Security Operations,,KB0010102-encrypted-usb-drives-and-removable-media.pdf
+KB0010103,Meeting room video conferencing equipment guide,General,General,Desktop Support,,KB0010103-meeting-room-video-conferencing-equipment-guide.pdf
+KB0010104,How IT communicates during major outages,General,General,Service Desk L1,,KB0010104-how-it-communicates-during-major-outages.pdf
+KB0010105,Windows 11 productivity tips for new users,General,General,Desktop Support,,KB0010105-windows-11-productivity-tips-for-new-users.pdf
+KB0010106,macOS basics for new Mac users,General,General,Desktop Support,,KB0010106-macos-basics-for-new-mac-users.pdf

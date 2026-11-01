@@ -1,0 +1,190 @@
+{
+ "entities": [
+  {
+   "name": "account lockout",
+   "type": "Symptom"
+  },
+  {
+   "name": "Windows error 0x8007052E",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "SSO sign-in blocked",
+   "type": "Symptom"
+  },
+  {
+   "name": "repeated password prompts",
+   "type": "Symptom"
+  },
+  {
+   "name": "mobile mail app credential failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "cached credentials in mobile mail apps",
+   "type": "Cause"
+  },
+  {
+   "name": "mapped network drives with stale credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "scheduled tasks with expired credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN/Wi-Fi profiles with old password",
+   "type": "Cause"
+  },
+  {
+   "name": "Credential Manager outdated entries",
+   "type": "Cause"
+  },
+  {
+   "name": "multiple rapid failed logon attempts",
+   "type": "Cause"
+  },
+  {
+   "name": "15-minute lockout timer",
+   "type": "Cause"
+  },
+  {
+   "name": "self-service password reset",
+   "type": "Fix"
+  },
+  {
+   "name": "wait 15 minutes for auto-unlock",
+   "type": "Fix"
+  },
+  {
+   "name": "Windows 11 23H2/24H2 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15 devices",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Entra ID",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook",
+   "type": "Component"
+  },
+  {
+   "name": "Teams",
+   "type": "Component"
+  },
+  {
+   "name": "PaperCut",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "account lockout",
+   "relation": "CAUSED_BY",
+   "target": "cached credentials in mobile mail apps"
+  },
+  {
+   "source": "account lockout",
+   "relation": "CAUSED_BY",
+   "target": "mapped network drives with stale credentials"
+  },
+  {
+   "source": "account lockout",
+   "relation": "CAUSED_BY",
+   "target": "scheduled tasks with expired credentials"
+  },
+  {
+   "source": "account lockout",
+   "relation": "CAUSED_BY",
+   "target": "VPN/Wi-Fi profiles with old password"
+  },
+  {
+   "source": "account lockout",
+   "relation": "CAUSED_BY",
+   "target": "Credential Manager outdated entries"
+  },
+  {
+   "source": "account lockout",
+   "relation": "CAUSED_BY",
+   "target": "multiple rapid failed logon attempts"
+  },
+  {
+   "source": "account lockout",
+   "relation": "CAUSED_BY",
+   "target": "15-minute lockout timer"
+  },
+  {
+   "source": "Windows error 0x8007052E",
+   "relation": "INDICATES",
+   "target": "account lockout"
+  },
+  {
+   "source": "SSO sign-in blocked",
+   "relation": "INDICATES",
+   "target": "account lockout"
+  },
+  {
+   "source": "repeated password prompts",
+   "relation": "INDICATES",
+   "target": "account lockout"
+  },
+  {
+   "source": "mobile mail app credential failure",
+   "relation": "INDICATES",
+   "target": "account lockout"
+  },
+  {
+   "source": "account lockout",
+   "relation": "FIXED_BY",
+   "target": "self-service password reset"
+  },
+  {
+   "source": "account lockout",
+   "relation": "FIXED_BY",
+   "target": "wait 15 minutes for auto-unlock"
+  },
+  {
+   "source": "account lockout",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2 laptops"
+  },
+  {
+   "source": "account lockout",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15 devices"
+  },
+  {
+   "source": "Microsoft Entra ID",
+   "relation": "PART_OF",
+   "target": "Windows 11 23H2/24H2 laptops"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "PART_OF",
+   "target": "Windows 11 23H2/24H2 laptops"
+  },
+  {
+   "source": "Outlook",
+   "relation": "PART_OF",
+   "target": "Windows 11 23H2/24H2 laptops"
+  },
+  {
+   "source": "Teams",
+   "relation": "PART_OF",
+   "target": "Windows 11 23H2/24H2 laptops"
+  },
+  {
+   "source": "PaperCut",
+   "relation": "PART_OF",
+   "target": "Windows 11 23H2/24H2 laptops"
+  }
+ ]
+}

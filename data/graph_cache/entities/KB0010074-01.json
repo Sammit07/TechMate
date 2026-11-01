@@ -1,0 +1,146 @@
+{
+ "entities": [
+  {
+   "name": "sync conflict and duplicate files",
+   "type": "Symptom"
+  },
+  {
+   "name": "stalled sync state",
+   "type": "Symptom"
+  },
+  {
+   "name": "OneDrive icon showing an error",
+   "type": "Symptom"
+  },
+  {
+   "name": "illegal characters in file/folder names",
+   "type": "Cause"
+  },
+  {
+   "name": "excessively long file/folder names",
+   "type": "Cause"
+  },
+  {
+   "name": "locked Office or other files",
+   "type": "Cause"
+  },
+  {
+   "name": "rename files or folders with illegal/excessively long names",
+   "type": "Fix"
+  },
+  {
+   "name": "pause and resume OneDrive sync",
+   "type": "Fix"
+  },
+  {
+   "name": "unlink and relink OneDrive client",
+   "type": "Fix"
+  },
+  {
+   "name": "delete or rename conflict files after relink",
+   "type": "Fix"
+  },
+  {
+   "name": "OneDrive client",
+   "type": "Product"
+  },
+  {
+   "name": "SharePoint Online",
+   "type": "Product"
+  },
+  {
+   "name": "File Explorer",
+   "type": "Component"
+  },
+  {
+   "name": "OneDrive activity center",
+   "type": "Component"
+  },
+  {
+   "name": "OneDrive status shows green check-mark",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "sync conflict and duplicate files",
+   "relation": "CAUSED_BY",
+   "target": "illegal characters in file/folder names"
+  },
+  {
+   "source": "sync conflict and duplicate files",
+   "relation": "CAUSED_BY",
+   "target": "excessively long file/folder names"
+  },
+  {
+   "source": "sync conflict and duplicate files",
+   "relation": "CAUSED_BY",
+   "target": "locked Office or other files"
+  },
+  {
+   "source": "stalled sync state",
+   "relation": "INDICATES",
+   "target": "sync conflict and duplicate files"
+  },
+  {
+   "source": "OneDrive icon showing an error",
+   "relation": "INDICATES",
+   "target": "sync conflict and duplicate files"
+  },
+  {
+   "source": "illegal characters in file/folder names",
+   "relation": "AFFECTS",
+   "target": "OneDrive client"
+  },
+  {
+   "source": "excessively long file/folder names",
+   "relation": "AFFECTS",
+   "target": "OneDrive client"
+  },
+  {
+   "source": "locked Office or other files",
+   "relation": "AFFECTS",
+   "target": "OneDrive client"
+  },
+  {
+   "source": "rename files or folders with illegal/excessively long names",
+   "relation": "FIXED_BY",
+   "target": "sync conflict and duplicate files"
+  },
+  {
+   "source": "pause and resume OneDrive sync",
+   "relation": "FIXED_BY",
+   "target": "sync conflict and duplicate files"
+  },
+  {
+   "source": "unlink and relink OneDrive client",
+   "relation": "FIXED_BY",
+   "target": "sync conflict and duplicate files"
+  },
+  {
+   "source": "delete or rename conflict files after relink",
+   "relation": "FIXED_BY",
+   "target": "sync conflict and duplicate files"
+  },
+  {
+   "source": "OneDrive client",
+   "relation": "AFFECTS",
+   "target": "SharePoint Online"
+  },
+  {
+   "source": "OneDrive client",
+   "relation": "AFFECTS",
+   "target": "File Explorer"
+  },
+  {
+   "source": "OneDrive activity center",
+   "relation": "PART_OF",
+   "target": "OneDrive client"
+  },
+  {
+   "source": "OneDrive status shows green check-mark",
+   "relation": "INDICATES",
+   "target": "healthy OneDrive sync"
+  }
+ ]
+}

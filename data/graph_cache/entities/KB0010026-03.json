@@ -1,0 +1,140 @@
+{
+ "entities": [
+  {
+   "name": "slow network",
+   "type": "Symptom"
+  },
+  {
+   "name": "internet slow",
+   "type": "Symptom"
+  },
+  {
+   "name": "Wi-Fi slow",
+   "type": "Symptom"
+  },
+  {
+   "name": "video call lag",
+   "type": "Symptom"
+  },
+  {
+   "name": "file download slow",
+   "type": "Symptom"
+  },
+  {
+   "name": "network latency",
+   "type": "Symptom"
+  },
+  {
+   "name": "high ping",
+   "type": "Symptom"
+  },
+  {
+   "name": "band steering",
+   "type": "Component"
+  },
+  {
+   "name": "2.4 GHz",
+   "type": "Component"
+  },
+  {
+   "name": "5 GHz",
+   "type": "Component"
+  },
+  {
+   "name": "access point congestion",
+   "type": "Cause"
+  },
+  {
+   "name": "ISP outage",
+   "type": "Cause"
+  },
+  {
+   "name": "GlobalProtect VPN",
+   "type": "Product"
+  },
+  {
+   "name": "wired test",
+   "type": "Fix"
+  },
+  {
+   "name": "speed test",
+   "type": "Fix"
+  },
+  {
+   "name": "ping 8.8.8.8",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "slow network",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect VPN"
+  },
+  {
+   "source": "access point congestion",
+   "relation": "CAUSED_BY",
+   "target": "slow network"
+  },
+  {
+   "source": "ISP outage",
+   "relation": "CAUSED_BY",
+   "target": "slow network"
+  },
+  {
+   "source": "band steering",
+   "relation": "PART_OF",
+   "target": "5 GHz"
+  },
+  {
+   "source": "2.4 GHz",
+   "relation": "PART_OF",
+   "target": "Wi-Fi slow"
+  },
+  {
+   "source": "5 GHz",
+   "relation": "PART_OF",
+   "target": "Wi-Fi slow"
+  },
+  {
+   "source": "slow network",
+   "relation": "FIXED_BY",
+   "target": "wired test"
+  },
+  {
+   "source": "slow network",
+   "relation": "FIXED_BY",
+   "target": "speed test"
+  },
+  {
+   "source": "slow network",
+   "relation": "FIXED_BY",
+   "target": "ping 8.8.8.8"
+  },
+  {
+   "source": "high ping",
+   "relation": "INDICATES",
+   "target": "network latency"
+  },
+  {
+   "source": "video call lag",
+   "relation": "INDICATES",
+   "target": "slow network"
+  },
+  {
+   "source": "file download slow",
+   "relation": "INDICATES",
+   "target": "internet slow"
+  },
+  {
+   "source": "Wi-Fi slow",
+   "relation": "AFFECTS",
+   "target": "2.4 GHz"
+  },
+  {
+   "source": "Wi-Fi slow",
+   "relation": "AFFECTS",
+   "target": "5 GHz"
+  }
+ ]
+}

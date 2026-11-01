@@ -1,0 +1,97 @@
+{
+ "entities": [
+  {
+   "name": "leaver process",
+   "type": "Process"
+  },
+  {
+   "name": "equipment return",
+   "type": "Task"
+  },
+  {
+   "name": "account removal",
+   "type": "Task"
+  },
+  {
+   "name": "Identity & Access Management team lead",
+   "type": "Role"
+  },
+  {
+   "name": "Security Operations SOC",
+   "type": "Team"
+  },
+  {
+   "name": "P1 incident",
+   "type": "IncidentSeverity"
+  },
+  {
+   "name": "suspected data exfiltration",
+   "type": "Event"
+  },
+  {
+   "name": "employee ID",
+   "type": "DataField"
+  },
+  {
+   "name": "ticket number",
+   "type": "DataField"
+  },
+  {
+   "name": "missing assets",
+   "type": "AssetList"
+  },
+  {
+   "name": "active login attempts",
+   "type": "Activity"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "Active Directory",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "BitLocker",
+   "type": "Product"
+  },
+  {
+   "name": "FileVault",
+   "type": "Product"
+  },
+  {
+   "name": "PaperCut",
+   "type": "Product"
+  },
+  {
+   "name": "Service Desk",
+   "type": "Tool"
+  },
+  {
+   "name": "HR exit",
+   "type": "Process"
+  },
+  {
+   "name": "last working day",
+   "type": "TimePoint"
+  },
+  {
+   "name": "account disabling",
+   "type": "Action"
+  },
+  {
+   "name": "mailbox retention",
+   "type": "Policy"
+  },
+  {
+   "name": "VPN certificate revoke",
+   "type": "Action"
+  }
+ ],
+ "relations": []
+}

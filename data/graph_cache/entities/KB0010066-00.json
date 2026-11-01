@@ -1,0 +1,145 @@
+{
+ "entities": [
+  {
+   "name": "Outlook search not returning results",
+   "type": "Symptom"
+  },
+  {
+   "name": "corrupted local search index",
+   "type": "Cause"
+  },
+  {
+   "name": "disabled Windows Search service",
+   "type": "Cause"
+  },
+  {
+   "name": "issues with the offline Outlook data file (.ost)",
+   "type": "Cause"
+  },
+  {
+   "name": "large or damaged .ost/.pst file",
+   "type": "Component"
+  },
+  {
+   "name": "third-party COM add-in",
+   "type": "Component"
+  },
+  {
+   "name": "insufficient free disk space",
+   "type": "Cause"
+  },
+  {
+   "name": "rebuild the Outlook search index",
+   "type": "Fix"
+  },
+  {
+   "name": "Windows Search service",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook for Windows",
+   "type": "Product"
+  },
+  {
+   "name": "Exchange Online",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 5440",
+   "type": "Product"
+  },
+  {
+   "name": "C:\\ drive",
+   "type": "Component"
+  },
+  {
+   "name": "Instant search yields empty results",
+   "type": "Symptom"
+  },
+  {
+   "name": "Search indexing status shows 'Indexing incomplete'",
+   "type": "Symptom"
+  },
+  {
+   "name": "Windows Search service stopped",
+   "type": "ErrorCode"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Outlook search not returning results",
+   "relation": "CAUSED_BY",
+   "target": "corrupted local search index"
+  },
+  {
+   "source": "Outlook search not returning results",
+   "relation": "CAUSED_BY",
+   "target": "disabled Windows Search service"
+  },
+  {
+   "source": "Outlook search not returning results",
+   "relation": "CAUSED_BY",
+   "target": "issues with the offline Outlook data file (.ost)"
+  },
+  {
+   "source": "Outlook search not returning results",
+   "relation": "CAUSED_BY",
+   "target": "large or damaged .ost/.pst file"
+  },
+  {
+   "source": "Outlook search not returning results",
+   "relation": "CAUSED_BY",
+   "target": "third-party COM add-in"
+  },
+  {
+   "source": "Outlook search not returning results",
+   "relation": "CAUSED_BY",
+   "target": "insufficient free disk space"
+  },
+  {
+   "source": "Instant search yields empty results",
+   "relation": "INDICATES",
+   "target": "corrupted local search index"
+  },
+  {
+   "source": "Search indexing status shows 'Indexing incomplete'",
+   "relation": "INDICATES",
+   "target": "corrupted local search index"
+  },
+  {
+   "source": "Windows Search service stopped",
+   "relation": "INDICATES",
+   "target": "disabled Windows Search service"
+  },
+  {
+   "source": "rebuild the Outlook search index",
+   "relation": "FIXED_BY",
+   "target": "corrupted local search index"
+  },
+  {
+   "source": "rebuild the Outlook search index",
+   "relation": "FIXED_BY",
+   "target": "disabled Windows Search service"
+  },
+  {
+   "source": "Outlook for Windows",
+   "relation": "AFFECTS",
+   "target": "Outlook search not returning results"
+  },
+  {
+   "source": "Windows Search service",
+   "relation": "PART_OF",
+   "target": "Windows"
+  },
+  {
+   "source": "C:\\ drive",
+   "relation": "AFFECTS",
+   "target": "insufficient free disk space"
+  },
+  {
+   "source": "Dell Latitude 5440",
+   "relation": "AFFECTS",
+   "target": "Outlook search not returning results"
+  }
+ ]
+}

@@ -1,0 +1,153 @@
+{
+ "entities": [
+  {
+   "name": "GlobalProtect VPN client",
+   "type": "Product"
+  },
+  {
+   "name": "split tunnelling",
+   "type": "Component"
+  },
+  {
+   "name": "DNS cache",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect certificate",
+   "type": "Component"
+  },
+  {
+   "name": "VPN connected but internal sites don't load",
+   "type": "Symptom"
+  },
+  {
+   "name": "DNS_PROBE_FINISHED_NXDOMAIN",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Server DNS address could not be found",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "nslookup returns external ISP DNS",
+   "type": "Symptom"
+  },
+  {
+   "name": "Split-tunnel status Off",
+   "type": "Symptom"
+  },
+  {
+   "name": "expired or corrupted GlobalProtect certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "split-tunnelling misconfiguration",
+   "type": "Cause"
+  },
+  {
+   "name": "stale DNS cache",
+   "type": "Cause"
+  },
+  {
+   "name": "outdated GlobalProtect client version",
+   "type": "Cause"
+  },
+  {
+   "name": "flush DNS cache",
+   "type": "Fix"
+  },
+  {
+   "name": "confirm split-tunnel configuration",
+   "type": "Fix"
+  },
+  {
+   "name": "renew GlobalProtect certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "update GlobalProtect client",
+   "type": "Fix"
+  },
+  {
+   "name": "check VPN adapter DNS servers",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "VPN connected but internal sites don't load",
+   "relation": "CAUSED_BY",
+   "target": "expired or corrupted GlobalProtect certificate"
+  },
+  {
+   "source": "VPN connected but internal sites don't load",
+   "relation": "CAUSED_BY",
+   "target": "split-tunnelling misconfiguration"
+  },
+  {
+   "source": "VPN connected but internal sites don't load",
+   "relation": "CAUSED_BY",
+   "target": "stale DNS cache"
+  },
+  {
+   "source": "VPN connected but internal sites don't load",
+   "relation": "CAUSED_BY",
+   "target": "outdated GlobalProtect client version"
+  },
+  {
+   "source": "DNS_PROBE_FINISHED_NXDOMAIN",
+   "relation": "INDICATES",
+   "target": "split-tunnelling misconfiguration"
+  },
+  {
+   "source": "Server DNS address could not be found",
+   "relation": "INDICATES",
+   "target": "split-tunnelling misconfiguration"
+  },
+  {
+   "source": "nslookup returns external ISP DNS",
+   "relation": "INDICATES",
+   "target": "split-tunnelling misconfiguration"
+  },
+  {
+   "source": "Split-tunnel status Off",
+   "relation": "INDICATES",
+   "target": "split-tunnelling misconfiguration"
+  },
+  {
+   "source": "expired or corrupted GlobalProtect certificate",
+   "relation": "FIXED_BY",
+   "target": "renew GlobalProtect certificate"
+  },
+  {
+   "source": "split-tunnelling misconfiguration",
+   "relation": "FIXED_BY",
+   "target": "confirm split-tunnel configuration"
+  },
+  {
+   "source": "stale DNS cache",
+   "relation": "FIXED_BY",
+   "target": "flush DNS cache"
+  },
+  {
+   "source": "outdated GlobalProtect client version",
+   "relation": "FIXED_BY",
+   "target": "update GlobalProtect client"
+  },
+  {
+   "source": "GlobalProtect certificate",
+   "relation": "PART_OF",
+   "target": "GlobalProtect VPN client"
+  },
+  {
+   "source": "split tunnelling",
+   "relation": "PART_OF",
+   "target": "GlobalProtect VPN client"
+  },
+  {
+   "source": "DNS cache",
+   "relation": "PART_OF",
+   "target": "GlobalProtect VPN client"
+  }
+ ]
+}

@@ -1,0 +1,122 @@
+{
+ "entities": [
+  {
+   "name": "BitLocker To Go",
+   "type": "Component"
+  },
+  {
+   "name": "FileVault",
+   "type": "Component"
+  },
+  {
+   "name": "USB drive not recognized after insertion",
+   "type": "Symptom"
+  },
+  {
+   "name": "BitLocker prompts for recovery key",
+   "type": "Symptom"
+  },
+  {
+   "name": "macOS asks for FileVault password unknown",
+   "type": "Symptom"
+  },
+  {
+   "name": "'The disk is not formatted' or 'Access is denied'",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Drive not encrypted with Acme-approved method",
+   "type": "Cause"
+  },
+  {
+   "name": "Recovery key not backed up to Intune",
+   "type": "Cause"
+  },
+  {
+   "name": "Using personally owned unencrypted USB stick",
+   "type": "Cause"
+  },
+  {
+   "name": "Encrypt USB drive with BitLocker To Go",
+   "type": "Fix"
+  },
+  {
+   "name": "Save recovery key to Intune during encryption",
+   "type": "Fix"
+  },
+  {
+   "name": "Windows 11 23H2/24H2 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15 MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "Any USB flash drive, external HDD/SSD, SD card",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "USB drive not recognized after insertion",
+   "relation": "CAUSED_BY",
+   "target": "Drive not encrypted with Acme-approved method"
+  },
+  {
+   "source": "BitLocker prompts for recovery key",
+   "relation": "CAUSED_BY",
+   "target": "Recovery key not backed up to Intune"
+  },
+  {
+   "source": "macOS asks for FileVault password unknown",
+   "relation": "CAUSED_BY",
+   "target": "Using personally owned unencrypted USB stick"
+  },
+  {
+   "source": "'The disk is not formatted' or 'Access is denied'",
+   "relation": "INDICATES",
+   "target": "Drive not encrypted with Acme-approved method"
+  },
+  {
+   "source": "Drive not encrypted with Acme-approved method",
+   "relation": "AFFECTS",
+   "target": "USB drive not recognized after insertion"
+  },
+  {
+   "source": "Recovery key not backed up to Intune",
+   "relation": "AFFECTS",
+   "target": "BitLocker prompts for recovery key"
+  },
+  {
+   "source": "Using personally owned unencrypted USB stick",
+   "relation": "AFFECTS",
+   "target": "macOS asks for FileVault password unknown"
+  },
+  {
+   "source": "Encrypt USB drive with BitLocker To Go",
+   "relation": "FIXED_BY",
+   "target": "BitLocker prompts for recovery key"
+  },
+  {
+   "source": "Save recovery key to Intune during encryption",
+   "relation": "FIXED_BY",
+   "target": "Recovery key not backed up to Intune"
+  },
+  {
+   "source": "BitLocker To Go",
+   "relation": "PART_OF",
+   "target": "Windows 11 23H2/24H2 laptops"
+  },
+  {
+   "source": "FileVault",
+   "relation": "PART_OF",
+   "target": "macOS 14/15 MacBook Pro/Air"
+  },
+  {
+   "source": "Any USB flash drive, external HDD/SSD, SD card",
+   "relation": "AFFECTS",
+   "target": "Drive not encrypted with Acme-approved method"
+  }
+ ]
+}

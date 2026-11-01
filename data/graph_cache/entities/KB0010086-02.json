@@ -1,0 +1,179 @@
+{
+ "entities": [
+  {
+   "name": "Azure AD login details",
+   "type": "Component"
+  },
+  {
+   "name": "employee ID",
+   "type": "Component"
+  },
+  {
+   "name": "ticket title",
+   "type": "Component"
+  },
+  {
+   "name": "ticket description",
+   "type": "Component"
+  },
+  {
+   "name": "support group assignment",
+   "type": "Component"
+  },
+  {
+   "name": "priority adjustment",
+   "type": "Component"
+  },
+  {
+   "name": "known-error articles",
+   "type": "Component"
+  },
+  {
+   "name": "remote tools",
+   "type": "Component"
+  },
+  {
+   "name": "closure summary",
+   "type": "Component"
+  },
+  {
+   "name": "satisfaction survey",
+   "type": "Component"
+  },
+  {
+   "name": "workaround documentation",
+   "type": "Component"
+  },
+  {
+   "name": "permanent fix documentation",
+   "type": "Component"
+  },
+  {
+   "name": "escalation trigger",
+   "type": "Cause"
+  },
+  {
+   "name": "missing ticket information",
+   "type": "Symptom"
+  },
+  {
+   "name": "incorrect priority selection",
+   "type": "Symptom"
+  },
+  {
+   "name": "unresolved issue after fix",
+   "type": "Symptom"
+  },
+  {
+   "name": "recurring user-reported issue",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "missing ticket information",
+   "relation": "CAUSED_BY",
+   "target": "incomplete user submission"
+  },
+  {
+   "source": "incorrect priority selection",
+   "relation": "CAUSED_BY",
+   "target": "initial impact misjudgment"
+  },
+  {
+   "source": "unresolved issue after fix",
+   "relation": "CAUSED_BY",
+   "target": "inadequate diagnosis"
+  },
+  {
+   "source": "recurring user-reported issue",
+   "relation": "CAUSED_BY",
+   "target": "underlying root cause not addressed"
+  },
+  {
+   "source": "missing ticket information",
+   "relation": "FIXED_BY",
+   "target": "request missing details and set to Pending User Response"
+  },
+  {
+   "source": "incorrect priority selection",
+   "relation": "FIXED_BY",
+   "target": "adjust priority and document reason"
+  },
+  {
+   "source": "unresolved issue after fix",
+   "relation": "FIXED_BY",
+   "target": "reopen ticket, reassess diagnosis, consider escalation"
+  },
+  {
+   "source": "recurring user-reported issue",
+   "relation": "FIXED_BY",
+   "target": "escalate to specialist team"
+  },
+  {
+   "source": "Azure AD login details",
+   "relation": "AFFECTS",
+   "target": "ticket verification"
+  },
+  {
+   "source": "employee ID",
+   "relation": "AFFECTS",
+   "target": "ticket verification"
+  },
+  {
+   "source": "ticket title",
+   "relation": "AFFECTS",
+   "target": "support group determination"
+  },
+  {
+   "source": "ticket description",
+   "relation": "AFFECTS",
+   "target": "support group determination"
+  },
+  {
+   "source": "support group assignment",
+   "relation": "AFFECTS",
+   "target": "ticket routing"
+  },
+  {
+   "source": "priority adjustment",
+   "relation": "AFFECTS",
+   "target": "SLA compliance"
+  },
+  {
+   "source": "known-error articles",
+   "relation": "AFFECTS",
+   "target": "L1 troubleshooting"
+  },
+  {
+   "source": "remote tools",
+   "relation": "AFFECTS",
+   "target": "L1 troubleshooting"
+  },
+  {
+   "source": "closure summary",
+   "relation": "AFFECTS",
+   "target": "ticket closure and reporting"
+  },
+  {
+   "source": "satisfaction survey",
+   "relation": "AFFECTS",
+   "target": "service quality improvement"
+  },
+  {
+   "source": "workaround documentation",
+   "relation": "PART_OF",
+   "target": "knowledge base"
+  },
+  {
+   "source": "permanent fix documentation",
+   "relation": "PART_OF",
+   "target": "knowledge base"
+  },
+  {
+   "source": "escalation trigger",
+   "relation": "INDICATES",
+   "target": "need for specialist team involvement"
+  }
+ ]
+}

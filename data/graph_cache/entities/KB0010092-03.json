@@ -1,0 +1,126 @@
+{
+ "entities": [
+  {
+   "name": "BitLocker lockout",
+   "type": "Symptom"
+  },
+  {
+   "name": "persistent BitLocker lockout requiring key recovery beyond standard procedures",
+   "type": "Cause"
+  },
+  {
+   "name": "widespread certificate expiration affecting multiple devices",
+   "type": "Cause"
+  },
+  {
+   "name": "confirmed hardware failure needing depot repair",
+   "type": "Cause"
+  },
+  {
+   "name": "Intune compliance report",
+   "type": "Component"
+  },
+  {
+   "name": "machine certificate",
+   "type": "Component"
+  },
+  {
+   "name": "Desktop Support SLA (P2 High 8?h)",
+   "type": "Component"
+  },
+  {
+   "name": "Identity & Access Management team",
+   "type": "Product"
+  },
+  {
+   "name": "Hardware Vendor Support liaison",
+   "type": "Product"
+  },
+  {
+   "name": "secure packing",
+   "type": "Component"
+  },
+  {
+   "name": "laptop care and travel guidelines",
+   "type": "Component"
+  },
+  {
+   "name": "close the ticket with a summary of steps taken",
+   "type": "Fix"
+  },
+  {
+   "name": "remind the user of the travel-care best practices",
+   "type": "Fix"
+  },
+  {
+   "name": "arrange a courier pickup",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to the Identity & Access Management team",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BitLocker lockout",
+   "relation": "CAUSED_BY",
+   "target": "persistent BitLocker lockout requiring key recovery beyond standard procedures"
+  },
+  {
+   "source": "BitLocker lockout",
+   "relation": "INDICATES",
+   "target": "widespread certificate expiration affecting multiple devices"
+  },
+  {
+   "source": "BitLocker lockout",
+   "relation": "INDICATES",
+   "target": "confirmed hardware failure needing depot repair"
+  },
+  {
+   "source": "Intune compliance report",
+   "relation": "AFFECTS",
+   "target": "machine certificate"
+  },
+  {
+   "source": "laptop care and travel guidelines",
+   "relation": "AFFECTS",
+   "target": "secure packing"
+  },
+  {
+   "source": "Desktop Support SLA (P2 High 8?h)",
+   "relation": "AFFECTS",
+   "target": "Identity & Access Management team"
+  },
+  {
+   "source": "Desktop Support SLA (P2 High 8?h)",
+   "relation": "AFFECTS",
+   "target": "Hardware Vendor Support liaison"
+  },
+  {
+   "source": "persistent BitLocker lockout requiring key recovery beyond standard procedures",
+   "relation": "FIXED_BY",
+   "target": "escalate to the Identity & Access Management team"
+  },
+  {
+   "source": "widespread certificate expiration affecting multiple devices",
+   "relation": "FIXED_BY",
+   "target": "escalate to the Identity & Access Management team"
+  },
+  {
+   "source": "confirmed hardware failure needing depot repair",
+   "relation": "FIXED_BY",
+   "target": "escalate to the Hardware Vendor Support liaison"
+  },
+  {
+   "source": "close the ticket with a summary of steps taken",
+   "relation": "FIXED_BY",
+   "target": "remind the user of the travel-care best practices"
+  },
+  {
+   "source": "arrange a courier pickup",
+   "relation": "FIXED_BY",
+   "target": "laptop care and travel guidelines"
+  }
+ ]
+}

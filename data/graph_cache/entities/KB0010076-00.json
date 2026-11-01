@@ -1,0 +1,173 @@
+{
+ "entities": [
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi network",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Print Spooler service",
+   "type": "Component"
+  },
+  {
+   "name": "PaperCut secure-print system",
+   "type": "Product"
+  },
+  {
+   "name": "printer driver",
+   "type": "Component"
+  },
+  {
+   "name": "Printer offline",
+   "type": "Symptom"
+  },
+  {
+   "name": "Print jobs stuck in queue",
+   "type": "Symptom"
+  },
+  {
+   "name": "Access is denied",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Specified printer driver not found",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Blank-page prints",
+   "type": "Symptom"
+  },
+  {
+   "name": "Network connectivity issue",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated or missing printer driver",
+   "type": "Cause"
+  },
+  {
+   "name": "Incorrect printer selection",
+   "type": "Cause"
+  },
+  {
+   "name": "Low toner or empty cartridge",
+   "type": "Cause"
+  },
+  {
+   "name": "PaperCut authentication failure",
+   "type": "Cause"
+  },
+  {
+   "name": "Start Print Spooler service",
+   "type": "Fix"
+  },
+  {
+   "name": "Connect to ACME-Corp Wi-Fi or VPN",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify print server reachability",
+   "type": "Fix"
+  },
+  {
+   "name": "Check PaperCut badge and quota",
+   "type": "Fix"
+  },
+  {
+   "name": "Reinstall correct printer driver",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Printer offline",
+   "relation": "CAUSED_BY",
+   "target": "Print Spooler service stopped"
+  },
+  {
+   "source": "Print jobs stuck in queue",
+   "relation": "CAUSED_BY",
+   "target": "Print Spooler service stopped"
+  },
+  {
+   "source": "Access is denied",
+   "relation": "INDICATES",
+   "target": "Network connectivity issue"
+  },
+  {
+   "source": "Specified printer driver not found",
+   "relation": "INDICATES",
+   "target": "Outdated or missing printer driver"
+  },
+  {
+   "source": "Blank-page prints",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect printer selection"
+  },
+  {
+   "source": "Network connectivity issue",
+   "relation": "AFFECTS",
+   "target": "PaperCut secure-print system"
+  },
+  {
+   "source": "Outdated or missing printer driver",
+   "relation": "AFFECTS",
+   "target": "printer driver"
+  },
+  {
+   "source": "Incorrect printer selection",
+   "relation": "AFFECTS",
+   "target": "printer driver"
+  },
+  {
+   "source": "Low toner or empty cartridge",
+   "relation": "AFFECTS",
+   "target": "PaperCut secure-print system"
+  },
+  {
+   "source": "PaperCut authentication failure",
+   "relation": "AFFECTS",
+   "target": "PaperCut secure-print system"
+  },
+  {
+   "source": "Print Spooler service stopped",
+   "relation": "FIXED_BY",
+   "target": "Start Print Spooler service"
+  },
+  {
+   "source": "Network connectivity issue",
+   "relation": "FIXED_BY",
+   "target": "Connect to ACME-Corp Wi-Fi or VPN"
+  },
+  {
+   "source": "Outdated or missing printer driver",
+   "relation": "FIXED_BY",
+   "target": "Reinstall correct printer driver"
+  },
+  {
+   "source": "Incorrect printer selection",
+   "relation": "FIXED_BY",
+   "target": "Reinstall correct printer driver"
+  },
+  {
+   "source": "PaperCut authentication failure",
+   "relation": "FIXED_BY",
+   "target": "Check PaperCut badge and quota"
+  }
+ ]
+}

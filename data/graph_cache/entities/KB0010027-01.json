@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Wi-Fi 5 GHz band",
+   "type": "Component"
+  },
+  {
+   "name": "QoS settings",
+   "type": "Component"
+  },
+  {
+   "name": "wired Ethernet connection",
+   "type": "Component"
+  },
+  {
+   "name": "router firmware update",
+   "type": "Fix"
+  },
+  {
+   "name": "AP overload",
+   "type": "Cause"
+  },
+  {
+   "name": "channel interference",
+   "type": "Cause"
+  },
+  {
+   "name": "video call quality degradation",
+   "type": "Symptom"
+  },
+  {
+   "name": "Teams call statistics",
+   "type": "Component"
+  },
+  {
+   "name": "high packet loss",
+   "type": "Symptom"
+  },
+  {
+   "name": "SSID ACME-Corp",
+   "type": "Component"
+  },
+  {
+   "name": "guest network",
+   "type": "Component"
+  },
+  {
+   "name": "USB-C to Ethernet adapter",
+   "type": "Component"
+  },
+  {
+   "name": "dual-band or Wi-Fi 6 router",
+   "type": "Product"
+  },
+  {
+   "name": "router admin page",
+   "type": "Component"
+  },
+  {
+   "name": "Service Desk",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "video call quality degradation",
+   "relation": "CAUSED_BY",
+   "target": "AP overload"
+  },
+  {
+   "source": "video call quality degradation",
+   "relation": "CAUSED_BY",
+   "target": "channel interference"
+  },
+  {
+   "source": "high packet loss",
+   "relation": "INDICATES",
+   "target": "AP issues"
+  },
+  {
+   "source": "AP overload",
+   "relation": "AFFECTS",
+   "target": "Teams call statistics"
+  },
+  {
+   "source": "SSID ACME-Corp",
+   "relation": "PART_OF",
+   "target": "office network"
+  },
+  {
+   "source": "guest network",
+   "relation": "AFFECTS",
+   "target": "video call quality degradation"
+  },
+  {
+   "source": "wired Ethernet connection",
+   "relation": "FIXED_BY",
+   "target": "video call quality degradation"
+  },
+  {
+   "source": "router firmware update",
+   "relation": "FIXED_BY",
+   "target": "video call quality degradation"
+  },
+  {
+   "source": "QoS settings",
+   "relation": "FIXED_BY",
+   "target": "video call quality degradation"
+  },
+  {
+   "source": "Wi-Fi 5 GHz band",
+   "relation": "FIXED_BY",
+   "target": "video call quality degradation"
+  },
+  {
+   "source": "dual-band or Wi-Fi 6 router",
+   "relation": "FIXED_BY",
+   "target": "video call quality degradation"
+  },
+  {
+   "source": "USB-C to Ethernet adapter",
+   "relation": "FIXED_BY",
+   "target": "video call quality degradation"
+  },
+  {
+   "source": "router admin page",
+   "relation": "AFFECTS",
+   "target": "QoS settings"
+  },
+  {
+   "source": "Service Desk",
+   "relation": "FIXED_BY",
+   "target": "persistent video call issues"
+  },
+  {
+   "source": "Teams call statistics",
+   "relation": "AFFECTS",
+   "target": "video call quality verification"
+  }
+ ]
+}

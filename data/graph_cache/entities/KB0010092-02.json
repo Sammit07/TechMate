@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Azure AD join",
+   "type": "Component"
+  },
+  {
+   "name": "BitLocker recovery screen",
+   "type": "Symptom"
+  },
+  {
+   "name": "VPN failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "physical damage",
+   "type": "Symptom"
+  },
+  {
+   "name": "device compliance status",
+   "type": "Component"
+  },
+  {
+   "name": "BitLocker/FileVault state",
+   "type": "Component"
+  },
+  {
+   "name": "certificate validity",
+   "type": "Component"
+  },
+  {
+   "name": "machine certificate expiry",
+   "type": "Component"
+  },
+  {
+   "name": "hardware damage",
+   "type": "Symptom"
+  },
+  {
+   "name": "depot swap",
+   "type": "Fix"
+  },
+  {
+   "name": "on-site repair",
+   "type": "Fix"
+  },
+  {
+   "name": "remote wipe/re-enroll",
+   "type": "Fix"
+  },
+  {
+   "name": "self-service portal",
+   "type": "Product"
+  },
+  {
+   "name": "ticket creation",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BitLocker recovery screen",
+   "relation": "CAUSED_BY",
+   "target": "non-compliant device"
+  },
+  {
+   "source": "VPN failure",
+   "relation": "CAUSED_BY",
+   "target": "expired machine certificate"
+  },
+  {
+   "source": "physical damage",
+   "relation": "CAUSED_BY",
+   "target": "travel-related incident"
+  },
+  {
+   "source": "device compliance status",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "BitLocker/FileVault state",
+   "relation": "PART_OF",
+   "target": "device compliance status"
+  },
+  {
+   "source": "certificate validity",
+   "relation": "PART_OF",
+   "target": "device compliance status"
+  },
+  {
+   "source": "machine certificate expiry",
+   "relation": "INDICATES",
+   "target": "VPN failure"
+  },
+  {
+   "source": "hardware damage",
+   "relation": "FIXED_BY",
+   "target": "depot swap"
+  },
+  {
+   "source": "hardware damage",
+   "relation": "FIXED_BY",
+   "target": "on-site repair"
+  },
+  {
+   "source": "non-compliant device",
+   "relation": "FIXED_BY",
+   "target": "remote wipe/re-enroll"
+  },
+  {
+   "source": "persistent issue",
+   "relation": "FIXED_BY",
+   "target": "ticket creation"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "Azure AD join"
+  },
+  {
+   "source": "self-service portal",
+   "relation": "AFFECTS",
+   "target": "certificate renewal"
+  },
+  {
+   "source": "travel-related laptop issue",
+   "relation": "AFFECTS",
+   "target": "Desktop Support workflow"
+  }
+ ]
+}

@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "OWA",
+   "type": "Product"
+  },
+  {
+   "name": "Online Archive",
+   "type": "Component"
+  },
+  {
+   "name": "mailbox usage",
+   "type": "Symptom"
+  },
+  {
+   "name": "large attachments",
+   "type": "Component"
+  },
+  {
+   "name": "Deleted Items",
+   "type": "Component"
+  },
+  {
+   "name": "Junk Email",
+   "type": "Component"
+  },
+  {
+   "name": "retention policy",
+   "type": "Component"
+  },
+  {
+   "name": "Service Desk",
+   "type": "Product"
+  },
+  {
+   "name": "Messaging & Collaboration team",
+   "type": "Product"
+  },
+  {
+   "name": "hasattachment:yes",
+   "type": "Component"
+  },
+  {
+   "name": "AutoArchive settings",
+   "type": "Component"
+  },
+  {
+   "name": "mailbox size check",
+   "type": "Symptom"
+  },
+  {
+   "name": "empty folder",
+   "type": "Fix"
+  },
+  {
+   "name": "move old items",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "mailbox usage",
+   "relation": "CAUSED_BY",
+   "target": "high mailbox storage"
+  },
+  {
+   "source": "mailbox usage",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "mailbox usage",
+   "relation": "AFFECTS",
+   "target": "OWA"
+  },
+  {
+   "source": "Online Archive",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  },
+  {
+   "source": "large attachments",
+   "relation": "AFFECTS",
+   "target": "mailbox usage"
+  },
+  {
+   "source": "Deleted Items",
+   "relation": "AFFECTS",
+   "target": "mailbox usage"
+  },
+  {
+   "source": "Junk Email",
+   "relation": "AFFECTS",
+   "target": "mailbox usage"
+  },
+  {
+   "source": "retention policy",
+   "relation": "FIXED_BY",
+   "target": "mailbox usage"
+  },
+  {
+   "source": "Service Desk",
+   "relation": "FIXED_BY",
+   "target": "Online Archive"
+  },
+  {
+   "source": "Messaging & Collaboration team",
+   "relation": "FIXED_BY",
+   "target": "retention policy"
+  },
+  {
+   "source": "hasattachment:yes",
+   "relation": "INDICATES",
+   "target": "large attachments"
+  },
+  {
+   "source": "AutoArchive settings",
+   "relation": "FIXED_BY",
+   "target": "mailbox usage"
+  },
+  {
+   "source": "mailbox size check",
+   "relation": "INDICATES",
+   "target": "mailbox usage"
+  },
+  {
+   "source": "empty folder",
+   "relation": "FIXED_BY",
+   "target": "Deleted Items"
+  },
+  {
+   "source": "move old items",
+   "relation": "FIXED_BY",
+   "target": "mailbox usage"
+  }
+ ]
+}

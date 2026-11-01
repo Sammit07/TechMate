@@ -1,0 +1,145 @@
+{
+ "entities": [
+  {
+   "name": "Teams audio/video/screen share blocked by policies",
+   "type": "Symptom"
+  },
+  {
+   "name": "macOS screen-recording permission required for Teams",
+   "type": "Cause"
+  },
+  {
+   "name": "Persistent \"Away\" status due to device lock or third-party presence integration",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated Teams client causing issues",
+   "type": "Cause"
+  },
+  {
+   "name": "Clear Teams cache",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify device permissions (especially screen recording on macOS)",
+   "type": "Fix"
+  },
+  {
+   "name": "Update Teams client via Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Sign out and back into Teams",
+   "type": "Fix"
+  },
+  {
+   "name": "Join test meeting or use Make a test call",
+   "type": "Fix"
+  },
+  {
+   "name": "Test microphone and speaker functionality",
+   "type": "Fix"
+  },
+  {
+   "name": "Enable webcam and confirm video preview",
+   "type": "Fix"
+  },
+  {
+   "name": "Attempt screen or application sharing",
+   "type": "Fix"
+  },
+  {
+   "name": "Check presence status updates",
+   "type": "Fix"
+  },
+  {
+   "name": "Escalate to Messaging & Collaboration support group",
+   "type": "Fix"
+  },
+  {
+   "name": "Microsoft Teams",
+   "type": "Product"
+  },
+  {
+   "name": "macOS",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Teams audio/video/screen share blocked by policies",
+   "relation": "CAUSED_BY",
+   "target": "macOS screen-recording permission required for Teams"
+  },
+  {
+   "source": "Teams audio/video/screen share blocked by policies",
+   "relation": "CAUSED_BY",
+   "target": "Persistent \"Away\" status due to device lock or third-party presence integration"
+  },
+  {
+   "source": "Teams audio/video/screen share blocked by policies",
+   "relation": "CAUSED_BY",
+   "target": "Outdated Teams client causing issues"
+  },
+  {
+   "source": "macOS screen-recording permission required for Teams",
+   "relation": "AFFECTS",
+   "target": "Microsoft Teams"
+  },
+  {
+   "source": "Persistent \"Away\" status due to device lock or third-party presence integration",
+   "relation": "AFFECTS",
+   "target": "Microsoft Teams"
+  },
+  {
+   "source": "Outdated Teams client causing issues",
+   "relation": "AFFECTS",
+   "target": "Microsoft Teams"
+  },
+  {
+   "source": "Clear Teams cache",
+   "relation": "FIXED_BY",
+   "target": "Teams audio/video/screen share blocked by policies"
+  },
+  {
+   "source": "Verify device permissions (especially screen recording on macOS)",
+   "relation": "FIXED_BY",
+   "target": "Teams audio/video/screen share blocked by policies"
+  },
+  {
+   "source": "Update Teams client via Company Portal",
+   "relation": "FIXED_BY",
+   "target": "Teams audio/video/screen share blocked by policies"
+  },
+  {
+   "source": "Sign out and back into Teams",
+   "relation": "FIXED_BY",
+   "target": "Teams audio/video/screen share blocked by policies"
+  },
+  {
+   "source": "Join test meeting or use Make a test call",
+   "relation": "FIXED_BY",
+   "target": "Teams audio/video/screen share blocked by policies"
+  },
+  {
+   "source": "Test microphone and speaker functionality",
+   "relation": "FIXED_BY",
+   "target": "Teams audio/video/screen share blocked by policies"
+  },
+  {
+   "source": "Enable webcam and confirm video preview",
+   "relation": "FIXED_BY",
+   "target": "Teams audio/video/screen share blocked by policies"
+  },
+  {
+   "source": "Attempt screen or application sharing",
+   "relation": "FIXED_BY",
+   "target": "Teams audio/video/screen share blocked by policies"
+  },
+  {
+   "source": "Check presence status updates",
+   "relation": "FIXED_BY",
+   "target": "Teams audio/video/screen share blocked by policies"
+  }
+ ]
+}

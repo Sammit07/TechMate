@@ -1,0 +1,140 @@
+{
+ "entities": [
+  {
+   "name": "Office app crash on launch",
+   "type": "Symptom"
+  },
+  {
+   "name": "unsaved or corrupted Office file",
+   "type": "Symptom"
+  },
+  {
+   "name": "Unlicensed Product",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Needs Activation",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "disable recent add-ins",
+   "type": "Fix"
+  },
+  {
+   "name": "Open and Repair feature",
+   "type": "Fix"
+  },
+  {
+   "name": "Extract Data option",
+   "type": "Fix"
+  },
+  {
+   "name": "Office Quick Repair",
+   "type": "Fix"
+  },
+  {
+   "name": "Office Online Repair",
+   "type": "Fix"
+  },
+  {
+   "name": "sign out and sign back in",
+   "type": "Fix"
+  },
+  {
+   "name": "launch with /safe switch",
+   "type": "Fix"
+  },
+  {
+   "name": "faulty COM add-in",
+   "type": "Cause"
+  },
+  {
+   "name": "corrupted Office installation",
+   "type": "Cause"
+  },
+  {
+   "name": "license activation issue",
+   "type": "Cause"
+  },
+  {
+   "name": "Microsoft 365",
+   "type": "Product"
+  },
+  {
+   "name": "File -> Options -> Add-Ins",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Office app crash on launch",
+   "relation": "CAUSED_BY",
+   "target": "faulty COM add-in"
+  },
+  {
+   "source": "Office app crash on launch",
+   "relation": "CAUSED_BY",
+   "target": "corrupted Office installation"
+  },
+  {
+   "source": "unsaved or corrupted Office file",
+   "relation": "CAUSED_BY",
+   "target": "corrupted Office installation"
+  },
+  {
+   "source": "Unlicensed Product",
+   "relation": "INDICATES",
+   "target": "license activation issue"
+  },
+  {
+   "source": "Needs Activation",
+   "relation": "INDICATES",
+   "target": "license activation issue"
+  },
+  {
+   "source": "faulty COM add-in",
+   "relation": "FIXED_BY",
+   "target": "disable recent add-ins"
+  },
+  {
+   "source": "corrupted Office installation",
+   "relation": "FIXED_BY",
+   "target": "Office Quick Repair"
+  },
+  {
+   "source": "corrupted Office installation",
+   "relation": "FIXED_BY",
+   "target": "Office Online Repair"
+  },
+  {
+   "source": "unsaved or corrupted Office file",
+   "relation": "FIXED_BY",
+   "target": "Open and Repair feature"
+  },
+  {
+   "source": "unsaved or corrupted Office file",
+   "relation": "FIXED_BY",
+   "target": "Extract Data option"
+  },
+  {
+   "source": "license activation issue",
+   "relation": "FIXED_BY",
+   "target": "sign out and sign back in"
+  },
+  {
+   "source": "Office app crash on launch",
+   "relation": "FIXED_BY",
+   "target": "launch with /safe switch"
+  },
+  {
+   "source": "Microsoft 365",
+   "relation": "AFFECTS",
+   "target": "File -> Options -> Add-Ins"
+  },
+  {
+   "source": "faulty COM add-in",
+   "relation": "PART_OF",
+   "target": "Microsoft 365"
+  }
+ ]
+}

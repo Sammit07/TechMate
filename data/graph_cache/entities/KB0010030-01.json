@@ -1,0 +1,114 @@
+{
+ "entities": [
+  {
+   "name": "laptop won't turn on",
+   "type": "Symptom"
+  },
+  {
+   "name": "drained battery",
+   "type": "Cause"
+  },
+  {
+   "name": "power management controller glitch",
+   "type": "Cause"
+  },
+  {
+   "name": "hard reset",
+   "type": "Fix"
+  },
+  {
+   "name": "BIOS/UEFI access",
+   "type": "Fix"
+  },
+  {
+   "name": "Windows Recovery Environment",
+   "type": "Component"
+  },
+  {
+   "name": "Startup Repair",
+   "type": "Fix"
+  },
+  {
+   "name": "Safe Mode",
+   "type": "Component"
+  },
+  {
+   "name": "sfc /scannow",
+   "type": "Fix"
+  },
+  {
+   "name": "chkdsk C: /f /r",
+   "type": "Fix"
+  },
+  {
+   "name": "uninstall recent updates/drivers",
+   "type": "Fix"
+  },
+  {
+   "name": "Dell/Lenovo/HP laptops",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "laptop won't turn on",
+   "relation": "CAUSED_BY",
+   "target": "drained battery"
+  },
+  {
+   "source": "laptop won't turn on",
+   "relation": "CAUSED_BY",
+   "target": "power management controller glitch"
+  },
+  {
+   "source": "laptop won't turn on",
+   "relation": "FIXED_BY",
+   "target": "hard reset"
+  },
+  {
+   "source": "laptop won't turn on",
+   "relation": "FIXED_BY",
+   "target": "BIOS/UEFI access"
+  },
+  {
+   "source": "BIOS/UEFI access",
+   "relation": "AFFECTS",
+   "target": "Dell/Lenovo/HP laptops"
+  },
+  {
+   "source": "laptop won't turn on",
+   "relation": "INDICATES",
+   "target": "power management controller glitch"
+  },
+  {
+   "source": "Windows Recovery Environment",
+   "relation": "PART_OF",
+   "target": "Dell/Lenovo/HP laptops"
+  },
+  {
+   "source": "laptop won't turn on",
+   "relation": "FIXED_BY",
+   "target": "Startup Repair"
+  },
+  {
+   "source": "laptop won't turn on",
+   "relation": "FIXED_BY",
+   "target": "Safe Mode"
+  },
+  {
+   "source": "laptop won't turn on",
+   "relation": "FIXED_BY",
+   "target": "sfc /scannow"
+  },
+  {
+   "source": "laptop won't turn on",
+   "relation": "FIXED_BY",
+   "target": "chkdsk C: /f /r"
+  },
+  {
+   "source": "laptop won't turn won't on",
+   "relation": "FIXED_BY",
+   "target": "uninstall recent updates/drivers"
+  }
+ ]
+}

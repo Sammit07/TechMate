@@ -1,0 +1,145 @@
+{
+ "entities": [
+  {
+   "name": "new password not accepted",
+   "type": "Symptom"
+  },
+  {
+   "name": "cached credentials",
+   "type": "Component"
+  },
+  {
+   "name": "SSPR portal",
+   "type": "Product"
+  },
+  {
+   "name": "password reset confirmation email",
+   "type": "Component"
+  },
+  {
+   "name": "complexity requirements",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect VPN",
+   "type": "Product"
+  },
+  {
+   "name": "Azure AD username",
+   "type": "Component"
+  },
+  {
+   "name": "MFA push or SMS verification",
+   "type": "Component"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi network",
+   "type": "Component"
+  },
+  {
+   "name": "802.1X profile",
+   "type": "Component"
+  },
+  {
+   "name": "machine certificate authentication",
+   "type": "Component"
+  },
+  {
+   "name": "Credential Manager",
+   "type": "Component"
+  },
+  {
+   "name": "stale Windows credentials",
+   "type": "Component"
+  },
+  {
+   "name": "internal resource access",
+   "type": "Symptom"
+  },
+  {
+   "name": "Event ID 4624",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "authentication package",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "new password not accepted",
+   "relation": "CAUSED_BY",
+   "target": "cached credentials"
+  },
+  {
+   "source": "cached credentials",
+   "relation": "FIXED_BY",
+   "target": "Credential Manager"
+  },
+  {
+   "source": "Credential Manager",
+   "relation": "AFFECTS",
+   "target": "stale Windows credentials"
+  },
+  {
+   "source": "new password not accepted",
+   "relation": "FIXED_BY",
+   "target": "GlobalProtect VPN"
+  },
+  {
+   "source": "GlobalProtect VPN",
+   "relation": "AFFECTS",
+   "target": "Azure AD username"
+  },
+  {
+   "source": "GlobalProtect VPN",
+   "relation": "AFFECTS",
+   "target": "MFA push or SMS verification"
+  },
+  {
+   "source": "VPN connection fails",
+   "relation": "CAUSED_BY",
+   "target": "ACME-Corp Wi-Fi network"
+  },
+  {
+   "source": "ACME-Corp Wi-Fi network",
+   "relation": "AFFECTS",
+   "target": "802.1X profile"
+  },
+  {
+   "source": "802.1X profile",
+   "relation": "AFFECTS",
+   "target": "machine certificate authentication"
+  },
+  {
+   "source": "lock and unlock laptop",
+   "relation": "FIXED_BY",
+   "target": "new password not accepted"
+  },
+  {
+   "source": "internal resource access",
+   "relation": "FIXED_BY",
+   "target": "https://intranet.acme.example"
+  },
+  {
+   "source": "Event ID 4624",
+   "relation": "INDICATES",
+   "target": "successful logon"
+  },
+  {
+   "source": "successful logon",
+   "relation": "INDICATES",
+   "target": "authentication package"
+  },
+  {
+   "source": "password reset via SSPR",
+   "relation": "FIXED_BY",
+   "target": "new password not accepted"
+  },
+  {
+   "source": "stale credentials cleared",
+   "relation": "FIXED_BY",
+   "target": "new password not accepted"
+  }
+ ]
+}

@@ -1,0 +1,152 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Teams cache",
+   "type": "Component"
+  },
+  {
+   "name": "audio/video device selection",
+   "type": "Component"
+  },
+  {
+   "name": "macOS screen-recording permission",
+   "type": "Component"
+  },
+  {
+   "name": "corporate network or VPN",
+   "type": "Component"
+  },
+  {
+   "name": "peripheral drivers",
+   "type": "Component"
+  },
+  {
+   "name": "Teams client fails to launch or stays on a blank screen",
+   "type": "Symptom"
+  },
+  {
+   "name": "No audio from microphone or speakers during a meeting",
+   "type": "Symptom"
+  },
+  {
+   "name": "Video freezes, shows a black screen, or webcam is not detected",
+   "type": "Symptom"
+  },
+  {
+   "name": "Screen-share button is greyed out or sharing starts but viewers see a blank screen",
+   "type": "Symptom"
+  },
+  {
+   "name": "Corrupted local Teams cache or outdated client version",
+   "type": "Cause"
+  },
+  {
+   "name": "Incorrect audio/video device selection in Teams settings",
+   "type": "Cause"
+  },
+  {
+   "name": "Missing macOS screen-recording permission for Teams",
+   "type": "Cause"
+  },
+  {
+   "name": "Network restrictions blocking required Teams ports or IP ranges",
+   "type": "Cause"
+  },
+  {
+   "name": "Clear Teams cache",
+   "type": "Fix"
+  },
+  {
+   "name": "Reset device settings",
+   "type": "Fix"
+  },
+  {
+   "name": "Update Teams client via Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify microphone, speakers, and webcam are not muted",
+   "type": "Fix"
+  },
+  {
+   "name": "Restart Teams app",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Teams client fails to launch or stays on a blank screen",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted local Teams cache or outdated client version"
+  },
+  {
+   "source": "No audio from microphone or speakers during a meeting",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect audio/video device selection in Teams settings"
+  },
+  {
+   "source": "Video freezes, shows a black screen, or webcam is not detected",
+   "relation": "CAUSED_BY",
+   "target": "Missing macOS screen-recording permission for Teams"
+  },
+  {
+   "source": "Screen-share button is greyed out or sharing starts but viewers see a blank screen",
+   "relation": "CAUSED_BY",
+   "target": "Network restrictions blocking required Teams ports or IP ranges"
+  },
+  {
+   "source": "Corrupted local Teams cache or outdated client version",
+   "relation": "FIXED_BY",
+   "target": "Clear Teams cache"
+  },
+  {
+   "source": "Incorrect audio/video device selection in Teams settings",
+   "relation": "FIXED_BY",
+   "target": "Reset device settings"
+  },
+  {
+   "source": "Missing macOS screen-recording permission for Teams",
+   "relation": "FIXED_BY",
+   "target": "Grant macOS screen-recording permission for Teams"
+  },
+  {
+   "source": "Network restrictions blocking required Teams ports or IP ranges",
+   "relation": "FIXED_BY",
+   "target": "Adjust network/firewall settings to allow Teams traffic"
+  },
+  {
+   "source": "Teams client",
+   "relation": "AFFECTS",
+   "target": "Teams cache"
+  },
+  {
+   "source": "Teams client",
+   "relation": "AFFECTS",
+   "target": "audio/video device selection"
+  },
+  {
+   "source": "Teams client",
+   "relation": "AFFECTS",
+   "target": "macOS screen-recording permission"
+  },
+  {
+   "source": "Teams client",
+   "relation": "AFFECTS",
+   "target": "peripheral drivers"
+  },
+  {
+   "source": "Clear Teams cache",
+   "relation": "PART_OF",
+   "target": "Microsoft Teams"
+  },
+  {
+   "source": "Reset device settings",
+   "relation": "PART_OF",
+   "target": "Microsoft Teams"
+  }
+ ]
+}

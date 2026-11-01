@@ -1,0 +1,137 @@
+{
+ "entities": [
+  {
+   "name": "Outlook built-in Report feature",
+   "type": "Component"
+  },
+  {
+   "name": "Unexpected sender address mismatch",
+   "type": "Symptom"
+  },
+  {
+   "name": "Urgent or threatening language",
+   "type": "Symptom"
+  },
+  {
+   "name": "Poor grammar or spelling mistakes",
+   "type": "Symptom"
+  },
+  {
+   "name": "Unexpected attachment file types",
+   "type": "Symptom"
+  },
+  {
+   "name": "Embedded URL shows different destination",
+   "type": "Symptom"
+  },
+  {
+   "name": "Requests for credentials via email",
+   "type": "Symptom"
+  },
+  {
+   "name": "Attackers spoofing Acme domains",
+   "type": "Cause"
+  },
+  {
+   "name": "Compromised employee accounts",
+   "type": "Cause"
+  },
+  {
+   "name": "Social-engineering exploiting urgency",
+   "type": "Cause"
+  },
+  {
+   "name": "Malicious attachments or links harvesting credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "Report suspicious email via Outlook",
+   "type": "Fix"
+  },
+  {
+   "name": "Do not click links or open attachments",
+   "type": "Fix"
+  },
+  {
+   "name": "Remove message from mailbox after reporting",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Unexpected sender address mismatch",
+   "relation": "CAUSED_BY",
+   "target": "Attackers spoofing Acme domains"
+  },
+  {
+   "source": "Urgent or threatening language",
+   "relation": "CAUSED_BY",
+   "target": "Social-engineering exploiting urgency"
+  },
+  {
+   "source": "Poor grammar or spelling mistakes",
+   "relation": "CAUSED_BY",
+   "target": "Attackers spoofing Acme domains"
+  },
+  {
+   "source": "Unexpected attachment file types",
+   "relation": "CAUSED_BY",
+   "target": "Malicious attachments or links harvesting credentials"
+  },
+  {
+   "source": "Embedded URL shows different destination",
+   "relation": "CAUSED_BY",
+   "target": "Attackers spoofing Acme domains"
+  },
+  {
+   "source": "Requests for credentials via email",
+   "relation": "CAUSED_BY",
+   "target": "Malicious attachments or links harvesting credentials"
+  },
+  {
+   "source": "Report suspicious email via Outlook",
+   "relation": "FIXED_BY",
+   "target": "Unexpected sender address mismatch"
+  },
+  {
+   "source": "Report suspicious email via Outlook",
+   "relation": "FIXED_BY",
+   "target": "Urgent or threatening language"
+  },
+  {
+   "source": "Report suspicious email via Outlook",
+   "relation": "FIXED_BY",
+   "target": "Poor grammar or spelling mistakes"
+  },
+  {
+   "source": "Report suspicious email via Outlook",
+   "relation": "FIXED_BY",
+   "target": "Unexpected attachment file types"
+  },
+  {
+   "source": "Report suspicious email via Outlook",
+   "relation": "FIXED_BY",
+   "target": "Embedded URL shows different destination"
+  },
+  {
+   "source": "Report suspicious email via Outlook",
+   "relation": "FIXED_BY",
+   "target": "Requests for credentials via email"
+  },
+  {
+   "source": "Do not click links or open attachments",
+   "relation": "FIXED_BY",
+   "target": "Unexpected attachment file types"
+  },
+  {
+   "source": "Do not click links or open attachments",
+   "relation": "FIXED_BY",
+   "target": "Embedded URL shows different destination"
+  },
+  {
+   "source": "Remove message from mailbox after reporting",
+   "relation": "FIXED_BY",
+   "target": "Unexpected sender address mismatch"
+  }
+ ]
+}

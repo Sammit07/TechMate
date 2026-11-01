@@ -1,0 +1,149 @@
+{
+ "entities": [
+  {
+   "name": "dead network port",
+   "type": "Symptom"
+  },
+  {
+   "name": "switch name/IP",
+   "type": "Component"
+  },
+  {
+   "name": "affected port number",
+   "type": "Component"
+  },
+  {
+   "name": "port status logs showing err-disable reasons or link flaps",
+   "type": "Component"
+  },
+  {
+   "name": "cable/jack test results",
+   "type": "Component"
+  },
+  {
+   "name": "patch-panel mapping",
+   "type": "Component"
+  },
+  {
+   "name": "recent change-management records",
+   "type": "Component"
+  },
+  {
+   "name": "err-disable",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "link down",
+   "type": "Symptom"
+  },
+  {
+   "name": "no network on docking station",
+   "type": "Symptom"
+  },
+  {
+   "name": "limited connectivity",
+   "type": "Symptom"
+  },
+  {
+   "name": "desk network port dead",
+   "type": "Symptom"
+  },
+  {
+   "name": "USB-C Ethernet driver issue",
+   "type": "Cause"
+  },
+  {
+   "name": "mis-configured port-security/VLAN settings",
+   "type": "Cause"
+  },
+  {
+   "name": "broader cabling-plant issues",
+   "type": "Cause"
+  },
+  {
+   "name": "site visit scheduling",
+   "type": "Fix"
+  },
+  {
+   "name": "hardware RMA initiation",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "dead network port",
+   "relation": "CAUSED_BY",
+   "target": "err-disable"
+  },
+  {
+   "source": "dead network port",
+   "relation": "CAUSED_BY",
+   "target": "link down"
+  },
+  {
+   "source": "err-disable",
+   "relation": "INDICATES",
+   "target": "mis-configured port-security/VLAN settings"
+  },
+  {
+   "source": "err-disable",
+   "relation": "INDICATES",
+   "target": "broader cabling-plant issues"
+  },
+  {
+   "source": "link down",
+   "relation": "AFFECTS",
+   "target": "no network on docking station"
+  },
+  {
+   "source": "link down",
+   "relation": "AFFECTS",
+   "target": "limited connectivity"
+  },
+  {
+   "source": "link down",
+   "relation": "AFFECTS",
+   "target": "desk network port dead"
+  },
+  {
+   "source": "USB-C Ethernet driver issue",
+   "relation": "CAUSED_BY",
+   "target": "no network on docking station"
+  },
+  {
+   "source": "mis-configured port-security/VLAN settings",
+   "relation": "FIXED_BY",
+   "target": "site visit scheduling"
+  },
+  {
+   "source": "broader cabling-plant issues",
+   "relation": "FIXED_BY",
+   "target": "hardware RMA initiation"
+  },
+  {
+   "source": "switch name/IP",
+   "relation": "PART_OF",
+   "target": "Network Support group"
+  },
+  {
+   "source": "affected port number",
+   "relation": "PART_OF",
+   "target": "switch name/IP"
+  },
+  {
+   "source": "port status logs showing err-disable reasons or link flaps",
+   "relation": "PART_OF",
+   "target": "switch name/IP"
+  },
+  {
+   "source": "cable/jack test results",
+   "relation": "PART_OF",
+   "target": "switch name/IP"
+  },
+  {
+   "source": "patch-panel mapping",
+   "relation": "PART_OF",
+   "target": "switch name/IP"
+  }
+ ]
+}

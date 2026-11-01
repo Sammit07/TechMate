@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "camera",
+   "type": "Component"
+  },
+  {
+   "name": "audio",
+   "type": "Component"
+  },
+  {
+   "name": "Bluetooth",
+   "type": "Component"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Device Manager",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "driver reinstall",
+   "type": "Fix"
+  },
+  {
+   "name": "hardware diagnostic",
+   "type": "Component"
+  },
+  {
+   "name": "no sound",
+   "type": "Symptom"
+  },
+  {
+   "name": "webcam not detected",
+   "type": "Symptom"
+  },
+  {
+   "name": "yellow triangle in Device Manager",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "BIOS version",
+   "type": "Component"
+  },
+  {
+   "name": "service tag",
+   "type": "Component"
+  },
+  {
+   "name": "device model",
+   "type": "Component"
+  },
+  {
+   "name": "Event Viewer error codes",
+   "type": "ErrorCode"
+  }
+ ],
+ "relations": [
+  {
+   "source": "no sound",
+   "relation": "CAUSED_BY",
+   "target": "audio"
+  },
+  {
+   "source": "webcam not detected",
+   "relation": "CAUSED_BY",
+   "target": "camera"
+  },
+  {
+   "source": "yellow triangle in Device Manager",
+   "relation": "INDICATES",
+   "target": "driver reinstall"
+  },
+  {
+   "source": "driver reinstall",
+   "relation": "FIXED_BY",
+   "target": "no sound"
+  },
+  {
+   "source": "driver reinstall",
+   "relation": "FIXED_BY",
+   "target": "webcam not detected"
+  },
+  {
+   "source": "hardware diagnostic",
+   "relation": "AFFECTS",
+   "target": "camera"
+  },
+  {
+   "source": "hardware diagnostic",
+   "relation": "AFFECTS",
+   "target": "audio"
+  },
+  {
+   "source": "hardware diagnostic",
+   "relation": "AFFECTS",
+   "target": "Bluetooth"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "driver reinstall"
+  },
+  {
+   "source": "Teams",
+   "relation": "AFFECTS",
+   "target": "camera"
+  },
+  {
+   "source": "Teams",
+   "relation": "AFFECTS",
+   "target": "audio"
+  },
+  {
+   "source": "Teams",
+   "relation": "AFFECTS",
+   "target": "Bluetooth"
+  },
+  {
+   "source": "Device Manager",
+   "relation": "PART_OF",
+   "target": "Windows"
+  },
+  {
+   "source": "BIOS version",
+   "relation": "AFFECTS",
+   "target": "camera"
+  },
+  {
+   "source": "service tag",
+   "relation": "AFFECTS",
+   "target": "device model"
+  }
+ ]
+}

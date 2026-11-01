@@ -1,0 +1,178 @@
+{
+ "entities": [
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "USB-C/Thunderbolt docking station",
+   "type": "Product"
+  },
+  {
+   "name": "external monitor not detected or flickering",
+   "type": "Symptom"
+  },
+  {
+   "name": "monitor flickers intermittently",
+   "type": "Symptom"
+  },
+  {
+   "name": "second screen not listed in Display Settings",
+   "type": "Symptom"
+  },
+  {
+   "name": "resolution stuck at low values",
+   "type": "Symptom"
+  },
+  {
+   "name": "refresh rate incorrectly set",
+   "type": "Symptom"
+  },
+  {
+   "name": "unable to detect display",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "no display attached",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "loose or damaged DisplayPort/HDMI cable",
+   "type": "Cause"
+  },
+  {
+   "name": "outdated docking-station firmware",
+   "type": "Cause"
+  },
+  {
+   "name": "missing or corrupted graphics/display driver",
+   "type": "Cause"
+  },
+  {
+   "name": "incorrect refresh rate or resolution selected",
+   "type": "Cause"
+  },
+  {
+   "name": "power-delivery issue causing dock reset",
+   "type": "Cause"
+  },
+  {
+   "name": "conflicting multiple display adapters",
+   "type": "Cause"
+  },
+  {
+   "name": "power cycle the docking station",
+   "type": "Fix"
+  },
+  {
+   "name": "verify the video cable",
+   "type": "Fix"
+  },
+  {
+   "name": "detect the monitor manually",
+   "type": "Fix"
+  },
+  {
+   "name": "set the recommended resolution and refresh rate",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "AFFECTS",
+   "target": "Lenovo ThinkPad T14/X1 Carbon"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "AFFECTS",
+   "target": "HP EliteBook 840"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "AFFECTS",
+   "target": "USB-C/Thunderbolt docking station"
+  },
+  {
+   "source": "monitor flickers intermittently",
+   "relation": "CAUSED_BY",
+   "target": "loose or damaged DisplayPort/HDMI cable"
+  },
+  {
+   "source": "second screen not listed in Display Settings",
+   "relation": "CAUSED_BY",
+   "target": "outdated docking-station firmware"
+  },
+  {
+   "source": "resolution stuck at low values",
+   "relation": "CAUSED_BY",
+   "target": "missing or corrupted graphics/display driver"
+  },
+  {
+   "source": "refresh rate incorrectly set",
+   "relation": "CAUSED_BY",
+   "target": "incorrect refresh rate or resolution selected"
+  },
+  {
+   "source": "unable to detect display",
+   "relation": "INDICATES",
+   "target": "power-delivery issue causing dock reset"
+  },
+  {
+   "source": "no display attached",
+   "relation": "INDICATES",
+   "target": "conflicting multiple display adapters"
+  },
+  {
+   "source": "loose or damaged DisplayPort/HDMI cable",
+   "relation": "FIXED_BY",
+   "target": "verify the video cable"
+  },
+  {
+   "source": "outdated docking-station firmware",
+   "relation": "FIXED_BY",
+   "target": "power cycle the docking station"
+  },
+  {
+   "source": "missing or corrupted graphics/display driver",
+   "relation": "FIXED_BY",
+   "target": "detect the monitor manually"
+  },
+  {
+   "source": "incorrect refresh rate or resolution selected",
+   "relation": "FIXED_BY",
+   "target": "set the recommended resolution and refresh rate"
+  }
+ ]
+}

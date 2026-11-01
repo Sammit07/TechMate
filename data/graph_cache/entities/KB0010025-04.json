@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "dead network port",
+   "type": "Symptom"
+  },
+  {
+   "name": "cable fault",
+   "type": "Cause"
+  },
+  {
+   "name": "jack issue",
+   "type": "Cause"
+  },
+  {
+   "name": "switch port error",
+   "type": "Cause"
+  },
+  {
+   "name": "driver/firmware",
+   "type": "Cause"
+  },
+  {
+   "name": "link speed verification",
+   "type": "Fix"
+  },
+  {
+   "name": "DHCP lease confirmation",
+   "type": "Fix"
+  },
+  {
+   "name": "intranet and external site access test",
+   "type": "Fix"
+  },
+  {
+   "name": "user feedback on symptom resolution",
+   "type": "Fix"
+  },
+  {
+   "name": "ticket closure with resolution note",
+   "type": "Fix"
+  },
+  {
+   "name": "24-hour observation period",
+   "type": "Fix"
+  },
+  {
+   "name": "escalation to senior Network Engineer",
+   "type": "Fix"
+  },
+  {
+   "name": "Ethernet adapter",
+   "type": "Component"
+  },
+  {
+   "name": "default gateway ping test",
+   "type": "Fix"
+  },
+  {
+   "name": "port monitor",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "dead network port",
+   "relation": "CAUSED_BY",
+   "target": "cable fault"
+  },
+  {
+   "source": "dead network port",
+   "relation": "CAUSED_BY",
+   "target": "jack issue"
+  },
+  {
+   "source": "dead network port",
+   "relation": "CAUSED_BY",
+   "target": "switch port error"
+  },
+  {
+   "source": "dead network port",
+   "relation": "CAUSED_BY",
+   "target": "driver/firmware"
+  },
+  {
+   "source": "dead network port",
+   "relation": "FIXED_BY",
+   "target": "link speed verification"
+  },
+  {
+   "source": "dead network port",
+   "relation": "FIXED_BY",
+   "target": "DHCP lease confirmation"
+  },
+  {
+   "source": "dead network port",
+   "relation": "FIXED_BY",
+   "target": "intranet and external site access test"
+  },
+  {
+   "source": "dead network port",
+   "relation": "FIXED_BY",
+   "target": "user feedback on symptom resolution"
+  },
+  {
+   "source": "dead network port",
+   "relation": "FIXED_BY",
+   "target": "ticket closure with resolution note"
+  },
+  {
+   "source": "dead network port",
+   "relation": "FIXED_BY",
+   "target": "24-hour observation period"
+  },
+  {
+   "source": "dead network port",
+   "relation": "FIXED_BY",
+   "target": "escalation to senior Network Engineer"
+  },
+  {
+   "source": "Ethernet adapter",
+   "relation": "AFFECTS",
+   "target": "dead network port"
+  },
+  {
+   "source": "default gateway ping test",
+   "relation": "INDICATES",
+   "target": "link speed verification"
+  },
+  {
+   "source": "port monitor",
+   "relation": "PART_OF",
+   "target": "24-hour observation period"
+  }
+ ]
+}

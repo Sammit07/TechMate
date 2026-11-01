@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Guest Wi-Fi",
+   "type": "Product"
+  },
+  {
+   "name": "RADIUS certificate",
+   "type": "Component"
+  },
+  {
+   "name": "Acme Global",
+   "type": "Product"
+  },
+  {
+   "name": "Sponsorship Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Wireless LAN Controller",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "cannot connect to Guest Wi-Fi",
+   "type": "Symptom"
+  },
+  {
+   "name": "invalid credentials",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "access-reject",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "no response",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "visitor sponsorship inactive",
+   "type": "Cause"
+  },
+  {
+   "name": "device does not trust RADIUS certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "AP offline or misassociated",
+   "type": "Cause"
+  },
+  {
+   "name": "verify sponsorship record",
+   "type": "Fix"
+  },
+  {
+   "name": "install Acme Global root CA",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cannot connect to Guest Wi-Fi",
+   "relation": "CAUSED_BY",
+   "target": "visitor sponsorship inactive"
+  },
+  {
+   "source": "cannot connect to Guest Wi-Fi",
+   "relation": "CAUSED_BY",
+   "target": "device does not trust RADIUS certificate"
+  },
+  {
+   "source": "cannot connect to Guest Wi-Fi",
+   "relation": "CAUSED_BY",
+   "target": "AP offline or misassociated"
+  },
+  {
+   "source": "invalid credentials",
+   "relation": "INDICATES",
+   "target": "visitor sponsorship inactive"
+  },
+  {
+   "source": "access-reject",
+   "relation": "INDICATES",
+   "target": "visitor sponsorship inactive"
+  },
+  {
+   "source": "no response",
+   "relation": "INDICATES",
+   "target": "AP offline or misassociated"
+  },
+  {
+   "source": "visitor sponsorship inactive",
+   "relation": "AFFECTS",
+   "target": "Guest Wi-Fi"
+  },
+  {
+   "source": "device does not trust RADIUS certificate",
+   "relation": "AFFECTS",
+   "target": "Guest Wi-Fi"
+  },
+  {
+   "source": "AP offline or misassociated",
+   "relation": "AFFECTS",
+   "target": "Guest Wi-Fi"
+  },
+  {
+   "source": "visitor sponsorship inactive",
+   "relation": "FIXED_BY",
+   "target": "verify sponsorship record"
+  },
+  {
+   "source": "device does not trust RADIUS certificate",
+   "relation": "FIXED_BY",
+   "target": "install Acme Global root CA"
+  },
+  {
+   "source": "AP offline or misassociated",
+   "relation": "FIXED_BY",
+   "target": "verify sponsorship record"
+  },
+  {
+   "source": "RADIUS certificate",
+   "relation": "PART_OF",
+   "target": "Guest Wi-Fi"
+  },
+  {
+   "source": "Sponsorship Portal",
+   "relation": "PART_OF",
+   "target": "Guest Wi-Fi"
+  },
+  {
+   "source": "Wireless LAN Controller",
+   "relation": "PART_OF",
+   "target": "Guest Wi-Fi"
+  }
+ ]
+}

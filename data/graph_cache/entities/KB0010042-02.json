@@ -1,0 +1,181 @@
+{
+ "entities": [
+  {
+   "name": "mouse not working",
+   "type": "Symptom"
+  },
+  {
+   "name": "keyboard keys not responding",
+   "type": "Symptom"
+  },
+  {
+   "name": "headset microphone silent",
+   "type": "Symptom"
+  },
+  {
+   "name": "Bluetooth headset not pairing",
+   "type": "Symptom"
+  },
+  {
+   "name": "replace peripheral",
+   "type": "Fix"
+  },
+  {
+   "name": "request replacement",
+   "type": "Fix"
+  },
+  {
+   "name": "peripheral troubleshooting",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Event Viewer",
+   "type": "Component"
+  },
+  {
+   "name": "Desktop Support - Hardware Engineering",
+   "type": "Product"
+  },
+  {
+   "name": "asset tag",
+   "type": "Component"
+  },
+  {
+   "name": "ticket number",
+   "type": "Component"
+  },
+  {
+   "name": "motherboard fault",
+   "type": "Cause"
+  },
+  {
+   "name": "USB controller problem",
+   "type": "Cause"
+  },
+  {
+   "name": "Bluetooth adapter failure",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "mouse not working",
+   "relation": "AFFECTS",
+   "target": "peripheral troubleshooting"
+  },
+  {
+   "source": "keyboard keys not responding",
+   "relation": "AFFECTS",
+   "target": "peripheral troubleshooting"
+  },
+  {
+   "source": "headset microphone silent",
+   "relation": "AFFECTS",
+   "target": "peripheral troubleshooting"
+  },
+  {
+   "source": "Bluetooth headset not pairing",
+   "relation": "AFFECTS",
+   "target": "peripheral troubleshooting"
+  },
+  {
+   "source": "replace peripheral",
+   "relation": "FIXED_BY",
+   "target": "mouse not working"
+  },
+  {
+   "source": "replace peripheral",
+   "relation": "FIXED_BY",
+   "target": "keyboard keys not responding"
+  },
+  {
+   "source": "replace peripheral",
+   "relation": "FIXED_BY",
+   "target": "headset microphone silent"
+  },
+  {
+   "source": "replace peripheral",
+   "relation": "FIXED_BY",
+   "target": "Bluetooth headset not pairing"
+  },
+  {
+   "source": "request replacement",
+   "relation": "FIXED_BY",
+   "target": "mouse not working"
+  },
+  {
+   "source": "request replacement",
+   "relation": "FIXED_BY",
+   "target": "keyboard keys not responding"
+  },
+  {
+   "source": "request replacement",
+   "relation": "FIXED_BY",
+   "target": "headset microphone silent"
+  },
+  {
+   "source": "request replacement",
+   "relation": "FIXED_BY",
+   "target": "Bluetooth headset not pairing"
+  },
+  {
+   "source": "USB controller problem",
+   "relation": "CAUSED_BY",
+   "target": "mouse not working"
+  },
+  {
+   "source": "USB controller problem",
+   "relation": "CAUSED_BY",
+   "target": "keyboard keys not responding"
+  },
+  {
+   "source": "Bluetooth adapter failure",
+   "relation": "CAUSED_BY",
+   "target": "Bluetooth headset not pairing"
+  },
+  {
+   "source": "motherboard fault",
+   "relation": "CAUSED_BY",
+   "target": "mouse not working"
+  },
+  {
+   "source": "motherboard fault",
+   "relation": "CAUSED_BY",
+   "target": "keyboard keys not responding"
+  },
+  {
+   "source": "motherboard fault",
+   "relation": "CAUSED_BY",
+   "target": "headset microphone silent"
+  },
+  {
+   "source": "motherboard fault",
+   "relation": "CAUSED_BY",
+   "target": "Bluetooth headset not pairing"
+  },
+  {
+   "source": "Intune",
+   "relation": "PART_OF",
+   "target": "Desktop Support - Hardware Engineering"
+  },
+  {
+   "source": "Event Viewer",
+   "relation": "PART_OF",
+   "target": "Desktop Support - Hardware Engineering"
+  },
+  {
+   "source": "asset tag",
+   "relation": "AFFECTS",
+   "target": "Desktop Support - Hardware Engineering"
+  },
+  {
+   "source": "ticket number",
+   "relation": "AFFECTS",
+   "target": "Desktop Support - Hardware Engineering"
+  }
+ ]
+}

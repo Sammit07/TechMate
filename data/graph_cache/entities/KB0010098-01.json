@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Azure AD Joined Device",
+   "type": "Product"
+  },
+  {
+   "name": "Intune Managed",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect Client",
+   "type": "Product"
+  },
+  {
+   "name": "Check for Updates",
+   "type": "Component"
+  },
+  {
+   "name": "MFA Push Notification",
+   "type": "Symptom"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "SMS Backup Option",
+   "type": "Fix"
+  },
+  {
+   "name": "BitLocker Protection On",
+   "type": "Component"
+  },
+  {
+   "name": "Back up Recovery Key",
+   "type": "Fix"
+  },
+  {
+   "name": "Outlook Sync",
+   "type": "Symptom"
+  },
+  {
+   "name": "Intranet Access",
+   "type": "Symptom"
+  },
+  {
+   "name": "Expired VPN Certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "Temporary Machine Certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "Temporary Access Pass (TAP)",
+   "type": "Component"
+  },
+  {
+   "name": "BitLocker Recovery Key",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "GlobalProtect Client Connection Failure",
+   "relation": "INDICATES",
+   "target": "Expired VPN Certificate"
+  },
+  {
+   "source": "No MFA Push Notification",
+   "relation": "CAUSED_BY",
+   "target": "Missing or Invalid TAP"
+  },
+  {
+   "source": "BitLocker Protection Off",
+   "relation": "CAUSED_BY",
+   "target": "Docking Station Change"
+  },
+  {
+   "source": "Failed Outlook Sync",
+   "relation": "AFFECTS",
+   "target": "Intune Managed"
+  },
+  {
+   "source": "Unable to Access Intranet",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect Client"
+  },
+  {
+   "source": "Expired VPN Certificate",
+   "relation": "FIXED_BY",
+   "target": "Temporary Machine Certificate"
+  },
+  {
+   "source": "MFA Failure",
+   "relation": "FIXED_BY",
+   "target": "Temporary Access Pass (TAP)"
+  },
+  {
+   "source": "BitLocker Recovery Needed",
+   "relation": "FIXED_BY",
+   "target": "BitLocker Recovery Key"
+  },
+  {
+   "source": "Device Not Compliant",
+   "relation": "AFFECTS",
+   "target": "Intune Managed"
+  },
+  {
+   "source": "GlobalProtect Client",
+   "relation": "PART_OF",
+   "target": "Intune Managed"
+  },
+  {
+   "source": "BitLocker Protection On",
+   "relation": "PART_OF",
+   "target": "Intune Managed"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "PART_OF",
+   "target": "Intune Managed"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "Intune Managed"
+  },
+  {
+   "source": "Azure AD Joined Device",
+   "relation": "AFFECTS",
+   "target": "Intune Managed"
+  }
+ ]
+}

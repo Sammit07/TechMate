@@ -1,0 +1,173 @@
+{
+ "entities": [
+  {
+   "name": "Multifunction Printer Scanner",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 Client Workstation",
+   "type": "Product"
+  },
+  {
+   "name": "macOS Client Workstation",
+   "type": "Product"
+  },
+  {
+   "name": "Acme Global Network",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Corp SSID",
+   "type": "Component"
+  },
+  {
+   "name": "ACME-Guest SSID",
+   "type": "Component"
+  },
+  {
+   "name": "No Email Received After Scan Job Completes",
+   "type": "Symptom"
+  },
+  {
+   "name": "Device LCD Shows Failed to Send Email SMTP Authentication Failed",
+   "type": "Symptom"
+  },
+  {
+   "name": "Device LCD Shows Cannot Connect to SMTP Server",
+   "type": "Symptom"
+  },
+  {
+   "name": "Scan to Email Button Greyed Out or Operation Failed",
+   "type": "Symptom"
+  },
+  {
+   "name": "Blank or Corrupted Attachments in Scanned Email",
+   "type": "Symptom"
+  },
+  {
+   "name": "Incorrect SMTP Relay Host Port or Security Settings",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated Sender Email Address or Display Name in Address Book",
+   "type": "Cause"
+  },
+  {
+   "name": "Expired Locked or Missing Permissions Service Account Credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "Firewall or Proxy Blocking Outbound SMTP Traffic on Ports 25 587 or 465",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated Device Firmware Causing Compatibility Issues",
+   "type": "Cause"
+  },
+  {
+   "name": "Misconfigured DNS Preventing Resolution of SMTP Relay Hostname",
+   "type": "Cause"
+  },
+  {
+   "name": "Verify Scanner Network Connectivity Ping Gateway Access Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Confirm Recipient Email Address Correct Mailbox Not Over Quota",
+   "type": "Fix"
+  },
+  {
+   "name": "Check Device Status Panel for Email Sending Error Codes Messages",
+   "type": "Fix"
+  },
+  {
+   "name": "Access Device Settings Menu Embedded Web Interface",
+   "type": "Fix"
+  },
+  {
+   "name": "Navigate to Network Settings Email Settings SMTP Setup",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify SMTP Server Field Set to smtp.acme.example or Provided IP",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "No Email Received After Scan Job Completes",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect SMTP Relay Host Port or Security Settings"
+  },
+  {
+   "source": "Device LCD Shows Failed to Send Email SMTP Authentication Failed",
+   "relation": "INDICATES",
+   "target": "Expired Locked or Missing Permissions Service Account Credentials"
+  },
+  {
+   "source": "Device LCD Shows Cannot Connect to SMTP Server",
+   "relation": "INDICATES",
+   "target": "Firewall or Proxy Blocking Outbound SMTP Traffic on Ports 25 587 or 465"
+  },
+  {
+   "source": "Scan to Email Button Greyed Out or Operation Failed",
+   "relation": "CAUSED_BY",
+   "target": "Outdated Sender Email Address or Display Name in Address Book"
+  },
+  {
+   "source": "Blank or Corrupted Attachments in Scanned Email",
+   "relation": "CAUSED_BY",
+   "target": "Outdated Device Firmware Causing Compatibility Issues"
+  },
+  {
+   "source": "Misconfigured DNS Preventing Resolution of SMTP Relay Hostname",
+   "relation": "CAUSED_BY",
+   "target": "No Email Received After Scan Job Completes"
+  },
+  {
+   "source": "Incorrect SMTP Relay Host Port or Security Settings",
+   "relation": "AFFECTS",
+   "target": "Multifunction Printer Scanner"
+  },
+  {
+   "source": "Expired Locked or Missing Permissions Service Account Credentials",
+   "relation": "AFFECTS",
+   "target": "Multifunction Printer Scanner"
+  },
+  {
+   "source": "Firewall or Proxy Blocking Outbound SMTP Traffic on Ports 25 587 or 465",
+   "relation": "AFFECTS",
+   "target": "Acme Global Network"
+  },
+  {
+   "source": "Outdated Device Firmware Causing Compatibility Issues",
+   "relation": "AFFECTS",
+   "target": "Multifunction Printer Scanner"
+  },
+  {
+   "source": "Misconfigured DNS Preventing Resolution of SMTP Relay Hostname",
+   "relation": "AFFECTS",
+   "target": "Acme Global Network"
+  },
+  {
+   "source": "Verify Scanner Network Connectivity Ping Gateway Access Company Portal",
+   "relation": "FIXED_BY",
+   "target": "Device LCD Shows Cannot Connect to SMTP Server"
+  },
+  {
+   "source": "Confirm Recipient Email Address Correct Mailbox Not Over Quota",
+   "relation": "FIXED_BY",
+   "target": "No Email Received After Scan Job Completes"
+  },
+  {
+   "source": "Check Device Status Panel for Email Sending Error Codes Messages",
+   "relation": "FIXED_BY",
+   "target": "Device LCD Shows Failed to Send Email SMTP Authentication Failed"
+  },
+  {
+   "source": "Access Device Settings Menu Embedded Web Interface",
+   "relation": "FIXED_BY",
+   "target": "Scan to Email Button Greyed Out or Operation Failed"
+  }
+ ]
+}

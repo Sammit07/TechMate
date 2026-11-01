@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Password Manager",
+   "type": "Product"
+  },
+  {
+   "name": "Master Password Loss",
+   "type": "Symptom"
+  },
+  {
+   "name": "Vault Sync Failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "Inability to Unlock Vault",
+   "type": "Symptom"
+  },
+  {
+   "name": "Missing Credentials",
+   "type": "Symptom"
+  },
+  {
+   "name": "Expired Master Password",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated Manager App",
+   "type": "Cause"
+  },
+  {
+   "name": "Non-compliant Device",
+   "type": "Cause"
+  },
+  {
+   "name": "Network Connectivity Issue",
+   "type": "Cause"
+  },
+  {
+   "name": "Temporary Access Pass (TAP)",
+   "type": "Fix"
+  },
+  {
+   "name": "Reset Master Password",
+   "type": "Fix"
+  },
+  {
+   "name": "Re-encrypt Vault",
+   "type": "Fix"
+  },
+  {
+   "name": "Restart Manager App and Browser",
+   "type": "Fix"
+  },
+  {
+   "name": "Reinstall Manager from Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify Identity via Employee ID and MFA",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Inability to Unlock Vault",
+   "relation": "CAUSED_BY",
+   "target": "Master Password Loss"
+  },
+  {
+   "source": "Vault Sync Failure",
+   "relation": "CAUSED_BY",
+   "target": "Outdated Manager App"
+  },
+  {
+   "source": "Vault Sync Failure",
+   "relation": "CAUSED_BY",
+   "target": "Network Connectivity Issue"
+  },
+  {
+   "source": "Missing Credentials",
+   "relation": "CAUSED_BY",
+   "target": "Non-compliant Device"
+  },
+  {
+   "source": "Master Password Loss",
+   "relation": "FIXED_BY",
+   "target": "Temporary Access Pass (TAP)"
+  },
+  {
+   "source": "Master Password Loss",
+   "relation": "FIXED_BY",
+   "target": "Reset Master Password"
+  },
+  {
+   "source": "Master Password Loss",
+   "relation": "FIXED_BY",
+   "target": "Re-encrypt Vault"
+  },
+  {
+   "source": "Vault Sync Failure",
+   "relation": "FIXED_BY",
+   "target": "Restart Manager App and Browser"
+  },
+  {
+   "source": "Vault Sync Failure",
+   "relation": "FIXED_BY",
+   "target": "Reinstall Manager from Company Portal"
+  },
+  {
+   "source": "Inability to Unlock Vault",
+   "relation": "FIXED_BY",
+   "target": "Verify Identity via Employee ID and MFA"
+  },
+  {
+   "source": "Outdated Manager App",
+   "relation": "AFFECTS",
+   "target": "Password Manager"
+  },
+  {
+   "source": "Non-compliant Device",
+   "relation": "AFFECTS",
+   "target": "Password Manager"
+  },
+  {
+   "source": "Network Connectivity Issue",
+   "relation": "AFFECTS",
+   "target": "Password Manager"
+  },
+  {
+   "source": "Master Password Loss",
+   "relation": "INDICATES",
+   "target": "Inability to Unlock Vault"
+  },
+  {
+   "source": "Password Manager",
+   "relation": "PART_OF",
+   "target": "Company Portal"
+  }
+ ]
+}

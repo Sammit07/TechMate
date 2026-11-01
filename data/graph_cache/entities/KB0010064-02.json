@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Outlook not syncing",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outlook crashing",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outlook password prompt",
+   "type": "Symptom"
+  },
+  {
+   "name": "COM add-in",
+   "type": "Component"
+  },
+  {
+   "name": "profile corruption",
+   "type": "Cause"
+  },
+  {
+   "name": "OST size",
+   "type": "Component"
+  },
+  {
+   "name": "search index problem",
+   "type": "Component"
+  },
+  {
+   "name": "disable COM add-in",
+   "type": "Fix"
+  },
+  {
+   "name": "Microsoft Support and Recovery Assistant (SaRA)",
+   "type": "Product"
+  },
+  {
+   "name": "rebuild Outlook profile",
+   "type": "Fix"
+  },
+  {
+   "name": "Search Index rebuild",
+   "type": "Fix"
+  },
+  {
+   "name": "email flow",
+   "type": "Symptom"
+  },
+  {
+   "name": "calendar updates",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outlook search not working",
+   "type": "Symptom"
+  },
+  {
+   "name": "Messaging & Collaboration L2 team",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Outlook not syncing",
+   "relation": "CAUSED_BY",
+   "target": "profile corruption"
+  },
+  {
+   "source": "Outlook crashing",
+   "relation": "CAUSED_BY",
+   "target": "COM add-in"
+  },
+  {
+   "source": "Outlook password prompt",
+   "relation": "CAUSED_BY",
+   "target": "profile corruption"
+  },
+  {
+   "source": "profile corruption",
+   "relation": "INDICATES",
+   "target": "Outlook not syncing"
+  },
+  {
+   "source": "OST size",
+   "relation": "INDICATES",
+   "target": "Outlook not syncing"
+  },
+  {
+   "source": "search index problem",
+   "relation": "INDICATES",
+   "target": "Outlook search not working"
+  },
+  {
+   "source": "COM add-in",
+   "relation": "FIXED_BY",
+   "target": "disable COM add-in"
+  },
+  {
+   "source": "profile corruption",
+   "relation": "FIXED_BY",
+   "target": "rebuild Outlook profile"
+  },
+  {
+   "source": "search index problem",
+   "relation": "FIXED_BY",
+   "target": "Search Index rebuild"
+  },
+  {
+   "source": "Outlook not syncing",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "Outlook crashing",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "Outlook password prompt",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "Outlook search not working",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "email flow",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "calendar updates",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  }
+ ]
+}

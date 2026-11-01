@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Teams",
+   "type": "Product"
+  },
+  {
+   "name": "screen sharing",
+   "type": "Component"
+  },
+  {
+   "name": "audio issues",
+   "type": "Symptom"
+  },
+  {
+   "name": "presence showing Away",
+   "type": "Symptom"
+  },
+  {
+   "name": "slow loading",
+   "type": "Symptom"
+  },
+  {
+   "name": "VPN split-tunnel excluding M365 traffic",
+   "type": "Cause"
+  },
+  {
+   "name": "corrupted Outlook calendar cache",
+   "type": "Cause"
+  },
+  {
+   "name": "outdated audio drivers",
+   "type": "Cause"
+  },
+  {
+   "name": "missing macOS screen-recording permission",
+   "type": "Cause"
+  },
+  {
+   "name": "grant screen-recording permission in Privacy settings",
+   "type": "Fix"
+  },
+  {
+   "name": "clear Outlook cache (%localappdata%\\Microsoft\\Outlook)",
+   "type": "Fix"
+  },
+  {
+   "name": "update Teams client via Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "verify network includes *.teams.microsoft.com and *.skype.com",
+   "type": "Fix"
+  },
+  {
+   "name": "restart after Windows Patch Tuesday",
+   "type": "Fix"
+  },
+  {
+   "name": "Teams client version mismatch",
+   "type": "ErrorCode"
+  }
+ ],
+ "relations": [
+  {
+   "source": "audio issues",
+   "relation": "CAUSED_BY",
+   "target": "outdated audio drivers"
+  },
+  {
+   "source": "presence showing Away",
+   "relation": "CAUSED_BY",
+   "target": "corrupted Outlook calendar cache"
+  },
+  {
+   "source": "slow loading",
+   "relation": "CAUSED_BY",
+   "target": "VPN split-tunnel excluding M365 traffic"
+  },
+  {
+   "source": "screen sharing failure",
+   "relation": "CAUSED_BY",
+   "target": "missing macOS screen-recording permission"
+  },
+  {
+   "source": "missing macOS screen-recording permission",
+   "relation": "INDICATES",
+   "target": "Teams client version mismatch"
+  },
+  {
+   "source": "outdated audio drivers",
+   "relation": "FIXED_BY",
+   "target": "restart after Windows Patch Tuesday"
+  },
+  {
+   "source": "corrupted Outlook calendar cache",
+   "relation": "FIXED_BY",
+   "target": "clear Outlook cache (%localappdata%\\Microsoft\\Outlook)"
+  },
+  {
+   "source": "VPN split-tunnel excluding M365 traffic",
+   "relation": "FIXED_BY",
+   "target": "verify network includes *.teams.microsoft.com and *.skype.com"
+  },
+  {
+   "source": "missing macOS screen-recording permission",
+   "relation": "FIXED_BY",
+   "target": "grant screen-recording permission in Privacy settings"
+  },
+  {
+   "source": "Teams client version mismatch",
+   "relation": "FIXED_BY",
+   "target": "update Teams client via Company Portal"
+  },
+  {
+   "source": "Microsoft Teams",
+   "relation": "AFFECTS",
+   "target": "screen sharing"
+  },
+  {
+   "source": "Microsoft Teams",
+   "relation": "AFFECTS",
+   "target": "audio issues"
+  },
+  {
+   "source": "Microsoft Teams",
+   "relation": "AFFECTS",
+   "target": "presence showing Away"
+  },
+  {
+   "source": "Microsoft Teams",
+   "relation": "AFFECTS",
+   "target": "slow loading"
+  },
+  {
+   "source": "Outlook",
+   "relation": "PART_OF",
+   "target": "Microsoft 365"
+  }
+ ]
+}

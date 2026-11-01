@@ -1,0 +1,140 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal app",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "cache clearance",
+   "type": "Fix"
+  },
+  {
+   "name": "update Teams",
+   "type": "Fix"
+  },
+  {
+   "name": "reboot computer",
+   "type": "Fix"
+  },
+  {
+   "name": "check audio device selection",
+   "type": "Fix"
+  },
+  {
+   "name": "grant screen recording permission",
+   "type": "Fix"
+  },
+  {
+   "name": "verify device compliance",
+   "type": "Fix"
+  },
+  {
+   "name": "generate debug logs",
+   "type": "Fix"
+  },
+  {
+   "name": "audio problem",
+   "type": "Symptom"
+  },
+  {
+   "name": "screen-share failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "loading problem",
+   "type": "Symptom"
+  },
+  {
+   "name": "Failed to load module",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Cache corruption",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "device non-compliance",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "audio problem",
+   "relation": "CAUSED_BY",
+   "target": "incorrect audio device selection"
+  },
+  {
+   "source": "screen-share failure",
+   "relation": "CAUSED_BY",
+   "target": "missing screen recording permission"
+  },
+  {
+   "source": "loading problem",
+   "relation": "CAUSED_BY",
+   "target": "cache corruption"
+  },
+  {
+   "source": "Failed to load module",
+   "relation": "INDICATES",
+   "target": "cache corruption"
+  },
+  {
+   "source": "Cache corruption",
+   "relation": "INDICATES",
+   "target": "cache corruption"
+  },
+  {
+   "source": "cache clearance",
+   "relation": "FIXED_BY",
+   "target": "cache corruption"
+  },
+  {
+   "source": "update Teams",
+   "relation": "FIXED_BY",
+   "target": "loading problem"
+  },
+  {
+   "source": "reboot computer",
+   "relation": "FIXED_BY",
+   "target": "cache corruption"
+  },
+  {
+   "source": "check audio device selection",
+   "relation": "FIXED_BY",
+   "target": "audio problem"
+  },
+  {
+   "source": "grant screen recording permission",
+   "relation": "FIXED_BY",
+   "target": "screen-share failure"
+  },
+  {
+   "source": "verify device compliance",
+   "relation": "FIXED_BY",
+   "target": "device non-compliance"
+  },
+  {
+   "source": "generate debug logs",
+   "relation": "FIXED_BY",
+   "target": "Failed to load module"
+  },
+  {
+   "source": "device non-compliance",
+   "relation": "AFFECTS",
+   "target": "Microsoft Teams"
+  },
+  {
+   "source": "cache corruption",
+   "relation": "AFFECTS",
+   "target": "Microsoft Teams"
+  }
+ ]
+}

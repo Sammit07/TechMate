@@ -1,0 +1,189 @@
+{
+ "entities": [
+  {
+   "name": "Outlook mobile",
+   "type": "Product"
+  },
+  {
+   "name": "Intune Company Portal app",
+   "type": "Product"
+  },
+  {
+   "name": "device passcode/PIN",
+   "type": "Component"
+  },
+  {
+   "name": "device encryption",
+   "type": "Component"
+  },
+  {
+   "name": "operating system version",
+   "type": "Component"
+  },
+  {
+   "name": "jailbroken/rooted device",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook mobile displays security message",
+   "type": "Symptom"
+  },
+  {
+   "name": "company email fails to sync",
+   "type": "Symptom"
+  },
+  {
+   "name": "Intune enrollment failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "error code 0x8018000a",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "error code 0x80070005",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "error code 0x80072ee2",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "device not enrolled in Intune",
+   "type": "Cause"
+  },
+  {
+   "name": "insufficient device passcode/PIN",
+   "type": "Cause"
+  },
+  {
+   "name": "device encryption not enabled",
+   "type": "Cause"
+  },
+  {
+   "name": "OS version below minimum",
+   "type": "Cause"
+  },
+  {
+   "name": "jailbroken or rooted device",
+   "type": "Cause"
+  },
+  {
+   "name": "enroll device in Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "set compliant passcode",
+   "type": "Fix"
+  },
+  {
+   "name": "enable device encryption",
+   "type": "Fix"
+  },
+  {
+   "name": "update operating system",
+   "type": "Fix"
+  },
+  {
+   "name": "remove jailbreak/root",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Outlook mobile displays security message",
+   "relation": "CAUSED_BY",
+   "target": "device not enrolled in Intune"
+  },
+  {
+   "source": "Outlook mobile displays security message",
+   "relation": "CAUSED_BY",
+   "target": "insufficient device passcode/PIN"
+  },
+  {
+   "source": "Outlook mobile displays security message",
+   "relation": "CAUSED_BY",
+   "target": "device encryption not enabled"
+  },
+  {
+   "source": "Outlook mobile displays security message",
+   "relation": "CAUSED_BY",
+   "target": "OS version below minimum"
+  },
+  {
+   "source": "Outlook mobile displays security message",
+   "relation": "CAUSED_BY",
+   "target": "jailbroken or rooted device"
+  },
+  {
+   "source": "company email fails to sync",
+   "relation": "CAUSED_BY",
+   "target": "device not enrolled in Intune"
+  },
+  {
+   "source": "Intune enrollment failure",
+   "relation": "INDICATES",
+   "target": "error code 0x8018000a"
+  },
+  {
+   "source": "Intune enrollment failure",
+   "relation": "INDICATES",
+   "target": "error code 0x80070005"
+  },
+  {
+   "source": "Intune enrollment failure",
+   "relation": "INDICATES",
+   "target": "error code 0x80072ee2"
+  },
+  {
+   "source": "device not enrolled in Intune",
+   "relation": "FIXED_BY",
+   "target": "enroll device in Intune"
+  },
+  {
+   "source": "insufficient device passcode/PIN",
+   "relation": "FIXED_BY",
+   "target": "set compliant passcode"
+  },
+  {
+   "source": "device encryption not enabled",
+   "relation": "FIXED_BY",
+   "target": "enable device encryption"
+  },
+  {
+   "source": "OS version below minimum",
+   "relation": "FIXED_BY",
+   "target": "update operating system"
+  },
+  {
+   "source": "jailbroken or rooted device",
+   "relation": "FIXED_BY",
+   "target": "remove jailbreak/root"
+  },
+  {
+   "source": "device passcode/PIN",
+   "relation": "AFFECTS",
+   "target": "Outlook mobile"
+  },
+  {
+   "source": "device encryption",
+   "relation": "AFFECTS",
+   "target": "Outlook mobile"
+  },
+  {
+   "source": "operating system version",
+   "relation": "AFFECTS",
+   "target": "Outlook mobile"
+  },
+  {
+   "source": "jailbroken/rooted device",
+   "relation": "AFFECTS",
+   "target": "Outlook mobile"
+  },
+  {
+   "source": "Intune Company Portal app",
+   "relation": "PART_OF",
+   "target": "Intune"
+  }
+ ]
+}

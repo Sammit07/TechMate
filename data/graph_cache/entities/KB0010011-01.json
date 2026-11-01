@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Access Denied After Approval",
+   "type": "Symptom"
+  },
+  {
+   "name": "Missing Group Assignment",
+   "type": "Cause"
+  },
+  {
+   "name": "Token Refresh Issue",
+   "type": "Cause"
+  },
+  {
+   "name": "Permission Problem At Resource Level",
+   "type": "Cause"
+  },
+  {
+   "name": "Microsoft Entra ID (Azure AD)",
+   "type": "Product"
+  },
+  {
+   "name": "Security Group Membership",
+   "type": "Component"
+  },
+  {
+   "name": "SharePoint Site",
+   "type": "Product"
+  },
+  {
+   "name": "HR System",
+   "type": "Product"
+  },
+  {
+   "name": "Project Folder On Z:\\",
+   "type": "Component"
+  },
+  {
+   "name": "File Explorer",
+   "type": "Product"
+  },
+  {
+   "name": "Browser",
+   "type": "Product"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Sign Out And Back In",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify Group Membership In Azure AD",
+   "type": "Fix"
+  },
+  {
+   "name": "Add User To Security Group",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Access Denied After Approval",
+   "relation": "CAUSED_BY",
+   "target": "Missing Group Assignment"
+  },
+  {
+   "source": "Access Denied After Approval",
+   "relation": "CAUSED_BY",
+   "target": "Token Refresh Issue"
+  },
+  {
+   "source": "Access Denied After Approval",
+   "relation": "CAUSED_BY",
+   "target": "Permission Problem At Resource Level"
+  },
+  {
+   "source": "Missing Group Assignment",
+   "relation": "AFFECTS",
+   "target": "Security Group Membership"
+  },
+  {
+   "source": "Token Refresh Issue",
+   "relation": "AFFECTS",
+   "target": "Microsoft Entra ID (Azure AD)"
+  },
+  {
+   "source": "Permission Problem At Resource Level",
+   "relation": "AFFECTS",
+   "target": "SharePoint Site"
+  },
+  {
+   "source": "Permission Problem At Resource Level",
+   "relation": "AFFECTS",
+   "target": "HR System"
+  },
+  {
+   "source": "Permission Problem At Resource Level",
+   "relation": "AFFECTS",
+   "target": "Project Folder On Z:\\"
+  },
+  {
+   "source": "Access Denied After Approval",
+   "relation": "FIXED_BY",
+   "target": "Sign Out And Back In"
+  },
+  {
+   "source": "Missing Group Assignment",
+   "relation": "FIXED_BY",
+   "target": "Verify Group Membership In Azure AD"
+  },
+  {
+   "source": "Missing Group Assignment",
+   "relation": "FIXED_BY",
+   "target": "Add User To Security Group"
+  },
+  {
+   "source": "Token Refresh Issue",
+   "relation": "FIXED_BY",
+   "target": "Sign Out And Back In"
+  },
+  {
+   "source": "Access Denied After Approval",
+   "relation": "AFFECTS",
+   "target": "File Explorer"
+  },
+  {
+   "source": "Access Denied After Approval",
+   "relation": "AFFECTS",
+   "target": "Browser"
+  },
+  {
+   "source": "Access Denied After Approval",
+   "relation": "AFFECTS",
+   "target": "Teams"
+  }
+ ]
+}

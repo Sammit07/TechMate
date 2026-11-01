@@ -1,0 +1,201 @@
+{
+ "entities": [
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "Task Manager",
+   "type": "Component"
+  },
+  {
+   "name": "Startup tab",
+   "type": "Component"
+  },
+  {
+   "name": "Settings -> Apps -> Startup",
+   "type": "Component"
+  },
+  {
+   "name": "msconfig",
+   "type": "Component"
+  },
+  {
+   "name": "Laptop feels very slow during everyday tasks",
+   "type": "Symptom"
+  },
+  {
+   "name": "System hangs or freezes for several seconds, especially during Teams calls",
+   "type": "Symptom"
+  },
+  {
+   "name": "High CPU usage shown in Task Manager (often >80%)",
+   "type": "Symptom"
+  },
+  {
+   "name": "Fan runs constantly and laptop gets warm",
+   "type": "Symptom"
+  },
+  {
+   "name": "Boot time exceeds two minutes",
+   "type": "Symptom"
+  },
+  {
+   "name": "Too many programs configured to launch at startup",
+   "type": "Cause"
+  },
+  {
+   "name": "Background services or apps consuming excessive CPU/RAM",
+   "type": "Cause"
+  },
+  {
+   "name": "Accumulation of temporary files and cache reducing disk performance",
+   "type": "Cause"
+  },
+  {
+   "name": "Pending Windows updates that require a restart after extended uptime",
+   "type": "Cause"
+  },
+  {
+   "name": "Insufficient memory (less than 8GB) for the current workload",
+   "type": "Cause"
+  },
+  {
+   "name": "Presence of unwanted software or malware",
+   "type": "Cause"
+  },
+  {
+   "name": "Open Task Manager by pressing Ctrl+Shift+Esc, then select the Startup tab",
+   "type": "Fix"
+  },
+  {
+   "name": "Sort the list by Startup impact. Disable any item marked \"High\" that you do not recognize or that is not essential for your work (right-click -> Disable)",
+   "type": "Fix"
+  },
+  {
+   "name": "Open Settings -> Apps -> Startup and toggle off additional non-essential apps that appear here",
+   "type": "Fix"
+  },
+  {
+   "name": "If you prefer using the classic tool, press Win+R, type msconfig and hit Enter. In the Services",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Laptop feels very slow during everyday tasks",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "System hangs or freezes for several seconds, especially during Teams calls",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "High CPU usage shown in Task Manager (often >80%)",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "Fan runs constantly and laptop gets warm",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "Boot time exceeds two minutes",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "Too many programs configured to launch at startup",
+   "relation": "CAUSED_BY",
+   "target": "Laptop feels very slow during everyday tasks"
+  },
+  {
+   "source": "Background services or apps consuming excessive CPU/RAM",
+   "relation": "CAUSED_BY",
+   "target": "High CPU usage shown in Task Manager (often >80%)"
+  },
+  {
+   "source": "Accumulation of temporary files and cache reducing disk performance",
+   "relation": "CAUSED_BY",
+   "target": "Boot time exceeds two minutes"
+  },
+  {
+   "source": "Pending Windows updates that require a restart after extended uptime",
+   "relation": "CAUSED_BY",
+   "target": "System hangs or freezes for several seconds, especially during Teams calls"
+  },
+  {
+   "source": "Insufficient memory (less than 8GB) for the current workload",
+   "relation": "CAUSED_BY",
+   "target": "Laptop feels very slow during everyday tasks"
+  },
+  {
+   "source": "Presence of unwanted software or malware",
+   "relation": "CAUSED_BY",
+   "target": "High CPU usage shown in Task Manager (often >80%)"
+  },
+  {
+   "source": "Too many programs configured to launch at startup",
+   "relation": "FIXED_BY",
+   "target": "Open Task Manager by pressing Ctrl+Shift+Esc, then select the Startup tab"
+  },
+  {
+   "source": "Background services or apps consuming excessive CPU/RAM",
+   "relation": "FIXED_BY",
+   "target": "Sort the list by Startup impact. Disable any item marked \"High\" that you do not recognize or that is not essential for your work (right-click -> Disable)"
+  },
+  {
+   "source": "Accumulation of temporary files and cache reducing disk performance",
+   "relation": "FIXED_BY",
+   "target": "Open Settings -> Apps -> Startup and toggle off additional non-essential apps that appear here"
+  },
+  {
+   "source": "Pending Windows updates that require a restart after extended uptime",
+   "relation": "FIXED_BY",
+   "target": "If you prefer using the classic tool, press Win+R, type msconfig and hit Enter. In the Services"
+  },
+  {
+   "source": "Task Manager",
+   "relation": "PART_OF",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "Startup tab",
+   "relation": "PART_OF",
+   "target": "Task Manager"
+  },
+  {
+   "source": "Settings -> Apps -> Startup",
+   "relation": "PART_OF",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "msconfig",
+   "relation": "PART_OF",
+   "target": "Windows 11 23H2/24H2"
+  }
+ ]
+}

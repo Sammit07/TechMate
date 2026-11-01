@@ -1,0 +1,96 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 laptops (Dell Latitude 5440/7440, Lenovo ThinkPad T14/X1 Carbon, HP EliteBook 840)",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15 MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "PaperCut secure print release printers",
+   "type": "Product"
+  },
+  {
+   "name": "Acme ID badge (proximity card)",
+   "type": "Component"
+  },
+  {
+   "name": "Printer displays \"Offline\" or \"Not ready\" in the print queue",
+   "type": "Symptom"
+  },
+  {
+   "name": "Print jobs remain stuck in the queue with status \"Printing\" or \"Error - Printing\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "Attempt to add the office printer fails with error \"0x000006d1\" or \"Cannot connect to printer\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "Released pages come out blank or with only faint marks",
+   "type": "Symptom"
+  },
+  {
+   "name": "Badge tap does not trigger the release screen on the printer panel",
+   "type": "Symptom"
+  },
+  {
+   "name": "Corrupted or stalled print spooler service on the workstation",
+   "type": "Cause"
+  },
+  {
+   "name": "Out-of-date or incorrect printer driver installed",
+   "type": "Cause"
+  },
+  {
+   "name": "Low toner or empty cartridge reported by the printer hardware",
+   "type": "Cause"
+  },
+  {
+   "name": "Network connectivity issue between the workstation and print.acme.example",
+   "type": "Cause"
+  },
+  {
+   "name": "Badge reader malfunction or missing proximity-card driver on the printer",
+   "type": "Cause"
+  },
+  {
+   "name": "Tap your Acme ID badge firmly against the reader; wait for the green light or beep.",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Printer displays \"Offline\" or \"Not ready\" in the print queue",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted or stalled print spooler service on the workstation"
+  },
+  {
+   "source": "Print jobs remain stuck in the queue with status \"Printing\" or \"Error - Printing\"",
+   "relation": "CAUSED_BY",
+   "target": "Out-of-date or incorrect printer driver installed"
+  },
+  {
+   "source": "Attempt to add the office printer fails with error \"0x000006d1\" or \"Cannot connect to printer\"",
+   "relation": "CAUSED_BY",
+   "target": "Network connectivity issue between the workstation and print.acme.example"
+  },
+  {
+   "source": "Released pages come out blank or with only faint marks",
+   "relation": "CAUSED_BY",
+   "target": "Low toner or empty cartridge reported by the printer hardware"
+  },
+  {
+   "source": "Badge tap does not trigger the release screen on the printer panel",
+   "relation": "CAUSED_BY",
+   "target": "Badge reader malfunction or missing proximity-card driver on the printer"
+  },
+  {
+   "source": "Badge tap does not trigger the release screen on the printer panel",
+   "relation": "FIXED_BY",
+   "target": "Tap your Acme ID badge firmly against the reader; wait for the green light or beep."
+  }
+ ]
+}

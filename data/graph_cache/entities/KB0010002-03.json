@@ -1,0 +1,121 @@
+{
+ "entities": [
+  {
+   "name": "password policy",
+   "type": "Component"
+  },
+  {
+   "name": "14 character password",
+   "type": "Component"
+  },
+  {
+   "name": "password complexity",
+   "type": "Component"
+  },
+  {
+   "name": "password history",
+   "type": "Component"
+  },
+  {
+   "name": "lockout 15 minutes",
+   "type": "Component"
+  },
+  {
+   "name": "account lockout",
+   "type": "Symptom"
+  },
+  {
+   "name": "expired password",
+   "type": "Symptom"
+  },
+  {
+   "name": "failed login attempts",
+   "type": "Symptom"
+  },
+  {
+   "name": "credential cache",
+   "type": "Component"
+  },
+  {
+   "name": "Keychain Access",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Fix"
+  },
+  {
+   "name": "self service password reset",
+   "type": "Fix"
+  },
+  {
+   "name": "VPN password sync",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "account lockout",
+   "relation": "CAUSED_BY",
+   "target": "lockout 15 minutes"
+  },
+  {
+   "source": "expired password",
+   "relation": "CAUSED_BY",
+   "target": "password policy"
+  },
+  {
+   "source": "failed login attempts",
+   "relation": "CAUSED_BY",
+   "target": "lockout 15 minutes"
+  },
+  {
+   "source": "credential cache",
+   "relation": "AFFECTS",
+   "target": "Keychain Access"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "PART_OF",
+   "target": "Entra ID"
+  },
+  {
+   "source": "Temporary Access Pass",
+   "relation": "FIXED_BY",
+   "target": "account lockout"
+  },
+  {
+   "source": "self service password reset",
+   "relation": "FIXED_BY",
+   "target": "expired password"
+  },
+  {
+   "source": "VPN password sync",
+   "relation": "FIXED_BY",
+   "target": "credential cache"
+  },
+  {
+   "source": "password history",
+   "relation": "AFFECTS",
+   "target": "password policy"
+  },
+  {
+   "source": "password complexity",
+   "relation": "AFFECTS",
+   "target": "password policy"
+  },
+  {
+   "source": "14 character password",
+   "relation": "AFFECTS",
+   "target": "password policy"
+  }
+ ]
+}

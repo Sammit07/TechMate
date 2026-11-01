@@ -1,0 +1,140 @@
+{
+ "entities": [
+  {
+   "name": "Office apps crashing or freezing",
+   "type": "Symptom"
+  },
+  {
+   "name": "blank document test",
+   "type": "Component"
+  },
+  {
+   "name": "Quick Repair",
+   "type": "Fix"
+  },
+  {
+   "name": "licence token refresh",
+   "type": "Fix"
+  },
+  {
+   "name": "disable COM add-ins",
+   "type": "Fix"
+  },
+  {
+   "name": "reset Office user profile",
+   "type": "Fix"
+  },
+  {
+   "name": "Online Repair",
+   "type": "Fix"
+  },
+  {
+   "name": "Microsoft 365 Apps for enterprise",
+   "type": "Product"
+  },
+  {
+   "name": "Office 2019/2021",
+   "type": "Product"
+  },
+  {
+   "name": "Acme Global corporate email",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Component"
+  },
+  {
+   "name": "localappdata\\Microsoft\\Office",
+   "type": "Component"
+  },
+  {
+   "name": "unlicensed or needs activation",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "file-specific issue",
+   "type": "Symptom"
+  },
+  {
+   "name": "application-wide issue",
+   "type": "Symptom"
+  },
+  {
+   "name": "faulty COM add-in",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Office apps crashing or freezing",
+   "relation": "CAUSED_BY",
+   "target": "faulty COM add-in"
+  },
+  {
+   "source": "Office apps crashing or freezing",
+   "relation": "FIXED_BY",
+   "target": "Quick Repair"
+  },
+  {
+   "source": "Office apps crashing or freezing",
+   "relation": "FIXED_BY",
+   "target": "licence token refresh"
+  },
+  {
+   "source": "Office apps crashing or freezing",
+   "relation": "FIXED_BY",
+   "target": "disable COM add-ins"
+  },
+  {
+   "source": "Office apps crashing or freezing",
+   "relation": "FIXED_BY",
+   "target": "reset Office user profile"
+  },
+  {
+   "source": "Office apps crashing or freezing",
+   "relation": "FIXED_BY",
+   "target": "Online Repair"
+  },
+  {
+   "source": "unlicensed or needs activation",
+   "relation": "INDICATES",
+   "target": "licence token refresh"
+  },
+  {
+   "source": "file-specific issue",
+   "relation": "AFFECTS",
+   "target": "blank document test"
+  },
+  {
+   "source": "application-wide issue",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 Apps for enterprise"
+  },
+  {
+   "source": "Microsoft 365 Apps for enterprise",
+   "relation": "PART_OF",
+   "target": "Office 2019/2021"
+  },
+  {
+   "source": "Acme Global corporate email",
+   "relation": "AFFECTS",
+   "target": "licence token refresh"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "AFFECTS",
+   "target": "licence token refresh"
+  },
+  {
+   "source": "localappdata\\Microsoft\\Office",
+   "relation": "PART_OF",
+   "target": "reset Office user profile"
+  },
+  {
+   "source": "faulty COM add-in",
+   "relation": "CAUSED_BY",
+   "target": "disable COM add-ins"
+  }
+ ]
+}

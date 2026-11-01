@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Priority Level Assignment",
+   "type": "Component"
+  },
+  {
+   "name": "SLA Timer Start",
+   "type": "Component"
+  },
+  {
+   "name": "Response Time Remaining < 30 Minutes",
+   "type": "Symptom"
+  },
+  {
+   "name": "Incorrect Priority Setting",
+   "type": "Symptom"
+  },
+  {
+   "name": "Request Reassessment via Comment",
+   "type": "Fix"
+  },
+  {
+   "name": "Agent Assesses Impact and Urgency",
+   "type": "Cause"
+  },
+  {
+   "name": "Select Priority According to Matrix",
+   "type": "Fix"
+  },
+  {
+   "name": "Save Ticket Triggers SLA Start",
+   "type": "Fix"
+  },
+  {
+   "name": "Monitor SLA Dashboard or My Assignments View",
+   "type": "Fix"
+  },
+  {
+   "name": "Response Timer at 50% Allowed Time",
+   "type": "Symptom"
+  },
+  {
+   "name": "Send Proactive Update to Requester",
+   "type": "Fix"
+  },
+  {
+   "name": "Resolution Timer Below One Hour",
+   "type": "Symptom"
+  },
+  {
+   "name": "Notify L2/L3 Support Group",
+   "type": "Fix"
+  },
+  {
+   "name": "Document Escalation in Activity Log",
+   "type": "Fix"
+  },
+  {
+   "name": "Escalation Due to SLA At Risk",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Incorrect Priority Setting",
+   "relation": "CAUSED_BY",
+   "target": "Agent Assesses Impact and Urgency"
+  },
+  {
+   "source": "Request Reassessment via Comment",
+   "relation": "FIXED_BY",
+   "target": "Incorrect Priority Setting"
+  },
+  {
+   "source": "Select Priority According to Matrix",
+   "relation": "FIXED_BY",
+   "target": "Agent Assesses Impact and Urgency"
+  },
+  {
+   "source": "Save Ticket Triggers SLA Start",
+   "relation": "FIXED_BY",
+   "target": "Agent Assesses Impact and Urgency"
+  },
+  {
+   "source": "Monitor SLA Dashboard or My Assignments View",
+   "relation": "FIXED_BY",
+   "target": "Agent Assesses Impact and Urgency"
+  },
+  {
+   "source": "Response Timer at 50% Allowed Time",
+   "relation": "CAUSED_BY",
+   "target": "SLA Timer Start"
+  },
+  {
+   "source": "Send Proactive Update to Requester",
+   "relation": "FIXED_BY",
+   "target": "Response Timer at 50% Allowed Time"
+  },
+  {
+   "source": "Resolution Timer Below One Hour",
+   "relation": "CAUSED_BY",
+   "target": "SLA Timer Start"
+  },
+  {
+   "source": "Notify L2/L3 Support Group",
+   "relation": "FIXED_BY",
+   "target": "Resolution Timer Below One Hour"
+  },
+  {
+   "source": "Document Escalation in Activity Log",
+   "relation": "FIXED_BY",
+   "target": "Resolution Timer Below One Hour"
+  },
+  {
+   "source": "Escalation Due to SLA At Risk",
+   "relation": "CAUSED_BY",
+   "target": "Resolution Timer Below One Hour"
+  },
+  {
+   "source": "Response Time Remaining < 30 Minutes",
+   "relation": "CAUSED_BY",
+   "target": "SLA Timer Start"
+  },
+  {
+   "source": "Request Reassessment via Comment",
+   "relation": "FIXED_BY",
+   "target": "Response Time Remaining < 30 Minutes"
+  },
+  {
+   "source": "Agent Assesses Impact and Urgency",
+   "relation": "AFFECTS",
+   "target": "Priority Level Assignment"
+  },
+  {
+   "source": "Priority Level Assignment",
+   "relation": "PART_OF",
+   "target": "ServiceNow"
+  }
+ ]
+}

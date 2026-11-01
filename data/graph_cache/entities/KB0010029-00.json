@@ -1,0 +1,145 @@
+{
+ "entities": [
+  {
+   "name": "ACME-Corp Wi-Fi",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect VPN",
+   "type": "Product"
+  },
+  {
+   "name": "corporate web-filter",
+   "type": "Component"
+  },
+  {
+   "name": "DNS cache",
+   "type": "Component"
+  },
+  {
+   "name": "manual proxy settings",
+   "type": "Component"
+  },
+  {
+   "name": "VPN split-tunnel",
+   "type": "Component"
+  },
+  {
+   "name": "website fails to load",
+   "type": "Symptom"
+  },
+  {
+   "name": "DNS_PROBE_FINISHED_NXDOMAIN",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "ERR_CONNECTION_RESET",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "PROXY_ERROR",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Access denied - site blocked by web filter",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "stale DNS cache",
+   "type": "Cause"
+  },
+  {
+   "name": "incorrect IP address",
+   "type": "Cause"
+  },
+  {
+   "name": "site categorized as blocked",
+   "type": "Cause"
+  },
+  {
+   "name": "missing route for destination network",
+   "type": "Cause"
+  },
+  {
+   "name": "flush DNS cache",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "website fails to load",
+   "relation": "CAUSED_BY",
+   "target": "stale DNS cache"
+  },
+  {
+   "source": "website fails to load",
+   "relation": "CAUSED_BY",
+   "target": "incorrect IP address"
+  },
+  {
+   "source": "website fails to load",
+   "relation": "CAUSED_BY",
+   "target": "site categorized as blocked"
+  },
+  {
+   "source": "website fails to load",
+   "relation": "CAUSED_BY",
+   "target": "missing route for destination network"
+  },
+  {
+   "source": "DNS_PROBE_FINISHED_NXDOMAIN",
+   "relation": "INDICATES",
+   "target": "stale DNS cache"
+  },
+  {
+   "source": "ERR_CONNECTION_RESET",
+   "relation": "INDICATES",
+   "target": "manual proxy settings"
+  },
+  {
+   "source": "PROXY_ERROR",
+   "relation": "INDICATES",
+   "target": "manual proxy settings"
+  },
+  {
+   "source": "Access denied - site blocked by web filter",
+   "relation": "INDICATES",
+   "target": "site categorized as blocked"
+  },
+  {
+   "source": "stale DNS cache",
+   "relation": "AFFECTS",
+   "target": "DNS cache"
+  },
+  {
+   "source": "incorrect IP address",
+   "relation": "AFFECTS",
+   "target": "DNS cache"
+  },
+  {
+   "source": "site categorized as blocked",
+   "relation": "AFFECTS",
+   "target": "corporate web-filter"
+  },
+  {
+   "source": "missing route for destination network",
+   "relation": "AFFECTS",
+   "target": "VPN split-tunnel"
+  },
+  {
+   "source": "stale DNS cache",
+   "relation": "FIXED_BY",
+   "target": "flush DNS cache"
+  },
+  {
+   "source": "incorrect IP address",
+   "relation": "FIXED_BY",
+   "target": "flush DNS cache"
+  },
+  {
+   "source": "site categorized as blocked",
+   "relation": "FIXED_BY",
+   "target": "requesting a website to be unblocked"
+  }
+ ]
+}

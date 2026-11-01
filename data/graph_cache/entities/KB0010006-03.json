@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "saved credentials",
+   "type": "Component"
+  },
+  {
+   "name": "cached password",
+   "type": "Component"
+  },
+  {
+   "name": "account lockout",
+   "type": "Symptom"
+  },
+  {
+   "name": "password change",
+   "type": "Component"
+  },
+  {
+   "name": "credential manager",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook mail app",
+   "type": "Component"
+  },
+  {
+   "name": "mapped drive",
+   "type": "Component"
+  },
+  {
+   "name": "locked out",
+   "type": "Symptom"
+  },
+  {
+   "name": "SSO disabled",
+   "type": "Symptom"
+  },
+  {
+   "name": "unlock account",
+   "type": "Fix"
+  },
+  {
+   "name": "badPwdCount",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Identity & Access Management",
+   "type": "Product"
+  },
+  {
+   "name": "service account",
+   "type": "Component"
+  },
+  {
+   "name": "scheduled task",
+   "type": "Component"
+  },
+  {
+   "name": "third-party application",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "account lockout",
+   "relation": "CAUSED_BY",
+   "target": "saved credentials"
+  },
+  {
+   "source": "locked out",
+   "relation": "CAUSED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "saved credentials",
+   "relation": "AFFECTS",
+   "target": "Outlook mail app"
+  },
+  {
+   "source": "saved credentials",
+   "relation": "AFFECTS",
+   "target": "mapped drive"
+  },
+  {
+   "source": "identity & access management",
+   "relation": "FIXED_BY",
+   "target": "escalation"
+  },
+  {
+   "source": "unlock account",
+   "relation": "FIXED_BY",
+   "target": "account lockout"
+  },
+  {
+   "source": "remove saved credentials",
+   "relation": "FIXED_BY",
+   "target": "account lockout"
+  },
+  {
+   "source": "badPwdCount",
+   "relation": "INDICATES",
+   "target": "account lockout"
+  },
+  {
+   "source": "service account",
+   "relation": "CAUSED_BY",
+   "target": "account lockout"
+  },
+  {
+   "source": "scheduled task",
+   "relation": "CAUSED_BY",
+   "target": "account lockout"
+  },
+  {
+   "source": "third-party application",
+   "relation": "CAUSED_BY",
+   "target": "account lockout"
+  },
+  {
+   "source": "password change",
+   "relation": "CAUSED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "credential manager",
+   "relation": "PART_OF",
+   "target": "Windows"
+  },
+  {
+   "source": "keychain",
+   "relation": "PART_OF",
+   "target": "macOS"
+  }
+ ]
+}

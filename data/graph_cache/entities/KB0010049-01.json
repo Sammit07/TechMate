@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Blue Screen of Death (BSOD)",
+   "type": "Symptom"
+  },
+  {
+   "name": "Stop Code",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "nvlddmkm.sys",
+   "type": "Component"
+  },
+  {
+   "name": "Safe Mode",
+   "type": "Component"
+  },
+  {
+   "name": "Windows Update",
+   "type": "Component"
+  },
+  {
+   "name": "Device Manager",
+   "type": "Component"
+  },
+  {
+   "name": "Graphics Adapter",
+   "type": "Component"
+  },
+  {
+   "name": "Roll Back Driver",
+   "type": "Fix"
+  },
+  {
+   "name": "Uninstall Device",
+   "type": "Fix"
+  },
+  {
+   "name": "Windows Memory Diagnostic",
+   "type": "Component"
+  },
+  {
+   "name": "RAM Test",
+   "type": "Component"
+  },
+  {
+   "name": "Recent Update",
+   "type": "Cause"
+  },
+  {
+   "name": "Faulty Graphics Driver",
+   "type": "Cause"
+  },
+  {
+   "name": "Memory Issue",
+   "type": "Cause"
+  },
+  {
+   "name": "Reliability Monitor",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Blue Screen of Death (BSOD)",
+   "relation": "CAUSED_BY",
+   "target": "Recent Update"
+  },
+  {
+   "source": "Blue Screen of Death (BSOD)",
+   "relation": "CAUSED_BY",
+   "target": "Faulty Graphics Driver"
+  },
+  {
+   "source": "Blue Screen of Death (BSOD)",
+   "relation": "CAUSED_BY",
+   "target": "Memory Issue"
+  },
+  {
+   "source": "Stop Code",
+   "relation": "INDICATES",
+   "target": "Faulty Graphics Driver"
+  },
+  {
+   "source": "nvlddmkm.sys",
+   "relation": "INDICATES",
+   "target": "Faulty Graphics Driver"
+  },
+  {
+   "source": "Faulty Graphics Driver",
+   "relation": "FIXED_BY",
+   "target": "Roll Back Driver"
+  },
+  {
+   "source": "Faulty Graphics Driver",
+   "relation": "FIXED_BY",
+   "target": "Uninstall Device"
+  },
+  {
+   "source": "Memory Issue",
+   "relation": "FIXED_BY",
+   "target": "Windows Memory Diagnostic"
+  },
+  {
+   "source": "Recent Update",
+   "relation": "FIXED_BY",
+   "target": "Windows Update"
+  },
+  {
+   "source": "Blue Screen of Death (BSOD)",
+   "relation": "AFFECTS",
+   "target": "Graphics Adapter"
+  },
+  {
+   "source": "Graphics Adapter",
+   "relation": "PART_OF",
+   "target": "Display adapters"
+  },
+  {
+   "source": "Safe Mode",
+   "relation": "AFFECTS",
+   "target": "Windows"
+  },
+  {
+   "source": "Device Manager",
+   "relation": "AFFECTS",
+   "target": "Windows"
+  },
+  {
+   "source": "Windows Memory Diagnostic",
+   "relation": "AFFECTS",
+   "target": "Windows"
+  },
+  {
+   "source": "Reliability Monitor",
+   "relation": "AFFECTS",
+   "target": "Windows"
+  }
+ ]
+}

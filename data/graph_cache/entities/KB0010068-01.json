@@ -1,0 +1,132 @@
+{
+ "entities": [
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "shared mailbox",
+   "type": "Component"
+  },
+  {
+   "name": "Exchange Admin Center",
+   "type": "Product"
+  },
+  {
+   "name": "Full Access",
+   "type": "Component"
+  },
+  {
+   "name": "Send As",
+   "type": "Component"
+  },
+  {
+   "name": "Calendar Editor",
+   "type": "Component"
+  },
+  {
+   "name": "mailbox not visible",
+   "type": "Symptom"
+  },
+  {
+   "name": "calendar not usable",
+   "type": "Symptom"
+  },
+  {
+   "name": "incorrect permissions",
+   "type": "Cause"
+  },
+  {
+   "name": "add mailbox manually in Outlook",
+   "type": "Fix"
+  },
+  {
+   "name": "grant Full Access and Send As",
+   "type": "Fix"
+  },
+  {
+   "name": "grant Calendar Editor rights",
+   "type": "Fix"
+  },
+  {
+   "name": "notify user of granted permissions",
+   "type": "Fix"
+  },
+  {
+   "name": "request shared mailbox access",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "mailbox not visible",
+   "relation": "CAUSED_BY",
+   "target": "incorrect permissions"
+  },
+  {
+   "source": "calendar not usable",
+   "relation": "CAUSED_BY",
+   "target": "incorrect permissions"
+  },
+  {
+   "source": "incorrect permissions",
+   "relation": "FIXED_BY",
+   "target": "grant Full Access and Send As"
+  },
+  {
+   "source": "incorrect permissions",
+   "relation": "FIXED_BY",
+   "target": "grant Calendar Editor rights"
+  },
+  {
+   "source": "mailbox not visible",
+   "relation": "FIXED_BY",
+   "target": "add mailbox manually in Outlook"
+  },
+  {
+   "source": "request shared mailbox access",
+   "relation": "INDICATES",
+   "target": "incorrect permissions"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "mailbox not visible"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "calendar not usable"
+  },
+  {
+   "source": "shared mailbox",
+   "relation": "PART_OF",
+   "target": "Exchange Admin Center"
+  },
+  {
+   "source": "Full Access",
+   "relation": "PART_OF",
+   "target": "shared mailbox"
+  },
+  {
+   "source": "Send As",
+   "relation": "PART_OF",
+   "target": "shared mailbox"
+  },
+  {
+   "source": "Calendar Editor",
+   "relation": "PART_OF",
+   "target": "shared mailbox"
+  },
+  {
+   "source": "grant Full Access and Send As",
+   "relation": "FIXED_BY",
+   "target": "notify user of granted permissions"
+  },
+  {
+   "source": "grant Calendar Editor rights",
+   "relation": "FIXED_BY",
+   "target": "notify user of granted permissions"
+  }
+ ]
+}

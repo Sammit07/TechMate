@@ -1,0 +1,170 @@
+{
+ "entities": [
+  {
+   "name": "wired network connectivity loss",
+   "type": "Symptom"
+  },
+  {
+   "name": "no LED activity on NIC/dock/wall jack",
+   "type": "Symptom"
+  },
+  {
+   "name": "faulty Ethernet cable",
+   "type": "Cause"
+  },
+  {
+   "name": "dock/NIC hardware failure",
+   "type": "Cause"
+  },
+  {
+   "name": "wall jack or patch panel fault",
+   "type": "Cause"
+  },
+  {
+   "name": "outdated Ethernet driver",
+   "type": "Cause"
+  },
+  {
+   "name": "TCP/IP stack corruption",
+   "type": "Cause"
+  },
+  {
+   "name": "switch port misconfiguration",
+   "type": "Cause"
+  },
+  {
+   "name": "replace Ethernet cable",
+   "type": "Fix"
+  },
+  {
+   "name": "update Ethernet driver",
+   "type": "Fix"
+  },
+  {
+   "name": "reset TCP/IP stack",
+   "type": "Fix"
+  },
+  {
+   "name": "update dock firmware",
+   "type": "Fix"
+  },
+  {
+   "name": "re-enable switch port",
+   "type": "Fix"
+  },
+  {
+   "name": "swap patch cord",
+   "type": "Fix"
+  },
+  {
+   "name": "Ethernet controller",
+   "type": "Component"
+  },
+  {
+   "name": "docking station utility",
+   "type": "Component"
+  },
+  {
+   "name": "network management console",
+   "type": "Component"
+  },
+  {
+   "name": "Dell Display Manager",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo Vantage",
+   "type": "Product"
+  },
+  {
+   "name": "Device Manager",
+   "type": "Component"
+  },
+  {
+   "name": "Command Prompt",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "no LED activity on NIC/dock/wall jack",
+   "relation": "CAUSED_BY",
+   "target": "faulty Ethernet cable"
+  },
+  {
+   "source": "no LED activity on NIC/dock/wall jack",
+   "relation": "CAUSED_BY",
+   "target": "dock/NIC hardware failure"
+  },
+  {
+   "source": "no LED activity on NIC/dock/wall jack",
+   "relation": "CAUSED_BY",
+   "target": "wall jack or patch panel fault"
+  },
+  {
+   "source": "wired network connectivity loss",
+   "relation": "CAUSED_BY",
+   "target": "outdated Ethernet driver"
+  },
+  {
+   "source": "wired network connectivity loss",
+   "relation": "CAUSED_BY",
+   "target": "TCP/IP stack corruption"
+  },
+  {
+   "source": "wired network connectivity loss",
+   "relation": "CAUSED_BY",
+   "target": "switch port misconfiguration"
+  },
+  {
+   "source": "faulty Ethernet cable",
+   "relation": "FIXED_BY",
+   "target": "replace Ethernet cable"
+  },
+  {
+   "source": "outdated Ethernet driver",
+   "relation": "FIXED_BY",
+   "target": "update Ethernet driver"
+  },
+  {
+   "source": "TCP/IP stack corruption",
+   "relation": "FIXED_BY",
+   "target": "reset TCP/IP stack"
+  },
+  {
+   "source": "dock/NIC hardware failure",
+   "relation": "FIXED_BY",
+   "target": "update dock firmware"
+  },
+  {
+   "source": "switch port misconfiguration",
+   "relation": "FIXED_BY",
+   "target": "re-enable switch port"
+  },
+  {
+   "source": "switch port misconfiguration",
+   "relation": "FIXED_BY",
+   "target": "swap patch cord"
+  },
+  {
+   "source": "Ethernet controller",
+   "relation": "PART_OF",
+   "target": "Device Manager"
+  },
+  {
+   "source": "docking station utility",
+   "relation": "PART_OF",
+   "target": "Dell Display Manager"
+  },
+  {
+   "source": "docking station utility",
+   "relation": "PART_OF",
+   "target": "Lenovo Vantage"
+  },
+  {
+   "source": "network management console",
+   "relation": "AFFECTS",
+   "target": "switch port misconfiguration"
+  }
+ ]
+}

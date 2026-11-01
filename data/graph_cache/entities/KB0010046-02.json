@@ -1,0 +1,206 @@
+{
+ "entities": [
+  {
+   "name": "Windows Update",
+   "type": "Product"
+  },
+  {
+   "name": "macOS Software Update",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "BitLocker",
+   "type": "Component"
+  },
+  {
+   "name": "FileVault",
+   "type": "Component"
+  },
+  {
+   "name": "Windows Update Troubleshooter",
+   "type": "Component"
+  },
+  {
+   "name": "self-help component reset procedure",
+   "type": "Component"
+  },
+  {
+   "name": "insufficient disk space",
+   "type": "Cause"
+  },
+  {
+   "name": "device not plugged in",
+   "type": "Cause"
+  },
+  {
+   "name": "failed update installation",
+   "type": "Symptom"
+  },
+  {
+   "name": "update rollback",
+   "type": "Symptom"
+  },
+  {
+   "name": "clean temporary files",
+   "type": "Fix"
+  },
+  {
+   "name": "move data to OneDrive",
+   "type": "Fix"
+  },
+  {
+   "name": "run Windows Update Troubleshooter",
+   "type": "Fix"
+  },
+  {
+   "name": "perform self-help component reset",
+   "type": "Fix"
+  },
+  {
+   "name": "download and install macOS combo updater",
+   "type": "Fix"
+  },
+  {
+   "name": "verify update history",
+   "type": "Fix"
+  },
+  {
+   "name": "check critical apps launch",
+   "type": "Fix"
+  },
+  {
+   "name": "maintain 15GB free disk space",
+   "type": "Fix"
+  },
+  {
+   "name": "leave laptop plugged in overnight",
+   "type": "Fix"
+  },
+  {
+   "name": "avoid deferring security updates",
+   "type": "Fix"
+  },
+  {
+   "name": "run Company Portal sync",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "failed update installation",
+   "relation": "CAUSED_BY",
+   "target": "insufficient disk space"
+  },
+  {
+   "source": "failed update installation",
+   "relation": "CAUSED_BY",
+   "target": "device not plugged in"
+  },
+  {
+   "source": "update rollback",
+   "relation": "CAUSED_BY",
+   "target": "failed update installation"
+  },
+  {
+   "source": "insufficient disk space",
+   "relation": "AFFECTS",
+   "target": "Windows Update"
+  },
+  {
+   "source": "device not plugged in",
+   "relation": "AFFECTS",
+   "target": "macOS Software Update"
+  },
+  {
+   "source": "clean temporary files",
+   "relation": "FIXED_BY",
+   "target": "insufficient disk space"
+  },
+  {
+   "source": "move data to OneDrive",
+   "relation": "FIXED_BY",
+   "target": "insufficient disk space"
+  },
+  {
+   "source": "run Windows Update Troubleshooter",
+   "relation": "FIXED_BY",
+   "target": "failed update installation"
+  },
+  {
+   "source": "perform self-help component reset",
+   "relation": "FIXED_BY",
+   "target": "failed update installation"
+  },
+  {
+   "source": "download and install macOS combo updater",
+   "relation": "FIXED_BY",
+   "target": "failed update installation"
+  },
+  {
+   "source": "verify update history",
+   "relation": "FIXED_BY",
+   "target": "failed update installation"
+  },
+  {
+   "source": "check critical apps launch",
+   "relation": "FIXED_BY",
+   "target": "failed update installation"
+  },
+  {
+   "source": "maintain 15GB free disk space",
+   "relation": "FIXED_BY",
+   "target": "insufficient disk space"
+  },
+  {
+   "source": "leave laptop plugged in overnight",
+   "relation": "FIXED_BY",
+   "target": "device not plugged in"
+  },
+  {
+   "source": "avoid deferring security updates",
+   "relation": "FIXED_BY",
+   "target": "failed update installation"
+  },
+  {
+   "source": "run Company Portal sync",
+   "relation": "FIXED_BY",
+   "target": "failed update installation"
+  },
+  {
+   "source": "Windows Update",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "BitLocker",
+   "relation": "PART_OF",
+   "target": "Windows Update"
+  },
+  {
+   "source": "FileVault",
+   "relation": "PART_OF",
+   "target": "macOS Software Update"
+  }
+ ]
+}

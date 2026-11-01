@@ -1,0 +1,165 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "macOS laptops",
+   "type": "Product"
+  },
+  {
+   "name": "Desktop PCs with built-in NIC",
+   "type": "Product"
+  },
+  {
+   "name": "USB-C/Ethernet docking stations",
+   "type": "Product"
+  },
+  {
+   "name": "No network icon or red X over Ethernet adapter",
+   "type": "Symptom"
+  },
+  {
+   "name": "Network cable unplugged message",
+   "type": "Symptom"
+  },
+  {
+   "name": "Unable to access intranet or internet sites",
+   "type": "Symptom"
+  },
+  {
+   "name": "Ping fails",
+   "type": "Symptom"
+  },
+  {
+   "name": "Docking-station LAN port shows no link LED",
+   "type": "Symptom"
+  },
+  {
+   "name": "Link speed stuck at 100 Mbps",
+   "type": "Symptom"
+  },
+  {
+   "name": "Loose or damaged Ethernet cable",
+   "type": "Cause"
+  },
+  {
+   "name": "Faulty desk wall port or patch-panel mis-patch",
+   "type": "Cause"
+  },
+  {
+   "name": "Defective docking-station LAN port",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated firmware/driver",
+   "type": "Cause"
+  },
+  {
+   "name": "Switch port disabled or error-disabled",
+   "type": "Cause"
+  },
+  {
+   "name": "VLAN mismatch",
+   "type": "Cause"
+  },
+  {
+   "name": "NIC driver issue",
+   "type": "Cause"
+  },
+  {
+   "name": "Power-management setting",
+   "type": "Cause"
+  },
+  {
+   "name": "Swap Ethernet cable",
+   "type": "Fix"
+  },
+  {
+   "name": "Update NIC driver",
+   "type": "Fix"
+  },
+  {
+   "name": "Disable Wi-Fi temporarily",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "No network icon or red X over Ethernet adapter",
+   "relation": "CAUSED_BY",
+   "target": "Loose or damaged Ethernet cable"
+  },
+  {
+   "source": "Network cable unplugged message",
+   "relation": "CAUSED_BY",
+   "target": "Faulty desk wall port or patch-panel mis-patch"
+  },
+  {
+   "source": "Unable to access intranet or internet sites",
+   "relation": "CAUSED_BY",
+   "target": "Defective docking-station LAN port"
+  },
+  {
+   "source": "Ping fails",
+   "relation": "CAUSED_BY",
+   "target": "Outdated firmware/driver"
+  },
+  {
+   "source": "Docking-station LAN port shows no link LED",
+   "relation": "CAUSED_BY",
+   "target": "Switch port disabled or error-disabled"
+  },
+  {
+   "source": "Link speed stuck at 100 Mbps",
+   "relation": "CAUSED_BY",
+   "target": "VLAN mismatch"
+  },
+  {
+   "source": "Loose or damaged Ethernet cable",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptops"
+  },
+  {
+   "source": "Faulty desk wall port or patch-panel mis-patch",
+   "relation": "AFFECTS",
+   "target": "macOS laptops"
+  },
+  {
+   "source": "Defective docking-station LAN port",
+   "relation": "AFFECTS",
+   "target": "Desktop PCs with built-in NIC"
+  },
+  {
+   "source": "Outdated firmware/driver",
+   "relation": "AFFECTS",
+   "target": "USB-C/Ethernet docking stations"
+  },
+  {
+   "source": "Swap Ethernet cable",
+   "relation": "FIXED_BY",
+   "target": "Loose or damaged Ethernet cable"
+  },
+  {
+   "source": "Update NIC driver",
+   "relation": "FIXED_BY",
+   "target": "Outdated firmware/driver"
+  },
+  {
+   "source": "Disable Wi-Fi temporarily",
+   "relation": "FIXED_BY",
+   "target": "Network cable unplugged message"
+  },
+  {
+   "source": "No network icon or red X over Ethernet adapter",
+   "relation": "INDICATES",
+   "target": "Loose or damaged Ethernet cable"
+  },
+  {
+   "source": "Link speed stuck at 100 Mbps",
+   "relation": "INDICATES",
+   "target": "VLAN mismatch"
+  }
+ ]
+}

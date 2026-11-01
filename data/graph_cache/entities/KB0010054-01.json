@@ -1,0 +1,132 @@
+{
+ "entities": [
+  {
+   "name": "BitLocker recovery key prompt",
+   "type": "Symptom"
+  },
+  {
+   "name": "BIOS/firmware update",
+   "type": "Cause"
+  },
+  {
+   "name": "retrieve BitLocker recovery key from Microsoft Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "suspend BitLocker before reboot",
+   "type": "Fix"
+  },
+  {
+   "name": "resume BitLocker after update",
+   "type": "Fix"
+  },
+  {
+   "name": "Microsoft Intune (Endpoint Manager)",
+   "type": "Product"
+  },
+  {
+   "name": "manage-bde -protectors -disable C:",
+   "type": "Component"
+  },
+  {
+   "name": "manage-bde -protectors -enable C:",
+   "type": "Component"
+  },
+  {
+   "name": "Company Portal app",
+   "type": "Product"
+  },
+  {
+   "name": "self-service password reset portal",
+   "type": "Product"
+  },
+  {
+   "name": "BitLocker",
+   "type": "Product"
+  },
+  {
+   "name": "verify BitLocker status with manage-bde -status",
+   "type": "Fix"
+  },
+  {
+   "name": "confirm user identity with MFA",
+   "type": "Fix"
+  },
+  {
+   "name": "Acme Global credentials",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BitLocker recovery key prompt",
+   "relation": "CAUSED_BY",
+   "target": "BIOS/firmware update"
+  },
+  {
+   "source": "BitLocker recovery key prompt",
+   "relation": "FIXED_BY",
+   "target": "retrieve BitLocker recovery key from Microsoft Intune"
+  },
+  {
+   "source": "BIOS/firmware update",
+   "relation": "FIXED_BY",
+   "target": "suspend BitLocker before reboot"
+  },
+  {
+   "source": "BIOS/firmware update",
+   "relation": "FIXED_BY",
+   "target": "resume BitLocker after update"
+  },
+  {
+   "source": "BitLocker",
+   "relation": "AFFECTS",
+   "target": "BitLocker recovery key prompt"
+  },
+  {
+   "source": "Microsoft Intune (Endpoint Manager)",
+   "relation": "PART_OF",
+   "target": "BitLocker"
+  },
+  {
+   "source": "Company Portal app",
+   "relation": "PART_OF",
+   "target": "Microsoft Intune (Endpoint Manager)"
+  },
+  {
+   "source": "self-service password reset portal",
+   "relation": "PART_OF",
+   "target": "Microsoft Intune (Endpoint Manager)"
+  },
+  {
+   "source": "manage-bde -protectors -disable C:",
+   "relation": "PART_OF",
+   "target": "BitLocker"
+  },
+  {
+   "source": "manage-bde -protectors -enable C:",
+   "relation": "PART_OF",
+   "target": "BitLocker"
+  },
+  {
+   "source": "verify BitLocker status with manage-bde -status",
+   "relation": "FIXED_BY",
+   "target": "BitLocker recovery key prompt"
+  },
+  {
+   "source": "confirm user identity with MFA",
+   "relation": "FIXED_BY",
+   "target": "BitLocker recovery key prompt"
+  },
+  {
+   "source": "BitLocker recovery key prompt",
+   "relation": "INDICATES",
+   "target": "BIOS/firmware update"
+  },
+  {
+   "source": "Acme Global credentials",
+   "relation": "AFFECTS",
+   "target": "BitLocker recovery key prompt"
+  }
+ ]
+}

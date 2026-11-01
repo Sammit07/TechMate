@@ -1,0 +1,131 @@
+{
+ "entities": [
+  {
+   "name": "OneDrive-Acme folder",
+   "type": "Product"
+  },
+  {
+   "name": "SharePoint document library",
+   "type": "Product"
+  },
+  {
+   "name": "External file sharing",
+   "type": "Component"
+  },
+  {
+   "name": "Specific people",
+   "type": "Component"
+  },
+  {
+   "name": "Anyone with the link",
+   "type": "Component"
+  },
+  {
+   "name": "Can view",
+   "type": "Component"
+  },
+  {
+   "name": "Can edit",
+   "type": "Component"
+  },
+  {
+   "name": "Block download",
+   "type": "Component"
+  },
+  {
+   "name": "Expiration date",
+   "type": "Component"
+  },
+  {
+   "name": "Password protection",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft account sign-in",
+   "type": "Component"
+  },
+  {
+   "name": "One-time passcode",
+   "type": "Component"
+  },
+  {
+   "name": "External sharing failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "License verification",
+   "type": "Fix"
+  },
+  {
+   "name": "Sharing settings check",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "External file sharing",
+   "relation": "AFFECTS",
+   "target": "OneDrive-Acme folder"
+  },
+  {
+   "source": "External file sharing",
+   "relation": "AFFECTS",
+   "target": "SharePoint document library"
+  },
+  {
+   "source": "Anyone with the link",
+   "relation": "PART_OF",
+   "target": "External file sharing"
+  },
+  {
+   "source": "Specific people",
+   "relation": "PART_OF",
+   "target": "External file sharing"
+  },
+  {
+   "source": "Can view",
+   "relation": "PART_OF",
+   "target": "External file sharing"
+  },
+  {
+   "source": "Can edit",
+   "relation": "PART_OF",
+   "target": "External file sharing"
+  },
+  {
+   "source": "Block download",
+   "relation": "PART_OF",
+   "target": "External file sharing"
+  },
+  {
+   "source": "Expiration date",
+   "relation": "PART_OF",
+   "target": "External file sharing"
+  },
+  {
+   "source": "Password protection",
+   "relation": "PART_OF",
+   "target": "External file sharing"
+  },
+  {
+   "source": "Microsoft account sign-in",
+   "relation": "PART_OF",
+   "target": "External file sharing"
+  },
+  {
+   "source": "One-time passcode",
+   "relation": "PART_OF",
+   "target": "External file sharing"
+  },
+  {
+   "source": "External sharing failure",
+   "relation": "FIXED_BY",
+   "target": "License verification"
+  },
+  {
+   "source": "External sharing failure",
+   "relation": "FIXED_BY",
+   "target": "Sharing settings check"
+  }
+ ]
+}

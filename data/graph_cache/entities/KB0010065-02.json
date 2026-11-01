@@ -1,0 +1,135 @@
+{
+ "entities": [
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Mail Setup",
+   "type": "Component"
+  },
+  {
+   "name": "profile rebuild",
+   "type": "Fix"
+  },
+  {
+   "name": "cannot access Outlook",
+   "type": "Symptom"
+  },
+  {
+   "name": "status bar not showing Connected",
+   "type": "Symptom"
+  },
+  {
+   "name": "search not working",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outlook process still running",
+   "type": "Cause"
+  },
+  {
+   "name": "corrupted profile",
+   "type": "Cause"
+  },
+  {
+   "name": "close Outlook and end outlook.exe processes",
+   "type": "Fix"
+  },
+  {
+   "name": "remove existing profile",
+   "type": "Fix"
+  },
+  {
+   "name": "create new profile",
+   "type": "Fix"
+  },
+  {
+   "name": "set new profile as default",
+   "type": "Fix"
+  },
+  {
+   "name": "launch Outlook and monitor sync",
+   "type": "Fix"
+  },
+  {
+   "name": "send test email and verify search",
+   "type": "Fix"
+  },
+  {
+   "name": "enable Cached Exchange Mode",
+   "type": "Fix"
+  },
+  {
+   "name": "disable third-party COM add-ins",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cannot access Outlook",
+   "relation": "CAUSED_BY",
+   "target": "corrupted profile"
+  },
+  {
+   "source": "status bar not showing Connected",
+   "relation": "CAUSED_BY",
+   "target": "corrupted profile"
+  },
+  {
+   "source": "search not working",
+   "relation": "CAUSED_BY",
+   "target": "corrupted profile"
+  },
+  {
+   "source": "Outlook process still running",
+   "relation": "CAUSED_BY",
+   "target": "corrupted profile"
+  },
+  {
+   "source": "corrupted profile",
+   "relation": "FIXED_BY",
+   "target": "profile rebuild"
+  },
+  {
+   "source": "profile rebuild",
+   "relation": "FIXED_BY",
+   "target": "close Outlook and end outlook.exe processes"
+  },
+  {
+   "source": "profile rebuild",
+   "relation": "FIXED_BY",
+   "target": "remove existing profile"
+  },
+  {
+   "source": "profile rebuild",
+   "relation": "FIXED_BY",
+   "target": "create new profile"
+  },
+  {
+   "source": "profile rebuild",
+   "relation": "FIXED_BY",
+   "target": "set new profile as default"
+  },
+  {
+   "source": "profile rebuild",
+   "relation": "FIXED_BY",
+   "target": "launch Outlook and monitor sync"
+  },
+  {
+   "source": "profile rebuild",
+   "relation": "FIXED_BY",
+   "target": "send test email and verify search"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "Mail Setup"
+  },
+  {
+   "source": "Mail Setup",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  }
+ ]
+}

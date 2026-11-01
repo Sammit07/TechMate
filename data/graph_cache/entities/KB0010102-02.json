@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "USB encryption",
+   "type": "Component"
+  },
+  {
+   "name": "BitLocker To Go",
+   "type": "Component"
+  },
+  {
+   "name": "FileVault",
+   "type": "Component"
+  },
+  {
+   "name": "removable media",
+   "type": "Component"
+  },
+  {
+   "name": "recovery key",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Azure AD",
+   "type": "Product"
+  },
+  {
+   "name": "self-help encryption steps",
+   "type": "Fix"
+  },
+  {
+   "name": "password/PIN prompt",
+   "type": "Symptom"
+  },
+  {
+   "name": "protected drive status",
+   "type": "Symptom"
+  },
+  {
+   "name": "cannot access the drive",
+   "type": "Symptom"
+  },
+  {
+   "name": "tampering, malware, or hardware failure",
+   "type": "Cause"
+  },
+  {
+   "name": "renew encryption password/PIN",
+   "type": "Fix"
+  },
+  {
+   "name": "report lost or stolen media",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Security Operations",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cannot access the drive",
+   "relation": "CAUSED_BY",
+   "target": "forgot password/PIN"
+  },
+  {
+   "source": "cannot access the drive",
+   "relation": "FIXED_BY",
+   "target": "retrieve recovery key from Intune"
+  },
+  {
+   "source": "retrieve recovery key from Intune",
+   "relation": "FIXED_BY",
+   "target": "provide recovery key to user"
+  },
+  {
+   "source": "provide recovery key to user",
+   "relation": "FIXED_BY",
+   "target": "renew encryption password/PIN"
+  },
+  {
+   "source": "tampering, malware, or hardware failure",
+   "relation": "CAUSED_BY",
+   "target": "drive shows signs of tampering"
+  },
+  {
+   "source": "drive shows signs of tampering",
+   "relation": "FIXED_BY",
+   "target": "escalate to Security Operations"
+  },
+  {
+   "source": "USB encryption",
+   "relation": "AFFECTS",
+   "target": "removable media"
+  },
+  {
+   "source": "BitLocker To Go",
+   "relation": "PART_OF",
+   "target": "USB encryption"
+  },
+  {
+   "source": "FileVault",
+   "relation": "PART_OF",
+   "target": "USB encryption"
+  },
+  {
+   "source": "recovery key",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "self-help encryption steps",
+   "relation": "AFFECTS",
+   "target": "user"
+  },
+  {
+   "source": "password/PIN prompt",
+   "relation": "INDICATES",
+   "target": "encryption is active"
+  },
+  {
+   "source": "protected drive status",
+   "relation": "INDICATES",
+   "target": "encryption is working"
+  },
+  {
+   "source": "report lost or stolen media",
+   "relation": "FIXED_BY",
+   "target": "notify Security Operations"
+  },
+  {
+   "source": "cannot access the drive",
+   "relation": "AFFECTS",
+   "target": "removable media"
+  }
+ ]
+}

@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "laptop not charging or battery draining fast",
+   "type": "Symptom"
+  },
+  {
+   "name": "Plugged in, not charging",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "charger LED does not illuminate",
+   "type": "Symptom"
+  },
+  {
+   "name": "frayed insulation or bent pins",
+   "type": "Cause"
+  },
+  {
+   "name": "debris or corrosion in charging port",
+   "type": "Cause"
+  },
+  {
+   "name": "battery health below 60%",
+   "type": "Cause"
+  },
+  {
+   "name": "swollen or leaking battery",
+   "type": "Cause"
+  },
+  {
+   "name": "replace charger",
+   "type": "Fix"
+  },
+  {
+   "name": "clean charging port",
+   "type": "Fix"
+  },
+  {
+   "name": "replace battery",
+   "type": "Fix"
+  },
+  {
+   "name": "Dell BIOS",
+   "type": "Component"
+  },
+  {
+   "name": "Lenovo Vantage",
+   "type": "Component"
+  },
+  {
+   "name": "HP Support Assistant",
+   "type": "Component"
+  },
+  {
+   "name": "laptop charging port",
+   "type": "Component"
+  },
+  {
+   "name": "battery health check",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "laptop not charging or battery draining fast",
+   "relation": "CAUSED_BY",
+   "target": "charger LED does not illuminate"
+  },
+  {
+   "source": "Plugged in, not charging",
+   "relation": "INDICATES",
+   "target": "charger LED does not illuminate"
+  },
+  {
+   "source": "charger LED does not illuminate",
+   "relation": "CAUSED_BY",
+   "target": "frayed insulation or bent pins"
+  },
+  {
+   "source": "laptop not charging or battery draining fast",
+   "relation": "CAUSED_BY",
+   "target": "debris or corrosion in charging port"
+  },
+  {
+   "source": "laptop not charging or battery draining fast",
+   "relation": "CAUSED_BY",
+   "target": "battery health below 60%"
+  },
+  {
+   "source": "laptop not charging or battery draining fast",
+   "relation": "CAUSED_BY",
+   "target": "swollen or leaking battery"
+  },
+  {
+   "source": "frayed insulation or bent pins",
+   "relation": "FIXED_BY",
+   "target": "replace charger"
+  },
+  {
+   "source": "debris or corrosion in charging port",
+   "relation": "FIXED_BY",
+   "target": "clean charging port"
+  },
+  {
+   "source": "battery health below 60%",
+   "relation": "FIXED_BY",
+   "target": "replace battery"
+  },
+  {
+   "source": "swollen or leaking battery",
+   "relation": "FIXED_BY",
+   "target": "replace battery"
+  },
+  {
+   "source": "Dell BIOS",
+   "relation": "PART_OF",
+   "target": "laptop charging port"
+  },
+  {
+   "source": "Lenovo Vantage",
+   "relation": "PART_OF",
+   "target": "laptop charging port"
+  },
+  {
+   "source": "HP Support Assistant",
+   "relation": "PART_OF",
+   "target": "laptop charging port"
+  },
+  {
+   "source": "battery health check",
+   "relation": "AFFECTS",
+   "target": "laptop not charging or battery draining fast"
+  },
+  {
+   "source": "laptop charging port",
+   "relation": "AFFECTS",
+   "target": "laptop not charging or battery draining fast"
+  }
+ ]
+}

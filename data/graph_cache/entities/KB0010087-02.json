@@ -1,0 +1,97 @@
+{
+ "entities": [
+  {
+   "name": "P1 ticket",
+   "type": "Symptom"
+  },
+  {
+   "name": "P2-P4 ticket",
+   "type": "Symptom"
+  },
+  {
+   "name": "Phone Help line extension 4357",
+   "type": "Fix"
+  },
+  {
+   "name": "Teams channel \"IT Help\"",
+   "type": "Fix"
+  },
+  {
+   "name": "escalation task in ticketing system",
+   "type": "Fix"
+  },
+  {
+   "name": "Service Desk L1",
+   "type": "Product"
+  },
+  {
+   "name": "Network Support",
+   "type": "Product"
+  },
+  {
+   "name": "Desktop Support",
+   "type": "Product"
+  },
+  {
+   "name": "Messaging & Collaboration",
+   "type": "Product"
+  },
+  {
+   "name": "SLA deadline",
+   "type": "Component"
+  },
+  {
+   "name": "closed timestamp",
+   "type": "Component"
+  },
+  {
+   "name": "SLA Compliance Report",
+   "type": "Component"
+  },
+  {
+   "name": "ticket priority",
+   "type": "Component"
+  },
+  {
+   "name": "SLA timer",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "P1 ticket",
+   "relation": "FIXED_BY",
+   "target": "Phone Help line extension 4357"
+  },
+  {
+   "source": "P1 ticket",
+   "relation": "FIXED_BY",
+   "target": "Teams channel \"IT Help\""
+  },
+  {
+   "source": "P2-P4 ticket",
+   "relation": "FIXED_BY",
+   "target": "escalation task in ticketing system"
+  },
+  {
+   "source": "SLA deadline",
+   "relation": "AFFECTS",
+   "target": "ticket priority"
+  },
+  {
+   "source": "closed timestamp",
+   "relation": "CAUSED_BY",
+   "target": "SLA deadline"
+  },
+  {
+   "source": "SLA Compliance Report",
+   "relation": "AFFECTS",
+   "target": "Service Desk L1"
+  },
+  {
+   "source": "ticket priority",
+   "relation": "PART_OF",
+   "target": "SLA timer"
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "entities": [
+  {
+   "name": "Recycle Bin",
+   "type": "Component"
+  },
+  {
+   "name": "external backup drive",
+   "type": "Component"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "SharePoint",
+   "type": "Product"
+  },
+  {
+   "name": "file recovery",
+   "type": "Component"
+  },
+  {
+   "name": "self-help procedure",
+   "type": "Component"
+  },
+  {
+   "name": "backup file verification",
+   "type": "Component"
+  },
+  {
+   "name": "Desktop Support",
+   "type": "Product"
+  },
+  {
+   "name": "Messaging & Collaboration",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook Report Phishing",
+   "type": "Component"
+  },
+  {
+   "name": "BitLocker encryption",
+   "type": "Component"
+  },
+  {
+   "name": "FileVault encryption",
+   "type": "Component"
+  },
+  {
+   "name": "I/O errors on backup drive",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "encrypted volume unlock failure",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "missing file after recovery attempts",
+   "type": "Symptom"
+  },
+  {
+   "name": "sync conflict",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "missing file after recovery attempts",
+   "relation": "CAUSED_BY",
+   "target": "I/O errors on backup drive"
+  },
+  {
+   "source": "missing file after recovery attempts",
+   "relation": "CAUSED_BY",
+   "target": "encrypted volume unlock failure"
+  },
+  {
+   "source": "missing file after recovery attempts",
+   "relation": "FIXED_BY",
+   "target": "escalate to Desktop Support"
+  },
+  {
+   "source": "missing file after recovery attempts",
+   "relation": "FIXED_BY",
+   "target": "escalate to Messaging & Collaboration"
+  },
+  {
+   "source": "file recovery",
+   "relation": "AFFECTS",
+   "target": "OneDrive"
+  },
+  {
+   "source": "file recovery",
+   "relation": "AFFECTS",
+   "target": "SharePoint"
+  },
+  {
+   "source": "self-help procedure",
+   "relation": "PART_OF",
+   "target": "file recovery"
+  },
+  {
+   "source": "backup file verification",
+   "relation": "PART_OF",
+   "target": "file recovery"
+  },
+  {
+   "source": "Outlook Report Phishing",
+   "relation": "AFFECTS",
+   "target": "Security Operations"
+  },
+  {
+   "source": "BitLocker encryption",
+   "relation": "PART_OF",
+   "target": "external backup drive"
+  },
+  {
+   "source": "FileVault encryption",
+   "relation": "PART_OF",
+   "target": "external backup drive"
+  },
+  {
+   "source": "sync conflict",
+   "relation": "INDICATES",
+   "target": "retention policy issue"
+  },
+  {
+   "source": "Retain at least two copies",
+   "relation": "FIXED_BY",
+   "target": "best practice"
+  },
+  {
+   "source": "set calendar reminder for backup",
+   "relation": "FIXED_BY",
+   "target": "data loss prevention"
+  }
+ ]
+}

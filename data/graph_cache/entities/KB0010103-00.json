@@ -1,0 +1,182 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 laptops (Dell Latitude 5440/7440, Lenovo ThinkPad T14/X1 Carbon, HP EliteBook 840)",
+   "type": "Product"
+  },
+  {
+   "name": "macOS laptops (MacBook Pro/Air on macOS 14/15)",
+   "type": "Product"
+  },
+  {
+   "name": "Acme Meeting Room Video Conferencing System",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Teams Rooms client",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi (802.1X)",
+   "type": "Product"
+  },
+  {
+   "name": "wired Ethernet",
+   "type": "Product"
+  },
+  {
+   "name": "Logitech MeetUp camera",
+   "type": "Component"
+  },
+  {
+   "name": "Jabra Speak 710 speakerphone",
+   "type": "Component"
+  },
+  {
+   "name": "55\"+ display with HDMI/USB-C inputs",
+   "type": "Component"
+  },
+  {
+   "name": "Crestron/AMX touch panel",
+   "type": "Component"
+  },
+  {
+   "name": "no video appears on the room display; screen stays black or shows \"No signal\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "audio is missing, distorted, or produces echo when speaking",
+   "type": "Symptom"
+  },
+  {
+   "name": "room touch panel is unresponsive or shows \"Offline\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "camera feed is black or frozen",
+   "type": "Symptom"
+  },
+  {
+   "name": "unable to join the scheduled Teams meeting from the room system; Teams reports \"We couldn't find any audio/video devices\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "incorrect input source selected on the room display (HDMI vs USB-C)",
+   "type": "Cause"
+  },
+  {
+   "name": "loose, damaged, or incompatible HDMI/USB-C cable",
+   "type": "Cause"
+  },
+  {
+   "name": "outdated firmware on the camera, speakerphone, or touch panel",
+   "type": "Cause"
+  },
+  {
+   "name": "laptop not authenticated to ACME-Corp Wi-Fi or Ethernet (certificate issue)",
+   "type": "Cause"
+  },
+  {
+   "name": "Teams client configured to use the wrong audio/video device (e.g., default laptop mic instead of room system)",
+   "type": "Cause"
+  },
+  {
+   "name": "verify that the meeting room is powered on and the display shows the Acme welcome screen",
+   "type": "Fix"
+  },
+  {
+   "name": "ensure the room's touch panel is lit and responds to touch",
+   "type": "Fix"
+  },
+  {
+   "name": "confirm that your laptop is connected to either the ACME-Corp Wi-Fi network (using your domain credentials) or to the room's Ethernet jack via a dock or adapter",
+   "type": "Fix"
+  },
+  {
+   "name": "if you are using a USB-C to HDMI adapter, make sure it supports DisplayPort Alt Mode and is plugged into a USB-C port that carries video",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "no video appears on the room display; screen stays black or shows \"No signal\"",
+   "relation": "CAUSED_BY",
+   "target": "incorrect input source selected on the room display (HDMI vs USB-C)"
+  },
+  {
+   "source": "no video appears on the room display; screen stays black or shows \"No signal\"",
+   "relation": "CAUSED_BY",
+   "target": "loose, damaged, or incompatible HDMI/USB-C cable"
+  },
+  {
+   "source": "audio is missing, distorted, or produces echo when speaking",
+   "relation": "CAUSED_BY",
+   "target": "Teams client configured to use the wrong audio/video device (e.g., default laptop mic instead of room system)"
+  },
+  {
+   "source": "room touch panel is unresponsive or shows \"Offline\"",
+   "relation": "CAUSED_BY",
+   "target": "outdated firmware on the camera, speakerphone, or touch panel"
+  },
+  {
+   "source": "camera feed is black or frozen",
+   "relation": "CAUSED_BY",
+   "target": "outdated firmware on the camera, speakerphone, or touch panel"
+  },
+  {
+   "source": "unable to join the scheduled Teams meeting from the room system; Teams reports \"We couldn't find any audio/video devices\"",
+   "relation": "CAUSED_BY",
+   "target": "laptop not authenticated to ACME-Corp Wi-Fi or Ethernet (certificate issue)"
+  },
+  {
+   "source": "incorrect input source selected on the room display (HDMI vs USB-C)",
+   "relation": "INDICATES",
+   "target": "no video appears on the room display; screen stays black or shows \"No signal\""
+  },
+  {
+   "source": "Teams client configured to use the wrong audio/video device (e.g., default laptop mic instead of room system)",
+   "relation": "INDICATES",
+   "target": "audio is missing, distorted, or produces echo when speaking"
+  },
+  {
+   "source": "outdated firmware on the camera, speakerphone, or touch panel",
+   "relation": "INDICATES",
+   "target": "room touch panel is unresponsive or shows \"Offline\""
+  },
+  {
+   "source": "laptop not authenticated to ACME-Corp Wi-Fi or Ethernet (certificate issue)",
+   "relation": "INDICATES",
+   "target": "unable to join the scheduled Teams meeting from the room system; Teams reports \"We couldn't find any audio/video devices\""
+  },
+  {
+   "source": "acme meeting room video conferencing system",
+   "relation": "AFFECTS",
+   "target": "logitech meetup camera"
+  },
+  {
+   "source": "acme meeting room video conferencing system",
+   "relation": "AFFECTS",
+   "target": "jabra speak 710 speakerphone"
+  },
+  {
+   "source": "acme meeting room video conferencing system",
+   "relation": "AFFECTS",
+   "target": "55\"+ display with hdmi/usb-c inputs"
+  },
+  {
+   "source": "acme meeting room video conferencing system",
+   "relation": "AFFECTS",
+   "target": "crestron/amx touch panel"
+  },
+  {
+   "source": "logitech meetup camera",
+   "relation": "PART_OF",
+   "target": "acme meeting room video conferencing system"
+  },
+  {
+   "source": "jabra speak 710 speakerphone",
+   "relation": "PART_OF",
+   "target": "acme meeting room video conferencing system"
+  }
+ ]
+}

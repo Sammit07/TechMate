@@ -1,0 +1,207 @@
+{
+ "entities": [
+  {
+   "name": "browser crash",
+   "type": "Symptom"
+  },
+  {
+   "name": "slowness",
+   "type": "Symptom"
+  },
+  {
+   "name": "certificate error",
+   "type": "Symptom"
+  },
+  {
+   "name": "NET_ERR_CERT_DATE_INVALID",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "ERR_CERT_AUTHORITY_INVALID",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "pop-up redirect",
+   "type": "Symptom"
+  },
+  {
+   "name": "malicious extension",
+   "type": "Cause"
+  },
+  {
+   "name": "clear cache",
+   "type": "Fix"
+  },
+  {
+   "name": "reset browser settings",
+   "type": "Fix"
+  },
+  {
+   "name": "system date time",
+   "type": "Component"
+  },
+  {
+   "name": "Intune compliance",
+   "type": "Component"
+  },
+  {
+   "name": "Defender scan",
+   "type": "Fix"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Trusted Root Certification Authorities",
+   "type": "Component"
+  },
+  {
+   "name": "DigiCert root",
+   "type": "Component"
+  },
+  {
+   "name": "Sectigo root",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft root",
+   "type": "Component"
+  },
+  {
+   "name": "re-deploy missing certificates via Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "uninstall browser via Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "reinstall latest approved version",
+   "type": "Fix"
+  },
+  {
+   "name": "corrupted browser profile",
+   "type": "Cause"
+  },
+  {
+   "name": "back up bookmarks/passwords",
+   "type": "Fix"
+  },
+  {
+   "name": "Identity & Access Management team",
+   "type": "Product"
+  },
+  {
+   "name": "Security Operations team",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "certificate error",
+   "relation": "INDICATES",
+   "target": "NET_ERR_CERT_DATE_INVALID"
+  },
+  {
+   "source": "certificate error",
+   "relation": "INDICATES",
+   "target": "ERR_CERT_AUTHORITY_INVALID"
+  },
+  {
+   "source": "missing or expired trusted root certificates",
+   "relation": "CAUSED_BY",
+   "target": "certificate error"
+  },
+  {
+   "source": "Trusted Root Certification Authorities",
+   "relation": "PART_OF",
+   "target": "system date time"
+  },
+  {
+   "source": "DigiCert root",
+   "relation": "PART_OF",
+   "target": "Trusted Root Certification Authorities"
+  },
+  {
+   "source": "Sectigo root",
+   "relation": "PART_OF",
+   "target": "Trusted Root Certification Authorities"
+  },
+  {
+   "source": "Microsoft root",
+   "relation": "PART_OF",
+   "target": "Trusted Root Certification Authorities"
+  },
+  {
+   "source": "certificate error",
+   "relation": "FIXED_BY",
+   "target": "re-deploy missing certificates via Intune"
+  },
+  {
+   "source": "corrupted browser profile",
+   "relation": "CAUSED_BY",
+   "target": "browser crash"
+  },
+  {
+   "source": "corrupted browser profile",
+   "relation": "CAUSED_BY",
+   "target": "slowness"
+  },
+  {
+   "source": "malicious extension",
+   "relation": "CAUSED_BY",
+   "target": "pop-up redirect"
+  },
+  {
+   "source": "malicious extension",
+   "relation": "CAUSED_BY",
+   "target": "certificate error"
+  },
+  {
+   "source": "browser crash",
+   "relation": "FIXED_BY",
+   "target": "uninstall browser via Company Portal"
+  },
+  {
+   "source": "slowness",
+   "relation": "FIXED_BY",
+   "target": "clear cache"
+  },
+  {
+   "source": "slowness",
+   "relation": "FIXED_BY",
+   "target": "reset browser settings"
+  },
+  {
+   "source": "pop-up redirect",
+   "relation": "FIXED_BY",
+   "target": "clear cache"
+  },
+  {
+   "source": "Intune compliance",
+   "relation": "AFFECTS",
+   "target": "browser crash"
+  },
+  {
+   "source": "Defender scan",
+   "relation": "FIXED_BY",
+   "target": "malicious extension"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "re-deploy missing certificates via Intune"
+  },
+  {
+   "source": "back up bookmarks/passwords",
+   "relation": "FIXED_BY",
+   "target": "corrupted browser profile"
+  },
+  {
+   "source": "reinstall latest approved version",
+   "relation": "FIXED_BY",
+   "target": "corrupted browser profile"
+  }
+ ]
+}

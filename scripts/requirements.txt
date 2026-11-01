@@ -1,0 +1,8 @@
+# Offline data scripts (run on your machine, never deployed to Vercel)
+openai==3.28.0
+python-dotenv==1.2.4
+pydantic==2.14.0
+pypdf==6.20.0
+
+# Ingestion scripts also import the backend package
+falkordb==1.7.1

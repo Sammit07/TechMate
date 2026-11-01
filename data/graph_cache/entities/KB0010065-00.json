@@ -1,0 +1,122 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 5440",
+   "type": "Product"
+  },
+  {
+   "name": "corrupted Outlook profile",
+   "type": "Cause"
+  },
+  {
+   "name": "missing email",
+   "type": "Symptom"
+  },
+  {
+   "name": "frequent crashes",
+   "type": "Symptom"
+  },
+  {
+   "name": "disconnection",
+   "type": "Symptom"
+  },
+  {
+   "name": "search failures",
+   "type": "Symptom"
+  },
+  {
+   "name": "repeated password prompts",
+   "type": "Symptom"
+  },
+  {
+   "name": "rebuild Outlook profile",
+   "type": "Fix"
+  },
+  {
+   "name": "Exchange Online",
+   "type": "Product"
+  },
+  {
+   "name": "offline address book (OAB)",
+   "type": "Component"
+  },
+  {
+   "name": "search index",
+   "type": "Component"
+  },
+  {
+   "name": "COM add-in",
+   "type": "Component"
+  },
+  {
+   "name": ".ost file",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "missing email",
+   "relation": "CAUSED_BY",
+   "target": "corrupted Outlook profile"
+  },
+  {
+   "source": "frequent crashes",
+   "relation": "CAUSED_BY",
+   "target": "corrupted Outlook profile"
+  },
+  {
+   "source": "disconnection",
+   "relation": "CAUSED_BY",
+   "target": "corrupted Outlook profile"
+  },
+  {
+   "source": "search failures",
+   "relation": "CAUSED_BY",
+   "target": "corrupted Outlook profile"
+  },
+  {
+   "source": "repeated password prompts",
+   "relation": "CAUSED_BY",
+   "target": "corrupted Outlook profile"
+  },
+  {
+   "source": "corrupted Outlook profile",
+   "relation": "FIXED_BY",
+   "target": "rebuild Outlook profile"
+  },
+  {
+   "source": "Microsoft Outlook",
+   "relation": "AFFECTS",
+   "target": "corrupted Outlook profile"
+  },
+  {
+   "source": "offline address book (OAB)",
+   "relation": "PART_OF",
+   "target": "Microsoft Outlook"
+  },
+  {
+   "source": "search index",
+   "relation": "PART_OF",
+   "target": "Microsoft Outlook"
+  },
+  {
+   "source": "COM add-in",
+   "relation": "PART_OF",
+   "target": "Microsoft Outlook"
+  },
+  {
+   "source": ".ost file",
+   "relation": "PART_OF",
+   "target": "Microsoft Outlook"
+  },
+  {
+   "source": "Exchange Online",
+   "relation": "AFFECTS",
+   "target": "Microsoft Outlook"
+  }
+ ]
+}

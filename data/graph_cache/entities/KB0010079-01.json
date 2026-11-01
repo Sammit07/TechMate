@@ -1,0 +1,126 @@
+{
+ "entities": [
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook app",
+   "type": "Product"
+  },
+  {
+   "name": "device PIN",
+   "type": "Component"
+  },
+  {
+   "name": "compliance status",
+   "type": "Component"
+  },
+  {
+   "name": "error code 0x8018000a",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Conditional Access block",
+   "type": "Cause"
+  },
+  {
+   "name": "non-compliant device",
+   "type": "Symptom"
+  },
+  {
+   "name": "set device PIN",
+   "type": "Fix"
+  },
+  {
+   "name": "update Company Portal and Outlook apps",
+   "type": "Fix"
+  },
+  {
+   "name": "restart phone",
+   "type": "Fix"
+  },
+  {
+   "name": "reinstall Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "disable Install unknown apps",
+   "type": "Fix"
+  },
+  {
+   "name": "verify device compliance",
+   "type": "Fix"
+  },
+  {
+   "name": "Intune-managed account",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook account setup",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "non-compliant device",
+   "relation": "CAUSED_BY",
+   "target": "missing or invalid device PIN"
+  },
+  {
+   "source": "error code 0x8018000a",
+   "relation": "INDICATES",
+   "target": "Conditional Access block"
+  },
+  {
+   "source": "Conditional Access block",
+   "relation": "FIXED_BY",
+   "target": "verify device compliance"
+  },
+  {
+   "source": "device PIN",
+   "relation": "PART_OF",
+   "target": "Intune compliance policy"
+  },
+  {
+   "source": "Outlook app",
+   "relation": "AFFECTS",
+   "target": "Intune-managed account"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "device compliance status"
+  },
+  {
+   "source": "non-compliant device",
+   "relation": "FIXED_BY",
+   "target": "set device PIN"
+  },
+  {
+   "source": "sync failure",
+   "relation": "FIXED_BY",
+   "target": "update Company Portal and Outlook apps"
+  },
+  {
+   "source": "transient token error",
+   "relation": "FIXED_BY",
+   "target": "restart phone"
+  },
+  {
+   "source": "enrollment failure",
+   "relation": "FIXED_BY",
+   "target": "reinstall Company Portal"
+  },
+  {
+   "source": "security risk",
+   "relation": "FIXED_BY",
+   "target": "disable Install unknown apps"
+  },
+  {
+   "source": "Outlook account setup",
+   "relation": "FIXED_BY",
+   "target": "verify device compliance"
+  }
+ ]
+}

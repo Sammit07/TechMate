@@ -1,0 +1,151 @@
+{
+ "entities": [
+  {
+   "name": "website-unblock-request",
+   "type": "Service"
+  },
+  {
+   "name": "ACME-Corp-WiFi",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect-VPN",
+   "type": "Product"
+  },
+  {
+   "name": "web-filter-firewall",
+   "type": "Product"
+  },
+  {
+   "name": "manual-proxy-configuration",
+   "type": "Component"
+  },
+  {
+   "name": "DNS-cache-flush",
+   "type": "Fix"
+  },
+  {
+   "name": "IP-address-renewal",
+   "type": "Fix"
+  },
+  {
+   "name": "disable-manual-proxy",
+   "type": "Fix"
+  },
+  {
+   "name": "reconnect-network-session",
+   "type": "Fix"
+  },
+  {
+   "name": "ping-traceroute-test",
+   "type": "Fix"
+  },
+  {
+   "name": "nslookup-verification",
+   "type": "Fix"
+  },
+  {
+   "name": "proxy-setting-check",
+   "type": "Fix"
+  },
+  {
+   "name": "filter-block-check",
+   "type": "Fix"
+  },
+  {
+   "name": "unblock-ticket-creation",
+   "type": "Fix"
+  },
+  {
+   "name": "site-access-failure",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "site-access-failure",
+   "relation": "CAUSED_BY",
+   "target": "manual-proxy-configuration"
+  },
+  {
+   "source": "site-access-failure",
+   "relation": "CAUSED_BY",
+   "target": "DNS-resolution-issue"
+  },
+  {
+   "source": "site-access-failure",
+   "relation": "CAUSED_BY",
+   "target": "web-filter-block"
+  },
+  {
+   "source": "manual-proxy-configuration",
+   "relation": "AFFECTS",
+   "target": "browser"
+  },
+  {
+   "source": "DNS-resolution-issue",
+   "relation": "AFFECTS",
+   "target": "network-connectivity"
+  },
+  {
+   "source": "web-filter-block",
+   "relation": "AFFECTS",
+   "target": "website-access"
+  },
+  {
+   "source": "DNS-cache-flush",
+   "relation": "FIXED_BY",
+   "target": "DNS-resolution-issue"
+  },
+  {
+   "source": "IP-address-renewal",
+   "relation": "FIXED_BY",
+   "target": "network-connectivity"
+  },
+  {
+   "source": "disable-manual-proxy",
+   "relation": "FIXED_BY",
+   "target": "manual-proxy-configuration"
+  },
+  {
+   "source": "reconnect-network-session",
+   "relation": "FIXED_BY",
+   "target": "ACME-Corp-WiFi"
+  },
+  {
+   "source": "reconnect-network-session",
+   "relation": "FIXED_BY",
+   "target": "GlobalProtect-VPN"
+  },
+  {
+   "source": "ping-traceroute-test",
+   "relation": "INDICATES",
+   "target": "network-reachability"
+  },
+  {
+   "source": "nslookup-verification",
+   "relation": "INDICATES",
+   "target": "DNS-resolution-issue"
+  },
+  {
+   "source": "proxy-setting-check",
+   "relation": "INDICATES",
+   "target": "manual-proxy-configuration"
+  },
+  {
+   "source": "filter-block-check",
+   "relation": "INDICATES",
+   "target": "web-filter-block"
+  },
+  {
+   "source": "web-filter-block",
+   "relation": "INDICATES",
+   "target": "site-access-failure"
+  },
+  {
+   "source": "unblock-ticket-creation",
+   "relation": "FIXED_BY",
+   "target": "web-filter-block"
+  }
+ ]
+}

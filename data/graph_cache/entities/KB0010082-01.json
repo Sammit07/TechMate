@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "phishing link click",
+   "type": "Symptom"
+  },
+  {
+   "name": "unfamiliar sign-in activity",
+   "type": "Symptom"
+  },
+  {
+   "name": "compromised credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "lock workstation",
+   "type": "Fix"
+  },
+  {
+   "name": "report phishing email via Outlook",
+   "type": "Fix"
+  },
+  {
+   "name": "forward email as attachment to phish@acme.example",
+   "type": "Fix"
+  },
+  {
+   "name": "reset Acme password via self-service portal",
+   "type": "Fix"
+  },
+  {
+   "name": "review sign-in activity at myaccount.microsoft.com/security",
+   "type": "Fix"
+  },
+  {
+   "name": "sign out everywhere from Microsoft account",
+   "type": "Fix"
+  },
+  {
+   "name": "contact IT Service Desk or open ticket",
+   "type": "Fix"
+  },
+  {
+   "name": "Acme password policy",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft account security page",
+   "type": "Component"
+  },
+  {
+   "name": "Security Operations mailbox (secops@acme.example)",
+   "type": "Component"
+  },
+  {
+   "name": "phishing email",
+   "type": "Component"
+  },
+  {
+   "name": "IT Service Desk extension 4357",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "phishing link click",
+   "relation": "CAUSED_BY",
+   "target": "compromised credentials"
+  },
+  {
+   "source": "unfamiliar sign-in activity",
+   "relation": "INDICATES",
+   "target": "compromised credentials"
+  },
+  {
+   "source": "compromised credentials",
+   "relation": "FIXED_BY",
+   "target": "lock workstation"
+  },
+  {
+   "source": "compromised credentials",
+   "relation": "FIXED_BY",
+   "target": "report phishing email via Outlook"
+  },
+  {
+   "source": "compromised credentials",
+   "relation": "FIXED_BY",
+   "target": "forward email as attachment to phish@acme.example"
+  },
+  {
+   "source": "compromised credentials",
+   "relation": "FIXED_BY",
+   "target": "reset Acme password via self-service portal"
+  },
+  {
+   "source": "compromised credentials",
+   "relation": "FIXED_BY",
+   "target": "review sign-in activity at myaccount.microsoft.com/security"
+  },
+  {
+   "source": "compromised credentials",
+   "relation": "FIXED_BY",
+   "target": "sign out everywhere from Microsoft account"
+  },
+  {
+   "source": "compromised credentials",
+   "relation": "FIXED_BY",
+   "target": "contact IT Service Desk or open ticket"
+  },
+  {
+   "source": "reset Acme password via self-service portal",
+   "relation": "AFFECTS",
+   "target": "Acme password policy"
+  },
+  {
+   "source": "review sign-in activity at myaccount.microsoft.com/security",
+   "relation": "AFFECTS",
+   "target": "Microsoft account security page"
+  },
+  {
+   "source": "report phishing email via Outlook",
+   "relation": "AFFECTS",
+   "target": "Security Operations mailbox (secops@acme.example)"
+  },
+  {
+   "source": "phishing email",
+   "relation": "PART_OF",
+   "target": "Security Operations mailbox (secops@acme.example)"
+  },
+  {
+   "source": "contact IT Service Desk or open ticket",
+   "relation": "AFFECTS",
+   "target": "IT Service Desk extension 4357"
+  }
+ ]
+}

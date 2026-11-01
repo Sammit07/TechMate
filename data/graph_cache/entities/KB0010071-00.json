@@ -1,0 +1,95 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Teams cache",
+   "type": "Component"
+  },
+  {
+   "name": "Corrupted local cache files",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated Teams client version",
+   "type": "Cause"
+  },
+  {
+   "name": "Conflicting permissions",
+   "type": "Cause"
+  },
+  {
+   "name": "Network glitches",
+   "type": "Cause"
+  },
+  {
+   "name": "Teams fails to launch",
+   "type": "Symptom"
+  },
+  {
+   "name": "Audio drops or echo",
+   "type": "Symptom"
+  },
+  {
+   "name": "Screen-share failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "Presence status stuck on Away",
+   "type": "Symptom"
+  },
+  {
+   "name": "Clearing the Teams cache",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Teams fails to launch",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted local cache files"
+  },
+  {
+   "source": "Audio drops or echo",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted local cache files"
+  },
+  {
+   "source": "Screen-share failure",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted local cache files"
+  },
+  {
+   "source": "Presence status stuck on Away",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted local cache files"
+  },
+  {
+   "source": "Corrupted local cache files",
+   "relation": "FIXED_BY",
+   "target": "Clearing the Teams cache"
+  },
+  {
+   "source": "Outdated Teams client version",
+   "relation": "AFFECTS",
+   "target": "Microsoft Teams"
+  },
+  {
+   "source": "Conflicting permissions",
+   "relation": "AFFECTS",
+   "target": "Microsoft Teams"
+  },
+  {
+   "source": "Network glitches",
+   "relation": "AFFECTS",
+   "target": "Microsoft Teams"
+  },
+  {
+   "source": "Teams cache",
+   "relation": "PART_OF",
+   "target": "Microsoft Teams"
+  }
+ ]
+}

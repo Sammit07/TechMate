@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "docking station Ethernet not working",
+   "type": "Symptom"
+  },
+  {
+   "name": "RJ45 patch cable",
+   "type": "Component"
+  },
+  {
+   "name": "switch port administratively shut down",
+   "type": "Cause"
+  },
+  {
+   "name": "port-security violations",
+   "type": "Cause"
+  },
+  {
+   "name": "incorrect VLAN assignment",
+   "type": "Cause"
+  },
+  {
+   "name": "err-disabled switch port",
+   "type": "Cause"
+  },
+  {
+   "name": "replace RJ45 patch cable",
+   "type": "Fix"
+  },
+  {
+   "name": "clear err-disabled state",
+   "type": "Fix"
+  },
+  {
+   "name": "re-enable switch port",
+   "type": "Fix"
+  },
+  {
+   "name": "test link bypassing dock",
+   "type": "Fix"
+  },
+  {
+   "name": "update dock firmware",
+   "type": "Fix"
+  },
+  {
+   "name": "update Ethernet driver via Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "replace docking station",
+   "type": "Fix"
+  },
+  {
+   "name": "docking station",
+   "type": "Product"
+  },
+  {
+   "name": "laptop USB-C/Ethernet driver",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "docking station Ethernet not working",
+   "relation": "CAUSED_BY",
+   "target": "replace RJ45 patch cable"
+  },
+  {
+   "source": "docking station Ethernet not working",
+   "relation": "CAUSED_BY",
+   "target": "clear err-disabled state"
+  },
+  {
+   "source": "docking station Ethernet not working",
+   "relation": "CAUSED_BY",
+   "target": "re-enable switch port"
+  },
+  {
+   "source": "docking station Ethernet not working",
+   "relation": "CAUSED_BY",
+   "target": "test link bypassing dock"
+  },
+  {
+   "source": "docking station Ethernet not working",
+   "relation": "CAUSED_BY",
+   "target": "update dock firmware"
+  },
+  {
+   "source": "docking station Ethernet not working",
+   "relation": "CAUSED_BY",
+   "target": "update Ethernet driver via Intune"
+  },
+  {
+   "source": "docking station Ethernet not working",
+   "relation": "CAUSED_BY",
+   "target": "replace docking station"
+  },
+  {
+   "source": "switch port administratively shut down",
+   "relation": "INDICATES",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "port-security violations",
+   "relation": "INDICATES",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "incorrect VLAN assignment",
+   "relation": "INDICATES",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "err-disabled switch port",
+   "relation": "INDICATES",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "docking station",
+   "relation": "AFFECTS",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "laptop USB-C/Ethernet driver",
+   "relation": "AFFECTS",
+   "target": "docking station Ethernet not working"
+  },
+  {
+   "source": "RJ45 patch cable",
+   "relation": "PART_OF",
+   "target": "docking station"
+  },
+  {
+   "source": "laptop USB-C/Ethernet driver",
+   "relation": "PART_OF",
+   "target": "laptop"
+  }
+ ]
+}

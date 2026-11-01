@@ -1,0 +1,145 @@
+{
+ "entities": [
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi",
+   "type": "Product"
+  },
+  {
+   "name": "VPN",
+   "type": "Product"
+  },
+  {
+   "name": "self-service password reset portal",
+   "type": "Product"
+  },
+  {
+   "name": "BitLocker",
+   "type": "Component"
+  },
+  {
+   "name": "FileVault",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "My Sign-ins page",
+   "type": "Component"
+  },
+  {
+   "name": "IT Help Teams channel",
+   "type": "Product"
+  },
+  {
+   "name": "Service Desk system",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "device compliance status",
+   "type": "Component"
+  },
+  {
+   "name": "Defender for Endpoint",
+   "type": "Product"
+  },
+  {
+   "name": "PaperCut",
+   "type": "Product"
+  },
+  {
+   "name": "VPN logs",
+   "type": "Component"
+  },
+  {
+   "name": "Security Operations",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "device compliance status",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "My Sign-ins page",
+   "relation": "AFFECTS",
+   "target": "Microsoft Entra ID"
+  },
+  {
+   "source": "VPN logs",
+   "relation": "AFFECTS",
+   "target": "VPN"
+  },
+  {
+   "source": "BitLocker",
+   "relation": "PART_OF",
+   "target": "Windows"
+  },
+  {
+   "source": "FileVault",
+   "relation": "PART_OF",
+   "target": "macOS"
+  },
+  {
+   "source": "company policy",
+   "relation": "AFFECTS",
+   "target": "acceptable use"
+  },
+  {
+   "source": "Service Desk system",
+   "relation": "AFFECTS",
+   "target": "ticket creation"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "device compliance status"
+  },
+  {
+   "source": "Microsoft Entra ID",
+   "relation": "AFFECTS",
+   "target": "My Sign-ins page"
+  },
+  {
+   "source": "Defender for Endpoint",
+   "relation": "AFFECTS",
+   "target": "automated alerts"
+  },
+  {
+   "source": "PaperCut",
+   "relation": "AFFECTS",
+   "target": "automated alerts"
+  },
+  {
+   "source": "VPN logs",
+   "relation": "AFFECTS",
+   "target": "automated alerts"
+  },
+  {
+   "source": "Security Operations",
+   "relation": "AFFECTS",
+   "target": "ticket escalation"
+  },
+  {
+   "source": "IT Help Teams channel",
+   "relation": "AFFECTS",
+   "target": "reporting mechanism"
+  },
+  {
+   "source": "self-service password reset portal",
+   "relation": "AFFECTS",
+   "target": "credential recovery"
+  }
+ ]
+}

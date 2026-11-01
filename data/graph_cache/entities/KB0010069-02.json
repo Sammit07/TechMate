@@ -1,0 +1,153 @@
+{
+ "entities": [
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "shared mailbox",
+   "type": "Product"
+  },
+  {
+   "name": "calendar sharing",
+   "type": "Component"
+  },
+  {
+   "name": "Full Access",
+   "type": "Component"
+  },
+  {
+   "name": "Send As",
+   "type": "Component"
+  },
+  {
+   "name": "automap",
+   "type": "Component"
+  },
+  {
+   "name": "Set-MailboxFolderPermission",
+   "type": "Component"
+  },
+  {
+   "name": "Add-MailboxPermission",
+   "type": "Component"
+  },
+  {
+   "name": "Get-MailboxPermission",
+   "type": "Component"
+  },
+  {
+   "name": "Get-MailboxFolderPermission",
+   "type": "Component"
+  },
+  {
+   "name": "mailbox does not appear in folder pane",
+   "type": "Symptom"
+  },
+  {
+   "name": "calendar shows free/busy only",
+   "type": "Symptom"
+  },
+  {
+   "name": "insufficient calendar permissions",
+   "type": "Cause"
+  },
+  {
+   "name": "restart Outlook or wait for automap",
+   "type": "Fix"
+  },
+  {
+   "name": "manually add shared mailbox",
+   "type": "Fix"
+  },
+  {
+   "name": "verify calendar permissions",
+   "type": "Fix"
+  },
+  {
+   "name": "upgrade permission to Editor",
+   "type": "Fix"
+  },
+  {
+   "name": "send test meeting invitation",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "mailbox does not appear in folder pane",
+   "relation": "CAUSED_BY",
+   "target": "insufficient calendar permissions"
+  },
+  {
+   "source": "calendar shows free/busy only",
+   "relation": "CAUSED_BY",
+   "target": "insufficient calendar permissions"
+  },
+  {
+   "source": "insufficient calendar permissions",
+   "relation": "FIXED_BY",
+   "target": "verify calendar permissions"
+  },
+  {
+   "source": "insufficient calendar permissions",
+   "relation": "FIXED_BY",
+   "target": "upgrade permission to Editor"
+  },
+  {
+   "source": "mailbox does not appear in folder pane",
+   "relation": "FIXED_BY",
+   "target": "restart Outlook or wait for automap"
+  },
+  {
+   "source": "mailbox does not appear in folder pane",
+   "relation": "FIXED_BY",
+   "target": "manually add shared mailbox"
+  },
+  {
+   "source": "shared mailbox",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "calendar sharing",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  },
+  {
+   "source": "Full Access",
+   "relation": "PART_OF",
+   "target": "shared mailbox"
+  },
+  {
+   "source": "Send As",
+   "relation": "PART_OF",
+   "target": "shared mailbox"
+  },
+  {
+   "source": "automap",
+   "relation": "PART_OF",
+   "target": "shared mailbox"
+  },
+  {
+   "source": "Set-MailboxFolderPermission",
+   "relation": "PART_OF",
+   "target": "shared mailbox"
+  },
+  {
+   "source": "Add-MailboxPermission",
+   "relation": "PART_OF",
+   "target": "shared mailbox"
+  },
+  {
+   "source": "Get-MailboxPermission",
+   "relation": "PART_OF",
+   "target": "shared mailbox"
+  },
+  {
+   "source": "Get-MailboxFolderPermission",
+   "relation": "PART_OF",
+   "target": "shared mailbox"
+  }
+ ]
+}

@@ -1,0 +1,126 @@
+{
+ "entities": [
+  {
+   "name": "Company Portal app",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Endpoint Manager Intune",
+   "type": "Product"
+  },
+  {
+   "name": "BitLocker encryption",
+   "type": "Component"
+  },
+  {
+   "name": "FileVault encryption",
+   "type": "Component"
+  },
+  {
+   "name": "approved software list",
+   "type": "Component"
+  },
+  {
+   "name": "missing approved software",
+   "type": "Symptom"
+  },
+  {
+   "name": "installation failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "error message",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "device non-compliance",
+   "type": "Cause"
+  },
+  {
+   "name": "missing license",
+   "type": "Cause"
+  },
+  {
+   "name": "app not in Intune",
+   "type": "Cause"
+  },
+  {
+   "name": "self-install via Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Service Desk remediation",
+   "type": "Fix"
+  },
+  {
+   "name": "remote reinstall via Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "license assignment",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "missing approved software",
+   "relation": "CAUSED_BY",
+   "target": "app not in Intune"
+  },
+  {
+   "source": "installation failure",
+   "relation": "CAUSED_BY",
+   "target": "device non-compliance"
+  },
+  {
+   "source": "installation failure",
+   "relation": "CAUSED_BY",
+   "target": "missing license"
+  },
+  {
+   "source": "error message",
+   "relation": "INDICATES",
+   "target": "installation failure"
+  },
+  {
+   "source": "missing approved software",
+   "relation": "AFFECTS",
+   "target": "Company Portal app"
+  },
+  {
+   "source": "device non-compliance",
+   "relation": "AFFECTS",
+   "target": "BitLocker encryption"
+  },
+  {
+   "source": "device non-compliance",
+   "relation": "AFFECTS",
+   "target": "FileVault encryption"
+  },
+  {
+   "source": "approved software list",
+   "relation": "PART_OF",
+   "target": "Microsoft Endpoint Manager Intune"
+  },
+  {
+   "source": "self-install via Company Portal",
+   "relation": "FIXED_BY",
+   "target": "missing approved software"
+  },
+  {
+   "source": "Service Desk remediation",
+   "relation": "FIXED_BY",
+   "target": "installation failure"
+  },
+  {
+   "source": "remote reinstall via Intune",
+   "relation": "FIXED_BY",
+   "target": "installation failure"
+  },
+  {
+   "source": "license assignment",
+   "relation": "FIXED_BY",
+   "target": "missing license"
+  }
+ ]
+}

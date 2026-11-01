@@ -1,0 +1,146 @@
+{
+ "entities": [
+  {
+   "name": "slow laptop",
+   "type": "Symptom"
+  },
+  {
+   "name": "high CPU",
+   "type": "Symptom"
+  },
+  {
+   "name": "startup apps",
+   "type": "Component"
+  },
+  {
+   "name": "background processes",
+   "type": "Component"
+  },
+  {
+   "name": "freezing",
+   "type": "Symptom"
+  },
+  {
+   "name": "RAM upgrade to 16GB",
+   "type": "Fix"
+  },
+  {
+   "name": "Task Manager",
+   "type": "Component"
+  },
+  {
+   "name": "Disk Cleanup",
+   "type": "Component"
+  },
+  {
+   "name": "storage sense",
+   "type": "Component"
+  },
+  {
+   "name": "msconfig",
+   "type": "Component"
+  },
+  {
+   "name": "Autoruns",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi",
+   "type": "Component"
+  },
+  {
+   "name": "ACME-Guest",
+   "type": "Component"
+  },
+  {
+   "name": "VPN",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "slow laptop",
+   "relation": "CAUSED_BY",
+   "target": "startup apps"
+  },
+  {
+   "source": "slow laptop",
+   "relation": "CAUSED_BY",
+   "target": "background processes"
+  },
+  {
+   "source": "high CPU",
+   "relation": "CAUSED_BY",
+   "target": "startup apps"
+  },
+  {
+   "source": "high CPU",
+   "relation": "CAUSED_BY",
+   "target": "background processes"
+  },
+  {
+   "source": "freezing",
+   "relation": "CAUSED_BY",
+   "target": "background processes"
+  },
+  {
+   "source": "startup apps",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "background processes",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "RAM upgrade to 16GB",
+   "relation": "FIXED_BY",
+   "target": "slow laptop"
+  },
+  {
+   "source": "Task Manager",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "Disk Cleanup",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "storage sense",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "msconfig",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "Autoruns",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "ACME-Corp Wi-Fi",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "ACME-Guest",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "VPN",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  }
+ ]
+}

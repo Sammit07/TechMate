@@ -1,0 +1,244 @@
+{
+ "entities": [
+  {
+   "name": "Acme Global password policy",
+   "type": "Policy"
+  },
+  {
+   "name": "Windows 11 laptop",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Entra ID (Azure AD)",
+   "type": "Product"
+  },
+  {
+   "name": "on-prem Active Directory",
+   "type": "Product"
+  },
+  {
+   "name": "Self-service password reset (SSPR) portal",
+   "type": "Product"
+  },
+  {
+   "name": "password expiration",
+   "type": "Component"
+  },
+  {
+   "name": "password complexity requirement",
+   "type": "Component"
+  },
+  {
+   "name": "password history rule",
+   "type": "Component"
+  },
+  {
+   "name": "account lockout after failed attempts",
+   "type": "Component"
+  },
+  {
+   "name": "password length minimum 14 characters",
+   "type": "Component"
+  },
+  {
+   "name": "'Your password has expired and must be changed.'",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "'Account locked because there have been too many sign-in attempts.'",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "'Your password doesn't meet the complexity requirements.'",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "'Unable to sign in to Windows or Company Portal.'",
+   "type": "Symptom"
+  },
+  {
+   "name": "'Did not receive the self-service password reset email or SMS.'",
+   "type": "Symptom"
+  },
+  {
+   "name": "forgotten or mistyped password",
+   "type": "Cause"
+  },
+  {
+   "name": "password reached 90-day expiry",
+   "type": "Cause"
+  },
+  {
+   "name": "account locked after five failed attempts",
+   "type": "Cause"
+  },
+  {
+   "name": "new password fails length or history rules",
+   "type": "Cause"
+  },
+  {
+   "name": "cached credentials causing stale prompts",
+   "type": "Cause"
+  },
+  {
+   "name": "reset password via SSPR",
+   "type": "Fix"
+  },
+  {
+   "name": "wait 15 minutes for lockout to expire",
+   "type": "Fix"
+  },
+  {
+   "name": "use registered authentication method (Authenticator push/SMS)",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "'Your password has expired and must be changed.'",
+   "relation": "INDICATES",
+   "target": "password reached 90-day expiry"
+  },
+  {
+   "source": "'Account locked because there have been too many sign-in attempts.'",
+   "relation": "INDICATES",
+   "target": "account locked after five failed attempts"
+  },
+  {
+   "source": "'Your password doesn't meet the complexity requirements.'",
+   "relation": "INDICATES",
+   "target": "password complexity requirement"
+  },
+  {
+   "source": "'Unable to sign in to Windows or Company Portal.'",
+   "relation": "CAUSED_BY",
+   "target": "forgotten or mistyped password"
+  },
+  {
+   "source": "'Unable to sign in to Windows or Company Portal.'",
+   "relation": "CAUSED_BY",
+   "target": "password reached 90-day expiry"
+  },
+  {
+   "source": "'Unable to sign in to Windows or Company Portal.'",
+   "relation": "CAUSED_BY",
+   "target": "account locked after five failed attempts"
+  },
+  {
+   "source": "'Unable to sign in to Windows or Company Portal.'",
+   "relation": "CAUSED_BY",
+   "target": "new password fails length or history rules"
+  },
+  {
+   "source": "'Did not receive the self-service password reset email or SMS.'",
+   "relation": "CAUSED_BY",
+   "target": "cached credentials causing stale prompts"
+  },
+  {
+   "source": "password reached 90-day expiry",
+   "relation": "FIXED_BY",
+   "target": "reset password via SSPR"
+  },
+  {
+   "source": "account locked after five failed attempts",
+   "relation": "FIXED_BY",
+   "target": "wait 15 minutes for lockout to expire"
+  },
+  {
+   "source": "new password fails length or history rules",
+   "relation": "FIXED_BY",
+   "target": "reset password via SSPR"
+  },
+  {
+   "source": "forgotten or mistyped password",
+   "relation": "FIXED_BY",
+   "target": "reset password via SSPR"
+  },
+  {
+   "source": "cached credentials causing stale prompts",
+   "relation": "FIXED_BY",
+   "target": "use registered authentication method (Authenticator push/SMS)"
+  },
+  {
+   "source": "password expiration",
+   "relation": "PART_OF",
+   "target": "Acme Global password policy"
+  },
+  {
+   "source": "password complexity requirement",
+   "relation": "PART_OF",
+   "target": "Acme Global password policy"
+  },
+  {
+   "source": "password history rule",
+   "relation": "PART_OF",
+   "target": "Acme Global password policy"
+  },
+  {
+   "source": "account lockout after failed attempts",
+   "relation": "PART_OF",
+   "target": "Acme Global password policy"
+  },
+  {
+   "source": "password length minimum 14 characters",
+   "relation": "PART_OF",
+   "target": "Acme Global password policy"
+  },
+  {
+   "source": "Acme Global password policy",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptop"
+  },
+  {
+   "source": "Acme Global password policy",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15"
+  },
+  {
+   "source": "Acme Global password policy",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "Acme Global password policy",
+   "relation": "AFFECTS",
+   "target": "Lenovo ThinkPad T14/X1 Carbon"
+  },
+  {
+   "source": "Acme Global password policy",
+   "relation": "AFFECTS",
+   "target": "HP EliteBook 840"
+  },
+  {
+   "source": "Acme Global password policy",
+   "relation": "AFFECTS",
+   "target": "Microsoft Entra ID (Azure AD)"
+  },
+  {
+   "source": "Acme Global password policy",
+   "relation": "AFFECTS",
+   "target": "on-prem Active Directory"
+  },
+  {
+   "source": "Acme Global password policy",
+   "relation": "AFFECTS",
+   "target": "Self-service password reset (SSPR) portal"
+  }
+ ]
+}

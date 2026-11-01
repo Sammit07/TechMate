@@ -1,0 +1,121 @@
+{
+ "entities": [
+  {
+   "name": "phishing link click",
+   "type": "Symptom"
+  },
+  {
+   "name": "unfamiliar or misspelled URL",
+   "type": "Symptom"
+  },
+  {
+   "name": "entered username/password on fake site",
+   "type": "Symptom"
+  },
+  {
+   "name": "unexpected pop-ups or auto-download",
+   "type": "Symptom"
+  },
+  {
+   "name": "phishing email designed to harvest credentials or deliver malware",
+   "type": "Cause"
+  },
+  {
+   "name": "spoofed website mimicking Acme sign-in portal",
+   "type": "Cause"
+  },
+  {
+   "name": "attackers attempting to sign in to Microsoft Entra ID account",
+   "type": "Cause"
+  },
+  {
+   "name": "malicious file execution compromising device",
+   "type": "Cause"
+  },
+  {
+   "name": "close browser tab/window",
+   "type": "Fix"
+  },
+  {
+   "name": "lock workstation",
+   "type": "Fix"
+  },
+  {
+   "name": "report phishing email via Outlook shield icon",
+   "type": "Fix"
+  },
+  {
+   "name": "change password if credentials entered",
+   "type": "Fix"
+  },
+  {
+   "name": "Microsoft 365 (Outlook, Teams, OneDrive)",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2/24H2 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15 MacBook Pro/Air",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "phishing link click",
+   "relation": "CAUSED_BY",
+   "target": "phishing email designed to harvest credentials or deliver malware"
+  },
+  {
+   "source": "unfamiliar or misspelled URL",
+   "relation": "INDICATES",
+   "target": "spoofed website mimicking Acme sign-in portal"
+  },
+  {
+   "source": "entered username/password on fake site",
+   "relation": "INDICATES",
+   "target": "attackers attempting to sign in to Microsoft Entra ID account"
+  },
+  {
+   "source": "unexpected pop-ups or auto-download",
+   "relation": "INDICATES",
+   "target": "malicious file execution compromising device"
+  },
+  {
+   "source": "phishing link click",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 (Outlook, Teams, OneDrive)"
+  },
+  {
+   "source": "phishing link click",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2 laptops"
+  },
+  {
+   "source": "phishing link click",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15 MacBook Pro/Air"
+  },
+  {
+   "source": "close browser tab/window",
+   "relation": "FIXED_BY",
+   "target": "phishing link click"
+  },
+  {
+   "source": "lock workstation",
+   "relation": "FIXED_BY",
+   "target": "phishing link click"
+  },
+  {
+   "source": "report phishing email via Outlook shield icon",
+   "relation": "FIXED_BY",
+   "target": "phishing link click"
+  },
+  {
+   "source": "change password if credentials entered",
+   "relation": "FIXED_BY",
+   "target": "entered username/password on fake site"
+  }
+ ]
+}

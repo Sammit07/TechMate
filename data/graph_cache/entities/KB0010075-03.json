@@ -1,0 +1,157 @@
+{
+ "entities": [
+  {
+   "name": "printer offline",
+   "type": "Symptom"
+  },
+  {
+   "name": "jobs stuck in queue",
+   "type": "Symptom"
+  },
+  {
+   "name": "spooler restart failed",
+   "type": "Symptom"
+  },
+  {
+   "name": "cannot add printer",
+   "type": "Symptom"
+  },
+  {
+   "name": "blank pages printed",
+   "type": "Symptom"
+  },
+  {
+   "name": "toner low",
+   "type": "Symptom"
+  },
+  {
+   "name": "paper jam",
+   "type": "Symptom"
+  },
+  {
+   "name": "network certificate missing for 802.1X",
+   "type": "Cause"
+  },
+  {
+   "name": "Conditional Access policy blocking print",
+   "type": "Cause"
+  },
+  {
+   "name": "outdated or corrupted printer driver",
+   "type": "Cause"
+  },
+  {
+   "name": "Print Spooler service malfunction",
+   "type": "Cause"
+  },
+  {
+   "name": "restart Print Spooler service",
+   "type": "Fix"
+  },
+  {
+   "name": "clear print queue",
+   "type": "Fix"
+  },
+  {
+   "name": "reinstall printer driver",
+   "type": "Fix"
+  },
+  {
+   "name": "check toner and paper levels",
+   "type": "Fix"
+  },
+  {
+   "name": "verify network connectivity and authentication",
+   "type": "Fix"
+  },
+  {
+   "name": "print.acme.example",
+   "type": "Product"
+  },
+  {
+   "name": "PaperCut",
+   "type": "Product"
+  },
+  {
+   "name": "printer control panel error code",
+   "type": "ErrorCode"
+  }
+ ],
+ "relations": [
+  {
+   "source": "printer offline",
+   "relation": "CAUSED_BY",
+   "target": "Print Spooler service malfunction"
+  },
+  {
+   "source": "jobs stuck in queue",
+   "relation": "CAUSED_BY",
+   "target": "Print Spooler service malfunction"
+  },
+  {
+   "source": "cannot add printer",
+   "relation": "CAUSED_BY",
+   "target": "outdated or corrupted printer driver"
+  },
+  {
+   "source": "blank pages printed",
+   "relation": "CAUSED_BY",
+   "target": "toner low"
+  },
+  {
+   "source": "printer offline",
+   "relation": "AFFECTS",
+   "target": "print.acme.example"
+  },
+  {
+   "source": "jobs stuck in queue",
+   "relation": "AFFECTS",
+   "target": "print.acme.example"
+  },
+  {
+   "source": "Print Spooler service malfunction",
+   "relation": "FIXED_BY",
+   "target": "restart Print Spooler service"
+  },
+  {
+   "source": "jobs stuck in queue",
+   "relation": "FIXED_BY",
+   "target": "clear print queue"
+  },
+  {
+   "source": "outdated or corrupted printer driver",
+   "relation": "FIXED_BY",
+   "target": "reinstall printer driver"
+  },
+  {
+   "source": "toner low",
+   "relation": "FIXED_BY",
+   "target": "check toner and paper levels"
+  },
+  {
+   "source": "network certificate missing for 802.1X",
+   "relation": "INDICATES",
+   "target": "printer offline"
+  },
+  {
+   "source": "Conditional Access policy blocking print",
+   "relation": "INDICATES",
+   "target": "cannot add printer"
+  },
+  {
+   "source": "printer control panel error code",
+   "relation": "INDICATES",
+   "target": "paper jam"
+  },
+  {
+   "source": "Print Spooler service",
+   "relation": "PART_OF",
+   "target": "print.acme.example"
+  },
+  {
+   "source": "PaperCut",
+   "relation": "PART_OF",
+   "target": "print.acme.example"
+  }
+ ]
+}

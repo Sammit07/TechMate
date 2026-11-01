@@ -1,0 +1,72 @@
+{
+ "entities": [
+  {
+   "name": "Outlook search not returning results",
+   "type": "Symptom"
+  },
+  {
+   "name": "rebuild Outlook search index",
+   "type": "Fix"
+  },
+  {
+   "name": "Windows Search service",
+   "type": "Component"
+  },
+  {
+   "name": "ScanOST.exe",
+   "type": "Component"
+  },
+  {
+   "name": "corrupted search index",
+   "type": "Cause"
+  },
+  {
+   "name": "Microsoft Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Indexing Options",
+   "type": "Component"
+  },
+  {
+   "name": "Windows Search",
+   "type": "Product"
+  },
+  {
+   "name": "Office installation folder",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Outlook search not returning results",
+   "relation": "CAUSED_BY",
+   "target": "corrupted search index"
+  },
+  {
+   "source": "corrupted search index",
+   "relation": "FIXED_BY",
+   "target": "rebuild Outlook search index"
+  },
+  {
+   "source": "Windows Search service",
+   "relation": "AFFECTS",
+   "target": "Windows Search"
+  },
+  {
+   "source": "ScanOST.exe",
+   "relation": "PART_OF",
+   "target": "Office installation folder"
+  },
+  {
+   "source": "Indexing Options",
+   "relation": "AFFECTS",
+   "target": "Windows Search"
+  },
+  {
+   "source": "Microsoft Outlook",
+   "relation": "AFFECTS",
+   "target": "Indexing Options"
+  }
+ ]
+}

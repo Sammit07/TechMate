@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "BSOD during graphics-intensive application use",
+   "type": "Symptom"
+  },
+  {
+   "name": "stop code",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "offending module name",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "memory dump",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "outdated or faulty graphics driver",
+   "type": "Cause"
+  },
+  {
+   "name": "roll back graphics driver",
+   "type": "Fix"
+  },
+  {
+   "name": "reliability monitor check",
+   "type": "Fix"
+  },
+  {
+   "name": "stress test with video rendering or CAD",
+   "type": "Fix"
+  },
+  {
+   "name": "Windows graphics subsystem",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "WinDbg",
+   "type": "Product"
+  },
+  {
+   "name": "Safe Mode",
+   "type": "Component"
+  },
+  {
+   "name": "overheating",
+   "type": "Cause"
+  },
+  {
+   "name": "fan failure",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "BSOD during graphics-intensive application use",
+   "relation": "CAUSED_BY",
+   "target": "outdated or faulty graphics driver"
+  },
+  {
+   "source": "BSOD during graphics-intensive application use",
+   "relation": "CAUSED_BY",
+   "target": "overheating"
+  },
+  {
+   "source": "BSOD during graphics-intensive application use",
+   "relation": "CAUSED_BY",
+   "target": "fan failure"
+  },
+  {
+   "source": "stop code",
+   "relation": "INDICATES",
+   "target": "outdated or faulty graphics driver"
+  },
+  {
+   "source": "offending module name",
+   "relation": "INDICATES",
+   "target": "outdated or faulty graphics driver"
+  },
+  {
+   "source": "memory dump",
+   "relation": "INDICATES",
+   "target": "outdated or faulty graphics driver"
+  },
+  {
+   "source": "outdated or faulty graphics driver",
+   "relation": "FIXED_BY",
+   "target": "roll back graphics driver"
+  },
+  {
+   "source": "BSOD during graphics-intensive application use",
+   "relation": "FIXED_BY",
+   "target": "reliability monitor check"
+  },
+  {
+   "source": "BSOD during graphics-intensive application use",
+   "relation": "FIXED_BY",
+   "target": "stress test with video rendering or CAD"
+  },
+  {
+   "source": "Windows graphics subsystem",
+   "relation": "AFFECTS",
+   "target": "outdated or faulty graphics driver"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "Windows graphics subsystem"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "Windows graphics subsystem"
+  },
+  {
+   "source": "WinDbg",
+   "relation": "AFFECTS",
+   "target": "memory dump"
+  },
+  {
+   "source": "Safe Mode",
+   "relation": "AFFECTS",
+   "target": "Windows graphics subsystem"
+  },
+  {
+   "source": "overheating",
+   "relation": "AFFECTS",
+   "target": "fan failure"
+  }
+ ]
+}

@@ -1,0 +1,100 @@
+{
+ "entities": [
+  {
+   "name": "Office apps crashing or freezing",
+   "type": "Symptom"
+  },
+  {
+   "name": "Unlicensed or Needs activation",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Licensed Product",
+   "type": "Component"
+  },
+  {
+   "name": "Acme Global email",
+   "type": "Component"
+  },
+  {
+   "name": "Online Repair",
+   "type": "Fix"
+  },
+  {
+   "name": "%temp%\\Office16\\SetupLogs",
+   "type": "Component"
+  },
+  {
+   "name": "msinfo32",
+   "type": "Component"
+  },
+  {
+   "name": "failing add-ins or corrupted COM components",
+   "type": "Cause"
+  },
+  {
+   "name": "Disable suspect add-ins",
+   "type": "Fix"
+  },
+  {
+   "name": "Open and Repair",
+   "type": "Fix"
+  },
+  {
+   "name": "Identity",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Office apps crashing or freezing",
+   "relation": "CAUSED_BY",
+   "target": "Unlicensed or Needs activation"
+  },
+  {
+   "source": "Office apps crashing or freezing",
+   "relation": "CAUSED_BY",
+   "target": "failing add-ins or corrupted COM components"
+  },
+  {
+   "source": "Unlicensed or Needs activation",
+   "relation": "INDICATES",
+   "target": "Office apps crashing or freezing"
+  },
+  {
+   "source": "failing add-ins or corrupted COM components",
+   "relation": "INDICATES",
+   "target": "Office apps crashing or freezing"
+  },
+  {
+   "source": "Licensed Product",
+   "relation": "AFFECTS",
+   "target": "Office apps crashing or freezing"
+  },
+  {
+   "source": "Acme Global email",
+   "relation": "AFFECTS",
+   "target": "Office apps crashing or freezing"
+  },
+  {
+   "source": "Online Repair",
+   "relation": "FIXED_BY",
+   "target": "Office apps crashing or freezing"
+  },
+  {
+   "source": "Disable suspect add-ins",
+   "relation": "FIXED_BY",
+   "target": "Office apps crashing or freezing"
+  },
+  {
+   "source": "Open and Repair",
+   "relation": "FIXED_BY",
+   "target": "Office apps crashing or freezing"
+  },
+  {
+   "source": "Office apps crashing or freezing",
+   "relation": "AFFECTS",
+   "target": "Identity"
+  }
+ ]
+}

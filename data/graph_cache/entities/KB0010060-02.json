@@ -1,0 +1,149 @@
+{
+ "entities": [
+  {
+   "name": "Office Safe Mode",
+   "type": "Fix"
+  },
+  {
+   "name": "Quick Repair",
+   "type": "Fix"
+  },
+  {
+   "name": "Online Repair",
+   "type": "Fix"
+  },
+  {
+   "name": "Open and Repair",
+   "type": "Fix"
+  },
+  {
+   "name": "Version History Restore",
+   "type": "Fix"
+  },
+  {
+   "name": "File Copy Test",
+   "type": "Fix"
+  },
+  {
+   "name": "MSDT Log Collection",
+   "type": "Fix"
+  },
+  {
+   "name": "Event Viewer Log Check",
+   "type": "Fix"
+  },
+  {
+   "name": "File Recreation Advice",
+   "type": "Fix"
+  },
+  {
+   "name": "Application Stability Test",
+   "type": "Fix"
+  },
+  {
+   "name": "Corrupted Office File",
+   "type": "Symptom"
+  },
+  {
+   "name": "Unsaved Office File",
+   "type": "Symptom"
+  },
+  {
+   "name": "Add-in Conflict",
+   "type": "Cause"
+  },
+  {
+   "name": "Office Update Problem",
+   "type": "Cause"
+  },
+  {
+   "name": "Licensing Token Problem",
+   "type": "Cause"
+  },
+  {
+   "name": "Systemic Corruption Pattern",
+   "type": "Cause"
+  },
+  {
+   "name": "Microsoft 365",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Corrupted Office File",
+   "relation": "FIXED_BY",
+   "target": "Office Safe Mode"
+  },
+  {
+   "source": "Corrupted Office File",
+   "relation": "FIXED_BY",
+   "target": "Quick Repair"
+  },
+  {
+   "source": "Corrupted Office File",
+   "relation": "FIXED_BY",
+   "target": "Online Repair"
+  },
+  {
+   "source": "Corrupted Office File",
+   "relation": "FIXED_BY",
+   "target": "Open and Repair"
+  },
+  {
+   "source": "Unsaved Office File",
+   "relation": "FIXED_BY",
+   "target": "Version History Restore"
+  },
+  {
+   "source": "Corrupted Office File",
+   "relation": "FIXED_BY",
+   "target": "File Copy Test"
+  },
+  {
+   "source": "Persistent File Issue",
+   "relation": "FIXED_BY",
+   "target": "MSDT Log Collection"
+  },
+  {
+   "source": "Persistent File Issue",
+   "relation": "FIXED_BY",
+   "target": "Event Viewer Log Check"
+  },
+  {
+   "source": "Irrecoverable File",
+   "relation": "FIXED_BY",
+   "target": "File Recreation Advice"
+  },
+  {
+   "source": "Repaired File",
+   "relation": "FIXED_BY",
+   "target": "Application Stability Test"
+  },
+  {
+   "source": "Corrupted Office File",
+   "relation": "CAUSED_BY",
+   "target": "Add-in Conflict"
+  },
+  {
+   "source": "Corrupted Office File",
+   "relation": "CAUSED_BY",
+   "target": "Office Update Problem"
+  },
+  {
+   "source": "Corrupted Office File",
+   "relation": "CAUSED_BY",
+   "target": "Licensing Token Problem"
+  },
+  {
+   "source": "Multiple Corrupted Files",
+   "relation": "CAUSED_BY",
+   "target": "Systemic Corruption Pattern"
+  },
+  {
+   "source": "Microsoft 365",
+   "relation": "AFFECTS",
+   "target": "Corrupted Office File"
+  }
+ ]
+}

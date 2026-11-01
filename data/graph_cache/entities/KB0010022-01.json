@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Wi-Fi adapter",
+   "type": "Component"
+  },
+  {
+   "name": "Intel Wi-Fi 6 AX201",
+   "type": "Component"
+  },
+  {
+   "name": "latest driver",
+   "type": "Component"
+  },
+  {
+   "name": "power management settings",
+   "type": "Component"
+  },
+  {
+   "name": "ACME-Corp",
+   "type": "Product"
+  },
+  {
+   "name": "machine certificate",
+   "type": "Component"
+  },
+  {
+   "name": "Acme Global CA",
+   "type": "Product"
+  },
+  {
+   "name": "persistent Wi-Fi drops",
+   "type": "Symptom"
+  },
+  {
+   "name": "radio powers down intermittently",
+   "type": "Symptom"
+  },
+  {
+   "name": "driver fails to handle 802.1X re-authentication",
+   "type": "Symptom"
+  },
+  {
+   "name": "outdated driver",
+   "type": "Cause"
+  },
+  {
+   "name": "expired machine certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "enabled power saving",
+   "type": "Cause"
+  },
+  {
+   "name": "update Wi-Fi driver",
+   "type": "Fix"
+  },
+  {
+   "name": "disable power saving on Wi-Fi adapter",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "persistent Wi-Fi drops",
+   "relation": "CAUSED_BY",
+   "target": "outdated driver"
+  },
+  {
+   "source": "persistent Wi-Fi drops",
+   "relation": "CAUSED_BY",
+   "target": "expired machine certificate"
+  },
+  {
+   "source": "persistent Wi-Fi drops",
+   "relation": "CAUSED_BY",
+   "target": "enabled power saving"
+  },
+  {
+   "source": "radio powers down intermittently",
+   "relation": "INDICATES",
+   "target": "enabled power saving"
+  },
+  {
+   "source": "driver fails to handle 802.1X re-authentication",
+   "relation": "INDICATES",
+   "target": "outdated driver"
+  },
+  {
+   "source": "outdated driver",
+   "relation": "AFFECTS",
+   "target": "Wi-Fi adapter"
+  },
+  {
+   "source": "expired machine certificate",
+   "relation": "AFFECTS",
+   "target": "machine certificate"
+  },
+  {
+   "source": "enabled power saving",
+   "relation": "AFFECTS",
+   "target": "power management settings"
+  },
+  {
+   "source": "outdated driver",
+   "relation": "FIXED_BY",
+   "target": "update Wi-Fi driver"
+  },
+  {
+   "source": "expired machine certificate",
+   "relation": "FIXED_BY",
+   "target": "renew machine certificate"
+  },
+  {
+   "source": "enabled power saving",
+   "relation": "FIXED_BY",
+   "target": "disable power saving on Wi-Fi adapter"
+  },
+  {
+   "source": "Intel Wi-Fi 6 AX201",
+   "relation": "PART_OF",
+   "target": "Wi-Fi adapter"
+  },
+  {
+   "source": "machine certificate",
+   "relation": "PART_OF",
+   "target": "Acme Global CA"
+  },
+  {
+   "source": "power management settings",
+   "relation": "PART_OF",
+   "target": "Wi-Fi adapter"
+  }
+ ]
+}

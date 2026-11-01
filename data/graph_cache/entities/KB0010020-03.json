@@ -1,0 +1,131 @@
+{
+ "entities": [
+  {
+   "name": "Wi-Fi disconnects",
+   "type": "Symptom"
+  },
+  {
+   "name": "no internet access",
+   "type": "Symptom"
+  },
+  {
+   "name": "stale VPN routes",
+   "type": "Cause"
+  },
+  {
+   "name": "disconnect from GlobalProtect VPN",
+   "type": "Fix"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Intune compliance status",
+   "type": "Component"
+  },
+  {
+   "name": "wireless log excerpt",
+   "type": "Component"
+  },
+  {
+   "name": "DHCP lease renewal failures",
+   "type": "Symptom"
+  },
+  {
+   "name": "deauthentication reason code 4",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "frequent roaming",
+   "type": "Symptom"
+  },
+  {
+   "name": "AP capacity",
+   "type": "Component"
+  },
+  {
+   "name": "channel planning",
+   "type": "Component"
+  },
+  {
+   "name": "Wireless-LAN team assessment",
+   "type": "Fix"
+  },
+  {
+   "name": "machine certificate expiration",
+   "type": "Cause"
+  },
+  {
+   "name": "ACME-Corp password prompt",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Wi-Fi disconnects",
+   "relation": "CAUSED_BY",
+   "target": "stale VPN routes"
+  },
+  {
+   "source": "no internet access",
+   "relation": "CAUSED_BY",
+   "target": "stale VPN routes"
+  },
+  {
+   "source": "stale VPN routes",
+   "relation": "FIXED_BY",
+   "target": "disconnect from GlobalProtect VPN"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "stale VPN routes"
+  },
+  {
+   "source": "Intune compliance status",
+   "relation": "AFFECTS",
+   "target": "Wi-Fi disconnects"
+  },
+  {
+   "source": "wireless log excerpt",
+   "relation": "AFFECTS",
+   "target": "Wi-Fi disconnects"
+  },
+  {
+   "source": "DHCP lease renewal failures",
+   "relation": "INDICATES",
+   "target": "Wi-Fi disconnects"
+  },
+  {
+   "source": "deauthentication reason code 4",
+   "relation": "INDICATES",
+   "target": "Wi-Fi disconnects"
+  },
+  {
+   "source": "frequent roaming",
+   "relation": "INDICATES",
+   "target": "Wi-Fi disconnects"
+  },
+  {
+   "source": "AP capacity",
+   "relation": "PART_OF",
+   "target": "Wireless-LAN team assessment"
+  },
+  {
+   "source": "channel planning",
+   "relation": "PART_OF",
+   "target": "Wireless-LAN team assessment"
+  },
+  {
+   "source": "machine certificate expiration",
+   "relation": "CAUSED_BY",
+   "target": "Wi-Fi disconnects"
+  },
+  {
+   "source": "ACME-Corp password prompt",
+   "relation": "CAUSED_BY",
+   "target": "machine certificate expiration"
+  }
+ ]
+}

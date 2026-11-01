@@ -1,0 +1,111 @@
+{
+ "entities": [
+  {
+   "name": "Outlook on the web",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "set up authenticator app",
+   "type": "Component"
+  },
+  {
+   "name": "MFA registration screen",
+   "type": "Component"
+  },
+  {
+   "name": "temporary compliant value",
+   "type": "Component"
+  },
+  {
+   "name": "force password change at next logon",
+   "type": "Component"
+  },
+  {
+   "name": "cannot log in on day one",
+   "type": "Symptom"
+  },
+  {
+   "name": "Inbox does not load",
+   "type": "Symptom"
+  },
+  {
+   "name": "test email does not arrive",
+   "type": "Symptom"
+  },
+  {
+   "name": "test call or chat fails in Teams",
+   "type": "Symptom"
+  },
+  {
+   "name": "account remains disabled",
+   "type": "Cause"
+  },
+  {
+   "name": "AD user object not found",
+   "type": "Cause"
+  },
+  {
+   "name": "renew password via self-service",
+   "type": "Fix"
+  },
+  {
+   "name": "create new AD user in OU",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cannot log in on day one",
+   "relation": "CAUSED_BY",
+   "target": "account remains disabled"
+  },
+  {
+   "source": "cannot log in on day one",
+   "relation": "CAUSED_BY",
+   "target": "AD user object not found"
+  },
+  {
+   "source": "Inbox does not load",
+   "relation": "AFFECTS",
+   "target": "Outlook on the web"
+  },
+  {
+   "source": "test email does not arrive",
+   "relation": "AFFECTS",
+   "target": "Outlook on the web"
+  },
+  {
+   "source": "test call or chat fails in Teams",
+   "relation": "AFFECTS",
+   "target": "Teams"
+  },
+  {
+   "source": "set up authenticator app",
+   "relation": "PART_OF",
+   "target": "MFA registration screen"
+  },
+  {
+   "source": "temporary compliant value",
+   "relation": "PART_OF",
+   "target": "force password change at next logon"
+  },
+  {
+   "source": "renew password via self-service",
+   "relation": "FIXED_BY",
+   "target": "cannot log in on day one"
+  },
+  {
+   "source": "create new AD user in OU",
+   "relation": "FIXED_BY",
+   "target": "cannot log in on day one"
+  }
+ ]
+}

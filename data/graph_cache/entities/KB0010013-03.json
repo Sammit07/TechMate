@@ -1,0 +1,217 @@
+{
+ "entities": [
+  {
+   "name": "Windows login",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outlook connectivity",
+   "type": "Symptom"
+  },
+  {
+   "name": "Teams chat and call",
+   "type": "Symptom"
+  },
+  {
+   "name": "OneDrive sync status",
+   "type": "Symptom"
+  },
+  {
+   "name": "VPN access",
+   "type": "Symptom"
+  },
+  {
+   "name": "Printing functionality",
+   "type": "Symptom"
+  },
+  {
+   "name": "Incorrect username or password",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Outlook shows no mailbox",
+   "type": "Symptom"
+  },
+  {
+   "name": "Teams sign-in loop",
+   "type": "Symptom"
+  },
+  {
+   "name": "OneDrive stuck on Setting up...",
+   "type": "Symptom"
+  },
+  {
+   "name": "VPN connection fails with certificate error",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Account lockout",
+   "type": "Cause"
+  },
+  {
+   "name": "Missing Exchange Online licence",
+   "type": "Cause"
+  },
+  {
+   "name": "MFA registration incomplete",
+   "type": "Cause"
+  },
+  {
+   "name": "Device non-compliant in Intune",
+   "type": "Cause"
+  },
+  {
+   "name": "Expired or missing user certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "Reset password via self-service portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Assign Exchange Online licence",
+   "type": "Fix"
+  },
+  {
+   "name": "Complete MFA registration",
+   "type": "Fix"
+  },
+  {
+   "name": "Reset OneDrive sync app",
+   "type": "Fix"
+  },
+  {
+   "name": "Renew user certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "PaperCut",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Credential Manager",
+   "type": "Component"
+  },
+  {
+   "name": "BitLocker recovery key",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Incorrect username or password",
+   "relation": "CAUSED_BY",
+   "target": "Account lockout"
+  },
+  {
+   "source": "Outlook shows no mailbox",
+   "relation": "CAUSED_BY",
+   "target": "Missing Exchange Online licence"
+  },
+  {
+   "source": "Teams sign-in loop",
+   "relation": "CAUSED_BY",
+   "target": "MFA registration incomplete"
+  },
+  {
+   "source": "OneDrive stuck on Setting up...",
+   "relation": "CAUSED_BY",
+   "target": "Device non-compliant in Intune"
+  },
+  {
+   "source": "VPN connection fails with certificate error",
+   "relation": "CAUSED_BY",
+   "target": "Expired or missing user certificate"
+  },
+  {
+   "source": "Incorrect username or password",
+   "relation": "FIXED_BY",
+   "target": "Reset password via self-service portal"
+  },
+  {
+   "source": "Outlook shows no mailbox",
+   "relation": "FIXED_BY",
+   "target": "Assign Exchange Online licence"
+  },
+  {
+   "source": "Teams sign-in loop",
+   "relation": "FIXED_BY",
+   "target": "Complete MFA registration"
+  },
+  {
+   "source": "OneDrive stuck on Setting up...",
+   "relation": "FIXED_BY",
+   "target": "Reset OneDrive sync app"
+  },
+  {
+   "source": "VPN connection fails with certificate error",
+   "relation": "FIXED_BY",
+   "target": "Renew user certificate"
+  },
+  {
+   "source": "Windows login",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "Outlook connectivity",
+   "relation": "AFFECTS",
+   "target": "Outlook"
+  },
+  {
+   "source": "Teams chat and call",
+   "relation": "AFFECTS",
+   "target": "Teams"
+  },
+  {
+   "source": "OneDrive sync status",
+   "relation": "AFFECTS",
+   "target": "OneDrive"
+  },
+  {
+   "source": "VPN access",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "Printing functionality",
+   "relation": "AFFECTS",
+   "target": "PaperCut"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "PART_OF",
+   "target": "VPN access"
+  },
+  {
+   "source": "Credential Manager",
+   "relation": "PART_OF",
+   "target": "Windows login"
+  },
+  {
+   "source": "BitLocker recovery key",
+   "relation": "PART_OF",
+   "target": "Windows login"
+  }
+ ]
+}

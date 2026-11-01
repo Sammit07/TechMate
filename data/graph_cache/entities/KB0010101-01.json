@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Approved Password Managers List",
+   "type": "Component"
+  },
+  {
+   "name": "Bitwarden Enterprise",
+   "type": "Product"
+  },
+  {
+   "name": "LastPass Business",
+   "type": "Product"
+  },
+  {
+   "name": "1Password Business",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Entra ID Authentication",
+   "type": "Component"
+  },
+  {
+   "name": "Intune Integration",
+   "type": "Component"
+  },
+  {
+   "name": "Company Portal App",
+   "type": "Product"
+  },
+  {
+   "name": "Local Master Password Requirement",
+   "type": "Component"
+  },
+  {
+   "name": "Browser Extension Auto-fill",
+   "type": "Component"
+  },
+  {
+   "name": "Security Dashboard Review",
+   "type": "Component"
+  },
+  {
+   "name": "Password Generation Practice",
+   "type": "Component"
+  },
+  {
+   "name": "Clipboard Password Avoidance",
+   "type": "Component"
+  },
+  {
+   "name": "Vault Auto-lock Feature",
+   "type": "Component"
+  },
+  {
+   "name": "IT Service Desk Contact",
+   "type": "Component"
+  },
+  {
+   "name": "MFA Push Notification Approval",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Bitwarden Enterprise",
+   "relation": "PART_OF",
+   "target": "Approved Password Managers List"
+  },
+  {
+   "source": "LastPass Business",
+   "relation": "PART_OF",
+   "target": "Approved Password Managers List"
+  },
+  {
+   "source": "1Password Business",
+   "relation": "PART_OF",
+   "target": "Approved Password Managers List"
+  },
+  {
+   "source": "Company Portal App",
+   "relation": "AFFECTS",
+   "target": "Intune Integration"
+  },
+  {
+   "source": "Microsoft Entra ID Authentication",
+   "relation": "AFFECTS",
+   "target": "Approved Password Managers List"
+  },
+  {
+   "source": "Local Master Password Requirement",
+   "relation": "AFFECTS",
+   "target": "Approved Password Managers List"
+  },
+  {
+   "source": "Browser Extension Auto-fill",
+   "relation": "AFFECTS",
+   "target": "Approved Password Managers List"
+  },
+  {
+   "source": "Security Dashboard Review",
+   "relation": "AFFECTS",
+   "target": "Approved Password Managers List"
+  },
+  {
+   "source": "Password Generation Practice",
+   "relation": "AFFECTS",
+   "target": "Approved Password Managers List"
+  },
+  {
+   "source": "Clipboard Password Avoidance",
+   "relation": "AFFECTS",
+   "target": "Approved Password Managers List"
+  },
+  {
+   "source": "Vault Auto-lock Feature",
+   "relation": "AFFECTS",
+   "target": "Approved Password Managers List"
+  },
+  {
+   "source": "MFA Push Notification Approval",
+   "relation": "AFFECTS",
+   "target": "Approved Password Managers List"
+  },
+  {
+   "source": "IT Service Desk Contact",
+   "relation": "FIXED_BY",
+   "target": "Installation Failure Symptom"
+  },
+  {
+   "source": "Installation Failure Symptom",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect Setup Step"
+  },
+  {
+   "source": "Incorrect Setup Step",
+   "relation": "INDICATES",
+   "target": "Error Message Note"
+  }
+ ]
+}

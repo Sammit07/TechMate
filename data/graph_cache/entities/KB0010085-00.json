@@ -1,0 +1,121 @@
+{
+ "entities": [
+  {
+   "name": "Tech support scam pop-ups",
+   "type": "Symptom"
+  },
+  {
+   "name": "Full-screen or modal browser pop-up titled \"Windows Defender Alert\" or \"Microsoft Security Essentials\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "Message stating \"Your computer is infected with viruses and spyware. Call support now at 1-800-XXX-XXXX\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "Fake scan progress bar showing dozens of threats detected",
+   "type": "Symptom"
+  },
+  {
+   "name": "Audio voice-over urging immediate action",
+   "type": "Symptom"
+  },
+  {
+   "name": "Inability to close the window via the usual X button; clicking anywhere may trigger a download prompt",
+   "type": "Symptom"
+  },
+  {
+   "name": "Visiting compromised or malicious websites that serve malvertising ads",
+   "type": "Cause"
+  },
+  {
+   "name": "Clicking on deceptive links in phishing emails or social media posts",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated browser extensions or plugins that inject unwanted scripts",
+   "type": "Cause"
+  },
+  {
+   "name": "Redirects from legitimate sites via hijacked ad networks",
+   "type": "Cause"
+  },
+  {
+   "name": "Legitimate Defender alerts appear inside the Windows Security app, not inside a browser window, and do not include a phone number to call",
+   "type": "Cause"
+  },
+  {
+   "name": "Do not call the phone number shown in the pop-up and do not download any offered software",
+   "type": "Fix"
+  },
+  {
+   "name": "If possible, close the browser tab or window by right-clicking the browser icon on the taskbar and selecting \"Close window\"; if blocked, press Ctrl+Shift+Esc to open Task Manager, locate the browser process (chrome.exe, msedge.exe, or safari.exe), select it, and click \"End task\"",
+   "type": "Fix"
+  },
+  {
+   "name": "Re-open your browser",
+   "type": "Fix"
+  },
+  {
+   "name": "Run a Defender scan",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Tech support scam pop-ups",
+   "relation": "CAUSED_BY",
+   "target": "Visiting compromised or malicious websites that serve malvertising ads"
+  },
+  {
+   "source": "Tech support scam pop-ups",
+   "relation": "CAUSED_BY",
+   "target": "Clicking on deceptive links in phishing emails or social media posts"
+  },
+  {
+   "source": "Tech support scam pop-ups",
+   "relation": "CAUSED_BY",
+   "target": "Outdated browser extensions or plugins that inject unwanted scripts"
+  },
+  {
+   "source": "Tech support scam pop-ups",
+   "relation": "CAUSED_BY",
+   "target": "Redirects from legitimate sites via hijacked ad networks"
+  },
+  {
+   "source": "Full-screen or modal browser pop-up titled \"Windows Defender Alert\" or \"Microsoft Security Essentials\"",
+   "relation": "INDICATES",
+   "target": "Tech support scam pop-ups"
+  },
+  {
+   "source": "Message stating \"Your computer is infected with viruses and spyware. Call support now at 1-800-XXX-XXXX\"",
+   "relation": "INDICATES",
+   "target": "Tech support scam pop-ups"
+  },
+  {
+   "source": "Fake scan progress bar showing dozens of threats detected",
+   "relation": "INDICATES",
+   "target": "Tech support scam pop-ups"
+  },
+  {
+   "source": "Audio voice-over urging immediate action",
+   "relation": "INDICATES",
+   "target": "Tech support scam pop-ups"
+  },
+  {
+   "source": "Inability to close the window via the usual X button; clicking anywhere may trigger a download prompt",
+   "relation": "INDICATES",
+   "target": "Tech support scam pop-ups"
+  },
+  {
+   "source": "Tech support scam pop-ups",
+   "relation": "FIXED_BY",
+   "target": "Do not call the phone number shown in the pop-up and do not download any offered software"
+  },
+  {
+   "source": "Tech support scam pop-ups",
+   "relation": "FIXED_BY",
+   "target": "If possible, close the browser tab or window by right-clicking the browser icon on the taskbar and selecting \"Close window\"; if blocked, press Ctrl+Shift+Esc to open Task Manager, locate the browser process (chrome.exe, msedge.exe, or safari.exe), select it, and click \"End task\"}, {"
+  }
+ ]
+}

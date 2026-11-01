@@ -1,0 +1,170 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15 MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "iOS and Android smartphones",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Entra ID (Azure AD)",
+   "type": "Product"
+  },
+  {
+   "name": "on-premises Active Directory",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal app",
+   "type": "Component"
+  },
+  {
+   "name": "Temporary Access Pass (TAP)",
+   "type": "Component"
+  },
+  {
+   "name": "\"We couldn't verify your identity\" prompt",
+   "type": "Symptom"
+  },
+  {
+   "name": "No push notification or SMS code received",
+   "type": "Symptom"
+  },
+  {
+   "name": "Authenticator app shows a 6-digit code that is rejected as invalid",
+   "type": "Symptom"
+  },
+  {
+   "name": "Authenticator lists the wrong account or shows an expired credential",
+   "type": "Symptom"
+  },
+  {
+   "name": "User reports a lost or stolen phone and cannot complete MFA",
+   "type": "Symptom"
+  },
+  {
+   "name": "Device replaced or restored without re-registering the Authenticator app",
+   "type": "Cause"
+  },
+  {
+   "name": "Phone time drift causing TOTP codes to be out of sync",
+   "type": "Cause"
+  },
+  {
+   "name": "Backup SMS method not enabled or phone number changed",
+   "type": "Cause"
+  },
+  {
+   "name": "Authenticator app data corrupted after OS update",
+   "type": "Cause"
+  },
+  {
+   "name": "MFA registration blocked due to failed attempts or lockout",
+   "type": "Cause"
+  },
+  {
+   "name": "re-register Authenticator after identity verification",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "\"We couldn't verify your identity\" prompt",
+   "relation": "CAUSED_BY",
+   "target": "Device replaced or restored without re-registering the Authenticator app"
+  },
+  {
+   "source": "No push notification or SMS code received",
+   "relation": "CAUSED_BY",
+   "target": "Backup SMS method not enabled or phone number changed"
+  },
+  {
+   "source": "Authenticator app shows a 6-digit code that is rejected as invalid",
+   "relation": "CAUSED_BY",
+   "target": "Phone time drift causing TOTP codes to be out of sync"
+  },
+  {
+   "source": "Authenticator lists the wrong account or shows an expired credential",
+   "relation": "CAUSED_BY",
+   "target": "Authenticator app data corrupted after OS update"
+  },
+  {
+   "source": "User reports a lost or stolen phone and cannot complete MFA",
+   "relation": "CAUSED_BY",
+   "target": "Device replaced or restored without re-registering the Authenticator app"
+  },
+  {
+   "source": "MFA registration blocked due to failed attempts or lockout",
+   "relation": "CAUSED_BY",
+   "target": "Authenticator app data corrupted after OS update"
+  },
+  {
+   "source": "Device replaced or restored without re-registering the Authenticator app",
+   "relation": "FIXED_BY",
+   "target": "re-register Authenticator after identity verification"
+  },
+  {
+   "source": "Phone time drift causing TOTP codes to be out of sync",
+   "relation": "FIXED_BY",
+   "target": "re-register Authenticator after identity verification"
+  },
+  {
+   "source": "Backup SMS method not enabled or phone number changed",
+   "relation": "FIXED_BY",
+   "target": "re-register Authenticator after identity verification"
+  },
+  {
+   "source": "Authenticator app data corrupted after OS update",
+   "relation": "FIXED_BY",
+   "target": "re-register Authenticator after identity verification"
+  },
+  {
+   "source": "MFA registration blocked due to failed attempts or lockout",
+   "relation": "FIXED_BY",
+   "target": "re-register Authenticator after identity verification"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptops"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15 MacBook Pro/Air"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "AFFECTS",
+   "target": "iOS and Android smartphones"
+  },
+  {
+   "source": "Company Portal app",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "Temporary Access Pass (TAP)",
+   "relation": "AFFECTS",
+   "target": "Microsoft Entra ID (Azure AD)"
+  }
+ ]
+}

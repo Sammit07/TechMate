@@ -1,0 +1,140 @@
+{
+ "entities": [
+  {
+   "name": "Acme credentials",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Component"
+  },
+  {
+   "name": "IT self-service portal",
+   "type": "Product"
+  },
+  {
+   "name": "Access & Identity",
+   "type": "Component"
+  },
+  {
+   "name": "Access request",
+   "type": "Component"
+  },
+  {
+   "name": "Shared drive folder",
+   "type": "Component"
+  },
+  {
+   "name": "SharePoint site",
+   "type": "Component"
+  },
+  {
+   "name": "UNC path",
+   "type": "Component"
+  },
+  {
+   "name": "SharePoint site URL",
+   "type": "Component"
+  },
+  {
+   "name": "Manager approval",
+   "type": "Component"
+  },
+  {
+   "name": "Ticket number",
+   "type": "Component"
+  },
+  {
+   "name": "Teams \"IT Help\" channel",
+   "type": "Component"
+  },
+  {
+   "name": "File Explorer",
+   "type": "Product"
+  },
+  {
+   "name": "Browser",
+   "type": "Product"
+  },
+  {
+   "name": "Security group",
+   "type": "Component"
+  },
+  {
+   "name": "Access denied",
+   "type": "ErrorCode"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Access request",
+   "relation": "PART_OF",
+   "target": "IT self-service portal"
+  },
+  {
+   "source": "Shared drive folder",
+   "relation": "PART_OF",
+   "target": "Access request"
+  },
+  {
+   "source": "SharePoint site",
+   "relation": "PART_OF",
+   "target": "Access request"
+  },
+  {
+   "source": "UNC path",
+   "relation": "AFFECTS",
+   "target": "Shared drive folder"
+  },
+  {
+   "source": "SharePoint site URL",
+   "relation": "AFFECTS",
+   "target": "SharePoint site"
+  },
+  {
+   "source": "Manager approval",
+   "relation": "AFFECTS",
+   "target": "Access request"
+  },
+  {
+   "source": "Ticket number",
+   "relation": "AFFECTS",
+   "target": "Access request"
+  },
+  {
+   "source": "Teams \"IT Help\" channel",
+   "relation": "AFFECTS",
+   "target": "Access request"
+  },
+  {
+   "source": "File Explorer",
+   "relation": "AFFECTS",
+   "target": "Shared drive folder"
+  },
+  {
+   "source": "Browser",
+   "relation": "AFFECTS",
+   "target": "SharePoint site"
+  },
+  {
+   "source": "Security group",
+   "relation": "AFFECTS",
+   "target": "Shared drive folder"
+  },
+  {
+   "source": "Security group",
+   "relation": "AFFECTS",
+   "target": "SharePoint site"
+  },
+  {
+   "source": "Access denied",
+   "relation": "INDICATES",
+   "target": "Manager approval"
+  },
+  {
+   "source": "Access denied",
+   "relation": "CAUSED_BY",
+   "target": "Missing permissions"
+  }
+ ]
+}

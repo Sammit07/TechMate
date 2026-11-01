@@ -1,0 +1,131 @@
+{
+ "entities": [
+  {
+   "name": "Intune enrollment",
+   "type": "Component"
+  },
+  {
+   "name": "BitLocker backup",
+   "type": "Component"
+  },
+  {
+   "name": "FileVault verification",
+   "type": "Component"
+  },
+  {
+   "name": "Defender for Endpoint health check",
+   "type": "Component"
+  },
+  {
+   "name": "VPN connectivity",
+   "type": "Component"
+  },
+  {
+   "name": "OneDrive sync test",
+   "type": "Component"
+  },
+  {
+   "name": "data-wipe script execution",
+   "type": "Fix"
+  },
+  {
+   "name": "asset status update to Retired",
+   "type": "Fix"
+  },
+  {
+   "name": "laptop refresh completion",
+   "type": "Symptom"
+  },
+  {
+   "name": "out-of-stock model",
+   "type": "Cause"
+  },
+  {
+   "name": "higher-spec device request beyond policy",
+   "type": "Cause"
+  },
+  {
+   "name": "Escalation to Desktop Support Team Lead",
+   "type": "Fix"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi connection",
+   "type": "Component"
+  },
+  {
+   "name": "Company Portal sign-in",
+   "type": "Component"
+  },
+  {
+   "name": "primary application validation",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "laptop refresh completion",
+   "relation": "FIXED_BY",
+   "target": "data-wipe script execution"
+  },
+  {
+   "source": "laptop refresh completion",
+   "relation": "FIXED_BY",
+   "target": "asset status update to Retired"
+  },
+  {
+   "source": "out-of-stock model",
+   "relation": "CAUSED_BY",
+   "target": "Escalation to Desktop Support Team Lead"
+  },
+  {
+   "source": "higher-spec device request beyond policy",
+   "relation": "CAUSED_BY",
+   "target": "Escalation to Desktop Support Team Lead"
+  },
+  {
+   "source": "Intune enrollment",
+   "relation": "AFFECTS",
+   "target": "BitLocker backup"
+  },
+  {
+   "source": "Defender for Endpoint health check",
+   "relation": "AFFECTS",
+   "target": "laptop refresh completion"
+  },
+  {
+   "source": "VPN connectivity",
+   "relation": "AFFECTS",
+   "target": "laptop refresh completion"
+  },
+  {
+   "source": "OneDrive sync test",
+   "relation": "AFFECTS",
+   "target": "laptop refresh completion"
+  },
+  {
+   "source": "primary application validation",
+   "relation": "AFFECTS",
+   "target": "laptop refresh completion"
+  },
+  {
+   "source": "ACME-Corp Wi-Fi connection",
+   "relation": "PART_OF",
+   "target": "Intune enrollment"
+  },
+  {
+   "source": "Company Portal sign-in",
+   "relation": "PART_OF",
+   "target": "Intune enrollment"
+  },
+  {
+   "source": "BitLocker backup",
+   "relation": "PART_OF",
+   "target": "Intune enrollment"
+  },
+  {
+   "source": "FileVault verification",
+   "relation": "PART_OF",
+   "target": "Intune enrollment"
+  }
+ ]
+}

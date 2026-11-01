@@ -1,0 +1,140 @@
+{
+ "entities": [
+  {
+   "name": "swollen battery",
+   "type": "Symptom"
+  },
+  {
+   "name": "battery icon shows 0%",
+   "type": "Symptom"
+  },
+  {
+   "name": "battery drains unusually fast",
+   "type": "Symptom"
+  },
+  {
+   "name": "laptop shuts down suddenly when plugged in",
+   "type": "Symptom"
+  },
+  {
+   "name": "charger LED does not illuminate",
+   "type": "Symptom"
+  },
+  {
+   "name": "error message: Battery not detected",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "aging lithium-ion cell",
+   "type": "Cause"
+  },
+  {
+   "name": "exposure to high temperatures",
+   "type": "Cause"
+  },
+  {
+   "name": "manufacturing defect",
+   "type": "Cause"
+  },
+  {
+   "name": "physical impact to battery",
+   "type": "Cause"
+  },
+  {
+   "name": "using non-approved chargers",
+   "type": "Cause"
+  },
+  {
+   "name": "stop using laptop immediately",
+   "type": "Fix"
+  },
+  {
+   "name": "disconnect charger and shut down",
+   "type": "Fix"
+  },
+  {
+   "name": "place on non-flammable surface",
+   "type": "Fix"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "swollen battery",
+   "relation": "CAUSED_BY",
+   "target": "aging lithium-ion cell"
+  },
+  {
+   "source": "swollen battery",
+   "relation": "CAUSED_BY",
+   "target": "exposure to high temperatures"
+  },
+  {
+   "source": "swollen battery",
+   "relation": "CAUSED_BY",
+   "target": "manufacturing defect"
+  },
+  {
+   "source": "swollen battery",
+   "relation": "CAUSED_BY",
+   "target": "physical impact to battery"
+  },
+  {
+   "source": "swollen battery",
+   "relation": "CAUSED_BY",
+   "target": "using non-approved chargers"
+  },
+  {
+   "source": "battery icon shows 0%",
+   "relation": "INDICATES",
+   "target": "swollen battery"
+  },
+  {
+   "source": "battery drains unusually fast",
+   "relation": "INDICATES",
+   "target": "swollen battery"
+  },
+  {
+   "source": "laptop shuts down suddenly when plugged in",
+   "relation": "INDICATES",
+   "target": "swollen battery"
+  },
+  {
+   "source": "charger LED does not illuminate",
+   "relation": "INDICATES",
+   "target": "swollen battery"
+  },
+  {
+   "source": "error message: Battery not detected",
+   "relation": "INDICATES",
+   "target": "swollen battery"
+  },
+  {
+   "source": "swollen battery",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "swollen battery",
+   "relation": "AFFECTS",
+   "target": "Lenovo ThinkPad T14/X1 Carbon"
+  },
+  {
+   "source": "stop using laptop immediately",
+   "relation": "FIXED_BY",
+   "target": "swollen battery"
+  },
+  {
+   "source": "disconnect charger and shut down",
+   "relation": "FIXED_BY",
+   "target": "swollen battery"
+  }
+ ]
+}

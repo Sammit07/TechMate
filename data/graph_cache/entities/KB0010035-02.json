@@ -1,0 +1,170 @@
+{
+ "entities": [
+  {
+   "name": "HDD",
+   "type": "Component"
+  },
+  {
+   "name": "SSD",
+   "type": "Component"
+  },
+  {
+   "name": "RAM",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Defender for Endpoint",
+   "type": "Product"
+  },
+  {
+   "name": "BitLocker",
+   "type": "Component"
+  },
+  {
+   "name": "FileVault",
+   "type": "Component"
+  },
+  {
+   "name": "Task Manager",
+   "type": "Component"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Chrome",
+   "type": "Product"
+  },
+  {
+   "name": "Windows Update",
+   "type": "Component"
+  },
+  {
+   "name": "CMDB",
+   "type": "Product"
+  },
+  {
+   "name": "hardware upgrade",
+   "type": "Fix"
+  },
+  {
+   "name": "high memory usage",
+   "type": "Symptom"
+  },
+  {
+   "name": "slow disk performance",
+   "type": "Symptom"
+  },
+  {
+   "name": "elevated latency",
+   "type": "Symptom"
+  },
+  {
+   "name": "pending sectors",
+   "type": "Symptom"
+  },
+  {
+   "name": "insufficient RAM",
+   "type": "Cause"
+  },
+  {
+   "name": "HDD bottleneck",
+   "type": "Cause"
+  },
+  {
+   "name": "warranty check",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "high memory usage",
+   "relation": "CAUSED_BY",
+   "target": "insufficient RAM"
+  },
+  {
+   "source": "slow disk performance",
+   "relation": "CAUSED_BY",
+   "target": "HDD bottleneck"
+  },
+  {
+   "source": "elevated latency",
+   "relation": "INDICATES",
+   "target": "HDD bottleneck"
+  },
+  {
+   "source": "pending sectors",
+   "relation": "INDICATES",
+   "target": "HDD bottleneck"
+  },
+  {
+   "source": "insufficient RAM",
+   "relation": "FIXED_BY",
+   "target": "hardware upgrade"
+  },
+  {
+   "source": "HDD bottleneck",
+   "relation": "FIXED_BY",
+   "target": "hardware upgrade"
+  },
+  {
+   "source": "hardware upgrade",
+   "relation": "AFFECTS",
+   "target": "RAM"
+  },
+  {
+   "source": "hardware upgrade",
+   "relation": "AFFECTS",
+   "target": "SSD"
+  },
+  {
+   "source": "BitLocker",
+   "relation": "PART_OF",
+   "target": "SSD"
+  },
+  {
+   "source": "FileVault",
+   "relation": "PART_OF",
+   "target": "SSD"
+  },
+  {
+   "source": "Defender for Endpoint",
+   "relation": "AFFECTS",
+   "target": "HDD"
+  },
+  {
+   "source": "Task Manager",
+   "relation": "AFFECTS",
+   "target": "RAM"
+  },
+  {
+   "source": "Task Manager",
+   "relation": "AFFECTS",
+   "target": "SSD"
+  },
+  {
+   "source": "Windows Update",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "CMDB",
+   "relation": "AFFECTS",
+   "target": "hardware upgrade"
+  },
+  {
+   "source": "warranty check",
+   "relation": "FIXED_BY",
+   "target": "hardware upgrade"
+  }
+ ]
+}

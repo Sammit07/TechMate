@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Windows Update",
+   "type": "Product"
+  },
+  {
+   "name": "Windows Update Troubleshooter",
+   "type": "Component"
+  },
+  {
+   "name": "Reset Windows Update components",
+   "type": "Fix"
+  },
+  {
+   "name": "Free up disk space",
+   "type": "Fix"
+  },
+  {
+   "name": "Ensure VPN connectivity",
+   "type": "Fix"
+  },
+  {
+   "name": "Retry the update",
+   "type": "Fix"
+  },
+  {
+   "name": "Download latest cumulative update manually",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify update success",
+   "type": "Fix"
+  },
+  {
+   "name": "GlobalProtect client",
+   "type": "Product"
+  },
+  {
+   "name": "vpn.acme.example",
+   "type": "Component"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi (802.1X)",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "BitLocker",
+   "type": "Component"
+  },
+  {
+   "name": "Recovery key stored in Intune",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Update Catalog",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Windows Update fails or gets stuck",
+   "relation": "CAUSED_BY",
+   "target": "Insufficient disk space"
+  },
+  {
+   "source": "Windows Update fails or gets stuck",
+   "relation": "CAUSED_BY",
+   "target": "VPN connectivity issues"
+  },
+  {
+   "source": "Windows Update fails or gets stuck",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted Windows Update components"
+  },
+  {
+   "source": "Reset Windows Update components",
+   "relation": "FIXED_BY",
+   "target": "Corrupted Windows Update components"
+  },
+  {
+   "source": "Free up disk space",
+   "relation": "FIXED_BY",
+   "target": "Insufficient disk space"
+  },
+  {
+   "source": "Ensure VPN connectivity",
+   "relation": "FIXED_BY",
+   "target": "VPN connectivity issues"
+  },
+  {
+   "source": "Retry the update",
+   "relation": "FIXED_BY",
+   "target": "Windows Update fails or gets stuck"
+  },
+  {
+   "source": "Download latest cumulative update manually",
+   "relation": "FIXED_BY",
+   "target": "Windows Update fails or gets stuck"
+  },
+  {
+   "source": "Verify update success",
+   "relation": "FIXED_BY",
+   "target": "Windows Update fails or gets stuck"
+  },
+  {
+   "source": "GlobalProtect client",
+   "relation": "AFFECTS",
+   "target": "VPN connectivity"
+  },
+  {
+   "source": "vpn.acme.example",
+   "relation": "PART_OF",
+   "target": "GlobalProtect client"
+  },
+  {
+   "source": "ACME-Corp Wi-Fi (802.1X)",
+   "relation": "PART_OF",
+   "target": "Network connectivity"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "BitLocker"
+  },
+  {
+   "source": "Recovery key stored in Intune",
+   "relation": "PART_OF",
+   "target": "BitLocker"
+  },
+  {
+   "source": "Microsoft Update Catalog",
+   "relation": "AFFECTS",
+   "target": "Download latest cumulative update manually"
+  }
+ ]
+}

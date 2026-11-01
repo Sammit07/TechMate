@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Major IT outage",
+   "type": "Symptom"
+  },
+  {
+   "name": "No update via email or Teams",
+   "type": "Symptom"
+  },
+  {
+   "name": "Inability to access affected services",
+   "type": "Symptom"
+  },
+  {
+   "name": "Seeing error messages like Cannot connect to server",
+   "type": "Symptom"
+  },
+  {
+   "name": "Primary communication channels impacted",
+   "type": "Cause"
+  },
+  {
+   "name": "Lack of predefined outage-communication plan",
+   "type": "Cause"
+  },
+  {
+   "name": "Delayed detection by monitoring tools",
+   "type": "Cause"
+  },
+  {
+   "name": "Insufficient status-page updates",
+   "type": "Cause"
+  },
+  {
+   "name": "Teams channel IT Help",
+   "type": "Component"
+  },
+  {
+   "name": "Self-service portal https://it.acme.example",
+   "type": "Component"
+  },
+  {
+   "name": "Email distribution lists for major incidents",
+   "type": "Component"
+  },
+  {
+   "name": "SMS alerts for critical updates",
+   "type": "Component"
+  },
+  {
+   "name": "Banners on Acme intranet",
+   "type": "Component"
+  },
+  {
+   "name": "Phone-tree conference bridge",
+   "type": "Component"
+  },
+  {
+   "name": "Publicly accessible status page",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "No update via email or Teams",
+   "relation": "CAUSED_BY",
+   "target": "Primary communication channels impacted"
+  },
+  {
+   "source": "Inability to access affected services",
+   "relation": "CAUSED_BY",
+   "target": "Major IT outage"
+  },
+  {
+   "source": "Seeing error messages like Cannot connect to server",
+   "relation": "INDICATES",
+   "target": "Major IT outage"
+  },
+  {
+   "source": "Lack of predefined outage-communication plan",
+   "relation": "CAUSED_BY",
+   "target": "Ad-hoc messaging during outage"
+  },
+  {
+   "source": "Delayed detection by monitoring tools",
+   "relation": "CAUSED_BY",
+   "target": "Late outage awareness"
+  },
+  {
+   "source": "Insufficient status-page updates",
+   "relation": "CAUSED_BY",
+   "target": "Information vacuum during outage"
+  },
+  {
+   "source": "Teams channel IT Help",
+   "relation": "AFFECTS",
+   "target": "Major IT outage"
+  },
+  {
+   "source": "Self-service portal https://it.acme.example",
+   "relation": "AFFECTS",
+   "target": "Major IT outage"
+  },
+  {
+   "source": "Email distribution lists for major incidents",
+   "relation": "AFFECTS",
+   "target": "Major IT outage"
+  },
+  {
+   "source": "SMS alerts for critical updates",
+   "relation": "AFFECTS",
+   "target": "Major IT outage"
+  },
+  {
+   "source": "Banners on Acme intranet",
+   "relation": "AFFECTS",
+   "target": "Major IT outage"
+  },
+  {
+   "source": "Phone-tree conference bridge",
+   "relation": "AFFECTS",
+   "target": "Major IT outage"
+  },
+  {
+   "source": "Publicly accessible status page",
+   "relation": "AFFECTS",
+   "target": "Major IT outage"
+  },
+  {
+   "source": "Major IT outage",
+   "relation": "FIXED_BY",
+   "target": "Transparent, timely, and consistent communication"
+  },
+  {
+   "source": "Information vacuum during outage",
+   "relation": "FIXED_BY",
+   "target": "Multiple-channel communication approach"
+  }
+ ]
+}

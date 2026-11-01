@@ -1,0 +1,112 @@
+{
+ "entities": [
+  {
+   "name": "scan to email",
+   "type": "Symptom"
+  },
+  {
+   "name": "scanner service account locked",
+   "type": "Cause"
+  },
+  {
+   "name": "scanner service account expired password",
+   "type": "Cause"
+  },
+  {
+   "name": "missing mailbox permissions",
+   "type": "Cause"
+  },
+  {
+   "name": "SMTP authentication failure",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "email attachment missing",
+   "type": "Symptom"
+  },
+  {
+   "name": "printer error SMTP authentication",
+   "type": "Symptom"
+  },
+  {
+   "name": "confirm account status in Entra ID",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Identity & Access Management",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "scan to email",
+   "relation": "CAUSED_BY",
+   "target": "scanner service account locked"
+  },
+  {
+   "source": "scan to email",
+   "relation": "CAUSED_BY",
+   "target": "scanner service account expired password"
+  },
+  {
+   "source": "scan to email",
+   "relation": "CAUSED_BY",
+   "target": "missing mailbox permissions"
+  },
+  {
+   "source": "SMTP authentication failure",
+   "relation": "INDICATES",
+   "target": "scanner service account locked"
+  },
+  {
+   "source": "SMTP authentication failure",
+   "relation": "INDICATES",
+   "target": "scanner service account expired password"
+  },
+  {
+   "source": "SMTP authentication failure",
+   "relation": "INDICATES",
+   "target": "missing mailbox permissions"
+  },
+  {
+   "source": "email attachment missing",
+   "relation": "AFFECTS",
+   "target": "scan to email"
+  },
+  {
+   "source": "printer error SMTP authentication",
+   "relation": "AFFECTS",
+   "target": "scan to email"
+  },
+  {
+   "source": "scanner service account locked",
+   "relation": "FIXED_BY",
+   "target": "confirm account status in Entra ID"
+  },
+  {
+   "source": "scanner service account expired password",
+   "relation": "FIXED_BY",
+   "target": "confirm account status in Entra ID"
+  },
+  {
+   "source": "missing mailbox permissions",
+   "relation": "FIXED_BY",
+   "target": "confirm account status in Entra ID"
+  },
+  {
+   "source": "scanner service account locked",
+   "relation": "FIXED_BY",
+   "target": "escalate to Identity & Access Management"
+  },
+  {
+   "source": "scanner service account expired password",
+   "relation": "FIXED_BY",
+   "target": "escalate to Identity & Access Management"
+  },
+  {
+   "source": "missing mailbox permissions",
+   "relation": "FIXED_BY",
+   "target": "escalate to Identity & Access Management"
+  }
+ ]
+}

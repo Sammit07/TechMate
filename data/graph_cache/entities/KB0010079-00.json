@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Outlook mobile app",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal app",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Intune",
+   "type": "Product"
+  },
+  {
+   "name": "device PIN requirement",
+   "type": "Component"
+  },
+  {
+   "name": "device compliance status",
+   "type": "Component"
+  },
+  {
+   "name": "Conditional Access policies",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook mobile app shows \"Your organization requires you to secure this device before accessing company data.\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "Company Portal app reports enrollment failure with error codes such as 0x8018000a or \"Device not compliant\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "No Acme Global email account appears in Outlook; only personal accounts are listed",
+   "type": "Symptom"
+  },
+  {
+   "name": "device not enrolled in Intune or enrollment interrupted",
+   "type": "Cause"
+  },
+  {
+   "name": "device does not meet compliance requirements (missing PIN, outdated OS, jailbreak/root)",
+   "type": "Cause"
+  },
+  {
+   "name": "Conditional Access policies block access because device is not marked compliant",
+   "type": "Cause"
+  },
+  {
+   "name": "Company Portal app is outdated or missing required permissions",
+   "type": "Cause"
+  },
+  {
+   "name": "enroll device in Intune and set device PIN",
+   "type": "Fix"
+  },
+  {
+   "name": "update Company Portal app and grant required permissions",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Outlook mobile app shows \"Your organization requires you to secure this device before accessing company data.\"",
+   "relation": "CAUSED_BY",
+   "target": "device does not meet compliance requirements (missing PIN, outdated OS, jailbreak/root)"
+  },
+  {
+   "source": "Company Portal app reports enrollment failure with error codes such as 0x8018000a or \"Device not compliant\"",
+   "relation": "CAUSED_BY",
+   "target": "device not enrolled in Intune or enrollment interrupted"
+  },
+  {
+   "source": "No Acme Global email account appears in Outlook; only personal accounts are listed",
+   "relation": "CAUSED_BY",
+   "target": "Conditional Access policies block access because device is not marked compliant"
+  },
+  {
+   "source": "device does not meet compliance requirements (missing PIN, outdated OS, jailbreak/root)",
+   "relation": "FIXED_BY",
+   "target": "enroll device in Intune and set device PIN"
+  },
+  {
+   "source": "device not enrolled in Intune or enrollment interrupted",
+   "relation": "FIXED_BY",
+   "target": "enroll device in Intune and set device PIN"
+  },
+  {
+   "source": "Conditional Access policies block access because device is not marked compliant",
+   "relation": "FIXED_BY",
+   "target": "enroll device in Intune and set device PIN"
+  },
+  {
+   "source": "Company Portal app is outdated or missing required permissions",
+   "relation": "FIXED_BY",
+   "target": "update Company Portal app and grant required permissions"
+  },
+  {
+   "source": "device PIN requirement",
+   "relation": "PART_OF",
+   "target": "Microsoft Intune"
+  },
+  {
+   "source": "device compliance status",
+   "relation": "PART_OF",
+   "target": "Microsoft Intune"
+  },
+  {
+   "source": "Conditional Access policies",
+   "relation": "PART_OF",
+   "target": "Microsoft Intune"
+  },
+  {
+   "source": "Outlook mobile app shows \"Your organization requires you to secure this device before accessing company data.\"",
+   "relation": "AFFECTS",
+   "target": "Outlook mobile app"
+  },
+  {
+   "source": "Company Portal app reports enrollment failure with error codes such as 0x8018000a or \"Device not compliant\"",
+   "relation": "AFFECTS",
+   "target": "Company Portal app"
+  },
+  {
+   "source": "No Acme Global email account appears in Outlook; only personal accounts are listed",
+   "relation": "AFFECTS",
+   "target": "Outlook mobile app"
+  },
+  {
+   "source": "device not enrolled in Intune or enrollment interrupted",
+   "relation": "AFFECTS",
+   "target": "Microsoft Intune"
+  },
+  {
+   "source": "device does not meet compliance requirements (missing PIN, outdated OS, jailbreak/root)",
+   "relation": "AFFECTS",
+   "target": "Microsoft Intune"
+  }
+ ]
+}

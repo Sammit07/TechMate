@@ -1,0 +1,195 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook on the web",
+   "type": "Product"
+  },
+  {
+   "name": "Teams desktop client",
+   "type": "Product"
+  },
+  {
+   "name": "My Account portal",
+   "type": "Product"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "push notification not received",
+   "type": "Symptom"
+  },
+  {
+   "name": "SMS not received",
+   "type": "Symptom"
+  },
+  {
+   "name": "Authenticator code rejected",
+   "type": "Symptom"
+  },
+  {
+   "name": "wrong account shown",
+   "type": "Symptom"
+  },
+  {
+   "name": "duplicate entries",
+   "type": "Symptom"
+  },
+  {
+   "name": "lost phone",
+   "type": "Symptom"
+  },
+  {
+   "name": "no internet connectivity",
+   "type": "Cause"
+  },
+  {
+   "name": "notifications disabled",
+   "type": "Cause"
+  },
+  {
+   "name": "incorrect date and time",
+   "type": "Cause"
+  },
+  {
+   "name": "mobile number mismatch",
+   "type": "Cause"
+  },
+  {
+   "name": "time drift causing TOTP desync",
+   "type": "Cause"
+  },
+  {
+   "name": "enable backup SMS method",
+   "type": "Fix"
+  },
+  {
+   "name": "verify phone connectivity and notifications",
+   "type": "Fix"
+  },
+  {
+   "name": "set date and time to automatic",
+   "type": "Fix"
+  },
+  {
+   "name": "update mobile number in My Account portal",
+   "type": "Fix"
+  },
+  {
+   "name": "wait for next code",
+   "type": "Fix"
+  },
+  {
+   "name": "resync time in Authenticator",
+   "type": "Fix"
+  },
+  {
+   "name": "delete and re-add account",
+   "type": "Fix"
+  },
+  {
+   "name": "remove duplicate accounts",
+   "type": "Fix"
+  },
+  {
+   "name": "re-add account via QR code",
+   "type": "Fix"
+  },
+  {
+   "name": "contact IT Service Desk for TAP",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "push notification not received",
+   "relation": "CAUSED_BY",
+   "target": "no internet connectivity"
+  },
+  {
+   "source": "push notification not received",
+   "relation": "CAUSED_BY",
+   "target": "notifications disabled"
+  },
+  {
+   "source": "SMS not received",
+   "relation": "CAUSED_BY",
+   "target": "mobile number mismatch"
+  },
+  {
+   "source": "Authenticator code rejected",
+   "relation": "CAUSED_BY",
+   "target": "incorrect date and time"
+  },
+  {
+   "source": "Authenticator code rejected",
+   "relation": "CAUSED_BY",
+   "target": "time drift causing TOTP desync"
+  },
+  {
+   "source": "wrong account shown",
+   "relation": "CAUSED_BY",
+   "target": "duplicate entries"
+  },
+  {
+   "source": "lost phone",
+   "relation": "CAUSED_BY",
+   "target": "lost phone"
+  },
+  {
+   "source": "push notification not received",
+   "relation": "FIXED_BY",
+   "target": "verify phone connectivity and notifications"
+  },
+  {
+   "source": "SMS not received",
+   "relation": "FIXED_BY",
+   "target": "update mobile number in My Account portal"
+  },
+  {
+   "source": "Authenticator code rejected",
+   "relation": "FIXED_BY",
+   "target": "set date and time to automatic"
+  },
+  {
+   "source": "Authenticator code rejected",
+   "relation": "FIXED_BY",
+   "target": "resync time in Authenticator"
+  },
+  {
+   "source": "wrong account shown",
+   "relation": "FIXED_BY",
+   "target": "remove duplicate accounts"
+  },
+  {
+   "source": "duplicate entries",
+   "relation": "FIXED_BY",
+   "target": "remove duplicate accounts"
+  },
+  {
+   "source": "wrong account shown",
+   "relation": "FIXED_BY",
+   "target": "re-add account via QR code"
+  },
+  {
+   "source": "lost phone",
+   "relation": "FIXED_BY",
+   "target": "contact IT Service Desk for TAP"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "AFFECTS",
+   "target": "Outlook on the web"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "AFFECTS",
+   "target": "Teams desktop client"
+  }
+ ]
+}

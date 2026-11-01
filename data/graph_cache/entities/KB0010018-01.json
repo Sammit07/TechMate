@@ -1,0 +1,148 @@
+{
+ "entities": [
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "split tunnelling",
+   "type": "Component"
+  },
+  {
+   "name": "internal DNS",
+   "type": "Component"
+  },
+  {
+   "name": "public ISP DNS",
+   "type": "Component"
+  },
+  {
+   "name": "VPN adapter DNS servers",
+   "type": "Component"
+  },
+  {
+   "name": "corporate DNS suffixes",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect certificate",
+   "type": "Component"
+  },
+  {
+   "name": "VPN connected but internal sites don't load",
+   "type": "Symptom"
+  },
+  {
+   "name": "ping internal IP succeeds",
+   "type": "Symptom"
+  },
+  {
+   "name": "ping internal IP fails",
+   "type": "Symptom"
+  },
+  {
+   "name": "DNS servers are external",
+   "type": "Symptom"
+  },
+  {
+   "name": "expired or corrupted certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "misconfigured split tunnelling",
+   "type": "Cause"
+  },
+  {
+   "name": "flush DNS",
+   "type": "Fix"
+  },
+  {
+   "name": "verify split-tunnel settings",
+   "type": "Fix"
+  },
+  {
+   "name": "reconnect GlobalProtect VPN",
+   "type": "Fix"
+  },
+  {
+   "name": "validate VPN certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "check GlobalProtect client version",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "VPN connected but internal sites don't load",
+   "relation": "CAUSED_BY",
+   "target": "misconfigured split tunnelling"
+  },
+  {
+   "source": "VPN connected but internal sites don't load",
+   "relation": "CAUSED_BY",
+   "target": "expired or corrupted certificate"
+  },
+  {
+   "source": "ping internal IP succeeds",
+   "relation": "INDICATES",
+   "target": "DNS issue"
+  },
+  {
+   "source": "ping internal IP fails",
+   "relation": "INDICATES",
+   "target": "tunnel not routing traffic correctly"
+  },
+  {
+   "source": "DNS servers are external",
+   "relation": "INDICATES",
+   "target": "misconfigured split tunnelling"
+  },
+  {
+   "source": "misconfigured split tunnelling",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "expired or corrupted certificate",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect certificate"
+  },
+  {
+   "source": "flush DNS",
+   "relation": "FIXED_BY",
+   "target": "VPN connected but internal sites don't load"
+  },
+  {
+   "source": "verify split-tunnel settings",
+   "relation": "FIXED_BY",
+   "target": "VPN connected but internal sites don't load"
+  },
+  {
+   "source": "reconnect GlobalProtect VPN",
+   "relation": "FIXED_BY",
+   "target": "VPN connected but internal sites don't load"
+  },
+  {
+   "source": "validate VPN certificate",
+   "relation": "FIXED_BY",
+   "target": "VPN connected but internal sites don't load"
+  },
+  {
+   "source": "check GlobalProtect client version",
+   "relation": "FIXED_BY",
+   "target": "VPN connected but internal sites don't load"
+  },
+  {
+   "source": "split tunnelling",
+   "relation": "PART_OF",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "corporate DNS suffixes",
+   "relation": "PART_OF",
+   "target": "split tunnelling"
+  }
+ ]
+}

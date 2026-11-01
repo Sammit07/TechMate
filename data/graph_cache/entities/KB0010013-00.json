@@ -1,0 +1,209 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Entra ID (Azure AD)",
+   "type": "Product"
+  },
+  {
+   "name": "on-prem Active Directory",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft 365 suite",
+   "type": "Product"
+  },
+  {
+   "name": "Intune-managed devices",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Palo Alto GlobalProtect VPN",
+   "type": "Product"
+  },
+  {
+   "name": "PaperCut secure print release",
+   "type": "Product"
+  },
+  {
+   "name": "Unable to sign in to Windows with domain credentials",
+   "type": "Symptom"
+  },
+  {
+   "name": "'The username or password is incorrect'",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Outlook shows 'We couldn't find your mailbox'",
+   "type": "Symptom"
+  },
+  {
+   "name": "Microsoft Teams prompts for sign-in and fails",
+   "type": "Symptom"
+  },
+  {
+   "name": "OneDrive shows 'Set up OneDrive' and never syncs",
+   "type": "Symptom"
+  },
+  {
+   "name": "GlobalProtect VPN connection fails with 'Certificate validation error'",
+   "type": "Symptom"
+  },
+  {
+   "name": "Print jobs stay in 'Hold for authentication' state in PaperCut",
+   "type": "Symptom"
+  },
+  {
+   "name": "HR employee record not yet loaded into the identity provisioning pipeline",
+   "type": "Cause"
+  },
+  {
+   "name": "AD account creation delayed beyond the agreed start date",
+   "type": "Cause"
+  },
+  {
+   "name": "Mailbox not created or Microsoft 365 licence not assigned",
+   "type": "Cause"
+  },
+  {
+   "name": "Device not pre-enrolled in Intune before the user's first login",
+   "type": "Cause"
+  },
+  {
+   "name": "MFA not yet enrolled",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN user certificate not issued or has expired",
+   "type": "Cause"
+  },
+  {
+   "name": "PaperCut user record missing or badge not linked to the AD account",
+   "type": "Cause"
+  },
+  {
+   "name": "Ensure employee record is entered into HRIS with confirmed start date",
+   "type": "Fix"
+  },
+  {
+   "name": "Submit hardware request through IT service portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Pre-enroll device in Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "Issue or renew VPN user certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "Link PaperCut badge to AD account",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Unable to sign in to Windows with domain credentials",
+   "relation": "CAUSED_BY",
+   "target": "HR employee record not yet loaded into the identity provisioning pipeline"
+  },
+  {
+   "source": "'The username or password is incorrect'",
+   "relation": "INDICATES",
+   "target": "AD account creation delayed beyond the agreed start date"
+  },
+  {
+   "source": "Outlook shows 'We couldn't find your mailbox'",
+   "relation": "CAUSED_BY",
+   "target": "Mailbox not created or Microsoft 365 licence not assigned"
+  },
+  {
+   "source": "Microsoft Teams prompts for sign-in and fails",
+   "relation": "CAUSED_BY",
+   "target": "Mailbox not created or Microsoft 365 licence not assigned"
+  },
+  {
+   "source": "OneDrive shows 'Set up OneDrive' and never syncs",
+   "relation": "CAUSED_BY",
+   "target": "Mailbox not created or Microsoft 365 licence not assigned"
+  },
+  {
+   "source": "GlobalProtect VPN connection fails with 'Certificate validation error'",
+   "relation": "CAUSED_BY",
+   "target": "VPN user certificate not issued or has expired"
+  },
+  {
+   "source": "Print jobs stay in 'Hold for authentication' state in PaperCut",
+   "relation": "CAUSED_BY",
+   "target": "PaperCut user record missing or badge not linked to the AD account"
+  },
+  {
+   "source": "HR employee record not yet loaded into the identity provisioning pipeline",
+   "relation": "AFFECTS",
+   "target": "on-prem Active Directory"
+  },
+  {
+   "source": "AD account creation delayed beyond the agreed start date",
+   "relation": "AFFECTS",
+   "target": "on-prem Active Directory"
+  },
+  {
+   "source": "Mailbox not created or Microsoft 365 licence not assigned",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 suite"
+  },
+  {
+   "source": "Device not pre-enrolled in Intune before the user's first login",
+   "relation": "AFFECTS",
+   "target": "Intune-managed devices"
+  },
+  {
+   "source": "MFA not yet enrolled",
+   "relation": "AFFECTS",
+   "target": "Microsoft Entra ID (Azure AD)"
+  },
+  {
+   "source": "VPN user certificate not issued or has expired",
+   "relation": "AFFECTS",
+   "target": "Palo Alto GlobalProtect VPN"
+  },
+  {
+   "source": "PaperCut user record missing or badge not linked to the AD account",
+   "relation": "AFFECTS",
+   "target": "PaperCut secure print release"
+  },
+  {
+   "source": "Ensure employee record is entered into HRIS with confirmed start date",
+   "relation": "FIXED_BY",
+   "target": "HR employee record not yet loaded into the identity provisioning pipeline"
+  },
+  {
+   "source": "Submit hardware request through IT service portal",
+   "relation": "FIXED_BY",
+   "target": "Device not pre-enrolled in Intune before the user's first login"
+  },
+  {
+   "source": "Pre-enroll device in Intune",
+   "relation": "FIXED_BY",
+   "target": "Device not pre-enrolled in Intune before the user's first login"
+  },
+  {
+   "source": "Issue or renew VPN user certificate",
+   "relation": "FIXED_BY",
+   "target": "VPN user certificate not issued or has expired"
+  },
+  {
+   "source": "Link PaperCut badge to AD account",
+   "relation": "FIXED_BY",
+   "target": "PaperCut user record missing or badge not linked to the AD account"
+  }
+ ]
+}

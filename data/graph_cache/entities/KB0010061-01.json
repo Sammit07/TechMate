@@ -1,0 +1,252 @@
+{
+ "entities": [
+  {
+   "name": "browser crash",
+   "type": "Symptom"
+  },
+  {
+   "name": "browser slowness",
+   "type": "Symptom"
+  },
+  {
+   "name": "certificate error",
+   "type": "Symptom"
+  },
+  {
+   "name": "lingering browser processes",
+   "type": "Cause"
+  },
+  {
+   "name": "corrupted cache and cookies",
+   "type": "Cause"
+  },
+  {
+   "name": "incorrect system date and time",
+   "type": "Cause"
+  },
+  {
+   "name": "unfamiliar or recent extensions",
+   "type": "Cause"
+  },
+  {
+   "name": "malware presence",
+   "type": "Cause"
+  },
+  {
+   "name": "non-compliant device in Intune",
+   "type": "Cause"
+  },
+  {
+   "name": "conflicting Group Policy or Intune App Protection Policies",
+   "type": "Cause"
+  },
+  {
+   "name": "missing trusted root certificates",
+   "type": "Cause"
+  },
+  {
+   "name": "corrupted browser profile",
+   "type": "Cause"
+  },
+  {
+   "name": "clear browsing data",
+   "type": "Fix"
+  },
+  {
+   "name": "reset browser settings",
+   "type": "Fix"
+  },
+  {
+   "name": "disable and remove unfamiliar extensions",
+   "type": "Fix"
+  },
+  {
+   "name": "run Microsoft Defender quick scan",
+   "type": "Fix"
+  },
+  {
+   "name": "set system time automatically",
+   "type": "Fix"
+  },
+  {
+   "name": "restart computer",
+   "type": "Fix"
+  },
+  {
+   "name": "verify device compliance in Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "enroll or re-enroll device via Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "adjust or create exception for conflicting policies",
+   "type": "Fix"
+  },
+  {
+   "name": "export and review browser net-internals logs",
+   "type": "Fix"
+  },
+  {
+   "name": "verify trusted root certificate store",
+   "type": "Fix"
+  },
+  {
+   "name": "re-deploy missing certificates via Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "back up bookmarks/passwords and reinstall browser",
+   "type": "Fix"
+  },
+  {
+   "name": "Chrome",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Edge",
+   "type": "Product"
+  },
+  {
+   "name": "Firefox",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Windows Security",
+   "type": "Product"
+  },
+  {
+   "name": "Trusted Root Certification Authorities",
+   "type": "Component"
+  },
+  {
+   "name": "DigiCert root certificate",
+   "type": "Component"
+  },
+  {
+   "name": "Sectigo root certificate",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft root certificate",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "browser crash",
+   "relation": "CAUSED_BY",
+   "target": "lingering browser processes"
+  },
+  {
+   "source": "browser slowness",
+   "relation": "CAUSED_BY",
+   "target": "corrupted cache and cookies"
+  },
+  {
+   "source": "certificate error",
+   "relation": "CAUSED_BY",
+   "target": "incorrect system date and time"
+  },
+  {
+   "source": "certificate error",
+   "relation": "CAUSED_BY",
+   "target": "missing trusted root certificates"
+  },
+  {
+   "source": "browser crash",
+   "relation": "CAUSED_BY",
+   "target": "unfamiliar or recent extensions"
+  },
+  {
+   "source": "browser slowness",
+   "relation": "CAUSED_BY",
+   "target": "malware presence"
+  },
+  {
+   "source": "certificate error",
+   "relation": "INDICATES",
+   "target": "non-compliant device in Intune"
+  },
+  {
+   "source": "browser crash",
+   "relation": "AFFECTS",
+   "target": "Chrome"
+  },
+  {
+   "source": "browser slowness",
+   "relation": "AFFECTS",
+   "target": "Microsoft Edge"
+  },
+  {
+   "source": "certificate error",
+   "relation": "AFFECTS",
+   "target": "Firefox"
+  },
+  {
+   "source": "clear browsing data",
+   "relation": "FIXED_BY",
+   "target": "corrupted cache and cookies"
+  },
+  {
+   "source": "reset browser settings",
+   "relation": "FIXED_BY",
+   "target": "lingering browser processes"
+  },
+  {
+   "source": "disable and remove unfamiliar extensions",
+   "relation": "FIXED_BY",
+   "target": "unfamiliar or recent extensions"
+  },
+  {
+   "source": "run Microsoft Defender quick scan",
+   "relation": "FIXED_BY",
+   "target": "malware presence"
+  },
+  {
+   "source": "set system time automatically",
+   "relation": "FIXED_BY",
+   "target": "incorrect system date and time"
+  },
+  {
+   "source": "verify trusted root certificate store",
+   "relation": "FIXED_BY",
+   "target": "missing trusted root certificates"
+  },
+  {
+   "source": "re-deploy missing certificates via Intune",
+   "relation": "FIXED_BY",
+   "target": "missing trusted root certificates"
+  },
+  {
+   "source": "back up bookmarks/passwords and reinstall browser",
+   "relation": "FIXED_BY",
+   "target": "corrupted browser profile"
+  },
+  {
+   "source": "Trusted Root Certification Authorities",
+   "relation": "PART_OF",
+   "target": "Windows Security"
+  },
+  {
+   "source": "DigiCert root certificate",
+   "relation": "PART_OF",
+   "target": "Trusted Root Certification Authorities"
+  },
+  {
+   "source": "Sectigo root certificate",
+   "relation": "PART_OF",
+   "target": "Trusted Root Certification Authorities"
+  },
+  {
+   "source": "Microsoft root certificate",
+   "relation": "PART_OF",
+   "target": "Trusted Root Certification Authorities"
+  }
+ ]
+}

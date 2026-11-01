@@ -1,0 +1,156 @@
+{
+ "entities": [
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "BitLocker",
+   "type": "Component"
+  },
+  {
+   "name": "Windows 11 (23H2/24H2)",
+   "type": "Product"
+  },
+  {
+   "name": "macOS (14/15)",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Asset Management system",
+   "type": "Product"
+  },
+  {
+   "name": "Desktop Support spare pool",
+   "type": "Product"
+  },
+  {
+   "name": "warranty service",
+   "type": "Product"
+  },
+  {
+   "name": "hardware health checks",
+   "type": "Component"
+  },
+  {
+   "name": "remote diagnostics",
+   "type": "Component"
+  },
+  {
+   "name": "loaner laptop issuance",
+   "type": "Fix"
+  },
+  {
+   "name": "ticket triage",
+   "type": "Fix"
+  },
+  {
+   "name": "verify eligibility",
+   "type": "Fix"
+  },
+  {
+   "name": "reserve spare unit",
+   "type": "Fix"
+  },
+  {
+   "name": "prepare loaner for handover",
+   "type": "Fix"
+  },
+  {
+   "name": "communicate with user",
+   "type": "Fix"
+  },
+  {
+   "name": "create repair order",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Intune",
+   "relation": "PART_OF",
+   "target": "Desktop Support spare pool"
+  },
+  {
+   "source": "BitLocker",
+   "relation": "AFFECTS",
+   "target": "Windows 11 (23H2/24H2)"
+  },
+  {
+   "source": "BitLocker",
+   "relation": "AFFECTS",
+   "target": "macOS (14/15)"
+  },
+  {
+   "source": "Outlook",
+   "relation": "PART_OF",
+   "target": "Windows 11 (23H2/24H2)"
+  },
+  {
+   "source": "Teams",
+   "relation": "PART_OF",
+   "target": "Windows 11 (23H2/24H2)"
+  },
+  {
+   "source": "OneDrive",
+   "relation": "PART_OF",
+   "target": "Windows 11 (23H2/24H2)"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "PART_OF",
+   "target": "Windows 11 (23H2/24H2)"
+  },
+  {
+   "source": "hardware health checks",
+   "relation": "AFFECTS",
+   "target": "remote diagnostics"
+  },
+  {
+   "source": "loaner laptop issuance",
+   "relation": "FIXED_BY",
+   "target": "ticket triage"
+  },
+  {
+   "source": "loaner laptop issuance",
+   "relation": "FIXED_BY",
+   "target": "verify eligibility"
+  },
+  {
+   "source": "loaner laptop issuance",
+   "relation": "FIXED_BY",
+   "target": "reserve spare unit"
+  },
+  {
+   "source": "loaner laptop issuance",
+   "relation": "FIXED_BY",
+   "target": "prepare loaner for handover"
+  },
+  {
+   "source": "loaner laptop issuance",
+   "relation": "FIXED_BY",
+   "target": "communicate with user"
+  },
+  {
+   "source": "loaner laptop issuance",
+   "relation": "FIXED_BY",
+   "target": "create repair order"
+  }
+ ]
+}

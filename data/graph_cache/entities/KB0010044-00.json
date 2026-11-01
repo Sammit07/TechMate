@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive sync client",
+   "type": "Product"
+  },
+  {
+   "name": "File Explorer",
+   "type": "Product"
+  },
+  {
+   "name": "Low disk space warning pop-up",
+   "type": "Symptom"
+  },
+  {
+   "name": "\"Disk full\" error when saving/copying files",
+   "type": "Symptom"
+  },
+  {
+   "name": "Red drive-space bar with <5GB free",
+   "type": "Symptom"
+  },
+  {
+   "name": "OneDrive sync status icon showing warning/paused",
+   "type": "Symptom"
+  },
+  {
+   "name": "Large numbers of locally cached OneDrive files",
+   "type": "Cause"
+  },
+  {
+   "name": "Temporary files, old Windows update caches, or user-saved media",
+   "type": "Cause"
+  },
+  {
+   "name": "Files On-Demand disabled",
+   "type": "Cause"
+  },
+  {
+   "name": "Enable OneDrive Files On-Demand",
+   "type": "Fix"
+  },
+  {
+   "name": "Move existing files to the cloud",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Low disk space warning pop-up",
+   "relation": "CAUSED_BY",
+   "target": "Large numbers of locally cached OneDrive files"
+  },
+  {
+   "source": "\"Disk full\" error when saving/copying files",
+   "relation": "CAUSED_BY",
+   "target": "Large numbers of locally cached OneDrive files"
+  },
+  {
+   "source": "Red drive-space bar with <5GB free",
+   "relation": "CAUSED_BY",
+   "target": "Large numbers of locally cached OneDrive files"
+  },
+  {
+   "source": "OneDrive sync status icon showing warning/paused",
+   "relation": "CAUSED_BY",
+   "target": "Files On-Demand disabled"
+  },
+  {
+   "source": "Large numbers of locally cached OneDrive files",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "Large numbers of locally cached OneDrive files",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "Large numbers of locally cached OneDrive files",
+   "relation": "AFFECTS",
+   "target": "Lenovo ThinkPad T14/X1 Carbon"
+  },
+  {
+   "source": "Large numbers of locally cached OneDrive files",
+   "relation": "AFFECTS",
+   "target": "HP EliteBook 840"
+  },
+  {
+   "source": "Large numbers of locally cached OneDrive files",
+   "relation": "AFFECTS",
+   "target": "OneDrive sync client"
+  },
+  {
+   "source": "Large numbers of locally cached OneDrive files",
+   "relation": "AFFECTS",
+   "target": "File Explorer"
+  },
+  {
+   "source": "Enable OneDrive Files On-Demand",
+   "relation": "FIXED_BY",
+   "target": "Large numbers of locally cached OneDrive files"
+  },
+  {
+   "source": "Move existing files to the cloud",
+   "relation": "FIXED_BY",
+   "target": "Large numbers of locally cached OneDrive files"
+  },
+  {
+   "source": "Files On-Demand disabled",
+   "relation": "FIXED_BY",
+   "target": "Enable OneDrive Files On-Demand"
+  },
+  {
+   "source": "Temporary files, old Windows update caches, or user-saved media",
+   "relation": "AFFECTS",
+   "target": "C: drive"
+  }
+ ]
+}

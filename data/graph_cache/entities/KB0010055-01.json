@@ -1,0 +1,149 @@
+{
+ "entities": [
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Software Center",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect VPN client",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "dsregcmd /status",
+   "type": "Component"
+  },
+  {
+   "name": "profiles status",
+   "type": "Component"
+  },
+  {
+   "name": "Approved software catalog",
+   "type": "Component"
+  },
+  {
+   "name": "Service Desk",
+   "type": "Product"
+  },
+  {
+   "name": "Connect to ACME-Corp Wi-Fi or launch GlobalProtect VPN",
+   "type": "Fix"
+  },
+  {
+   "name": "Sign in with Acme Global credentials and MFA",
+   "type": "Fix"
+  },
+  {
+   "name": "Search for software in Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Click Install button in Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Launch installed program to confirm functionality",
+   "type": "Fix"
+  },
+  {
+   "name": "Request software via service desk",
+   "type": "Fix"
+  },
+  {
+   "name": "Confirm device is Intune-enrolled and compliant",
+   "type": "Fix"
+  },
+  {
+   "name": "Trigger reinstall via Intune",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Connect to ACME-Corp Wi-Fi or launch GlobalProtect VPN",
+   "relation": "FIXED_BY",
+   "target": "Company Portal"
+  },
+  {
+   "source": "Sign in with Acme Global credentials and MFA",
+   "relation": "FIXED_BY",
+   "target": "Company Portal"
+  },
+  {
+   "source": "Search for software in Company Portal",
+   "relation": "FIXED_BY",
+   "target": "Company Portal"
+  },
+  {
+   "source": "Click Install button in Company Portal",
+   "relation": "FIXED_BY",
+   "target": "Company Portal"
+  },
+  {
+   "source": "Launch installed program to confirm functionality",
+   "relation": "FIXED_BY",
+   "target": "Company Portal"
+  },
+  {
+   "source": "Request software via service desk",
+   "relation": "FIXED_BY",
+   "target": "Service Desk"
+  },
+  {
+   "source": "Confirm device is Intune-enrolled and compliant",
+   "relation": "FIXED_BY",
+   "target": "Intune"
+  },
+  {
+   "source": "Trigger reinstall via Intune",
+   "relation": "FIXED_BY",
+   "target": "Intune"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "Approved software catalog"
+  },
+  {
+   "source": "Intune",
+   "relation": "PART_OF",
+   "target": "Approved software catalog"
+  },
+  {
+   "source": "dsregcmd /status",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "profiles status",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "GlobalProtect VPN client",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  },
+  {
+   "source": "Microsoft Authenticator",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  },
+  {
+   "source": "Service Desk",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  }
+ ]
+}

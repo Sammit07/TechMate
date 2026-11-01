@@ -1,0 +1,160 @@
+{
+ "entities": [
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Intune policy refresh delay",
+   "type": "Cause"
+  },
+  {
+   "name": "Application not in approved software list",
+   "type": "Cause"
+  },
+  {
+   "name": "License not assigned to user or device",
+   "type": "Cause"
+  },
+  {
+   "name": "Pending security review",
+   "type": "Cause"
+  },
+  {
+   "name": "User lacks Intune role for LOB apps",
+   "type": "Cause"
+  },
+  {
+   "name": "Software Center shows \"This application is not available for your device\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "Installation attempt returns error 0x80070005",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Installation attempt returns error 0x80070002",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Prompt for administrator credentials despite standard account",
+   "type": "Symptom"
+  },
+  {
+   "name": "Notification: \"Software is not on the approved list\"\n",
+   "type": "Symptom"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15 on MacBook Pro/Air",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Software Center shows \"This application is not available for your device\"",
+   "relation": "CAUSED_BY",
+   "target": "Application not in approved software list"
+  },
+  {
+   "source": "Installation attempt returns error 0x80070005",
+   "relation": "CAUSED_BY",
+   "target": "Application not in approved software list"
+  },
+  {
+   "source": "Installation attempt returns error 0x80070002",
+   "relation": "CAUSED_BY",
+   "target": "Application not in approved software list"
+  },
+  {
+   "source": "Prompt for administrator credentials despite standard account",
+   "relation": "CAUSED_BY",
+   "target": "User lacks Intune role for LOB apps"
+  },
+  {
+   "source": "Notification: \"Software is not on the approved list\"\n",
+   "relation": "CAUSED_BY",
+   "target": "Application not in approved software list"
+  },
+  {
+   "source": "Application not in approved software list",
+   "relation": "FIXED_BY",
+   "target": "Submit formal request for review"
+  },
+  {
+   "source": "License not assigned to user or device",
+   "relation": "FIXED_BY",
+   "target": "Assign required license via Intune"
+  },
+  {
+   "source": "Pending security review",
+   "relation": "FIXED_BY",
+   "target": "Wait for Application Support or Security Operations approval"
+  },
+  {
+   "source": "Intune policy refresh delay",
+   "relation": "FIXED_BY",
+   "target": "Wait for policy sync or manually trigger Intune sync"
+  },
+  {
+   "source": "User lacks Intune role for LOB apps",
+   "relation": "FIXED_BY",
+   "target": "Assign appropriate Intune role"
+  },
+  {
+   "source": "Application not in approved software list",
+   "relation": "INDICATES",
+   "target": "Notification: \"Software is not on the approved list\"\n"
+  },
+  {
+   "source": "Installation attempt returns error 0x80070005",
+   "relation": "INDICATES",
+   "target": "Application not in approved software list"
+  },
+  {
+   "source": "Installation attempt returns error 0x80070002",
+   "relation": "INDICATES",
+   "target": "Application not in approved software list"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "Lenovo ThinkPad T14/X1 Carbon"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "HP EliteBook 840"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15 on MacBook Pro/Air"
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "Office app crashes/freezes",
+   "type": "Symptom"
+  },
+  {
+   "name": "Online Repair",
+   "type": "Fix"
+  },
+  {
+   "name": "disable faulty add-in",
+   "type": "Fix"
+  },
+  {
+   "name": "profile reset",
+   "type": "Fix"
+  },
+  {
+   "name": "licence/token issue",
+   "type": "Cause"
+  },
+  {
+   "name": "OS-level corruption",
+   "type": "Cause"
+  },
+  {
+   "name": "Windows system file damage",
+   "type": "Cause"
+  },
+  {
+   "name": "pending Patch Tuesday reboot",
+   "type": "Cause"
+  },
+  {
+   "name": "Microsoft 365 Apps",
+   "type": "Product"
+  },
+  {
+   "name": "Excel not responding",
+   "type": "Symptom"
+  },
+  {
+   "name": "Word activation prompt",
+   "type": "Symptom"
+  },
+  {
+   "name": "Office slow performance",
+   "type": "Symptom"
+  },
+  {
+   "name": "file corrupted",
+   "type": "Symptom"
+  },
+  {
+   "name": "Identity & Access Management team",
+   "type": "Product"
+  },
+  {
+   "name": "Desktop Support team",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Office app crashes/freezes",
+   "relation": "CAUSED_BY",
+   "target": "licence/token issue"
+  },
+  {
+   "source": "Office app crashes/freezes",
+   "relation": "CAUSED_BY",
+   "target": "OS-level corruption"
+  },
+  {
+   "source": "Office app crashes/freezes",
+   "relation": "FIXED_BY",
+   "target": "Online Repair"
+  },
+  {
+   "source": "Office app crashes/freezes",
+   "relation": "FIXED_BY",
+   "target": "disable faulty add-in"
+  },
+  {
+   "source": "Office app crashes/freezes",
+   "relation": "FIXED_BY",
+   "target": "profile reset"
+  },
+  {
+   "source": "Office app crashes/freezes",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 Apps"
+  },
+  {
+   "source": "Excel not responding",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 Apps"
+  },
+  {
+   "source": "Word activation prompt",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 Apps"
+  },
+  {
+   "source": "Office slow performance",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 Apps"
+  },
+  {
+   "source": "file corrupted",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 Apps"
+  },
+  {
+   "source": "licence/token issue",
+   "relation": "AFFECTS",
+   "target": "Identity & Access Management team"
+  },
+  {
+   "source": "OS-level corruption",
+   "relation": "AFFECTS",
+   "target": "Desktop Support team"
+  },
+  {
+   "source": "Windows system file damage",
+   "relation": "PART_OF",
+   "target": "OS-level corruption"
+  },
+  {
+   "source": "pending Patch Tuesday reboot",
+   "relation": "PART_OF",
+   "target": "OS-level corruption"
+  }
+ ]
+}

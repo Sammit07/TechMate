@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Dell Latitude 7440",
+   "type": "Product"
+  },
+  {
+   "name": "AC adapter",
+   "type": "Component"
+  },
+  {
+   "name": "BIOS/UEFI recovery",
+   "type": "Component"
+  },
+  {
+   "name": "SMC reset",
+   "type": "Component"
+  },
+  {
+   "name": "NVRAM/PRAM reset",
+   "type": "Component"
+  },
+  {
+   "name": "BitLocker recovery key",
+   "type": "Component"
+  },
+  {
+   "name": "Intune company portal",
+   "type": "Product"
+  },
+  {
+   "name": "Power-on self-test (POST)",
+   "type": "Symptom"
+  },
+  {
+   "name": "Login screen",
+   "type": "Symptom"
+  },
+  {
+   "name": "No power",
+   "type": "Symptom"
+  },
+  {
+   "name": "BitLocker recovery screen",
+   "type": "Symptom"
+  },
+  {
+   "name": "Faulty power source",
+   "type": "Cause"
+  },
+  {
+   "name": "Corrupted BIOS/UEFI",
+   "type": "Cause"
+  },
+  {
+   "name": "Reset SMC/NVRAM",
+   "type": "Fix"
+  },
+  {
+   "name": "Retrieve BitLocker recovery key",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "No power",
+   "relation": "CAUSED_BY",
+   "target": "Faulty power source"
+  },
+  {
+   "source": "System does not POST",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted BIOS/UEFI"
+  },
+  {
+   "source": "BitLocker recovery screen",
+   "relation": "INDICATES",
+   "target": "BitLocker recovery key needed"
+  },
+  {
+   "source": "Faulty power source",
+   "relation": "FIXED_BY",
+   "target": "Check power source and connections"
+  },
+  {
+   "source": "Corrupted BIOS/UEFI",
+   "relation": "FIXED_BY",
+   "target": "Attempt BIOS/UEFI recovery"
+  },
+  {
+   "source": "MacBook power issues",
+   "relation": "FIXED_BY",
+   "target": "Reset SMC and NVRAM/PRAM"
+  },
+  {
+   "source": "BitLocker recovery screen",
+   "relation": "FIXED_BY",
+   "target": "Retrieve BitLocker recovery key from Intune company portal"
+  },
+  {
+   "source": "AC adapter",
+   "relation": "PART_OF",
+   "target": "Dell Latitude 7440"
+  },
+  {
+   "source": "BIOS/UEFI recovery",
+   "relation": "PART_OF",
+   "target": "Dell Latitude 7440"
+  },
+  {
+   "source": "SMC reset",
+   "relation": "PART_OF",
+   "target": "MacBook"
+  },
+  {
+   "source": "NVRAM/PRAM reset",
+   "relation": "PART_OF",
+   "target": "MacBook"
+  },
+  {
+   "source": "BitLocker recovery key",
+   "relation": "PART_OF",
+   "target": "Intune company portal"
+  },
+  {
+   "source": "No power",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 7440"
+  },
+  {
+   "source": "System does not POST",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 7440"
+  },
+  {
+   "source": "BitLocker recovery screen",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 7440"
+  }
+ ]
+}

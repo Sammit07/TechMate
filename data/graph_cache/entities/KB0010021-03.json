@@ -1,0 +1,261 @@
+{
+ "entities": [
+  {
+   "name": "corporate Wi-Fi (802.1X)",
+   "type": "Product"
+  },
+  {
+   "name": "guest Wi-Fi",
+   "type": "Product"
+  },
+  {
+   "name": "guest portal RADIUS server",
+   "type": "Component"
+  },
+  {
+   "name": "DHCP",
+   "type": "Component"
+  },
+  {
+   "name": "machine certificate",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "wired Ethernet dock",
+   "type": "Product"
+  },
+  {
+   "name": "sponsor voucher",
+   "type": "Component"
+  },
+  {
+   "name": "repeated credential prompts",
+   "type": "Symptom"
+  },
+  {
+   "name": "no Internet after successful association",
+   "type": "Symptom"
+  },
+  {
+   "name": "frequent disconnections (>2 per hour)",
+   "type": "Symptom"
+  },
+  {
+   "name": "sustained low throughput (<2 Mbps)",
+   "type": "Symptom"
+  },
+  {
+   "name": "certificate validation failures",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "RADIUS timeout",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "authentication errors",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "renew machine certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "check certificate expiry in Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "disable aggressive power-saving",
+   "type": "Fix"
+  },
+  {
+   "name": "use wired Ethernet dock",
+   "type": "Fix"
+  },
+  {
+   "name": "obtain fresh sponsor voucher",
+   "type": "Fix"
+  },
+  {
+   "name": "ping internal gateway",
+   "type": "Fix"
+  },
+  {
+   "name": "ping external host",
+   "type": "Fix"
+  },
+  {
+   "name": "browse IT portal",
+   "type": "Fix"
+  },
+  {
+   "name": "browse external site",
+   "type": "Fix"
+  },
+  {
+   "name": "run speed test",
+   "type": "Fix"
+  },
+  {
+   "name": "observe connection for 10-15 minutes",
+   "type": "Fix"
+  },
+  {
+   "name": "schedule driver updates",
+   "type": "Fix"
+  },
+  {
+   "name": "monitor certificate expiry",
+   "type": "Fix"
+  },
+  {
+   "name": "report persistent slowness or drops",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Network Support",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "repeated credential prompts",
+   "relation": "CAUSED_BY",
+   "target": "expired sponsor voucher"
+  },
+  {
+   "source": "no Internet after successful association",
+   "relation": "CAUSED_BY",
+   "target": "RADIUS timeout"
+  },
+  {
+   "source": "frequent disconnections (>2 per hour)",
+   "relation": "CAUSED_BY",
+   "target": "certificate validation failures"
+  },
+  {
+   "source": "sustained low throughput (<2 Mbps)",
+   "relation": "CAUSED_BY",
+   "target": "RF or hardware problem"
+  },
+  {
+   "source": "certificate validation failures",
+   "relation": "INDICATES",
+   "target": "expired machine certificate"
+  },
+  {
+   "source": "RADIUS timeout",
+   "relation": "INDICATES",
+   "target": "guest portal RADIUS server not responding"
+  },
+  {
+   "source": "authentication errors",
+   "relation": "INDICATES",
+   "target": "invalid sponsor voucher"
+  },
+  {
+   "source": "expired machine certificate",
+   "relation": "FIXED_BY",
+   "target": "renew machine certificate"
+  },
+  {
+   "source": "guest portal RADIUS server not responding",
+   "relation": "FIXED_BY",
+   "target": "ensure guest portal RADIUS server is responding"
+  },
+  {
+   "source": "device does not receive IP via DHCP",
+   "relation": "FIXED_BY",
+   "target": "verify DHCP is functioning"
+  },
+  {
+   "source": "Wi-Fi connection",
+   "relation": "AFFECTS",
+   "target": "corporate Wi-Fi (802.1X)"
+  },
+  {
+   "source": "Wi-Fi connection",
+   "relation": "AFFECTS",
+   "target": "guest Wi-Fi"
+  },
+  {
+   "source": "machine certificate",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "wired Ethernet dock",
+   "relation": "PART_OF",
+   "target": "laptop"
+  },
+  {
+   "source": "sponsor voucher",
+   "relation": "PART_OF",
+   "target": "guest Wi-Fi"
+  },
+  {
+   "source": "disable aggressive power-saving",
+   "relation": "FIXED_BY",
+   "target": "Wi-Fi connection drops during extended use"
+  },
+  {
+   "source": "use wired Ethernet dock",
+   "relation": "FIXED_BY",
+   "target": "bandwidth-intensive tasks"
+  },
+  {
+   "source": "obtain fresh sponsor voucher",
+   "relation": "FIXED_BY",
+   "target": "guest Wi-Fi authentication failure"
+  },
+  {
+   "source": "ping internal gateway",
+   "relation": "FIXED_BY",
+   "target": "validate network connectivity"
+  },
+  {
+   "source": "ping external host",
+   "relation": "FIXED_BY",
+   "target": "validate Internet access"
+  },
+  {
+   "source": "browse IT portal",
+   "relation": "FIXED_BY",
+   "target": "validate intranet access"
+  },
+  {
+   "source": "browse external site",
+   "relation": "FIXED_BY",
+   "target": "validate Internet access"
+  },
+  {
+   "source": "run speed test",
+   "relation": "FIXED_BY",
+   "target": "detect RF issues"
+  },
+  {
+   "source": "observe connection for 10-15 minutes",
+   "relation": "FIXED_BY",
+   "target": "confirm stable connectivity"
+  },
+  {
+   "source": "schedule driver updates",
+   "relation": "FIXED_BY",
+   "target": "prevent Wi-Fi adapter issues"
+  },
+  {
+   "source": "monitor certificate expiry",
+   "relation": "FIXED_BY",
+   "target": "prevent authentication failures"
+  },
+  {
+   "source": "report persistent slowness or drops",
+   "relation": "FIXED_BY",
+   "target": "enable Network Support to adjust AP configurations"
+  }
+ ]
+}

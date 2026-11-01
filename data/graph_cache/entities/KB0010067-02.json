@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "full mailbox",
+   "type": "Symptom"
+  },
+  {
+   "name": "mailbox size verification",
+   "type": "Fix"
+  },
+  {
+   "name": "online archive enablement",
+   "type": "Fix"
+  },
+  {
+   "name": "Exchange Admin Center",
+   "type": "Product"
+  },
+  {
+   "name": "PowerShell command execution",
+   "type": "Fix"
+  },
+  {
+   "name": "Get-MailboxStatistics cmdlet",
+   "type": "Component"
+  },
+  {
+   "name": "Get-Mailbox cmdlet",
+   "type": "Component"
+  },
+  {
+   "name": "ArchiveStatus property",
+   "type": "Component"
+  },
+  {
+   "name": "New-MailboxExportRequest cmdlet",
+   "type": "Component"
+  },
+  {
+   "name": "bulk move operation",
+   "type": "Fix"
+  },
+  {
+   "name": "self-help guidance",
+   "type": "Fix"
+  },
+  {
+   "name": "resolution confirmation",
+   "type": "Fix"
+  },
+  {
+   "name": "quota threshold breach",
+   "type": "Symptom"
+  },
+  {
+   "name": "Messaging & Collaboration L2 team",
+   "type": "Product"
+  },
+  {
+   "name": "permanent quota increase",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "full mailbox",
+   "relation": "CAUSED_BY",
+   "target": "quota threshold breach"
+  },
+  {
+   "source": "quota threshold breach",
+   "relation": "FIXED_BY",
+   "target": "mailbox size verification"
+  },
+  {
+   "source": "quota threshold breach",
+   "relation": "FIXED_BY",
+   "target": "online archive enablement"
+  },
+  {
+   "source": "mailbox size verification",
+   "relation": "AFFECTS",
+   "target": "Exchange Admin Center"
+  },
+  {
+   "source": "mailbox size verification",
+   "relation": "AFFECTS",
+   "target": "PowerShell command execution"
+  },
+  {
+   "source": "PowerShell command execution",
+   "relation": "PART_OF",
+   "target": "Get-MailboxStatistics cmdlet"
+  },
+  {
+   "source": "PowerShell command execution",
+   "relation": "PART_OF",
+   "target": "Get-Mailbox cmdlet"
+  },
+  {
+   "source": "PowerShell command execution",
+   "relation": "PART_OF",
+   "target": "New-MailboxExportRequest cmdlet"
+  },
+  {
+   "source": "ArchiveStatus property",
+   "relation": "INDICATES",
+   "target": "online archive enablement"
+  },
+  {
+   "source": "online archive enablement",
+   "relation": "FIXED_BY",
+   "target": "bulk move operation"
+  },
+  {
+   "source": "bulk move operation",
+   "relation": "FIXED_BY",
+   "target": "self-help guidance"
+  },
+  {
+   "source": "self-help guidance",
+   "relation": "FIXED_BY",
+   "target": "resolution confirmation"
+  },
+  {
+   "source": "quota threshold breach",
+   "relation": "CAUSED_BY",
+   "target": "Messaging & Collaboration L2 team"
+  },
+  {
+   "source": "Messaging & Collaboration L2 team",
+   "relation": "FIXED_BY",
+   "target": "permanent quota increase"
+  }
+ ]
+}

@@ -1,0 +1,179 @@
+{
+ "entities": [
+  {
+   "name": "Wi-Fi repeatedly drops or disconnects after a few minutes",
+   "type": "Symptom"
+  },
+  {
+   "name": "Unable to join ACME-Corp; prompts for username/password repeatedly",
+   "type": "Symptom"
+  },
+  {
+   "name": "Connected to ACME-Corp but no Internet access (limited or no connectivity)",
+   "type": "Symptom"
+  },
+  {
+   "name": "Guest network fails to acquire IP address or shows limited connectivity",
+   "type": "Symptom"
+  },
+  {
+   "name": "Expired or corrupted machine certificate used for 802.1X authentication",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated or incompatible wireless network adapter driver",
+   "type": "Cause"
+  },
+  {
+   "name": "Power-saving settings that turn off the radio to save battery",
+   "type": "Cause"
+  },
+  {
+   "name": "Incorrectly cached credentials or profile for ACME-Corp",
+   "type": "Cause"
+  },
+  {
+   "name": "Interference or channel congestion in high-density areas",
+   "type": "Cause"
+  },
+  {
+   "name": "Guest sponsorship not approved or expired sponsor token",
+   "type": "Cause"
+  },
+  {
+   "name": "Renew or replace machine certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "Update wireless network adapter driver",
+   "type": "Fix"
+  },
+  {
+   "name": "Disable power-saving settings for wireless adapter",
+   "type": "Fix"
+  },
+  {
+   "name": "Clear cached credentials or recreate Wi-Fi profile for ACME-Corp",
+   "type": "Fix"
+  },
+  {
+   "name": "Obtain new sponsor voucher or re-register for guest access",
+   "type": "Fix"
+  },
+  {
+   "name": "Corporate Wi-Fi (ACME-Corp)",
+   "type": "Product"
+  },
+  {
+   "name": "Guest Wi-Fi (ACME-Guest)",
+   "type": "Product"
+  },
+  {
+   "name": "Machine certificate for 802.1X",
+   "type": "Component"
+  },
+  {
+   "name": "Wireless network adapter driver",
+   "type": "Component"
+  },
+  {
+   "name": "Power-saving settings",
+   "type": "Component"
+  },
+  {
+   "name": "Cached credentials or profile for ACME-Corp",
+   "type": "Component"
+  },
+  {
+   "name": "Sponsor voucher or guest registration token",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Wi-Fi repeatedly drops or disconnects after a few minutes",
+   "relation": "CAUSED_BY",
+   "target": "Expired or corrupted machine certificate used for 802.1X authentication"
+  },
+  {
+   "source": "Unable to join ACME-Corp; prompts for username/password repeatedly",
+   "relation": "CAUSED_BY",
+   "target": "Expired or corrupted machine certificate used for 802.1X authentication"
+  },
+  {
+   "source": "Connected to ACME-Corp but no Internet access (limited or no connectivity)",
+   "relation": "CAUSED_BY",
+   "target": "Expired or corrupted machine certificate used for 802.1X authentication"
+  },
+  {
+   "source": "Guest network fails to acquire IP address or shows limited connectivity",
+   "relation": "CAUSED_BY",
+   "target": "Guest sponsorship not approved or expired sponsor token"
+  },
+  {
+   "source": "Expired or corrupted machine certificate used for 802.1X authentication",
+   "relation": "FIXED_BY",
+   "target": "Renew or replace machine certificate"
+  },
+  {
+   "source": "Outdated or incompatible wireless network adapter driver",
+   "relation": "FIXED_BY",
+   "target": "Update wireless network adapter driver"
+  },
+  {
+   "source": "Power-saving settings that turn off the radio to save battery",
+   "relation": "FIXED_BY",
+   "target": "Disable power-saving settings for wireless adapter"
+  },
+  {
+   "source": "Incorrectly cached credentials or profile for ACME-Corp",
+   "relation": "FIXED_BY",
+   "target": "Clear cached credentials or recreate Wi-Fi profile for ACME-Corp"
+  },
+  {
+   "source": "Guest sponsorship not approved or expired sponsor token",
+   "relation": "FIXED_BY",
+   "target": "Obtain new sponsor voucher or re-register for guest access"
+  },
+  {
+   "source": "Expired or corrupted machine certificate used for 802.1X authentication",
+   "relation": "INDICATES",
+   "target": "Wi-Fi repeatedly drops or disconnects after a few minutes"
+  },
+  {
+   "source": "Expired or corrupted machine certificate used for 802.1X authentication",
+   "relation": "INDICATES",
+   "target": "Unable to join ACME-Corp; prompts for username/password repeatedly"
+  },
+  {
+   "source": "Expired or corrupted machine certificate used for 802.1X authentication",
+   "relation": "INDICATES",
+   "target": "Connected to ACME-Corp but no Internet access (limited or no connectivity)"
+  },
+  {
+   "source": "Guest sponsorship not approved or expired sponsor token",
+   "relation": "INDICATES",
+   "target": "Guest network fails to acquire IP address or shows limited connectivity"
+  },
+  {
+   "source": "Wi-Fi repeatedly drops or disconnects after a few minutes",
+   "relation": "AFFECTS",
+   "target": "Corporate Wi-Fi (ACME-Corp)"
+  },
+  {
+   "source": "Unable to join ACME-Corp; prompts for username/password repeatedly",
+   "relation": "AFFECTS",
+   "target": "Corporate Wi-Fi (ACME-Corp)"
+  },
+  {
+   "source": "Connected to ACME-Corp but no Internet access (limited or no connectivity)",
+   "relation": "AFFECTS",
+   "target": "Corporate Wi-Fi (ACME-Corp)"
+  },
+  {
+   "source": "Guest network fails to acquire IP address or shows limited connectivity",
+   "relation": "AFFECTS",
+   "target": "Guest Wi-Fi (ACME-Guest)"
+  }
+ ]
+}

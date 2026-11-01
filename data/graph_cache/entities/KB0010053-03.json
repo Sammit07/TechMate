@@ -1,0 +1,150 @@
+{
+ "entities": [
+  {
+   "name": "BitLocker recovery key",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "TPM",
+   "type": "Component"
+  },
+  {
+   "name": "manage-bde",
+   "type": "Component"
+  },
+  {
+   "name": "Suspend-BitLocker",
+   "type": "Component"
+  },
+  {
+   "name": "Resume-BitLocker",
+   "type": "Component"
+  },
+  {
+   "name": "recovery key fails to unlock drive",
+   "type": "Symptom"
+  },
+  {
+   "name": "BitLocker prompt persists after correct entry",
+   "type": "Symptom"
+  },
+  {
+   "name": "possible TPM failure",
+   "type": "Cause"
+  },
+  {
+   "name": "disk corruption",
+   "type": "Cause"
+  },
+  {
+   "name": "renew BitLocker recovery key process",
+   "type": "Fix"
+  },
+  {
+   "name": "verify identity via MFA",
+   "type": "Fix"
+  },
+  {
+   "name": "self-service password reset portal",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to IAM team",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Desktop Support",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "recovery key fails to unlock drive",
+   "relation": "CAUSED_BY",
+   "target": "possible TPM failure"
+  },
+  {
+   "source": "recovery key fails to unlock drive",
+   "relation": "CAUSED_BY",
+   "target": "disk corruption"
+  },
+  {
+   "source": "BitLocker prompt persists after correct entry",
+   "relation": "CAUSED_BY",
+   "target": "possible TPM failure"
+  },
+  {
+   "source": "BitLocker prompt persists after correct entry",
+   "relation": "CAUSED_BY",
+   "target": "disk corruption"
+  },
+  {
+   "source": "BitLocker recovery key",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "BitLocker recovery key",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  },
+  {
+   "source": "BitLocker recovery key",
+   "relation": "PART_OF",
+   "target": "BitLocker"
+  },
+  {
+   "source": "manage-bde",
+   "relation": "PART_OF",
+   "target": "BitLocker"
+  },
+  {
+   "source": "Suspend-BitLocker",
+   "relation": "PART_OF",
+   "target": "BitLocker"
+  },
+  {
+   "source": "Resume-BitLocker",
+   "relation": "PART_OF",
+   "target": "BitLocker"
+  },
+  {
+   "source": "TPM",
+   "relation": "PART_OF",
+   "target": "BitLocker"
+  },
+  {
+   "source": "verify identity via MFA",
+   "relation": "FIXED_BY",
+   "target": "recovery key fails to unlock drive"
+  },
+  {
+   "source": "self-service password reset portal",
+   "relation": "FIXED_BY",
+   "target": "recovery key fails to unlock drive"
+  },
+  {
+   "source": "escalate to IAM team",
+   "relation": "FIXED_BY",
+   "target": "Intune does not contain BitLocker recovery key"
+  },
+  {
+   "source": "escalate to Desktop Support",
+   "relation": "FIXED_BY",
+   "target": "recovery key fails to unlock drive"
+  },
+  {
+   "source": "escalate to Desktop Support",
+   "relation": "FIXED_BY",
+   "target": "BitLocker prompt persists after correct entry"
+  }
+ ]
+}

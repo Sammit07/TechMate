@@ -1,0 +1,169 @@
+{
+ "entities": [
+  {
+   "name": "Windows 11 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15 MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "Company-issued smartphones and tablets",
+   "type": "Product"
+  },
+  {
+   "name": "Desktop workstations",
+   "type": "Product"
+  },
+  {
+   "name": "VPN",
+   "type": "Product"
+  },
+  {
+   "name": "Wi-Fi (ACME-Corp)",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft 365 services",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "SharePoint",
+   "type": "Product"
+  },
+  {
+   "name": "Receipt of a pop-up warning or email from the Security Operations team indicating a policy violation",
+   "type": "Symptom"
+  },
+  {
+   "name": "Inability to access certain applications or websites due to content filtering",
+   "type": "Symptom"
+  },
+  {
+   "name": "Account lockout or MFA prompts triggered by suspicious activity",
+   "type": "Symptom"
+  },
+  {
+   "name": "Notification from PaperCut or VPN logs showing unauthorized usage",
+   "type": "Symptom"
+  },
+  {
+   "name": "Using company equipment for personal commercial activities, gambling, or illegal downloads",
+   "type": "Cause"
+  },
+  {
+   "name": "Sharing credentials or bypassing MFA controls",
+   "type": "Cause"
+  },
+  {
+   "name": "Attempting to install unapproved software or modify system settings",
+   "type": "Cause"
+  },
+  {
+   "name": "Accessing prohibited websites or transmitting sensitive data outside approved channels",
+   "type": "Cause"
+  },
+  {
+   "name": "Storing personal data on company devices without encryption",
+   "type": "Cause"
+  },
+  {
+   "name": "Review the list of approved applications in Company Portal before installing any software",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify that you are connected to the ACME-Corp Wi-Fi or VPN when accessing internal systems; avoid using ACME-Guest for",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Receipt of a pop-up warning or email from the Security Operations team indicating a policy violation",
+   "relation": "CAUSED_BY",
+   "target": "Using company equipment for personal commercial activities, gambling, or illegal downloads"
+  },
+  {
+   "source": "Inability to access certain applications or websites due to content filtering",
+   "relation": "CAUSED_BY",
+   "target": "Accessing prohibited websites or transmitting sensitive data outside approved channels"
+  },
+  {
+   "source": "Account lockout or MFA prompts triggered by suspicious activity",
+   "relation": "CAUSED_BY",
+   "target": "Sharing credentials or bypassing MFA controls"
+  },
+  {
+   "source": "Notification from PaperCut or VPN logs showing unauthorized usage",
+   "relation": "CAUSED_BY",
+   "target": "Storing personal data on company devices without encryption"
+  },
+  {
+   "source": "Using company equipment for personal commercial activities, gambling, or illegal downloads",
+   "relation": "FIXED_BY",
+   "target": "Review the list of approved applications in Company Portal before installing any software"
+  },
+  {
+   "source": "Accessing prohibited websites or transmitting sensitive data outside approved channels",
+   "relation": "FIXED_BY",
+   "target": "Verify that you are connected to the ACME-Corp Wi-Fi or VPN when accessing internal systems; avoid using ACME-Guest for"
+  },
+  {
+   "source": "Sharing credentials or bypassing MFA controls",
+   "relation": "FIXED_BY",
+   "target": "Review the list of approved applications in Company Portal before installing any software"
+  },
+  {
+   "source": "Storing personal data on company devices without encryption",
+   "relation": "FIXED_BY",
+   "target": "Verify that you are connected to the ACME-Corp Wi-Fi or VPN when accessing internal systems; avoid using ACME-Guest for"
+  },
+  {
+   "source": "Windows 11 laptops",
+   "relation": "AFFECTS",
+   "target": "Using company equipment for personal commercial activities, gambling, or illegal downloads"
+  },
+  {
+   "source": "macOS 14/15 MacBook Pro/Air",
+   "relation": "AFFECTS",
+   "target": "Using company equipment for personal commercial activities, gambling, or illegal downloads"
+  },
+  {
+   "source": "Company-issued smartphones and tablets",
+   "relation": "AFFECTS",
+   "target": "Using company equipment for personal commercial activities, gambling, or illegal downloads"
+  },
+  {
+   "source": "Desktop workstations",
+   "relation": "AFFECTS",
+   "target": "Using company equipment for personal commercial activities, gambling, or illegal downloads"
+  },
+  {
+   "source": "VPN",
+   "relation": "AFFECTS",
+   "target": "Accessing prohibited websites or transmitting sensitive data outside approved channels"
+  },
+  {
+   "source": "Wi-Fi (ACME-Corp)",
+   "relation": "AFFECTS",
+   "target": "Accessing prohibited websites or transmitting sensitive data outside approved channels"
+  },
+  {
+   "source": "Microsoft 365 services",
+   "relation": "AFFECTS",
+   "target": "Accessing prohibited websites or transmitting sensitive data outside approved channels"
+  }
+ ]
+}

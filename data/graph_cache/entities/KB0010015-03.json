@@ -1,0 +1,169 @@
+{
+ "entities": [
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "machine certificate",
+   "type": "Component"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi profile",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "Active Directory",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect VPN",
+   "type": "Product"
+  },
+  {
+   "name": "Identity & Access Management (IAM)",
+   "type": "Product"
+  },
+  {
+   "name": "certificate error",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "missing machine certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "expired machine certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "battery optimization blocking push",
+   "type": "Cause"
+  },
+  {
+   "name": "force sync and re-issue recovery key",
+   "type": "Fix"
+  },
+  {
+   "name": "re-enroll device via Intune",
+   "type": "Fix"
+  },
+  {
+   "name": "re-push ACME-Corp Wi-Fi profile",
+   "type": "Fix"
+  },
+  {
+   "name": "update Microsoft Authenticator",
+   "type": "Fix"
+  },
+  {
+   "name": "disable battery optimization",
+   "type": "Fix"
+  },
+  {
+   "name": "VPN fails with certificate error",
+   "type": "Symptom"
+  },
+  {
+   "name": "Wi-Fi prompts for username/password",
+   "type": "Symptom"
+  },
+  {
+   "name": "MFA push not received",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "VPN fails with certificate error",
+   "relation": "CAUSED_BY",
+   "target": "expired machine certificate"
+  },
+  {
+   "source": "VPN fails with certificate error",
+   "relation": "CAUSED_BY",
+   "target": "missing machine certificate"
+  },
+  {
+   "source": "Wi-Fi prompts for username/password",
+   "relation": "CAUSED_BY",
+   "target": "missing machine certificate"
+  },
+  {
+   "source": "MFA push not received",
+   "relation": "CAUSED_BY",
+   "target": "battery optimization blocking push"
+  },
+  {
+   "source": "missing machine certificate",
+   "relation": "FIXED_BY",
+   "target": "re-enroll device via Intune"
+  },
+  {
+   "source": "expired machine certificate",
+   "relation": "FIXED_BY",
+   "target": "re-enroll device via Intune"
+  },
+  {
+   "source": "missing machine certificate",
+   "relation": "FIXED_BY",
+   "target": "re-push ACME-Corp Wi-Fi profile"
+  },
+  {
+   "source": "battery optimization blocking push",
+   "relation": "FIXED_BY",
+   "target": "disable battery optimization"
+  },
+  {
+   "source": "outdated Microsoft Authenticator",
+   "relation": "FIXED_BY",
+   "target": "update Microsoft Authenticator"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "machine certificate"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "ACME-Corp Wi-Fi profile"
+  },
+  {
+   "source": "machine certificate",
+   "relation": "PART_OF",
+   "target": "GlobalProtect VPN"
+  },
+  {
+   "source": "machine certificate",
+   "relation": "PART_OF",
+   "target": "ACME-Corp Wi-Fi"
+  },
+  {
+   "source": "certificate error",
+   "relation": "INDICATES",
+   "target": "missing machine certificate"
+  },
+  {
+   "source": "certificate error",
+   "relation": "INDICATES",
+   "target": "expired machine certificate"
+  }
+ ]
+}

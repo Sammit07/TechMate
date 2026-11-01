@@ -1,0 +1,284 @@
+{
+ "entities": [
+  {
+   "name": "WAN connection",
+   "type": "Component"
+  },
+  {
+   "name": "obtain IP address automatically (DHCP)",
+   "type": "Fix"
+  },
+  {
+   "name": "PPPoE",
+   "type": "Component"
+  },
+  {
+   "name": "VLAN ID",
+   "type": "Component"
+  },
+  {
+   "name": "double NAT",
+   "type": "Cause"
+  },
+  {
+   "name": "modem-router combo",
+   "type": "Product"
+  },
+  {
+   "name": "bridge mode",
+   "type": "Fix"
+  },
+  {
+   "name": "AP mode",
+   "type": "Fix"
+  },
+  {
+   "name": "VPN passthrough",
+   "type": "Component"
+  },
+  {
+   "name": "IPsec Passthrough",
+   "type": "Component"
+  },
+  {
+   "name": "PPTP Passthrough",
+   "type": "Component"
+  },
+  {
+   "name": "UDP ports 4500 and 500",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "QoS",
+   "type": "Component"
+  },
+  {
+   "name": "prioritize traffic to the IP address of your work laptop",
+   "type": "Fix"
+  },
+  {
+   "name": "mark the GlobalProtect application as high priority",
+   "type": "Fix"
+  },
+  {
+   "name": "Wi-Fi channel",
+   "type": "Component"
+  },
+  {
+   "name": "SSID: ACME-Home",
+   "type": "Component"
+  },
+  {
+   "name": "WPA2-PSK AES encryption",
+   "type": "Component"
+  },
+  {
+   "name": "static DHCP reservation",
+   "type": "Fix"
+  },
+  {
+   "name": "work laptop",
+   "type": "Product"
+  },
+  {
+   "name": "connectivity issues",
+   "type": "Symptom"
+  },
+  {
+   "name": "speed test",
+   "type": "Fix"
+  },
+  {
+   "name": "https://speedtest.acme.example",
+   "type": "Component"
+  },
+  {
+   "name": "directly to the modem",
+   "type": "Fix"
+  },
+  {
+   "name": "router make/model",
+   "type": "Component"
+  },
+  {
+   "name": "firmware version",
+   "type": "Component"
+  },
+  {
+   "name": "WAN and LAN settings pages",
+   "type": "Component"
+  },
+  {
+   "name": "remote traceroute",
+   "type": "Fix"
+  },
+  {
+   "name": "vpn.acme.example",
+   "type": "Component"
+  },
+  {
+   "name": ">100 ms latency",
+   "type": "Symptom"
+  },
+  {
+   "name": "packet loss",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "connectivity issues",
+   "relation": "CAUSED_BY",
+   "target": "double NAT"
+  },
+  {
+   "source": "connectivity issues",
+   "relation": "CAUSED_BY",
+   "target": "VPN passthrough not enabled"
+  },
+  {
+   "source": "VPN passthrough",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "UDP ports 4500 and 500",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "QoS",
+   "relation": "AFFECTS",
+   "target": "work laptop"
+  },
+  {
+   "source": "static DHCP reservation",
+   "relation": "AFFECTS",
+   "target": "work laptop"
+  },
+  {
+   "source": "WAN connection",
+   "relation": "PART_OF",
+   "target": "router"
+  },
+  {
+   "source": "VLAN ID",
+   "relation": "PART_OF",
+   "target": "WAN connection"
+  },
+  {
+   "source": "modem-router combo",
+   "relation": "PART_OF",
+   "target": "ISP device"
+  },
+  {
+   "source": "bridge mode",
+   "relation": "FIXED_BY",
+   "target": "double NAT"
+  },
+  {
+   "source": "AP mode",
+   "relation": "FIXED_BY",
+   "target": "double NAT"
+  },
+  {
+   "source": "VPN passthrough",
+   "relation": "FIXED_BY",
+   "target": "enable IPsec/PPTP Passthrough"
+  },
+  {
+   "source": "open UDP ports 4500 and 500",
+   "relation": "FIXED_BY",
+   "target": "ensure UDP ports 4500 and 500 are open"
+  },
+  {
+   "source": "prioritize traffic",
+   "relation": "FIXED_BY",
+   "target": "prioritize traffic to the IP address of your work laptop"
+  },
+  {
+   "source": "mark GlobalProtect as high priority",
+   "relation": "FIXED_BY",
+   "target": "mark the GlobalProtect application as high priority"
+  },
+  {
+   "source": "Wi-Fi channel",
+   "relation": "FIXED_BY",
+   "target": "choose a less congested Wi-Fi channel"
+  },
+  {
+   "source": "SSID: ACME-Home",
+   "relation": "FIXED_BY",
+   "target": "set the SSID to 'ACME-Home'"
+  },
+  {
+   "source": "WPA2-PSK AES encryption",
+   "relation": "FIXED_BY",
+   "target": "set WPA2-PSK AES encryption"
+  },
+  {
+   "source": "static DHCP reservation",
+   "relation": "FIXED_BY",
+   "target": "set a static DHCP reservation for your work laptop"
+  },
+  {
+   "source": "reboot the router",
+   "relation": "FIXED_BY",
+   "target": "save settings, reboot the router, and reconnect your devices"
+  },
+  {
+   "source": "connectivity issues",
+   "relation": "INDICATES",
+   "target": "speed test"
+  },
+  {
+   "source": "speed test",
+   "relation": "FIXED_BY",
+   "target": "run a speed test via https://speedtest.acme.example"
+  },
+  {
+   "source": "directly to the modem",
+   "relation": "FIXED_BY",
+   "target": "connect the laptop directly to the modem (bypassing the router)"
+  },
+  {
+   "source": "VPN works directly",
+   "relation": "INDICATES",
+   "target": "router issue"
+  },
+  {
+   "source": "router make/model",
+   "relation": "AFFECTS",
+   "target": "router"
+  },
+  {
+   "source": "firmware version",
+   "relation": "AFFECTS",
+   "target": "router"
+  },
+  {
+   "source": "WAN and LAN settings pages",
+   "relation": "AFFECTS",
+   "target": "router"
+  },
+  {
+   "source": "remote traceroute",
+   "relation": "FIXED_BY",
+   "target": "run a remote traceroute (using the user's laptop) to vpn.acme.example"
+  },
+  {
+   "source": ">100 ms latency",
+   "relation": "INDICATES",
+   "target": "network issue"
+  },
+  {
+   "source": "packet loss",
+   "relation": "INDICATES",
+   "target": "network issue"
+  }
+ ]
+}

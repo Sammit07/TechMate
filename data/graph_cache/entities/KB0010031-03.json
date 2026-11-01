@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "stuck on boot logo or automatic repair loop",
+   "type": "Symptom"
+  },
+  {
+   "name": "BIOS/UEFI diagnostics report a hardware fault",
+   "type": "Cause"
+  },
+  {
+   "name": "repeated startup repair attempts fail despite a clean WinRE environment",
+   "type": "Cause"
+  },
+  {
+   "name": "device is out of warranty and requires a depot repair",
+   "type": "Cause"
+  },
+  {
+   "name": "SSD read errors",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "RAM failure",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "BIOS version",
+   "type": "Component"
+  },
+  {
+   "name": "SSD model",
+   "type": "Component"
+  },
+  {
+   "name": "BitLocker recovery",
+   "type": "Component"
+  },
+  {
+   "name": "warranty RMA",
+   "type": "Component"
+  },
+  {
+   "name": "laptop won't start",
+   "type": "Symptom"
+  },
+  {
+   "name": "black screen after logo",
+   "type": "Symptom"
+  },
+  {
+   "name": "hard reset",
+   "type": "Fix"
+  },
+  {
+   "name": "startup repair",
+   "type": "Fix"
+  },
+  {
+   "name": "UEFI diagnostics",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "CAUSED_BY",
+   "target": "BIOS/UEFI diagnostics report a hardware fault"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "CAUSED_BY",
+   "target": "repeated startup repair attempts fail despite a clean WinRE environment"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "CAUSED_BY",
+   "target": "device is out of warranty and requires a depot repair"
+  },
+  {
+   "source": "BIOS/UEFI diagnostics report a hardware fault",
+   "relation": "INDICATES",
+   "target": "SSD read errors"
+  },
+  {
+   "source": "BIOS/UEFI diagnostics report a hardware fault",
+   "relation": "INDICATES",
+   "target": "RAM failure"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "AFFECTS",
+   "target": "laptop won't start"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "AFFECTS",
+   "target": "black screen after logo"
+  },
+  {
+   "source": "hard reset",
+   "relation": "FIXED_BY",
+   "target": "stuck on boot logo or automatic repair loop"
+  },
+  {
+   "source": "startup repair",
+   "relation": "FIXED_BY",
+   "target": "stuck on boot logo or automatic repair loop"
+  },
+  {
+   "source": "UEFI diagnostics",
+   "relation": "FIXED_BY",
+   "target": "stuck on boot logo or automatic repair loop"
+  },
+  {
+   "source": "BIOS version",
+   "relation": "PART_OF",
+   "target": "BIOS/UEFI diagnostics report a hardware fault"
+  },
+  {
+   "source": "SSD model",
+   "relation": "PART_OF",
+   "target": "BIOS/UEFI diagnostics report a hardware fault"
+  },
+  {
+   "source": "BitLocker recovery",
+   "relation": "AFFECTS",
+   "target": "stuck on boot logo or automatic repair loop"
+  },
+  {
+   "source": "warranty RMA",
+   "relation": "AFFECTS",
+   "target": "device is out of warranty and requires a depot repair"
+  }
+ ]
+}

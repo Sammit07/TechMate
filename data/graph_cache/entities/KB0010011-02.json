@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "SharePoint access",
+   "type": "Symptom"
+  },
+  {
+   "name": "file share permission",
+   "type": "Symptom"
+  },
+  {
+   "name": "HR system access",
+   "type": "Symptom"
+  },
+  {
+   "name": "group membership issue",
+   "type": "Cause"
+  },
+  {
+   "name": "token refresh required",
+   "type": "Cause"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "Azure AD",
+   "type": "Product"
+  },
+  {
+   "name": "Conditional Access",
+   "type": "Component"
+  },
+  {
+   "name": "MFA",
+   "type": "Component"
+  },
+  {
+   "name": "sign out and back in",
+   "type": "Fix"
+  },
+  {
+   "name": "add user to group",
+   "type": "Fix"
+  },
+  {
+   "name": "grant SharePoint/NTFS permission",
+   "type": "Fix"
+  },
+  {
+   "name": "replication latency",
+   "type": "Cause"
+  },
+  {
+   "name": "access denied after approval",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "token propagation delay",
+   "type": "Cause"
+  }
+ ],
+ "relations": [
+  {
+   "source": "SharePoint access",
+   "relation": "AFFECTS",
+   "target": "Entra ID"
+  },
+  {
+   "source": "file share permission",
+   "relation": "AFFECTS",
+   "target": "Azure AD"
+  },
+  {
+   "source": "HR system access",
+   "relation": "AFFECTS",
+   "target": "Entra ID"
+  },
+  {
+   "source": "group membership issue",
+   "relation": "CAUSED_BY",
+   "target": "access denied after approval"
+  },
+  {
+   "source": "token refresh required",
+   "relation": "CAUSED_BY",
+   "target": "access denied after approval"
+  },
+  {
+   "source": "replication latency",
+   "relation": "CAUSED_BY",
+   "target": "access denied after approval"
+  },
+  {
+   "source": "access denied after approval",
+   "relation": "INDICATES",
+   "target": "group membership issue"
+  },
+  {
+   "source": "access denied after approval",
+   "relation": "INDICATES",
+   "target": "token refresh required"
+  },
+  {
+   "source": "access denied after approval",
+   "relation": "INDICATES",
+   "target": "replication latency"
+  },
+  {
+   "source": "group membership issue",
+   "relation": "FIXED_BY",
+   "target": "add user to group"
+  },
+  {
+   "source": "group membership issue",
+   "relation": "FIXED_BY",
+   "target": "grant SharePoint/NTFS permission"
+  },
+  {
+   "source": "token refresh required",
+   "relation": "FIXED_BY",
+   "target": "sign out and back in"
+  },
+  {
+   "source": "token propagation delay",
+   "relation": "FIXED_BY",
+   "target": "sign out and back in"
+  },
+  {
+   "source": "Conditional Access",
+   "relation": "PART_OF",
+   "target": "Entra ID"
+  },
+  {
+   "source": "MFA",
+   "relation": "PART_OF",
+   "target": "Entra ID"
+  }
+ ]
+}

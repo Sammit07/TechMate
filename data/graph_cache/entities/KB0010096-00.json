@@ -1,0 +1,184 @@
+{
+ "entities": [
+  {
+   "name": "ACME-Guest",
+   "type": "Product"
+  },
+  {
+   "name": "SSID 'ACME-Guest'",
+   "type": "Component"
+  },
+  {
+   "name": "WPA2-Enterprise",
+   "type": "Component"
+  },
+  {
+   "name": "802.1X",
+   "type": "Component"
+  },
+  {
+   "name": "RADIUS server",
+   "type": "Component"
+  },
+  {
+   "name": "Access point",
+   "type": "Component"
+  },
+  {
+   "name": "Unable to see the SSID 'ACME-Guest'",
+   "type": "Symptom"
+  },
+  {
+   "name": "Connection attempt fails with the message 'Cannot connect to this network'",
+   "type": "Symptom"
+  },
+  {
+   "name": "No internet access after connecting",
+   "type": "Symptom"
+  },
+  {
+   "name": "Captive portal does not appear",
+   "type": "Symptom"
+  },
+  {
+   "name": "Authentication error: 'Invalid username or password'",
+   "type": "Symptom"
+  },
+  {
+   "name": "Visitor credentials have expired or were not sponsored",
+   "type": "Cause"
+  },
+  {
+   "name": "Device missing a valid 802.1X supplicant profile",
+   "type": "Cause"
+  },
+  {
+   "name": "Wrong authentication method configured",
+   "type": "Cause"
+  },
+  {
+   "name": "MAC address blocked due to policy violation",
+   "type": "Cause"
+  },
+  {
+   "name": "Network infrastructure issue (AP outage or RADIUS unavailability)",
+   "type": "Cause"
+  },
+  {
+   "name": "Select SSID 'ACME-Guest' from available networks",
+   "type": "Fix"
+  },
+  {
+   "name": "Choose WPA2-Enterprise or 802.1X as security method",
+   "type": "Fix"
+  },
+  {
+   "name": "Enter username and password from host or kiosk",
+   "type": "Fix"
+  },
+  {
+   "name": "Scan QR-code to auto-fill credentials",
+   "type": "Fix"
+  },
+  {
+   "name": "Accept certificate prompts for trusted RADIUS certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "Open web browser to confirm internet access",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Unable to see the SSID 'ACME-Guest'",
+   "relation": "CAUSED_BY",
+   "target": "Device missing a valid 802.1X supplicant profile"
+  },
+  {
+   "source": "Unable to see the SSID 'ACME-Guest'",
+   "relation": "CAUSED_BY",
+   "target": "Wrong authentication method configured"
+  },
+  {
+   "source": "Connection attempt fails with the message 'Cannot connect to this network'",
+   "relation": "CAUSED_BY",
+   "target": "Visitor credentials have expired or were not sponsored"
+  },
+  {
+   "source": "Connection attempt fails with the message 'Cannot connect to this network'",
+   "relation": "CAUSED_BY",
+   "target": "MAC address blocked due to policy violation"
+  },
+  {
+   "source": "No internet access after connecting",
+   "relation": "CAUSED_BY",
+   "target": "Network infrastructure issue (AP outage or RADIUS unavailability)"
+  },
+  {
+   "source": "Captive portal does not appear",
+   "relation": "CAUSED_BY",
+   "target": "Network infrastructure issue (AP outage or RADIUS unavailability)"
+  },
+  {
+   "source": "Authentication error: 'Invalid username or password'",
+   "relation": "CAUSED_BY",
+   "target": "Visitor credentials have expired or were not sponsored"
+  },
+  {
+   "source": "Select SSID 'ACME-Guest' from available networks",
+   "relation": "FIXED_BY",
+   "target": "Unable to see the SSID 'ACME-Guest'"
+  },
+  {
+   "source": "Choose WPA2-Enterprise or 802.1X as security method",
+   "relation": "FIXED_BY",
+   "target": "Unable to see the SSID 'ACME-Guest'"
+  },
+  {
+   "source": "Enter username and password from host or kiosk",
+   "relation": "FIXED_BY",
+   "target": "Authentication error: 'Invalid username or password'"
+  },
+  {
+   "source": "Scan QR-code to auto-fill credentials",
+   "relation": "FIXED_BY",
+   "target": "Authentication error: 'Invalid username or password'"
+  },
+  {
+   "source": "Accept certificate prompts for trusted RADIUS certificate",
+   "relation": "FIXED_BY",
+   "target": "Connection attempt fails with the message 'Cannot connect to this network'"
+  },
+  {
+   "source": "Open web browser to confirm internet access",
+   "relation": "FIXED_BY",
+   "target": "No internet access after connecting"
+  },
+  {
+   "source": "SSID 'ACME-Guest'",
+   "relation": "PART_OF",
+   "target": "ACME-Guest"
+  },
+  {
+   "source": "WPA2-Enterprise",
+   "relation": "PART_OF",
+   "target": "ACME-Guest"
+  },
+  {
+   "source": "802.1X",
+   "relation": "PART_OF",
+   "target": "ACME-Guest"
+  },
+  {
+   "source": "RADIUS server",
+   "relation": "AFFECTS",
+   "target": "ACME-Guest"
+  },
+  {
+   "source": "Access point",
+   "relation": "AFFECTS",
+   "target": "ACME-Guest"
+  }
+ ]
+}

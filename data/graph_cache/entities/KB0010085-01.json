@@ -1,0 +1,126 @@
+{
+ "entities": [
+  {
+   "name": "tech-support scam pop-up",
+   "type": "Symptom"
+  },
+  {
+   "name": "browser-based scam",
+   "type": "Cause"
+  },
+  {
+   "name": "genuine malware detection",
+   "type": "Cause"
+  },
+  {
+   "name": "Microsoft Defender Security Center",
+   "type": "Product"
+  },
+  {
+   "name": "Quick scan",
+   "type": "Component"
+  },
+  {
+   "name": "Full scan",
+   "type": "Component"
+  },
+  {
+   "name": "quarantined items",
+   "type": "Component"
+  },
+  {
+   "name": "browser cache and settings reset",
+   "type": "Fix"
+  },
+  {
+   "name": "Task Manager end task",
+   "type": "Fix"
+  },
+  {
+   "name": "Intune portal",
+   "type": "Product"
+  },
+  {
+   "name": "Windows Security",
+   "type": "Product"
+  },
+  {
+   "name": "Protection history",
+   "type": "Component"
+  },
+  {
+   "name": "scan result",
+   "type": "Component"
+  },
+  {
+   "name": "screenshot of pop-up",
+   "type": "Component"
+  },
+  {
+   "name": "device hostname and IP address",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "tech-support scam pop-up",
+   "relation": "CAUSED_BY",
+   "target": "browser-based scam"
+  },
+  {
+   "source": "tech-support scam pop-up",
+   "relation": "INDICATES",
+   "target": "genuine malware detection"
+  },
+  {
+   "source": "Microsoft Defender Security Center",
+   "relation": "PART_OF",
+   "target": "Windows Security"
+  },
+  {
+   "source": "Quick scan",
+   "relation": "PART_OF",
+   "target": "Microsoft Defender Security Center"
+  },
+  {
+   "source": "Full scan",
+   "relation": "PART_OF",
+   "target": "Microsoft Defender Security Center"
+  },
+  {
+   "source": "quarantined items",
+   "relation": "INDICATES",
+   "target": "genuine malware detection"
+  },
+  {
+   "source": "scan result",
+   "relation": "INDICATES",
+   "target": "genuine malware detection"
+  },
+  {
+   "source": "tech-support scam pop-up",
+   "relation": "FIXED_BY",
+   "target": "Task Manager end task"
+  },
+  {
+   "source": "tech-support scam pop-up",
+   "relation": "FIXED_BY",
+   "target": "browser cache and settings reset"
+  },
+  {
+   "source": "device hostname and IP address",
+   "relation": "AFFECTS",
+   "target": "Intune portal"
+  },
+  {
+   "source": "Protection history",
+   "relation": "PART_OF",
+   "target": "Microsoft Defender Security Center"
+  },
+  {
+   "source": "screenshot of pop-up",
+   "relation": "AFFECTS",
+   "target": "tech-support scam pop-up"
+  }
+ ]
+}

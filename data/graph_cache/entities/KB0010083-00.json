@@ -1,0 +1,132 @@
+{
+ "entities": [
+  {
+   "name": "Outlook desktop client",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook on the web",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 laptops",
+   "type": "Product"
+  },
+  {
+   "name": "macOS laptops",
+   "type": "Product"
+  },
+  {
+   "name": "Report button",
+   "type": "Component"
+  },
+  {
+   "name": "Report as Phishing",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Defender for Office 365",
+   "type": "Product"
+  },
+  {
+   "name": "Security Operations mailbox",
+   "type": "Component"
+  },
+  {
+   "name": "Unexpected email requesting credentials",
+   "type": "Symptom"
+  },
+  {
+   "name": "Message with urgent language",
+   "type": "Symptom"
+  },
+  {
+   "name": "Sender address spoofing",
+   "type": "Cause"
+  },
+  {
+   "name": "Malicious link",
+   "type": "Cause"
+  },
+  {
+   "name": "Malware attachment",
+   "type": "Cause"
+  },
+  {
+   "name": "Phishing email reported",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Unexpected email requesting credentials",
+   "relation": "INDICATES",
+   "target": "Phishing email reported"
+  },
+  {
+   "source": "Message with urgent language",
+   "relation": "INDICATES",
+   "target": "Phishing email reported"
+  },
+  {
+   "source": "Sender address spoofing",
+   "relation": "CAUSED_BY",
+   "target": "Phishing email reported"
+  },
+  {
+   "source": "Malicious link",
+   "relation": "CAUSED_BY",
+   "target": "Phishing email reported"
+  },
+  {
+   "source": "Malware attachment",
+   "relation": "CAUSED_BY",
+   "target": "Phishing email reported"
+  },
+  {
+   "source": "Report button",
+   "relation": "PART_OF",
+   "target": "Outlook desktop client"
+  },
+  {
+   "source": "Report button",
+   "relation": "PART_OF",
+   "target": "Outlook on the web"
+  },
+  {
+   "source": "Report as Phishing",
+   "relation": "PART_OF",
+   "target": "Report button"
+  },
+  {
+   "source": "Phishing email reported",
+   "relation": "FIXED_BY",
+   "target": "Security Operations mailbox"
+  },
+  {
+   "source": "Security Operations mailbox",
+   "relation": "AFFECTS",
+   "target": "Microsoft Defender for Office 365"
+  },
+  {
+   "source": "Windows 11 laptops",
+   "relation": "AFFECTS",
+   "target": "Outlook desktop client"
+  },
+  {
+   "source": "macOS laptops",
+   "relation": "AFFECTS",
+   "target": "Outlook desktop client"
+  },
+  {
+   "source": "Report button",
+   "relation": "AFFECTS",
+   "target": "Windows 11 laptops"
+  },
+  {
+   "source": "Report button",
+   "relation": "AFFECTS",
+   "target": "macOS laptops"
+  }
+ ]
+}

@@ -1,0 +1,109 @@
+{
+ "entities": [
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "sync problem",
+   "type": "Symptom"
+  },
+  {
+   "name": "yellow warning triangle",
+   "type": "Component"
+  },
+  {
+   "name": "_ConflictCopy_ file",
+   "type": "Component"
+  },
+  {
+   "name": "storage quota exceeded",
+   "type": "Cause"
+  },
+  {
+   "name": "invalid file/folder name",
+   "type": "Cause"
+  },
+  {
+   "name": "outdated OneDrive client",
+   "type": "Cause"
+  },
+  {
+   "name": "reset OneDrive client",
+   "type": "Fix"
+  },
+  {
+   "name": "rename conflicting files",
+   "type": "Fix"
+  },
+  {
+   "name": "free up storage",
+   "type": "Fix"
+  },
+  {
+   "name": "update OneDrive client",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "sync problem",
+   "relation": "CAUSED_BY",
+   "target": "storage quota exceeded"
+  },
+  {
+   "source": "sync problem",
+   "relation": "CAUSED_BY",
+   "target": "invalid file/folder name"
+  },
+  {
+   "source": "sync problem",
+   "relation": "CAUSED_BY",
+   "target": "outdated OneDrive client"
+  },
+  {
+   "source": "yellow warning triangle",
+   "relation": "INDICATES",
+   "target": "sync problem"
+  },
+  {
+   "source": "_ConflictCopy_ file",
+   "relation": "INDICATES",
+   "target": "sync problem"
+  },
+  {
+   "source": "storage quota exceeded",
+   "relation": "FIXED_BY",
+   "target": "free up storage"
+  },
+  {
+   "source": "invalid file/folder name",
+   "relation": "FIXED_BY",
+   "target": "rename conflicting files"
+  },
+  {
+   "source": "outdated OneDrive client",
+   "relation": "FIXED_BY",
+   "target": "update OneDrive client"
+  },
+  {
+   "source": "sync problem",
+   "relation": "FIXED_BY",
+   "target": "reset OneDrive client"
+  },
+  {
+   "source": "OneDrive",
+   "relation": "AFFECTS",
+   "target": "sync problem"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "OneDrive"
+  }
+ ]
+}

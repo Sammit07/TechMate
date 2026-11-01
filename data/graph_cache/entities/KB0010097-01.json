@@ -1,0 +1,161 @@
+{
+ "entities": [
+  {
+   "name": "Laptop Refresh Policy",
+   "type": "Product"
+  },
+  {
+   "name": "Service Catalogue",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Asset Tag",
+   "type": "Component"
+  },
+  {
+   "name": "Dell Latitude 5440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "MacBook Pro",
+   "type": "Product"
+  },
+  {
+   "name": "Request Ticket",
+   "type": "Component"
+  },
+  {
+   "name": "Device Age Eligibility",
+   "type": "Cause"
+  },
+  {
+   "name": "Pending Disciplinary Action",
+   "type": "Cause"
+  },
+  {
+   "name": "Manager Approval",
+   "type": "Component"
+  },
+  {
+   "name": "Cost Centre",
+   "type": "Component"
+  },
+  {
+   "name": "Prepaid Return Label",
+   "type": "Component"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi",
+   "type": "Component"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "BitLocker Encryption",
+   "type": "Component"
+  },
+  {
+   "name": "Recovery Key Backup",
+   "type": "Component"
+  },
+  {
+   "name": "Data-Wipe Script",
+   "type": "Fix"
+  },
+  {
+   "name": "Asset Status Retired",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Laptop Refresh",
+   "relation": "AFFECTS",
+   "target": "Laptop Refresh Policy"
+  },
+  {
+   "source": "Service Catalogue",
+   "relation": "PART_OF",
+   "target": "Laptop Refresh Policy"
+  },
+  {
+   "source": "Asset Tag",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "Request Ticket",
+   "relation": "AFFECTS",
+   "target": "Laptop Refresh Policy"
+  },
+  {
+   "source": "Device Age Eligibility",
+   "relation": "CAUSED_BY",
+   "target": "Laptop Refresh Policy"
+  },
+  {
+   "source": "Pending Disciplinary Action",
+   "relation": "CAUSED_BY",
+   "target": "Laptop Refresh Policy"
+  },
+  {
+   "source": "Manager Approval",
+   "relation": "AFFECTS",
+   "target": "Laptop Refresh Policy"
+  },
+  {
+   "source": "Cost Centre",
+   "relation": "AFFECTS",
+   "target": "Asset Management System"
+  },
+  {
+   "source": "Prepaid Return Label",
+   "relation": "AFFECTS",
+   "target": "Old Laptop"
+  },
+  {
+   "source": "ACME-Corp Wi-Fi",
+   "relation": "AFFECTS",
+   "target": "New Laptop"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "Intune Enrollment"
+  },
+  {
+   "source": "BitLocker Encryption",
+   "relation": "INDICATES",
+   "target": "Security Compliance"
+  },
+  {
+   "source": "Recovery Key Backup",
+   "relation": "FIXED_BY",
+   "target": "Data Loss Prevention"
+  },
+  {
+   "source": "Data-Wipe Script",
+   "relation": "FIXED_BY",
+   "target": "Data Security Risk"
+  },
+  {
+   "source": "Asset Status Retired",
+   "relation": "AFFECTS",
+   "target": "Old Laptop"
+  }
+ ]
+}

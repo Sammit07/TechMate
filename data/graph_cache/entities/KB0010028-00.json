@@ -1,0 +1,152 @@
+{
+ "entities": [
+  {
+   "name": "DNS_PROBE_FINISHED_NXDOMAIN",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "ERR_NAME_NOT_RESOLVED",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Proxy server is refusing connections",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Unable to connect to the proxy server",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Site cannot be reached while other sites work",
+   "type": "Symptom"
+  },
+  {
+   "name": "Intermittent timeout or This site cant be reached after connecting to VPN",
+   "type": "Symptom"
+  },
+  {
+   "name": "Stale or corrupted DNS resolver cache on the client",
+   "type": "Cause"
+  },
+  {
+   "name": "Manual proxy configuration pointing to a non existent or misconfigured proxy server",
+   "type": "Cause"
+  },
+  {
+   "name": "Split tunnel VPN causing DNS queries to go to public resolvers instead of internal DNS",
+   "type": "Cause"
+  },
+  {
+   "name": "Web filter (Secure Web Gateway) blocking the URL by category",
+   "type": "Cause"
+  },
+  {
+   "name": "DHCP/DNS server handing out incorrect DNS addresses or experiencing an outage",
+   "type": "Cause"
+  },
+  {
+   "name": "Flush DNS",
+   "type": "Fix"
+  },
+  {
+   "name": "Renew IP",
+   "type": "Fix"
+  },
+  {
+   "name": "Check proxy settings",
+   "type": "Fix"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Intune",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect VPN",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi or wired LAN",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "DNS_PROBE_FINISHED_NXDOMAIN",
+   "relation": "INDICATES",
+   "target": "Stale or corrupted DNS resolver cache on the client"
+  },
+  {
+   "source": "ERR_NAME_NOT_RESOLVED",
+   "relation": "INDICATES",
+   "target": "Stale or corrupted DNS resolver cache on the client"
+  },
+  {
+   "source": "Proxy server is refusing connections",
+   "relation": "INDICATES",
+   "target": "Manual proxy configuration pointing to a non existent or misconfigured proxy server"
+  },
+  {
+   "source": "Unable to connect to the proxy server",
+   "relation": "INDICATES",
+   "target": "Manual proxy configuration pointing to a non existent or misconfigured proxy server"
+  },
+  {
+   "source": "Site cannot be reached while other sites work",
+   "relation": "CAUSED_BY",
+   "target": "Split tunnel VPN causing DNS queries to go to public resolvers instead of internal DNS"
+  },
+  {
+   "source": "Intermittent timeout or This site cant be reached after connecting to VPN",
+   "relation": "CAUSED_BY",
+   "target": "Split tunnel VPN causing DNS queries to go to public resolvers instead of internal DNS"
+  },
+  {
+   "source": "Stale or corrupted DNS resolver cache on the client",
+   "relation": "FIXED_BY",
+   "target": "Flush DNS"
+  },
+  {
+   "source": "Stale or corrupted DNS resolver cache on the client",
+   "relation": "FIXED_BY",
+   "target": "Renew IP"
+  },
+  {
+   "source": "Manual proxy configuration pointing to a non existent or misconfigured proxy server",
+   "relation": "FIXED_BY",
+   "target": "Check proxy settings"
+  },
+  {
+   "source": "Windows 11 23H2/24H2",
+   "relation": "AFFECTS",
+   "target": "Stale or corrupted DNS resolver cache on the client"
+  },
+  {
+   "source": "macOS 14/15",
+   "relation": "AFFECTS",
+   "target": "Stale or corrupted DNS resolver cache on the client"
+  },
+  {
+   "source": "Microsoft Intune",
+   "relation": "AFFECTS",
+   "target": "Manual proxy configuration pointing to a non existent or misconfigured proxy server"
+  },
+  {
+   "source": "GlobalProtect VPN",
+   "relation": "AFFECTS",
+   "target": "Split tunnel VPN causing DNS queries to go to public resolvers instead of internal DNS"
+  },
+  {
+   "source": "ACME-Corp Wi-Fi or wired LAN",
+   "relation": "AFFECTS",
+   "target": "DHCP/DNS server handing out incorrect DNS addresses or experiencing an outage"
+  }
+ ]
+}

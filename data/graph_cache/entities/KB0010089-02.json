@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "IT equipment usage monitoring",
+   "type": "Symptom"
+  },
+  {
+   "name": "Intune device compliance check",
+   "type": "Component"
+  },
+  {
+   "name": "Entra ID sign-in log review",
+   "type": "Component"
+  },
+  {
+   "name": "prohibited activity detection",
+   "type": "Symptom"
+  },
+  {
+   "name": "Security Operations escalation",
+   "type": "Fix"
+  },
+  {
+   "name": "deliberate policy violation",
+   "type": "Cause"
+  },
+  {
+   "name": "repeated prohibited behavior",
+   "type": "Cause"
+  },
+  {
+   "name": "data loss or exposure risk",
+   "type": "Cause"
+  },
+  {
+   "name": "Intune compliance status",
+   "type": "Component"
+  },
+  {
+   "name": "Entra ID anomaly detection",
+   "type": "Component"
+  },
+  {
+   "name": "Defender alert correlation",
+   "type": "Component"
+  },
+  {
+   "name": "PaperCut or VPN log analysis",
+   "type": "Component"
+  },
+  {
+   "name": "ticket escalation with evidence",
+   "type": "Fix"
+  },
+  {
+   "name": "user confirmation of misuse",
+   "type": "Symptom"
+  },
+  {
+   "name": "credential sharing attempt",
+   "type": "ErrorCode"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Intune device compliance check",
+   "relation": "PART_OF",
+   "target": "IT equipment usage monitoring"
+  },
+  {
+   "source": "Entra ID sign-in log review",
+   "relation": "PART_OF",
+   "target": "IT equipment usage monitoring"
+  },
+  {
+   "source": "prohibited activity detection",
+   "relation": "CAUSED_BY",
+   "target": "deliberate policy violation"
+  },
+  {
+   "source": "prohibited activity detection",
+   "relation": "CAUSED_BY",
+   "target": "repeated prohibited behavior"
+  },
+  {
+   "source": "prohibited activity detection",
+   "relation": "CAUSED_BY",
+   "target": "data loss or exposure risk"
+  },
+  {
+   "source": "deliberate policy violation",
+   "relation": "FIXED_BY",
+   "target": "Security Operations escalation"
+  },
+  {
+   "source": "repeated prohibited behavior",
+   "relation": "FIXED_BY",
+   "target": "Security Operations escalation"
+  },
+  {
+   "source": "data loss or exposure risk",
+   "relation": "FIXED_BY",
+   "target": "Security Operations escalation"
+  },
+  {
+   "source": "Intune compliance status",
+   "relation": "AFFECTS",
+   "target": "Intune device compliance check"
+  },
+  {
+   "source": "Entra ID anomaly detection",
+   "relation": "AFFECTS",
+   "target": "Entra ID sign-in log review"
+  },
+  {
+   "source": "Defender alert correlation",
+   "relation": "AFFECTS",
+   "target": "Intune device compliance check"
+  },
+  {
+   "source": "PaperCut or VPN log analysis",
+   "relation": "AFFECTS",
+   "target": "Entra ID sign-in log review"
+  },
+  {
+   "source": "ticket escalation with evidence",
+   "relation": "FIXED_BY",
+   "target": "Security Operations escalation"
+  },
+  {
+   "source": "user confirmation of misuse",
+   "relation": "INDICATES",
+   "target": "deliberate policy violation"
+  },
+  {
+   "source": "credential sharing attempt",
+   "relation": "INDICATES",
+   "target": "deliberate policy violation"
+  }
+ ]
+}

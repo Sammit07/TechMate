@@ -1,0 +1,196 @@
+{
+ "entities": [
+  {
+   "name": "Windows Update",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 22H2/23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Acme VPN (GlobalProtect)",
+   "type": "Product"
+  },
+  {
+   "name": "0x80070002",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "0x800F0922",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "0x8007000D",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Insufficient free space on system drive",
+   "type": "Cause"
+  },
+  {
+   "name": "Corrupted Windows Update components",
+   "type": "Cause"
+  },
+  {
+   "name": "Lack of network connectivity",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN not connected or intermittent",
+   "type": "Cause"
+  },
+  {
+   "name": "Pending restart required",
+   "type": "Cause"
+  },
+  {
+   "name": "Feature update deferral policies",
+   "type": "Cause"
+  },
+  {
+   "name": "Disk errors or failing hard drive",
+   "type": "Cause"
+  },
+  {
+   "name": "Update progress bar stays at 0%",
+   "type": "Symptom"
+  },
+  {
+   "name": "Undoing changes made to your computer",
+   "type": "Symptom"
+  },
+  {
+   "name": "Repeatedly restarts and stuck at configuring updates screen",
+   "type": "Symptom"
+  },
+  {
+   "name": "Run Windows Update Troubleshooter",
+   "type": "Fix"
+  },
+  {
+   "name": "Reset Windows Update components",
+   "type": "Fix"
+  },
+  {
+   "name": "Free up disk space",
+   "type": "Fix"
+  },
+  {
+   "name": "Ensure VPN connectivity",
+   "type": "Fix"
+  },
+  {
+   "name": "Install latest cumulative update manually",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Update progress bar stays at 0%",
+   "relation": "CAUSED_BY",
+   "target": "Insufficient free space on system drive"
+  },
+  {
+   "source": "Undoing changes made to your computer",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted Windows Update components"
+  },
+  {
+   "source": "Repeatedly restarts and stuck at configuring updates screen",
+   "relation": "CAUSED_BY",
+   "target": "Lack of network connectivity"
+  },
+  {
+   "source": "0x80070002",
+   "relation": "INDICATES",
+   "target": "Insufficient free space on system drive"
+  },
+  {
+   "source": "0x800F0922",
+   "relation": "INDICATES",
+   "target": "Lack of network connectivity"
+  },
+  {
+   "source": "0x8007000D",
+   "relation": "INDICATES",
+   "target": "Corrupted Windows Update components"
+  },
+  {
+   "source": "Insufficient free space on system drive",
+   "relation": "AFFECTS",
+   "target": "Windows Update"
+  },
+  {
+   "source": "Corrupted Windows Update components",
+   "relation": "AFFECTS",
+   "target": "Windows Update"
+  },
+  {
+   "source": "Lack of network connectivity",
+   "relation": "AFFECTS",
+   "target": "Windows Update"
+  },
+  {
+   "source": "VPN not connected or intermittent",
+   "relation": "AFFECTS",
+   "target": "Windows Update"
+  },
+  {
+   "source": "Pending restart required",
+   "relation": "AFFECTS",
+   "target": "Windows Update"
+  },
+  {
+   "source": "Feature update deferral policies",
+   "relation": "AFFECTS",
+   "target": "Windows Update"
+  },
+  {
+   "source": "Disk errors or failing hard drive",
+   "relation": "AFFECTS",
+   "target": "Windows Update"
+  },
+  {
+   "source": "Corrupted Windows Update components",
+   "relation": "FIXED_BY",
+   "target": "Reset Windows Update components"
+  },
+  {
+   "source": "Insufficient free space on system drive",
+   "relation": "FIXED_BY",
+   "target": "Free up disk space"
+  },
+  {
+   "source": "Lack of network connectivity",
+   "relation": "FIXED_BY",
+   "target": "Ensure VPN connectivity"
+  },
+  {
+   "source": "Windows Update failure",
+   "relation": "FIXED_BY",
+   "target": "Run Windows Update Troubleshooter"
+  },
+  {
+   "source": "Windows Update failure",
+   "relation": "FIXED_BY",
+   "target": "Install latest cumulative update manually"
+  }
+ ]
+}

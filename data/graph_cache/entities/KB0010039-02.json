@@ -1,0 +1,149 @@
+{
+ "entities": [
+  {
+   "name": "external monitor not detected or flickering",
+   "type": "Symptom"
+  },
+  {
+   "name": "docking station",
+   "type": "Component"
+  },
+  {
+   "name": "laptop",
+   "type": "Product"
+  },
+  {
+   "name": "graphics driver",
+   "type": "Component"
+  },
+  {
+   "name": "display settings",
+   "type": "Component"
+  },
+  {
+   "name": "event log",
+   "type": "Component"
+  },
+  {
+   "name": "power delivery failure",
+   "type": "Cause"
+  },
+  {
+   "name": "outdated or corrupted graphics driver",
+   "type": "Cause"
+  },
+  {
+   "name": "incorrect resolution or refresh rate",
+   "type": "Cause"
+  },
+  {
+   "name": "faulty cable",
+   "type": "Component"
+  },
+  {
+   "name": "faulty dock",
+   "type": "Component"
+  },
+  {
+   "name": "faulty monitor",
+   "type": "Component"
+  },
+  {
+   "name": "verify dock power delivery",
+   "type": "Fix"
+  },
+  {
+   "name": "update dock firmware",
+   "type": "Fix"
+  },
+  {
+   "name": "reinstall graphics driver",
+   "type": "Fix"
+  },
+  {
+   "name": "adjust resolution and refresh rate",
+   "type": "Fix"
+  },
+  {
+   "name": "replace defective hardware",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "CAUSED_BY",
+   "target": "power delivery failure"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "CAUSED_BY",
+   "target": "outdated or corrupted graphics driver"
+  },
+  {
+   "source": "external monitor not detected or flickering",
+   "relation": "CAUSED_BY",
+   "target": "incorrect resolution or refresh rate"
+  },
+  {
+   "source": "power delivery failure",
+   "relation": "AFFECTS",
+   "target": "docking station"
+  },
+  {
+   "source": "outdated or corrupted graphics driver",
+   "relation": "AFFECTS",
+   "target": "graphics driver"
+  },
+  {
+   "source": "incorrect resolution or refresh rate",
+   "relation": "AFFECTS",
+   "target": "display settings"
+  },
+  {
+   "source": "verify dock power delivery",
+   "relation": "FIXED_BY",
+   "target": "power delivery failure"
+  },
+  {
+   "source": "update dock firmware",
+   "relation": "FIXED_BY",
+   "target": "power delivery failure"
+  },
+  {
+   "source": "reinstall graphics driver",
+   "relation": "FIXED_BY",
+   "target": "outdated or corrupted graphics driver"
+  },
+  {
+   "source": "adjust resolution and refresh rate",
+   "relation": "FIXED_BY",
+   "target": "incorrect resolution or refresh rate"
+  },
+  {
+   "source": "replace defective hardware",
+   "relation": "FIXED_BY",
+   "target": "faulty cable"
+  },
+  {
+   "source": "replace defective hardware",
+   "relation": "FIXED_BY",
+   "target": "faulty dock"
+  },
+  {
+   "source": "replace defective hardware",
+   "relation": "FIXED_BY",
+   "target": "faulty monitor"
+  },
+  {
+   "source": "docking station",
+   "relation": "PART_OF",
+   "target": "laptop"
+  },
+  {
+   "source": "event log",
+   "relation": "PART_OF",
+   "target": "laptop"
+  }
+ ]
+}

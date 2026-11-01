@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Office",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft 365 Apps for enterprise",
+   "type": "Product"
+  },
+  {
+   "name": "Corrupted Office installation",
+   "type": "Cause"
+  },
+  {
+   "name": "Faulty or incompatible COM add-ins",
+   "type": "Cause"
+  },
+  {
+   "name": "Expired or stale licence token",
+   "type": "Cause"
+  },
+  {
+   "name": "Profile corruption in Outlook or Excel",
+   "type": "Cause"
+  },
+  {
+   "name": "Insufficient resources",
+   "type": "Cause"
+  },
+  {
+   "name": "Pending Windows updates requiring reboot",
+   "type": "Cause"
+  },
+  {
+   "name": "Application crashes or freezes",
+   "type": "Symptom"
+  },
+  {
+   "name": "Activation prompts despite valid licence",
+   "type": "Symptom"
+  },
+  {
+   "name": "Files open slowly or appear corrupted",
+   "type": "Symptom"
+  },
+  {
+   "name": "Overall sluggish performance",
+   "type": "Symptom"
+  },
+  {
+   "name": "Quick repair and licence refresh",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Application crashes or freezes",
+   "relation": "CAUSED_BY",
+   "target": "Corrupted Office installation"
+  },
+  {
+   "source": "Application crashes or freezes",
+   "relation": "CAUSED_BY",
+   "target": "Faulty or incompatible COM add-ins"
+  },
+  {
+   "source": "Application crashes or freezes",
+   "relation": "CAUSED_BY",
+   "target": "Insufficient resources"
+  },
+  {
+   "source": "Activation prompts despite valid licence",
+   "relation": "CAUSED_BY",
+   "target": "Expired or stale licence token"
+  },
+  {
+   "source": "Files open slowly or appear corrupted",
+   "relation": "CAUSED_BY",
+   "target": "Profile corruption in Outlook or Excel"
+  },
+  {
+   "source": "Overall sluggish performance",
+   "relation": "CAUSED_BY",
+   "target": "Pending Windows updates requiring reboot"
+  },
+  {
+   "source": "Application crashes or freezes",
+   "relation": "FIXED_BY",
+   "target": "Quick repair and licence refresh"
+  },
+  {
+   "source": "Activation prompts despite valid licence",
+   "relation": "FIXED_BY",
+   "target": "Quick repair and licence refresh"
+  },
+  {
+   "source": "Files open slowly or appear corrupted",
+   "relation": "FIXED_BY",
+   "target": "Quick repair and licence refresh"
+  },
+  {
+   "source": "Overall sluggish performance",
+   "relation": "FIXED_BY",
+   "target": "Quick repair and licence refresh"
+  },
+  {
+   "source": "Microsoft Office",
+   "relation": "AFFECTS",
+   "target": "Application crashes or freezes"
+  },
+  {
+   "source": "Microsoft Office",
+   "relation": "AFFECTS",
+   "target": "Activation prompts despite valid licence"
+  },
+  {
+   "source": "Microsoft Office",
+   "relation": "AFFECTS",
+   "target": "Files open slowly or appear corrupted"
+  },
+  {
+   "source": "Microsoft Office",
+   "relation": "AFFECTS",
+   "target": "Overall sluggish performance"
+  },
+  {
+   "source": "Quick repair and licence refresh",
+   "relation": "PART_OF",
+   "target": "Microsoft 365 Apps for enterprise"
+  }
+ ]
+}

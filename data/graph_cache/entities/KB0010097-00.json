@@ -1,0 +1,132 @@
+{
+ "entities": [
+  {
+   "name": "Acme Global laptop refresh policy",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "IT self-service portal",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Current laptop approaching end-of-life",
+   "type": "Symptom"
+  },
+  {
+   "name": "Hardware performance issues impacting productivity",
+   "type": "Symptom"
+  },
+  {
+   "name": "Device damaged beyond economical repair",
+   "type": "Symptom"
+  },
+  {
+   "name": "Notification from Intune about non-compliant device",
+   "type": "Symptom"
+  },
+  {
+   "name": "Scheduled hardware refresh cycle",
+   "type": "Cause"
+  },
+  {
+   "name": "Failed hardware diagnostics requiring replacement",
+   "type": "Cause"
+  },
+  {
+   "name": "Change in role necessitating higher-spec model",
+   "type": "Cause"
+  },
+  {
+   "name": "Security compliance update unmet by existing hardware",
+   "type": "Cause"
+  },
+  {
+   "name": "Submit refresh request via self-service portal",
+   "type": "Fix"
+  },
+  {
+   "name": "Provision replacement device",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Current laptop approaching end-of-life",
+   "relation": "CAUSED_BY",
+   "target": "Scheduled hardware refresh cycle"
+  },
+  {
+   "source": "Hardware performance issues impacting productivity",
+   "relation": "CAUSED_BY",
+   "target": "Failed hardware diagnostics requiring replacement"
+  },
+  {
+   "source": "Device damaged beyond economical repair",
+   "relation": "CAUSED_BY",
+   "target": "Failed hardware diagnostics requiring replacement"
+  },
+  {
+   "source": "Notification from Intune about non-compliant device",
+   "relation": "INDICATES",
+   "target": "Security compliance update unmet by existing hardware"
+  },
+  {
+   "source": "Scheduled hardware refresh cycle",
+   "relation": "AFFECTS",
+   "target": "Acme Global laptop refresh policy"
+  },
+  {
+   "source": "Submit refresh request via self-service portal",
+   "relation": "FIXED_BY",
+   "target": "Current laptop approaching end-of-life"
+  },
+  {
+   "source": "Submit refresh request via self-service portal",
+   "relation": "FIXED_BY",
+   "target": "Hardware performance issues impacting productivity"
+  },
+  {
+   "source": "Submit refresh request via self-service portal",
+   "relation": "FIXED_BY",
+   "target": "Device damaged beyond economical repair"
+  },
+  {
+   "source": "Submit refresh request via self-service portal",
+   "relation": "FIXED_BY",
+   "target": "Notification from Intune about non-compliant device"
+  },
+  {
+   "source": "Provision replacement device",
+   "relation": "FIXED_BY",
+   "target": "Change in role necessitating higher-spec model"
+  },
+  {
+   "source": "Provision replacement device",
+   "relation": "FIXED_BY",
+   "target": "Security compliance update unmet by existing hardware"
+  },
+  {
+   "source": "IT self-service portal",
+   "relation": "PART_OF",
+   "target": "Acme Global laptop refresh policy"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "PART_OF",
+   "target": "Acme Global laptop refresh policy"
+  },
+  {
+   "source": "Intune",
+   "relation": "PART_OF",
+   "target": "Acme Global laptop refresh policy"
+  }
+ ]
+}

@@ -1,0 +1,224 @@
+{
+ "entities": [
+  {
+   "name": "Outlook for Windows",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook for Mac",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook on the web",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Teams calendar view",
+   "type": "Product"
+  },
+  {
+   "name": "Shared mailbox calendar",
+   "type": "Component"
+  },
+  {
+   "name": "Full Access permission",
+   "type": "Component"
+  },
+  {
+   "name": "Send As permission",
+   "type": "Component"
+  },
+  {
+   "name": "Delegate editor permission",
+   "type": "Component"
+  },
+  {
+   "name": "Calendar folder permission",
+   "type": "Component"
+  },
+  {
+   "name": "Shared mailbox does not appear in Outlook folder pane",
+   "type": "Symptom"
+  },
+  {
+   "name": "Calendar under shared mailbox is missing or greyed out",
+   "type": "Symptom"
+  },
+  {
+   "name": "Error message: You do not have permission to open this folder",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Unable to create or edit meetings in shared calendar",
+   "type": "Symptom"
+  },
+  {
+   "name": "Receives You don't have sufficient permission prompt",
+   "type": "Symptom"
+  },
+  {
+   "name": "Shared mailbox appears but calendar items show as free/busy only",
+   "type": "Symptom"
+  },
+  {
+   "name": "Full Access or Send As permissions not granted",
+   "type": "Cause"
+  },
+  {
+   "name": "Delegate editor permission missing on calendar folder",
+   "type": "Cause"
+  },
+  {
+   "name": "Automapping disabled",
+   "type": "Cause"
+  },
+  {
+   "name": "Outlook cached mode not updated",
+   "type": "Cause"
+  },
+  {
+   "name": "Permissions replicated but Outlook client needs restart",
+   "type": "Cause"
+  },
+  {
+   "name": "User viewing secondary mailbox profile without shared mailbox added",
+   "type": "Cause"
+  },
+  {
+   "name": "Grant Full Access and Send As permissions",
+   "type": "Fix"
+  },
+  {
+   "name": "Grant delegate editor permission on calendar folder",
+   "type": "Fix"
+  },
+  {
+   "name": "Enable automapping",
+   "type": "Fix"
+  },
+  {
+   "name": "Restart Outlook client",
+   "type": "Fix"
+  },
+  {
+   "name": "Sync offline address book",
+   "type": "Fix"
+  },
+  {
+   "name": "Add shared mailbox to correct Outlook profile",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Shared mailbox does not appear in Outlook folder pane",
+   "relation": "CAUSED_BY",
+   "target": "Full Access or Send As permissions not granted"
+  },
+  {
+   "source": "Calendar under shared mailbox is missing or greyed out",
+   "relation": "CAUSED_BY",
+   "target": "Delegate editor permission missing on calendar folder"
+  },
+  {
+   "source": "Error message: You do not have permission to open this folder",
+   "relation": "INDICATES",
+   "target": "Full Access or Send As permissions not granted"
+  },
+  {
+   "source": "Unable to create or edit meetings in shared calendar",
+   "relation": "CAUSED_BY",
+   "target": "Delegate editor permission missing on calendar folder"
+  },
+  {
+   "source": "Receives You don't have sufficient permission prompt",
+   "relation": "INDICATES",
+   "target": "Delegate editor permission missing on calendar folder"
+  },
+  {
+   "source": "Shared mailbox appears but calendar items show as free/busy only",
+   "relation": "INDICATES",
+   "target": "Delegate editor permission missing on calendar folder"
+  },
+  {
+   "source": "Full Access or Send As permissions not granted",
+   "relation": "AFFECTS",
+   "target": "Shared mailbox calendar"
+  },
+  {
+   "source": "Delegate editor permission missing on calendar folder",
+   "relation": "AFFECTS",
+   "target": "Shared mailbox calendar"
+  },
+  {
+   "source": "Automapping disabled",
+   "relation": "CAUSED_BY",
+   "target": "Shared mailbox does not appear in Outlook folder pane"
+  },
+  {
+   "source": "Outlook cached mode not updated",
+   "relation": "CAUSED_BY",
+   "target": "Shared mailbox does not appear in Outlook folder pane"
+  },
+  {
+   "source": "Permissions replicated but Outlook client needs restart",
+   "relation": "CAUSED_BY",
+   "target": "Shared mailbox does not appear in Outlook folder pane"
+  },
+  {
+   "source": "User viewing secondary mailbox profile without shared mailbox added",
+   "relation": "CAUSED_BY",
+   "target": "Shared mailbox does not appear in Outlook folder pane"
+  },
+  {
+   "source": "Grant Full Access and Send As permissions",
+   "relation": "FIXED_BY",
+   "target": "Full Access or Send As permissions not granted"
+  },
+  {
+   "source": "Grant delegate editor permission on calendar folder",
+   "relation": "FIXED_BY",
+   "target": "Delegate editor permission missing on calendar folder"
+  },
+  {
+   "source": "Enable automapping",
+   "relation": "FIXED_BY",
+   "target": "Automapping disabled"
+  },
+  {
+   "source": "Restart Outlook client",
+   "relation": "FIXED_BY",
+   "target": "Permissions replicated but Outlook client needs restart"
+  },
+  {
+   "source": "Sync offline address book",
+   "relation": "FIXED_BY",
+   "target": "Permissions replicated but Outlook client needs restart"
+  },
+  {
+   "source": "Add shared mailbox to correct Outlook profile",
+   "relation": "FIXED_BY",
+   "target": "User viewing secondary mailbox profile without shared mailbox added"
+  },
+  {
+   "source": "Shared mailbox calendar",
+   "relation": "PART_OF",
+   "target": "Outlook for Windows"
+  },
+  {
+   "source": "Shared mailbox calendar",
+   "relation": "PART_OF",
+   "target": "Outlook for Mac"
+  },
+  {
+   "source": "Shared mailbox calendar",
+   "relation": "PART_OF",
+   "target": "Outlook on the web"
+  },
+  {
+   "source": "Shared mailbox calendar",
+   "relation": "PART_OF",
+   "target": "Microsoft Teams calendar view"
+  }
+ ]
+}

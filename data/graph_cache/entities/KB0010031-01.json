@@ -1,0 +1,172 @@
+{
+ "entities": [
+  {
+   "name": "stuck on boot logo or automatic repair loop",
+   "type": "Symptom"
+  },
+  {
+   "name": "force power-off by holding power button 15 seconds",
+   "type": "Fix"
+  },
+  {
+   "name": "disconnect AC adapter and peripherals",
+   "type": "Fix"
+  },
+  {
+   "name": "remove removable battery if present",
+   "type": "Fix"
+  },
+  {
+   "name": "discharge residual capacitors by holding power button 20-30 seconds",
+   "type": "Fix"
+  },
+  {
+   "name": "reinsert battery and reconnect AC adapter",
+   "type": "Fix"
+  },
+  {
+   "name": "observe if system proceeds past logo",
+   "type": "Symptom"
+  },
+  {
+   "name": "let Windows run Startup Repair automatically",
+   "type": "Fix"
+  },
+  {
+   "name": "choose Troubleshoot > Advanced options > Startup Repair",
+   "type": "Fix"
+  },
+  {
+   "name": "note specific error codes displayed",
+   "type": "Symptom"
+  },
+  {
+   "name": "contact IT Service Desk for further assistance",
+   "type": "Fix"
+  },
+  {
+   "name": "verify user identity and device model via Intune or asset database",
+   "type": "Fix"
+  },
+  {
+   "name": "ask user to perform hard-reset steps and report result",
+   "type": "Fix"
+  },
+  {
+   "name": "arrange remote session via Teams or request device shipment",
+   "type": "Fix"
+  },
+  {
+   "name": "connect laptop to AC power and observe LED/fan activity",
+   "type": "Fix"
+  },
+  {
+   "name": "attempt to boot to BIOS using appropriate key (F2/F10)",
+   "type": "Fix"
+  },
+  {
+   "name": "check internal drive detection, Secure Boot status, and boot order in BIOS",
+   "type": "Fix"
+  },
+  {
+   "name": "exit BIOS and attempt normal boot",
+   "type": "Fix"
+  },
+  {
+   "name": "run built-in diagnostics (Dell ePSA, Lenovo Vantage, HP PC Hardware Diagnostics)",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "force power-off by holding power button 15 seconds"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "disconnect AC adapter and peripherals"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "remove removable battery if present"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "discharge residual capacitors by holding power button 20-30 seconds"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "reinsert battery and reconnect AC adapter"
+  },
+  {
+   "source": "observe if system proceeds past logo",
+   "relation": "CAUSED_BY",
+   "target": "stuck on boot logo or automatic repair loop"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "let Windows run Startup Repair automatically"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "choose Troubleshoot > Advanced options > Startup Repair"
+  },
+  {
+   "source": "note specific error codes displayed",
+   "relation": "INDICATES",
+   "target": "stuck on boot logo or automatic repair loop"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "contact IT Service Desk for further assistance"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "verify user identity and device model via Intune or asset database"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "ask user to perform hard-reset steps and report result"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "arrange remote session via Teams or request device shipment"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "connect laptop to AC power and observe LED/fan activity"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "attempt to boot to BIOS using appropriate key (F2/F10)"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "check internal drive detection, Secure Boot status, and boot order in BIOS"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "exit BIOS and attempt normal boot"
+  },
+  {
+   "source": "stuck on boot logo or automatic repair loop",
+   "relation": "FIXED_BY",
+   "target": "run built-in diagnostics (Dell ePSA, Lenovo Vantage, HP PC Hardware Diagnostics)"
+  }
+ ]
+}

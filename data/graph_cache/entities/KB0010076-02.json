@@ -1,0 +1,145 @@
+{
+ "entities": [
+  {
+   "name": "Printer Queue Stuck Jobs",
+   "type": "Symptom"
+  },
+  {
+   "name": "Printing Fails After Queue Clear",
+   "type": "Symptom"
+  },
+  {
+   "name": "Blank Page Output",
+   "type": "Symptom"
+  },
+  {
+   "name": "Incorrect Driver Selected",
+   "type": "Cause"
+  },
+  {
+   "name": "Low Toner Levels",
+   "type": "Cause"
+  },
+  {
+   "name": "Generic/Text-Only Driver Used",
+   "type": "Cause"
+  },
+  {
+   "name": "Purge Stuck Print Jobs",
+   "type": "Fix"
+  },
+  {
+   "name": "Remove and Re-add Printer",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify Toner Levels",
+   "type": "Fix"
+  },
+  {
+   "name": "Select Correct Printer Driver",
+   "type": "Fix"
+  },
+  {
+   "name": "Print Test Page",
+   "type": "Fix"
+  },
+  {
+   "name": "PaperCut Authentication",
+   "type": "Component"
+  },
+  {
+   "name": "Print Spooler Service",
+   "type": "Component"
+  },
+  {
+   "name": "Office Printer",
+   "type": "Product"
+  },
+  {
+   "name": "Acme Print Server",
+   "type": "Product"
+  },
+  {
+   "name": "Devices and Printers Status",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Printer Queue Stuck Jobs",
+   "relation": "CAUSED_BY",
+   "target": "Print Spooler Service"
+  },
+  {
+   "source": "Printing Fails After Queue Clear",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect Driver Selected"
+  },
+  {
+   "source": "Blank Page Output",
+   "relation": "CAUSED_BY",
+   "target": "Low Toner Levels"
+  },
+  {
+   "source": "Blank Page Output",
+   "relation": "CAUSED_BY",
+   "target": "Generic/Text-Only Driver Used"
+  },
+  {
+   "source": "Incorrect Driver Selected",
+   "relation": "AFFECTS",
+   "target": "Office Printer"
+  },
+  {
+   "source": "Low Toner Levels",
+   "relation": "AFFECTS",
+   "target": "Office Printer"
+  },
+  {
+   "source": "Generic/Text-Only Driver Used",
+   "relation": "AFFECTS",
+   "target": "Office Printer"
+  },
+  {
+   "source": "Purge Stuck Print Jobs",
+   "relation": "FIXED_BY",
+   "target": "Printer Queue Stuck Jobs"
+  },
+  {
+   "source": "Remove and Re-add Printer",
+   "relation": "FIXED_BY",
+   "target": "Printing Fails After Queue Clear"
+  },
+  {
+   "source": "Verify Toner Levels",
+   "relation": "FIXED_BY",
+   "target": "Blank Page Output"
+  },
+  {
+   "source": "Select Correct Printer Driver",
+   "relation": "FIXED_BY",
+   "target": "Incorrect Driver Selected"
+  },
+  {
+   "source": "Print Test Page",
+   "relation": "FIXED_BY",
+   "target": "Office Printer"
+  },
+  {
+   "source": "PaperCut Authentication",
+   "relation": "PART_OF",
+   "target": "Acme Print Server"
+  },
+  {
+   "source": "Print Spooler Service",
+   "relation": "PART_OF",
+   "target": "Office Printer"
+  },
+  {
+   "source": "Devices and Printers Status",
+   "relation": "AFFECTS",
+   "target": "Office Printer"
+  }
+ ]
+}

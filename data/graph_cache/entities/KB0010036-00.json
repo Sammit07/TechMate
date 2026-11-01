@@ -1,0 +1,157 @@
+{
+ "entities": [
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "Battery icon shows 0%",
+   "type": "Symptom"
+  },
+  {
+   "name": "Charging LED does not illuminate",
+   "type": "Symptom"
+  },
+  {
+   "name": "Battery drains >10% per minute idle",
+   "type": "Symptom"
+  },
+  {
+   "name": "OS reports \"Plugged in, not charging\"",
+   "type": "Symptom"
+  },
+  {
+   "name": "Visible battery swelling",
+   "type": "Symptom"
+  },
+  {
+   "name": "Faulty AC adapter/power cable/connector",
+   "type": "Cause"
+  },
+  {
+   "name": "Damaged/dirty charging port",
+   "type": "Cause"
+  },
+  {
+   "name": "Battery health <60% design capacity",
+   "type": "Cause"
+  },
+  {
+   "name": "Swollen battery",
+   "type": "Cause"
+  },
+  {
+   "name": "Incorrect power-management settings",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated BIOS/firmware",
+   "type": "Cause"
+  },
+  {
+   "name": "Intune blocking charging",
+   "type": "Cause"
+  },
+  {
+   "name": "Corrupted battery driver/EC firmware",
+   "type": "Cause"
+  },
+  {
+   "name": "Inspect charger for damage",
+   "type": "Fix"
+  },
+  {
+   "name": "Test with known-good outlet",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Battery icon shows 0%",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "Charging LED does not illuminate",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "Battery drains >10% per minute idle",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "OS reports \"Plugged in, not charging\"",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "Visible battery swelling",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "Faulty AC adapter/power cable/connector",
+   "relation": "CAUSED_BY",
+   "target": "Battery icon shows 0%"
+  },
+  {
+   "source": "Damaged/dirty charging port",
+   "relation": "CAUSED_BY",
+   "target": "Charging LED does not illuminate"
+  },
+  {
+   "source": "Battery health <60% design capacity",
+   "relation": "CAUSED_BY",
+   "target": "Battery drains >10% per minute idle"
+  },
+  {
+   "source": "Swollen battery",
+   "relation": "CAUSED_BY",
+   "target": "Visible battery swelling"
+  },
+  {
+   "source": "Incorrect power-management settings",
+   "relation": "CAUSED_BY",
+   "target": "OS reports \"Plugged in, not charging\""
+  },
+  {
+   "source": "Outdated BIOS/firmware",
+   "relation": "CAUSED_BY",
+   "target": "OS reports \"Plugged in, not charging\""
+  },
+  {
+   "source": "Intune blocking charging",
+   "relation": "CAUSED_BY",
+   "target": "OS reports \"Plugged in, not charging\""
+  },
+  {
+   "source": "Corrupted battery driver/EC firmware",
+   "relation": "CAUSED_BY",
+   "target": "OS reports \"Plugged in, not charging\""
+  },
+  {
+   "source": "Faulty AC adapter/power cable/connector",
+   "relation": "FIXED_BY",
+   "target": "Inspect charger for damage"
+  },
+  {
+   "source": "Damaged/dirty charging port",
+   "relation": "FIXED_BY",
+   "target": "Test with known-good outlet"
+  }
+ ]
+}

@@ -1,0 +1,148 @@
+{
+ "entities": [
+  {
+   "name": "HR-provided start date",
+   "type": "Component"
+  },
+  {
+   "name": "employee ID",
+   "type": "Component"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "user principal name (UPN)",
+   "type": "Component"
+  },
+  {
+   "name": "standard naming convention <firstname>.<lastname>@acme.example",
+   "type": "Component"
+  },
+  {
+   "name": "strong temporary password (14+ characters, meets complexity)",
+   "type": "Component"
+  },
+  {
+   "name": "account creation",
+   "type": "Fix"
+  },
+  {
+   "name": "Acme-Standard-User security group",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft 365 licences (E5 or as defined by role)",
+   "type": "Component"
+  },
+  {
+   "name": "Exchange Online mailbox",
+   "type": "Component"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "device compliance status 'Compliant'",
+   "type": "Component"
+  },
+  {
+   "name": "required applications (Company Portal, Microsoft 365 apps, endpoint security)",
+   "type": "Component"
+  },
+  {
+   "name": "MFA enrollment via Microsoft Authenticator (push)",
+   "type": "Component"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "Windows sign-in with permanent password",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outlook connectivity",
+   "type": "Symptom"
+  },
+  {
+   "name": "Teams chat and call functionality",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "account creation",
+   "relation": "FIXED_BY",
+   "target": "missing UPN in Entra ID"
+  },
+  {
+   "source": "assigning to Acme-Standard-User security group",
+   "relation": "FIXED_BY",
+   "target": "lack of Microsoft 365 licences"
+  },
+  {
+   "source": "creating Exchange Online mailbox",
+   "relation": "FIXED_BY",
+   "target": "missing mailbox"
+  },
+  {
+   "source": "verifying device in Intune with compliant status",
+   "relation": "FIXED_BY",
+   "target": "device not pre-enrolled or non-compliant"
+  },
+  {
+   "source": "instructing MFA enrollment via Microsoft Authenticator",
+   "relation": "FIXED_BY",
+   "target": "user unable to authenticate"
+  },
+  {
+   "source": "Windows sign-in with permanent password",
+   "relation": "INDICATES",
+   "target": "successful authentication"
+  },
+  {
+   "source": "Outlook connectivity",
+   "relation": "INDICATES",
+   "target": "functional email access"
+  },
+  {
+   "source": "Teams chat and call functionality",
+   "relation": "INDICATES",
+   "target": "functional collaboration tools"
+  },
+  {
+   "source": "Entra ID",
+   "relation": "AFFECTS",
+   "target": "user principal name (UPN)"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "device compliance status 'Compliant'"
+  },
+  {
+   "source": "Acme-Standard-User security group",
+   "relation": "PART_OF",
+   "target": "Microsoft 365 licences (E5 or as defined by role)"
+  },
+  {
+   "source": "required applications (Company Portal, Microsoft 365 apps, endpoint security)",
+   "relation": "PART_OF",
+   "target": "Intune"
+  },
+  {
+   "source": "HR-provided start date",
+   "relation": "AFFECTS",
+   "target": "account enablement timing"
+  },
+  {
+   "source": "employee ID",
+   "relation": "AFFECTS",
+   "target": "HRIS lookup"
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "entities": [
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "macOS 14/15",
+   "type": "Product"
+  },
+  {
+   "name": "Task Manager",
+   "type": "Component"
+  },
+  {
+   "name": "Activity Monitor",
+   "type": "Component"
+  },
+  {
+   "name": "Startup tab",
+   "type": "Component"
+  },
+  {
+   "name": "Too many startup programs",
+   "type": "Cause"
+  },
+  {
+   "name": "Accumulated temporary files and browser caches",
+   "type": "Cause"
+  },
+  {
+   "name": "Pending Windows/macOS updates",
+   "type": "Cause"
+  },
+  {
+   "name": "Insufficient RAM (<8GB)",
+   "type": "Cause"
+  },
+  {
+   "name": "Disk fragmentation or near-capacity storage",
+   "type": "Cause"
+  },
+  {
+   "name": "Laptop feels very slow",
+   "type": "Symptom"
+  },
+  {
+   "name": "System hangs or freezes",
+   "type": "Symptom"
+  },
+  {
+   "name": "High CPU usage (>80%)",
+   "type": "Symptom"
+  },
+  {
+   "name": "Long boot times",
+   "type": "Symptom"
+  },
+  {
+   "name": "Disable high-impact startup items",
+   "type": "Fix"
+  },
+  {
+   "name": "Clear temporary files and browser caches",
+   "type": "Fix"
+  },
+  {
+   "name": "Install pending updates and reboot",
+   "type": "Fix"
+  },
+  {
+   "name": "Upgrade RAM to 8GB or more",
+   "type": "Fix"
+  },
+  {
+   "name": "Defragment disk or free up storage",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Laptop feels very slow",
+   "relation": "CAUSED_BY",
+   "target": "Too many startup programs"
+  },
+  {
+   "source": "Laptop feels very slow",
+   "relation": "CAUSED_BY",
+   "target": "Accumulated temporary files and browser caches"
+  },
+  {
+   "source": "System hangs or freezes",
+   "relation": "CAUSED_BY",
+   "target": "Insufficient RAM (<8GB)"
+  },
+  {
+   "source": "High CPU usage (>80%)",
+   "relation": "CAUSED_BY",
+   "target": "Too many startup programs"
+  },
+  {
+   "source": "Long boot times",
+   "relation": "CAUSED_BY",
+   "target": "Pending Windows/macOS updates"
+  },
+  {
+   "source": "Too many startup programs",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "Too many startup programs",
+   "relation": "AFFECTS",
+   "target": "macOS 14/15"
+  },
+  {
+   "source": "Accumulated temporary files and browser caches",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "Insufficient RAM (<8GB)",
+   "relation": "AFFECTS",
+   "target": "Lenovo ThinkPad T14/X1 Carbon"
+  },
+  {
+   "source": "Disk fragmentation or near-capacity storage",
+   "relation": "AFFECTS",
+   "target": "HP EliteBook 840"
+  },
+  {
+   "source": "Too many startup programs",
+   "relation": "FIXED_BY",
+   "target": "Disable high-impact startup items"
+  },
+  {
+   "source": "Accumulated temporary files and browser caches",
+   "relation": "FIXED_BY",
+   "target": "Clear temporary files and browser caches"
+  },
+  {
+   "source": "Pending Windows/macOS updates",
+   "relation": "FIXED_BY",
+   "target": "Install pending updates and reboot"
+  },
+  {
+   "source": "Insufficient RAM (<8GB)",
+   "relation": "FIXED_BY",
+   "target": "Upgrade RAM to 8GB or more"
+  },
+  {
+   "source": "Disk fragmentation or near-capacity storage",
+   "relation": "FIXED_BY",
+   "target": "Defragment disk or free up storage"
+  }
+ ]
+}

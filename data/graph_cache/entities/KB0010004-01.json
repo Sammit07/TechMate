@@ -1,0 +1,131 @@
+{
+ "entities": [
+  {
+   "name": "account lockout",
+   "type": "Symptom"
+  },
+  {
+   "name": "stale credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "Credential Manager",
+   "type": "Component"
+  },
+  {
+   "name": "Active Directory Users and Computers",
+   "type": "Product"
+  },
+  {
+   "name": "Get-ADUser",
+   "type": "Component"
+  },
+  {
+   "name": "LockedOut attribute",
+   "type": "Component"
+  },
+  {
+   "name": "Unlock-ADAccount",
+   "type": "Component"
+  },
+  {
+   "name": "self-service password reset portal",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Authenticator push",
+   "type": "Component"
+  },
+  {
+   "name": "backup SMS",
+   "type": "Component"
+  },
+  {
+   "name": "14-character complexity rule",
+   "type": "Component"
+  },
+  {
+   "name": "Service Desk",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "mapped drives",
+   "type": "Component"
+  },
+  {
+   "name": "mobile mail apps",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "account lockout",
+   "relation": "CAUSED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "Credential Manager"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "mobile mail apps"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "mapped drives"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "LockedOut attribute",
+   "relation": "INDICATES",
+   "target": "account lockout"
+  },
+  {
+   "source": "Get-ADUser",
+   "relation": "PART_OF",
+   "target": "Active Directory Users and Computers"
+  },
+  {
+   "source": "Unlock-ADAccount",
+   "relation": "FIXED_BY",
+   "target": "account lockout"
+  },
+  {
+   "source": "self-service password reset portal",
+   "relation": "FIXED_BY",
+   "target": "account lockout"
+  },
+  {
+   "source": "Microsoft Authenticator push",
+   "relation": "PART_OF",
+   "target": "self-service password reset portal"
+  },
+  {
+   "source": "backup SMS",
+   "relation": "PART_OF",
+   "target": "self-service password reset portal"
+  },
+  {
+   "source": "14-character complexity rule",
+   "relation": "AFFECTS",
+   "target": "self-service password reset portal"
+  },
+  {
+   "source": "Service Desk",
+   "relation": "FIXED_BY",
+   "target": "account lockout"
+  }
+ ]
+}

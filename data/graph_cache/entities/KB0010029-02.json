@@ -1,0 +1,162 @@
+{
+ "entities": [
+  {
+   "name": "website unblock request process",
+   "type": "Process"
+  },
+  {
+   "name": "ticket submission form",
+   "type": "Component"
+  },
+  {
+   "name": "full URL requirement",
+   "type": "Component"
+  },
+  {
+   "name": "business justification field",
+   "type": "Component"
+  },
+  {
+   "name": "requested duration input",
+   "type": "Component"
+  },
+  {
+   "name": "ticket number notification",
+   "type": "Component"
+  },
+  {
+   "name": "site verification procedure",
+   "type": "Component"
+  },
+  {
+   "name": "Security Operations escalation path",
+   "type": "Component"
+  },
+  {
+   "name": "web filter block indication",
+   "type": "Symptom"
+  },
+  {
+   "name": "DNS_PROBE_FINISHED error",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "proxy error message",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "access denied notification",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "flush DNS troubleshooting step",
+   "type": "Fix"
+  },
+  {
+   "name": "renew IP configuration fix",
+   "type": "Fix"
+  },
+  {
+   "name": "manual proxy configuration",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect VPN client",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi network",
+   "type": "Product"
+  },
+  {
+   "name": "Network Support team",
+   "type": "Product"
+  },
+  {
+   "name": "Security Operations team",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "website unblock request process",
+   "relation": "AFFECTS",
+   "target": "Network Support team"
+  },
+  {
+   "source": "ticket submission form",
+   "relation": "PART_OF",
+   "target": "website unblock request process"
+  },
+  {
+   "source": "full URL requirement",
+   "relation": "PART_OF",
+   "target": "ticket submission form"
+  },
+  {
+   "source": "business justification field",
+   "relation": "PART_OF",
+   "target": "ticket submission form"
+  },
+  {
+   "source": "requested duration input",
+   "relation": "PART_OF",
+   "target": "ticket submission form"
+  },
+  {
+   "source": "ticket number notification",
+   "relation": "FIXED_BY",
+   "target": "website unblock request process"
+  },
+  {
+   "source": "site verification procedure",
+   "relation": "FIXED_BY",
+   "target": "website unblock request process"
+  },
+  {
+   "source": "web filter block indication",
+   "relation": "INDICATES",
+   "target": "Security Operations escalation path"
+  },
+  {
+   "source": "DNS_PROBE_FINISHED error",
+   "relation": "INDICATES",
+   "target": "web filter block indication"
+  },
+  {
+   "source": "proxy error message",
+   "relation": "INDICATES",
+   "target": "web filter block indication"
+  },
+  {
+   "source": "access denied notification",
+   "relation": "INDICATES",
+   "target": "web filter block indication"
+  },
+  {
+   "source": "flush DNS troubleshooting step",
+   "relation": "FIXED_BY",
+   "target": "DNS_PROBE_FINISHED error"
+  },
+  {
+   "source": "renew IP configuration fix",
+   "relation": "FIXED_BY",
+   "target": "proxy error message"
+  },
+  {
+   "source": "manual proxy configuration",
+   "relation": "FIXED_BY",
+   "target": "access denied notification"
+  },
+  {
+   "source": "GlobalProtect VPN client",
+   "relation": "AFFECTS",
+   "target": "ACME-Corp Wi-Fi network"
+  },
+  {
+   "source": "Security Operations team",
+   "relation": "AFFECTS",
+   "target": "web filter block indication"
+  }
+ ]
+}

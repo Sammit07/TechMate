@@ -1,0 +1,176 @@
+{
+ "entities": [
+  {
+   "name": "Dell Latitude 5440/7440",
+   "type": "Product"
+  },
+  {
+   "name": "Lenovo ThinkPad T14/X1 Carbon",
+   "type": "Product"
+  },
+  {
+   "name": "HP EliteBook 840",
+   "type": "Product"
+  },
+  {
+   "name": "MacBook Pro/Air",
+   "type": "Product"
+  },
+  {
+   "name": "Windows 11 23H2/24H2",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Insufficient RAM (<8 GB)",
+   "type": "Cause"
+  },
+  {
+   "name": "Aging HDD vs SSD",
+   "type": "Cause"
+  },
+  {
+   "name": "Too many startup programs",
+   "type": "Cause"
+  },
+  {
+   "name": "Pending Windows updates",
+   "type": "Cause"
+  },
+  {
+   "name": "Low free disk space (<10%)",
+   "type": "Cause"
+  },
+  {
+   "name": "Malware consuming resources",
+   "type": "Cause"
+  },
+  {
+   "name": "High CPU usage (>90%)",
+   "type": "Symptom"
+  },
+  {
+   "name": "Memory usage >80%",
+   "type": "Symptom"
+  },
+  {
+   "name": "Disk usage spikes to 100%",
+   "type": "Symptom"
+  },
+  {
+   "name": "Add RAM",
+   "type": "Fix"
+  },
+  {
+   "name": "Switch to SSD",
+   "type": "Fix"
+  },
+  {
+   "name": "Disable non-essential startup items",
+   "type": "Fix"
+  },
+  {
+   "name": "Run Disk Cleanup",
+   "type": "Fix"
+  },
+  {
+   "name": "Ensure Windows is up to date",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "High CPU usage (>90%)",
+   "relation": "CAUSED_BY",
+   "target": "Insufficient RAM (<8 GB)"
+  },
+  {
+   "source": "Memory usage >80%",
+   "relation": "CAUSED_BY",
+   "target": "Insufficient RAM (<8 GB)"
+  },
+  {
+   "source": "Disk usage spikes to 100%",
+   "relation": "CAUSED_BY",
+   "target": "Aging HDD vs SSD"
+  },
+  {
+   "source": "System hangs or freezes during video calls",
+   "relation": "CAUSED_BY",
+   "target": "Too many startup programs"
+  },
+  {
+   "source": "Applications unresponsive or slow to launch",
+   "relation": "CAUSED_BY",
+   "target": "Pending Windows updates"
+  },
+  {
+   "source": "Frequent disk activity light flashing",
+   "relation": "CAUSED_BY",
+   "target": "Low free disk space (<10%)"
+  },
+  {
+   "source": "Laptop feels very slow or laggy",
+   "relation": "CAUSED_BY",
+   "target": "Malware consuming resources"
+  },
+  {
+   "source": "Insufficient RAM (<8 GB)",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440/7440"
+  },
+  {
+   "source": "Aging HDD vs SSD",
+   "relation": "AFFECTS",
+   "target": "Lenovo ThinkPad T14/X1 Carbon"
+  },
+  {
+   "source": "Too many startup programs",
+   "relation": "AFFECTS",
+   "target": "HP EliteBook 840"
+  },
+  {
+   "source": "Pending Windows updates",
+   "relation": "AFFECTS",
+   "target": "MacBook Pro/Air"
+  },
+  {
+   "source": "Low free disk space (<10%)",
+   "relation": "AFFECTS",
+   "target": "Windows 11 23H2/24H2"
+  },
+  {
+   "source": "Malware consuming resources",
+   "relation": "AFFECTS",
+   "target": "Microsoft Intune"
+  },
+  {
+   "source": "Insufficient RAM (<8 GB)",
+   "relation": "FIXED_BY",
+   "target": "Add RAM"
+  },
+  {
+   "source": "Aging HDD vs SSD",
+   "relation": "FIXED_BY",
+   "target": "Switch to SSD"
+  },
+  {
+   "source": "Too many startup programs",
+   "relation": "FIXED_BY",
+   "target": "Disable non-essential startup items"
+  },
+  {
+   "source": "Low free disk space (<10%)",
+   "relation": "FIXED_BY",
+   "target": "Run Disk Cleanup"
+  },
+  {
+   "source": "Pending Windows updates",
+   "relation": "FIXED_BY",
+   "target": "Ensure Windows is up to date"
+  }
+ ]
+}

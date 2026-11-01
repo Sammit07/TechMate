@@ -1,0 +1,140 @@
+{
+ "entities": [
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Entra ID",
+   "type": "Product"
+  },
+  {
+   "name": "licence not assigned",
+   "type": "Symptom"
+  },
+  {
+   "name": "application prompts for product key",
+   "type": "Symptom"
+  },
+  {
+   "name": "software opens in trial mode",
+   "type": "Symptom"
+  },
+  {
+   "name": "error code 0x80070005",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "licence not yet assigned",
+   "type": "Cause"
+  },
+  {
+   "name": "existing licence expired",
+   "type": "Cause"
+  },
+  {
+   "name": "manager approval pending",
+   "type": "Cause"
+  },
+  {
+   "name": "device offline",
+   "type": "Cause"
+  },
+  {
+   "name": "corrupted local licence cache",
+   "type": "Cause"
+  },
+  {
+   "name": "request licence via Company Portal",
+   "type": "Fix"
+  },
+  {
+   "name": "approve or assign licence in admin console",
+   "type": "Fix"
+  },
+  {
+   "name": "verify successful activation",
+   "type": "Fix"
+  },
+  {
+   "name": "Dell Latitude 5440",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft 365 apps",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "licence not assigned",
+   "relation": "CAUSED_BY",
+   "target": "licence not yet assigned"
+  },
+  {
+   "source": "application prompts for product key",
+   "relation": "CAUSED_BY",
+   "target": "licence not yet assigned"
+  },
+  {
+   "source": "software opens in trial mode",
+   "relation": "CAUSED_BY",
+   "target": "licence not yet assigned"
+  },
+  {
+   "source": "error code 0x80070005",
+   "relation": "INDICATES",
+   "target": "device offline"
+  },
+  {
+   "source": "licence not assigned",
+   "relation": "FIXED_BY",
+   "target": "approve or assign licence in admin console"
+  },
+  {
+   "source": "application prompts for product key",
+   "relation": "FIXED_BY",
+   "target": "request licence via Company Portal"
+  },
+  {
+   "source": "software opens in trial mode",
+   "relation": "FIXED_BY",
+   "target": "request licence via Company Portal"
+  },
+  {
+   "source": "licence not yet assigned",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365 apps"
+  },
+  {
+   "source": "licence not yet assigned",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440"
+  },
+  {
+   "source": "device offline",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  },
+  {
+   "source": "corrupted local licence cache",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  },
+  {
+   "source": "request licence via Company Portal",
+   "relation": "PART_OF",
+   "target": "Company Portal"
+  },
+  {
+   "source": "approve or assign licence in admin console",
+   "relation": "PART_OF",
+   "target": "Entra ID"
+  },
+  {
+   "source": "verify successful activation",
+   "relation": "PART_OF",
+   "target": "Company Portal"
+  }
+ ]
+}

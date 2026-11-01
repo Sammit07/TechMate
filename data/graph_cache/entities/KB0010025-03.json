@@ -1,0 +1,204 @@
+{
+ "entities": [
+  {
+   "name": "dead network port",
+   "type": "Symptom"
+  },
+  {
+   "name": "switch management interface",
+   "type": "Component"
+  },
+  {
+   "name": "port status",
+   "type": "Component"
+  },
+  {
+   "name": "link down",
+   "type": "Symptom"
+  },
+  {
+   "name": "err-disable",
+   "type": "Symptom"
+  },
+  {
+   "name": "admin down",
+   "type": "Symptom"
+  },
+  {
+   "name": "VLAN assignment",
+   "type": "Component"
+  },
+  {
+   "name": "DHCP snooping bindings",
+   "type": "Component"
+  },
+  {
+   "name": "Ethernet cable reseat",
+   "type": "Fix"
+  },
+  {
+   "name": "patch cable replacement",
+   "type": "Fix"
+  },
+  {
+   "name": "wall-jack inspection",
+   "type": "Fix"
+  },
+  {
+   "name": "docking-station firmware update",
+   "type": "Fix"
+  },
+  {
+   "name": "err-disable clearance",
+   "type": "Fix"
+  },
+  {
+   "name": "port enablement",
+   "type": "Fix"
+  },
+  {
+   "name": "port swap",
+   "type": "Fix"
+  },
+  {
+   "name": "Ethernet controller driver update",
+   "type": "Fix"
+  },
+  {
+   "name": "macOS USB-C/Ethernet driver",
+   "type": "Component"
+  },
+  {
+   "name": "docking-station driver reinstall",
+   "type": "Fix"
+  },
+  {
+   "name": "self-help verification",
+   "type": "Fix"
+  },
+  {
+   "name": "internal resource access",
+   "type": "Symptom"
+  },
+  {
+   "name": "root cause documentation",
+   "type": "Fix"
+  },
+  {
+   "name": "ticket closure",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "dead network port",
+   "relation": "CAUSED_BY",
+   "target": "link down"
+  },
+  {
+   "source": "dead network port",
+   "relation": "CAUSED_BY",
+   "target": "err-disable"
+  },
+  {
+   "source": "dead network port",
+   "relation": "CAUSED_BY",
+   "target": "admin down"
+  },
+  {
+   "source": "link down",
+   "relation": "AFFECTS",
+   "target": "switch management interface"
+  },
+  {
+   "source": "err-disable",
+   "relation": "AFFECTS",
+   "target": "switch management interface"
+  },
+  {
+   "source": "admin down",
+   "relation": "AFFECTS",
+   "target": "switch management interface"
+  },
+  {
+   "source": "link down",
+   "relation": "AFFECTS",
+   "target": "VLAN assignment"
+  },
+  {
+   "source": "link down",
+   "relation": "AFFECTS",
+   "target": "DHCP snooping bindings"
+  },
+  {
+   "source": "link down",
+   "relation": "FIXED_BY",
+   "target": "Ethernet cable reseat"
+  },
+  {
+   "source": "link down",
+   "relation": "FIXED_BY",
+   "target": "patch cable replacement"
+  },
+  {
+   "source": "link down",
+   "relation": "FIXED_BY",
+   "target": "wall-jack inspection"
+  },
+  {
+   "source": "link down",
+   "relation": "FIXED_BY",
+   "target": "docking-station firmware update"
+  },
+  {
+   "source": "err-disable",
+   "relation": "FIXED_BY",
+   "target": "err-disable clearance"
+  },
+  {
+   "source": "admin down",
+   "relation": "FIXED_BY",
+   "target": "port enablement"
+  },
+  {
+   "source": "persistent link failure",
+   "relation": "FIXED_BY",
+   "target": "port swap"
+  },
+  {
+   "source": "driver/firmware issue",
+   "relation": "FIXED_BY",
+   "target": "Ethernet controller driver update"
+  },
+  {
+   "source": "driver/firmware issue",
+   "relation": "FIXED_BY",
+   "target": "macOS USB-C/Ethernet driver"
+  },
+  {
+   "source": "driver/firmware issue",
+   "relation": "FIXED_BY",
+   "target": "docking-station driver reinstall"
+  },
+  {
+   "source": "resolved issue",
+   "relation": "FIXED_BY",
+   "target": "self-help verification"
+  },
+  {
+   "source": "resolved issue",
+   "relation": "FIXED_BY",
+   "target": "internal resource access"
+  },
+  {
+   "source": "resolved issue",
+   "relation": "FIXED_BY",
+   "target": "root cause documentation"
+  },
+  {
+   "source": "resolved issue",
+   "relation": "FIXED_BY",
+   "target": "ticket closure"
+  }
+ ]
+}

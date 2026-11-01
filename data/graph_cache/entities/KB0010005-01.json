@@ -1,0 +1,153 @@
+{
+ "entities": [
+  {
+   "name": "stale credentials",
+   "type": "Cause"
+  },
+  {
+   "name": "Credential Manager",
+   "type": "Component"
+  },
+  {
+   "name": "mapped drives",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook/Exchange ActiveSync",
+   "type": "Component"
+  },
+  {
+   "name": "browser saved passwords",
+   "type": "Component"
+  },
+  {
+   "name": "account lockout after automatic lockout period expires",
+   "type": "Symptom"
+  },
+  {
+   "name": "Active Directory Users and Computers (ADUC)",
+   "type": "Product"
+  },
+  {
+   "name": "lockout-time attribute",
+   "type": "Component"
+  },
+  {
+   "name": "badPwdCount value",
+   "type": "Component"
+  },
+  {
+   "name": "Event ID 4740",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Event ID 4625",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Netwrix/Azure AD sign-in logs",
+   "type": "Product"
+  },
+  {
+   "name": "clear stale credentials",
+   "type": "Fix"
+  },
+  {
+   "name": "remove suspicious credential entries",
+   "type": "Fix"
+  },
+  {
+   "name": "disconnect and remap mapped drives",
+   "type": "Fix"
+  },
+  {
+   "name": "delete and re-add email account",
+   "type": "Fix"
+  },
+  {
+   "name": "remove browser saved passwords for acme.example domains",
+   "type": "Fix"
+  },
+  {
+   "name": "unlock account in ADUC",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "account lockout after automatic lockout period expires",
+   "relation": "CAUSED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "Credential Manager"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "mapped drives"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "Outlook/Exchange ActiveSync"
+  },
+  {
+   "source": "stale credentials",
+   "relation": "AFFECTS",
+   "target": "browser saved passwords"
+  },
+  {
+   "source": "Event ID 4740",
+   "relation": "INDICATES",
+   "target": "account lockout after automatic lockout period expires"
+  },
+  {
+   "source": "Event ID 4625",
+   "relation": "INDICATES",
+   "target": "account lockout after automatic lockout period expires"
+  },
+  {
+   "source": "lockout-time attribute",
+   "relation": "AFFECTS",
+   "target": "Active Directory Users and Computers (ADUC)"
+  },
+  {
+   "source": "badPwdCount value",
+   "relation": "AFFECTS",
+   "target": "Active Directory Users and Computers (ADUC)"
+  },
+  {
+   "source": "clear stale credentials",
+   "relation": "FIXED_BY",
+   "target": "account lockout after automatic lockout period expires"
+  },
+  {
+   "source": "remove suspicious credential entries",
+   "relation": "FIXED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "disconnect and remap mapped drives",
+   "relation": "FIXED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "delete and re-add email account",
+   "relation": "FIXED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "remove browser saved passwords for acme.example domains",
+   "relation": "FIXED_BY",
+   "target": "stale credentials"
+  },
+  {
+   "source": "unlock account in ADUC",
+   "relation": "FIXED_BY",
+   "target": "account lockout after automatic lockout period expires"
+  }
+ ]
+}

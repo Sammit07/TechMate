@@ -1,0 +1,68 @@
+{
+ "entities": [
+  {
+   "name": "Azure AD",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "Credential Manager",
+   "type": "Component"
+  },
+  {
+   "name": "new password not accepted",
+   "type": "Symptom"
+  },
+  {
+   "name": "stale credential entry",
+   "type": "Cause"
+  },
+  {
+   "name": "clear stale entries in Credential Manager",
+   "type": "Fix"
+  },
+  {
+   "name": "connect to corporate VPN",
+   "type": "Fix"
+  },
+  {
+   "name": "lock and unlock workstation",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "new password not accepted",
+   "relation": "CAUSED_BY",
+   "target": "stale credential entry"
+  },
+  {
+   "source": "stale credential entry",
+   "relation": "FIXED_BY",
+   "target": "clear stale entries in Credential Manager"
+  },
+  {
+   "source": "new password not accepted",
+   "relation": "FIXED_BY",
+   "target": "connect to corporate VPN"
+  },
+  {
+   "source": "new password not accepted",
+   "relation": "FIXED_BY",
+   "target": "lock and unlock workstation"
+  },
+  {
+   "source": "Credential Manager",
+   "relation": "AFFECTS",
+   "target": "Azure AD"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "Azure AD"
+  }
+ ]
+}

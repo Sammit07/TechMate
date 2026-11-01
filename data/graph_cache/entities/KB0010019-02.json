@@ -1,0 +1,126 @@
+{
+ "entities": [
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "split tunnel",
+   "type": "Component"
+  },
+  {
+   "name": "VPN disconnects",
+   "type": "Symptom"
+  },
+  {
+   "name": "certificate expired",
+   "type": "Cause"
+  },
+  {
+   "name": "renew certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "update VPN client",
+   "type": "Fix"
+  },
+  {
+   "name": "flush DNS cache",
+   "type": "Fix"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "vpn.acme.example",
+   "type": "Product"
+  },
+  {
+   "name": "authentication failed",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "exported GlobalProtect logs",
+   "type": "Component"
+  },
+  {
+   "name": "Network Support",
+   "type": "Product"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "Identity & Access Management team",
+   "type": "Product"
+  }
+ ],
+ "relations": [
+  {
+   "source": "VPN disconnects",
+   "relation": "CAUSED_BY",
+   "target": "certificate expired"
+  },
+  {
+   "source": "authentication failed",
+   "relation": "INDICATES",
+   "target": "certificate expired"
+  },
+  {
+   "source": "certificate expired",
+   "relation": "FIXED_BY",
+   "target": "renew certificate"
+  },
+  {
+   "source": "VPN disconnects",
+   "relation": "FIXED_BY",
+   "target": "update VPN client"
+  },
+  {
+   "source": "VPN disconnects",
+   "relation": "FIXED_BY",
+   "target": "flush DNS cache"
+  },
+  {
+   "source": "split tunnel",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  },
+  {
+   "source": "vpn.acme.example",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "exported GlobalProtect logs",
+   "relation": "PART_OF",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "Temporary Access Pass",
+   "relation": "PART_OF",
+   "target": "Identity & Access Management team"
+  },
+  {
+   "source": "Network Support",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  }
+ ]
+}

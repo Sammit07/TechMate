@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "Microsoft Authenticator",
+   "type": "Product"
+  },
+  {
+   "name": "Temporary Access Pass",
+   "type": "Component"
+  },
+  {
+   "name": "push notification not arriving",
+   "type": "Symptom"
+  },
+  {
+   "name": "MFA codes rejected",
+   "type": "Symptom"
+  },
+  {
+   "name": "add new Microsoft Authenticator registration",
+   "type": "Fix"
+  },
+  {
+   "name": "delete the TAP after successful enrollment",
+   "type": "Fix"
+  },
+  {
+   "name": "signing into a Microsoft 365 service",
+   "type": "Verification"
+  },
+  {
+   "name": "Outlook on the web",
+   "type": "Product"
+  },
+  {
+   "name": "invalid code",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "time sync",
+   "type": "Cause"
+  },
+  {
+   "name": "backup SMS",
+   "type": "Component"
+  },
+  {
+   "name": "Identity & Access Management (IAM) team",
+   "type": "Product"
+  },
+  {
+   "name": "compromised account",
+   "type": "Cause"
+  },
+  {
+   "name": "verify MFA works",
+   "type": "Fix"
+  },
+  {
+   "name": "employee ID and email",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "push notification not arriving",
+   "relation": "CAUSED_BY",
+   "target": "time sync"
+  },
+  {
+   "source": "MFA codes rejected",
+   "relation": "CAUSED_BY",
+   "target": "time sync"
+  },
+  {
+   "source": "push notification not arriving",
+   "relation": "INDICATES",
+   "target": "invalid code"
+  },
+  {
+   "source": "MFA codes rejected",
+   "relation": "INDICATES",
+   "target": "invalid code"
+  },
+  {
+   "source": "time sync",
+   "relation": "FIXED_BY",
+   "target": "add new Microsoft Authenticator registration"
+  },
+  {
+   "source": "invalid code",
+   "relation": "FIXED_BY",
+   "target": "add new Microsoft Authenticator registration"
+  },
+  {
+   "source": "add new Microsoft Authenticator registration",
+   "relation": "FIXED_BY",
+   "target": "delete the TAP after successful enrollment"
+  },
+  {
+   "source": "signing into a Microsoft 365 service",
+   "relation": "AFFECTS",
+   "target": "Outlook on the web"
+  },
+  {
+   "source": "verify MFA works",
+   "relation": "FIXED_BY",
+   "target": "add new Microsoft Authenticator registration"
+  },
+  {
+   "source": "compromised account",
+   "relation": "CAUSED_BY",
+   "target": "Identity & Access Management (IAM) team"
+  },
+  {
+   "source": "backup SMS",
+   "relation": "PART_OF",
+   "target": "Microsoft Authenticator"
+  },
+  {
+   "source": "Temporary Access Pass",
+   "relation": "PART_OF",
+   "target": "Microsoft Authenticator"
+  },
+  {
+   "source": "employee ID and email",
+   "relation": "AFFECTS",
+   "target": "Identity & Access Management (IAM) team"
+  },
+  {
+   "source": "push notification not arriving",
+   "relation": "AFFECTS",
+   "target": "Microsoft Authenticator"
+  },
+  {
+   "source": "MFA codes rejected",
+   "relation": "AFFECTS",
+   "target": "Microsoft Authenticator"
+  }
+ ]
+}

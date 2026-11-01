@@ -1,0 +1,146 @@
+{
+ "entities": [
+  {
+   "name": "SMTP Settings",
+   "type": "Component"
+  },
+  {
+   "name": "Server",
+   "type": "Component"
+  },
+  {
+   "name": "Port",
+   "type": "Component"
+  },
+  {
+   "name": "Security",
+   "type": "Component"
+  },
+  {
+   "name": "Sender Address",
+   "type": "Component"
+  },
+  {
+   "name": "Authentication",
+   "type": "Component"
+  },
+  {
+   "name": "smtp.acme.example",
+   "type": "Product"
+  },
+  {
+   "name": "Telnet Connection Test",
+   "type": "Fix"
+  },
+  {
+   "name": "Address Book Entry Check",
+   "type": "Fix"
+  },
+  {
+   "name": "User-Side Test Scan",
+   "type": "Fix"
+  },
+  {
+   "name": "No Response from SMTP Server",
+   "type": "Symptom"
+  },
+  {
+   "name": "Firewall or Routing Issue",
+   "type": "Cause"
+  },
+  {
+   "name": "Stale Recipient Entry",
+   "type": "Cause"
+  },
+  {
+   "name": "Scanner Service Account Issue",
+   "type": "Cause"
+  },
+  {
+   "name": "Scan-to-Email Function Failure",
+   "type": "Symptom"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Scan-to-Email Function Failure",
+   "relation": "CAUSED_BY",
+   "target": "SMTP Settings Deviation"
+  },
+  {
+   "source": "SMTP Settings Deviation",
+   "relation": "FIXED_BY",
+   "target": "Correct SMTP Settings to Baseline"
+  },
+  {
+   "source": "No Response from SMTP Server",
+   "relation": "INDICATES",
+   "target": "Firewall or Routing Issue"
+  },
+  {
+   "source": "No Response from SMTP Server",
+   "relation": "INDICATES",
+   "target": "Network Connectivity Problem"
+  },
+  {
+   "source": "Scan-to-Email Function Failure",
+   "relation": "CAUSED_BY",
+   "target": "Stale Recipient Entry"
+  },
+  {
+   "source": "Stale Recipient Entry",
+   "relation": "FIXED_BY",
+   "target": "Address Book Entry Check"
+  },
+  {
+   "source": "Scan-to-Email Function Failure",
+   "relation": "CAUSED_BY",
+   "target": "Scanner Service Account Issue"
+  },
+  {
+   "source": "Scanner Service Account Issue",
+   "relation": "FIXED_BY",
+   "target": "Verify Account Status in Entra ID"
+  },
+  {
+   "source": "SMTP Settings",
+   "relation": "AFFECTS",
+   "target": "Scan-to-Email Function"
+  },
+  {
+   "source": "Server",
+   "relation": "PART_OF",
+   "target": "SMTP Settings"
+  },
+  {
+   "source": "Port",
+   "relation": "PART_OF",
+   "target": "SMTP Settings"
+  },
+  {
+   "source": "Security",
+   "relation": "PART_OF",
+   "target": "SMTP Settings"
+  },
+  {
+   "source": "Sender Address",
+   "relation": "PART_OF",
+   "target": "SMTP Settings"
+  },
+  {
+   "source": "Authentication",
+   "relation": "PART_OF",
+   "target": "SMTP Settings"
+  },
+  {
+   "source": "Telnet Connection Test",
+   "relation": "FIXED_BY",
+   "target": "Network Path Verification"
+  },
+  {
+   "source": "User-Side Test Scan",
+   "relation": "FIXED_BY",
+   "target": "Final Validation of Scan-to-Email"
+  }
+ ]
+}

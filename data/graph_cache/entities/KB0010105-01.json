@@ -1,0 +1,126 @@
+{
+ "entities": [
+  {
+   "name": "Virtual Desktop",
+   "type": "Component"
+  },
+  {
+   "name": "Snap Layout",
+   "type": "Component"
+  },
+  {
+   "name": "Focus Assist",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft 365",
+   "type": "Product"
+  },
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Teams",
+   "type": "Product"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "BitLocker",
+   "type": "Component"
+  },
+  {
+   "name": "Patch Tuesday",
+   "type": "Component"
+  },
+  {
+   "name": "Files On-Demand",
+   "type": "Component"
+  },
+  {
+   "name": "Task View",
+   "type": "Component"
+  },
+  {
+   "name": "Priority only",
+   "type": "Component"
+  },
+  {
+   "name": "Windows Update",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Virtual Desktop",
+   "relation": "PART_OF",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Snap Layout",
+   "relation": "PART_OF",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Focus Assist",
+   "relation": "PART_OF",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365"
+  },
+  {
+   "source": "Teams",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365"
+  },
+  {
+   "source": "OneDrive",
+   "relation": "AFFECTS",
+   "target": "Microsoft 365"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "Intune"
+  },
+  {
+   "source": "BitLocker",
+   "relation": "AFFECTS",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Patch Tuesday",
+   "relation": "AFFECTS",
+   "target": "Windows Update"
+  },
+  {
+   "source": "Files On-Demand",
+   "relation": "PART_OF",
+   "target": "OneDrive"
+  },
+  {
+   "source": "Task View",
+   "relation": "PART_OF",
+   "target": "Windows 11"
+  },
+  {
+   "source": "Priority only",
+   "relation": "PART_OF",
+   "target": "Focus Assist"
+  }
+ ]
+}

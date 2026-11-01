@@ -1,0 +1,207 @@
+{
+ "entities": [
+  {
+   "name": "self-service portal",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi",
+   "type": "Component"
+  },
+  {
+   "name": "VPN",
+   "type": "Component"
+  },
+  {
+   "name": "machine certificate",
+   "type": "Component"
+  },
+  {
+   "name": "MFA prompt",
+   "type": "Component"
+  },
+  {
+   "name": "browser cache",
+   "type": "Component"
+  },
+  {
+   "name": "site certificate",
+   "type": "Component"
+  },
+  {
+   "name": "incognito/private window",
+   "type": "Component"
+  },
+  {
+   "name": "Entra ID UID",
+   "type": "Component"
+  },
+  {
+   "name": "traceroute results",
+   "type": "Component"
+  },
+  {
+   "name": "VPN client logs",
+   "type": "Component"
+  },
+  {
+   "name": "device's certificate validity dates",
+   "type": "Component"
+  },
+  {
+   "name": "password expiration",
+   "type": "Cause"
+  },
+  {
+   "name": "account lockout",
+   "type": "Cause"
+  },
+  {
+   "name": "MFA device failure",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "firewall issue",
+   "type": "Cause"
+  },
+  {
+   "name": "stale cookies or extensions",
+   "type": "Cause"
+  },
+  {
+   "name": "clear browser cache",
+   "type": "Fix"
+  },
+  {
+   "name": "use backup SMS code",
+   "type": "Fix"
+  },
+  {
+   "name": "renew machine certificate",
+   "type": "Fix"
+  },
+  {
+   "name": "contact IT Service Desk",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Identity & Access Management team",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Network Support",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "cannot reach self-service portal",
+   "relation": "CAUSED_BY",
+   "target": "stale cookies or extensions"
+  },
+  {
+   "source": "cannot reach self-service portal",
+   "relation": "CAUSED_BY",
+   "target": "invalid site certificate"
+  },
+  {
+   "source": "cannot reach self-service portal",
+   "relation": "CAUSED_BY",
+   "target": "not connected to ACME-Corp Wi-Fi or VPN"
+  },
+  {
+   "source": "cannot approve MFA prompt",
+   "relation": "CAUSED_BY",
+   "target": "MFA device failure"
+  },
+  {
+   "source": "user cannot authenticate",
+   "relation": "CAUSED_BY",
+   "target": "password expiration"
+  },
+  {
+   "source": "user cannot authenticate",
+   "relation": "CAUSED_BY",
+   "target": "account lockout"
+  },
+  {
+   "source": "portal unreachable from multiple locations",
+   "relation": "CAUSED_BY",
+   "target": "VPN certificate"
+  },
+  {
+   "source": "portal unreachable from multiple locations",
+   "relation": "CAUSED_BY",
+   "target": "firewall issue"
+  },
+  {
+   "source": "cannot reach self-service portal",
+   "relation": "INDICATES",
+   "target": "invalid site certificate"
+  },
+  {
+   "source": "MFA prompt failure",
+   "relation": "INDICATES",
+   "target": "MFA device failure"
+  },
+  {
+   "source": "self-service portal",
+   "relation": "AFFECTS",
+   "target": "browser cache"
+  },
+  {
+   "source": "self-service portal",
+   "relation": "AFFECTS",
+   "target": "machine certificate"
+  },
+  {
+   "source": "self-service portal",
+   "relation": "AFFECTS",
+   "target": "MFA prompt"
+  },
+  {
+   "source": "VPN certificate",
+   "relation": "PART_OF",
+   "target": "VPN"
+  },
+  {
+   "source": "machine certificate",
+   "relation": "PART_OF",
+   "target": "device"
+  },
+  {
+   "source": "cannot reach self-service portal",
+   "relation": "FIXED_BY",
+   "target": "clear browser cache"
+  },
+  {
+   "source": "MFA prompt failure",
+   "relation": "FIXED_BY",
+   "target": "use backup SMS code"
+  },
+  {
+   "source": "expired machine certificate",
+   "relation": "FIXED_BY",
+   "target": "renew machine certificate"
+  },
+  {
+   "source": "user cannot authenticate",
+   "relation": "FIXED_BY",
+   "target": "contact IT Service Desk"
+  },
+  {
+   "source": "password expiration or account lockout",
+   "relation": "FIXED_BY",
+   "target": "escalate to Identity & Access Management team"
+  },
+  {
+   "source": "portal unreachable from multiple locations",
+   "relation": "FIXED_BY",
+   "target": "escalate to Network Support"
+  }
+ ]
+}

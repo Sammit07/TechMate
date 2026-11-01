@@ -1,0 +1,141 @@
+{
+ "entities": [
+  {
+   "name": "IT Self-Service Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Password Reset Tool",
+   "type": "Component"
+  },
+  {
+   "name": "Knowledge Base",
+   "type": "Component"
+  },
+  {
+   "name": "Standard Software Package Request",
+   "type": "Component"
+  },
+  {
+   "name": "Driver/Firmware Download",
+   "type": "Component"
+  },
+  {
+   "name": "Ticket Submission Process",
+   "type": "Component"
+  },
+  {
+   "name": "Portal Not Behaving as Expected",
+   "type": "Symptom"
+  },
+  {
+   "name": "Invalid Site Certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "Browser Cache Issue",
+   "type": "Cause"
+  },
+  {
+   "name": "Clear Browser Cache",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify Portal URL",
+   "type": "Fix"
+  },
+  {
+   "name": "Check Site Certificate Validity",
+   "type": "Fix"
+  },
+  {
+   "name": "Service Desk L1 Agent Workflow",
+   "type": "Component"
+  },
+  {
+   "name": "Ticket Escalation to Owning Group",
+   "type": "Fix"
+  },
+  {
+   "name": "Periodic Ticket Updates",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Portal Not Behaving as Expected",
+   "relation": "CAUSED_BY",
+   "target": "Invalid Site Certificate"
+  },
+  {
+   "source": "Portal Not Behaving as Expected",
+   "relation": "CAUSED_BY",
+   "target": "Browser Cache Issue"
+  },
+  {
+   "source": "Invalid Site Certificate",
+   "relation": "FIXED_BY",
+   "target": "Check Site Certificate Validity"
+  },
+  {
+   "source": "Browser Cache Issue",
+   "relation": "FIXED_BY",
+   "target": "Clear Browser Cache"
+  },
+  {
+   "source": "Portal Not Behaving as Expected",
+   "relation": "INDICATES",
+   "target": "Invalid Site Certificate"
+  },
+  {
+   "source": "Portal Not Behaving as Expected",
+   "relation": "INDICATES",
+   "target": "Browser Cache Issue"
+  },
+  {
+   "source": "Ticket Submission Process",
+   "relation": "AFFECTS",
+   "target": "IT Self-Service Portal"
+  },
+  {
+   "source": "Service Desk L1 Agent Workflow",
+   "relation": "PART_OF",
+   "target": "IT Self-Service Portal"
+  },
+  {
+   "source": "Password Reset Tool",
+   "relation": "PART_OF",
+   "target": "IT Self-Service Portal"
+  },
+  {
+   "source": "Knowledge Base",
+   "relation": "PART_OF",
+   "target": "IT Self-Service Portal"
+  },
+  {
+   "source": "Standard Software Package Request",
+   "relation": "PART_OF",
+   "target": "IT Self-Service Portal"
+  },
+  {
+   "source": "Driver/Firmware Download",
+   "relation": "PART_OF",
+   "target": "IT Self-Service Portal"
+  },
+  {
+   "source": "Ticket Escalation to Owning Group",
+   "relation": "FIXED_BY",
+   "target": "Service Desk L1 Agent Workflow"
+  },
+  {
+   "source": "Periodic Ticket Updates",
+   "relation": "FIXED_BY",
+   "target": "Service Desk L1 Agent Workflow"
+  },
+  {
+   "source": "Verify Portal URL",
+   "relation": "FIXED_BY",
+   "target": "Portal Not Behaving as Expected"
+  }
+ ]
+}

@@ -1,0 +1,177 @@
+{
+ "entities": [
+  {
+   "name": "Outlook",
+   "type": "Product"
+  },
+  {
+   "name": "Dell Latitude 5440",
+   "type": "Product"
+  },
+  {
+   "name": "COM add-in",
+   "type": "Component"
+  },
+  {
+   "name": "OST file",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook profile",
+   "type": "Component"
+  },
+  {
+   "name": "Search index",
+   "type": "Component"
+  },
+  {
+   "name": "Network connectivity",
+   "type": "Component"
+  },
+  {
+   "name": "Password expiration",
+   "type": "Cause"
+  },
+  {
+   "name": "Corrupted Outlook profile or OST file",
+   "type": "Cause"
+  },
+  {
+   "name": "Faulty COM add-in",
+   "type": "Cause"
+  },
+  {
+   "name": "Outlook search index corruption",
+   "type": "Cause"
+  },
+  {
+   "name": "Expired or locked-out password",
+   "type": "Cause"
+  },
+  {
+   "name": "Large OST size",
+   "type": "Cause"
+  },
+  {
+   "name": "Outdated Outlook client",
+   "type": "Cause"
+  },
+  {
+   "name": "Not syncing",
+   "type": "Symptom"
+  },
+  {
+   "name": "Crashing",
+   "type": "Symptom"
+  },
+  {
+   "name": "Repeated password prompts",
+   "type": "Symptom"
+  },
+  {
+   "name": "Disconnected status",
+   "type": "Symptom"
+  },
+  {
+   "name": "Send/receive error 0x800CCC0F",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Send/receive error 0x8004010F",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Outlook has stopped working",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Close Outlook completely",
+   "type": "Fix"
+  },
+  {
+   "name": "Start Outlook in safe mode",
+   "type": "Fix"
+  },
+  {
+   "name": "Disable all COM add-ins",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Not syncing",
+   "relation": "CAUSED_BY",
+   "target": "Network connectivity"
+  },
+  {
+   "source": "Crashing",
+   "relation": "CAUSED_BY",
+   "target": "Faulty COM add-in"
+  },
+  {
+   "source": "Repeated password prompts",
+   "relation": "CAUSED_BY",
+   "target": "Expired or locked-out password"
+  },
+  {
+   "source": "Disconnected status",
+   "relation": "CAUSED_BY",
+   "target": "Network connectivity"
+  },
+  {
+   "source": "Send/receive error 0x800CCC0F",
+   "relation": "INDICATES",
+   "target": "Network connectivity"
+  },
+  {
+   "source": "Send/receive error 0x8004010F",
+   "relation": "INDICATES",
+   "target": "Corrupted Outlook profile or OST file"
+  },
+  {
+   "source": "Outlook has stopped working",
+   "relation": "INDICATES",
+   "target": "Faulty COM add-in"
+  },
+  {
+   "source": "Faulty COM add-in",
+   "relation": "FIXED_BY",
+   "target": "Disable all COM add-ins"
+  },
+  {
+   "source": "Corrupted Outlook profile or OST file",
+   "relation": "FIXED_BY",
+   "target": "Close Outlook completely"
+  },
+  {
+   "source": "Network connectivity",
+   "relation": "FIXED_BY",
+   "target": "Start Outlook in safe mode"
+  },
+  {
+   "source": "Outlook",
+   "relation": "AFFECTS",
+   "target": "Dell Latitude 5440"
+  },
+  {
+   "source": "COM add-in",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  },
+  {
+   "source": "OST file",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  },
+  {
+   "source": "Outlook profile",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  },
+  {
+   "source": "Search index",
+   "relation": "PART_OF",
+   "target": "Outlook"
+  }
+ ]
+}

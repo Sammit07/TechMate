@@ -1,0 +1,144 @@
+{
+ "entities": [
+  {
+   "name": "mailbox full",
+   "type": "Symptom"
+  },
+  {
+   "name": "quota exceeded",
+   "type": "Symptom"
+  },
+  {
+   "name": "cannot send email",
+   "type": "Symptom"
+  },
+  {
+   "name": "online archive",
+   "type": "Component"
+  },
+  {
+   "name": "Outlook storage",
+   "type": "Component"
+  },
+  {
+   "name": "delete large attachments",
+   "type": "Fix"
+  },
+  {
+   "name": "empty deleted items",
+   "type": "Fix"
+  },
+  {
+   "name": "Exchange mailbox size",
+   "type": "Component"
+  },
+  {
+   "name": "archive mail",
+   "type": "Fix"
+  },
+  {
+   "name": "retention policy",
+   "type": "Component"
+  },
+  {
+   "name": "mailbox cleanup",
+   "type": "Fix"
+  },
+  {
+   "name": "KB0010067",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "User's SMTP alias and display name",
+   "type": "Component"
+  },
+  {
+   "name": "latest mailbox size statistics",
+   "type": "Component"
+  },
+  {
+   "name": "summary of steps already taken",
+   "type": "Component"
+  },
+  {
+   "name": "error messages during PowerShell export/import or Outlook operations",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "relevant screenshots or logs from Exchange admin center or Outlook client",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "mailbox full",
+   "relation": "CAUSED_BY",
+   "target": "quota exceeded"
+  },
+  {
+   "source": "cannot send email",
+   "relation": "CAUSED_BY",
+   "target": "mailbox full"
+  },
+  {
+   "source": "quota exceeded",
+   "relation": "AFFECTS",
+   "target": "Outlook storage"
+  },
+  {
+   "source": "online archive",
+   "relation": "PART_OF",
+   "target": "Exchange mailbox size"
+  },
+  {
+   "source": "delete large attachments",
+   "relation": "FIXED_BY",
+   "target": "mailbox full"
+  },
+  {
+   "source": "empty deleted items",
+   "relation": "FIXED_BY",
+   "target": "mailbox full"
+  },
+  {
+   "source": "archive mail",
+   "relation": "FIXED_BY",
+   "target": "mailbox full"
+  },
+  {
+   "source": "retention policy",
+   "relation": "AFFECTS",
+   "target": "mailbox cleanup"
+  },
+  {
+   "source": "KB0010067",
+   "relation": "INDICATES",
+   "target": "mailbox full"
+  },
+  {
+   "source": "error messages during PowerShell export/import or Outlook operations",
+   "relation": "INDICATES",
+   "target": "mailbox full"
+  },
+  {
+   "source": "User's SMTP alias and display name",
+   "relation": "AFFECTS",
+   "target": "mailbox full"
+  },
+  {
+   "source": "latest mailbox size statistics",
+   "relation": "AFFECTS",
+   "target": "mailbox full"
+  },
+  {
+   "source": "summary of steps already taken",
+   "relation": "AFFECTS",
+   "target": "mailbox full"
+  },
+  {
+   "source": "relevant screenshots or logs from Exchange admin center or Outlook client",
+   "relation": "AFFECTS",
+   "target": "mailbox full"
+  }
+ ]
+}

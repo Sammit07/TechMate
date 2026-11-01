@@ -1,0 +1,116 @@
+{
+ "entities": [
+  {
+   "name": "Print Spooler",
+   "type": "Component"
+  },
+  {
+   "name": "PaperCut",
+   "type": "Product"
+  },
+  {
+   "name": "ACME-Corp Wi-Fi",
+   "type": "Component"
+  },
+  {
+   "name": "print.acme.example",
+   "type": "Product"
+  },
+  {
+   "name": "PRN-BLR-01",
+   "type": "Component"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Services MMC",
+   "type": "Component"
+  },
+  {
+   "name": "printer queue",
+   "type": "Component"
+  },
+  {
+   "name": "stuck jobs",
+   "type": "Symptom"
+  },
+  {
+   "name": "blank-page outputs",
+   "type": "Symptom"
+  },
+  {
+   "name": "toner levels",
+   "type": "Component"
+  },
+  {
+   "name": "ID badge",
+   "type": "Component"
+  },
+  {
+   "name": "print quota",
+   "type": "Component"
+  },
+  {
+   "name": "printer model",
+   "type": "Component"
+  },
+  {
+   "name": "network connectivity",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Print Spooler",
+   "relation": "AFFECTS",
+   "target": "printer queue"
+  },
+  {
+   "source": "stuck jobs",
+   "relation": "CAUSED_BY",
+   "target": "Print Spooler"
+  },
+  {
+   "source": "Print Spooler",
+   "relation": "FIXED_BY",
+   "target": "Start Print Spooler service"
+  },
+  {
+   "source": "network connectivity",
+   "relation": "AFFECTS",
+   "target": "print.acme.example"
+  },
+  {
+   "source": "ID badge",
+   "relation": "AFFECTS",
+   "target": "PaperCut"
+  },
+  {
+   "source": "print quota",
+   "relation": "AFFECTS",
+   "target": "PaperCut"
+  },
+  {
+   "source": "blank-page outputs",
+   "relation": "CAUSED_BY",
+   "target": "toner levels"
+  },
+  {
+   "source": "printer model",
+   "relation": "AFFECTS",
+   "target": "Company Portal"
+  },
+  {
+   "source": "PRN-BLR-01",
+   "relation": "PART_OF",
+   "target": "print.acme.example"
+  },
+  {
+   "source": "Services MMC",
+   "relation": "AFFECTS",
+   "target": "Print Spooler"
+  }
+ ]
+}

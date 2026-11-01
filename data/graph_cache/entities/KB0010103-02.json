@@ -1,0 +1,171 @@
+{
+ "entities": [
+  {
+   "name": "Wireless Projection System",
+   "type": "Product"
+  },
+  {
+   "name": "HDMI Cable Connection",
+   "type": "Component"
+  },
+  {
+   "name": "USB-C Port Issue",
+   "type": "Component"
+  },
+  {
+   "name": "Teams Audio Settings Misconfiguration",
+   "type": "Component"
+  },
+  {
+   "name": "Echo Feedback Loop",
+   "type": "Symptom"
+  },
+  {
+   "name": "Touch Panel Unresponsiveness",
+   "type": "Symptom"
+  },
+  {
+   "name": "Camera Black Screen",
+   "type": "Symptom"
+  },
+  {
+   "name": "Teams Join Failure",
+   "type": "Symptom"
+  },
+  {
+   "name": "Cable Not Firmly Seated",
+   "type": "Cause"
+  },
+  {
+   "name": "Incorrect Touch Panel Source Selection",
+   "type": "Cause"
+  },
+  {
+   "name": "Listen to This Device Enabled",
+   "type": "Cause"
+  },
+  {
+   "name": "Ethernet Link Down",
+   "type": "Cause"
+  },
+  {
+   "name": "Camera USB Disconnection",
+   "type": "Cause"
+  },
+  {
+   "name": "Laptop Not Signed into Teams",
+   "type": "Cause"
+  },
+  {
+   "name": "Reseat HDMI/USB-C Cables",
+   "type": "Fix"
+  },
+  {
+   "name": "Select Correct Input Source on Touch Panel",
+   "type": "Fix"
+  },
+  {
+   "name": "Disable Listen to This Device",
+   "type": "Fix"
+  },
+  {
+   "name": "Power-Cycle Touch Panel",
+   "type": "Fix"
+  },
+  {
+   "name": "Reconnect Camera USB Cable",
+   "type": "Fix"
+  },
+  {
+   "name": "Restart or Re-login to Teams Client",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "No video",
+   "relation": "CAUSED_BY",
+   "target": "Cable Not Firmly Seated"
+  },
+  {
+   "source": "No video",
+   "relation": "CAUSED_BY",
+   "target": "Incorrect Touch Panel Source Selection"
+  },
+  {
+   "source": "No audio or echo",
+   "relation": "CAUSED_BY",
+   "target": "Teams Audio Settings Misconfiguration"
+  },
+  {
+   "source": "No audio or echo",
+   "relation": "CAUSED_BY",
+   "target": "Listen to This Device Enabled"
+  },
+  {
+   "source": "Touch panel unresponsive",
+   "relation": "CAUSED_BY",
+   "target": "Ethernet Link Down"
+  },
+  {
+   "source": "Camera black screen",
+   "relation": "CAUSED_BY",
+   "target": "Camera USB Disconnection"
+  },
+  {
+   "source": "Cannot join Teams meeting",
+   "relation": "CAUSED_BY",
+   "target": "Laptop Not Signed into Teams"
+  },
+  {
+   "source": "Echo Feedback Loop",
+   "relation": "INDICATES",
+   "target": "Listen to This Device Enabled"
+  },
+  {
+   "source": "Touch Panel Unresponsiveness",
+   "relation": "AFFECTS",
+   "target": "Wireless Projection System"
+  },
+  {
+   "source": "Camera Black Screen",
+   "relation": "AFFECTS",
+   "target": "Wireless Projection System"
+  },
+  {
+   "source": "Teams Join Failure",
+   "relation": "AFFECTS",
+   "target": "Wireless Projection System"
+  },
+  {
+   "source": "Cable Not Firmly Seated",
+   "relation": "FIXED_BY",
+   "target": "Reseat HDMI/USB-C Cables"
+  },
+  {
+   "source": "Incorrect Touch Panel Source Selection",
+   "relation": "FIXED_BY",
+   "target": "Select Correct Input Source on Touch Panel"
+  },
+  {
+   "source": "Listen to This Device Enabled",
+   "relation": "FIXED_BY",
+   "target": "Disable Listen to This Device"
+  },
+  {
+   "source": "Ethernet Link Down",
+   "relation": "FIXED_BY",
+   "target": "Power-Cycle Touch Panel"
+  },
+  {
+   "source": "Camera USB Disconnection",
+   "relation": "FIXED_BY",
+   "target": "Reconnect Camera USB Cable"
+  },
+  {
+   "source": "Laptop Not Signed into Teams",
+   "relation": "FIXED_BY",
+   "target": "Restart or Re-login to Teams Client"
+  }
+ ]
+}

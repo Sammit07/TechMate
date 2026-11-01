@@ -1,0 +1,203 @@
+{
+ "entities": [
+  {
+   "name": "Windows Privacy Camera Access",
+   "type": "Component"
+  },
+  {
+   "name": "Windows Privacy Microphone Access",
+   "type": "Component"
+  },
+  {
+   "name": "Integrated Webcam Disabled",
+   "type": "Symptom"
+  },
+  {
+   "name": "Audio Device Disabled",
+   "type": "Symptom"
+  },
+  {
+   "name": "Bluetooth Adapter Disabled",
+   "type": "Symptom"
+  },
+  {
+   "name": "Incorrect Default Playback Device",
+   "type": "Symptom"
+  },
+  {
+   "name": "Incorrect Default Recording Device",
+   "type": "Symptom"
+  },
+  {
+   "name": "Outdated or Corrupted Driver",
+   "type": "Cause"
+  },
+  {
+   "name": "Privacy Settings Blocking Access",
+   "type": "Cause"
+  },
+  {
+   "name": "Hardware Disabled in Device Manager",
+   "type": "Cause"
+  },
+  {
+   "name": "Enable Integrated Webcam",
+   "type": "Fix"
+  },
+  {
+   "name": "Enable Audio Device",
+   "type": "Fix"
+  },
+  {
+   "name": "Enable Bluetooth Adapter",
+   "type": "Fix"
+  },
+  {
+   "name": "Update Camera Driver",
+   "type": "Fix"
+  },
+  {
+   "name": "Update Audio Driver",
+   "type": "Fix"
+  },
+  {
+   "name": "Set Default Playback Device",
+   "type": "Fix"
+  },
+  {
+   "name": "Set Default Recording Device",
+   "type": "Fix"
+  },
+  {
+   "name": "Toggle Bluetooth On",
+   "type": "Fix"
+  },
+  {
+   "name": "Verify App-Specific Privacy Permissions",
+   "type": "Fix"
+  },
+  {
+   "name": "Microsoft Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Intune Remote Assistance",
+   "type": "Product"
+  },
+  {
+   "name": "Device Manager",
+   "type": "Component"
+  },
+  {
+   "name": "Windows Settings Privacy & Security",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Integrated Webcam Disabled",
+   "relation": "CAUSED_BY",
+   "target": "Privacy Settings Blocking Access"
+  },
+  {
+   "source": "Integrated Webcam Disabled",
+   "relation": "CAUSED_BY",
+   "target": "Hardware Disabled in Device Manager"
+  },
+  {
+   "source": "Audio Device Disabled",
+   "relation": "CAUSED_BY",
+   "target": "Privacy Settings Blocking Access"
+  },
+  {
+   "source": "Audio Device Disabled",
+   "relation": "CAUSED_BY",
+   "target": "Hardware Disabled in Device Manager"
+  },
+  {
+   "source": "Bluetooth Adapter Disabled",
+   "relation": "CAUSED_BY",
+   "target": "Hardware Disabled in Device Manager"
+  },
+  {
+   "source": "Incorrect Default Playback Device",
+   "relation": "CAUSED_BY",
+   "target": "Misconfigured Audio Routing"
+  },
+  {
+   "source": "Incorrect Default Recording Device",
+   "relation": "CAUSED_BY",
+   "target": "Misconfigured Audio Routing"
+  },
+  {
+   "source": "Outdated or Corrupted Driver",
+   "relation": "CAUSED_BY",
+   "target": "Integrated Webcam Disabled"
+  },
+  {
+   "source": "Outdated or Corrupted Driver",
+   "relation": "CAUSED_BY",
+   "target": "Audio Device Disabled"
+  },
+  {
+   "source": "Privacy Settings Blocking Access",
+   "relation": "AFFECTS",
+   "target": "Microsoft Teams"
+  },
+  {
+   "source": "Enable Integrated Webcam",
+   "relation": "FIXED_BY",
+   "target": "Integrated Webcam Disabled"
+  },
+  {
+   "source": "Enable Audio Device",
+   "relation": "FIXED_BY",
+   "target": "Audio Device Disabled"
+  },
+  {
+   "source": "Enable Bluetooth Adapter",
+   "relation": "FIXED_BY",
+   "target": "Bluetooth Adapter Disabled"
+  },
+  {
+   "source": "Update Camera Driver",
+   "relation": "FIXED_BY",
+   "target": "Outdated or Corrupted Driver"
+  },
+  {
+   "source": "Update Audio Driver",
+   "relation": "FIXED_BY",
+   "target": "Outdated or Corrupted Driver"
+  },
+  {
+   "source": "Set Default Playback Device",
+   "relation": "FIXED_BY",
+   "target": "Incorrect Default Playback Device"
+  },
+  {
+   "source": "Set Default Recording Device",
+   "relation": "FIXED_BY",
+   "target": "Incorrect Default Recording Device"
+  },
+  {
+   "source": "Toggle Bluetooth On",
+   "relation": "FIXED_BY",
+   "target": "Bluetooth Adapter Disabled"
+  },
+  {
+   "source": "Verify App-Specific Privacy Permissions",
+   "relation": "FIXED_BY",
+   "target": "Privacy Settings Blocking Access"
+  },
+  {
+   "source": "Device Manager",
+   "relation": "PART_OF",
+   "target": "Windows Operating System"
+  },
+  {
+   "source": "Windows Settings Privacy & Security",
+   "relation": "PART_OF",
+   "target": "Windows Operating System"
+  }
+ ]
+}

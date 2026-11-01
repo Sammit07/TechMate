@@ -1,0 +1,140 @@
+{
+ "entities": [
+  {
+   "name": "FileVault recovery key",
+   "type": "Component"
+  },
+  {
+   "name": "Safe Mode",
+   "type": "Component"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Defender for Endpoint",
+   "type": "Product"
+  },
+  {
+   "name": "Remote Help via Teams",
+   "type": "Product"
+  },
+  {
+   "name": "Kernel panic",
+   "type": "Symptom"
+  },
+  {
+   "name": "Repeated crashes",
+   "type": "Symptom"
+  },
+  {
+   "name": "Cannot boot into macOS",
+   "type": "Symptom"
+  },
+  {
+   "name": "Persistent kernel panic",
+   "type": "Cause"
+  },
+  {
+   "name": "Missing FileVault recovery key in Intune",
+   "type": "Cause"
+  },
+  {
+   "name": "Verify user identity",
+   "type": "Fix"
+  },
+  {
+   "name": "Check device compliance",
+   "type": "Fix"
+  },
+  {
+   "name": "Guide through self-help steps",
+   "type": "Fix"
+  },
+  {
+   "name": "Document error messages and system info",
+   "type": "Fix"
+  },
+  {
+   "name": "Escalate to Desktop Support L2",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "Repeated crashes",
+   "relation": "CAUSED_BY",
+   "target": "Persistent kernel panic"
+  },
+  {
+   "source": "Cannot boot into macOS",
+   "relation": "CAUSED_BY",
+   "target": "Persistent kernel panic"
+  },
+  {
+   "source": "Prompted for FileVault recovery key",
+   "relation": "CAUSED_BY",
+   "target": "Missing FileVault recovery key in Intune"
+  },
+  {
+   "source": "FileVault recovery key",
+   "relation": "INDICATES",
+   "target": "Missing FileVault recovery key in Intune"
+  },
+  {
+   "source": "Kernel panic",
+   "relation": "INDICATES",
+   "target": "Persistent kernel panic"
+  },
+  {
+   "source": "Repeated crashes",
+   "relation": "AFFECTS",
+   "target": "macOS"
+  },
+  {
+   "source": "Cannot boot into macOS",
+   "relation": "AFFECTS",
+   "target": "macOS"
+  },
+  {
+   "source": "Persistent kernel panic",
+   "relation": "AFFECTS",
+   "target": "macOS"
+  },
+  {
+   "source": "Missing FileVault recovery key in Intune",
+   "relation": "AFFECTS",
+   "target": "FileVault"
+  },
+  {
+   "source": "Verify user identity",
+   "relation": "FIXED_BY",
+   "target": "Repeated crashes"
+  },
+  {
+   "source": "Check device compliance",
+   "relation": "FIXED_BY",
+   "target": "Repeated crashes"
+  },
+  {
+   "source": "Guide through self-help steps",
+   "relation": "FIXED_BY",
+   "target": "Repeated crashes"
+  },
+  {
+   "source": "Document error messages and system info",
+   "relation": "FIXED_BY",
+   "target": "Cannot boot into macOS"
+  },
+  {
+   "source": "Escalate to Desktop Support L2",
+   "relation": "FIXED_BY",
+   "target": "Persistent kernel panic"
+  }
+ ]
+}

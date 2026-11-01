@@ -1,0 +1,144 @@
+{
+ "entities": [
+  {
+   "name": "Desktop Support",
+   "type": "Product"
+  },
+  {
+   "name": "File Explorer",
+   "type": "Component"
+  },
+  {
+   "name": "C:\\Windows\\Minidump",
+   "type": "Component"
+  },
+  {
+   "name": ".dmp file",
+   "type": "Component"
+  },
+  {
+   "name": "OneDrive",
+   "type": "Product"
+  },
+  {
+   "name": "USB flash drive",
+   "type": "Product"
+  },
+  {
+   "name": "Safe Mode",
+   "type": "Component"
+  },
+  {
+   "name": "Settings > System > About > Advanced system settings > Startup and Recovery",
+   "type": "Component"
+  },
+  {
+   "name": "Small memory dump (256KB)",
+   "type": "Component"
+  },
+  {
+   "name": "%SystemRoot%\\Minidump",
+   "type": "Component"
+  },
+  {
+   "name": "IT self-service portal (https://it.acme.example)",
+   "type": "Product"
+  },
+  {
+   "name": "Teams channel \"IT Help\"",
+   "type": "Product"
+  },
+  {
+   "name": "WinDbg preview",
+   "type": "Product"
+  },
+  {
+   "name": "Microsoft Symbol Server",
+   "type": "Product"
+  },
+  {
+   "name": "Intune configuration",
+   "type": "Product"
+  },
+  {
+   "name": "!analyze -v",
+   "type": "Component"
+  },
+  {
+   "name": "BugCheckCode",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "C:\\Windows\\Minidump",
+   "relation": "PART_OF",
+   "target": "Windows"
+  },
+  {
+   "source": ".dmp file",
+   "relation": "AFFECTS",
+   "target": "Desktop Support"
+  },
+  {
+   "source": "OneDrive",
+   "relation": "AFFECTS",
+   "target": ".dmp file"
+  },
+  {
+   "source": "USB flash drive",
+   "relation": "AFFECTS",
+   "target": ".dmp file"
+  },
+  {
+   "source": "Safe Mode",
+   "relation": "FIXED_BY",
+   "target": "system repeatedly restarts before login"
+  },
+  {
+   "source": "Settings > System > About > Advanced system settings > Startup and Recovery",
+   "relation": "AFFECTS",
+   "target": "Small memory dump (256KB)"
+  },
+  {
+   "source": "Small memory dump (256KB)",
+   "relation": "AFFECTS",
+   "target": "%SystemRoot%\\Minidump"
+  },
+  {
+   "source": "IT self-service portal (https://it.acme.example)",
+   "relation": "AFFECTS",
+   "target": ".dmp file"
+  },
+  {
+   "source": "Teams channel \"IT Help\"",
+   "relation": "AFFECTS",
+   "target": ".dmp file"
+  },
+  {
+   "source": "WinDbg preview",
+   "relation": "AFFECTS",
+   "target": ".dmp file"
+  },
+  {
+   "source": "Microsoft Symbol Server",
+   "relation": "INDICATES",
+   "target": "symbol download"
+  },
+  {
+   "source": "Intune configuration",
+   "relation": "INDICATES",
+   "target": "symbol download"
+  },
+  {
+   "source": "!analyze -v",
+   "relation": "INDICATES",
+   "target": "BugCheckCode"
+  },
+  {
+   "source": "BugCheckCode",
+   "relation": "INDICATES",
+   "target": "root cause"
+  }
+ ]
+}

@@ -1,0 +1,135 @@
+{
+ "entities": [
+  {
+   "name": "Bluetooth",
+   "type": "Component"
+  },
+  {
+   "name": "peripheral",
+   "type": "Component"
+  },
+  {
+   "name": "pairing mode",
+   "type": "Component"
+  },
+  {
+   "name": "audio source application",
+   "type": "Component"
+  },
+  {
+   "name": "input level bar",
+   "type": "Component"
+  },
+  {
+   "name": "Teams call",
+   "type": "Component"
+  },
+  {
+   "name": "Voice Recorder",
+   "type": "Component"
+  },
+  {
+   "name": "Notepad",
+   "type": "Component"
+  },
+  {
+   "name": "Bluetooth adapter failure",
+   "type": "Cause"
+  },
+  {
+   "name": "USB controller problem",
+   "type": "Cause"
+  },
+  {
+   "name": "misconfiguration",
+   "type": "Cause"
+  },
+  {
+   "name": "hardware-related issue",
+   "type": "Cause"
+  },
+  {
+   "name": "test the peripheral",
+   "type": "Fix"
+  },
+  {
+   "name": "remove device",
+   "type": "Fix"
+  },
+  {
+   "name": "set default microphone",
+   "type": "Fix"
+  },
+  {
+   "name": "verify playback and voice capture",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "peripheral",
+   "relation": "AFFECTS",
+   "target": "Bluetooth"
+  },
+  {
+   "source": "pairing mode",
+   "relation": "PART_OF",
+   "target": "peripheral"
+  },
+  {
+   "source": "audio source application",
+   "relation": "AFFECTS",
+   "target": "peripheral"
+  },
+  {
+   "source": "input level bar",
+   "relation": "AFFECTS",
+   "target": "peripheral"
+  },
+  {
+   "source": "Teams call",
+   "relation": "AFFECTS",
+   "target": "peripheral"
+  },
+  {
+   "source": "Voice Recorder",
+   "relation": "AFFECTS",
+   "target": "peripheral"
+  },
+  {
+   "source": "Notepad",
+   "relation": "AFFECTS",
+   "target": "peripheral"
+  },
+  {
+   "source": "Bluetooth adapter failure",
+   "relation": "CAUSED_BY",
+   "target": "misconfiguration"
+  },
+  {
+   "source": "USB controller problem",
+   "relation": "CAUSED_BY",
+   "target": "misconfiguration"
+  },
+  {
+   "source": "hardware-related issue",
+   "relation": "FIXED_BY",
+   "target": "test the peripheral"
+  },
+  {
+   "source": "misconfiguration",
+   "relation": "FIXED_BY",
+   "target": "remove device"
+  },
+  {
+   "source": "peripheral",
+   "relation": "FIXED_BY",
+   "target": "set default microphone"
+  },
+  {
+   "source": "peripheral",
+   "relation": "FIXED_BY",
+   "target": "verify playback and voice capture"
+  }
+ ]
+}

@@ -1,0 +1,91 @@
+{
+ "entities": [
+  {
+   "name": "Loaner Laptop",
+   "type": "Product"
+  },
+  {
+   "name": "Original Device",
+   "type": "Product"
+  },
+  {
+   "name": "Warranty Service Request",
+   "type": "Component"
+  },
+  {
+   "name": "OEM Portal",
+   "type": "Component"
+  },
+  {
+   "name": "Intune Compliance Check",
+   "type": "Component"
+  },
+  {
+   "name": "Entra ID/MFA Authentication",
+   "type": "Component"
+  },
+  {
+   "name": "Company Portal App Installation",
+   "type": "Component"
+  },
+  {
+   "name": "Hardware Diagnostic",
+   "type": "Component"
+  },
+  {
+   "name": "Asset Register Update",
+   "type": "Component"
+  },
+  {
+   "name": "Disposal/Scrap Process",
+   "type": "Component"
+  },
+  {
+   "name": "User Confirmation of Loaner Functionality",
+   "type": "Symptom"
+  },
+  {
+   "name": "No Loaner Available",
+   "type": "Cause"
+  },
+  {
+   "name": "Generate Warranty Service Request",
+   "type": "Fix"
+  },
+  {
+   "name": "Run Intune Compliance Check",
+   "type": "Fix"
+  },
+  {
+   "name": "Retrieve and Re-image Loaner",
+   "type": "Fix"
+  }
+ ],
+ "relations": [
+  {
+   "source": "User Confirmation of Loaner Functionality",
+   "relation": "AFFECTS",
+   "target": "Loaner Laptop"
+  },
+  {
+   "source": "No Loaner Available",
+   "relation": "CAUSED_BY",
+   "target": "Escalation Required"
+  },
+  {
+   "source": "Generate Warranty Service Request",
+   "relation": "FIXED_BY",
+   "target": "Create Repair Order"
+  },
+  {
+   "source": "Run Intune Compliance Check",
+   "relation": "FIXED_BY",
+   "target": "Verify Loaner Compliance"
+  },
+  {
+   "source": "Retrieve and Re-image Loaner",
+   "relation": "FIXED_BY",
+   "target": "Prepare Loaner for Reuse or Return"
+  }
+ ]
+}

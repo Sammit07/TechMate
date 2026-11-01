@@ -1,0 +1,136 @@
+{
+ "entities": [
+  {
+   "name": "GlobalProtect",
+   "type": "Product"
+  },
+  {
+   "name": "split tunnelling",
+   "type": "Component"
+  },
+  {
+   "name": "DNS flush",
+   "type": "Fix"
+  },
+  {
+   "name": "expired VPN certificate",
+   "type": "Cause"
+  },
+  {
+   "name": "internal sites not loading",
+   "type": "Symptom"
+  },
+  {
+   "name": "Intune",
+   "type": "Product"
+  },
+  {
+   "name": "Company Portal",
+   "type": "Product"
+  },
+  {
+   "name": "GlobalProtect client version 6.2.4",
+   "type": "Component"
+  },
+  {
+   "name": "certificate renewal",
+   "type": "Fix"
+  },
+  {
+   "name": "VPN reconnection",
+   "type": "Fix"
+  },
+  {
+   "name": "nslookup internal hostname",
+   "type": "Fix"
+  },
+  {
+   "name": "ping internal IP",
+   "type": "Fix"
+  },
+  {
+   "name": "DNS_PROBE_FINISHED_NXDOMAIN",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "Network Support team",
+   "type": "Product"
+  },
+  {
+   "name": "Internal CA",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "internal sites not loading",
+   "relation": "CAUSED_BY",
+   "target": "expired VPN certificate"
+  },
+  {
+   "source": "internal sites not loading",
+   "relation": "CAUSED_BY",
+   "target": "split tunnelling"
+  },
+  {
+   "source": "expired VPN certificate",
+   "relation": "FIXED_BY",
+   "target": "certificate renewal"
+  },
+  {
+   "source": "split tunnelling",
+   "relation": "FIXED_BY",
+   "target": "DNS flush"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "split tunnelling"
+  },
+  {
+   "source": "GlobalProtect",
+   "relation": "AFFECTS",
+   "target": "internal sites not loading"
+  },
+  {
+   "source": "GlobalProtect client version 6.2.4",
+   "relation": "PART_OF",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "certificate renewal",
+   "relation": "FIXED_BY",
+   "target": "VPN reconnection"
+  },
+  {
+   "source": "DNS flush",
+   "relation": "FIXED_BY",
+   "target": "nslookup internal hostname"
+  },
+  {
+   "source": "nslookup internal hostname",
+   "relation": "FIXED_BY",
+   "target": "ping internal IP"
+  },
+  {
+   "source": "DNS_PROBE_FINISHED_NXDOMAIN",
+   "relation": "INDICATES",
+   "target": "internal sites not loading"
+  },
+  {
+   "source": "Intune",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  },
+  {
+   "source": "Network Support team",
+   "relation": "AFFECTS",
+   "target": "Internal CA"
+  },
+  {
+   "source": "Company Portal",
+   "relation": "AFFECTS",
+   "target": "GlobalProtect"
+  }
+ ]
+}

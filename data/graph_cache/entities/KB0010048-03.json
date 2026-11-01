@@ -1,0 +1,127 @@
+{
+ "entities": [
+  {
+   "name": "Windows Update",
+   "type": "Product"
+  },
+  {
+   "name": "error code 0x8007000D",
+   "type": "ErrorCode"
+  },
+  {
+   "name": "insufficient disk space",
+   "type": "Cause"
+  },
+  {
+   "name": "reset Windows Update components",
+   "type": "Fix"
+  },
+  {
+   "name": "reinstall cumulative update",
+   "type": "Fix"
+  },
+  {
+   "name": "Settings -> Windows Update shows 'You\\'re up to date'",
+   "type": "Symptom"
+  },
+  {
+   "name": "BitLocker recovery key present in Intune",
+   "type": "Component"
+  },
+  {
+   "name": "Microsoft Defender for Endpoint health scan",
+   "type": "Component"
+  },
+  {
+   "name": "GlobalProtect certificate renewal failure",
+   "type": "Cause"
+  },
+  {
+   "name": "VPN connectivity issue",
+   "type": "Symptom"
+  },
+  {
+   "name": "escalate to IAM team",
+   "type": "Fix"
+  },
+  {
+   "name": "escalate to Network Support",
+   "type": "Fix"
+  },
+  {
+   "name": "in-place repair or clean install",
+   "type": "Fix"
+  },
+  {
+   "name": "CBS.log and windowsupdate.log",
+   "type": "Component"
+  }
+ ],
+ "relations": [
+  {
+   "source": "error code 0x8007000D",
+   "relation": "INDICATES",
+   "target": "insufficient disk space"
+  },
+  {
+   "source": "insufficient disk space",
+   "relation": "CAUSED_BY",
+   "target": "error code 0x8007000D"
+  },
+  {
+   "source": "insufficient disk space",
+   "relation": "FIXED_BY",
+   "target": "free disk space"
+  },
+  {
+   "source": "error code 0x8007000D",
+   "relation": "FIXED_BY",
+   "target": "reset Windows Update components"
+  },
+  {
+   "source": "error code 0x8007000D",
+   "relation": "FIXED_BY",
+   "target": "reinstall cumulative update"
+  },
+  {
+   "source": "Settings -> Windows Update shows 'You\\'re up to date'",
+   "relation": "AFFECTS",
+   "target": "Windows Update"
+  },
+  {
+   "source": "BitLocker recovery key present in Intune",
+   "relation": "PART_OF",
+   "target": "BitLocker (Windows)"
+  },
+  {
+   "source": "Microsoft Defender for Endpoint health scan",
+   "relation": "AFFECTS",
+   "target": "system stability"
+  },
+  {
+   "source": "GlobalProtect certificate renewal failure",
+   "relation": "INDICATES",
+   "target": "error code related to authentication"
+  },
+  {
+   "source": "VPN connectivity issue",
+   "relation": "AFFECTS",
+   "target": "internal resource access"
+  },
+  {
+   "source": "VPN connectivity issue",
+   "relation": "FIXED_BY",
+   "target": "escalate to Network Support"
+  },
+  {
+   "source": "error code 0x8007000D",
+   "relation": "FIXED_BY",
+   "target": "in-place repair or clean install"
+  },
+  {
+   "source": "CBS.log and windowsupdate.log",
+   "relation": "PART_OF",
+   "target": "troubleshooting logs"
+  }
+ ]
+}
