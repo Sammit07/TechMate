@@ -4,6 +4,8 @@ TechMate is an AI assistant and workspace for an L1 IT service desk. Employees d
 
 🌐 **Live demo:** [techmate-one.vercel.app](https://techmate-one.vercel.app) (password-protected; ask the owner for access)
 
+![TechMate assistant: the IT support chat with suggested questions, sidebar navigation and workspace switcher (dark theme)](docs/screenshot-assistant.png)
+
 ---
 
 ## 📑 Contents
